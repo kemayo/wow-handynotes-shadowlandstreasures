@@ -10,7 +10,12 @@
 ## SavedVariables: HandyNotes_ShadowlandsTreasuresDB
 ## RequiredDeps: HandyNotes
 
+core.lua
 handler.lua
 config.lua
-Treasure.lua
-Rares.lua
+
+zones\Bastion.lua
+zones\Ardenweald.lua
+zones\Maldraxxus.lua
+zones\Revendreth.lua
+zones\Maw.lua
