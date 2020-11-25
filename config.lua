@@ -215,7 +215,7 @@ ns.should_show_point = function(coord, point, currentZone, isMinimap)
     if point.faction and point.faction ~= player_faction then
         return false
     end
-    if point.level and point.level < UnitLevel('player') then
+    if point.level and point.level > UnitLevel("player") then
         return false
     end
     if (not ns.db.found) then

@@ -1,5 +1,9 @@
 # Changelog
 
+## Changed in v3
+
+* Fix the check that should have been hiding the Anima Shards in Bastion before you're 60
+
 ## Changed in v2
 
 * Filled out questids for per-character completion
