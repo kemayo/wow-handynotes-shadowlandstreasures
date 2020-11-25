@@ -111,11 +111,15 @@ local function work_out_label(point)
     end
     if point.achievement then
         if point.criteria then
-            local criteria = GetAchievementCriteriaInfoByID(point.achievement, point.criteria)
+            local criteria = point.criteria
+            if type(criteria) == "table" then
+                criteria = criteria[1]
+            end
+            criteria = GetAchievementCriteriaInfoByID(point.achievement, point.criteria)
             if criteria then
                 return criteria
             end
-            fallback = 'achievement:'..point.achievement..'.'..point.criteria
+            fallback = 'achievement:'..point.achievement..'.'..criteria
         end
         local _, achievement = GetAchievementInfo(point.achievement)
         if achievement then
@@ -270,11 +274,21 @@ local function handle_tooltip(tooltip, point)
                 complete and 0 or 1, complete and 1 or 0, 0
             )
             if point.criteria then
-                local criteria, _, complete = GetAchievementCriteriaInfoByID(point.achievement, point.criteria)
-                tooltip:AddDoubleLine(" ", criteria,
-                    nil, nil, nil,
-                    complete and 0 or 1, complete and 1 or 0, 0
-                )
+                if type(point.criteria) == "table" then
+                    for _, criteria in ipairs(point.criteria) do
+                        local criteria, _, complete = GetAchievementCriteriaInfoByID(point.achievement, criteria)
+                        tooltip:AddDoubleLine(" ", criteria,
+                            nil, nil, nil,
+                            complete and 0 or 1, complete and 1 or 0, 0
+                        )
+                    end
+                else
+                    local criteria, _, complete = GetAchievementCriteriaInfoByID(point.achievement, point.criteria)
+                    tooltip:AddDoubleLine(" ", criteria,
+                        nil, nil, nil,
+                        complete and 0 or 1, complete and 1 or 0, 0
+                    )
+                end
             elseif GetAchievementNumCriteria(point.achievement) == 1 then
                 local criteria, _, complete, _, _, _, _, _, quantityString = GetAchievementCriteriaInfo(point.achievement, 1)
                 if quantityString then
