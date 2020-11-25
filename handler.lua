@@ -66,6 +66,21 @@ local function render_string(s)
         return fallback or (variant .. ':' .. id)
     end)
 end
+local function cache_string(s)
+    if not s then return end
+    for variant, id, fallback in s:gmatch("{(%l+):(%d+):?([^}]*)}") do
+        id = tonumber(id)
+        if variant == "item" then
+            C_Item.RequestLoadItemDataByID(id)
+        elseif variant == "spell" then
+            C_Spell.RequestLoadSpellData(id)
+        elseif variant == "quest" then
+            C_QuestLog.RequestLoadQuestByID(id)
+        elseif variant == "npc" then
+            mob_name(id)
+        end
+    end
+end
 
 local default_texture, npc_texture, follower_texture, currency_texture, junk_texture
 local icon_cache = {}
@@ -92,7 +107,7 @@ end
 local function work_out_label(point)
     local fallback
     if point.label then
-        return point.label
+        return (render_string(point.label))
     end
     if point.achievement then
         if point.criteria then
@@ -215,6 +230,7 @@ local get_point_info = function(point)
         elseif point.junk then
             category = "junk"
         end
+        cache_string(point.note)
         return label, icon, category, point.quest, point.faction, point.scale, point.alpha or 1
     end
 end
