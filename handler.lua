@@ -110,16 +110,11 @@ local function work_out_label(point)
         return (render_string(point.label))
     end
     if point.achievement then
-        if point.criteria then
-            local criteria = point.criteria
-            if type(criteria) == "table" then
-                criteria = criteria[1]
-            end
-            criteria = GetAchievementCriteriaInfoByID(point.achievement, point.criteria)
+        if point.criteria and type(point.criteria) ~= "table" then
+            local criteria = GetAchievementCriteriaInfoByID(point.achievement, point.criteria)
             if criteria then
                 return criteria
             end
-            fallback = 'achievement:'..point.achievement..'.'..criteria
         end
         local _, achievement = GetAchievementInfo(point.achievement)
         if achievement then
