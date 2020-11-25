@@ -15,6 +15,7 @@ ns.defaults = {
         tooltip_item = true,
         tooltip_questid = false,
         zonesHidden = {},
+        achievementsHidden = {},
     },
     char = {
         hidden = {
@@ -139,6 +140,31 @@ ns.options = {
                 },
             },
         },
+        achievementsHidden = {
+            type = "multiselect",
+            name = "Show achievements",
+            desc = "Toggle whether you want to show points for a given achievement",
+            get = function(info, key) return not ns.db[info[#info]][key] end,
+            set = function(info, key, value)
+                ns.db[info[#info]][key] = not value
+                ns.HL:Refresh()
+            end,
+            values = function(info)
+                local values = {}
+                for uiMapID, points in pairs(ns.points) do
+                    for coord, point in pairs(points) do
+                        if point.achievement then
+                            local _, achievement = GetAchievementInfo(point.achievement)
+                            values[point.achievement] = achievement or 'achievement:'..point.achievement
+                        end
+                    end
+                end
+                -- replace ourself with the built values table
+                info.option.values = values
+                return values
+            end,
+            order = 30,
+        },
         zonesHidden = {
             type = "multiselect",
             name = "Show in zones",
@@ -161,7 +187,7 @@ ns.options = {
                 info.option.values = values
                 return values
             end,
-            order = 30,
+            order = 35,
         },
     },
 }
@@ -191,6 +217,10 @@ zoneHidden = function(uiMapID)
     end
     return false
 end
+local achievementHidden = function(achievement)
+    if not achievement then return false end
+    return ns.db.achievementsHidden[achievement]
+end
 
 local player_faction = UnitFactionGroup("player")
 local player_name = UnitName("player")
@@ -201,6 +231,9 @@ ns.should_show_point = function(coord, point, currentZone, isMinimap)
         return false
     end
     if zoneHidden(currentZone) then
+        return false
+    end
+    if achievementHidden(point.achievement) then
         return false
     end
     if ns.hidden[currentZone] and ns.hidden[currentZone][coord] then
