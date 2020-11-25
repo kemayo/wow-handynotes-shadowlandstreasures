@@ -167,3 +167,193 @@ ns.RegisterPoints(1565, { -- Ardenweald
     },
     [31515302] = {quest=61192,label="Tale of the Tangle",note="Read, then follow the blue lamps to find {npc:171767:Shizgher}",atlas="poi-workorders"},
 })
+
+-- Rares
+ns.RegisterPoints(1565, {
+    [34606800] = { -- Deathbinder Hroth
+        achievement=14309, criteria=48714,
+        quest=59226,
+        npc=164477,
+        --loot={},
+    },
+    [47502845] = { -- Deifir the Untamed
+        achievement=14309, criteria=48784,
+        quest=59201,62271,
+        npc=164238,
+        loot={
+            180631, -- Gorm Needler
+        },
+        note="Runs in circles around the area. Ride and use {spell:319566} and {spell:319575} to slow and stun it",
+    },
+    [48407715] = { -- Dustbrawl
+        achievement=14309, criteria=48794,
+        quest=58987,
+        npc=163229,
+        --loot={},
+    },
+    [57852955] = { -- Egg-Tender Leh'go
+        achievement=14309, criteria=48790,
+        quest=60266,
+        npc=167851,
+        loot={
+            179539, -- Kelox's Eggbeater
+        },
+        note="Destroy eggs",
+    },
+    [68602765] = { -- Faeflayer
+        achievement=14309, criteria=48798,
+        quest=61184,
+        npc=171688,
+        loot={
+            180144, -- Faeflayer's Hatchet
+        },
+    },
+    [70403060] = path{achievement=14309, criteria=48798, quest=61184,},
+    [54057600] = { -- Gormbore
+        achievement=14309, criteria=48795,
+        quest=59006,
+        npc=163370,
+        loot={
+            183196, -- Lavender Nibbler
+        },
+    },
+    [27905250] = { -- Gormtamer Tizo
+        achievement=14309, criteria=48781,
+        quest=59145,
+        npc=164107,
+        loot={
+            180725, -- Spinemaw Gladechewer
+        },
+        note="Kill {npc:166736} until it spawns",
+    },
+    [32403025] = { -- Humon'gozz
+        achievement=14309, criteria=48782,
+        quest=59157,
+        npc=164112,
+        loot={
+            182650, -- Arboreal Gulper
+        },
+        note="Loot {item:175247} and use the Damp Loam to summon"
+    },
+    [67455145] = { -- Hunter Vivianna
+        achievement=14309, criteria=48787,
+        quest=59221,
+        npc=160448,
+        loot={
+            179596, -- Drust Mask of Dominance
+            183091, -- Lifewoven Bracelet
+        },
+        note="Starts {quest:62246}",
+    },
+    [62102470] = { -- Mymaen
+        achievement=14309, criteria=48788,
+        quest=59431,
+        npc=165053,
+        --loot={},
+        note="Kill {npc:165050} to summon",
+    },
+    [50092091] = { -- Mystic Rainbowhorn
+        achievement=14309, criteria=48715,
+        quest=59235,
+        npc=164547,
+        loot={
+            182179, -- Runestag Soul
+        },
+        note="Blow the great horn",
+    },
+    [62155220] = { -- Night Mare
+        achievement=14309, criteria=48793,
+        quest=60306,
+        npc=168135,
+        loot={
+            180728, -- Swift Gloomhoof
+        },
+        note="A Night Fae player must:\n"..
+            "* Loot {item:181243} at 19.7 63.5 (may need a glider)\n"..
+            "* Do Night Fae quests through {quest:57871}\n",
+            "* Ask {npc:165704} to repair {item:181243}\n",
+            "* Get {item:178675} from {npc:160262}\n",
+            "* Use {item:178675} here, and defeat the rare",
+    },
+    -- TODO: questid for getting the web?
+    [19706350] = {achievement=14309, criteria=48793, quest=60306, loot={181243}},
+    [51105740] = { -- Old Ardeite
+        achievement=14309, criteria=48785,
+        quest=59208,62270,
+        npc=164391,
+        loot={
+            180643, -- Chirpy Valeshrieker
+        },
+        note="Get {item:174042} from {npc:160747} and {npc:160748} in Shimmerbough, use it to reach the rare",
+    },
+    [65104430] = { -- Rootwrithe
+        achievement=14309, criteria=48791,
+        quest=60273,
+        npc=167726,
+        loot={
+            179603, -- Nettlehusk Barrier
+        },
+        note="Hit all the flowers",
+    },
+    [65702430] = { -- Rotbriar Boggart
+        achievement=14309, criteria=48789,
+        quest=60258,
+        npc=167724,
+        loot={
+            175729, -- Rotbriar Sprout
+        },
+        note="Talk to {npc:174365} to start."
+    },
+    -- Relatedly... Toss a Seed to Your Hunter
+    [65742291] = {
+        achievement=14791,
+        note="Loot {item:183902} around the zone, use the bonus action button to throw it at {npc:174364}",
+    },
+    [72405175] = { -- Soultwister Cero
+        achievement=14309, criteria=48797,
+        quest=61177,
+        npc=171451,
+        loot={
+            180164, -- Soultwister's Scythe
+        },
+    },
+    [37675917] = { -- Skuld Vit
+        achievement=14309, criteria=48786,
+        quest=59220,
+        npc=164415,
+        loot={
+            182183, -- Wolfhawk Soul
+        },
+        note="Use {spell:310143} to get in",
+    },
+    [59304660] = { -- The Slumbering Emperor
+        achievement=14309, criteria=48792,
+        quest=60290,
+        npc=167721,
+        loot={
+            175711, -- Slumberwood Band
+        },
+        note="Use AOE or a flare on the foggy area",
+    },
+    [30105535] = { -- Valfir the Unrelenting
+        achievement=14309, criteria=48796,
+        quest=61632,
+        npc=168647,
+        loot={
+            180730, -- Wild Glimmerfur Prowler
+            182176, -- Shadowstalker Soul (quest=62431)
+        },
+        note="A Night Fae player channeling the Tirna Scithe must:\n"..
+            "* Pick up a {spell:338045}\n"..
+            "* Use {spell:338045} to remove {spell:338038}",
+    },
+    [58306180] = { -- Wrigglemortis
+        achievement=14309, criteria=48783,
+        quest=59170,
+        npc=164147,
+        loot={
+            179502, -- Ripvine Barb
+        },
+        note="Drag out of the ground",
+    },
+})
