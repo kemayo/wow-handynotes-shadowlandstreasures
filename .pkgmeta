@@ -1,0 +1,4 @@
+package-as: HandyNotes_Shadowlands
+manual-changelog:
+    filename: CHANGELOG.md
+    markup-type: markdown
