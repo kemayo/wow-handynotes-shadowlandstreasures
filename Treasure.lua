@@ -52,6 +52,7 @@ ns.points = {
     [1533] = { -- Bastion
         [53508030] = {
             achievement=14311, criteria=50047, -- Scroll of Aeons
+            quest=58298,
             loot={
                 173984, -- Scroll of Aeons
             },
@@ -59,6 +60,7 @@ ns.points = {
         },
         [58507150] = {
             achievement=14311, criteria=50048, -- Vesper of Virtues
+            quest=60478,
             loot={
                 179982, -- Kyrian Bell
             },
@@ -66,6 +68,7 @@ ns.points = {
         },
         [52008600] = {
             achievement=14311, criteria=50049, -- Purifying Draught
+            quest=58329,
             loot={
                 174007, -- Purifying Draught
             },
@@ -73,6 +76,7 @@ ns.points = {
         },
         [59306080] = {
             achievement=14311, criteria=50050, -- Lost Disciple's Notes
+            quest=61048,
             loot={
                 182693, -- Lost Disciple's Notes
             },
@@ -80,24 +84,31 @@ ns.points = {
         },
         [55506080] = {
             achievement=14311, criteria=50051, -- Larion Tamer's Harness
+            quest=61049,
             loot={
-                -- 182652, -- Larion Tamer's Harness
+                182652, -- Larion Tamer's Harness
                 182653, -- Larion Treats
             },
             note="Located at the end of the cavern",
         },
+        [55704290] = path{quest=61049},
         [40404980] = {
             achievement=14311, criteria=50052, -- Stolen Equipment
-            -- loot=Random Green/Blue,
+            quest=61044,
+            loot={
+                182561, -- Fallen Disciple's Cloak
+            },
             note="Random BOE uncommon / rare item",
         },
         [44604650] = {
             achievement=14311, criteria=50053, -- Abandoned Stockpile
+            quest=61006,
             -- loot=Random Greens/Materials,
             note="Entrance is hidden behind some bushes",
         },
         [51401790] = {
             achievement=14311, criteria=50054, -- Experimental Construct Part
+            quest=61052,
             loot={
                 183609, -- Re-Powered Golliath Fists
             },
@@ -105,6 +116,7 @@ ns.points = {
         },
         [35804810] = {
             achievement=14311, criteria=50055, -- Windsmith's Tools
+            quest=61053,
             loot={
                 180064, -- Ascended Flute
             },
@@ -112,11 +124,19 @@ ns.points = {
         },
         [56501720] = {
             achievement=14311, criteria=50056, -- Memorial Offering
+            quest=61150,
             -- loot={},
             note="Purchase {item:180788:Memorial Wine} from {npc:171526:Kobri} and use it on the drink tray near the treasure to obtain the {item:180797:Memorial Offering Key} and unlock the treasure",
         },
+        [34006650] = {quest=61150, label="Kobri", atlas="food", scale=1.1, path=true, note="Buy {item:180788:Memorial Wine}, go to 56.5 17.2"}, -- Kobri (Cliffs of Respite)
+        [43603225] = {quest=61150, label="Kobri", atlas="food", scale=1.1, path=true, note="Buy {item:180788:Memorial Wine}, go to 56.5 17.2"}, -- Kobri (Sagehaven)
+        [47957400] = {quest=61150, label="Kobri", atlas="food", scale=1.1, path=true, note="Buy {item:180788:Memorial Wine}, go to 56.5 17.2"}, -- Kobri (Aspirant's Rest)
+        [51804640] = {quest=61150, label="Kobri", atlas="food", scale=1.1, path=true, note="Buy {item:180788:Memorial Wine}, go to 56.5 17.2"}, -- Kobri (Hero's Rest)
+        [52154710] = {quest=61150, label="Kobri", atlas="food", scale=1.1, path=true, note="Buy {item:180788:Memorial Wine}, go to 56.5 17.2"}, -- Kobri (Hero's Rest)
+        [53508035] = {quest=61150, label="Kobri", atlas="food", scale=1.1, path=true, note="Buy {item:180788:Memorial Wine}, go to 56.5 17.2"}, -- Kobri (Aspirant's Crucible)
         [35105800] = {
             achievement=14311, criteria=50058, -- Gift of Agthia
+            quest=60893,
             loot={
                 180063, -- Unearthly Chime
             },
@@ -124,6 +144,7 @@ ns.points = {
         },
         [65207030] = {
             achievement=14311, criteria=50059, -- Gift of Vesiphone
+            quest=60890,
             loot={
                 180859, -- Purity
             },
@@ -131,16 +152,23 @@ ns.points = {
         },
         [70503650] = {
             achievement=14311, criteria=50060, -- Gift of Chyrus
-            -- loot={},
+            quest=60892,
+            loot={
+                183988, -- Bondable Val'kyr Diadem
+            },
             note="Obtain the {spell:333045:Proof of Humility} by using /kneel in front of the treasure to unlock it",
         },
         [40201820] = {
             achievement=14311, criteria=50061, -- Gift of Thenios
-            -- loot={},
+            quest=60894,
+            loot={
+                181290, -- Harmonious Sigil of the Archon
+            },
             note="Obtain the {spell:333068:Proof of Wisdom} by using the teleporter near the chest and lighting the incenses in the correct order:\n* Incense of Patience\n* Incense of Knowledge\n* Click Incense of Insight\n* Anima Orb\n* Incense of Judgement",
         },
         [27602170] = {
             achievement=14311, criteria=50062, -- Gift of Devos
+            quest=60895,
             loot={
                 179977, -- Benevolent Gong
             },
