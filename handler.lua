@@ -57,6 +57,11 @@ local function render_string(s)
             if name then
                 return name
             end
+        elseif variant == "currency" then
+            local info = C_CurrencyInfo.GetCurrencyInfo(id)
+            if info then
+                return quick_texture_markup(info.iconFileID) .. info.name
+            end
         end
         return fallback or (variant .. ':' .. id)
     end)
