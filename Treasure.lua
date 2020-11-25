@@ -338,6 +338,122 @@ ns.points = {
         },
     },
     [1525] = { -- Revendreth
+        [37706920] = {
+            achievement=14314, criteria=50076, -- Lost Quill
+            loot={
+                182613, -- Refilling Inkwell
+            },
+            note="Grab a {item:182475:Forbidden Ink} from the library below the treasure to unlock it",
+        },
+        [38404430] = {
+            achievement=14314, criteria=50077, -- Stylish Parasol
+            loot={
+                182694, -- Stylish Black Parasol
+            },
+            note="On top of the castle walls, can be hard to reach",
+        },
+        [57304330] = {
+            achievement=14314, criteria=50078, -- The Count
+            loot={
+                182612, -- The Count's Pendant
+            },
+            note="Requires 99 {currency:1820:Infused Ruby} to loot the treasure",
+        },
+        [79903700] = {
+            achievement=14314, criteria=50079, -- Rapier of the Fearless
+            loot={
+                182689, -- Rapier of the Fearless
+            },
+            note="On the ground. An enemy will spawn when interacting with the treasure. Kill the mob for the sword",
+        },
+        [70106000] = {
+            achievement=14314, criteria=50080, -- Vrytha's Dredglaive
+            loot={
+                177807, -- Vyrtha's Dredglaive
+            },
+            note="Under a bridge",
+        },
+        [29703720] = {
+            achievement=14314, criteria=50081, -- Makeshift Muckpool
+            loot={
+                182780 -- Muckpool Cookpot
+            },
+            note="Inside the castle ruins. Requires 30 {currency:1820:Infused Ruby} to loot the treasure",
+        },
+        [63007210] = {
+            achievement=14314, criteria=50082, -- Taskmaster's Trove
+            loot={
+                183986, -- Bondable Sinstone
+            },
+            note="Use the Ingress and Egress Rites scroll at the area, then dodge orbs to reach the treasure",
+        },
+        [47505530] = {
+            achievement=14314, criteria=50084, -- Forbidden Chamber
+            loot={
+                184075, -- Stonewrought Sentry
+            },
+            note="Take the {spell:314749:Anima Canister} inside the building and drain anima from the {npc:173838:Silent Observer}s to reach the treasure",
+        },
+        [31055510] = {
+            achievement=14314, criteria=50895, -- Smuggled Cache
+            loot={
+                182738, -- Bundle of Smuggled Parasol Components
+            },
+            note="Rewards 35+6 {currency:1820:Infused Ruby}",
+        },
+        [69357799] = {
+            achievement=14314, criteria=50896, -- Chest of Envious Dreams
+            loot={
+                179393, -- Mirror of Envious Dreams
+            },
+        },
+        [64197265] = {
+            achievement=14314, criteria=50897, -- Filcher's Prize
+            loot={
+                179392, -- Orb of Burgeoning Ambition
+            },
+            note="Jump down from the North",
+        },
+        [68456446] = {
+            achievement=14314, criteria=50898, -- Wayfarer's Abandoned Spoils
+            loot={
+                181547, -- Noble's Draught
+                172230, -- soul dust
+                173058, -- umbral ink
+            },
+            currency=1820,
+            note="Jump on the mushroom at 67.9, 64.5",
+        },
+        [61565865] = {
+            achievement=14314, criteria=50899, -- Remlate's Hidden Cache
+            -- loot={},
+            note="Outer wall, jump from near the flight master",
+        },
+        [46395817] = {
+            achievement=14314, criteria=50900, -- Fleeing Soul's Bundle
+            -- loot={},
+            note="Outer wall",
+        },
+        [74975698] = {
+            achievement=14314, criteria=50901, -- Gilded Plum Chest
+            loot={
+                179390, -- Tantalizingly Large Golden Plum
+            },
+            note="Kill the {npc:166680:Greedy Soul}",
+        },
+        [51815963] = {
+            achievement=14314, criteria=50902, -- Abandoned Curios
+            loot={
+                182744, -- Ornate Belt Buckle
+            },
+        },
+
+        [53104290] = {
+            loot={
+                182614, -- Blanchy's Reins
+            },
+            note="Nurse {npc:173468:Dead Blanchy} over the course of several days. You need items from all over the world",
+        },
     },
     [1543] = { -- The Maw
     },
