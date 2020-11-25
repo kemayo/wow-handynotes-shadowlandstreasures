@@ -259,6 +259,20 @@ local function handle_tooltip(tooltip, point)
                     nil, nil, nil,
                     complete and 0 or 1, complete and 1 or 0, 0
                 )
+            elseif GetAchievementNumCriteria(point.achievement) == 1 then
+                local criteria, _, complete, _, _, _, _, _, quantityString = GetAchievementCriteriaInfo(point.achievement, 1)
+                if quantityString then
+                    tooltip:AddDoubleLine(
+                        criteria, quantityString,
+                        complete and 0 or 1, complete and 1 or 0, 0,
+                        complete and 0 or 1, complete and 1 or 0, 0
+                    )
+                else
+                    tooltip:AddDoubleLine(" ", criteria,
+                        nil, nil, nil,
+                        complete and 0 or 1, complete and 1 or 0, 0
+                    )
+                end
             end
         end
         if point.note then
