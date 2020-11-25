@@ -245,6 +245,15 @@ ns.RegisterPoints(1565, {
         },
         note="Starts {quest:62246}",
     },
+    [36504790] = { -- Macabre
+        achievement=14309, criteria=48780,
+        quest=nil,
+        npc=164093,
+        loot={
+            180644, -- Rocky
+        },
+        note="Stand in a Mysterious Mushroom Ring with three players, dancing in a loop: A > B > C > A",
+    },
     [62102470] = { -- Mymaen
         achievement=14309, criteria=48788,
         quest=59431,
