@@ -365,4 +365,29 @@ ns.RegisterPoints(1565, {
         },
         note="Drag out of the ground",
     },
+    -- Ardenweald's a Stage:
+    [41254445] = {
+        achievement=14353, criteria={
+            48708, -- Argus
+            48709, -- Azshara
+            48706, -- Gul'dan
+            48704, -- Jaina
+            48707, -- Kil'jaeden
+            48710, -- N'Zoth
+            48705, -- Xavius
+        },
+        quest=61633, -- TODO: more questids...
+        loot={
+            181304, -- Winterwoven Branches
+            180416, -- Mistcallers Aria
+            180417, -- Mistcallers Ballad
+            180418, -- Mistcallers March
+            180419, -- Mistcallers Dirge
+            175069, -- Theater Ticket
+            175095, -- Book of Tickets
+            182175, -- Moose Soul
+            180748, -- Silky Shimmermoth
+        },
+        note="A Night Fae player must talk to {npc:171743} to start a play; there are 7 possible encounters, one per day. After you can buy items from {npc:163714} depending on how many rares you've cleared.",
+    }
 })
