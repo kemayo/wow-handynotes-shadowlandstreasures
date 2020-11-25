@@ -238,13 +238,130 @@ ns.points = {
                 180273, -- Sorrowbane
                 181164, -- Oonar's Arm
             },
-            note="Requires stacking several strength buffs and the world quest {quest:57205:A Few Bumps Along the Way}. Check wowhead, it's a lot.",
+            note="Requires stacking several strength buffs and the world quest {quest:57205:A Few Bumps Along the Way}. Check wowhead, it's a lot",
         },
     },
     [1565] = { -- Ardenweald
+        [55902100] = {
+            achievement=14313, criteria=50031, -- Aerto's Body
+            loot={
+                180630, -- Gorm Harrier
+            },
+            note="A swarm of insects will attack you after looting the treasure",
+        },
+        [52903730] = {
+            achievement=14313, criteria=50033, -- Veilwing Egg
+            loot={
+                180642, -- Cloudfeather Fledgling
+            },
+            note="On top of a branch",
+        },
+        [49705590] = {
+            achievement=14313, criteria=50035, -- Faerie Trove
+            loot={
+                182673, -- Shimmerbough Hoarder
+            },
+            note="Inside a small alcove under the clearing",
+        },
+        [48203920] = {
+            achievement=14313, criteria=50037, -- Hearty Dragon Plume
+            loot={
+                182729, -- Hearty Dragon Plume
+            },
+            note="Up in a tree",
+        },
+        [63903750] = {
+            achievement=14313, criteria=50039, -- Cache of the Moon
+            loot={
+                180731, -- Wildseed Cradle
+            },
+            note="Locate 5 tools scattered around the Garden of Night (southeast of Root-Home), combine them into {item:180753:Twinklestar's Gardening Toolkit} and bring them to {npc:171360:Twinklestar} in Tirna Vaal.\nAfter this is done, talk to Twinklestar to receive the {spell:334353:Moonsight} buff",
+        },
+        [37603710] = {
+            achievement=14313, criteria=50041, -- Dreamsong Heart
+            loot={
+                179510, -- Dreamsong Warglaive
+            },
+            note="Use a Jumping Mushroom hidden in Dreamsong Fenn to climb to the top of the tree",
+        },
+        [44707570] = {
+            achievement=14313, criteria=50043, -- Elusive Faerie Cache
+            loot={
+                179512, -- Dreamsong Saber
+            },
+            note="Requires grabbing the {spell:333923:Faerie Lamp} buff at 46.4 70.9 to unlock the treasure",
+        },
+        [36106520] = {
+            achievement=14313, criteria=50045, -- Darkreach Supplies
+            --loot=Random Gear
+            note="Use the jumping mushroom nearby to reach the treasure",
+        },
+        [48202030] = {
+            achievement=14313, criteria=50032, -- Lost Satchel
+            loot={
+                182731, -- Satchel of Culexwood
+            },
+            note="Drop below to get to the treasure",
+        },
+        [76602970] = {
+            achievement=14313, criteria=50034, -- Swollen Anima Seed
+            loot={
+                182730, -- Swollen Anima Seed
+            },
+            note="Nothing of note",
+        },
+        [67803450] = {
+            achievement=14313, criteria=50036, -- Harmonic Chest
+            --loot={},
+            note="Requires 2 players to play the nearby harp and drums at the same time to unlock the treasure",
+        },
+        [41903250] = {
+            achievement=14313, criteria=50040, -- Dessicated Moth
+            loot={
+                180640, -- Amber Glitterwing
+            },
+            note="Loot the {item:180784:Aromatic Flowers} at 36.4 59.5, then use the jumping mushroom near the treasure location to jump on to a tree. Use the flowers on the brazier within the tree to attract the treasure",
+        },
+        [36402500] = {
+            achievement=14313, criteria=50042, -- Enchanted Dreamcatcher
+            loot={
+                183129, -- Anima-Laden Dreamcatcher
+            },
+            note="Carefully climb the roots in the area to reach the treasure",
+        },
+        [36006650] = {
+            achievement=14313, criteria=50044, -- Cache of the Night
+            loot={
+                180637, -- Starry Dreamfoal
+            },
+            note="Loot {item:180654:Fae Ornament}, {item:180656:Enchanted Bough} and {item:180655:Raw Dream Fibers} scattered around Ardenweald to create the {item:180652:Fae Dreamcatcher}, which will dispell the barrier blocking the treasure</a>",
+        },
     },
     [1525] = { -- Revendreth
     },
     [1543] = { -- The Maw
     },
 }
+
+local vulpin = {
+    achievement=14313, criteria=50038, -- Playful Vulpin Befriended
+    loot={
+        180645, -- Dodger
+    },
+    note="Find {npc:171206:Playful Vulpin} and play with them 5 times to obtain the treasure. Use emotes related to what they're doing",
+    atlas="Warfront-NeutralHero-Silver", scale=1.3,
+}
+ns.points[1565][31854363] = vulpin
+ns.points[1565][31764100] = vulpin
+ns.points[1565][32604292] = vulpin
+ns.points[1565][34104500] = vulpin
+ns.points[1565][50215353] = vulpin
+ns.points[1565][41312874] = vulpin
+ns.points[1565][40945156] = vulpin
+ns.points[1565][41374979] = vulpin
+ns.points[1565][51165507] = vulpin
+ns.points[1565][67162888] = vulpin
+ns.points[1565][70143004] = vulpin
+ns.points[1565][65222265] = vulpin
+ns.points[1565][67553191] = vulpin
+ns.points[1565][72393146] = vulpin
