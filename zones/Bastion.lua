@@ -215,3 +215,227 @@ ns.RegisterPoints(1533, { -- Bastion
         note="Bounce on the clouds",
     },
 })
+
+-- rares
+ns.RegisterPoints(1533, {
+    [32602335] = { -- Aspirant Eolis
+        achievement=14307, criteria=50613,
+        quest=61083,
+        npc=171211,
+        loot={
+            183607, -- Uncertain Aspirant's Spear
+        },
+        note="Loot a {item:180613} nearby and read it while targeting the rare",
+    },
+    [51354080] = { -- Baedos
+        achievement=14307, criteria=50592,
+        quest=58648,62192,
+        npc=160629,
+        loot={
+            172232, -- Eternal Crystal
+        },
+    },
+    [49005030] = { -- Basilofos, King of the Hill
+        achievement=14307, criteria=50602,
+        quest=60897, -- 62158,
+        npc=170659,
+        loot={
+            182655, -- Hill King's Roarbox
+        },
+    },
+    [55806250] = { -- Bookkeeper Mnemis
+        achievement=14307, criteria=50612,
+        quest=59022,
+        npc=171189,
+        loot={
+            182682, -- Book-Borrower Identification
+        },
+    },
+    [50455805] = { -- Cloudfeather Guardian
+        achievement=14307, criteria=50604,
+        quest=60978,62191,
+        npc=170932,
+        loot={
+            180812, -- Golden Cloudfeather
+        },
+    },
+    [66004370] = { -- Collector Astorestes
+        achievement=14307, criteria=50610,
+        quest=61002,
+        npc=171014,
+        --loot={},
+        note="Read the Mercia's Legacy chapters in order, then talk to {npc:157979} for {spell:333779}, then find {item:180569} outside"
+    },
+    [56904780] = { -- Corrupted Clawguard
+        achievement=14307, criteria=50615,
+        quest=60999,
+        npc=171010,
+        --loot={},
+        note="Bring a {item:180651} to the {npc:171300}",
+    },
+    [27803015] = { -- Dark Watcher
+        achievement=14307, criteria=50603,
+        quest=60883,
+        npc=170623,
+        --loot={}, -- various conduits
+    },
+    [37004180] = { -- Demi the Relic Hoarder
+        achievement=14307, criteria=50611,
+        quest=61069,61000,
+        npc=171011,
+        loot={
+            183608, -- Evernote Vesper
+        },
+        notes="Runs away, hit it to lower {spell:333874}",
+    },
+    [41354885] = { -- Dionae
+        achievement=14307, criteria=50595,
+        quest=62650,
+        npc=163460,
+        loot={
+            180856, -- Silvershell Snapper
+        },
+    },
+    [45556460] = { -- Echo of Aella <Hand of Courage>
+        achievement=14307, criteria=50614,
+        quest=62251, -- progress 61082,61091
+        npc=171255,
+        loot={
+            180062, -- Heavenly Drum
+        },
+        note="Wandering the road; talk to it",
+    },
+    [51151955] = { -- Enforcer Aegeon
+        achievement=14307, criteria=50605,
+        quest=60998,
+        npc=171009,
+        --loot={},
+        note="Wandering the forge",
+    },
+    [60407305] = { -- Fallen Acolyte Erisne
+        achievement=14307, criteria=50596,
+        quest=58222,
+        npc=160721,
+        loot={
+            180444, -- Harmonia's Chosen Belt
+        },
+        note="Spawns after quests in the area",
+    },
+    [42908265] = { -- Herculon
+        achievement=14307, criteria=50582,
+        quest=57705,57708,
+        npc=158659,
+        loot={
+            182759, -- Functioning Anima Core
+        },
+        note="Gather anima from barrels nearby",
+    },
+    [51456860] = { -- Nikara Blackheart
+        achievement=14307, criteria=50594,
+        quest=58319,
+        npc=160882,
+        loot={
+            183608, -- Evernote Vesper
+        },
+        note="Need three players to trigger a vesper repair event",
+    },
+    [30355515] = { -- Reekmonger
+        achievement=14307, criteria=50616,
+        quest=nil,
+        npc=171327,
+        --loot={},
+    },
+    [61305090] = { -- Selena the Reborn
+        achievement=14307, criteria=50593,
+        quest=58320,
+        npc=160985,
+        loot={
+            183608, -- Evernote Vesper
+        },
+        note="Need three players to trigger",
+    },
+    [22452285] = { -- Orstus and Sotiros
+        achievement=14307, criteria=50618,
+        quest=61634,
+        npc=156339,
+        note="Requires Kyrian player to summon",
+    },
+    [43502525] = { -- Unstable Memory
+        achievement=14307, criteria=50606,
+        quest=60997,
+        npc=171008,
+        loot={
+            184413, -- Mnemonic Attunement Pane
+        },
+    },
+    [40655305] = { -- Wingflayer the Cruel
+        achievement=14307, criteria=50600,
+        quest=60314,62197,
+        npc=167078,
+        loot={
+            182749, -- Regurgitated Kyrian Wings
+        },
+    },
+    [60109350] = { -- Sundancer
+        achievement=14307, criteria=50601,
+        quest=nil,
+        npc=170548,
+        note="Use the statue and a {item:180445:Skystrider Glider}",
+        loot={
+            180773, -- Sundancer
+        },
+    },
+    [55358025] = { -- Beasts of Bastion
+        achievement=14307, criteria={50597, 50598, 50599, 50617},
+        quest={60570, 60571, 60569, 58526},
+        label="Beasts of Bastion",
+        npc=161527,
+        loot={
+            179486, -- Sigilback's Smashshell
+            179488, -- Cloudtail's Paw
+            179485, -- Fang of Nemaeus
+            179487, -- Aethon's Horn
+            174445, -- Glimmerfly Cocoon
+        },
+        note="Beasts of Bastion; talk to {npc:161441} to summon",
+    },
+    [53508870] = { -- The Ascended Council
+        achievement=14307, criteria=50619,
+        quest=60977, -- 60933 makes Cache of the Ascended visible
+        npc=170899,
+        loot={
+            183741, -- Ascended Skymane
+        },
+        note="Ring the five vespers within 5 minutes to summon the council",
+    },
+    -- Rallying Cry of the Ascended
+    -- TODO: are there questids for these? Doing if off the Council would be inaccurate...
+    [64306980] = {achievement=14734,criteria=49818,atlas="pathofascension-32x32",}, -- Vesper of Purity
+    [33305980] = {achievement=14734,criteria=49815,atlas="pathofascension-32x32",}, -- Vesper of Courage
+    [71953895] = {achievement=14734,criteria=49816,atlas="pathofascension-32x32",}, -- Vesper of Humility
+    [39152040] = {achievement=14734,criteria=49819,atlas="pathofascension-32x32",}, -- Vesper of Wisdom
+    [32151775] = {achievement=14734,criteria=49817,atlas="pathofascension-32x32",}, -- Vesper of Loyalty
+})
+
+-- Swelling tear event
+local tear = {
+    achievement=14307, criteria={50607, 50608, 50609},
+    label="Swelling Tear",
+    npc=171013,
+    quest={
+        61001, -- Embodied Hunger
+        61046, -- Xixin
+        61047, -- Worldfeaster
+    },
+    loot={
+        183605, -- Devourer Wrought Warglaive
+    },
+    note="Possible spawns from the Swelling Tear event",
+}
+ns.RegisterPoints(1533, {
+    [52203280] = tear,
+    [63503600] = tear,
+    [56051460] = tear,
+    [48004295] = tear,
+    [59655140] = tear,
+})
