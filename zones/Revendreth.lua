@@ -139,6 +139,26 @@ ns.RegisterPoints(1525, {
             180993, -- Bat Visage Bobber
         },
     },
+    -- Loyal Gorger
+    [59305700] = {
+        -- npc=173499,
+        icon=3601543,
+        quest={
+            61839, -- Nipping at the Undergrowth
+            61840, -- Vineroot on the Menu
+            61842, -- Vineroot Will Not Do
+            61844, -- Hungry Hungry Gorger
+            62044, -- Standing Toe to Toe
+            62045, -- Ready for More
+            62046  -- A New Pack
+        },
+        -- hide_before=58259, -- Worldedge Gorger
+        loot={
+            182589, -- Loyal Gorger
+        },
+        note="Kill {npc:160821}, do 7 days of dailies for {npc:173499}, get a mount",
+    },
+    -- Blanchy
     [53104290] = {
         quest=62050, -- progress:62038, 62042, 62047, 62049, 62048; daily-done is 62107
         loot={
@@ -152,5 +172,247 @@ ns.RegisterPoints(1525, {
             "Day 4: Fill {item:182620} near {npc:173570} with water from Bastion or Ardenweald\n"..
             "Day 5: {item:182597} from {npc:171808} near the Night Market\n"..
             "Day 6: 3x {item:179271} from {npc:167815} by the Hole in the Wall\n",
+    },
+})
+
+-- Rares
+
+ns.RegisterPoints(1525, {
+    [53257300] = { -- Amalgamation of Filth
+        achievement=14310, criteria=48814,
+        quest=59854,
+        npc=166393,
+        loot={
+            183729, -- Filth-Splattered Headcover
+        },
+        note="When {quest:57443:Dirty Job Demolition Detail} world quest is up, open a Rubbish Box and use {spell:324115} into the water",
+    },
+    [25304850] = { -- Amalgamation of Light
+        achievement=14310, criteria=48811,
+        quest=59584,
+        npc=164388,
+        loot={
+            179924, -- Light-Infused Jacket
+            180688, -- Infused Remnant of Light
+        },
+        note="Move 3x Mirror Traps to summon",
+    },
+    [65802915] = { -- Amalgamation of Sin
+        achievement=14310, criteria=50029,
+        quest=60836,
+        npc=170434,
+        loot={
+            183730, -- Sinstone-Studded Greathelm
+        },
+        note="During {quest:60656:Summon Your Sins} choose Catalyst of Power",
+    },
+    [35807050] = { -- Azgar
+        achievement=14310, criteria=48816,
+        quest=59893,
+        npc=166576,
+        loot={
+            183731, -- Smolder-Tempered Legplates
+        },
+    },
+    [35003230] = { -- Bog Beast
+        achievement=14310, criteria=48818,
+        quest=59823,
+        npc=166292,
+        loot={
+            180588, -- Bucket of Primordial Sludge
+        },
+        note="Up during {quest:59808}",
+    },
+    [66555945] = { -- Endlurker
+        achievement=14310, criteria=48810,
+        quest=59582,
+        npc=165206,
+        loot={
+            179927, -- Glowing Endmire Stinger
+        },
+        note="Use {spell:321827} to summon",
+    },
+    [65406030] = path{achievement=14310, criteria=48810,quest=59582,},
+    [37104740] = { -- Executioner Aatron
+        achievement=14310, criteria=48819,
+        quest=59913,
+        npc=166710,
+        loot={
+            180696, -- Legion Wing Insignia
+            183737, -- Aatron's Stone Girdle
+        },
+    },
+    [43055185] = { -- Executioner Adrastia
+        achievement=14310, criteria=48807,
+        quest=58441,
+        npc=161310,
+        loot={
+            180502, -- Adrastia's Executioner Gloves
+        },
+        note="Flies around the area",
+    },
+    [62504715] = { -- Famu the Infinite
+        achievement=14310, criteria=48815,
+        quest=59869,
+        npc=166521,
+        loot={
+            180582, -- Endmire Flyer Tether
+        },
+        note="Talk to {npc:166483}",
+    },
+    [32651545] = { -- Forgemaster Madalav
+        quest=61618,
+        npc=159496,
+        loot={
+            180939, -- Mantle of the Forgemaster's Dark Blades
+        },
+        note="A Venthyr player channeling Dominance Keep must click the hammer",
+    },
+    [20485300] = { -- Grand Arcanist Dimitri
+        achievement=14310, criteria=48821,
+        quest=60173,
+        npc=167464,
+        loot={
+            180708, -- Mirror of Despair
+        },
+        note="Kill {npc:167467}",
+    },
+    [45857920] = { -- Harika the Horrid
+        quest=59612,
+        npc=165290,
+        loot={
+            183720, -- Dredbatskin Jerkin
+            180461, -- Horrid Brood Dredwing
+        },
+        note="A Venthyr player channeling Wanecrypt Hill must fire the Dredterror Ballista; fetch the bolt from 42.7 73.4",
+    },
+    [42757340] = {
+        quest=59612,
+        loot={176397}, -- Dredhollow Bolt
+        note="Be Venthyr, take to {npc:165327} at 46.3, 77.7",
+    },
+    [52005180] = { -- Hopecrusher
+        achievement=14310, criteria=48817,
+        quest=59900,
+        npc=166679,
+        loot={
+            180581, -- Hopecrusher Gargon
+        },
+    },
+    [61707950] = { -- Huntmaster Petrus
+        achievement=14310, criteria=48820,
+        quest=60022,
+        npc=166993,
+        loot={
+            180874, -- Gargon Whistle
+            180705, -- Gargon Training Manual
+            180405, -- Rusty Gargon Chain
+        },
+    },
+    [21803590] = { -- Innervus
+        achievement=14310, criteria=48801,
+        quest=58210,
+        npc=160640,
+        loot={
+            183735, -- Rogue Sinstealer's Mantle
+        },
+        note="Get a {item:177223} from {npc:160375}",
+    },
+    [68008180] = { -- Leeched Soul
+        achievement=14310, criteria=48809,
+        quest=59580,
+        npc=165152,
+        loot={
+            183736, -- Pride Resistant Handwraps
+        },
+        note="Finish the crypt event",
+    },
+    [76006160] = { -- Lord Mortegore
+        achievement=14310, criteria=48808,
+        quest=58633,
+        npc=161891,
+        loot={
+            180501, -- Skull-Formed Headcage
+        },
+        note="Use {item:174378} from nearby mobs to activate 4x {npc:161870}",
+    },
+    [49003490] = { -- Manifestation of Wrath
+        achievement=14310, criteria=48822,
+        quest=60729,
+        npc=170048,
+        loot={
+            180585, -- Vial of Roiling Emotions
+        },
+        note="During {quest:60654} bring ~10x {npc:169916} to {npc:169917}",
+    },
+    [38306915] = { -- Scrivener Lenua
+        achievement=14310, criteria=48800,
+        quest=58213,
+        npc=160675,
+        loot={
+            180587, -- Animated Tome
+        },
+        note="Bring 4x {npc:160753} to the library",
+    },
+    [67453050] = { -- Sinstone Hoarder
+        achievement=14310, criteria=50030,
+        quest=62252,
+        npc=162481,
+        loot={
+            183732, -- Sinstone-Linked Greaves
+        },
+        note="Use the Catacombs Cache inside a broken golem",
+    },
+    [34055555] = { -- Sire Ladinas
+        achievement=14310, criteria=48806,
+        quest=58263,
+        npc=160857,
+        loot={
+            180873, -- Smolderheart
+        },
+        note="Use {spell:313065} on {npc:157733}",
+    },
+    [78954975] = { -- Soulstalker Doina
+        achievement=14310, criteria=48799,
+        quest=58130,
+        npc=160385,
+        loot={
+            180692, -- Box of Stalker Traps
+        },
+        note="Follow when it runs away",
+    },
+    [31302325] = { -- Stonefist
+        achievement=14310, criteria=48803,
+        quest=62220,
+        npc=159503,
+        loot={
+            180488, -- Fist-Forged Breastplate
+        },
+    },
+    [66507080] = { -- Tollkeeper Varaboss
+        achievement=14310, criteria=48812,
+        quest=59595,
+        npc=165253,
+        loot={
+            179363, -- 'Misplaced' Anima Tolls
+        },
+    },
+    [43007910] = { -- Tomb Burster
+        achievement=14310, criteria=48802,
+        quest=56877,
+        npc=155779,
+        loot={
+            180584, -- Rose Spiderling
+        },
+        note="Destroy {npc:155769} near {npc:155777}",
+    },
+    [38607200] = { -- Worldedge Gorger
+        achievement=14310, criteria=48805,
+        quest=58259,
+        npc=160821,
+        loot={
+            180583, -- Impressionable Gorger Spawn
+        },
+        note="Use {item:173939} from nearby mobs near braziers",
     },
 })
