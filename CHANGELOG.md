@@ -2,6 +2,7 @@
 
 ## Changed in v3
 
+* Rares for all zones
 * Add config for hiding specific achievements
 * Fix the check that should have been hiding the Anima Shards in Bastion before you're 60
 
