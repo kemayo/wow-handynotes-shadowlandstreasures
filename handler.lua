@@ -49,7 +49,7 @@ local function render_string(s)
             end
         elseif variant == "quest" then
             local name = C_QuestLog.GetTitleForQuestID(id)
-            if name then
+            if name and name ~= "" then
                 return name
             end
         elseif variant == "npc" then
@@ -63,7 +63,7 @@ local function render_string(s)
                 return quick_texture_markup(info.iconFileID) .. info.name
             end
         end
-        return fallback or (variant .. ':' .. id)
+        return fallback ~= "" and fallback or (variant .. ':' .. id)
     end)
 end
 local function cache_string(s)
