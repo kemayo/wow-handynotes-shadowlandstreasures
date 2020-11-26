@@ -144,3 +144,267 @@ ns.RegisterPoints(1536, { -- Maldraxxus
         note="Loot a {item:182607:Hairy Egg} and wait three days for your pet to hatch",
     }
 })
+
+-- Rares
+
+ns.RegisterPoints(1536, {
+    [52653540] = { -- Bubbleblood
+        achievement=14308, criteria=48876,
+        quest=58870,
+        npc=162727,
+        loot={
+            184154, -- Grungy Containment Pack
+        },
+    },
+    [49002350] = { -- Collector Kash
+        achievement=14308, criteria=48866,
+        quest=58005,
+        npc=159105,
+        loot={
+            184181, -- Kash's Favored Hook
+        },
+    },
+    [26402635] = { -- Corpsecutter Moroc
+        achievement=14308, criteria=48872,
+        quest=58335,
+        npc=157058,
+        --loot={},
+    },
+    [76855705] = { -- Deadly Dapperling
+        achievement=14308, criteria=48851,
+        quest=58868,
+        npc=162711,
+        loot={
+            181263, -- Shy Melvin
+        },
+    },
+    [45052840] = { -- Devour'us
+        achievement=14308, criteria=48855,
+        quest=58835,
+        npc=162669,
+        --loot={},
+    },
+    [57805155] = { -- Gristlebeak
+        achievement=14308, criteria=48853,
+        quest=58837,
+        npc=162588,
+        loot={
+            182196, -- Arbalest of the Colossal Predator
+        },
+        note="Destroy {npc:162761} to summon",
+    },
+    [38804335] = { -- Indomitable Schmitd
+        achievement=14308, criteria=48848,
+        quest=58332,
+        npc=161105,
+        loot={
+            182192, -- Knee-Obstructing Legguards
+        },
+        note="Use {spell:313451} to break shield",
+    },
+    [72852890] = { -- Necromantic Anomaly
+        achievement=14308, criteria=49724,
+        quest=62369,
+        npc=174108,
+        loot={
+            181810, -- Phylactery of the Dead Conniver
+        },
+    },
+    [66003530] = { -- Nerissa Heartless
+        achievement=14308, criteria=49723,
+        quest=58851,
+        npc=162690,
+        loot={
+            182084, -- Gorespine
+        },
+    },
+    [53706130] = { -- Nirvaska the Summoner
+        achievement=14308, criteria=48849,
+        quest=58875,
+        npc=162767,
+        loot={
+            182205, -- Scarab-Shell Faceguard
+        },
+        note="Only when the {quest:58490} world quest is up",
+    },
+    [50356330] = { -- Pesticide
+        achievement=14308, criteria=48868,
+        quest=58629,
+        npc=161857,
+        loot={
+            182205, -- Scarab-Shell Faceguard
+        },
+    },
+    [53851875] = { -- Ravenomous
+        achievement=14308, criteria=48865,
+        quest=58004,
+        npc=159753,
+        loot={
+            181283, -- Foulwing Buzzer
+        },
+    },
+    [51754440] = { -- Sabriel the Bonecleaver
+        achievement=14802, criteria=48874,
+        quest=58784,
+        npc=168147,
+        loot={
+            182083, -- Bonecleaver's Skullboar
+            182075, -- Bonehoof Tauralus
+        },
+        note="A Necrolord player channeling The Theater of Pain must activate this",
+    },
+    [62107580] = { -- Scunner
+        achievement=14308, criteria=48857,
+        quest=58006,
+        npc=158406,
+        loot={
+            181267, -- Writhing Spine
+        },
+    },
+    [55502361] = { -- Sister Chelicerae
+        achievement=14308, criteria=48873,
+        quest=58003,
+        npc=159886,
+        loot={
+            181172, -- Boneweave Hatchling
+        },
+    },
+    [42465345] = { -- Smorgas the Feaster
+        achievement=14308, criteria=48869,
+        quest=58768,
+        npc=162528,
+        loot={
+            181266, -- Feasting Larva
+            181265, -- Corpselouse Larva
+        },
+        note="Use the Bloody Lump",
+    },
+    [44205130] = { -- Tahonta
+        achievement=14308, criteria=48850,
+        quest=58783,
+        npc=162586,
+        loot={
+            182190, -- Tauralus Hide Collar
+            181815, -- Armored Bonehoof Tauralus
+        },
+    },
+    [50552010] = { -- Taskmaster Xox
+        achievement=14308, criteria=48867,
+        quest=58091,
+        npc=160059,
+        --loot={},
+        note="Shares spawn with {npc:160226} and {npc:160204}",
+    },
+    [24204295] = { -- Thread Mistress Leeda
+        achievement=14308, criteria=48870,
+        quest=58678,
+        npc=162180,
+        loot={
+            item=184180, -- Leeda's Unrefined Mask
+        },
+    },
+    [33708015] = { -- Warbringer Mal'Korak
+        achievement=14308, criteria=48875,
+        quest=58889,
+        npc=162819,
+        loot={
+            182085, -- Blisterback Bloodtusk
+        },
+        note="At the top of the tower",
+    },
+    [28965138] = { -- Zargox the Reborn
+        achievement=14308, criteria=48864,
+        quest=62079,
+        npc=157125,
+        loot={
+            184285, -- Boneclutched Shackles
+        },
+        note="Do {quest:57245} at 26.3 42.8, then use the {item:175827} to summon",
+    },
+
+    -- non-achievement:
+    [31603540] = { -- Gieger
+        quest=58872,
+        npc=162741,
+        loot={
+            182080, -- Predatory Plagueroc
+        },
+        note="A Necrolord player channeling House of Constructs must drag {npc:162815} to the rare's right foot",
+    },
+})
+
+local deepscar = { -- Deepscar
+    achievement=14308, criteria=48852,
+    quest=58878,
+    npc=162797,
+    loot={
+        182191, -- Slobber-Soaked Chew Toy
+    },
+}
+ns.RegisterPoints(1536, {
+    [46754550] = deepscar,
+    [48105190] = deepscar,
+    [53954550] = deepscar,
+})
+
+-- Pool of Mixed Monstrosities:
+local BLUE = "|T136007:0|t" -- goo
+local RED = "|T136124:0|t" -- oil
+local YELLOW = "|T646670:0|t" -- ooze
+ns.RegisterPoints(1536, {
+    [58207420] = {
+        achievement=14721, criteria={
+            48858, -- Gelloh
+            48863, -- Corrupted Sediment
+            48854, -- Pulsing Leech
+            48860, -- Boneslurp
+            48862, -- Burnblister
+            48861, -- Violet Mistake
+            48859, -- Oily Invertebrate
+        },
+        quest={
+            61721, -- Gelloh
+            61719, -- Corrupted Sediment
+            61718, -- Pulsing Leech
+            61722, -- Boneslurp
+            61723, -- Burnblister
+            61720, -- Violet Mistake
+            61724, -- Oily Invertebrate
+        },
+        npc=157226, -- the pool
+        loot = {
+            183903, -- Smelly Jelly
+            182079, -- Slime-Covered Reins of the Hulking Deathroc (violet)
+            181270, -- Decaying Oozewalker (oily)
+            184185, -- Grunge-Caked Collarbone
+            184279, -- Siphoning Blood-Drinker
+            184300, -- Fused Spineguard
+        },
+        note="Mix: 30 ({spell:306722} + {spell:306719} + {spell:306713})\n"..
+            "{npc:157294}: 15+ "..RED.."\n".. -- Pulsing Leech
+            "{npc:157307}: 15+ "..YELLOW.."\n".. -- Gelloh
+            "{npc:157308}: 15+ "..BLUE.."\n".. -- Corrupted Sediment
+            "{npc:157310}: "..'('..YELLOW..' = '..BLUE..') > '..RED.."\n".. -- Boneslurp
+            "{npc:157311}: "..'('..YELLOW..' = '..RED..') > '..BLUE.."\n".. -- Burnblister
+            "{npc:157309}: "..'('..BLUE..' = '..RED..') > '..YELLOW.."\n".. -- Violet Mistake
+            "{npc:157312}: "..YELLOW..' = '..BLUE..' = '..RED -- Oily Invertebrate
+    }
+})
+
+-- Bloodsport, Theater of Pain
+ns.RegisterPoints(1536, {
+    [50354730] = {
+        achievement=14802, criteria={
+            50397, -- Azmogal
+            50398, -- Unbreakable Urtz
+            50399, -- Xantuth the Blighted
+            50400, -- Mistress Dyrax
+            50402, -- Devmorta
+            50403, -- Ti'or
+            48874  -- Sabriel the Bonecleaver
+        },
+        quest=62786, -- work out progress questids
+        npc=162853,
+        note="Some of these require accepting the three {quest:59826} quests",
+    },
+})
