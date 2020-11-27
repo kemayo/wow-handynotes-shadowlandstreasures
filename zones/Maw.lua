@@ -233,7 +233,7 @@ ns.RegisterPoints(1543, {
         achievement=14660, criteria=51058,
         quest=63044, -- 63388 ??
         npc=175821,
-        loot={},
+        -- loot={},
     },
     [26153745] = { -- Razkazzar
         achievement=14660, criteria=49479,

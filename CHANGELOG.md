@@ -5,6 +5,7 @@
 * Rares for all zones
 * Add config for hiding specific achievements
 * Fix the check that should have been hiding the Anima Shards in Bastion before you're 60
+* Fix an error in the Maw if you were using item icons
 
 ## Changed in v2
 

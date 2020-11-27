@@ -136,7 +136,7 @@ local function work_out_label(point)
         end
         fallback = 'npc:'..point.npc
     end
-    if point.loot then
+    if point.loot and #point.loot > 0 then
         -- handle multiples?
         local _, link = GetItemInfo(point.loot[1])
         if link then
@@ -163,7 +163,7 @@ local function work_out_texture(point)
         return icon_cache[point.atlas]
     end
     if ns.db.icon_item then
-        if point.loot then
+        if point.loot and #point.loot > 0 then
             local texture = select(10, GetItemInfo(point.loot[1]))
             if texture then
                 return trimmed_icon(texture)
@@ -360,7 +360,7 @@ local function handle_tooltip(tooltip, point)
                 end
             end
 
-            if point.loot then
+            if point.loot and #point.loot > 0 then
                 comparison:SetHyperlink(("item:%d"):format(point.loot[1]))
             elseif point.npc then
                 comparison:SetHyperlink(("unit:Creature-0-0-0-0-%d"):format(point.npc))
