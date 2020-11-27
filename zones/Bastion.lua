@@ -303,7 +303,7 @@ ns.RegisterPoints(1533, {
         loot={
             180062, -- Heavenly Drum
         },
-        note="Wandering the road; talk to it",
+        note="Wandering the road; talk to her",
     },
     [51151955] = { -- Enforcer Aegeon
         achievement=14307, criteria=50605,

@@ -248,8 +248,8 @@ ns.RegisterPoints(1536, {
         quest=58784,
         npc=168147,
         loot={
+            181815, -- Armored Bonehoof Tauralus
             182083, -- Bonecleaver's Skullboar
-            182075, -- Bonehoof Tauralus
         },
         note="A Necrolord player channeling The Theater of Pain must activate this",
     },
@@ -284,8 +284,8 @@ ns.RegisterPoints(1536, {
         quest=58783,
         npc=162586,
         loot={
+            182075, -- Bonehoof Tauralus
             182190, -- Tauralus Hide Collar
-            181815, -- Armored Bonehoof Tauralus
         },
     },
     [50552010] = { -- Taskmaster Xox
