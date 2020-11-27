@@ -240,7 +240,7 @@ ns.RegisterPoints(1533, {
         quest=60897, -- 62158,
         npc=170659,
         loot={
-            182655, -- Hill King's Roarbox
+            -- 182655, -- Hill King's Roarbox
         },
     },
     [55806250] = { -- Bookkeeper Mnemis
