@@ -35,12 +35,13 @@ ns.RegisterPoints(1533, { -- Bastion
         },
         note="Jump from the cliff on top to reach the treasure",
     },
-    [55506080] = {
+    [58204000] = {
         achievement=14311, criteria=50051, -- Larion Tamer's Harness
         quest=61049,
         loot={
-            182652, -- Larion Tamer's Harness
+            -- 182652, -- Larion Tamer's Harness (not present)
             182653, -- Larion Treats
+            183126, -- Kyrian Smith's Kit
         },
         note="Located at the end of the cavern",
     },

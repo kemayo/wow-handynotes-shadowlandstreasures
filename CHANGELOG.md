@@ -3,6 +3,8 @@
 ## Changed in v6
 
 * Flag Bastion Abandoned Stockpile as being max-level, and highlight its entrance.
+* Fix the Larion Tamer's Harness location and loot
+* Make path nodes display on the minimap automatically
 
 ## Changed in v5
 
