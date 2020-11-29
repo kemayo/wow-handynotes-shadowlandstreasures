@@ -17,6 +17,7 @@ ns.RegisterPoints(1543, {
         npc=170301,
         loot={
             182327, -- Dominion Etching Loss
+            184106, -- Gimble
         },
         note="Need three players to summon",
     },
@@ -82,7 +83,9 @@ ns.RegisterPoints(1543, {
         achievement=14744, criteria=49851,
         quest=62260,
         npc=170303,
-        --loot={},
+        loot={
+            184108, -- Vorpal Amulet
+        },
         note="Get the etching from the three other Heralds, combine into {item:182329}, and use to summon",
     },
     [30775000] = { -- Ikras the Devourer
@@ -202,6 +205,7 @@ ns.RegisterPoints(1543, {
         loot={
             183066, -- Korrath's Grimoire: Aleketh
             183067, -- Korrath's Grimoire: Belidir
+            183068, -- Korrath's Grimoire: Gyadrek
         },
     },
     [32002120] = { -- Drifting Sorrow

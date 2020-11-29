@@ -34,14 +34,6 @@ ns.RegisterPoints(1536, { -- Maldraxxus
         },
         note="Take the bottle from the nearby table and use it on the pool to obtain the treasure",
     },
-    [66105040] = {
-        achievement=14312, criteria=50067, -- Stolen Jar
-        quest=61451,
-        loot={
-            182618, -- Reclaimed Vessel
-        },
-        note="Gives the quest {quest:62085:...Why Me?}",
-    },
     [42302430] = {
         achievement=14312, criteria=50068, -- Necro Tome
         quest=61470,
@@ -118,6 +110,20 @@ ns.RegisterPoints(1649, { -- Etheric Vault
         note="Find the Vault Portcullis at the building where the treasure is located to open the gate blocking the treasure",
     },
 })
+
+local stolen_jar = {
+    achievement=14312, criteria=50067, -- Stolen Jar
+    quest=61451,
+    loot={
+        182618, -- Reclaimed Vessel
+    },
+    note="Gives the quest {quest:62085:...Why Me?}",
+}
+ns.RegisterPoints(1536, {
+    [66105040] = stolen_jar,
+    [73554985] = stolen_jar,
+})
+
 
 -- non-achievement treasures
 ns.RegisterPoints(1536, { -- Maldraxxus
@@ -413,6 +419,9 @@ ns.RegisterPoints(1536, {
         },
         quest=62786, -- work out progress questids
         npc=162853,
+        loot={
+            184062, -- Gnawed Reins of the Battle-Bound Warhound
+        },
         note="Some of these require accepting the three {quest:59826} quests",
     },
 })
