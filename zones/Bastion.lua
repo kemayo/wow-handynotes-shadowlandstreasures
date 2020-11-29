@@ -242,6 +242,8 @@ ns.RegisterPoints(1533, {
         quest=60897, -- 62158,
         npc=170659,
         loot={
+            180704, -- Infused Pet Biscuit
+            182653, -- Larion Treats
             -- 182655, -- Hill King's Roarbox
         },
     },
