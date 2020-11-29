@@ -121,10 +121,10 @@ ns.RegisterPoints(1649, { -- Etheric Vault
 
 -- non-achievement treasures
 ns.RegisterPoints(1536, { -- Maldraxxus
-    [44103990] = {
-        quest=60368,
-        label="Blackhound Cache",
-    },
+    -- [44103990] = {
+    --     quest=60368,
+    --     label="Blackhound Cache",
+    -- },
     -- [36807860] = {
     --     quest=nil,
     --     label="Bladesworn Supply Cache",
@@ -154,6 +154,8 @@ ns.RegisterPoints(1536, {
         npc=162727,
         loot={
             184154, -- Grungy Containment Pack
+            184290, -- Blood-Dyed Bonesaw
+            184476, -- Regenerating Slime Vial (toy)
         },
     },
     [49002350] = { -- Collector Kash
@@ -162,6 +164,7 @@ ns.RegisterPoints(1536, {
         npc=159105,
         loot={
             184181, -- Kash's Favored Hook
+            184182, -- Strengthened Abomination Hook
         },
     },
     [26402635] = { -- Corpsecutter Moroc
@@ -176,6 +179,7 @@ ns.RegisterPoints(1536, {
         npc=162711,
         loot={
             181263, -- Shy Melvin
+            184280, -- Dapper Threads
         },
     },
     [45052840] = { -- Devour'us
@@ -267,6 +271,7 @@ ns.RegisterPoints(1536, {
         npc=159886,
         loot={
             181172, -- Boneweave Hatchling
+            184289, -- Spindlefang Spellblade
         },
     },
     [42465345] = { -- Smorgas the Feaster
@@ -300,7 +305,7 @@ ns.RegisterPoints(1536, {
         quest=58678,
         npc=162180,
         loot={
-            item=184180, -- Leeda's Unrefined Mask
+            184180, -- Leeda's Unrefined Mask
         },
     },
     [33708015] = { -- Warbringer Mal'Korak
@@ -318,6 +323,7 @@ ns.RegisterPoints(1536, {
         npc=157125,
         loot={
             184285, -- Boneclutched Shackles
+            181804, -- Trophy of the Reborn Bonelord
         },
         note="Do {quest:57245} at 26.3 42.8, then use the {item:175827} to summon",
     },
@@ -376,9 +382,11 @@ ns.RegisterPoints(1536, {
             183903, -- Smelly Jelly
             182079, -- Slime-Covered Reins of the Hulking Deathroc (violet)
             181270, -- Decaying Oozewalker (oily)
+            184302, -- Residue-coated Muck Waders (corrupted)
             184185, -- Grunge-Caked Collarbone
-            184279, -- Siphoning Blood-Drinker
-            184300, -- Fused Spineguard
+            184279, -- Siphoning Blood-Drinker (pulsing)
+            184300, -- Fused Spineguard (oily)
+            184301, -- Twenty-Loop Violet Girdle (violet)
         },
         note="Mix: 30 ({spell:306722} + {spell:306719} + {spell:306713})\n"..
             "{npc:157294}: 15+ "..RED.."\n".. -- Pulsing Leech

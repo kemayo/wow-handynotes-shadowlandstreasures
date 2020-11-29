@@ -70,6 +70,7 @@ ns.RegisterPoints(1565, { -- Ardenweald
         achievement=14313, criteria=50045, -- Darkreach Supplies
         quest=61068,
         loot={
+            179593, -- Darkreach Mask
             179594, -- Witherscorn Guise
         },
         note="Use the jumping mushroom nearby to reach the treasure",
@@ -245,20 +246,13 @@ ns.RegisterPoints(1565, {
         },
         note="Starts {quest:62246}",
     },
-    [36504790] = { -- Macabre
-        achievement=14309, criteria=48780,
-        quest=nil,
-        npc=164093,
-        loot={
-            180644, -- Rocky
-        },
-        note="Stand in a Mysterious Mushroom Ring with three players, dancing in a loop: A > B > C > A",
-    },
     [62102470] = { -- Mymaen
         achievement=14309, criteria=48788,
         quest=59431,
         npc=165053,
-        --loot={},
+        loot={
+            179502, -- Ripvine Barb
+        },
         note="Kill {npc:165050} to summon",
     },
     [50092091] = { -- Mystic Rainbowhorn
@@ -331,6 +325,7 @@ ns.RegisterPoints(1565, {
         quest=59220,
         npc=164415,
         loot={
+            180146, -- Axe of Broken Wills
             182183, -- Wolfhawk Soul
         },
         note="Use {spell:310143} to get in",
@@ -350,6 +345,7 @@ ns.RegisterPoints(1565, {
         npc=168647,
         loot={
             180730, -- Wild Glimmerfur Prowler
+            180154, -- Greataxe of Unrelenting Pursuit
             182176, -- Shadowstalker Soul (quest=62431)
         },
         note="A Night Fae player channeling the Tirna Scithe must:\n"..
@@ -361,7 +357,7 @@ ns.RegisterPoints(1565, {
         quest=59170,
         npc=164147,
         loot={
-            179502, -- Ripvine Barb
+            181396, -- Thornsweeper Scythe
         },
         note="Drag out of the ground",
     },
@@ -378,6 +374,8 @@ ns.RegisterPoints(1565, {
         },
         quest=61633, -- TODO: more questids...
         loot={
+            182454, -- Murmurs in the Dark (Guldan)
+            -- the vendor sells:
             181304, -- Winterwoven Branches
             180416, -- Mistcallers Aria
             180417, -- Mistcallers Ballad
@@ -390,4 +388,20 @@ ns.RegisterPoints(1565, {
         },
         note="A Night Fae player must talk to {npc:171743} to start a play; there are 7 possible encounters, one per day. After you can buy items from {npc:163714} depending on how many rares you've cleared.",
     }
+})
+
+local macabre = { -- Macabre
+    achievement=14309, criteria=48780,
+    quest=59140,
+    npc=164093,
+    loot={
+        180644, -- Rocky
+    },
+    note="Stand in a Mysterious Mushroom Ring with three players, dancing in a loop: A > B > C > A",
+}
+ns.RegisterPoints(1565, {
+    [36504790] = macabre,
+    [59952940] = macabre,
+    [32704477] = macabre,
+    [57932936] = macabre,
 })

@@ -193,6 +193,9 @@ ns.RegisterPoints(1525, {
         npc=164388,
         loot={
             179924, -- Light-Infused Jacket
+            179926, -- Light-Infused Tunic
+            179653, -- Light-Infused Hauberk
+            179925, -- Light-Infused Breastplate
             180688, -- Infused Remnant of Light
         },
         note="Move 3x Mirror Traps to summon",
@@ -305,7 +308,7 @@ ns.RegisterPoints(1525, {
         npc=166993,
         loot={
             180874, -- Gargon Whistle
-            180705, -- Gargon Training Manual
+            180705, -- Gargon Training Manual (hunter)
             180405, -- Rusty Gargon Chain
         },
     },
@@ -402,7 +405,7 @@ ns.RegisterPoints(1525, {
         quest=56877,
         npc=155779,
         loot={
-            180584, -- Rose Spiderling
+            180584, -- Blushing Spiderling
         },
         note="Destroy {npc:155769} near {npc:155777}",
     },

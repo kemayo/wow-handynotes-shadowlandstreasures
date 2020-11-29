@@ -32,7 +32,9 @@ ns.RegisterPoints(1543, {
         achievement=14744, criteria=49844,
         quest=61106,
         npc=171317,
-        --loot={},
+        loot={
+            183887, -- Suirhtaned, Blade of the Heir
+        },
     },
     [60954805] = { -- Darithis the Bleak
         achievement=14744, criteria=49845,
@@ -64,6 +66,7 @@ ns.RegisterPoints(1543, {
         npc=169827,
         loot={
             182328, -- Dominion Etching: Grief
+            184105, -- Gyre
         },
         note="Need three players to summon",
     },
@@ -84,7 +87,7 @@ ns.RegisterPoints(1543, {
     },
     [30775000] = { -- Ikras the Devourer
         achievement=14744, criteria=50621,
-        quest=nil,
+        quest=62788,
         npc=175012,
         note="Flies around",
     },
@@ -92,7 +95,9 @@ ns.RegisterPoints(1543, {
         achievement=14744, criteria=49852,
         quest=60987,
         npc=162849,
-        --loot={},
+        loot={
+            184292, -- Ancient Elethium Coin
+        },
     },
     [45507375] = { -- Nascent Devourer
         achievement=14744, criteria=49853,
@@ -139,6 +144,7 @@ ns.RegisterPoints(1543, {
         npc=170302,
         loot={
             182326, -- Dominion Etching: Pain
+            184107, -- Borogove Cloak
         },
         note="Need three players to summon",
     },
@@ -179,7 +185,9 @@ ns.RegisterPoints(1543, {
         achievement=14660, criteria=49484,
         quest=61346,
         npc=168693,
-        --loot={},
+        loot={
+            183070, -- Mawsworn Orders
+        },
     },
     [25851480] = { -- Dartanos
         achievement=14660, criteria=49476,
@@ -191,7 +199,10 @@ ns.RegisterPoints(1543, {
         achievement=14660, criteria=50410,
         quest=61140,
         npc=162844,
-        --loot={},
+        loot={
+            183066, -- Korrath's Grimoire: Aleketh
+            183067, -- Korrath's Grimoire: Belidir
+        },
     },
     [32002120] = { -- Drifting Sorrow
         achievement=14660, criteria=49475,
@@ -237,7 +248,7 @@ ns.RegisterPoints(1543, {
     },
     [26153745] = { -- Razkazzar
         achievement=14660, criteria=49479,
-        quest=62228,
+        quest=60992,
         npc=162829,
         --loot={},
     },

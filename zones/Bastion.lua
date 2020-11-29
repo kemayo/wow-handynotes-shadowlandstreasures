@@ -277,7 +277,9 @@ ns.RegisterPoints(1533, {
         achievement=14307, criteria=50603,
         quest=60883,
         npc=170623,
-        --loot={}, -- various conduits
+        loot={
+            184297, -- Death Warden's Greatblade
+        },
     },
     [37004180] = { -- Demi the Relic Hoarder
         achievement=14307, criteria=50611,
@@ -433,9 +435,10 @@ local tear = {
     note="Possible spawns from the Swelling Tear event",
 }
 ns.RegisterPoints(1533, {
-    [52203280] = tear,
-    [63503600] = tear,
-    [56051460] = tear,
+    [39604500] = tear,
     [48004295] = tear,
+    [52203280] = tear,
+    [56051460] = tear,
     [59655140] = tear,
+    [63503600] = tear,
 })

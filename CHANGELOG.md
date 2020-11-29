@@ -1,5 +1,9 @@
 # Changelog
 
+## Changed in v5
+
+* Update loot and some spawn locations
+
 ## Changed in v4
 
 * Fix an error in the Maw if you were using item icons
