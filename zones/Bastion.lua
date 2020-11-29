@@ -53,12 +53,14 @@ ns.RegisterPoints(1533, { -- Bastion
         },
         note="Random BOE uncommon / rare item",
     },
-    [44604650] = {
+    [46124536] = {
         achievement=14311, criteria=50053, -- Abandoned Stockpile
         quest=61006,
         -- loot=Random Greens/Materials,
         note="Entrance is hidden behind some bushes",
+        level=60,
     },
+    [46434657] = path{achievement=14311, criteria=50053,minimap=true,level=60,},
     [51401790] = {
         achievement=14311, criteria=50054, -- Experimental Construct Part
         quest=61052,

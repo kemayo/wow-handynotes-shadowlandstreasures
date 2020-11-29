@@ -1,5 +1,9 @@
 # Changelog
 
+## Changed in v6
+
+* Flag Bastion Abandoned Stockpile as being max-level, and highlight its entrance.
+
 ## Changed in v5
 
 * Update loot and some spawn locations
