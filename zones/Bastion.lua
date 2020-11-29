@@ -275,8 +275,10 @@ ns.RegisterPoints(1533, {
         achievement=14307, criteria=50615,
         quest=60999,
         npc=171010,
-        --loot={},
-        note="Bring a {item:180651} to the {npc:171300}",
+        loot={
+            182759, -- Functioning Anima Core
+        },
+        note="Bring a {item:180651}, found hidden behind debris nearby, to the {npc:171300}",
     },
     [27803015] = { -- Dark Watcher
         achievement=14307, criteria=50603,

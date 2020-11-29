@@ -4,6 +4,7 @@
 
 * Flag Bastion Abandoned Stockpile as being max-level, and highlight its entrance.
 * Fix the Larion Tamer's Harness location and loot
+* Explain the Corrupted Clawguard better
 * Make path nodes display on the minimap automatically
 
 ## Changed in v5
