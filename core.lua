@@ -11,6 +11,7 @@ local path_meta = {__index = {
     label = "Path to treasure",
     atlas = "map-icon-SuramarDoor.tga", -- 'PortalPurple'
     path = true,
+    minimap = true,
     scale = 1.1,
 }}
 ns.path = function(details)
