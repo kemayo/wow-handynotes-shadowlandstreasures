@@ -396,7 +396,12 @@ ns.RegisterPoints(1533, {
     },
     [55358025] = { -- Beasts of Bastion
         achievement=14307, criteria={50597, 50598, 50599, 50617},
-        quest={60570, 60571, 60569, 58526},
+        quest={
+            60570, -- Sigilback (also 63423)
+            60571, -- Cloudtail (also 63424)
+            60569, -- Nemaeus (also 63421)
+            58526, -- Aethon (also 63422)
+        },
         label="Beasts of Bastion",
         npc=161527,
         loot={
