@@ -82,7 +82,7 @@ local function cache_string(s)
     end
 end
 
-local default_texture, npc_texture, follower_texture, currency_texture, junk_texture
+local npc_texture, follower_texture, currency_texture, junk_texture
 local icon_cache = {}
 local trimmed_icon = function(texture)
     if not icon_cache[texture] then
@@ -104,6 +104,11 @@ local atlas_texture = function(atlas, scale)
         scale = scale or 1,
     }
 end
+local default_textures = {
+    VignetteLoot = atlas_texture("VignetteLoot", 1.4),
+    VignetteLootElite = atlas_texture("VignetteLootElite", 1.7),
+    Garr_TreasureIcon = atlas_texture("Garr_TreasureIcon", 2.5),
+}
 local function work_out_label(point)
     local fallback
     if point.label then
@@ -214,10 +219,10 @@ local function work_out_texture(point)
         end
         return junk_texture
     end
-    if not default_texture then
-        default_texture = atlas_texture("Garr_TreasureIcon", 2.6)
+    if not default_textures[ns.db.default_icon] then
+        default_textures[ns.db.default_icon] = atlas_texture(ns.db.default_icon, 1.5)
     end
-    return default_texture
+    return default_textures[ns.db.default_icon] or default_textures["VignetteLoot"]
 end
 local get_point_info = function(point)
     if point then

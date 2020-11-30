@@ -2,6 +2,7 @@ local myname, ns = ...
 
 ns.defaults = {
     profile = {
+        default_icon = "VignetteLoot",
         show_on_world = true,
         show_on_minimap = false,
         show_junk = false,
@@ -70,6 +71,16 @@ ns.options = {
                     desc = "Show icons on the minimap",
                     order = 50,
                 },
+                default_icon = {
+                    type = "select",
+                    name = "Default Icon",
+                    values = {
+                        VignetteLoot = CreateAtlasMarkup("VignetteLoot", 20, 20) .. " Chest",
+                        VignetteLootElite = CreateAtlasMarkup("VignetteLootElite", 20, 20) .. " Chest with star",
+                        Garr_TreasureIcon = CreateAtlasMarkup("Garr_TreasureIcon", 20, 20) .. " Shiny chest",
+                    },
+                    order = 60,
+                }
             },
         },
         display = {
