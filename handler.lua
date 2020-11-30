@@ -191,7 +191,7 @@ local function work_out_texture(point)
     else
         if point.currency then
             if not currency_texture then
-                currency_texture = atlas_texture("VignetteLoot", 1.5)
+                currency_texture = atlas_texture("Auctioneer", 1.5)
             end
             return currency_texture
         end
