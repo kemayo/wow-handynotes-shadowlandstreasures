@@ -81,6 +81,12 @@ local function cache_string(s)
         end
     end
 end
+local function cache_loot(loot)
+    if not loot then return end
+    for _,item in ipairs(loot) do
+        C_Item.RequestLoadItemDataByID(item)
+    end
+end
 
 local npc_texture, follower_texture, currency_texture, junk_texture
 local icon_cache = {}
@@ -224,7 +230,7 @@ local function work_out_texture(point)
     end
     return default_textures[ns.db.default_icon] or default_textures["VignetteLoot"]
 end
-local get_point_info = function(point)
+local get_point_info = function(point, isMinimap)
     if point then
         local label = work_out_label(point)
         local icon = work_out_texture(point)
@@ -234,7 +240,10 @@ local get_point_info = function(point)
         elseif point.junk then
             category = "junk"
         end
-        cache_string(point.note)
+        if not isMinimap then
+            cache_string(point.note)
+            cache_loot(point.loot)
+        end
         return label, icon, category, point.quest, point.faction, point.scale, point.alpha or 1
     end
 end
@@ -486,7 +495,7 @@ do
         local state, value = next(t, prestate)
         while state do -- Have we reached the end of this zone?
             if value and ns.should_show_point(state, value, currentZone, isMinimap) then
-                local label, icon, _, _, _, scale, alpha = get_point_info(value)
+                local label, icon, _, _, _, scale, alpha = get_point_info(value, isMinimap)
                 scale = (scale or 1) * (icon and icon.scale or 1) * ns.db.icon_scale
                 return state, nil, icon, scale, ns.db.icon_alpha * alpha
             end
