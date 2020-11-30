@@ -6,7 +6,10 @@
 * Flag Bastion Abandoned Stockpile as being max-level, and highlight its entrance.
 * Fix the Larion Tamer's Harness location and loot
 * Explain the Corrupted Clawguard better
-* Make path nodes display on the minimap automatically
+* Make path-to-treasure nodes display on the minimap automatically
+* Cache loot when opening the zone map, so there's less "loading..."
+* Change the default point icon to the blizzard default chest vignette icon (which looks way better than it did in the last expansion)
+* Add some config for setting a default icon, if you'd prefer something different
 
 ## Changed in v5
 
