@@ -2,6 +2,7 @@
 
 ## Changed in v6
 
+* Add achievement: Nine Afterlives (the jellycats)
 * Flag Bastion Abandoned Stockpile as being max-level, and highlight its entrance.
 * Fix the Larion Tamer's Harness location and loot
 * Explain the Corrupted Clawguard better

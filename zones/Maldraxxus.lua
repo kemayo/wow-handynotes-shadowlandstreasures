@@ -425,3 +425,25 @@ ns.RegisterPoints(1536, {
         note="Some of these require accepting the three {quest:59826} quests",
     },
 })
+
+-- Nine Afterlives (Jellycats)
+local jellycat_meta = {__index = {
+    achievement=14634,
+    note="Pet all nine cats to get {item:184449}",
+    icon=true,
+    minimap=true,
+}}
+local jellycat = function(details) return setmetatable(details, jellycat_meta) end
+ns.RegisterPoints(1536, {
+    [32025705] = jellycat{criteria=49426,}, -- Snots
+    [50246021] = jellycat{criteria=49427,}, -- Pus-In-Boots
+    [65215060] = jellycat{criteria=49428,}, -- Envy
+    [64852241] = jellycat{criteria=49429,}, -- Mr. Jigglesworth
+    [51082759] = jellycat{criteria=49430,}, -- Lime
+    [49491763] = jellycat{criteria=49431,}, -- Mayhem
+    [47553376] = jellycat{criteria=49432,}, -- Moldstopheles
+    [34345315] = jellycat{criteria=49433,}, -- Meowmalade
+})
+ns.RegisterPoints(1697, { -- Plaguefall
+    [45253680] = jellycat{criteria=49425,},
+})
