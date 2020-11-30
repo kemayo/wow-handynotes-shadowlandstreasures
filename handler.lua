@@ -162,7 +162,7 @@ local function work_out_texture(point)
         end
         return icon_cache[point.atlas]
     end
-    if ns.db.icon_item then
+    if ns.db.icon_item or point.icon then
         if point.loot and #point.loot > 0 then
             local texture = select(10, GetItemInfo(point.loot[1]))
             if texture then
