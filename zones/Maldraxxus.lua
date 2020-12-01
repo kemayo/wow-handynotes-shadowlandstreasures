@@ -74,7 +74,20 @@ ns.RegisterPoints(1536, { -- Maldraxxus
         loot={
             183516, -- Stained Bonefused Mantle
         },
+        level=60,
         note="Kill {npc:170563:Runespeaker Phaeton} to obtain the {item:181777:Phaeton's Key} required to unlock the treasure",
+    },
+    [37907000] = {
+        label="{npc:170563}",
+        achievement=14312, criteria=50073, -- Runespeaker's Trove
+        quest=61491,
+        loot={
+            181777, -- Phaeton's Key
+        },
+        atlas="Garr_LevelUpgradeLocked", scale=1.3,
+        minimap=true,
+        level=60, -- or at least quest-gated?
+        note="Take the key to 31.7 70.0",
     },
     [57607580] = {
         achievement=14312, criteria=50074, -- Plaguefallen Chest
