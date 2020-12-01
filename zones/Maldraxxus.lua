@@ -60,7 +60,8 @@ ns.RegisterPoints(1536, { -- Maldraxxus
         achievement=14312, criteria=50071, -- Misplaced Supplies
         quest=59245,
         -- loot=Random Gear,
-        note="On top of a mushroom",
+        level=60,
+        note="On top of a giant mushroom; climb the smaller one first",
     },
     [72805360] = {
         achievement=14312, criteria=50072, -- Glutharn's Stash
