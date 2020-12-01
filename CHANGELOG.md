@@ -3,6 +3,7 @@
 ## Changed in v7
 
 * Add Chaotic Riftstones to the Maw
+* Fix check that was stopping collected jellycats from being hidden before you'd completed the entire Nine Afterlives achievement
 
 ## Changed in v6
 

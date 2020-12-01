@@ -219,7 +219,7 @@ local allQuestsComplete = function(quests)
 end
 local criteriaComplete = function(achievement, criteria)
     local _, _, completed, _, _, completedBy = GetAchievementCriteriaInfoByID(achievement, criteria)
-    if not (completed and completedBy == player_name) then
+    if not (completed and (not completedBy or completedBy == player_name)) then
         return false
     end
     return true
