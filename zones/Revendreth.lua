@@ -141,7 +141,7 @@ ns.RegisterPoints(1525, {
     },
     -- Loyal Gorger
     [59305700] = {
-        -- npc=173499,
+        label="{npc:173499}",
         icon=3601543,
         quest={
             61839, -- Nipping at the Undergrowth
@@ -152,7 +152,7 @@ ns.RegisterPoints(1525, {
             62045, -- Ready for More
             62046  -- A New Pack
         },
-        -- hide_before=58259, -- Worldedge Gorger
+        hide_before=58259, -- Worldedge Gorger
         loot={
             182589, -- Loyal Gorger
         },
