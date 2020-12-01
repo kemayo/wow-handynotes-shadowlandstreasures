@@ -230,10 +230,24 @@ local function work_out_texture(point)
     end
     return default_textures[ns.db.default_icon] or default_textures["VignetteLoot"]
 end
+local inactive_cache = {}
+local function get_inactive_texture_variant(icon)
+    if not inactive_cache[icon] then
+        inactive_cache[icon] = CopyTable(icon)
+        inactive_cache[icon].r = 0.5
+        inactive_cache[icon].g = 0.5
+        inactive_cache[icon].b = 0.5
+        inactive_cache[icon].a = 1
+    end
+    return inactive_cache[icon]
+end
 local get_point_info = function(point, isMinimap)
     if point then
         local label = work_out_label(point)
         local icon = work_out_texture(point)
+        if point.active and point.active.quest and not C_QuestLog.IsQuestFlaggedCompleted(point.active.quest) then
+            icon = get_inactive_texture_variant(icon)
+        end
         local category = "treasure"
         if point.npc then
             category = "npc"
