@@ -7,16 +7,19 @@ ns.merge = function(t1, t2)
     end
 end
 
-local path_meta = {__index = {
+ns.nodeMaker = function(metatable)
+    return function(details)
+        return setmetatable(details or {}, {__index = metatable})
+    end
+end
+
+ns.path = ns.nodeMaker{
     label = "Path to treasure",
-    atlas = "map-icon-SuramarDoor.tga", -- 'PortalPurple'
+    atlas = "poi-door", -- 'PortalPurple' / 'PortalRed'?
     path = true,
     minimap = true,
     scale = 1.1,
-}}
-ns.path = function(details)
-    return setmetatable(details or {}, path_meta)
-end
+}
 
 ns.map_spellids = {
     -- [1533] = 0, -- Bastion

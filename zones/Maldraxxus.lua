@@ -427,13 +427,12 @@ ns.RegisterPoints(1536, {
 })
 
 -- Nine Afterlives (Jellycats)
-local jellycat_meta = {__index = {
+local jellycat = ns.nodeMaker{
     achievement=14634,
     note="Pet all nine cats to get {item:184449}",
     icon=true,
     minimap=true,
-}}
-local jellycat = function(details) return setmetatable(details, jellycat_meta) end
+}
 ns.RegisterPoints(1536, {
     [32025705] = jellycat{criteria=49426,}, -- Snots
     [50246021] = jellycat{criteria=49427,}, -- Pus-In-Boots
