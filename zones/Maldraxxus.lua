@@ -96,7 +96,15 @@ ns.RegisterPoints(1536, { -- Maldraxxus
         loot={
             183515, -- Iridescent Ooze / Reanimated Plague
         },
+        level=60,
         note="Enter the tunnels at 62.4 76.5 to become {spell:330092:Plaguefallen} and unlock the treasure",
+    },
+    [62387655] = ns.path{
+        label="Tunnel entrance",
+        achievement=14312, criteria=50074, -- Plaguefallen Chest
+        quest=61474,
+        level=60,
+        note="Under the platform; stand in the goo to get 10 stacks of {spell:330069} and become become {spell:330092:Plaguefallen}, then go into the cave and you'll be able to get through the pipe",
     },
     [64602470] = {
         achievement=14312, criteria=50075, -- Ritualist's Cache
@@ -391,7 +399,7 @@ ns.RegisterPoints(1536, {
         quest={
             61721, -- Gelloh
             61719, -- Corrupted Sediment
-            61718, -- Pulsing Leech
+            61718, -- Pulsing Leech (62805?)
             61722, -- Boneslurp
             61723, -- Burnblister
             61720, -- Violet Mistake
