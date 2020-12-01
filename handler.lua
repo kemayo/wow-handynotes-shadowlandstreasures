@@ -544,11 +544,28 @@ function HL:OnInitialize()
     -- Initialize our database with HandyNotes
     HandyNotes:RegisterPluginDB(myname:gsub("HandyNotes_", ""), HLHandler, ns.options)
 
-    -- watch for LOOT_CLOSED
+    -- Watch for events... but mitigate spammy events by bucketing in Refresh
     self:RegisterEvent("LOOT_CLOSED", "Refresh")
     self:RegisterEvent("ZONE_CHANGED_INDOORS", "Refresh")
+    self:RegisterEvent("CRITERIA_EARNED", "Refresh")
+    -- self:RegisterEvent("CRITERIA_UPDATE", "Refresh")
+    self:RegisterEvent("BAG_UPDATE", "Refresh")
+    self:RegisterEvent("QUEST_TURNED_IN", "Refresh")
+    self:RegisterEvent("SHOW_LOOT_TOAST", "Refresh")
 end
 
-function HL:Refresh()
-    self:SendMessage("HandyNotes_NotifyUpdate", myname:gsub("HandyNotes_", ""))
+do
+    local bucket = CreateFrame("Frame")
+    bucket.elapsed = 0
+    bucket:SetScript("OnUpdate", function(self, elapsed)
+        self.elapsed = self.elapsed + elapsed
+        if self.elapsed > 1.5 then
+            self.elapsed = 0
+            HL:SendMessage("HandyNotes_NotifyUpdate", myname:gsub("HandyNotes_", ""))
+            self:Hide()
+        end
+    end)
+    function HL:Refresh(event)
+        bucket:Show()
+    end
 end
