@@ -241,12 +241,27 @@ local function get_inactive_texture_variant(icon)
     end
     return inactive_cache[icon]
 end
+local upcoming_cache = {}
+local function get_upcoming_texture_variant(icon)
+    if not upcoming_cache[icon] then
+        upcoming_cache[icon] = CopyTable(icon)
+        upcoming_cache[icon].r = 1
+        upcoming_cache[icon].g = 0
+        upcoming_cache[icon].b = 0
+        upcoming_cache[icon].a = 0.7
+    end
+    return upcoming_cache[icon]
+end
 local get_point_info = function(point, isMinimap)
     if point then
         local label = work_out_label(point)
         local icon = work_out_texture(point)
         if point.active and point.active.quest and not C_QuestLog.IsQuestFlaggedCompleted(point.active.quest) then
             icon = get_inactive_texture_variant(icon)
+        elseif point.level and UnitLevel("player") < point.level then
+            icon = get_upcoming_texture_variant(icon)
+        elseif point.hide_before and not ns.allQuestsComplete(point.hide_before) then
+            icon = get_upcoming_texture_variant(icon)
         end
         local category = "treasure"
         if point.npc then
@@ -341,6 +356,13 @@ local function handle_tooltip(tooltip, point)
                 end
             end
         end
+        if point.level and point.level > UnitLevel("player") then
+            tooltip:AddLine(ITEM_MIN_LEVEL:format(point.level), 1, 0, 0)
+        end
+        if point.hide_before and not ns.allQuestsComplete(point.hide_before) then
+            tooltip:AddLine(COMMUNITY_TYPE_UNAVAILABLE, 1, 0, 0)
+        end
+
         if point.quest and ns.db.tooltip_questid then
             local quest = point.quest
             if type(quest) == 'table' then

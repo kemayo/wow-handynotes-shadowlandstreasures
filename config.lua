@@ -8,6 +8,7 @@ ns.defaults = {
         show_junk = false,
         show_npcs = true,
         show_treasure = true,
+        upcoming = true,
         found = false,
         repeatable = true,
         icon_scale = 1.0,
@@ -106,6 +107,12 @@ ns.options = {
                     name = "Show found",
                     desc = "Show waypoints for items you've already found?",
                     order = 20,
+                },
+                upcoming = {
+                    type = "toggle",
+                    name = "Show inaccessible",
+                    desc = "Show waypoints for items you can't get yet (max level, gated quests, etc); they'll be tinted red to indicate this",
+                    order = 25,
                 },
                 show_npcs = {
                     type = "toggle",
@@ -217,6 +224,7 @@ local allQuestsComplete = function(quests)
         return true
     end
 end
+ns.allQuestsComplete = allQuestsComplete
 local criteriaComplete = function(achievement, criteria)
     local _, _, completed, _, _, completedBy = GetAchievementCriteriaInfoByID(achievement, criteria)
     if not (completed and (not completedBy or completedBy == player_name)) then
@@ -279,9 +287,6 @@ ns.should_show_point = function(coord, point, currentZone, isMinimap)
     if point.faction and point.faction ~= player_faction then
         return false
     end
-    if point.level and point.level > UnitLevel("player") then
-        return false
-    end
     if (not ns.db.found) then
         if point.quest then
             if allQuestsComplete(point.quest) then
@@ -324,8 +329,16 @@ ns.should_show_point = function(coord, point, currentZone, isMinimap)
     if point.requires_no_buff and GetPlayerAuraBySpellID(point.requires_no_buff) then
         return false
     end
-    if point.hide_before and not ns.db.upcoming and not allQuestsComplete(point.hide_before) then
-        return false
+    if not ns.db.upcoming then
+        if point.level and point.level > UnitLevel("player") then
+            return false
+        end
+        if point.active and point.active.quest and not C_QuestLog.IsQuestFlaggedCompleted(point.active.quest) then
+            return false
+        end
+        if point.hide_before and not allQuestsComplete(point.hide_before) then
+            return false
+        end
     end
     return true
 end

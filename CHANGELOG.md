@@ -4,6 +4,7 @@
 
 * Add Chaotic Riftstones to the Maw
 * Fix check that was stopping collected jellycats from being hidden before you'd completed the entire Nine Afterlives achievement
+* Better display when treasures require max level, though data is very incomplete as to which ones
 
 ## Changed in v6
 
