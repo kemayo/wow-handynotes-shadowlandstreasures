@@ -325,7 +325,7 @@ ns.RegisterPoints(1536, {
     },
     [28965138] = { -- Zargox the Reborn
         achievement=14308, criteria=48864,
-        quest=62079,
+        quest=59290,
         npc=157125,
         loot={
             184285, -- Boneclutched Shackles
