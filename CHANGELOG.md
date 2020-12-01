@@ -1,5 +1,9 @@
 # Changelog
 
+## Changed in v7
+
+* Add Chaotic Riftstones to the Maw
+
 ## Changed in v6
 
 * Add achievement: Nine Afterlives (the jellycats)

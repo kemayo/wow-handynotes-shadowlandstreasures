@@ -301,3 +301,19 @@ ns.RegisterPoints(1543, {
     --    npc=165973,
     --}
 })
+
+local riftstone = ns.nodeMaker{
+    label="{npc:174962}",
+    atlas="WarlockPortalHorde", scale=1.3,
+    active={quest=63177},
+    note="Buy access from {npc:162804}"
+}
+-- Chaotic Riftstones
+ns.RegisterPoints(1543, {
+    -- First pair
+    [19204780] = riftstone(),
+    [25201785] = riftstone(),
+    -- Second pair
+    [23453120] = riftstone{atlas="WarlockPortalAlliance"},
+    [34804360] = riftstone{atlas="WarlockPortalAlliance"},
+})
