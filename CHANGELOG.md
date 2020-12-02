@@ -1,10 +1,16 @@
 # Changelog
 
+## Changed in v8
+
+* Improved the data for Bastion and Maldraxxus
+* Better display when treasures aren't currently available, though data is very incomplete as to which ones do (because it's difficult to tell without visiting them all... and it might turn out to *really* be "are you in any covenant?" and I need 
+to get a leveling character to the right point to test this)
+    * By default unavailable mobs/treasures will still show up, but tinted red. If this is very annoying, there's a setting for it in the options
+
 ## Changed in v7
 
 * Add Chaotic Riftstones to the Maw
 * Fix check that was stopping collected jellycats from being hidden before you'd completed the entire Nine Afterlives achievement
-* Better display when treasures require max level, though data is very incomplete as to which ones
 
 ## Changed in v6
 
