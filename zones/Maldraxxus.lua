@@ -40,13 +40,22 @@ ns.RegisterPoints(1536, { -- Maldraxxus
         loot={
             182732, -- The Necronom-i-nom
         },
-        note="Complete the questline starting with {quest:58619:Read Between the Lines} to eventually reach this treasure",
+        hide_before=58620,
+        note="Complete the questline starting with {quest:58619:Read Between the Lines}. Once the tower is unlocked, it's on the top floor",
+    },
+    [40603300] = {
+        label="{npc:166657}", -- Ta'eran
+        achievement=14312, criteria=50068, -- Necro Tome
+        quest=58619,
+        atlas="questnormal",
+        note="Starts the quest chain leading to {item:182732}",
     },
     [22503050] = {
         achievement=14312, criteria=50069, -- Forgotten Mementos
         quest=58710,
         -- loot=Random Gear,
-        note="Find the Vault Portcullis at the building where the treasure is located to open the gate blocking the treasure",
+        level=60,
+        note="Find the Vault Portcullis chain in the next room to open the gate",
     },
     [49401510] = {
         achievement=14312, criteria=50070, -- Chest of Eyes
@@ -54,11 +63,12 @@ ns.RegisterPoints(1536, { -- Maldraxxus
         loot={
             183696, -- Sp-eye-glass
         },
+        level=60,
         note="Inside the wreckage of Nurakkir in the House of Eyes",
     },
     [62405990] = {
         achievement=14312, criteria=50071, -- Misplaced Supplies
-        quest=59245,
+        quest=60311,
         -- loot=Random Gear,
         level=60,
         note="On top of a giant mushroom; climb the smaller one first",
@@ -67,7 +77,8 @@ ns.RegisterPoints(1536, { -- Maldraxxus
         achievement=14312, criteria=50072, -- Glutharn's Stash
         quest=61484,
         -- loot=Random Gear,
-        note="Kill {npc:172485:Scathely} and his 2 adds to unlock the treasure",
+        level=60,
+        note="Hidden behind the waterfall. Kill {npc:172485:Scathely} and his 2 adds to unlock the treasure",
     },
     [31707000] = {
         achievement=14312, criteria=50073, -- Runespeaker's Trove
@@ -112,7 +123,8 @@ ns.RegisterPoints(1536, { -- Maldraxxus
         loot={
             183517, -- Page 76 of the Necronom-i-nom
         },
-        note="1) Loot the {item:181558:Missing Ritual Pages} from the Bone Pile at 69.8 31.0;\n2) Use the Book of Binding Rituals at 71.7 35.4;\n3) You have 5 minutes to return to the Ritualist's Cache and unlock the treasure",
+        level=60,
+        note="Loot the {item:181558:Missing Ritual Pages} nearby, then use the Book of Binding Rituals behind the cache before opening it",
     },
     [51404840] = {
         achievement=14626,-- Harvester of Sorrow
@@ -121,6 +133,7 @@ ns.RegisterPoints(1536, { -- Maldraxxus
             180273, -- Sorrowbane
             181164, -- Oonar's Arm
         },
+        level=60,
         note="Requires stacking several strength buffs and the world quest {quest:57205:A Few Bumps Along the Way}. Check wowhead, it's a lot",
     },
 })
@@ -139,11 +152,12 @@ local stolen_jar = {
     loot={
         182618, -- Reclaimed Vessel
     },
-    note="Gives the quest {quest:62085:...Why Me?}",
+    note="Can spawn in several different caves. Gives the quest {quest:62085:...Why Me?}",
 }
 ns.RegisterPoints(1536, {
     [66105040] = stolen_jar,
     [73554985] = stolen_jar,
+    [75104390] = stolen_jar,
 })
 
 
@@ -161,7 +175,8 @@ ns.RegisterPoints(1536, { -- Maldraxxus
         quest=62602,
         label="Giant Cache of Epic Treasure",
         pet=3047,
-        note="Click the bug, get a pet",
+        note="Click the treasure pile, {spell:343163}",
+        minimap=true,
     },
     [55893897] = {
         quest=59428, -- later 59429
@@ -185,6 +200,7 @@ ns.RegisterPoints(1536, {
             184290, -- Blood-Dyed Bonesaw
             184476, -- Regenerating Slime Vial (toy)
         },
+        level=60,
     },
     [49002350] = { -- Collector Kash
         achievement=14308, criteria=48866,
@@ -194,16 +210,18 @@ ns.RegisterPoints(1536, {
             184181, -- Kash's Favored Hook
             184182, -- Strengthened Abomination Hook
         },
+        level=60,
     },
     [26402635] = { -- Corpsecutter Moroc
         achievement=14308, criteria=48872,
         quest=58335,
         npc=157058,
         --loot={},
+        level=60,
     },
     [76855705] = { -- Deadly Dapperling
         achievement=14308, criteria=48851,
-        quest=58868,
+        quest=58868, -- 61989
         npc=162711,
         loot={
             181263, -- Shy Melvin
@@ -215,6 +233,7 @@ ns.RegisterPoints(1536, {
         quest=58835,
         npc=162669,
         --loot={},
+        level=60,
     },
     [57805155] = { -- Gristlebeak
         achievement=14308, criteria=48853,
@@ -241,6 +260,7 @@ ns.RegisterPoints(1536, {
         loot={
             181810, -- Phylactery of the Dead Conniver
         },
+        level=60,
     },
     [66003530] = { -- Nerissa Heartless
         achievement=14308, criteria=49723,
@@ -249,20 +269,22 @@ ns.RegisterPoints(1536, {
         loot={
             182084, -- Gorespine
         },
+        level=60,
     },
     [53706130] = { -- Nirvaska the Summoner
-        achievement=14308, criteria=48849,
-        quest=58875,
-        npc=162767,
+        achievement=14308, criteria=48868,
+        quest=58875, -- incorrect?
+        npc=161857,
         loot={
             182205, -- Scarab-Shell Faceguard
         },
+        level=60,
         note="Only when the {quest:58490} world quest is up",
     },
     [50356330] = { -- Pesticide
-        achievement=14308, criteria=48868,
+        achievement=14308, criteria=48849,
         quest=58629,
-        npc=161857,
+        npc=162767,
         loot={
             182205, -- Scarab-Shell Faceguard
         },
@@ -274,6 +296,7 @@ ns.RegisterPoints(1536, {
         loot={
             181283, -- Foulwing Buzzer
         },
+        level=60,
     },
     [51754440] = { -- Sabriel the Bonecleaver
         achievement=14802, criteria=48874,
@@ -283,6 +306,7 @@ ns.RegisterPoints(1536, {
             181815, -- Armored Bonehoof Tauralus
             182083, -- Bonecleaver's Skullboar
         },
+        level=60,
         note="A Necrolord player channeling The Theater of Pain must activate this",
     },
     [62107580] = { -- Scunner
@@ -292,6 +316,7 @@ ns.RegisterPoints(1536, {
         loot={
             181267, -- Writhing Spine
         },
+        level=60,
     },
     [55502361] = { -- Sister Chelicerae
         achievement=14308, criteria=48873,
@@ -301,6 +326,7 @@ ns.RegisterPoints(1536, {
             181172, -- Boneweave Hatchling
             184289, -- Spindlefang Spellblade
         },
+        level=60,
     },
     [42465345] = { -- Smorgas the Feaster
         achievement=14308, criteria=48869,
@@ -310,6 +336,7 @@ ns.RegisterPoints(1536, {
             181266, -- Feasting Larva
             181265, -- Corpselouse Larva
         },
+        minimap=true, -- no vignette until lump used
         note="Use the Bloody Lump",
     },
     [44205130] = { -- Tahonta
@@ -317,15 +344,17 @@ ns.RegisterPoints(1536, {
         quest=58783,
         npc=162586,
         loot={
-            182075, -- Bonehoof Tauralus
             182190, -- Tauralus Hide Collar
+            182075, -- Bonehoof Tauralus
         },
+        note="Mount requires Necrolord",
     },
     [50552010] = { -- Taskmaster Xox
         achievement=14308, criteria=48867,
         quest=58091,
         npc=160059,
         --loot={},
+        level=60,
         note="Shares spawn with {npc:160226} and {npc:160204}",
     },
     [24204295] = { -- Thread Mistress Leeda
@@ -335,6 +364,7 @@ ns.RegisterPoints(1536, {
         loot={
             184180, -- Leeda's Unrefined Mask
         },
+        level=60,
     },
     [33708015] = { -- Warbringer Mal'Korak
         achievement=14308, criteria=48875,
@@ -343,6 +373,7 @@ ns.RegisterPoints(1536, {
         loot={
             182085, -- Blisterback Bloodtusk
         },
+        level=60,
         note="At the top of the tower",
     },
     [28965138] = { -- Zargox the Reborn
@@ -353,6 +384,7 @@ ns.RegisterPoints(1536, {
             184285, -- Boneclutched Shackles
             181804, -- Trophy of the Reborn Bonelord
         },
+        level=60,
         note="Do {quest:57245} at 26.3 42.8, then use the {item:175827} to summon",
     },
 
@@ -363,6 +395,7 @@ ns.RegisterPoints(1536, {
         loot={
             182080, -- Predatory Plagueroc
         },
+        level=60,
         note="A Necrolord player channeling House of Constructs must drag {npc:162815} to the rare's right foot",
     },
 })
@@ -405,7 +438,8 @@ ns.RegisterPoints(1536, {
             61720, -- Violet Mistake
             61724, -- Oily Invertebrate
         },
-        npc=157226, -- the pool
+        label="{npc:157226}", -- the pool
+        icon=true,
         loot = {
             183903, -- Smelly Jelly
             182079, -- Slime-Covered Reins of the Hulking Deathroc (violet)
@@ -416,6 +450,7 @@ ns.RegisterPoints(1536, {
             184300, -- Fused Spineguard (oily)
             184301, -- Twenty-Loop Violet Girdle (violet)
         },
+        --level=60, -- it's not totally level=60, but at least some of the spawns are (e.g. Violet)
         note="Mix: 30 ({spell:306722} + {spell:306719} + {spell:306713})\n"..
             "{npc:157294}: 15+ "..RED.."\n".. -- Pulsing Leech
             "{npc:157307}: 15+ "..YELLOW.."\n".. -- Gelloh
@@ -439,8 +474,9 @@ ns.RegisterPoints(1536, {
             50403, -- Ti'or
             48874  -- Sabriel the Bonecleaver
         },
-        quest=62786, -- work out progress questids
-        npc=162853,
+        atlas="VignetteKillElite", scale=1.3,
+        -- quest=62786, -- this is wrong
+        -- npc=162853,
         loot={
             184062, -- Gnawed Reins of the Battle-Bound Warhound
         },
@@ -460,9 +496,9 @@ ns.RegisterPoints(1536, {
     [50246021] = jellycat{criteria=49427,}, -- Pus-In-Boots
     [65215060] = jellycat{criteria=49428,}, -- Envy
     [64852241] = jellycat{criteria=49429,}, -- Mr. Jigglesworth
-    [51082759] = jellycat{criteria=49430,}, -- Lime
-    [49491763] = jellycat{criteria=49431,}, -- Mayhem
-    [47553376] = jellycat{criteria=49432,}, -- Moldstopheles
+    [51082759] = jellycat{criteria=49430,note="Up on the bone arch"}, -- Lime
+    [49491763] = jellycat{criteria=49431,note="Up on the wall"}, -- Mayhem
+    [47553376] = jellycat{criteria=49432,note="Climb the mushroom. You can stand on the mushroom-veins for the last jump."}, -- Moldstopheles
     [34345315] = jellycat{criteria=49433,}, -- Meowmalade
 })
 ns.RegisterPoints(1697, { -- Plaguefall
