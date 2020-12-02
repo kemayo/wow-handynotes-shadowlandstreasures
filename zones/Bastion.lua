@@ -69,7 +69,7 @@ ns.RegisterPoints(1533, { -- Bastion
             183609, -- Re-Powered Golliath Fists
         },
         level=60,
-        note="Requires {item:180534:Unstable Construct Anima} to interact; drops from nearby mobs",
+        note="Requires {item:180534:Unstable Construct Anima}, from containers nearby",
     },
     [35804810] = {
         achievement=14311, criteria=50055, -- Windsmith's Tools
