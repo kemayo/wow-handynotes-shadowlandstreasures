@@ -68,6 +68,7 @@ ns.RegisterPoints(1533, { -- Bastion
         loot={
             183609, -- Re-Powered Golliath Fists
         },
+        level=60,
         note="Requires {item:180534:Unstable Construct Anima} to interact; drops from nearby mobs",
     },
     [35804810] = {
@@ -76,26 +77,29 @@ ns.RegisterPoints(1533, { -- Bastion
         loot={
             180064, -- Ascended Flute
         },
+        level=60,
         note="Requires {item:180536:Broken Kyrian Flute} to unlock the treasure, dropped from {npc:159610:Agitated Etherwyrm} nearby",
     },
     [56501720] = {
         achievement=14311, criteria=50056, -- Memorial Offering
         quest=61150,
         -- loot={},
+        level=60,
         note="Purchase {item:180788:Memorial Wine} from {npc:171526:Kobri} and use it on the drink tray near the treasure to obtain the {item:180797:Memorial Offering Key} and unlock the treasure",
     },
-    [34006650] = {quest=61150, label="Kobri", atlas="food", scale=1.1, path=true, note="Buy {item:180788:Memorial Wine}, go to 56.5 17.2"}, -- Kobri (Cliffs of Respite)
-    [43603225] = {quest=61150, label="Kobri", atlas="food", scale=1.1, path=true, note="Buy {item:180788:Memorial Wine}, go to 56.5 17.2"}, -- Kobri (Sagehaven)
-    [47957400] = {quest=61150, label="Kobri", atlas="food", scale=1.1, path=true, note="Buy {item:180788:Memorial Wine}, go to 56.5 17.2"}, -- Kobri (Aspirant's Rest)
-    [51804640] = {quest=61150, label="Kobri", atlas="food", scale=1.1, path=true, note="Buy {item:180788:Memorial Wine}, go to 56.5 17.2"}, -- Kobri (Hero's Rest)
-    [52154710] = {quest=61150, label="Kobri", atlas="food", scale=1.1, path=true, note="Buy {item:180788:Memorial Wine}, go to 56.5 17.2"}, -- Kobri (Hero's Rest)
-    [53508035] = {quest=61150, label="Kobri", atlas="food", scale=1.1, path=true, note="Buy {item:180788:Memorial Wine}, go to 56.5 17.2"}, -- Kobri (Aspirant's Crucible)
+    [34006650] = {quest=61150, label="Kobri", atlas="food", scale=1.1, path=true, note="Buy {item:180788:Memorial Wine}, go to 56.5 17.2",level=60,}, -- Kobri (Cliffs of Respite)
+    [43603225] = {quest=61150, label="Kobri", atlas="food", scale=1.1, path=true, note="Buy {item:180788:Memorial Wine}, go to 56.5 17.2",level=60,}, -- Kobri (Sagehaven)
+    [47957400] = {quest=61150, label="Kobri", atlas="food", scale=1.1, path=true, note="Buy {item:180788:Memorial Wine}, go to 56.5 17.2",level=60,}, -- Kobri (Aspirant's Rest)
+    [51804640] = {quest=61150, label="Kobri", atlas="food", scale=1.1, path=true, note="Buy {item:180788:Memorial Wine}, go to 56.5 17.2",level=60,}, -- Kobri (Hero's Rest)
+    [52154710] = {quest=61150, label="Kobri", atlas="food", scale=1.1, path=true, note="Buy {item:180788:Memorial Wine}, go to 56.5 17.2",level=60,}, -- Kobri (Hero's Rest)
+    [53508035] = {quest=61150, label="Kobri", atlas="food", scale=1.1, path=true, note="Buy {item:180788:Memorial Wine}, go to 56.5 17.2",level=60,}, -- Kobri (Aspirant's Crucible)
     [35105800] = {
         achievement=14311, criteria=50058, -- Gift of Agthia
         quest=60893,
         loot={
             180063, -- Unearthly Chime
         },
+        level=60,
         note="Obtain the {spell:333063:Proof of Courage} by interacting with {spell:333365:Agthia's Flame} at 39.1 54.4 and completing her test to unlock the treasure",
     },
     [65207030] = {
@@ -104,6 +108,7 @@ ns.RegisterPoints(1533, { -- Bastion
         loot={
             180859, -- Purity
         },
+        level=60,
         note="Obtain {spell:332785:Proof of Purity} by ringing the bell near the chest and standing under the nearby waterfall to unlock the treasure",
     },
     [70503650] = {
@@ -112,6 +117,7 @@ ns.RegisterPoints(1533, { -- Bastion
         loot={
             183988, -- Bondable Val'kyr Diadem
         },
+        level=60,
         note="Obtain the {spell:333045:Proof of Humility} by using /kneel in front of the treasure to unlock it",
     },
     [40201820] = {
@@ -120,6 +126,7 @@ ns.RegisterPoints(1533, { -- Bastion
         loot={
             181290, -- Harmonious Sigil of the Archon
         },
+        level=60,
         note="Obtain the {spell:333068:Proof of Wisdom} by using the teleporter near the chest and lighting the incenses in the correct order:\n* Incense of Patience\n* Incense of Knowledge\n* Click Incense of Insight\n* Anima Orb\n* Incense of Judgement",
     },
     [27602170] = {
@@ -128,6 +135,7 @@ ns.RegisterPoints(1533, { -- Bastion
         loot={
             179977, -- Benevolent Gong
         },
+        level=60,
         note="Obtain the {spell:333070:Proof of Loyalty} by taking the {spell:333912:Flame of Devotion} at 23.9 24.8 and bringing it to the nearby brazier",
     },
 })
@@ -143,6 +151,7 @@ ns.RegisterPoints(1533, {
         loot={
             180772, -- Silverwind Larion
         },
+        level=60,
         note="Forge the {item:180858:Crystal Mallet of Heralds} and then ring the vesper",
     },
     [59343144] = {
@@ -150,6 +159,7 @@ ns.RegisterPoints(1533, {
         loot={
             180858, -- Crystal Mallet of Heralds
         },
+        level=60,
         note="Collect 50 Anima Shards and give them to {npc:171732:Forgelite Hephaesius}",
     },
     [39057704] = {quest=61225,label="Anima Shard",achievement=14339,level=60,atlas="azeriteready"},
@@ -228,11 +238,12 @@ ns.RegisterPoints(1533, {
         loot={
             183607, -- Uncertain Aspirant's Spear
         },
+        level=60,
         note="Loot a {item:180613} nearby and read it while targeting the rare",
     },
     [51354080] = { -- Baedos
         achievement=14307, criteria=50592,
-        quest=58648,62192,
+        quest=58648,--62192,
         npc=160629,
         loot={
             172232, -- Eternal Crystal
@@ -258,7 +269,7 @@ ns.RegisterPoints(1533, {
     },
     [50455805] = { -- Cloudfeather Guardian
         achievement=14307, criteria=50604,
-        quest=60978,62191,
+        quest=60978,--62191,
         npc=170932,
         loot={
             180812, -- Golden Cloudfeather
@@ -287,10 +298,11 @@ ns.RegisterPoints(1533, {
         loot={
             184297, -- Death Warden's Greatblade
         },
+        level=60,
     },
     [37004180] = { -- Demi the Relic Hoarder
         achievement=14307, criteria=50611,
-        quest=61069,61000,
+        quest=61069,--61000,
         npc=171011,
         loot={
             183608, -- Evernote Vesper
@@ -319,6 +331,7 @@ ns.RegisterPoints(1533, {
         quest=60998,
         npc=171009,
         --loot={},
+        level=60,
         note="Wandering the forge",
     },
     [60407305] = { -- Fallen Acolyte Erisne
@@ -328,11 +341,12 @@ ns.RegisterPoints(1533, {
         loot={
             180444, -- Harmonia's Chosen Belt
         },
+        hide_before="59147",
         note="Spawns after quests in the area",
     },
     [42908265] = { -- Herculon
         achievement=14307, criteria=50582,
-        quest=57705,57708,
+        quest=57705,--57708,
         npc=158659,
         loot={
             182759, -- Functioning Anima Core
@@ -376,10 +390,11 @@ ns.RegisterPoints(1533, {
         loot={
             184413, -- Mnemonic Attunement Pane
         },
+        level=60,
     },
     [40655305] = { -- Wingflayer the Cruel
         achievement=14307, criteria=50600,
-        quest=60314,62197,
+        quest=60314,-- 62197,
         npc=167078,
         loot={
             182749, -- Regurgitated Kyrian Wings
@@ -420,6 +435,7 @@ ns.RegisterPoints(1533, {
         loot={
             183741, -- Ascended Skymane
         },
+        level=60,
         note="Ring the five vespers within 5 minutes to summon the council",
     },
     -- Rallying Cry of the Ascended
@@ -444,6 +460,7 @@ local tear = {
     loot={
         183605, -- Devourer Wrought Warglaive
     },
+    level=60,
     note="Possible spawns from the Swelling Tear event",
 }
 ns.RegisterPoints(1533, {
