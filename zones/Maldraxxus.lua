@@ -98,7 +98,7 @@ ns.RegisterPoints(1536, { -- Maldraxxus
         },
         atlas="Garr_LevelUpgradeLocked", scale=1.3,
         minimap=true,
-        level=60, -- or at least quest-gated?
+        level=60, -- or at least quest-gated? 57619 is the tracker for confronting Vyraz...
         note="Take the key to 31.7 70.0",
     },
     [57607580] = {
