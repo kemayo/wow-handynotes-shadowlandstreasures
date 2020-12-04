@@ -34,6 +34,8 @@ local function quick_texture_markup(icon)
     -- needs less than CreateTextureMarkup
     return '|T' .. icon .. ':0:0:1:-1|t'
 end
+local completeColor = CreateColor(0, 1, 0, 1)
+local incompleteColor = CreateColor(1, 0, 0, 1)
 local function render_string(s)
     return s:gsub("{(%l+):(%d+):?([^}]*)}", function(variant, id, fallback)
         id = tonumber(id)
@@ -50,8 +52,11 @@ local function render_string(s)
         elseif variant == "quest" then
             local name = C_QuestLog.GetTitleForQuestID(id)
             if name and name ~= "" then
-                return name
+                local completed = C_QuestLog.IsQuestFlaggedCompleted(id)
+                return CreateAtlasMarkup("questnormal") .. (completed and completeColor or incompleteColor):WrapTextInColorCode(name)
             end
+        elseif variant == "questid" then
+            return CreateAtlasMarkup("questnormal") .. (C_QuestLog.IsQuestFlaggedCompleted(id) and completeColor or incompleteColor):WrapTextInColorCode(id)
         elseif variant == "npc" then
             local name = mob_name(id)
             if name then
@@ -85,6 +90,19 @@ local function cache_loot(loot)
     if not loot then return end
     for _,item in ipairs(loot) do
         C_Item.RequestLoadItemDataByID(item)
+    end
+end
+local render_string_list
+do
+    local out = {}
+    function render_string_list(variant, ...)
+        if not ... then return "" end
+        if type(...) == "table" then return render_string_list(variant, unpack(...)) end
+        wipe(out)
+        for i=1,select("#", ...) do
+            table.insert(out, ("{%s:%d}"):format(variant, (select(i, ...))))
+        end
+        return render_string(string.join(", ", unpack(out)))
     end
 end
 
@@ -352,7 +370,10 @@ local function handle_tooltip(tooltip, point)
                 if link then
                     tooltip:AddDoubleLine(ENCOUNTER_JOURNAL_ITEM, quick_texture_markup(icon) .. link)
                 else
-                    tooltip:AddDoubleLine(ENCOUNTER_JOURNAL_ITEM, SEARCH_LOADING_TEXT, 1, 1, 0, 0, 1, 1)
+                    tooltip:AddDoubleLine(ENCOUNTER_JOURNAL_ITEM, SEARCH_LOADING_TEXT,
+                        NORMAL_FONT_COLOR.r, NORMAL_FONT_COLOR.g, NORMAL_FONT_COLOR.b,
+                        0, 1, 1
+                    )
                 end
             end
         end
@@ -364,11 +385,7 @@ local function handle_tooltip(tooltip, point)
         end
 
         if point.quest and ns.db.tooltip_questid then
-            local quest = point.quest
-            if type(quest) == 'table' then
-                quest = string.join(", ", unpack(quest))
-            end
-            tooltip:AddDoubleLine("QuestID", quest or UNKNOWN)
+            tooltip:AddDoubleLine("QuestID", render_string_list("questid", point.quest), NORMAL_FONT_COLOR:GetRGB())
         end
 
         if (ns.db.tooltip_item or IsShiftKeyDown()) and (point.loot or point.npc) then

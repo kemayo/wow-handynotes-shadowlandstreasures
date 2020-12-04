@@ -1,5 +1,9 @@
 # Changelog
 
+## Changed in v9
+
+* Better display for quests in tooltips
+
 ## Changed in v8
 
 * Improved the data for Bastion and Maldraxxus
