@@ -209,6 +209,8 @@ ns.RegisterPoints(1536, {
         loot={
             184181, -- Kash's Favored Hook
             184182, -- Strengthened Abomination Hook
+            184188, -- Collector's Corpse Gambrel
+            184189, -- Stained Fleshgorer
         },
         level=60,
     },
@@ -216,7 +218,10 @@ ns.RegisterPoints(1536, {
         achievement=14308, criteria=48872,
         quest=58335,
         npc=157058,
-        --loot={},
+        loot={
+            184176, -- Moroc's Boneslicing Warglaive
+            184177, -- Grotesque Goring Pick
+        },
         level=60,
     },
     [76855705] = { -- Deadly Dapperling
@@ -232,7 +237,9 @@ ns.RegisterPoints(1536, {
         achievement=14308, criteria=48855,
         quest=58835,
         npc=162669,
-        --loot={},
+        loot={
+            184178, -- Worldrending Claymore
+        },
         level=60,
     },
     [57805155] = { -- Gristlebeak
@@ -258,7 +265,8 @@ ns.RegisterPoints(1536, {
         quest=62369,
         npc=174108,
         loot={
-            181810, -- Phylactery of the Dead Conniver
+            184174, -- Clasp of Death
+            181810, -- Phylactery of the Dead Conniver (maybe not?)
         },
         level=60,
     },
@@ -268,6 +276,7 @@ ns.RegisterPoints(1536, {
         npc=162690,
         loot={
             182084, -- Gorespine
+            184179, -- Lichsworn Commander's Boneblade
         },
         level=60,
     },
@@ -277,6 +286,7 @@ ns.RegisterPoints(1536, {
         npc=161857,
         loot={
             182205, -- Scarab-Shell Faceguard
+            183700, -- Forgotten Summoner's Shoulderpads
         },
         level=60,
         note="Only when the {quest:58490} world quest is up",
@@ -295,6 +305,7 @@ ns.RegisterPoints(1536, {
         npc=159753,
         loot={
             181283, -- Foulwing Buzzer
+            184184, -- Ravenomous's Acid-Tipped Stinger
         },
         level=60,
     },
@@ -315,6 +326,7 @@ ns.RegisterPoints(1536, {
         npc=158406,
         loot={
             181267, -- Writhing Spine
+            184287, -- Scum-Caked Epaulettes
         },
         level=60,
     },
@@ -335,6 +347,7 @@ ns.RegisterPoints(1536, {
         loot={
             181266, -- Feasting Larva
             181265, -- Corpselouse Larva
+            184299, -- Goresoaked Carapace
         },
         minimap=true, -- no vignette until lump used
         note="Use the Bloody Lump",
@@ -353,7 +366,11 @@ ns.RegisterPoints(1536, {
         achievement=14308, criteria=48867,
         quest=58091,
         npc=160059,
-        --loot={},
+        loot={
+            184186, -- Flesh-Fishing Hook
+            184192, -- Pristine Alabaster Gorer
+            184187, -- Taskmaster's Tenderizer
+        },
         level=60,
         note="Shares spawn with {npc:160226} and {npc:160204}",
     },
@@ -372,6 +389,7 @@ ns.RegisterPoints(1536, {
         npc=162819,
         loot={
             182085, -- Blisterback Bloodtusk
+            184288, -- Ruthless Warlord's Barrier
         },
         level=60,
         note="At the top of the tower",
@@ -382,7 +400,7 @@ ns.RegisterPoints(1536, {
         npc=157125,
         loot={
             184285, -- Boneclutched Shackles
-            181804, -- Trophy of the Reborn Bonelord
+            181804, -- Trophy of the Reborn Bonelord (Necrolord only?)
         },
         level=60,
         note="Do {quest:57245} at 26.3 42.8, then use the {item:175827} to summon",
@@ -394,6 +412,7 @@ ns.RegisterPoints(1536, {
         npc=162741,
         loot={
             182080, -- Predatory Plagueroc
+            184298, -- Amalgamated Forsworn's Journal
         },
         level=60,
         note="A Necrolord player channeling House of Constructs must drag {npc:162815} to the rare's right foot",

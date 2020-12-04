@@ -3,6 +3,7 @@
 ## Changed in v9
 
 * Better display for quests in tooltips
+* Updated loot and notes for all zones
 
 ## Changed in v8
 

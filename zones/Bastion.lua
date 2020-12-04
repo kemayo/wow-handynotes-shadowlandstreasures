@@ -127,7 +127,7 @@ ns.RegisterPoints(1533, { -- Bastion
             181290, -- Harmonious Sigil of the Archon
         },
         level=60,
-        note="Obtain the {spell:333068:Proof of Wisdom} by using the teleporter near the chest and lighting the incenses in the correct order:\n* Incense of Patience\n* Incense of Knowledge\n* Click Incense of Insight\n* Anima Orb\n* Incense of Judgement",
+        note="Obtain the {spell:333068:Proof of Wisdom} by using the teleporter near the chest and lighting the incenses in the correct order:\n* Incense of Patience\n* Incense of Knowledge\n* Incense of Insight\n* Anima Orb\n* Incense of Judgement",
     },
     [27602170] = {
         achievement=14311, criteria=50062, -- Gift of Devos
@@ -317,7 +317,7 @@ ns.RegisterPoints(1533, {
             180856, -- Silvershell Snapper
         },
     },
-    [45556460] = { -- Echo of Aella <Hand of Courage>
+    [45556460] = { -- Echo of Aella
         achievement=14307, criteria=50614,
         quest=62251, -- progress 61082,61091
         npc=171255,
@@ -330,9 +330,11 @@ ns.RegisterPoints(1533, {
         achievement=14307, criteria=50605,
         quest=60998,
         npc=171009,
-        --loot={},
+        loot={
+            184404, -- Ever-Abundant Hearth
+        },
         level=60,
-        note="Wandering the forge",
+        note="Wandering the forge, may spawn after you kill surrounding enemies",
     },
     [60407305] = { -- Fallen Acolyte Erisne
         achievement=14307, criteria=50596,

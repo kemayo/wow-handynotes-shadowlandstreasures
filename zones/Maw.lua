@@ -55,7 +55,7 @@ ns.RegisterPoints(1543, {
         --loot={},
         level=60,
     },
-    [32956645] = { -- Dolos
+    [28106060] = { -- Dolos
         achievement=14744, criteria=49847,
         quest=60909,
         npc=170711,
@@ -146,7 +146,7 @@ ns.RegisterPoints(1543, {
         note="Take to {npc:172577} at 23.7 21.4",
         level=60,
     },
-    [30706035] = { -- Shadeweaver Zeris
+    [32956645] = { -- Shadeweaver Zeris
         achievement=14744, criteria=49856,
         quest=60884,
         npc=170634,
@@ -171,7 +171,7 @@ ns.RegisterPoints(1543, {
         note="Need three players to summon",
         level=60,
     },
-    [27407150] = { -- Thanassos <Death's Voice>
+    [27407150] = { -- Thanassos
         achievement=14744, criteria=49859,
         quest=60914,
         npc=170731,
@@ -202,7 +202,7 @@ ns.RegisterPoints(1543, {
         --loot={},
         level=60,
     },
-    [26055500] = { -- Akros
+    [34107455] = { -- Akros
         achievement=14660, criteria=49487,
         quest=60920,
         npc=170787,
@@ -248,6 +248,13 @@ ns.RegisterPoints(1543, {
         quest=62209,
         npc=172523,
         --loot={},
+        level=60,
+    },
+    [20802970] = { -- Huwerath
+        achievement=14660, criteria=49481,
+        quest=58918,
+        npc=162965,
+        -- loot={},
         level=60,
     },
     [30846866] = { -- Krala
@@ -308,13 +315,6 @@ ns.RegisterPoints(1543, {
         level=60,
     },
     [59258000] = path{label=CAVE, achievement=14660, criteria=49491, quest=62211,},
-    [20802970] = { -- Sorath the Sated
-        achievement=14660, criteria=49481,
-        quest=58918,
-        npc=162965,
-        --loot={},
-        level=60,
-    },
     [36253745] = { -- Soulsmith Yol-Mattar
         achievement=14660, criteria=49482,
         quest=59441,

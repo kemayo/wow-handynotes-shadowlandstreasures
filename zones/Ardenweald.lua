@@ -139,6 +139,7 @@ local vulpin = {
     },
     note="Find {npc:171206:Playful Vulpin} and play with them 5 times to obtain the treasure. Use emotes related to what they're doing",
     atlas="Warfront-NeutralHero-Silver", scale=1.3,
+    minimap=true,
 }
 ns.RegisterPoints(1565, {
     [31854363] = vulpin,
@@ -175,7 +176,7 @@ ns.RegisterPoints(1565, {
         achievement=14309, criteria=48714,
         quest=59226,
         npc=164477,
-        --loot={},
+        loot={180166}, -- Deathbinder's Staff
     },
     [47502845] = { -- Deifir the Untamed
         achievement=14309, criteria=48784,
@@ -208,6 +209,7 @@ ns.RegisterPoints(1565, {
         loot={
             180144, -- Faeflayer's Hatchet
         },
+        note="Hidden behind the waterfall",
     },
     [70403060] = path{achievement=14309, criteria=48798, quest=61184,},
     [54057600] = { -- Gormbore
@@ -260,6 +262,7 @@ ns.RegisterPoints(1565, {
         quest=59235,
         npc=164547,
         loot={
+            179586, -- Elderwood Piercer
             182179, -- Runestag Soul
         },
         note="Blow the great horn",
@@ -279,7 +282,7 @@ ns.RegisterPoints(1565, {
             "* Use {item:178675} here, and defeat the rare",
     },
     -- TODO: questid for getting the web?
-    [19706350] = {achievement=14309, criteria=48793, quest=60306, loot={181243}},
+    [19706350] = {achievement=14309, criteria=48793, quest=60306, loot={181243},label="{item:181243}"},
     [51105740] = { -- Old Ardeite
         achievement=14309, criteria=48785,
         quest=59208,62270,
@@ -298,7 +301,7 @@ ns.RegisterPoints(1565, {
         },
         note="Hit all the flowers",
     },
-    [65702430] = { -- Rotbriar Boggart
+    [65702430] = { -- Rotbriar Boggart (but the criteria is called Rotbriar Changeling)
         achievement=14309, criteria=48789,
         quest=60258,
         npc=167724,
@@ -308,8 +311,9 @@ ns.RegisterPoints(1565, {
         note="Talk to {npc:174365} to start."
     },
     -- Relatedly... Toss a Seed to Your Hunter
-    [65742291] = {
+    [65752400] = {
         achievement=14791,
+        icon=true,
         note="Loot {item:183902} around the zone, use the bonus action button to throw it at {npc:174364}",
     },
     [72405175] = { -- Soultwister Cero

@@ -260,6 +260,7 @@ ns.RegisterPoints(1525, {
         npc=166521,
         loot={
             180582, -- Endmire Flyer Tether
+            183739, -- Endmire Wristwarmers
         },
         note="Talk to {npc:166483}",
     },
@@ -277,6 +278,7 @@ ns.RegisterPoints(1525, {
         npc=167464,
         loot={
             180708, -- Mirror of Despair
+            180503, -- Grand Arcanist's Soulblade
         },
         note="Kill {npc:167467}",
     },
@@ -344,7 +346,7 @@ ns.RegisterPoints(1525, {
         quest=60729,
         npc=170048,
         loot={
-            180585, -- Vial of Roiling Emotions
+            180585, -- Bottled Up Rage
         },
         note="During {quest:60654} bring ~10x {npc:169916} to {npc:169917}",
     },
@@ -378,7 +380,7 @@ ns.RegisterPoints(1525, {
     [78954975] = { -- Soulstalker Doina
         achievement=14310, criteria=48799,
         quest=58130,
-        npc=160385,
+        npc=160392,
         loot={
             180692, -- Box of Stalker Traps
         },
