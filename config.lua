@@ -128,7 +128,7 @@ ns.options = {
                 },
                 show_junk = {
                     type = "toggle",
-                    name = "Junk",
+                    name = "Show non-achievement",
                     desc = "Show items which don't count for any achievement",
                     order = 40,
                 },
@@ -171,7 +171,7 @@ ns.options = {
                 local values = {}
                 for uiMapID, points in pairs(ns.points) do
                     for coord, point in pairs(points) do
-                        if point.achievement then
+                        if point.achievement and not values[point.achievement] then
                             local _, achievement = GetAchievementInfo(point.achievement)
                             values[point.achievement] = achievement or 'achievement:'..point.achievement
                         end
@@ -195,10 +195,12 @@ ns.options = {
             values = function(info)
                 local values = {}
                 for uiMapID in pairs(ns.points) do
-                    local info = C_Map.GetMapInfo(uiMapID)
-                    if info and info.mapType == 3 then
-                        -- zones only
-                        values[uiMapID] = info.name
+                    if not values[uiMapID] then
+                        local info = C_Map.GetMapInfo(uiMapID)
+                        if info and info.mapType == 3 then
+                            -- zones only
+                            values[uiMapID] = info.name
+                        end
                     end
                 end
                 -- replace ourself with the built values table
@@ -341,4 +343,171 @@ ns.should_show_point = function(coord, point, currentZone, isMinimap)
         end
     end
     return true
+end
+
+function ns.SetupMapOverlay()
+    local frame = WorldMapFrame:AddOverlayFrame("WorldMapTrackingOptionsButtonTemplate", "DROPDOWNTOGGLEBUTTON", "TOPRIGHT", WorldMapFrame:GetCanvasContainer(), "TOPRIGHT", -68, -2);
+    frame.Icon:SetAtlas("VignetteLootElite")
+    frame.Icon:SetPoint("TOPLEFT", 6, -5)
+    local function hideTextureWithAtlas(atlas, ...)
+        for i=1, select("#", ...) do
+            local region = select(i, ...)
+            if region:IsObjectType("Texture") and region:GetAtlas() == atlas then
+                region:Hide()
+            end
+        end
+    end
+    hideTextureWithAtlas("MapCornerShadow-Right", frame:GetRegions())
+    frame.Refresh = function(self)
+        local uiMapID = self:GetParent():GetMapID()
+        if ns.points[uiMapID] then
+            self:Show()
+        else
+            self:Hide()
+        end
+    end
+    frame.OnMouseUp = function(self)
+        self.Icon:SetPoint("TOPLEFT", 6, -5)
+        self.IconOverlay:Hide()
+    end
+    frame.InitializeDropDown = function(self, level)
+        local info = UIDropDownMenu_CreateInfo()
+        level = level or 1
+        if level == 1 then
+
+            info.isTitle = true
+            info.notCheckable = true
+            info.text = "HandyNotes - " .. myname:gsub("HandyNotes_", "")
+            UIDropDownMenu_AddButton(info, level)
+
+            info.isTitle = nil
+            info.disabled = nil
+            info.notCheckable = nil
+            info.isNotRadio = true
+            info.keepShownOnClick = true
+            info.tooltipOnButton = true
+            info.func = function(button)
+                local checked = button.checked
+                local value = button.value
+                if (checked) then
+                    PlaySound(SOUNDKIT.IG_MAINMENU_OPTION_CHECKBOX_ON)
+                else
+                    PlaySound(SOUNDKIT.IG_MAINMENU_OPTION_CHECKBOX_OFF)
+                end
+                local option = ns.options.args.display.args[value]
+                local db = ns.db
+                if option.type == "execute" then
+                    option.func()
+                else
+                    db[value] = checked
+                end
+                ns.HL:SendMessage("HandyNotes_NotifyUpdate", myname:gsub("HandyNotes_", ""))
+            end
+
+            local sorted = {}
+            for key in pairs(ns.options.args.display.args) do
+                table.insert(sorted, key)
+            end
+            table.sort(sorted, function(a, b)
+                return (ns.options.args.display.args[a].order or 0) < (ns.options.args.display.args[b].order or 0)
+            end)
+            for _, key in ipairs(sorted) do
+                local option = ns.options.args.display.args[key]
+                info.text = option.name
+                info.tooltipTitle = option.desc
+                info.value = key
+                if option.type == "toggle" then
+                    info.notCheckable = nil
+                    info.checked = ns.db[key]
+                elseif option.type == "execute" then
+                    info.notCheckable = true
+                    info.checked = nil
+                end
+                UIDropDownMenu_AddButton(info, level)
+            end
+
+            UIDropDownMenu_AddSeparator(level)
+
+            wipe(info)
+            info.text = ACHIEVEMENTS
+            info.hasArrow = true
+            info.keepShownOnClick = true
+            info.notCheckable = true
+            info.value = "achievementsHidden"
+            UIDropDownMenu_AddButton(info, level)
+
+            info.text = ZONE
+            info.value = "zonesHidden"
+            UIDropDownMenu_AddButton(info, level)
+
+            UIDropDownMenu_AddSeparator(level)
+
+            info.text = "Open HandyNotes options"
+            info.hasArrow = nil
+            info.keepShownOnClick = nil
+            info.func = function(button)
+                InterfaceOptionsFrame_Show()
+                InterfaceOptionsFrame_OpenToCategory('HandyNotes')
+                LibStub('AceConfigDialog-3.0'):SelectGroup('HandyNotes', 'plugins', myname:gsub("HandyNotes_", ""))
+            end
+            UIDropDownMenu_AddButton(info, level)
+
+        elseif level == 2 then
+            local parent = UIDROPDOWNMENU_MENU_VALUE
+            info.arg1 = parent
+            info.isTitle = nil
+            info.disabled = nil
+            info.notCheckable = nil
+            info.isNotRadio = true
+            info.keepShownOnClick = true
+            info.tooltipOnButton = true
+            info.func = function(button, section)
+                if (checked) then
+                    PlaySound(SOUNDKIT.IG_MAINMENU_OPTION_CHECKBOX_ON)
+                else
+                    PlaySound(SOUNDKIT.IG_MAINMENU_OPTION_CHECKBOX_OFF)
+                end
+                local checked = button.checked
+                local value = button.value
+                ns.db[section][value] = not checked
+                ns.HL:SendMessage("HandyNotes_NotifyUpdate", myname:gsub("HandyNotes_", ""))
+            end
+            if parent == "achievementsHidden" then
+                local values = {}
+                for uiMapID, points in pairs(ns.points) do
+                    for coord, point in pairs(points) do
+                        if point.achievement and not values[point.achievement] then
+                            local _, achievement = GetAchievementInfo(point.achievement)
+                            values[point.achievement] = achievement or 'achievement:'..point.achievement
+                        end
+                    end
+                end
+                for achievementid, achievementname in pairs(values) do
+                    info.text = achievementname
+                    info.value = achievementid
+                    info.checked = not ns.db.achievementsHidden[achievementid]
+                    UIDropDownMenu_AddButton(info, level)
+                end
+            elseif parent == "zonesHidden" then
+                local values = {}
+                for uiMapID in pairs(ns.points) do
+                    if not values[uiMapID] then
+                        local mapinfo = C_Map.GetMapInfo(uiMapID)
+                        if mapinfo and mapinfo.mapType == 3 then
+                            -- zones only
+                            values[uiMapID] = mapinfo.name
+                        end
+                    end
+                end
+                for uiMapID, mapName in pairs(values) do
+                    info.text = mapName
+                    info.value = uiMapID
+                    info.checked = not ns.db.zonesHidden[uiMapID]
+                    UIDropDownMenu_AddButton(info, level)
+                end
+            end
+        end
+    end
+    frame.OnSelection = function(self, value, checked, arg1, arg2) end
+    UIDropDownMenu_SetInitializeFunction(frame.DropDown, function(self, ...) frame:InitializeDropDown(...) end)
 end

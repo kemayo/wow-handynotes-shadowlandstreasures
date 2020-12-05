@@ -656,6 +656,8 @@ function HL:OnInitialize()
     self:RegisterEvent("SHOW_LOOT_TOAST", "Refresh")
     -- This is just constantly firing, so it's kinda useless:
     -- self:RegisterEvent("CRITERIA_UPDATE", "Refresh")
+
+    ns.SetupMapOverlay()
 end
 
 do
