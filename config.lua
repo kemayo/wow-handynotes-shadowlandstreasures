@@ -278,7 +278,7 @@ ns.should_show_point = function(coord, point, currentZone, isMinimap)
     if ns.hidden[currentZone] and ns.hidden[currentZone][coord] then
         return false
     end
-    if ns.outdoors_only and IsIndoors() then
+    if point.outdoors_only and IsIndoors() then
         return false
     end
     if point.junk and not ns.db.show_junk then

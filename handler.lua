@@ -5,19 +5,84 @@ local HL = LibStub("AceAddon-3.0"):NewAddon(myname, "AceEvent-3.0")
 -- local L = LibStub("AceLocale-3.0"):GetLocale(myname, true)
 ns.HL = HL
 
-local debugf = tekDebug and tekDebug:GetFrame(myname:gsub("HandyNotes_", ""))
-local function Debug(...) if debugf then debugf:AddMessage(string.join(", ", tostringall(...))) end end
-ns.Debug = Debug
+---------------------------------------------------------
+-- Data model stuff:
 
-local next = next
+-- flags for whether to show minimap icons in some zones, if Blizzard ever does the treasure-map thing again
+ns.map_spellids = {
+    -- zone = spellid
+}
 
-local ANIMA_LABEL = '|cffff8000' .. ANIMA .. '|r'
+ns.currencies = {
+    ANIMA = {
+        name = '|cffff8000' .. ANIMA .. '|r',
+        texture = select(10, GetAchievementInfo(14339)),
+    },
+    ARTIFACT = {
+        name = '|cffff8000' .. ARTIFACT_POWER .. '|r',
+        texture = select(10, GetAchievementInfo(11144)),
+    }
+}
 
-local cache_tooltip = CreateFrame("GameTooltip", "HNShadowlandsTreasuresTooltip")
-cache_tooltip:AddFontStrings(
-    cache_tooltip:CreateFontString("$parentTextLeft1", nil, "GameTooltipText"),
-    cache_tooltip:CreateFontString("$parentTextRight1", nil, "GameTooltipText")
-)
+ns.points = {
+    --[[ structure:
+    [uiMapID] = { -- "_terrain1" etc will be stripped from attempts to fetch this
+        [coord] = {
+            label=[string], -- label: text that'll be the label, optional
+            loot={[id]}, -- itemids
+            quest=[id], -- will be checked, for whether character already has it
+            currency=[id], -- currencyid
+            achievement=[id], -- will be shown in the tooltip
+            criteria=[id], -- modifies achievement
+            junk=[bool], -- doesn't count for any achievement
+            npc=[id], -- related npc id, used to display names in tooltip
+            note=[string], -- some text which might be helpful
+            hide_before=[id], -- hide if quest not completed
+            requires_buff=[id], -- hide if player does not have buff, mostly useful for buff-based zone phasing
+            requires_no_buff=[id] -- hide if player has buff, mostly useful for buff-based zone phasing
+        },
+    },
+    --]]
+}
+function ns.RegisterPoints(zone, points)
+    if not ns.points[zone] then
+        ns.points[zone] = {}
+    end
+    ns.merge(ns.points[zone], points)
+end
+
+ns.merge = function(t1, t2)
+    if not t2 then return t1 end
+    for k, v in pairs(t2) do
+        t1[k] = v
+    end
+end
+
+ns.nodeMaker = function(metatable)
+    return function(details)
+        return setmetatable(details or {}, {__index = metatable})
+    end
+end
+
+ns.path = ns.nodeMaker{
+    label = "Path to treasure",
+    atlas = "poi-door", -- 'PortalPurple' / 'PortalRed'?
+    path = true,
+    minimap = true,
+    scale = 1.1,
+}
+
+---------------------------------------------------------
+-- All the utility code
+
+local cache_tooltip = _G["HNTreasuresCacheScanningTooltip"]
+if not cache_tooltip then
+    cache_tooltip = CreateFrame("GameTooltip", "HNTreasuresCacheScanningTooltip")
+    cache_tooltip:AddFontStrings(
+        cache_tooltip:CreateFontString("$parentTextLeft1", nil, "GameTooltipText"),
+        cache_tooltip:CreateFontString("$parentTextRight1", nil, "GameTooltipText")
+    )
+end
 local name_cache = {}
 local function mob_name(id)
     if not name_cache[id] then
@@ -25,7 +90,7 @@ local function mob_name(id)
         cache_tooltip:SetOwner(WorldFrame, "ANCHOR_NONE")
         cache_tooltip:SetHyperlink(("unit:Creature-0-0-0-0-%d"):format(id))
         if cache_tooltip:IsShown() then
-            name_cache[id] = HNShadowlandsTreasuresTooltipTextLeft1:GetText()
+            name_cache[id] = HNTreasuresCacheScanningTooltipTextLeft1:GetText()
         end
     end
     return name_cache[id]
@@ -174,8 +239,8 @@ local function work_out_label(point)
         fallback = 'item:'..point.loot[1]
     end
     if point.currency then
-        if point.currency == 'ANIMA' then
-            return ANIMA_LABEL
+        if ns.currencies[point.currency] then
+            return ns.currencies[point.currency].name
         end
         local info = C_CurrencyInfo.GetCurrencyInfo(point.currency)
         if info then
@@ -199,8 +264,8 @@ local function work_out_texture(point)
             end
         end
         if point.currency then
-            if point.currency == 'ANIMA' then
-                local texture = select(10, GetAchievementInfo(14339))
+            if ns.currencies[point.currency] then
+                local texture = ns.currencies[point.currency].texture
                 if texture then
                     return trimmed_icon(texture)
                 end
@@ -315,8 +380,8 @@ local function handle_tooltip(tooltip, point)
         end
         if point.currency then
             local name
-            if point.currency == 'ANIMA' then
-                name = ANIMA_LABEL
+            if ns.currencies[point.currency] then
+                name = ns.currencies[point.currency].name
             else
                 local info = C_CurrencyInfo.GetCurrencyInfo(point.currency)
                 name = info and info.name
@@ -446,7 +511,6 @@ end
 ---------------------------------------------------------
 -- Plugin Handlers to HandyNotes
 local HLHandler = {}
-local info = {}
 
 function HLHandler:OnEnter(uiMapID, coord)
     local tooltip = GameTooltip
@@ -483,7 +547,7 @@ do
     local currentZone, currentCoord
     local function generateMenu(button, level)
         if (not level) then return end
-        wipe(info)
+        local info = UIDropDownMenu_CreateInfo()
         if (level == 1) then
             -- Create the title of the menu
             info.isTitle      = 1
@@ -529,7 +593,7 @@ do
         currentCoord = coord
         -- given we're in a click handler, this really *should* exist, but just in case...
         local point = ns.points[currentZone] and ns.points[currentZone][currentCoord]
-        if button == "RightButton" and not down then
+        if point and button == "RightButton" and not down then
             ToggleDropDownMenu(1, nil, HL_Dropdown, self, 0, 0)
         end
     end
@@ -557,7 +621,7 @@ do
         return nil, nil, nil, nil
     end
     function HLHandler:GetNodes2(uiMapID, minimap)
-        Debug("GetNodes2", uiMapID, minimap)
+        -- Debug("GetNodes2", uiMapID, minimap)
         currentZone = uiMapID
         isMinimap = minimap
         if minimap and ns.map_spellids[uiMapID] then
@@ -587,10 +651,11 @@ function HL:OnInitialize()
     self:RegisterEvent("LOOT_CLOSED", "Refresh")
     self:RegisterEvent("ZONE_CHANGED_INDOORS", "Refresh")
     self:RegisterEvent("CRITERIA_EARNED", "Refresh")
-    -- self:RegisterEvent("CRITERIA_UPDATE", "Refresh")
     self:RegisterEvent("BAG_UPDATE", "Refresh")
     self:RegisterEvent("QUEST_TURNED_IN", "Refresh")
     self:RegisterEvent("SHOW_LOOT_TOAST", "Refresh")
+    -- This is just constantly firing, so it's kinda useless:
+    -- self:RegisterEvent("CRITERIA_UPDATE", "Refresh")
 end
 
 do

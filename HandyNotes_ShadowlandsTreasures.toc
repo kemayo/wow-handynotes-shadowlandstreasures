@@ -10,7 +10,6 @@
 ## SavedVariables: HandyNotes_ShadowlandsTreasuresDB
 ## RequiredDeps: HandyNotes
 
-core.lua
 handler.lua
 config.lua
 
