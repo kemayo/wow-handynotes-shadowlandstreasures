@@ -1,5 +1,9 @@
 # Changelog
 
+## Changed in v10
+
+* Add a button to the world map for easy config access
+
 ## Changed in v9
 
 * Better display for quests in tooltips
