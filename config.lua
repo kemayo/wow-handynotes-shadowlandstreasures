@@ -283,6 +283,12 @@ ns.should_show_point = function(coord, point, currentZone, isMinimap)
     if point.outdoors_only and IsIndoors() then
         return false
     end
+    if point.art and point.art ~= C_Map.GetMapArtID(currentZone) then
+        return false
+    end
+    if ns.map_questids[currentZone] and not (point.junk or point.npc or point.follower) and C_QuestLog.IsQuestFlaggedCompleted(ns.map_questids[currentZone]) then
+        return false
+    end
     if point.junk and not ns.db.show_junk then
         return false
     end

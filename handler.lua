@@ -12,6 +12,9 @@ ns.HL = HL
 ns.map_spellids = {
     -- zone = spellid
 }
+ns.map_questids = {
+    -- zone = questid
+}
 
 ns.currencies = {
     ANIMA = {
@@ -654,6 +657,7 @@ function HL:OnInitialize()
     self:RegisterEvent("BAG_UPDATE", "Refresh")
     self:RegisterEvent("QUEST_TURNED_IN", "Refresh")
     self:RegisterEvent("SHOW_LOOT_TOAST", "Refresh")
+    self:RegisterEvent("GARRISON_FOLLOWER_ADDED", "Refresh")
     -- This is just constantly firing, so it's kinda useless:
     -- self:RegisterEvent("CRITERIA_UPDATE", "Refresh")
 
