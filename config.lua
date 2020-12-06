@@ -345,22 +345,35 @@ ns.should_show_point = function(coord, point, currentZone, isMinimap)
     return true
 end
 
+local function hideTextureWithAtlas(atlas, ...)
+    for i=1, select("#", ...) do
+        local region = select(i, ...)
+        if region:IsObjectType("Texture") and region:GetAtlas() == atlas then
+            region:Hide()
+        end
+    end
+end
+local defaultSort = function(a, b) return a < b end
+local function iterKeysByValue(tbl, sortFunction)
+    local keys = {}
+    for key in pairs(tbl) do
+        table.insert(keys, key)
+    end
+    table.sort(keys, function(a, b)
+        return (sortFunction or defaultSort)(tbl[a], tbl[b])
+    end)
+    return ipairs(keys)
+end
 function ns.SetupMapOverlay()
     local frame = WorldMapFrame:AddOverlayFrame("WorldMapTrackingOptionsButtonTemplate", "DROPDOWNTOGGLEBUTTON", "TOPRIGHT", WorldMapFrame:GetCanvasContainer(), "TOPRIGHT", -68, -2);
     frame.Icon:SetAtlas("VignetteLootElite")
     frame.Icon:SetPoint("TOPLEFT", 6, -5)
-    local function hideTextureWithAtlas(atlas, ...)
-        for i=1, select("#", ...) do
-            local region = select(i, ...)
-            if region:IsObjectType("Texture") and region:GetAtlas() == atlas then
-                region:Hide()
-            end
-        end
-    end
     hideTextureWithAtlas("MapCornerShadow-Right", frame:GetRegions())
     frame.Refresh = function(self)
         local uiMapID = self:GetParent():GetMapID()
-        if ns.points[uiMapID] then
+        local info = C_Map.GetMapInfo(uiMapID)
+        local parentMapID = info and info.parentMapID or 0
+        if ns.points[uiMapID] or ns.points[parentMapID] then
             self:Show()
         else
             self:Hide()
@@ -454,6 +467,7 @@ function ns.SetupMapOverlay()
 
         elseif level == 2 then
             local parent = UIDROPDOWNMENU_MENU_VALUE
+            local currentZone = WorldMapFrame.mapID
             info.arg1 = parent
             info.isTitle = nil
             info.disabled = nil
@@ -474,18 +488,25 @@ function ns.SetupMapOverlay()
             end
             if parent == "achievementsHidden" then
                 local values = {}
+                local relevant = {}
                 for uiMapID, points in pairs(ns.points) do
-                    for coord, point in pairs(points) do
-                        if point.achievement and not values[point.achievement] then
-                            local _, achievement = GetAchievementInfo(point.achievement)
-                            values[point.achievement] = achievement or 'achievement:'..point.achievement
+                    for _, point in pairs(points) do
+                        if point.achievement then
+                            if not values[point.achievement] then
+                                local _, achievement = GetAchievementInfo(point.achievement)
+                                values[point.achievement] = achievement or 'achievement:'..point.achievement
+                            end
+                            relevant[point.achievement] = relevant[point.achievement] or (uiMapID == currentZone)
                         end
                     end
                 end
-                for achievementid, achievementname in pairs(values) do
-                    info.text = achievementname
+                for _, achievementid in iterKeysByValue(values) do
+                    info.text = values[achievementid]
                     info.value = achievementid
                     info.checked = not ns.db.achievementsHidden[achievementid]
+                    if relevant[achievementid] then
+                        info.text = BRIGHTBLUE_FONT_COLOR:WrapTextInColorCode(info.text) .. " " .. CreateAtlasMarkup("VignetteKill", 0)
+                    end
                     UIDropDownMenu_AddButton(info, level)
                 end
             elseif parent == "zonesHidden" then
@@ -499,10 +520,13 @@ function ns.SetupMapOverlay()
                         end
                     end
                 end
-                for uiMapID, mapName in pairs(values) do
-                    info.text = mapName
+                for _, uiMapID in iterKeysByValue(values) do
+                    info.text = values[uiMapID]
                     info.value = uiMapID
                     info.checked = not ns.db.zonesHidden[uiMapID]
+                    if uiMapID == currentZone then
+                        info.text = BRIGHTBLUE_FONT_COLOR:WrapTextInColorCode(info.text) .. " " .. CreateAtlasMarkup("VignetteKill", 0)
+                    end
                     UIDropDownMenu_AddButton(info, level)
                 end
             end
