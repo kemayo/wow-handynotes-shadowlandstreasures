@@ -285,13 +285,6 @@ local function work_out_texture(point)
                 return trimmed_icon(texture)
             end
         end
-    else
-        if point.currency then
-            if not currency_texture then
-                currency_texture = atlas_texture("Auctioneer", 1.5)
-            end
-            return currency_texture
-        end
     end
     if point.follower then
         if not follower_texture then
@@ -304,6 +297,12 @@ local function work_out_texture(point)
             npc_texture = atlas_texture("DungeonSkull", 1)
         end
         return npc_texture
+    end
+    if point.currency then
+        if not currency_texture then
+            currency_texture = atlas_texture("Auctioneer", 1.5)
+        end
+        return currency_texture
     end
     if point.junk then
         if not junk_texture then
