@@ -650,13 +650,13 @@ function HL:OnInitialize()
     HandyNotes:RegisterPluginDB(myname:gsub("HandyNotes_", ""), HLHandler, ns.options)
 
     -- Watch for events... but mitigate spammy events by bucketing in Refresh
-    self:RegisterEvent("LOOT_CLOSED", "Refresh")
-    self:RegisterEvent("ZONE_CHANGED_INDOORS", "Refresh")
-    self:RegisterEvent("CRITERIA_EARNED", "Refresh")
-    self:RegisterEvent("BAG_UPDATE", "Refresh")
-    self:RegisterEvent("QUEST_TURNED_IN", "Refresh")
-    self:RegisterEvent("SHOW_LOOT_TOAST", "Refresh")
-    self:RegisterEvent("GARRISON_FOLLOWER_ADDED", "Refresh")
+    self:RegisterEvent("LOOT_CLOSED", "RefreshOnEvent")
+    self:RegisterEvent("ZONE_CHANGED_INDOORS", "RefreshOnEvent")
+    self:RegisterEvent("CRITERIA_EARNED", "RefreshOnEvent")
+    self:RegisterEvent("BAG_UPDATE", "RefreshOnEvent")
+    self:RegisterEvent("QUEST_TURNED_IN", "RefreshOnEvent")
+    self:RegisterEvent("SHOW_LOOT_TOAST", "RefreshOnEvent")
+    self:RegisterEvent("GARRISON_FOLLOWER_ADDED", "RefreshOnEvent")
     -- This is just constantly firing, so it's kinda useless:
     -- self:RegisterEvent("CRITERIA_UPDATE", "Refresh")
 
@@ -670,11 +670,14 @@ do
         self.elapsed = self.elapsed + elapsed
         if self.elapsed > 1.5 then
             self.elapsed = 0
-            HL:SendMessage("HandyNotes_NotifyUpdate", myname:gsub("HandyNotes_", ""))
+            HL:Refresh()
             self:Hide()
         end
     end)
-    function HL:Refresh(event)
+    function HL:Refresh()
+        HL:SendMessage("HandyNotes_NotifyUpdate", myname:gsub("HandyNotes_", ""))
+    end
+    function HL:RefreshOnEvent(event)
         bucket:Show()
     end
 end

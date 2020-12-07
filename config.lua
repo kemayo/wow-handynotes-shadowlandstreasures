@@ -32,7 +32,7 @@ ns.options = {
     get = function(info) return ns.db[info[#info]] end,
     set = function(info, v)
         ns.db[info[#info]] = v
-        ns.HL:SendMessage("HandyNotes_NotifyUpdate", myname:gsub("HandyNotes_", ""))
+        ns.HL:Refresh()
     end,
     args = {
         icon = {
@@ -393,7 +393,6 @@ function ns.SetupMapOverlay()
         local info = UIDropDownMenu_CreateInfo()
         level = level or 1
         if level == 1 then
-
             info.isTitle = true
             info.notCheckable = true
             info.text = "HandyNotes - " .. myname:gsub("HandyNotes_", "")
@@ -420,7 +419,7 @@ function ns.SetupMapOverlay()
                 else
                     db[value] = checked
                 end
-                ns.HL:SendMessage("HandyNotes_NotifyUpdate", myname:gsub("HandyNotes_", ""))
+                ns.HL:Refresh()
             end
 
             local sorted = {}
@@ -490,7 +489,7 @@ function ns.SetupMapOverlay()
                 local checked = button.checked
                 local value = button.value
                 ns.db[section][value] = not checked
-                ns.HL:SendMessage("HandyNotes_NotifyUpdate", myname:gsub("HandyNotes_", ""))
+                ns.HL:Refresh()
             end
             if parent == "achievementsHidden" then
                 local values = {}
