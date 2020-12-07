@@ -193,14 +193,14 @@ ns.RegisterPoints(1565, {
         npc=163229,
         --loot={},
     },
-    [57852955] = { -- Egg-Tender Leh'go
+    [58403230] = { -- Egg-Tender Leh'go
         achievement=14309, criteria=48790,
         quest=60266,
         npc=167851,
         loot={
             179539, -- Kelox's Eggbeater
         },
-        note="Destroy eggs",
+        note="Destroy eggs in the burrow; you might have to wait a minute afterwards",
     },
     [68602765] = { -- Faeflayer
         achievement=14309, criteria=48798,
@@ -405,7 +405,6 @@ local macabre = { -- Macabre
 }
 ns.RegisterPoints(1565, {
     [36504790] = macabre,
-    [59952940] = macabre,
     [32704477] = macabre,
     [57932936] = macabre,
 })
