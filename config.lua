@@ -348,7 +348,7 @@ ns.should_show_point = function(coord, point, currentZone, isMinimap)
     if point.requires_no_buff and GetPlayerAuraBySpellID(point.requires_no_buff) then
         return false
     end
-    if not ns.db.upcoming then
+    if not ns.db.upcoming or point.upcoming == false then
         if point.level and point.level > UnitLevel("player") then
             return false
         end
