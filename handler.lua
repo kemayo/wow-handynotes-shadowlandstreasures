@@ -197,9 +197,9 @@ local atlas_texture = function(atlas, scale)
     }
 end
 local default_textures = {
-    VignetteLoot = atlas_texture("VignetteLoot", 1.4),
-    VignetteLootElite = atlas_texture("VignetteLootElite", 1.7),
-    Garr_TreasureIcon = atlas_texture("Garr_TreasureIcon", 2.5),
+    VignetteLoot = atlas_texture("VignetteLoot", 1.2),
+    VignetteLootElite = atlas_texture("VignetteLootElite", 1.3),
+    Garr_TreasureIcon = atlas_texture("Garr_TreasureIcon", 2.2),
 }
 local function work_out_label(point)
     local fallback
