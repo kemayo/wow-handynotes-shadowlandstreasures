@@ -41,6 +41,7 @@ ns.RegisterPoints(1565, { -- Ardenweald
         loot={
             180731, -- Wildseed Cradle
         },
+        atlas="VignetteLootElite",scale=1.2,
         note="Locate 5 tools scattered around the Garden of Night (southeast of Root-Home), combine them into {item:180753:Twinklestar's Gardening Toolkit} and bring them to {npc:171360:Twinklestar} in Tirna Vaal.\nAfter this is done, talk to Twinklestar to receive the {spell:334353:Moonsight} buff",
     },
     [38995696] = {quest=61074,achievement=14313, criteria=50039,label="Diary of the Night",atlas="vehicle-hammergold",minimap=true},
@@ -65,7 +66,7 @@ ns.RegisterPoints(1565, { -- Ardenweald
         },
         note="Requires grabbing the {spell:333923:Faerie Lamp} buff at 46.4 70.9 to unlock the treasure",
     },
-    [46407090] = {quest=61175,achievement=14313,criteria=50043,label="Faerie Lamp",note="Take to 44.7 75.7"},
+    [46407090] = {quest=61175,achievement=14313,criteria=50043,label="Faerie Lamp",note="Take to 44.7 75.7",atlas="azeriteready"},
     [36106520] = {
         achievement=14313, criteria=50045, -- Darkreach Supplies
         quest=61068,
@@ -108,7 +109,7 @@ ns.RegisterPoints(1565, { -- Ardenweald
         },
         note="Loot the {item:180784:Aromatic Flowers} at 36.4 59.5, then use the jumping mushroom near the treasure location to jump on to a tree. Use the flowers on the brazier within the tree to attract the treasure",
     },
-    [36405950] = {quest=61147,achievement=14313, criteria=50040,label="Aromatic Flowers",note="Take to the Dessicated Moth at 41.9 32.5",},
+    [36405950] = {quest=61147,achievement=14313, criteria=50040,label="Aromatic Flowers",note="Take to the Dessicated Moth at 41.9 32.5",atlas="worldquest-icon-herbalism",scale=1,},
     [36402500] = {
         achievement=14313, criteria=50042, -- Enchanted Dreamcatcher
         quest=62259,
@@ -124,11 +125,12 @@ ns.RegisterPoints(1565, { -- Ardenweald
             180637, -- Starry Dreamfoal
             179549, -- Nightwillow Cudgel
         },
+        atlas="VignetteLootElite",scale=1.2,
         note="Loot {item:180654:Fae Ornament}, {item:180656:Enchanted Bough} and {item:180655:Raw Dream Fibers} scattered around Ardenweald to create the {item:180652:Fae Dreamcatcher}, which will dispell the barrier blocking the treasure</a>",
     },
-    [42414672] = {quest=61110,achievement=14313,criteria=50044,label="Enchanted Bough",atlas="greencross",note="Combine to unlock the Cache of the Night at 36,66"},
-    [51556160] = {quest=61110,achievement=14313,criteria=50044,label="Fae Ornament",atlas="greencross",note="Combine to unlock the Cache of the Night at 36,66"},
-    [36982983] = {quest=61110,achievement=14313,criteria=50044,label="Raw Dream Silk",atlas="greencross",note="Combine to unlock the Cache of the Night at 36,66"},
+    [42414672] = {quest=61110,achievement=14313,criteria=50044,label="Enchanted Bough",atlas="honorsystem-icon-bonus",note="Combine to unlock the Cache of the Night at 36,66"},
+    [51556160] = {quest=61110,achievement=14313,criteria=50044,label="Fae Ornament",atlas="honorsystem-icon-bonus",note="Combine to unlock the Cache of the Night at 36,66"},
+    [36982983] = {quest=61110,achievement=14313,criteria=50044,label="Raw Dream Silk",atlas="honorsystem-icon-bonus",note="Combine to unlock the Cache of the Night at 36,66"},
 })
 
 local vulpin = {
@@ -299,6 +301,7 @@ ns.RegisterPoints(1565, {
         loot={
             179603, -- Nettlehusk Barrier
         },
+        level=60,
         note="Hit all the flowers",
     },
     [65702430] = { -- Rotbriar Boggart (but the criteria is called Rotbriar Changeling)
@@ -390,6 +393,7 @@ ns.RegisterPoints(1565, {
             182175, -- Moose Soul
             180748, -- Silky Shimmermoth
         },
+        atlas="VignetteLootElite",scale=1.2,
         note="A Night Fae player must talk to {npc:171743} to start a play; there are 7 possible encounters, one per day. After you can buy items from {npc:163714} depending on how many rares you've cleared.",
     }
 })
