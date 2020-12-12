@@ -1,5 +1,10 @@
 # Changelog
 
+## Changed in v12
+
+* Add config to let achievement status override quest status. Enabling this will stop the daily rares from showing after you've killed them once.
+* Add config to let account-knowable loot (mounts, toys, pets) which is known count as "found". This is enabled by default.
+
 ## Changed in v11
 
 * Add a toggle so you can turn that world map button off if you don't want it
