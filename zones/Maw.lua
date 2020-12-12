@@ -28,7 +28,7 @@ ns.RegisterPoints(1543, {
         quest=57469,
         npc=157833,
         loot={
-            184312, -- Borr-Geth's Fiery Brimstone
+            {184312, toy=true}, -- Borr-Geth's Fiery Brimstone
         },
         level=60,
     },
@@ -124,7 +124,7 @@ ns.RegisterPoints(1543, {
         quest=60987,
         npc=162849,
         loot={
-            184292, -- Ancient Elethium Coin
+            {184292, toy=true}, -- Ancient Elethium Coin
         },
         level=60,
     },
@@ -147,7 +147,7 @@ ns.RegisterPoints(1543, {
         quest=61519,
         npc=172577,
         loot={
-            181794, -- Orophea's Lyre
+            {181794, toy=true}, -- Orophea's Lyre
         },
         note="Fetch {spell:337150} from 26.7 29.3, use it to summon",
         level=60,

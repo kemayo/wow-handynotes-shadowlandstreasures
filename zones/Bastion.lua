@@ -7,7 +7,7 @@ ns.RegisterPoints(1533, { -- Bastion
         achievement=14311, criteria=50047, -- Scroll of Aeons
         quest=58298,
         loot={
-            173984, -- Scroll of Aeons
+            {173984, toy=true}, -- Scroll of Aeons
         },
         note="Loot 2x {item:173973:Purian} around Aspirant's Crucible and put them in tribute bowls",
     },
@@ -106,7 +106,7 @@ ns.RegisterPoints(1533, { -- Bastion
         achievement=14311, criteria=50059, -- Gift of Vesiphone
         quest=60890,
         loot={
-            180859, -- Purity
+            {180859, pet=2935}, -- Purity
         },
         level=60,
         note="Obtain {spell:332785:Proof of Purity} by ringing the bell near the chest and standing under the nearby waterfall to unlock the treasure",
@@ -115,7 +115,7 @@ ns.RegisterPoints(1533, { -- Bastion
         achievement=14311, criteria=50060, -- Gift of Chyrus
         quest=60892,
         loot={
-            183988, -- Bondable Val'kyr Diadem
+            {183988, toy=true}, -- Bondable Val'kyr Diadem
         },
         level=60,
         note="Obtain the {spell:333045:Proof of Humility} by using /kneel in front of the treasure to unlock it",
@@ -149,7 +149,7 @@ ns.RegisterPoints(1533, {
         quest=61183,
         label="Vesper of Silver Wind",
         loot={
-            180772, -- Silverwind Larion
+            {180772, mount=1404}, -- Silverwind Larion
         },
         level=60,
         note="Forge the {item:180858:Crystal Mallet of Heralds} and then ring the vesper",
@@ -272,7 +272,7 @@ ns.RegisterPoints(1533, {
         quest=60978,--62191,
         npc=170932,
         loot={
-            180812, -- Golden Cloudfeather
+            {180812, pet=2925}, -- Golden Cloudfeather
         },
     },
     [66004370] = { -- Collector Astorestes
@@ -314,7 +314,7 @@ ns.RegisterPoints(1533, {
         quest=62650,
         npc=163460,
         loot={
-            180856, -- Silvershell Snapper
+            {180856, pet=2932}, -- Silvershell Snapper
         },
     },
     [45556460] = { -- Echo of Aella
@@ -331,7 +331,7 @@ ns.RegisterPoints(1533, {
         quest=60998,
         npc=171009,
         loot={
-            184404, -- Ever-Abundant Hearth
+            {184404, toy=true}, -- Ever-Abundant Hearth
         },
         level=60,
         note="Wandering the forge, may spawn after you kill surrounding enemies",
@@ -392,7 +392,7 @@ ns.RegisterPoints(1533, {
         quest=60997,
         npc=171008,
         loot={
-            184413, -- Mnemonic Attunement Pane
+            {184413, toy=true}, -- Mnemonic Attunement Pane
         },
         level=60,
     },
@@ -410,7 +410,7 @@ ns.RegisterPoints(1533, {
         npc=170548,
         note="Use the statue and a {item:180445:Skystrider Glider}",
         loot={
-            180773, -- Sundancer
+            {180773, mount=1307}, -- Sundancer
         },
     },
     [55358025] = { -- Beasts of Bastion
@@ -428,7 +428,7 @@ ns.RegisterPoints(1533, {
             179488, -- Cloudtail's Paw
             179485, -- Fang of Nemaeus
             179487, -- Aethon's Horn
-            174445, -- Glimmerfly Cocoon
+            {174445, toy=true}, -- Glimmerfly Cocoon
         },
         note="Beasts of Bastion; talk to {npc:161441} to summon",
     },
@@ -437,7 +437,7 @@ ns.RegisterPoints(1533, {
         quest=60977, -- 60933 makes Cache of the Ascended visible
         npc=170899,
         loot={
-            183741, -- Ascended Skymane
+            {183741, mount=1426}, -- Ascended Skymane
         },
         level=60,
         note="Ring the five vespers within 5 minutes to summon the council",
@@ -463,6 +463,7 @@ local tear = {
     },
     loot={
         183605, -- Devourer Wrought Warglaive
+        {180869, pet=2940}, -- Devoured Wader
     },
     level=60,
     note="Possible spawns from the Swelling Tear event",

@@ -7,15 +7,15 @@ ns.RegisterPoints(1525, { -- Revendreth
         achievement=14314, criteria=50076, -- Lost Quill
         quest=61990,
         loot={
-            182613, -- Refilling Inkwell
+            {182613, pet=3008}, -- Refilling Inkwell
         },
         note="Grab a {item:182475:Forbidden Ink} from the library below",
     },
     [38404430] = {
         achievement=14314, criteria=50077, -- Stylish Parasol
-        --quest=,
+        quest=61999,
         loot={
-            182694, -- Stylish Black Parasol
+            {182694, toy=true}, -- Stylish Black Parasol
         },
         note="On top of the castle walls, can be hard to reach",
     },
@@ -23,7 +23,7 @@ ns.RegisterPoints(1525, { -- Revendreth
         achievement=14314, criteria=50078, -- The Count
         quest=62063,
         loot={
-            182612, -- The Count's Pendant
+            {182612, pet=3009}, -- The Count's Pendant
         },
         note="Requires 99 {currency:1820:Infused Ruby}",
     },
@@ -47,7 +47,7 @@ ns.RegisterPoints(1525, { -- Revendreth
         achievement=14314, criteria=50081, -- Makeshift Muckpool
         quest=62198,
         loot={
-            182780 -- Muckpool Cookpot
+            {182780, toy=true}, -- Muckpool Cookpot
         },
         note="Inside the castle ruins. Requires 30 {currency:1820:Infused Ruby}",
     },
@@ -55,7 +55,7 @@ ns.RegisterPoints(1525, { -- Revendreth
         achievement=14314, criteria=50082, -- Taskmaster's Trove
         quest=62199,
         loot={
-            183986, -- Bondable Sinstone
+            {183986, toy=true}, -- Bondable Sinstone
         },
         note="Use the Ingress and Egress Rites scroll at the area, then dodge orbs",
     },
@@ -63,7 +63,7 @@ ns.RegisterPoints(1525, { -- Revendreth
         achievement=14314, criteria=50084, -- Forbidden Chamber
         quest=62243,
         loot={
-            184075, -- Stonewrought Sentry
+            {184075, toy=true}, -- Stonewrought Sentry
         },
         note="Take the {spell:314749:Anima Canister} inside the building and drain anima from the {npc:173838:Silent Observer}s to reach the treasure",
     },
@@ -79,7 +79,7 @@ ns.RegisterPoints(1525, { -- Revendreth
         achievement=14314, criteria=50896, -- Chest of Envious Dreams
         quest=59833,
         loot={
-            179393, -- Mirror of Envious Dreams
+            {179393, toy=true}, -- Mirror of Envious Dreams
         },
     },
     [64197265] = {
@@ -136,7 +136,7 @@ ns.RegisterPoints(1525, {
         quest=62196,
         label="Forgotten Angler's Rod",
         loot={
-            180993, -- Bat Visage Bobber
+            {180993, toy=true}, -- Bat Visage Bobber
         },
     },
     -- Loyal Gorger
@@ -154,7 +154,7 @@ ns.RegisterPoints(1525, {
         },
         hide_before=58259, -- Worldedge Gorger
         loot={
-            182589, -- Loyal Gorger
+            {182589, mount=1391}, -- Loyal Gorger
         },
         note="Kill {npc:160821}, do 7 days of dailies for {npc:173499}, get a mount",
     },
@@ -162,7 +162,7 @@ ns.RegisterPoints(1525, {
     [53104290] = {
         quest=62050, -- progress:62038, 62042, 62047, 62049, 62048; daily-done is 62107
         loot={
-            182614, -- Blanchy's Reins
+            {182614, mount=1414}, -- Blanchy's Reins
         },
         atlas="stablemaster",scale=1.2,
         note="Nurse {npc:173468:Dead Blanchy} over the course of several days. You need items from all over the world:\n"..
@@ -222,7 +222,7 @@ ns.RegisterPoints(1525, {
         quest=59823,
         npc=166292,
         loot={
-            180588, -- Bucket of Primordial Sludge
+            {180588, pet=2896}, -- Bucket of Primordial Sludge
         },
         note="Up during {quest:59808}",
     },
@@ -259,7 +259,7 @@ ns.RegisterPoints(1525, {
         quest=59869,
         npc=166521,
         loot={
-            180582, -- Endmire Flyer Tether
+            {180582, mount=1379}, -- Endmire Flyer Tether
             183739, -- Endmire Wristwarmers
         },
         note="Talk to {npc:166483}",
@@ -287,7 +287,7 @@ ns.RegisterPoints(1525, {
         npc=165290,
         loot={
             183720, -- Dredbatskin Jerkin
-            180461, -- Horrid Brood Dredwing
+            {180461, mount=1310}, -- Horrid Brood Dredwing
         },
         note="A Venthyr player channeling Wanecrypt Hill must fire the Dredterror Ballista; fetch the bolt from 42.7 73.4",
     },
@@ -301,7 +301,7 @@ ns.RegisterPoints(1525, {
         quest=59900,
         npc=166679,
         loot={
-            180581, -- Hopecrusher Gargon
+            {180581, mount=1298}, -- Hopecrusher Gargon
         },
     },
     [61707950] = { -- Huntmaster Petrus
@@ -346,7 +346,7 @@ ns.RegisterPoints(1525, {
         quest=60729,
         npc=170048,
         loot={
-            180585, -- Bottled Up Rage
+            {180585, pet=2897}, -- Bottled Up Rage
         },
         note="During {quest:60654} bring ~10x {npc:169916} to {npc:169917}",
     },
@@ -355,7 +355,7 @@ ns.RegisterPoints(1525, {
         quest=58213,
         npc=160675,
         loot={
-            180587, -- Animated Tome
+            {180587, pet=2893}, -- Animated Tome
         },
         note="Bring 4x {npc:160753} to the library",
     },
@@ -373,7 +373,7 @@ ns.RegisterPoints(1525, {
         quest=58263,
         npc=160857,
         loot={
-            180873, -- Smolderheart
+            {180873, toy=true}, -- Smolderheart
         },
         note="Use {spell:313065} on {npc:157733}",
     },
@@ -407,7 +407,7 @@ ns.RegisterPoints(1525, {
         quest=56877,
         npc=155779,
         loot={
-            180584, -- Blushing Spiderling
+            {180584, pet=2891}, -- Blushing Spiderling
         },
         note="Destroy {npc:155769} near {npc:155777}",
     },

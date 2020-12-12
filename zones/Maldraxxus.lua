@@ -30,7 +30,7 @@ ns.RegisterPoints(1536, { -- Maldraxxus
         achievement=14312, criteria=50066, -- Vat of Conspicuous Slime
         quest=61444,
         loot={
-            181825, -- Phial of Ravenous Slime
+            {181825, toy=true}, -- Phial of Ravenous Slime
         },
         note="Take the bottle from the nearby table and use it on the pool to obtain the treasure",
     },
@@ -38,7 +38,7 @@ ns.RegisterPoints(1536, { -- Maldraxxus
         achievement=14312, criteria=50068, -- Necro Tome
         quest=61470,
         loot={
-            182732, -- The Necronom-i-nom
+            {182732, toy=true}, -- The Necronom-i-nom
         },
         hide_before=58620,
         note="Complete the questline starting with {quest:58619:Read Between the Lines}. Once the tower is unlocked, it's on the top floor",
@@ -105,7 +105,7 @@ ns.RegisterPoints(1536, { -- Maldraxxus
         achievement=14312, criteria=50074, -- Plaguefallen Chest
         quest=61474,
         loot={
-            183515, -- Iridescent Ooze / Reanimated Plague
+            {183515, pet=3045}, -- Iridescent Ooze / Reanimated Plague
         },
         level=60,
         note="Enter the tunnels at 62.4 76.5 to become {spell:330092:Plaguefallen} and unlock the treasure",
@@ -131,7 +131,7 @@ ns.RegisterPoints(1536, { -- Maldraxxus
         quest=61128, -- also 61127 for the arm
         loot={
             180273, -- Sorrowbane
-            181164, -- Oonar's Arm
+            {181164, pet=2944}, -- Oonar's Arm
         },
         level=60,
         note="Requires stacking several strength buffs and the world quest {quest:57205:A Few Bumps Along the Way}. Check wowhead, it's a lot",
@@ -163,10 +163,14 @@ ns.RegisterPoints(1536, {
 
 -- non-achievement treasures
 ns.RegisterPoints(1536, { -- Maldraxxus
-    -- [44103990] = {
-    --     quest=60368,
-    --     label="Blackhound Cache",
-    -- },
+    [44103990] = {
+        quest=60368,
+        label="Blackhound Cache",
+        loot={
+            {184318, toy=true}, -- Battlecry of Krexus
+        },
+        note="Requires Necrolord",
+    },
     -- [36807860] = {
     --     quest=nil,
     --     label="Bladesworn Supply Cache",
@@ -175,6 +179,10 @@ ns.RegisterPoints(1536, { -- Maldraxxus
         quest=62602,
         label="Giant Cache of Epic Treasure",
         pet=3047,
+        -- todo: this adds a pet directly to your collection, so before this can be uncommented I need to make loot cope with that
+        -- loot={
+        --    {pet=3047},
+        --}
         note="Click the treasure pile, {spell:343163}",
         minimap=true,
     },
@@ -182,9 +190,17 @@ ns.RegisterPoints(1536, { -- Maldraxxus
         quest=59428, -- later 59429
         label="Strange Growth",
         loot={
-            182606, -- Bloodlouse Larva
+            {182606, pet=3013}, -- Bloodlouse Larva
         },
         note="Loot a {item:182607:Hairy Egg} and wait three days for your pet to hatch",
+    },
+    [54001235] = {
+        quest=nil, -- ?
+        label="Cache of Eyes",
+        loot={
+            {181171, pet=2947}, -- Luminous Webspinner
+        },
+        note="Spawns in multiple places inside Sightless Hold",
     }
 })
 
@@ -198,7 +214,7 @@ ns.RegisterPoints(1536, {
         loot={
             184154, -- Grungy Containment Pack
             184290, -- Blood-Dyed Bonesaw
-            184476, -- Regenerating Slime Vial (toy)
+            {184476, toy=true}, -- Regenerating Slime Vial (toy)
         },
         level=60,
     },
@@ -229,7 +245,7 @@ ns.RegisterPoints(1536, {
         quest=58868, -- 61989
         npc=162711,
         loot={
-            181263, -- Shy Melvin
+            {181263, pet=2953}, -- Shy Melvin
             184280, -- Dapper Threads
         },
     },
@@ -275,7 +291,7 @@ ns.RegisterPoints(1536, {
         quest=58851,
         npc=162690,
         loot={
-            182084, -- Gorespine
+            {182084, mount=1373}, -- Gorespine
             184179, -- Lichsworn Commander's Boneblade
         },
         level=60,
@@ -304,7 +320,7 @@ ns.RegisterPoints(1536, {
         quest=58004,
         npc=159753,
         loot={
-            181283, -- Foulwing Buzzer
+            {181283, pet=2964}, -- Foulwing Buzzer
             184184, -- Ravenomous's Acid-Tipped Stinger
         },
         level=60,
@@ -314,7 +330,7 @@ ns.RegisterPoints(1536, {
         quest=58784,
         npc=168147,
         loot={
-            181815, -- Armored Bonehoof Tauralus
+            {181815, mount=1370}, -- Armored Bonehoof Tauralus
             182083, -- Bonecleaver's Skullboar
         },
         level=60,
@@ -325,7 +341,7 @@ ns.RegisterPoints(1536, {
         quest=58006,
         npc=158406,
         loot={
-            181267, -- Writhing Spine
+            {181267, pet=2957}, -- Writhing Spine
             184287, -- Scum-Caked Epaulettes
         },
         level=60,
@@ -335,7 +351,7 @@ ns.RegisterPoints(1536, {
         quest=58003,
         npc=159886,
         loot={
-            181172, -- Boneweave Hatchling
+            {181172, pet=2948}, -- Boneweave Hatchling
             184289, -- Spindlefang Spellblade
         },
         level=60,
@@ -345,8 +361,8 @@ ns.RegisterPoints(1536, {
         quest=58768,
         npc=162528,
         loot={
-            181266, -- Feasting Larva
-            181265, -- Corpselouse Larva
+            {181266, pet=2956}, -- Feasting Larva
+            {181265, pet=2955}, -- Corpselouse Larva
             184299, -- Goresoaked Carapace
         },
         minimap=true, -- no vignette until lump used
@@ -358,7 +374,7 @@ ns.RegisterPoints(1536, {
         npc=162586,
         loot={
             182190, -- Tauralus Hide Collar
-            182075, -- Bonehoof Tauralus
+            {182075, mount=1366}, -- Bonehoof Tauralus
         },
         note="Mount requires Necrolord",
     },
@@ -388,7 +404,7 @@ ns.RegisterPoints(1536, {
         quest=58889,
         npc=162819,
         loot={
-            182085, -- Blisterback Bloodtusk
+            {182085, mount=1372}, -- Blisterback Bloodtusk
             184288, -- Ruthless Warlord's Barrier
         },
         level=60,
@@ -411,7 +427,7 @@ ns.RegisterPoints(1536, {
         quest=58872,
         npc=162741,
         loot={
-            182080, -- Predatory Plagueroc
+            {182080, mount=1411}, -- Predatory Plagueroc
             184298, -- Amalgamated Forsworn's Journal
         },
         level=60,
@@ -460,9 +476,9 @@ ns.RegisterPoints(1536, {
         label="{npc:157226}", -- the pool
         icon=true,
         loot = {
-            183903, -- Smelly Jelly
-            182079, -- Slime-Covered Reins of the Hulking Deathroc (violet)
-            181270, -- Decaying Oozewalker (oily)
+            {183903, toy=true}, -- Smelly Jelly
+            {182079, mount=1410}, -- Slime-Covered Reins of the Hulking Deathroc (violet)
+            {181270, pet=2960}, -- Decaying Oozewalker (oily)
             184302, -- Residue-coated Muck Waders (corrupted)
             184185, -- Grunge-Caked Collarbone
             184279, -- Siphoning Blood-Drinker (pulsing)
@@ -497,7 +513,7 @@ ns.RegisterPoints(1536, {
         -- quest=62786, -- this is wrong
         -- npc=162853,
         loot={
-            184062, -- Gnawed Reins of the Battle-Bound Warhound
+            {184062, mount=1437}, -- Gnawed Reins of the Battle-Bound Warhound
         },
         note="Some of these require accepting the three {quest:59826} quests",
     },

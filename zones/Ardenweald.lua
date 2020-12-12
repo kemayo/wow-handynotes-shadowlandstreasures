@@ -7,7 +7,7 @@ ns.RegisterPoints(1565, { -- Ardenweald
         achievement=14313, criteria=50031, -- Aerto's Body
         quest=61072,
         loot={
-            180630, -- Gorm Harrier
+            {180630, pet=2921}, -- Gorm Harrier
         },
         note="A swarm of insects will attack you after looting the treasure",
     },
@@ -15,7 +15,7 @@ ns.RegisterPoints(1565, { -- Ardenweald
         achievement=14313, criteria=50033, -- Veilwing Egg
         quest=61065,
         loot={
-            180642, -- Cloudfeather Fledgling
+            {180642, pet=2909}, -- Cloudfeather Fledgling
         },
         note="On top of a branch",
     },
@@ -23,7 +23,7 @@ ns.RegisterPoints(1565, { -- Ardenweald
         achievement=14313, criteria=50035, -- Faerie Trove
         quest=61073,
         loot={
-            182673, -- Shimmerbough Hoarder
+            {182673, pet=3022}, -- Shimmerbough Hoarder
         },
         note="Inside a small alcove under the clearing",
     },
@@ -31,7 +31,7 @@ ns.RegisterPoints(1565, { -- Ardenweald
         achievement=14313, criteria=50037, -- Hearty Dragon Plume
         quest=61067,
         loot={
-            182729, -- Hearty Dragon Plume
+            {182729, toy=true}, -- Hearty Dragon Plume
         },
         note="Up in a tree",
     },
@@ -39,7 +39,7 @@ ns.RegisterPoints(1565, { -- Ardenweald
         achievement=14313, criteria=50039, -- Cache of the Moon
         quest=61074,
         loot={
-            180731, -- Wildseed Cradle
+            {180731, mount=1397}, -- Wildseed Cradle
         },
         atlas="VignetteLootElite",scale=1.2,
         note="Locate 5 tools scattered around the Garden of Night (southeast of Root-Home), combine them into {item:180753:Twinklestar's Gardening Toolkit} and bring them to {npc:171360:Twinklestar} in Tirna Vaal.\nAfter this is done, talk to Twinklestar to receive the {spell:334353:Moonsight} buff",
@@ -62,7 +62,7 @@ ns.RegisterPoints(1565, { -- Ardenweald
         quest=61175,
         loot={
             179512, -- Dreamsong Saber
-            184490, -- Fae Pipes
+            {184490, toy=true}, -- Fae Pipes
         },
         note="Requires grabbing the {spell:333923:Faerie Lamp} buff at 46.4 70.9 to unlock the treasure",
     },
@@ -96,7 +96,7 @@ ns.RegisterPoints(1565, { -- Ardenweald
         achievement=14313, criteria=50036, -- Harmonic Chest
         quest=61165,
         loot={
-            184489, -- Fae Harp
+            {184489, toy=true}, -- Fae Harp
             179565, -- Songwood Stem
         },
         note="Requires 2 players to play the nearby harp and drums at the same time",
@@ -105,7 +105,7 @@ ns.RegisterPoints(1565, { -- Ardenweald
         achievement=14313, criteria=50040, -- Dessicated Moth
         quest=61147,
         loot={
-            180640, -- Amber Glitterwing
+            {180640, pet=2911}, -- Amber Glitterwing
         },
         note="Loot the {item:180784:Aromatic Flowers} at 36.4 59.5, then use the jumping mushroom near the treasure location to jump on to a tree. Use the flowers on the brazier within the tree to attract the treasure",
     },
@@ -122,7 +122,7 @@ ns.RegisterPoints(1565, { -- Ardenweald
         achievement=14313, criteria=50044, -- Cache of the Night
         quest=61110,
         loot={
-            180637, -- Starry Dreamfoal
+            {180637, pet=2914}, -- Starry Dreamfoal
             179549, -- Nightwillow Cudgel
         },
         atlas="VignetteLootElite",scale=1.2,
@@ -137,7 +137,7 @@ local vulpin = {
     achievement=14313, criteria=50038, -- Playful Vulpin Befriended
     quest=61086, -- also 61080, 61081, 61084, 61085 for progress
     loot={
-        180645, -- Dodger
+        {180645, pet=2905}, -- Dodger
     },
     note="Find {npc:171206:Playful Vulpin} and play with them 5 times to obtain the treasure. Use emotes related to what they're doing",
     atlas="Warfront-NeutralHero-Silver", scale=1.3,
@@ -165,7 +165,7 @@ ns.RegisterPoints(1565, { -- Ardenweald
     [26285897] = {
         quest=61192, -- failed:61208, 61198: passed
         loot={
-            180727, -- Shimmermist Runner
+            {180727, mount=1360}, -- Shimmermist Runner
         },
         note="Read the Tale of the Tangle, then follow blue lamps until you find {npc:171767:Shizgher}",
     },
@@ -185,7 +185,7 @@ ns.RegisterPoints(1565, {
         quest=59201,62271,
         npc=164238,
         loot={
-            180631, -- Gorm Needler
+            {180631, pet=2920}, -- Gorm Needler
         },
         note="Runs in circles around the area. Ride and use {spell:319566} and {spell:319575} to slow and stun it",
     },
@@ -219,7 +219,7 @@ ns.RegisterPoints(1565, {
         quest=59006,
         npc=163370,
         loot={
-            183196, -- Lavender Nibbler
+            {183196, pet=3035}, -- Lavender Nibbler
         },
     },
     [27905250] = { -- Gormtamer Tizo
@@ -227,7 +227,7 @@ ns.RegisterPoints(1565, {
         quest=59145,
         npc=164107,
         loot={
-            180725, -- Spinemaw Gladechewer
+            {180725, mount=1362}, -- Spinemaw Gladechewer
         },
         note="Kill {npc:166736} until it spawns",
     },
@@ -236,7 +236,7 @@ ns.RegisterPoints(1565, {
         quest=59157,
         npc=164112,
         loot={
-            182650, -- Arboreal Gulper
+            {182650, mount=1415}, -- Arboreal Gulper
         },
         note="Loot {item:175247} and use the Damp Loam to summon"
     },
@@ -274,13 +274,12 @@ ns.RegisterPoints(1565, {
         quest=60306,
         npc=168135,
         loot={
-            180728, -- Swift Gloomhoof
+            {180728, mount=1306}, -- Swift Gloomhoof
         },
-        note="A Night Fae player must:\n"..
-            "* Loot {item:181243} at 19.7 63.5 (may need a glider)\n"..
+        note="* Loot {item:181243} at 19.7 63.5 (may need a glider)\n"..
             "* Do Night Fae quests through {quest:57871}\n",
             "* Ask {npc:165704} to repair {item:181243}\n",
-            "* Get {item:178675} from {npc:160262}\n",
+            "* Get {item:178675} from {npc:160262} (talk to the guards if you're not Night Fae)\n",
             "* Use {item:178675} here, and defeat the rare",
     },
     -- TODO: questid for getting the web?
@@ -290,7 +289,7 @@ ns.RegisterPoints(1565, {
         quest=59208,62270,
         npc=164391,
         loot={
-            180643, -- Chirpy Valeshrieker
+            {180643, pet=2908}, -- Chirpy Valeshrieker
         },
         note="Get {item:174042} from {npc:160747} and {npc:160748} in Shimmerbough, use it to reach the rare",
     },
@@ -351,7 +350,7 @@ ns.RegisterPoints(1565, {
         quest=61632,
         npc=168647,
         loot={
-            180730, -- Wild Glimmerfur Prowler
+            {180730, mount=1393}, -- Wild Glimmerfur Prowler
             180154, -- Greataxe of Unrelenting Pursuit
             182176, -- Shadowstalker Soul (quest=62431)
         },
@@ -391,7 +390,7 @@ ns.RegisterPoints(1565, {
             175069, -- Theater Ticket
             175095, -- Book of Tickets
             182175, -- Moose Soul
-            180748, -- Silky Shimmermoth
+            {180748, mount=1332}, -- Silky Shimmermoth
         },
         atlas="VignetteLootElite",scale=1.2,
         note="A Night Fae player must talk to {npc:171743} to start a play; there are 7 possible encounters, one per day. After you can buy items from {npc:163714} depending on how many rares you've cleared.",
@@ -403,7 +402,7 @@ local macabre = { -- Macabre
     quest=59140,
     npc=164093,
     loot={
-        180644, -- Rocky
+        {180644, pet=2907}, -- Rocky
     },
     note="Stand in a Mysterious Mushroom Ring with three players, dancing in a loop: A > B > C > A",
 }

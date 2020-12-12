@@ -75,6 +75,10 @@ ns.path = ns.nodeMaker{
     scale = 1.1,
 }
 
+ns.lootitem = function(item)
+    return type(item) == "table" and item[1] or item
+end
+
 ---------------------------------------------------------
 -- All the utility code
 
@@ -156,8 +160,9 @@ local function cache_string(s)
 end
 local function cache_loot(loot)
     if not loot then return end
-    for _,item in ipairs(loot) do
-        C_Item.RequestLoadItemDataByID(item)
+    for _, item in ipairs(loot) do
+
+        C_Item.RequestLoadItemDataByID(ns.lootitem(item))
     end
 end
 local render_string_list
@@ -235,11 +240,11 @@ local function work_out_label(point)
     end
     if point.loot and #point.loot > 0 then
         -- handle multiples?
-        local _, link = GetItemInfo(point.loot[1])
+        local _, link = GetItemInfo(ns.lootitem(point.loot[1]))
         if link then
             return link
         end
-        fallback = 'item:'..point.loot[1]
+        fallback = 'item:'..ns.lootitem(point.loot[1])
     end
     if point.currency then
         if ns.currencies[point.currency] then
@@ -261,7 +266,7 @@ local function work_out_texture(point)
     end
     if ns.db.icon_item or point.icon then
         if point.loot and #point.loot > 0 then
-            local texture = select(10, GetItemInfo(point.loot[1]))
+            local texture = select(10, GetItemInfo(ns.lootitem(point.loot[1])))
             if texture then
                 return trimmed_icon(texture)
             end
@@ -433,7 +438,7 @@ local function handle_tooltip(tooltip, point)
         end
         if point.loot then
             for _, item in ipairs(point.loot) do
-                local _, link, _, _, _, _, _, _, _, icon = GetItemInfo(item)
+                local _, link, _, _, _, _, _, _, _, icon = GetItemInfo(ns.lootitem(item))
                 if link then
                     tooltip:AddDoubleLine(ENCOUNTER_JOURNAL_ITEM, quick_texture_markup(icon) .. link)
                 else
@@ -495,7 +500,7 @@ local function handle_tooltip(tooltip, point)
             end
 
             if point.loot and #point.loot > 0 then
-                comparison:SetHyperlink(("item:%d"):format(point.loot[1]))
+                comparison:SetHyperlink(("item:%d"):format(ns.lootitem(point.loot[1])))
             elseif point.npc then
                 comparison:SetHyperlink(("unit:Creature-0-0-0-0-%d"):format(point.npc))
             end
