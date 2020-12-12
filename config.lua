@@ -10,6 +10,7 @@ ns.defaults = {
         show_treasure = true,
         upcoming = true,
         found = false,
+        collectablefound = true,
         achievedfound = false,
         icon_scale = 1.0,
         icon_alpha = 1.0,
@@ -124,6 +125,12 @@ ns.options = {
                     name = "Count achievement-complete as found",
                     desc = "For nodes which are repeatable on a daily quest *and* tied to an achievement, only consider the achievement",
                     order = 21,
+                },
+                collectablefound = {
+                    type = "toggle",
+                    name = "Count collectables as found",
+                    desc = "For account-level items like mounts, pets, and toys, count them being known as this being found",
+                    order = 22,
                 },
                 upcoming = {
                     type = "toggle",
@@ -258,6 +265,37 @@ local allCriteriaComplete = function(achievement, criteria)
         return true
     end
 end
+local function PlayerHasMount(mountid)
+    return (select(11, C_MountJournal.GetMountInfoByID(mountid)))
+end
+local function PlayerHasPet(petid)
+    return (C_PetJournal.GetNumCollectedInfo(petid) > 0)
+end
+local allLootKnown = function(loot)
+    -- if the point has knowable loot and it's all known, return true
+    -- if the point has knowable loot and it's not all known, return false
+    -- otherwise return nil
+    if not loot then return false end
+    local knowable
+    for _, item in ipairs(loot) do
+        if type(item) == "table" then
+            knowable = true
+            if item.toy and not PlayerHasToy(item[1]) then
+                return false
+            end
+            if item.mount and not PlayerHasMount(item.mount) then
+                return false
+            end
+            if item.pet and not PlayerHasPet(item.pet) then
+                return false
+            end
+        end
+    end
+    -- TODO: could arguably do transmog here, too. Since we're mostly
+    -- considering soulbound things, the restrictions on seeing appearances
+    -- known cross-armor-type wouldn't really matter...
+    return knowable
+end
 
 local zoneHidden
 zoneHidden = function(uiMapID)
@@ -307,6 +345,9 @@ ns.should_show_point = function(coord, point, currentZone, isMinimap)
         return false
     end
     if (not ns.db.found) then
+        if ns.db.collectablefound and allLootKnown(point.loot) then
+            return false
+        end
         if point.quest and (not point.achievement or not ns.db.achievedfound) then
             if allQuestsComplete(point.quest) then
                 return false
