@@ -1,5 +1,12 @@
 # Changelog
 
+## Changed in v11
+
+* Add a toggle so you can turn that world map button off if you don't want it
+* Tweaked the default icon scale to be slightly smaller
+* Improved Ardenweald, mostly so that icons for sub-objectives are easier to pick out from the main treasures
+* More Maw loot has shown up
+
 ## Changed in v10
 
 * Add a button to the world map for easy config access
