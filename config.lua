@@ -10,7 +10,7 @@ ns.defaults = {
         show_treasure = true,
         upcoming = true,
         found = false,
-        repeatable = true,
+        achievedfound = false,
         icon_scale = 1.0,
         icon_alpha = 1.0,
         icon_item = false,
@@ -119,6 +119,12 @@ ns.options = {
                     desc = "Show waypoints for items you've already found?",
                     order = 20,
                 },
+                achievedfound = {
+                    type = "toggle",
+                    name = "Count achievement-complete as found",
+                    desc = "For nodes which are repeatable on a daily quest *and* tied to an achievement, only consider the achievement",
+                    order = 21,
+                },
                 upcoming = {
                     type = "toggle",
                     name = "Show inaccessible",
@@ -143,12 +149,6 @@ ns.options = {
                     desc = "Show items which don't count for any achievement",
                     order = 40,
                 },
-                -- repeatable = {
-                --     type = "toggle",
-                --     name = "Show repeatable",
-                --     desc = "Show items which are repeatable? This generally means ones which have a daily tracking quest attached",
-                --     order = 40,
-                -- },
                 tooltip_questid = {
                     type = "toggle",
                     name = "Show quest ids",
@@ -307,7 +307,7 @@ ns.should_show_point = function(coord, point, currentZone, isMinimap)
         return false
     end
     if (not ns.db.found) then
-        if point.quest then
+        if point.quest and (not point.achievement or not ns.db.achievedfound) then
             if allQuestsComplete(point.quest) then
                 return false
             end
@@ -327,9 +327,6 @@ ns.should_show_point = function(coord, point, currentZone, isMinimap)
             return false
         end
     end
-    -- if (not ns.db.repeatable) and point.repeatable then
-    --     return false
-    -- end
     if not point.follower then
         if point.npc then
             if not ns.db.show_npcs then
