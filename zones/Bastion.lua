@@ -362,6 +362,7 @@ ns.RegisterPoints(1533, {
         loot={
             183608, -- Evernote Vesper
         },
+        level=60,
         note="Need three players to trigger a vesper repair event",
     },
     [30355515] = { -- Reekmonger
@@ -377,6 +378,7 @@ ns.RegisterPoints(1533, {
         loot={
             183608, -- Evernote Vesper
         },
+        level=60,
         note="Need three players to trigger",
     },
     [22452285] = { -- Orstus and Sotiros
