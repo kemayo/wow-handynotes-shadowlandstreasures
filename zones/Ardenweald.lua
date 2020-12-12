@@ -66,7 +66,7 @@ ns.RegisterPoints(1565, { -- Ardenweald
         },
         note="Requires grabbing the {spell:333923:Faerie Lamp} buff at 46.4 70.9 to unlock the treasure",
     },
-    [46407090] = {quest=61175,achievement=14313,criteria=50043,label="Faerie Lamp",note="Take to 44.7 75.7",atlas="azeriteready"},
+    [46407090] = {quest=61175,achievement=14313,criteria=50043,label="Faerie Lamp",note="Take to 44.7 75.7",atlas="worldquest-icon-inscription"},
     [36106520] = {
         achievement=14313, criteria=50045, -- Darkreach Supplies
         quest=61068,
