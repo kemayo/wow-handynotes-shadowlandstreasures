@@ -95,9 +95,22 @@ ns.RegisterPoints(1543, {
         npc=170303,
         loot={
             184108, -- Vorpal Amulet
+            183066, -- Korrath's Grimoire: Aleketh
+            183067, -- Korrath's Grimoire: Belidir
+            183068, -- Korrath's Grimoire: Gyadrek
         },
         note="Get the etching from the three other Heralds, combine into {item:182329}, and use to summon",
         level=60,
+    },
+    [53507950] = { -- Gorged Shadehound
+        achievement=14738, criteria=49251,
+        npc=174827,
+        -- quest=61124,
+        label="{npc:174827}",
+        loot={
+            184167, -- Mawsworn Soulhunter
+        },
+        note="Only during the Hunt:Shadehounds event, mount is not a guaranteed drop",
     },
     [30775000] = { -- Ikras the Devourer
         achievement=14744, criteria=50621,
@@ -150,7 +163,11 @@ ns.RegisterPoints(1543, {
         achievement=14744, criteria=49856,
         quest=60884,
         npc=170634,
-        --loot={},
+        loot={
+            183066, -- Korrath's Grimoire: Aleketh
+            183067, -- Korrath's Grimoire: Belidir
+            183068, -- Korrath's Grimoire: Gyadrek
+        },
         level=60,
     },
     [35954155] = { -- Soulforger Rhovus
