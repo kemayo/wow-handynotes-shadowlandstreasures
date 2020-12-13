@@ -364,7 +364,14 @@ ns.should_show_point = function(coord, point, currentZone, isMinimap)
         if point.follower and C_Garrison.IsFollowerCollected(point.follower) then
             return false
         end
+        -- todo: clean this one up once all the data is updated:
         if point.toy and point.item and PlayerHasToy(point.item) then
+            return false
+        end
+        if point.inbag and GetItemCount(point.inbag, true) > 0 then
+            return false
+        end
+        if point.onquest and C_QuestLog.IsOnQuest(point.onquest) then
             return false
         end
     end
