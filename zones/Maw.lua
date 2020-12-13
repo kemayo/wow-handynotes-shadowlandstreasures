@@ -276,7 +276,7 @@ ns.RegisterPoints(1543, {
     },
     [30846866] = { -- Krala
         achievement=14660, criteria=49486,
-        quest=60903,
+        quest=63381,
         npc=170692,
         --loot={},
         level=60,
@@ -292,7 +292,9 @@ ns.RegisterPoints(1543, {
         achievement=14660, criteria=50408,
         quest=62618,
         npc=172207,
-        --loot={},
+        loot={
+            183061, -- Wailing Coin
+        },
         level=60,
     },
     [25354875] = { -- Orrholyn <Lord of Bloodletting>
@@ -359,6 +361,41 @@ ns.RegisterPoints(1543, {
     --    quest=61124,
     --    npc=165973,
     --}
+})
+
+-- lore:
+ns.RegisterPoints(1543, {
+    [35754555] = { -- Tormentor's Notes
+        achievement=14761, criteria=49914,
+        quest=63163,
+        loot={
+            183069, -- Tormentor's Notes
+        },
+        note="Look for the body of {npc:173811}",
+    },
+    [19353340] = { -- Words of the Warden
+        achievement=14761, criteria=49910,
+        quest=63159,
+        loot={
+            183063, -- Word of the Warden
+        },
+        note="Find a Paper Scrap hidden behind some junk",
+    },
+    [27702020] = ns.path{ -- To: Box of Torments
+        achievement=14761, criteria=49908,
+        quest=63157,
+    }
+})
+
+ns.RegisterPoints(1822, { -- Tremaculum
+    [73101660] = { -- Box of Torments
+        achievement=14761, criteria=49908,
+        quest=63157,
+        loot={
+            183060, -- Box of Torments
+        },
+        note="Under the Tremaculum, open {npc:173837}",
+    }
 })
 
 local riftstone = ns.nodeMaker{
