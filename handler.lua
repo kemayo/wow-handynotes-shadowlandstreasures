@@ -47,9 +47,15 @@ ns.points = {
     },
     --]]
 }
-function ns.RegisterPoints(zone, points)
+function ns.RegisterPoints(zone, points, defaults)
     if not ns.points[zone] then
         ns.points[zone] = {}
+    end
+    if defaults then
+        local nodeType = ns.nodeMaker(defaults)
+        for coord, point in pairs(points) do
+            points[coord] = nodeType(point)
+        end
     end
     ns.merge(ns.points[zone], points)
 end
