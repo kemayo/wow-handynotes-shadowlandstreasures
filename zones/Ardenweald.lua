@@ -13,11 +13,11 @@ ns.RegisterPoints(1565, { -- Ardenweald
     },
     [52903730] = {
         achievement=14313, criteria=50033, -- Veilwing Egg
-        quest=61065,
+        quest=61065, -- also 58013?
         loot={
             {180642, pet=2909}, -- Cloudfeather Fledgling
         },
-        note="On top of a branch",
+        note="On top of a branch; run through the level 60 area above to get to it",
     },
     [49705590] = {
         achievement=14313, criteria=50035, -- Faerie Trove
@@ -33,8 +33,9 @@ ns.RegisterPoints(1565, { -- Ardenweald
         loot={
             {182729, toy=true}, -- Hearty Dragon Plume
         },
-        note="Up in a tree",
+        note="Up in a tree; go to the slow-fall feather above the waterfall at 48.9 41.1",
     },
+    [48964106] = ns.path{achievement=14313, criteria=50037, quest=61067,atlas="poi-door-arrow-up",note="Slow-fall feather to reach the treasure"},
     [63903750] = {
         achievement=14313, criteria=50039, -- Cache of the Moon
         quest=61074,
@@ -44,11 +45,11 @@ ns.RegisterPoints(1565, { -- Ardenweald
         atlas="VignetteLootElite",scale=1.2,
         note="Locate 5 tools scattered around the Garden of Night (southeast of Root-Home), combine them into {item:180753:Twinklestar's Gardening Toolkit} and bring them to {npc:171360:Twinklestar} in Tirna Vaal.\nAfter this is done, talk to Twinklestar to receive the {spell:334353:Moonsight} buff",
     },
-    [38995696] = {quest=61074,achievement=14313, criteria=50039,label="Diary of the Night",atlas="vehicle-hammergold",minimap=true},
-    [39755440] = {quest=61074,achievement=14313, criteria=50039,label="Gardener's Hammer",atlas="vehicle-hammergold",minimap=true},
-    [40315262] = {quest=61074,achievement=14313, criteria=50039,label="Gardener's Basket",atlas="vehicle-hammergold",minimap=true},
-    [38495808] = {quest=61074,achievement=14313, criteria=50039,label="Gardener's Flute",atlas="vehicle-hammergold",minimap=true},
-    [38856010] = {quest=61074,achievement=14313, criteria=50039,label="Gardener's Wand",atlas="vehicle-hammergold",minimap=true},
+    [38995696] = {quest=61074,achievement=14313, criteria=50039,label="{item:180759:Diary of the Night}",inbag=180759,atlas="DruidEclipse-LunarMoon",minimap=true},
+    [39755440] = {quest=61074,achievement=14313, criteria=50039,label="{item:180754:Gardener's Hammer}",inbag=180754,atlas="DruidEclipse-LunarMoon",minimap=true},
+    [40315262] = {quest=61074,achievement=14313, criteria=50039,label="{item:180758:Gardener's Basket}",inbag=180758,atlas="DruidEclipse-LunarMoon",minimap=true},
+    [38495808] = {quest=61074,achievement=14313, criteria=50039,label="{item:180756:Gardener's Flute}",inbag=180756,atlas="DruidEclipse-LunarMoon",minimap=true},
+    [38856010] = {quest=61074,achievement=14313, criteria=50039,label="{item:180757:Gardener's Wand}",inbag=180757,atlas="DruidEclipse-LunarMoon",minimap=true},
     [37603710] = {
         achievement=14313, criteria=50041, -- Dreamsong Heart
         quest=61070,
@@ -66,7 +67,7 @@ ns.RegisterPoints(1565, { -- Ardenweald
         },
         note="Requires grabbing the {spell:333923:Faerie Lamp} buff at 46.4 70.9 to unlock the treasure",
     },
-    [46407090] = {quest=61175,achievement=14313,criteria=50043,label="Faerie Lamp",note="Take to 44.7 75.7",atlas="worldquest-icon-inscription"},
+    [46507010] = {quest=61175,achievement=14313,criteria=50043,label="Faerie Lamp",note="Take to 44.7 75.7",atlas="worldquest-icon-inscription",minimap=true,},
     [36106520] = {
         achievement=14313, criteria=50045, -- Darkreach Supplies
         quest=61068,
@@ -82,7 +83,8 @@ ns.RegisterPoints(1565, { -- Ardenweald
         loot={
             182731, -- Satchel of Culexwood
         },
-        note="Drop below. Starts {quest:62187:Satchel of Culexwood}",
+        onquest=62187,
+        note="Carefully climb down the branch. Starts {quest:62187:Satchel of Culexwood}",
     },
     [76602970] = {
         achievement=14313, criteria=50034, -- Swollen Anima Seed
@@ -128,9 +130,9 @@ ns.RegisterPoints(1565, { -- Ardenweald
         atlas="VignetteLootElite",scale=1.2,
         note="Loot {item:180654:Fae Ornament}, {item:180656:Enchanted Bough} and {item:180655:Raw Dream Fibers} scattered around Ardenweald to create the {item:180652:Fae Dreamcatcher}, which will dispell the barrier blocking the treasure</a>",
     },
-    [42414672] = {quest=61110,achievement=14313,criteria=50044,label="Enchanted Bough",atlas="honorsystem-icon-bonus",note="Combine to unlock the Cache of the Night at 36,66"},
-    [51556160] = {quest=61110,achievement=14313,criteria=50044,label="Fae Ornament",atlas="honorsystem-icon-bonus",note="Combine to unlock the Cache of the Night at 36,66"},
-    [36982983] = {quest=61110,achievement=14313,criteria=50044,label="Raw Dream Silk",atlas="honorsystem-icon-bonus",note="Combine to unlock the Cache of the Night at 36,66"},
+    [42414672] = {quest=61110,achievement=14313,criteria=50044,label="{item:180656:Enchanted Bough}",inbag=180656,atlas="covenantchoice-offering-sigil-nightfae",minimap=true,note="Combine to unlock the Cache of the Night at 36,66"},
+    [51556160] = {quest=61110,achievement=14313,criteria=50044,label="{item:180654:Fae Ornament}",inbag=180654,atlas="covenantchoice-offering-sigil-nightfae",minimap=true,note="Combine to unlock the Cache of the Night at 36,66"},
+    [36982983] = {quest=61110,achievement=14313,criteria=50044,label="{item:180655:Raw Dream Fibers}",inbag=180655,atlas="covenantchoice-offering-sigil-nightfae",minimap=true,note="Combine to unlock the Cache of the Night at 36,66"},
 })
 
 local vulpin = {
@@ -140,7 +142,7 @@ local vulpin = {
         {180645, pet=2905}, -- Dodger
     },
     note="Find {npc:171206:Playful Vulpin} and play with them 5 times to obtain the treasure. Use emotes related to what they're doing",
-    atlas="Warfront-NeutralHero-Silver", scale=1.3,
+    atlas="honorsystem-icon-bonus", scale=1,
     minimap=true,
 }
 ns.RegisterPoints(1565, {
@@ -172,6 +174,33 @@ ns.RegisterPoints(1565, { -- Ardenweald
     [31515302] = {quest=61192,label="Tale of the Tangle",note="Read, then follow the blue lamps to find {npc:171767:Shizgher}",atlas="poi-workorders"},
 })
 
+-- Fractured Fairy Tales
+
+ns.RegisterPoints(1565, {
+    [63602275] = {atlas="Campaign-QuestLog-LoreBook-Back",label="{npc:165867}",note="Bring books to him"},
+    [56054040] = {criteria=50012,onquest=62619,inbag=183877,}, -- Meandering story
+    [30004480] = {criteria=50013,onquest=62620,inbag=183878,}, -- Wandering Tale
+    [35602680] = {criteria=50013,onquest=62620,inbag=183878,}, -- Wandering Tale
+    [36404800] = {criteria=50013,onquest=62620,inbag=183878,}, -- Wandering Tale
+    [37904005] = {criteria=50013,onquest=62620,inbag=183878,}, -- Wandering Tale
+    [32603160] = {criteria=50014,onquest=62621,inbag=183879,}, -- Escapist Novel
+    [40004460] = {criteria=50014,onquest=62621,inbag=183879,}, -- Escapist Novel
+    [40602760] = {criteria=50014,onquest=62621,inbag=183879,}, -- Escapist Novel
+    [40954230] = {criteria=50014,onquest=62621,inbag=183879,}, -- Escapist Novel
+    [40104170] = {criteria=50015,onquest=62622,inbag=183880,}, -- Travel Journal
+    [49654015] = {criteria=50015,onquest=62622,inbag=183880,}, -- Travel Journal
+    [50202500] = {criteria=50015,onquest=62622,inbag=183880,}, -- Travel Journal
+    [50154185] = {criteria=50015,onquest=62622,inbag=183880,}, -- Travel Journal
+    [33605740] = {criteria=50016,onquest=62623,inbag=183881,}, -- Naughty Story
+    [39806560] = {criteria=50016,onquest=62623,inbag=183881,}, -- Naughty Story
+    [51005480] = {criteria=50016,onquest=62623,inbag=183881,}, -- Naughty Story
+}, {
+    achievement=14788,
+    atlas="Campaign-QuestLog-LoreBook",
+    minimap=true,
+    level=60,
+})
+
 -- Rares
 ns.RegisterPoints(1565, {
     [34606800] = { -- Deathbinder Hroth
@@ -179,6 +208,7 @@ ns.RegisterPoints(1565, {
         quest=59226,
         npc=164477,
         loot={180166}, -- Deathbinder's Staff
+        level=60, -- assumed
     },
     [47502845] = { -- Deifir the Untamed
         achievement=14309, criteria=48784,
@@ -187,6 +217,7 @@ ns.RegisterPoints(1565, {
         loot={
             {180631, pet=2920}, -- Gorm Needler
         },
+        level=60, -- assumed
         note="Runs in circles around the area. Ride and use {spell:319566} and {spell:319575} to slow and stun it",
     },
     [48407715] = { -- Dustbrawl
@@ -208,6 +239,7 @@ ns.RegisterPoints(1565, {
         achievement=14309, criteria=48798,
         quest=61184,
         npc=171688,
+        label="{npc:171688}", -- the criteria is bugged and says Soultwister Cero
         loot={
             180144, -- Faeflayer's Hatchet
         },
@@ -218,6 +250,7 @@ ns.RegisterPoints(1565, {
         achievement=14309, criteria=48795,
         quest=59006,
         npc=163370,
+        label="{npc:163370}", -- another one with a mislabeled criteria
         loot={
             {183196, pet=3035}, -- Lavender Nibbler
         },
@@ -229,6 +262,7 @@ ns.RegisterPoints(1565, {
         loot={
             {180725, mount=1362}, -- Spinemaw Gladechewer
         },
+        level=60, -- assumed
         note="Kill {npc:166736} until it spawns",
     },
     [32403025] = { -- Humon'gozz
@@ -259,7 +293,7 @@ ns.RegisterPoints(1565, {
         },
         note="Kill {npc:165050} to summon",
     },
-    [50092091] = { -- Mystic Rainbowhorn
+    [65502910] = { -- Mystic Rainbowhorn
         achievement=14309, criteria=48715,
         quest=59235,
         npc=164547,
@@ -267,7 +301,8 @@ ns.RegisterPoints(1565, {
             179586, -- Elderwood Piercer
             182179, -- Runestag Soul
         },
-        note="Blow the great horn",
+        atlas="colorblind-colorwheel",
+        note="Great Horn of the Runestag spawns around the zone. Blow it, and this will spawn here then start running around the zone very quickly",
     },
     [62155220] = { -- Night Mare
         achievement=14309, criteria=48793,
@@ -276,6 +311,7 @@ ns.RegisterPoints(1565, {
         loot={
             {180728, mount=1306}, -- Swift Gloomhoof
         },
+        level=60, -- assumed
         note="* Loot {item:181243} at 19.7 63.5 (may need a glider)\n"..
             "* Do Night Fae quests through {quest:57871}\n",
             "* Ask {npc:165704} to repair {item:181243}\n",
@@ -286,12 +322,12 @@ ns.RegisterPoints(1565, {
     [19706350] = {achievement=14309, criteria=48793, quest=60306, loot={181243},label="{item:181243}"},
     [51105740] = { -- Old Ardeite
         achievement=14309, criteria=48785,
-        quest=59208,62270,
+        quest=59208, -- 62270?
         npc=164391,
         loot={
             {180643, pet=2908}, -- Chirpy Valeshrieker
         },
-        note="Get {item:174042} from {npc:160747} and {npc:160748} in Shimmerbough, use it to reach the rare",
+        note="Get {spell:313053} from buckets in Shimmerbough, use it to reach the rare",
     },
     [65104430] = { -- Rootwrithe
         achievement=14309, criteria=48791,
@@ -354,6 +390,7 @@ ns.RegisterPoints(1565, {
             180154, -- Greataxe of Unrelenting Pursuit
             182176, -- Shadowstalker Soul (quest=62431)
         },
+        level=60, -- assumed
         note="A Night Fae player channeling the Tirna Scithe must:\n"..
             "* Pick up a {spell:338045}\n"..
             "* Use {spell:338045} to remove {spell:338038}",
