@@ -408,8 +408,8 @@ local riftstone = ns.nodeMaker{
 ns.RegisterPoints(1543, {
     -- First pair
     [19204780] = riftstone(),
-    [25201785] = riftstone(),
+    [25201785] = riftstone({route={19204780,25201785,r=0.75,g=0,b=0}}),
     -- Second pair
     [23453120] = riftstone{atlas="WarlockPortalAlliance"},
-    [34804360] = riftstone{atlas="WarlockPortalAlliance"},
+    [34804360] = riftstone{atlas="WarlockPortalAlliance",route={23453120,34804360,r=0,g=0,b=0.75}},
 })
