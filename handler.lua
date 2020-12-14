@@ -65,6 +65,7 @@ ns.merge = function(t1, t2)
     for k, v in pairs(t2) do
         t1[k] = v
     end
+    return t1
 end
 
 ns.nodeMaker = function(metatable)
@@ -207,6 +208,7 @@ local atlas_texture = function(atlas, scale)
         scale = scale or 1,
     }
 end
+ns.atlas_texture = atlas_texture
 local default_textures = {
     VignetteLoot = atlas_texture("VignetteLoot", 1.2),
     VignetteLootElite = atlas_texture("VignetteLootElite", 1.3),
@@ -264,6 +266,9 @@ local function work_out_label(point)
     return fallback or UNKNOWN
 end
 local function work_out_texture(point)
+    if point.texture then
+        return point.texture
+    end
     if point.atlas then
         if not icon_cache[point.atlas] then
             icon_cache[point.atlas] = atlas_texture(point.atlas, point.scale)
