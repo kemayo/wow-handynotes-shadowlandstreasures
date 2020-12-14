@@ -97,6 +97,7 @@ ns.RegisterPoints(1536, { -- Maldraxxus
             181777, -- Phaeton's Key
         },
         atlas="Garr_LevelUpgradeLocked", scale=1.3,
+        inbag=181777,
         minimap=true,
         level=60, -- or at least quest-gated? 57619 is the tracker for confronting Vyraz...
         note="Take the key to 31.7 70.0",
@@ -201,7 +202,23 @@ ns.RegisterPoints(1536, { -- Maldraxxus
             {181171, pet=2947}, -- Luminous Webspinner
         },
         note="Spawns in multiple places inside Sightless Hold",
-    }
+    },
+    -- the world map ones:
+    [36208145] = {
+        quest=60662,
+        label="Bonebound Chest",
+        loot={181723}, -- Meticulously pickled head (high sell value)
+        junk=true,
+        level=60,
+    },
+    [34755495] = {
+        quest=60556,
+        label="Sprouting Growth",
+        loot={178550}, -- Tenebrous Truffle
+        note="Grapple up, jump down",
+        junk=true,
+        level=60,
+    },
 })
 
 -- Rares
