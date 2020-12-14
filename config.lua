@@ -8,6 +8,7 @@ ns.defaults = {
         show_junk = false,
         show_npcs = true,
         show_treasure = true,
+        show_routes = true,
         upcoming = true,
         found = false,
         collectablefound = true,
@@ -149,6 +150,12 @@ ns.options = {
                     name = "Show treasure",
                     desc = "Show treasure that can be looted",
                     order = 30,
+                },
+                show_routes = {
+                    type = "toggle",
+                    name = "Show routes",
+                    desc = "Show relevant routes between points ",
+                    order = 31,
                 },
                 show_junk = {
                     type = "toggle",
@@ -344,7 +351,7 @@ ns.should_show_point = function(coord, point, currentZone, isMinimap)
     if point.faction and point.faction ~= player_faction then
         return false
     end
-    if (not ns.db.found) then
+    if not ns.db.found and (not point.route or not ns.db.show_routes) then
         if ns.db.collectablefound and allLootKnown(point.loot) then
             return false
         end

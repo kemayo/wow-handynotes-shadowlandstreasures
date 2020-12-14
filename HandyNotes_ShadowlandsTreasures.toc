@@ -12,6 +12,7 @@
 
 handler.lua
 config.lua
+routes.xml
 
 zones\Bastion.lua
 zones\Ardenweald.lua

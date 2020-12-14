@@ -677,6 +677,8 @@ function HL:OnInitialize()
     -- self:RegisterEvent("CRITERIA_UPDATE", "Refresh")
 
     ns.SetupMapOverlay()
+
+    WorldMapFrame:AddDataProvider(ns.RouteWorldMapDataProvider)
 end
 
 do
@@ -686,12 +688,13 @@ do
         self.elapsed = self.elapsed + elapsed
         if self.elapsed > 1.5 then
             self.elapsed = 0
-            HL:Refresh()
             self:Hide()
+            HL:Refresh()
         end
     end)
     function HL:Refresh()
         HL:SendMessage("HandyNotes_NotifyUpdate", myname:gsub("HandyNotes_", ""))
+        ns.RouteWorldMapDataProvider:RefreshAllData()
     end
     function HL:RefreshOnEvent(event)
         bucket:Show()
