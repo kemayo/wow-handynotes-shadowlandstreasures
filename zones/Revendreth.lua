@@ -9,7 +9,7 @@ ns.RegisterPoints(1525, { -- Revendreth
         loot={
             {182613, pet=3008}, -- Refilling Inkwell
         },
-        note="Grab a {item:182475:Forbidden Ink} from the library below",
+        note="Grab a {item:182475:Forbidden Ink} from the library below, and climb up onto the walls",
     },
     [38404430] = {
         achievement=14314, criteria=50077, -- Stylish Parasol
@@ -115,7 +115,7 @@ ns.RegisterPoints(1525, { -- Revendreth
     },
     [74975698] = {
         achievement=14314, criteria=50901, -- Gilded Plum Chest
-        quest=61990,
+        quest=59887,
         loot={
             179390, -- Tantalizingly Large Golden Plum
         },
@@ -235,7 +235,7 @@ ns.RegisterPoints(1525, {
         },
         note="Use {spell:321827} to summon",
     },
-    [65406030] = path{achievement=14310, criteria=48810,quest=59582,},
+    -- [65406030] = path{achievement=14310, criteria=48810,quest=59582,},
     [37104740] = { -- Executioner Aatron
         achievement=14310, criteria=48819,
         quest=59913,
@@ -328,6 +328,7 @@ ns.RegisterPoints(1525, {
         quest=59580,
         npc=165152,
         loot={
+            {180585, pet=2897}, -- Bottled Up Rage
             183736, -- Pride Resistant Handwraps
         },
         note="Finish the crypt event",
@@ -396,7 +397,7 @@ ns.RegisterPoints(1525, {
     },
     [66507080] = { -- Tollkeeper Varaboss
         achievement=14310, criteria=48812,
-        quest=59595,
+        quest=59595, -- also 60583, 
         npc=165253,
         loot={
             179363, -- 'Misplaced' Anima Tolls
