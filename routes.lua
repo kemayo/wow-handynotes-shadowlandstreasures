@@ -10,7 +10,11 @@ ns.RouteWorldMapDataProvider = RouteWorldMapDataProvider
 function RouteWorldMapDataProvider:RemoveAllData()
     if not self:GetMap() then return end
 
+    self:GetMap():RemoveAllPinsByTemplate("HandyNotesTreasuresRoutePinTemplate")
     self:GetMap():RemoveAllPinsByTemplate("HandyNotesTreasuresRoutePinConnectionTemplate")
+    if self.connectionPool then
+        self.connectionPool:ReleaseAll()
+    end
 end
 
 local pins = {}
@@ -19,8 +23,6 @@ function RouteWorldMapDataProvider:RefreshAllData(fromOnShow)
     self:RemoveAllData()
     if not self.connectionPool then
         self.connectionPool = CreateFramePool("FRAME", self:GetMap():GetCanvas(), "HandyNotesTreasuresRoutePinConnectionTemplate")
-    else
-        self.connectionPool:ReleaseAll()
     end
 
     if not ns.db.show_routes then return end
@@ -28,7 +30,6 @@ function RouteWorldMapDataProvider:RefreshAllData(fromOnShow)
     local uiMapID = self:GetMap():GetMapID()
     if not uiMapID then return end
     if not ns.points[uiMapID] then return end
-
 
     for coord, point in pairs(ns.points[uiMapID]) do
         if point.route and type(point.route) == "table" and ns.should_show_point(coord, point, uiMapID, false) then
