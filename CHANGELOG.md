@@ -1,5 +1,15 @@
 # Changelog
 
+## Changed in v13
+
+* Can now show paths on the map; use this for the carriage routes in Revendreth and to link the teleporters in the Maw
+* Some treasures don't count as "done" until you've used an item collected from them or completed a quest they start. These will now be hidden while you're carrying that item / are on that quest
+    * I probably haven't flagged all of these ones yet
+* Updates to Ardenweald's initial leveling portion
+* Small updates to Maldraxxus
+* Small updates to Revendreth
+* Maw now has some lore nodes
+
 ## Changed in v12
 
 * Add config to let achievement status override quest status. Enabling this will stop the daily rares from showing after you've killed them once.
