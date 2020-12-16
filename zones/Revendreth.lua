@@ -138,6 +138,8 @@ ns.RegisterPoints(1525, {
         loot={
             {180993, toy=true}, -- Bat Visage Bobber
         },
+        hide_before=57481,
+        note="Complete quests from {npc:157846:Rendle} through {quest:57481} to be able to see this; might need to log back in to make it appear",
     },
     -- Loyal Gorger
     [59305700] = {
