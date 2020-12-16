@@ -181,45 +181,50 @@ ns.RegisterPoints(1525, {
     -- Chalice
     [49305210] = {
         criteria=50168,
-        texture=ns.merge(ns.atlas_texture("vehicle-silvershardmines-minecart"), {r=1,g=1,b=0}),
-        route = {
+        texture=ns.merge(ns.atlas_texture("vehicle-silvershardmines-minecart"), {r=1,g=1,b=0,a=1,scale=1.2}),
+        route={
             54804840, 53904920, 52404950, 49305210, 48205110, 46904830,
             46904690, 47704800, 48905050, 50005070, 52204870, 54704800,
             loop=true,
             r=1, g=1, b=0,
-        }
+        },
     },
     -- Old Gate
     [56403720] = {
         criteria=50169,
-        texture=ns.merge(ns.atlas_texture("vehicle-silvershardmines-minecart"), {r=0,g=1,b=1}),
+        texture=ns.merge(ns.atlas_texture("vehicle-silvershardmines-minecart"), {r=0,g=1,b=1,a=1,scale=1.2}),
         route={
             56403720, 55903720, 55603900, 54804030, 53703850, 53803630,
             55203600, 55903720, 57403720, 57503610, 59703130, 60403230,
             60003300, 59103520, 59103850, 59503970, 58804080, 57603920,
             57403720,
             r=0, g=1, b=1,
-        }
+        },
     },
     -- Banewood
     [61606950] = {
         criteria=50170,
-        route = {
+        route={
             61606950, 59107290, 55507320, 54207140, 50207070, 49007180,
             44707380, 40306780, 41506440, 42106110, 43306010, 43605940,
             r=1, g=0, b=0,
         },
     },
-    [43605940] = {criteria=50170, route=true,},
+    [43605940] = {criteria=50170, route=61606950,},
     -- Pridefall
-    [71606850] = {
+    [68408060] = {
         criteria=50171,
-        texture=ns.merge(ns.atlas_texture("vehicle-silvershardmines-minecart"), {r=1,g=0,b=1}),
+        texture=ns.merge(ns.atlas_texture("vehicle-silvershardmines-minecart"), {r=1,g=0,b=1,a=1,scale=1.2}),
         route={
             68408060, 67307840, 66807630, 65507470, 65007090, 67706840,
             69807000, 71606850, 73006850,
             r=1, g=0, b=1,
         },
+    },
+    [73006850] = {
+        criteria=50171,
+        texture=ns.merge(ns.atlas_texture("vehicle-silvershardmines-minecart"), {r=1,g=0,b=1,a=1,scale=1.2}),
+        route=68408060,
     },
     -- Darkhaven
     [68306640] = {
@@ -242,7 +247,7 @@ ns.RegisterPoints(1525, {
             52203860, 52804150, 52204420, 50904650, 48604670, 47704770,
             45804600, 45704460, 44304190, 44404080,
             loop=true,
-        }
+        },
     },
 }, {
     achievement=14771,
