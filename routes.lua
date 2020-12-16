@@ -53,20 +53,42 @@ end
 
 function RouteWorldMapDataProvider:ConnectPins(pin1, pin2, point)
     local connection = self.connectionPool:Acquire()
+    connection.point = point
     connection:Connect(pin1, pin2)
     connection.Line:SetVertexColor(point.route.r or 1, point.route.g or 1, point.route.b or 1, point.route.a or 0.6)
     connection:Show()
+end
+
+function RouteWorldMapDataProvider:HighlightRoute(point, uiMapID, coord)
+    if not self.connectionPool then return end
+    for connection in self.connectionPool:EnumerateActive() do
+        if connection.point == point then
+            connection.Line:SetThickness(40)
+        end
+    end
+end
+
+function RouteWorldMapDataProvider:UnhighlightRoute(point, uiMapID, coord)
+    if not self.connectionPool then return end
+    for connection in self.connectionPool:EnumerateActive() do
+        if connection.point == point then
+            connection.Line:SetThickness(20)
+        end
+    end
 end
 
 HandyNotesTreasuresRoutePinMixin = CreateFromMixins(MapCanvasPinMixin)
 function HandyNotesTreasuresRoutePinMixin:OnLoad()
     -- This is below normal handynotes pins
     self:UseFrameLevelType("PIN_FRAME_LEVEL_EVENT_OVERLAY");
-end 
+end
 
 HandyNotesTreasuresRoutePinConnectionMixin = {}
 
 function HandyNotesTreasuresRoutePinConnectionMixin:Connect(pin1, pin2)
+    pin1.connectionOut = self
+    pin2.connectionIn = self
+
     self:SetParent(pin1)
     -- Anchor straight up from the origin
     self:SetPoint("BOTTOM", pin1, "CENTER")
