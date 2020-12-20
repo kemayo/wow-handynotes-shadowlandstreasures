@@ -233,11 +233,11 @@ ns.RegisterPoints(1694, { -- Spires of Ascension (Font of Fealty)
 
 -- Non-achievement treasures
 ns.RegisterPoints(1533, { -- Bastion
-    [57931852] = path{quest=61698},
+    [58701630] = path{quest=61698, note="Bounce on the flowers",},
     [61041511] = {
         quest=61698,
         label="Cloudwalker's Coffer",
-        note="Bounce on the clouds",
+        note="Bounce on the flowers",
     },
 })
 
