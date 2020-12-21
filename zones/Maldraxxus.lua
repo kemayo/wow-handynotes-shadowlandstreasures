@@ -211,14 +211,32 @@ ns.RegisterPoints(1536, { -- Maldraxxus
         junk=true,
         level=60,
     },
-    [34755495] = {
-        quest=60556,
-        label="Sprouting Growth",
-        loot={178550}, -- Tenebrous Truffle
-        note="Grapple up, jump down",
-        junk=true,
-        level=60,
-    },
+    -- [36208145] = {
+    --     quest=61119, -- 61116
+    --     label="Runebound Coffer",
+    --     loot={194307}, -- Maldraxxi Armor Scraps
+    --     junk=true,
+    --     level=60,
+    --     note="Three runes nearby on the ground",
+    -- },
+    -- various locations, same questid:
+    -- [40805470] = {
+    -- [34755495] = {
+    --     quest=60556,
+    --     label="Sprouting Growth",
+    --     loot={178550}, -- Tenebrous Truffle
+    --     note="Grapple up, jump down",
+    --     junk=true,
+    --     level=60,
+    -- },
+    -- [76054945] = {
+    --     quest=61090,
+    --     label="Sprouting Growth",
+    --     loot={178550}, -- Tenebrous Truffle
+    --     note="Grapple up, jump down",
+    --     junk=true,
+    --     level=60,
+    -- },
 })
 
 -- Rares
