@@ -204,7 +204,7 @@ ns.RegisterPoints(1533, {
     [48483491] = shard{quest=61279},
     [56722884] = shard{quest=61280},
     [56201731] = shard{quest=61281,note="Ledge above the Memorial Offering, need to jump down from above"},
-    [59881391] = shard{quest=61282},
+    [59881391] = shard{quest=61282,note="Work your way down from above"},
     [52440942] = shard{quest=61283},
     [46691804] = shard{quest=61284},
     [44942845] = shard{quest=61285},
