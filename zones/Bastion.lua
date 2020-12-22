@@ -231,6 +231,36 @@ ns.RegisterPoints(1694, { -- Spires of Ascension (Font of Fealty)
     [49804690] = shard{quest=61300},
 })
 
+-- What is that Melody?
+
+ns.RegisterPoints(1533, {
+    [42902730] = {criteria=49950}, -- Hymn of Wisdom
+    [42502560] = {criteria=49950}, -- Hymn of Wisdom
+    [41702420] = {criteria=49950}, -- Hymn of Wisdom
+    [42202370] = {criteria=49950}, -- Hymn of Wisdom
+    [43182810] = {criteria=49950}, -- Hymn of Wisdom
+    [66104080] = {criteria=49949}, -- Hymn of Humility
+    [69304110] = {criteria=49949}, -- Hymn of Humility
+    [68704340] = {criteria=49949}, -- Hymn of Humility
+    [64504640] = {criteria=49949}, -- Hymn of Humility
+    [63004290] = {criteria=49949}, -- Hymn of Humility
+    [39205610] = {criteria=49948}, -- Hymn of Courage
+    [32505770] = {criteria=49948}, -- Hymn of Courage
+    [35405560] = {criteria=49948}, -- Hymn of Courage
+    [34105850] = {criteria=49948}, -- Hymn of Courage
+    [31905460] = {criteria=49948}, -- Hymn of Courage
+    [40305880] = {criteria=49948}, -- Hymn of Courage
+    [39402380] = {criteria=49948}, -- Hymn of Courage ?
+    [63907350] = {criteria=49947}, -- Hymn of Purity
+    [63607370] = {criteria=49947}, -- Hymn of Purity
+    [61107610] = {criteria=49947}, -- Hymn of Purity
+    [57907910] = {criteria=49947}, -- Hymn of Purity
+}, {
+    achievement=14768,
+    atlas="poi-workorders",
+    minimap=true,
+})
+
 -- Non-achievement treasures
 ns.RegisterPoints(1533, { -- Bastion
     [58701630] = path{quest=61698, note="Bounce on the flowers",},
