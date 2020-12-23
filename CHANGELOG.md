@@ -1,5 +1,13 @@
 # Changelog
 
+## Changed in v14
+
+* Routes on the map will highlight when you mouse over the relevant point
+* The Maw now has a marker for the Waystone
+* Bastion achievement What is that Melody? now included
+* Various Bastion cleanups and some notes on Anima Shard locations
+* Revendreth: explain the Forgotten Angler's Rod, since you may have to re-phase for it
+
 ## Changed in v13
 
 * Can now show paths on the map; use this for the carriage routes in Revendreth and to link the teleporters in the Maw
