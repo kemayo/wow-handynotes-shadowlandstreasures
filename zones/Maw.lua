@@ -231,7 +231,7 @@ ns.RegisterPoints(1543, {
         quest=61346,
         npc=168693,
         loot={
-            183070, -- Mawsworn Orders
+            183070, -- Mawsworn Orders (quest: 63164)
         },
         level=60,
     },
@@ -290,7 +290,7 @@ ns.RegisterPoints(1543, {
     },
     [38652880] = { -- Odalrik
         achievement=14660, criteria=50408,
-        quest=62618,
+        quest=62618, -- 63413?
         npc=172207,
         loot={
             183061, -- Wailing Coin
@@ -384,6 +384,7 @@ ns.RegisterPoints(1543, {
     [27702020] = ns.path{ -- To: Box of Torments
         achievement=14761, criteria=49908,
         quest=63157,
+        onquest=63157,
     }
 })
 
@@ -391,11 +392,20 @@ ns.RegisterPoints(1822, { -- Tremaculum
     [73101660] = { -- Box of Torments
         achievement=14761, criteria=49908,
         quest=63157,
+        onquest=63157,
         loot={
             183060, -- Box of Torments
         },
         note="Under the Tremaculum, open {npc:173837}",
     }
+})
+
+ns.RegisterPoints(1543, {
+    [42384216] = {
+        label="Waystone to Oribos",
+        atlas="adventures-32x32", scale=1.2,
+        minimap=true,
+    },
 })
 
 local riftstone = ns.nodeMaker{
