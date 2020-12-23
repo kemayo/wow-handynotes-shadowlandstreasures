@@ -211,6 +211,15 @@ ns.RegisterPoints(1536, { -- Maldraxxus
         junk=true,
         level=60,
     },
+    -- [38036548] = {
+    --     quest=61647, -- 61648, 61649, 61650
+    --     label="Chosen Runecoffer",
+    --     loot={181647}, -- Stabilized Plague Strain
+    --     junk=true,
+    --     level=60,
+    --     covenant="Necrolord",
+    --     note="Channel anima to the Chosen. Three runes nearby on the ground",
+    -- },
     -- [36208145] = {
     --     quest=61119, -- 61116
     --     label="Runebound Coffer",
@@ -220,6 +229,7 @@ ns.RegisterPoints(1536, { -- Maldraxxus
     --     note="Three runes nearby on the ground",
     -- },
     -- various locations, same questid:
+    -- [39974393] = {
     -- [40805470] = {
     -- [34755495] = {
     --     quest=60556,
@@ -229,7 +239,16 @@ ns.RegisterPoints(1536, { -- Maldraxxus
     --     junk=true,
     --     level=60,
     -- },
+    -- [41623849] = {
+    --     quest=61080,
+    --     label="Sprouting Growth",
+    --     loot={178550}, -- Tenebrous Truffle
+    --     note="Grapple up, jump down",
+    --     junk=true,
+    --     level=60,
+    -- },
     -- [76054945] = {
+    -- [70965072] = {
     --     quest=61090,
     --     label="Sprouting Growth",
     --     loot={178550}, -- Tenebrous Truffle
