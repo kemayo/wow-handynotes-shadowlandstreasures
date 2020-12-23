@@ -87,12 +87,12 @@ ns.RegisterPoints(1533, { -- Bastion
         level=60,
         note="Purchase {item:180788:Memorial Wine} from {npc:171526:Kobri} and use it on the drink tray near the treasure to obtain the {item:180797:Memorial Offering Key} and unlock the treasure",
     },
-    [34006650] = {quest=61150, label="Kobri", atlas="food", scale=1.1, path=true, note="Buy {item:180788:Memorial Wine}, go to 56.5 17.2", level=60, upcoming=false,}, -- Kobri (Cliffs of Respite)
-    [43603225] = {quest=61150, label="Kobri", atlas="food", scale=1.1, path=true, note="Buy {item:180788:Memorial Wine}, go to 56.5 17.2", level=60, upcoming=false,}, -- Kobri (Sagehaven)
-    [47957400] = {quest=61150, label="Kobri", atlas="food", scale=1.1, path=true, note="Buy {item:180788:Memorial Wine}, go to 56.5 17.2", level=60, upcoming=false,}, -- Kobri (Aspirant's Rest)
-    [51804640] = {quest=61150, label="Kobri", atlas="food", scale=1.1, path=true, note="Buy {item:180788:Memorial Wine}, go to 56.5 17.2", level=60, upcoming=false,}, -- Kobri (Hero's Rest)
-    [52154710] = {quest=61150, label="Kobri", atlas="food", scale=1.1, path=true, note="Buy {item:180788:Memorial Wine}, go to 56.5 17.2", level=60, upcoming=false,}, -- Kobri (Hero's Rest)
-    [53508035] = {quest=61150, label="Kobri", atlas="food", scale=1.1, path=true, note="Buy {item:180788:Memorial Wine}, go to 56.5 17.2", level=60, upcoming=false,}, -- Kobri (Aspirant's Crucible)
+    [34006650] = {quest=61150, label="Kobri", inbag=180788, atlas="food", scale=1.1, path=true, note="Buy {item:180788:Memorial Wine}, go to 56.5 17.2", level=60, upcoming=false,}, -- Kobri (Cliffs of Respite)
+    [43603225] = {quest=61150, label="Kobri", inbag=180788, atlas="food", scale=1.1, path=true, note="Buy {item:180788:Memorial Wine}, go to 56.5 17.2", level=60, upcoming=false,}, -- Kobri (Sagehaven)
+    [47957400] = {quest=61150, label="Kobri", inbag=180788, atlas="food", scale=1.1, path=true, note="Buy {item:180788:Memorial Wine}, go to 56.5 17.2", level=60, upcoming=false,}, -- Kobri (Aspirant's Rest)
+    [51804640] = {quest=61150, label="Kobri", inbag=180788, atlas="food", scale=1.1, path=true, note="Buy {item:180788:Memorial Wine}, go to 56.5 17.2", level=60, upcoming=false,}, -- Kobri (Hero's Rest)
+    [52154710] = {quest=61150, label="Kobri", inbag=180788, atlas="food", scale=1.1, path=true, note="Buy {item:180788:Memorial Wine}, go to 56.5 17.2", level=60, upcoming=false,}, -- Kobri (Hero's Rest)
+    [53508035] = {quest=61150, label="Kobri", inbag=180788, atlas="food", scale=1.1, path=true, note="Buy {item:180788:Memorial Wine}, go to 56.5 17.2", level=60, upcoming=false,}, -- Kobri (Aspirant's Crucible)
     [35105800] = {
         achievement=14311, criteria=50058, -- Gift of Agthia
         quest=60893,
@@ -124,10 +124,10 @@ ns.RegisterPoints(1533, { -- Bastion
         achievement=14311, criteria=50061, -- Gift of Thenios
         quest=60894,
         loot={
-            181290, -- Harmonious Sigil of the Archon
+            181290, -- Harmonious Sigil of the Archon (Kyrian only)
         },
         level=60,
-        note="Obtain the {spell:333068:Proof of Wisdom} by using the teleporter near the chest and lighting the incenses in the correct order:\n* Incense of Patience\n* Incense of Knowledge\n* Incense of Insight\n* Anima Orb\n* Incense of Judgement",
+        note="Obtain the {spell:333068:Proof of Wisdom} by using the teleporter near the chest and lighting the incenses in the correct order:\n* Incense of Patience\n* Incense of Knowledge\n* Incense of Insight\n* Anima Orb\n* Incense of Judgement\nYou'll have to go through the path multiple times to do this",
     },
     [27602170] = {
         achievement=14311, criteria=50062, -- Gift of Devos
@@ -137,6 +137,11 @@ ns.RegisterPoints(1533, { -- Bastion
         },
         level=60,
         note="Obtain the {spell:333070:Proof of Loyalty} by taking the {spell:333912:Flame of Devotion} at 23.9 24.8 and bringing it to the nearby brazier",
+    },
+    [23902480] = {
+        achievement=14311, criteria=50062,
+        note="Taking the {spell:333912:Flame of Devotion} to the brazier at 27.6 21.7",
+        atlas="MantidTower",
     },
 })
 
@@ -160,7 +165,6 @@ ns.RegisterPoints(1533, {
         },
         level=60,
         atlas="VignetteLootElite", scale=1.2,
-        minimap=true,
         note="Forge the {item:180858:Crystal Mallet of Heralds} and then ring the vesper",
     },
     [59343144] = {
@@ -175,22 +179,22 @@ ns.RegisterPoints(1533, {
     },
     [39057704] = shard{quest=61225},
     [43637622] = shard{quest=61235},
-    [48427273] = shard{quest=61236},
+    [48427273] = shard{quest=61236,note="On the arch, glider to it from the cliffs nearby"},
     [52677555] = shard{quest=61237},
-    [53317362] = shard{quest=61238},
+    [53317362] = shard{quest=61238,note="Under the bridge"},
     [53498060] = shard{quest=61239},
     [55968666] = shard{quest=61241},
     [61048566] = shard{quest=61244},
     [58108008] = shard{quest=61245},
-    [56877498] = shard{quest=61247},
-    [65527192] = shard{quest=61249},
+    [56877498] = shard{quest=61247,note="On the wall, carefully jump down from the balcony above"},
+    [65527192] = shard{quest=61249,note="On the upper level"},
     [58156391] = shard{quest=61250},
     [54005970] = shard{quest=61251},
     [46706595] = shard{quest=61253},
     [50685614] = shard{quest=61254},
     [34846578] = shard{quest=61257},
-    [51674802] = shard{quest=61258},
-    [47084923] = shard{quest=61260},
+    [51674802] = shard{quest=61258,note="A ledge on the side of Hero's Rest"},
+    [47084923] = shard{quest=61260,note="Beneath the anima gateway"},
     [41394663] = shard{quest=61261},
     [40045912] = shard{quest=61263},
     [38525326] = shard{quest=61264},
@@ -208,7 +212,7 @@ ns.RegisterPoints(1533, {
     [52440942] = shard{quest=61283},
     [46691804] = shard{quest=61284},
     [44942845] = shard{quest=61285},
-    [42302402] = shard{quest=61286},
+    [42302402] = shard{quest=61286,note="Up on the ledge"},
     [37102468] = shard{quest=61287},
     [42813321] = shard{quest=61288},
     [42713940] = shard{quest=61289},
@@ -265,10 +269,14 @@ ns.RegisterPoints(1533, {
 ns.RegisterPoints(1533, { -- Bastion
     [58701630] = path{quest=61698, note="Bounce on the flowers",},
     [61041511] = {
-        quest=61698,
+        quest=61698, -- this one seems to be daily?
         label="Cloudwalker's Coffer",
         note="Bounce on the flowers",
     },
+    -- [24531794] = {
+    --     quest=60663,
+    --     label="Gilded Chest",
+    -- },
 })
 
 -- rares
@@ -341,6 +349,7 @@ ns.RegisterPoints(1533, {
             184297, -- Death Warden's Greatblade
         },
         level=60,
+        note="You need to talk to this while you're dead to make it visible. The {spell:342893} buff will be present if it's up",
     },
     [37004180] = { -- Demi the Relic Hoarder
         achievement=14307, criteria=50611,
