@@ -254,7 +254,7 @@ ns.RegisterPoints(1525, {
 }, {
     achievement=14771,
     atlas="vehicle-silvershardmines-minecartred",scale=1.2,
-    route=true,
+    always=true,
 })
 
 -- Rares

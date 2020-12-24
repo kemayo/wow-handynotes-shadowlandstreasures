@@ -351,7 +351,7 @@ ns.should_show_point = function(coord, point, currentZone, isMinimap)
     if point.faction and point.faction ~= player_faction then
         return false
     end
-    if not ns.db.found and (not point.route or not ns.db.show_routes) then
+    if not ns.db.found and (not point.always) then
         if ns.db.collectablefound and allLootKnown(point.loot) then
             return false
         end
