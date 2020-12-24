@@ -1,5 +1,9 @@
 # Changelog
 
+## Changed in v15
+
+* Many Ardenweald improvements, but mostly to the Night Mare questline
+
 ## Changed in v14
 
 * Routes on the map will highlight when you mouse over the relevant point
