@@ -52,7 +52,7 @@ ns.RegisterPoints(1536, { -- Maldraxxus
     },
     [22503050] = {
         achievement=14312, criteria=50069, -- Forgotten Mementos
-        quest=58710,
+        quest=58710, -- also 58709
         -- loot=Random Gear,
         level=60,
         note="Find the Vault Portcullis chain in the next room to open the gate",
@@ -141,9 +141,15 @@ ns.RegisterPoints(1536, { -- Maldraxxus
 ns.RegisterPoints(1649, { -- Etheric Vault
     [34565549] = {
         achievement=14312, criteria=50069, -- Forgotten Mementos
-        quest=58710,
+        quest=58710, -- also 58709
         -- loot=Random Gear,
-        note="Find the Vault Portcullis at the building where the treasure is located to open the gate blocking the treasure",
+        note="Find the Vault Portcullis Chain to open the gate",
+    },
+    [25605780] = {
+        achievement=14312, criteria=50069, -- Forgotten Mementos
+        quest=58710,
+        label="Vault Portcullis Chain",
+        atlas="ammunition",
     },
 })
 
@@ -234,7 +240,6 @@ ns.RegisterPoints(1536, { -- Maldraxxus
     -- [34755495] = {
     --     quest=60556,
     --     label="Sprouting Growth",
-    --     loot={178550}, -- Tenebrous Truffle
     --     note="Grapple up, jump down",
     --     junk=true,
     --     level=60,
@@ -242,7 +247,13 @@ ns.RegisterPoints(1536, { -- Maldraxxus
     -- [41623849] = {
     --     quest=61080,
     --     label="Sprouting Growth",
-    --     loot={178550}, -- Tenebrous Truffle
+    --     note="Grapple up, jump down",
+    --     junk=true,
+    --     level=60,
+    -- },
+    -- [40902569] = {
+    --     quest=61089,
+    --     label="Sprouting Growth",
     --     note="Grapple up, jump down",
     --     junk=true,
     --     level=60,
@@ -251,7 +262,6 @@ ns.RegisterPoints(1536, { -- Maldraxxus
     -- [70965072] = {
     --     quest=61090,
     --     label="Sprouting Growth",
-    --     loot={178550}, -- Tenebrous Truffle
     --     note="Grapple up, jump down",
     --     junk=true,
     --     level=60,
