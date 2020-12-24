@@ -38,11 +38,12 @@ ns.RegisterPoints(1565, { -- Ardenweald
     [48964106] = ns.path{achievement=14313, criteria=50037, quest=61067,atlas="poi-door-arrow-up",note="Slow-fall feather to reach the treasure"},
     [63903750] = {
         achievement=14313, criteria=50039, -- Cache of the Moon
-        quest=61074,
+        quest=61074, -- also 61126
         loot={
             {180731, mount=1397}, -- Wildseed Cradle
         },
         atlas="VignetteLootElite",scale=1.2,
+        minimap=true,
         note="Locate 5 tools scattered around the Garden of Night (southeast of Root-Home), combine them into {item:180753:Twinklestar's Gardening Toolkit} and bring them to {npc:171360:Twinklestar} in Tirna Vaal.\nAfter this is done, talk to Twinklestar to receive the {spell:334353:Moonsight} buff",
     },
     [38995696] = {quest=61074,achievement=14313, criteria=50039,label="{item:180759:Diary of the Night}",inbag=180759,atlas="DruidEclipse-LunarMoon",minimap=true},
@@ -75,8 +76,10 @@ ns.RegisterPoints(1565, { -- Ardenweald
             179593, -- Darkreach Mask
             179594, -- Witherscorn Guise
         },
-        note="Use the jumping mushroom nearby to reach the treasure",
+        note="Use the jumping mushroom on the cliff above at 37.7 61.5",
+        route={37706150, 36106520},
     },
+    [37706150] = path{achievement=14313, criteria=50045, quest=61068, route=36106520,},
     [48202030] = {
         achievement=14313, criteria=50032, -- Lost Satchel
         quest=62187,
@@ -111,13 +114,14 @@ ns.RegisterPoints(1565, { -- Ardenweald
         },
         note="Loot the {item:180784:Aromatic Flowers} at 36.4 59.5, then use the jumping mushroom near the treasure location to jump on to a tree. Use the flowers on the brazier within the tree to attract the treasure",
     },
-    [36405950] = {quest=61147,achievement=14313, criteria=50040,label="Aromatic Flowers",note="Take to the Dessicated Moth at 41.9 32.5",atlas="worldquest-icon-herbalism",scale=1,},
+    [36405950] = {quest=61147,achievement=14313, criteria=50040,label="{item:180784:Aromatic Flowers}",inbag=180784,note="Take to the Dessicated Moth at 41.9 32.5",atlas="worldquest-icon-herbalism",scale=1,},
     [36402500] = {
         achievement=14313, criteria=50042, -- Enchanted Dreamcatcher
         quest=62259,
         loot={
             183129, -- Anima-Laden Dreamcatcher
         },
+        onquest=62259,
         note="Carefully climb the roots in the area. Starts {quest:62259:Anima-Laden Dreamcatcher}",
     },
     [36006650] = {
@@ -128,7 +132,8 @@ ns.RegisterPoints(1565, { -- Ardenweald
             179549, -- Nightwillow Cudgel
         },
         atlas="VignetteLootElite",scale=1.2,
-        note="Loot {item:180654:Fae Ornament}, {item:180656:Enchanted Bough} and {item:180655:Raw Dream Fibers} scattered around Ardenweald to create the {item:180652:Fae Dreamcatcher}, which will dispell the barrier blocking the treasure</a>",
+        minimap=true,
+        note="Loot {item:180654:Fae Ornament}, {item:180656:Enchanted Bough} and {item:180655:Raw Dream Fibers} scattered around Ardenweald to create the {item:180652:Fae Dreamcatcher}, which will let you reach the treasure. You might need to relog if you can't see it once you're there",
     },
     [42414672] = {quest=61110,achievement=14313,criteria=50044,label="{item:180656:Enchanted Bough}",inbag=180656,atlas="covenantchoice-offering-sigil-nightfae",minimap=true,note="Combine to unlock the Cache of the Night at 36,66"},
     [51556160] = {quest=61110,achievement=14313,criteria=50044,label="{item:180654:Fae Ornament}",inbag=180654,atlas="covenantchoice-offering-sigil-nightfae",minimap=true,note="Combine to unlock the Cache of the Night at 36,66"},
@@ -165,13 +170,13 @@ ns.RegisterPoints(1565, {
 -- Non-achievement treasures
 ns.RegisterPoints(1565, { -- Ardenweald
     [26285897] = {
-        quest=61192, -- failed:61208, 61198: passed
+        quest=61192, -- failed:61208, passed: 61198
         loot={
             {180727, mount=1360}, -- Shimmermist Runner
         },
         note="Read the Tale of the Tangle, then follow blue lamps until you find {npc:171767:Shizgher}",
     },
-    [31515302] = {quest=61192,label="Tale of the Tangle",note="Read, then follow the blue lamps to find {npc:171767:Shizgher}",atlas="poi-workorders"},
+    [32515302] = {quest=61192,label="Tale of the Tangle",note="Read, then follow the blue lamps to find {npc:171767:Shizgher}",atlas="poi-workorders",minimap=true,},
 })
 
 -- Fractured Fairy Tales
@@ -181,7 +186,7 @@ ns.RegisterPoints(1565, {
     [56054040] = {criteria=50012,onquest=62619,inbag=183877,}, -- Meandering story
     [30004480] = {criteria=50013,onquest=62620,inbag=183878,}, -- Wandering Tale
     [35602680] = {criteria=50013,onquest=62620,inbag=183878,}, -- Wandering Tale
-    [36404800] = {criteria=50013,onquest=62620,inbag=183878,}, -- Wandering Tale
+    [36104870] = {criteria=50013,onquest=62620,inbag=183878,}, -- Wandering Tale (36404800 is more accurate, but overlaps Macabre)
     [37904005] = {criteria=50013,onquest=62620,inbag=183878,}, -- Wandering Tale
     [32603160] = {criteria=50014,onquest=62621,inbag=183879,}, -- Escapist Novel
     [40004460] = {criteria=50014,onquest=62621,inbag=183879,}, -- Escapist Novel
@@ -191,6 +196,8 @@ ns.RegisterPoints(1565, {
     [49654015] = {criteria=50015,onquest=62622,inbag=183880,}, -- Travel Journal
     [50202500] = {criteria=50015,onquest=62622,inbag=183880,}, -- Travel Journal
     [50154185] = {criteria=50015,onquest=62622,inbag=183880,}, -- Travel Journal
+    [56002100] = {criteria=50015,onquest=62622,inbag=183880,}, -- Travel Journal
+    [24755197] = {criteria=50016,onquest=62623,inbag=183881,}, -- Naughty Story
     [33605740] = {criteria=50016,onquest=62623,inbag=183881,}, -- Naughty Story
     [39806560] = {criteria=50016,onquest=62623,inbag=183881,}, -- Naughty Story
     [51005480] = {criteria=50016,onquest=62623,inbag=183881,}, -- Naughty Story
@@ -200,6 +207,22 @@ ns.RegisterPoints(1565, {
     minimap=true,
     level=60,
 })
+
+-- ns.RegisterPoints(1565, {
+--     [62503955] = {
+--         label="Wish Cricket",
+--         quest=60829,
+--     },
+--     [64052240] = {
+--         label="Faerie Stash",
+--         quest=60717,
+--     },
+    -- [61165667] = {
+    --     label="Lunarlight pod",
+    --     quest=60794, -- progress: 60820, 60821, 60822, 60823, 60824
+    --     note="Stand on the 5 nearby buds first",
+    -- },
+-- })
 
 -- Rares
 ns.RegisterPoints(1565, {
@@ -304,22 +327,6 @@ ns.RegisterPoints(1565, {
         atlas="colorblind-colorwheel",
         note="Great Horn of the Runestag spawns around the zone. Blow it, and this will spawn here then start running around the zone very quickly",
     },
-    [62155220] = { -- Night Mare
-        achievement=14309, criteria=48793,
-        quest=60306,
-        npc=168135,
-        loot={
-            {180728, mount=1306}, -- Swift Gloomhoof
-        },
-        level=60, -- assumed
-        note="* Loot {item:181243} at 19.7 63.5 (may need a glider)\n"..
-            "* Do Night Fae quests through {quest:57871}\n",
-            "* Ask {npc:165704} to repair {item:181243}\n",
-            "* Get {item:178675} from {npc:160262} (talk to the guards if you're not Night Fae)\n",
-            "* Use {item:178675} here, and defeat the rare",
-    },
-    -- TODO: questid for getting the web?
-    [19706350] = {achievement=14309, criteria=48793, quest=60306, loot={181243},label="{item:181243}"},
     [51105740] = { -- Old Ardeite
         achievement=14309, criteria=48785,
         quest=59208, -- 62270?
@@ -411,27 +418,33 @@ ns.RegisterPoints(1565, {
             48709, -- Azshara
             48706, -- Gul'dan
             48704, -- Jaina
-            48707, -- Kil'jaeden
+            48707, -- Kil'jaeden (quest: 61203)
             48710, -- N'Zoth
             48705, -- Xavius
         },
-        quest=61633, -- TODO: more questids...
+        quest=61633, -- this is the overall questid for the event, but each rare has its own quest as well
         loot={
+            179534, -- Mikai's Deathscythe (Argus)
+            179518, -- Glimmerlight Staff (Azshara)
             182454, -- Murmurs in the Dark (Guldan)
+            182451, -- Glimmerdust's Grand Design (Kil'Jaeden)
+            182452, -- Everchill Brambles (Jaina)
+            182453, -- Twilight Bloom (N'Zoth)
+            182455, -- Dreamers Mending (Xavius)
             -- the vendor sells:
-            181304, -- Winterwoven Branches
-            180416, -- Mistcallers Aria
-            180417, -- Mistcallers Ballad
-            180418, -- Mistcallers March
-            180419, -- Mistcallers Dirge
-            175069, -- Theater Ticket
-            175095, -- Book of Tickets
-            182175, -- Moose Soul
+            181304, -- Winterwoven Branches (night fae only)
+            182175, -- Moose Soul (night fae only)
             {180748, mount=1332}, -- Silky Shimmermoth
         },
         atlas="VignetteLootElite",scale=1.2,
         note="A Night Fae player must talk to {npc:171743} to start a play; there are 7 possible encounters, one per day. After you can buy items from {npc:163714} depending on how many rares you've cleared.",
-    }
+    },
+    [43204710] = {
+        label="{npc:163714}",
+        note="Buy items unlocked by the Ardenweald's a Stage rares",
+        atlas="banker",
+        minimap=true,
+    },
 })
 
 local macabre = { -- Macabre
@@ -447,4 +460,53 @@ ns.RegisterPoints(1565, {
     [36504790] = macabre,
     [32704477] = macabre,
     [57932936] = macabre,
+})
+
+ns.RegisterPoints(1565, {
+    [62155220] = { -- Night Mare
+        npc=168135,
+        loot={
+            {180728, mount=1306}, -- Swift Gloomhoof
+        },
+        -- requires_item=178675,
+        note="* Loot {item:181243} at 19.7 63.5 (may need a glider)\n"..
+            "* Do Night Fae quests through {quest:57871}\n",
+            "* Ask {npc:165704} to repair {item:181243}\n",
+            "* Get {item:178675} from {npc:160262} (talk to the guards if you're not Night Fae)\n",
+            "* Use {item:178675} here, and defeat the rare",
+    },
+    [18056200] = ns.path{
+        atlas="poi-door-arrow-up",
+        inbag=181243,
+        note="Jump to the root; a glider might help, but isn't required"
+    },
+    [19706350] = {
+        label="{item:181243:Broken Soulweb}",
+        loot={181243},
+        inbag=181243,
+        minimap=true,
+        note="Take it to {npc:165704} at Glitterfall Basin",
+    },
+    [50403310] = {
+        label="{npc:165704:Elder Gwenna}",
+        loot={181242},
+        inbag=181242,
+        requires_item=181243,
+        atlas="repair",
+        minimap=true,
+        note="DISMOUNT FIRST! Ask her to repair your soulweb, then take it to Ysera at Heart of the Forest. If she's not here, do the nearby quests",
+    },
+    [47805370] = {
+        label="{npc:160262:Ysera}",
+        requires_item=181242,
+        loot={178675}, -- Dream Catcher
+        inbag=178675,
+        atlas="worldquest-icon-enchanting",
+        minimap=true,
+        note="DISMOUNT FIRST! Ask the guards to call her out if you're not allowed in, then go to Hibernal Hollow",
+    },
+}, {
+    achievement=14309, criteria=48793,
+    quest=60306,
+    level=60, -- assumed
 })
