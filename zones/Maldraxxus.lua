@@ -135,6 +135,8 @@ ns.RegisterPoints(1536, { -- Maldraxxus
             {181164, pet=2944}, -- Oonar's Arm
         },
         level=60,
+        atlas="animadiversion-icon", scale=1.2,
+        minimap=true,
         note="Requires stacking several strength buffs and the world quest {quest:57205:A Few Bumps Along the Way}. Check wowhead, it's a lot",
     },
 })
@@ -265,6 +267,10 @@ ns.RegisterPoints(1536, { -- Maldraxxus
     --     note="Grapple up, jump down",
     --     junk=true,
     --     level=60,
+    -- },
+    -- [54261491] = {
+    --     quest=61111,
+    --     label="Bloated Lootfly",
     -- },
 })
 
