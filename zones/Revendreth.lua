@@ -161,19 +161,25 @@ ns.RegisterPoints(1525, {
         note="Kill {npc:160821}, do 7 days of dailies for {npc:173499}, get a mount",
     },
     -- Blanchy
-    [53104290] = {
+    [63134311] = {
         quest=62050, -- progress:62038, 62042, 62047, 62049, 62048; daily-done is 62107
         loot={
             {182614, mount=1414}, -- Blanchy's Reins
         },
         atlas="stablemaster",scale=1.2,
-        note="Nurse {npc:173468:Dead Blanchy} over the course of several days. You need items from all over the world:\n"..
-            "Day 1: 8x {item:182581} from Westfall\n"..
-            "Day 2: {item:182585} from {npc:173570} in Darkhaven\n"..
-            "Day 3: 4x {item:182595} from the roads around Darkhaven\n"..
-            "Day 4: Fill {item:182620} near {npc:173570} with water from Bastion or Ardenweald\n"..
-            "Day 5: {item:182597} from {npc:171808} near the Night Market\n"..
-            "Day 6: 3x {item:179271} from {npc:167815} by the Hole in the Wall\n",
+        minimap=true,
+        note=function()
+            local function q(quest, label)
+                return (C_QuestLog.IsQuestFlaggedCompleted(quest) and GREEN_FONT_COLOR or RED_FONT_COLOR):WrapTextInColorCode(label)
+            end
+            return "Nurse {npc:173468:Dead Blanchy} over the course of several days. You need items from all over the world:\n"..
+            q(62038, "Day 1") ..": 8x {item:182581} from Westfall\n"..
+            q(62042, "Day 2") ..": {item:182585} from {npc:173570} in Darkhaven\n"..
+            q(62047, "Day 3") ..": 4x {item:182595} from the roads around Darkhaven\n"..
+            q(62049, "Day 4") ..": Fill {item:182620} near {npc:173570} with water from Bastion or Ardenweald\n"..
+            q(62048, "Day 5") ..": {item:182597} from {npc:171808} near the Night Market\n"..
+            q(62050, "Day 6") ..": 3x {item:179271} from {npc:167815} by the Hole in the Wall\n"
+        end,
     },
     --
     -- [45507810] = {
