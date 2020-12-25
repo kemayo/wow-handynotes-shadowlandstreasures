@@ -71,7 +71,7 @@ ns.RegisterPoints(1536, { -- Maldraxxus
         quest=60311,
         -- loot=Random Gear,
         level=60,
-        note="On top of a giant mushroom; climb the smaller one first",
+        note="On top of a giant mushroom; climb the small hill to the north, jump to the smaller mushroom, then be surprised by what slopes you can run up",
     },
     [72805360] = {
         achievement=14312, criteria=50072, -- Glutharn's Stash
@@ -253,6 +253,7 @@ ns.RegisterPoints(1536, { -- Maldraxxus
     --     junk=true,
     --     level=60,
     -- },
+    -- [41593842] = {
     -- [40902569] = {
     --     quest=61089,
     --     label="Sprouting Growth",
