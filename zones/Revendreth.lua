@@ -175,6 +175,13 @@ ns.RegisterPoints(1525, {
             "Day 5: {item:182597} from {npc:171808} near the Night Market\n"..
             "Day 6: 3x {item:179271} from {npc:167815} by the Hole in the Wall\n",
     },
+    --
+    -- [45507810] = {
+    --     label="Stoneborn Satchel",
+    --     quest=60896, -- 60980
+    --     note="Jump down",
+    --     junk=true,
+    -- },
 })
 
 -- Carriages
@@ -353,6 +360,7 @@ ns.RegisterPoints(1525, {
         loot={
             180939, -- Mantle of the Forgemaster's Dark Blades
         },
+        -- covenant=Enum.CovenantType.Venthyr,
         note="A Venthyr player channeling Dominance Keep must click the hammer",
     },
     [20485300] = { -- Grand Arcanist Dimitri
@@ -372,12 +380,14 @@ ns.RegisterPoints(1525, {
             183720, -- Dredbatskin Jerkin
             {180461, mount=1310}, -- Horrid Brood Dredwing
         },
+        -- covenant=Enum.CovenantType.Venthyr,
         note="A Venthyr player channeling Wanecrypt Hill must fire the Dredterror Ballista; fetch the bolt from 42.7 73.4",
     },
     [42757340] = {
         quest=59612,
         loot={176397}, -- Dredhollow Bolt
-        note="Be Venthyr, take to {npc:165327} at 46.3, 77.7",
+        covenant=Enum.CovenantType.Venthyr,
+        note="Take to {npc:165327} at 46.3, 77.7",
     },
     [52005180] = { -- Hopecrusher
         achievement=14310, criteria=48817,

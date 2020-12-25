@@ -398,6 +398,7 @@ ns.RegisterPoints(1565, {
             182176, -- Shadowstalker Soul (quest=62431)
         },
         level=60, -- assumed
+        -- covenant=Enum.CovenantType.NightFae,
         note="A Night Fae player channeling the Tirna Scithe must:\n"..
             "* Pick up a {spell:338045}\n"..
             "* Use {spell:338045} to remove {spell:338038}",
@@ -432,11 +433,12 @@ ns.RegisterPoints(1565, {
             182453, -- Twilight Bloom (N'Zoth)
             182455, -- Dreamers Mending (Xavius)
             -- the vendor sells:
-            181304, -- Winterwoven Branches (night fae only)
-            182175, -- Moose Soul (night fae only)
+            {181304, covenant=Enum.CovenantType.NightFae}, -- Winterwoven Branches (night fae only)
+            {182175, covenant=Enum.CovenantType.NightFae}, -- Moose Soul (night fae only)
             {180748, mount=1332}, -- Silky Shimmermoth
         },
         atlas="VignetteLootElite",scale=1.2,
+        -- covenant=Enum.CovenantType.NightFae,
         note="A Night Fae player must talk to {npc:171743} to start a play; there are 7 possible encounters, one per day. After you can buy items from {npc:163714} depending on how many rares you've cleared.",
     },
     [43204710] = {
