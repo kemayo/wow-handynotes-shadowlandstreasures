@@ -222,16 +222,21 @@ ns.RegisterPoints(1536, { -- Maldraxxus
     -- [38036548] = {
     --     quest=61647, -- 61648, 61649, 61650
     --     label="Chosen Runecoffer",
-    --     loot={181647}, -- Stabilized Plague Strain
     --     junk=true,
     --     level=60,
     --     covenant="Necrolord",
     --     note="Channel anima to the Chosen. Three runes nearby on the ground",
     -- },
+    -- [28723397] = {
+    --     quest=61115, -- progress runes: 61120, 61121, 61122
+    --     label="Runebound Coffer",
+    --     junk=true,
+    --     level=60,
+    --     note="Three runes nearby on construct tables",
+    -- },
     -- [36208145] = {
     --     quest=61119, -- 61116
     --     label="Runebound Coffer",
-    --     loot={194307}, -- Maldraxxi Armor Scraps
     --     junk=true,
     --     level=60,
     --     note="Three runes nearby on the ground",
@@ -445,7 +450,7 @@ ns.RegisterPoints(1536, {
         npc=162586,
         loot={
             182190, -- Tauralus Hide Collar
-            {182075, mount=1366}, -- Bonehoof Tauralus
+            {182075, mount=1366, covenant=Enum.CovenantType.Necrolord}, -- Bonehoof Tauralus
         },
         note="Mount requires Necrolord",
     },
@@ -487,7 +492,7 @@ ns.RegisterPoints(1536, {
         npc=157125,
         loot={
             184285, -- Boneclutched Shackles
-            181804, -- Trophy of the Reborn Bonelord (Necrolord only?)
+            {181804, covenant=Enum.CovenantType.Necrolord}, -- Trophy of the Reborn Bonelord (Necrolord only?)
         },
         level=60,
         note="Do {quest:57245} at 26.3 42.8, then use the {item:175827} to summon",
@@ -502,6 +507,7 @@ ns.RegisterPoints(1536, {
             184298, -- Amalgamated Forsworn's Journal
         },
         level=60,
+        -- covenant=Enum.CovenantType.Necrolord,
         note="A Necrolord player channeling House of Constructs must drag {npc:162815} to the rare's right foot",
     },
 })
