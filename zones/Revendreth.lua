@@ -270,6 +270,23 @@ ns.RegisterPoints(1525, {
     always=true,
 })
 
+-- Bat!
+
+ns.RegisterPoints(1525, {
+    [21685023] = {},
+    [25103760] = {},
+    [31905920] = {},
+    [56306230] = {},
+    [60406120] = {},
+    [64106210] = {},
+}, {
+    achievement=14769,
+    label="Dredbat",
+    texture=ns.merge(ns.atlas_texture("ancientmana"), {r=1, g=0, b=0}),
+    level=60,
+    note="It's inconsistent whether you'll get credit for animating any particular bat",
+})
+
 -- Rares
 
 ns.RegisterPoints(1525, {
