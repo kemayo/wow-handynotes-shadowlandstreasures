@@ -403,6 +403,9 @@ ns.should_show_point = function(coord, point, currentZone, isMinimap)
     if point.requires_item and GetItemCount(point.requires_item, true) == 0 then
         return false
     end
+    if point.covenant and point.covenant ~= C_Covenants.GetActiveCovenantID() then
+        return false
+    end
     if not ns.db.upcoming or point.upcoming == false then
         if point.level and point.level > UnitLevel("player") then
             return false

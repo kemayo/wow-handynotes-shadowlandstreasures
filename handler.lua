@@ -460,6 +460,13 @@ local function handle_tooltip(tooltip, point)
                 end
             end
         end
+        if point.covenant then
+            local data = C_Covenants.GetCovenantData(point.covenant)
+            if data then
+                local active = point.covenant == C_Covenants.GetActiveCovenantID()
+                tooltip:AddLine(ITEM_REQ_SKILL:format(data.name), active and 0 or 1, active and 1 or 0, 0)
+            end
+        end
         if point.level and point.level > UnitLevel("player") then
             tooltip:AddLine(ITEM_MIN_LEVEL:format(point.level), 1, 0, 0)
         end
