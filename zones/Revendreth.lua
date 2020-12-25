@@ -314,6 +314,7 @@ ns.RegisterPoints(1525, {
         npc=165206,
         loot={
             179927, -- Glowing Endmire Stinger
+            {183759, covenant=Enum.CovenantType.Necrolord}, -- Unusually Large Cranium (Necro only?)
         },
         note="Use {spell:321827} to summon",
     },
@@ -402,6 +403,7 @@ ns.RegisterPoints(1525, {
         npc=160640,
         loot={
             183735, -- Rogue Sinstealer's Mantle
+            {183760, covenant=Enum.CovenantType.Necrolord}, -- Venthyr Spectacles (Necro only?)
         },
         note="Get a {item:177223} from {npc:160375}",
     },

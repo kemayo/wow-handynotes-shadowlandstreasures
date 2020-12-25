@@ -169,6 +169,52 @@ ns.RegisterPoints(1536, {
     [75104390] = stolen_jar,
 })
 
+-- Wardrobe Makeover
+
+local makeover = {achievement=14748, atlas="buildanabomination-32x32", minimap=true, covenant=Enum.CovenantType.Necrolord}
+ns.RegisterPoints(1536, { -- Maldraxxus
+    [47104900] = {criteria=50546, quest=62758, inbag=184036, note="Buy from {npc:164588}"}, -- Dundae's Hat
+    [54203060] = {criteria=50546, quest=62758, inbag=184036, note="Buy from {npc:169698}"}, -- Dundae's Hat
+    [40204120] = {criteria={50551,50556,50558}, quest={62817,62824,62825}, inbag=184203, note="Buy three from {npc:168429}"}, -- Skull Fungus and Shoulder Sprouts and Back Mushrooms
+    [53204120] = {criteria=49870, quest=61562, inbag=181798, note="Buy from {npc:169964}"}, -- Trustworthy Doll
+    [60004470] = {criteria=49920, quest=62571, inbag=183831, note="Probably need to glide down from the necropolis"}, -- Safe Fall Pack
+    -- No known location, probably Chordy:
+    -- [] = {criteria=50541, quest=62762, inbag=184039,}, -- Chef Hat
+    -- [] = {criteria=50550, quest=62764, inbag=184040,}, -- Egg Hat
+    -- [] = {criteria=49865, quest=62471, inbag=183755,}, -- Flower Crown
+    -- [] = {criteria=49866, quest=62472, inbag=183756,}, -- Halo of Purity
+    -- [] = {criteria=49926, quest=62583, inbag=184225,}, -- Hitchhiker
+    -- [] = {criteria=50554, quest=62759, inbag=184037,}, -- Lovely Candle Display
+    -- [] = {criteria=49918, quest=62573, inbag=183829,}, -- Sticky Cat
+    -- [] = {criteria=50560, quest=62760, inbag=184038,}, -- Trained Corpselice
+    -- [] = {criteria=49872, quest=62469, inbag=183752,}, -- Engineering Pack
+    -- [] = {criteria=49921, quest=62576, inbag=nil,}, -- Plague Pack (just superior parts)
+    -- [] = {criteria=49875, quest=62468, inbag=nil,}, -- Vesitgial Wings (just cooking mats)
+    -- [] = {criteria=49925, quest=62580, inbag=nil,}, -- Barrel O' Fish
+    -- [] = {criteria=50559, quest=62823, inbag=nil,}, -- Underpowered Gravity Pack
+    -- [] = {criteria=49923, quest=62574, inbag=nil,}, -- Butterflies
+    -- [] = {criteria=49917, quest=62582, inbag=nil,}, -- Spare Weapon
+    -- [] = {criteria=49876, quest=62470, inbag=nil,}, -- Operational Instructions
+    -- Known but not work waypointing:
+    -- [] = {criteria=49867, quest=61712, inbag=nil,}, -- Holiday Hat (vendor crafting mats)
+    -- [44103990] = {criteria=49922, quest=62575, inbag=183827,}, -- Armor Plating (Blackhound Cache)
+    -- [] = {criteria=49874, quest=62481, inbag=183789, note="Search with {npc:158259} anywhere"}, -- Six-League Pack
+    -- [] = {criteria=50549, quest=62826, inbag=184204, note="Search with {npc:158259} anywhere"}, -- Pirate Hat
+    -- [] = {criteria=50553, quest=62819, inbag=184205, note="Search with {npc:158259} anywhere"}, -- Unworthy Crown
+    -- [55006860] = {criteria=49924, quest=62572, inbag=183830, note="Reward from {quest:60195}"}, -- Faction Flag
+    -- [] = {criteria=50558, quest=62824, inbag=184224,}, -- Back Mushrooms (on Deadly Dapperling)
+    -- [] = {criteria=49873, quest=61561, inbag=181797,}, -- Outlaw Flag (rare loot)
+    -- [] = {criteria=49919, quest=62570, inbag=183833,}, -- Collector Kash's Pack (rare loot)
+}, makeover)
+ns.RegisterPoints(1533, { -- Bastion
+    [33403640] = {criteria=49871, quest=62479, inbag=183786, note="Buy from {npc:158625}"}, -- Happiness Bird
+}, makeover)
+ns.RegisterPoints(1525, { -- Revendreth
+    [51007880] = {criteria=49864, quest=61560, inbag=181799, note="Buy {item:181799} from {npc:171808"}, -- Dapper Top Hat
+    [42505030] = {criteria=49916, quest=62577, inbag=183826, note="{item:183826} is found in Secret Treasures"}, -- Magician's Hat
+    -- [] = {criteria=49868, quest=62476, inbag=183760,}, -- Red Eye Lens (on Innervus)
+    -- [] = {criteria=49869, quest=62474, inbag=183759,}, -- Skull Protector (on Endlurker)
+}, makeover)
 
 -- non-achievement treasures
 ns.RegisterPoints(1536, { -- Maldraxxus
@@ -177,8 +223,9 @@ ns.RegisterPoints(1536, { -- Maldraxxus
         label="Blackhound Cache",
         loot={
             {184318, toy=true}, -- Battlecry of Krexus
+            183827, -- Blacksteel Backplate
         },
-        note="Requires Necrolord",
+        covenant=Enum.CovenantType.Necrolord,
     },
     -- [36807860] = {
     --     quest=nil,
@@ -303,6 +350,8 @@ ns.RegisterPoints(1536, {
             184182, -- Strengthened Abomination Hook
             184188, -- Collector's Corpse Gambrel
             184189, -- Stained Fleshgorer
+            {183833, covenant=Enum.CovenantType.Necrolord}, -- Kash's Bag of Junk (Necro only?)
+            {181797, covenant=Enum.CovenantType.Necrolord}, -- Strange Cloth (Necro only?)
         },
         level=60,
     },
@@ -313,6 +362,8 @@ ns.RegisterPoints(1536, {
         loot={
             184176, -- Moroc's Boneslicing Warglaive
             184177, -- Grotesque Goring Pick
+            {183833, covenant=Enum.CovenantType.Necrolord}, -- Kash's Bag of Junk (Necro only?)
+            {181797, covenant=Enum.CovenantType.Necrolord}, -- Strange Cloth (Necro only?)
         },
         level=60,
     },
@@ -323,6 +374,7 @@ ns.RegisterPoints(1536, {
         loot={
             {181263, pet=2953}, -- Shy Melvin
             184280, -- Dapper Threads
+            {184224, covenant=Enum.CovenantType.Necrolord}, -- Dapperling Seeds (Necro only?)
         },
     },
     [45052840] = { -- Devour'us
@@ -419,6 +471,8 @@ ns.RegisterPoints(1536, {
         loot={
             {181267, pet=2957}, -- Writhing Spine
             184287, -- Scum-Caked Epaulettes
+            {183833, covenant=Enum.CovenantType.Necrolord}, -- Kash's Bag of Junk (Necro only?)
+            {181797, covenant=Enum.CovenantType.Necrolord}, -- Strange Cloth (Necro only?)
         },
         level=60,
     },
