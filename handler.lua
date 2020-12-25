@@ -116,6 +116,7 @@ end
 local completeColor = CreateColor(0, 1, 0, 1)
 local incompleteColor = CreateColor(1, 0, 0, 1)
 local function render_string(s)
+    if type(s) == "function" then s = s() end
     return s:gsub("{(%l+):(%d+):?([^}]*)}", function(variant, id, fallback)
         id = tonumber(id)
         if variant == "item" then
@@ -152,6 +153,7 @@ local function render_string(s)
 end
 local function cache_string(s)
     if not s then return end
+    if type(s) == "function" then s = s() end
     for variant, id, fallback in s:gmatch("{(%l+):(%d+):?([^}]*)}") do
         id = tonumber(id)
         if variant == "item" then
