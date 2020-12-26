@@ -86,6 +86,11 @@ ns.lootitem = function(item)
     return type(item) == "table" and item[1] or item
 end
 
+local playerClassLocal, playerClass = UnitClass("player")
+ns.playerClass = playerClass
+ns.playerClassLocal = playerClassLocal
+ns.playerClassColor = RAID_CLASS_COLORS[playerClass]
+
 ---------------------------------------------------------
 -- All the utility code
 
@@ -454,13 +459,16 @@ local function handle_tooltip(tooltip, point)
                 local _, link, _, _, _, _, _, _, _, icon = GetItemInfo(ns.lootitem(item))
                 if link then
                     if type(item) == "table" then
-                        -- todo: class? faction?
+                        -- todo: faction?
                         if item.covenant then
                             local data = C_Covenants.GetCovenantData(item.covenant)
                             -- local active = item.covenant == C_Covenants.GetActiveCovenantID()
                             if data then
                                 link = TEXT_MODE_A_STRING_VALUE_TYPE:format(link, COVENANT_COLORS[item.covenant]:WrapTextInColorCode(data.name))
                             end
+                        end
+                        if item.class then
+                            link = TEXT_MODE_A_STRING_VALUE_TYPE:format(link, RAID_CLASS_COLORS[item.class]:WrapTextInColorCode(LOCALIZED_CLASS_NAMES_FEMALE[item.class]))
                         end
                     end
                     tooltip:AddDoubleLine(ENCOUNTER_JOURNAL_ITEM, quick_texture_markup(icon) .. link)
