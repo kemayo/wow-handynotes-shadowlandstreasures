@@ -56,7 +56,9 @@ function RouteWorldMapDataProvider:ConnectPins(pin1, pin2, point)
     connection.point = point
     connection:Connect(pin1, pin2)
     connection.Line:SetVertexColor(point.route.r or 1, point.route.g or 1, point.route.b or 1, point.route.a or 0.6)
-    connection:Show()
+    if not point.route.highlightOnly then
+        connection:Show()
+    end
 end
 
 function RouteWorldMapDataProvider:HighlightRoute(point, uiMapID, coord)
@@ -64,6 +66,9 @@ function RouteWorldMapDataProvider:HighlightRoute(point, uiMapID, coord)
     for connection in self.connectionPool:EnumerateActive() do
         if connection.point == point then
             connection.Line:SetThickness(40)
+            if point.route.highlightOnly then
+                connection:Show()
+            end
         end
     end
 end
@@ -73,6 +78,9 @@ function RouteWorldMapDataProvider:UnhighlightRoute(point, uiMapID, coord)
     for connection in self.connectionPool:EnumerateActive() do
         if connection.point == point then
             connection.Line:SetThickness(20)
+            if point.route.highlightOnly then
+                connection:Hide()
+            end
         end
     end
 end
