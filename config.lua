@@ -303,6 +303,17 @@ local allLootKnown = function(loot)
     -- known cross-armor-type wouldn't really matter...
     return knowable
 end
+local function anyItemInBags(inbags)
+    if type(inbags) == "table" then
+        for _, item in ipairs(inbags) do
+            if GetItemCount(item, true) > 0 then
+                return true
+            end
+        end
+    else
+        return GetItemCount(inbags, true) > 0
+    end
+end
 
 local zoneHidden
 zoneHidden = function(uiMapID)
@@ -375,7 +386,7 @@ ns.should_show_point = function(coord, point, currentZone, isMinimap)
         if point.toy and point.item and PlayerHasToy(point.item) then
             return false
         end
-        if point.inbag and GetItemCount(point.inbag, true) > 0 then
+        if point.inbag and anyItemInBags(point.inbag) then
             return false
         end
         if point.onquest and C_QuestLog.IsOnQuest(point.onquest) then
