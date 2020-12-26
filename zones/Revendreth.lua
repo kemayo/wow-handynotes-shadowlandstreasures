@@ -17,7 +17,7 @@ ns.RegisterPoints(1525, { -- Revendreth
         loot={
             {182694, toy=true}, -- Stylish Black Parasol
         },
-        note="On top of the castle walls, can be hard to reach",
+        note="On top of the castle walls",
     },
     [57304330] = {
         achievement=14314, criteria=50078, -- The Count
@@ -553,7 +553,7 @@ ns.RegisterPoints(1525, {
         quest=59900,
         npc=166679,
         loot={
-            {180581, mount=1298}, -- Hopecrusher Gargon
+            {180581, mount=1298, covenant=Enum.CovenantType.Venthyr}, -- Hopecrusher Gargon
         },
     },
     [61707950] = { -- Huntmaster Petrus
@@ -562,7 +562,7 @@ ns.RegisterPoints(1525, {
         npc=166993,
         loot={
             180874, -- Gargon Whistle
-            180705, -- Gargon Training Manual (hunter)
+            {180705, class="HUNTER"}, -- Gargon Training Manual
             180405, -- Rusty Gargon Chain
         },
     },

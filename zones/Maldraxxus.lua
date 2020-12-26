@@ -466,7 +466,7 @@ ns.RegisterPoints(1536, {
         quest=58784,
         npc=168147,
         loot={
-            {181815, mount=1370}, -- Armored Bonehoof Tauralus
+            {181815, mount=1370, covenant=Enum.CovenantType.Necrolord}, -- Armored Bonehoof Tauralus
             182083, -- Bonecleaver's Skullboar
         },
         level=60,
@@ -565,7 +565,7 @@ ns.RegisterPoints(1536, {
         quest=58872,
         npc=162741,
         loot={
-            {182080, mount=1411}, -- Predatory Plagueroc
+            {182080, mount=1411, covenant=Enum.CovenantType.Necrolord}, -- Predatory Plagueroc
             184298, -- Amalgamated Forsworn's Journal
         },
         level=60,

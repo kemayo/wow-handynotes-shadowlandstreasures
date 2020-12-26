@@ -124,7 +124,7 @@ ns.RegisterPoints(1533, { -- Bastion
         achievement=14311, criteria=50061, -- Gift of Thenios
         quest=60894,
         loot={
-            {181290, covenant=Enum.CovenantType.Kyrian}, -- Harmonious Sigil of the Archon (Kyrian only)
+            {181290, covenant=Enum.CovenantType.Kyrian}, -- Harmonious Sigil of the Archon
         },
         level=60,
         note="Obtain the {spell:333068:Proof of Wisdom} by using the teleporter near the chest and lighting the incenses in the correct order:\n* Incense of Patience\n* Incense of Knowledge\n* Incense of Insight\n* Anima Orb\n* Incense of Judgement\nYou'll have to go through the path multiple times to do this",

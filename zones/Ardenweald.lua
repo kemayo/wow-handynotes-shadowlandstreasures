@@ -322,7 +322,7 @@ ns.RegisterPoints(1565, {
         npc=164547,
         loot={
             179586, -- Elderwood Piercer
-            182179, -- Runestag Soul
+            {182179, covenant=Enum.CovenantType.NightFae}, -- Runestag Soul
         },
         atlas="colorblind-colorwheel",
         note="Great Horn of the Runestag spawns around the zone. Blow it, and this will spawn here then start running around the zone very quickly",
@@ -375,7 +375,7 @@ ns.RegisterPoints(1565, {
         npc=164415,
         loot={
             180146, -- Axe of Broken Wills
-            182183, -- Wolfhawk Soul
+            {182183, covenant=Enum.CovenantType.NightFae}, -- Wolfhawk Soul
         },
         note="Use {spell:310143} to get in",
     },
@@ -393,9 +393,9 @@ ns.RegisterPoints(1565, {
         quest=61632,
         npc=168647,
         loot={
-            {180730, mount=1393}, -- Wild Glimmerfur Prowler
+            {180730, mount=1393, covenant=Enum.CovenantType.NightFae}, -- Wild Glimmerfur Prowler
             180154, -- Greataxe of Unrelenting Pursuit
-            182176, -- Shadowstalker Soul (quest=62431)
+            {182176, covenant=Enum.CovenantType.NightFae}, -- Shadowstalker Soul (quest=62431)
         },
         level=60, -- assumed
         -- covenant=Enum.CovenantType.NightFae,
