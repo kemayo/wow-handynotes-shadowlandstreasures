@@ -16,6 +16,7 @@ ns.defaults = {
         icon_scale = 1.0,
         icon_alpha = 1.0,
         icon_item = false,
+        tooltip_pointanchor = false,
         tooltip_item = true,
         tooltip_questid = false,
         zonesHidden = {},
@@ -114,6 +115,12 @@ ns.options = {
                     name = "Use item tooltips",
                     desc = "Show the full tooltips for items",
                     order = 10,
+                },
+                tooltip_pointanchor = {
+                    type = "toggle",
+                    name = "Anchor tooltips to points",
+                    desc = "Whether to anchor the tooltips to the individual points or to the map",
+                    order = 15,
                 },
                 found = {
                     type = "toggle",

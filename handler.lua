@@ -550,14 +550,6 @@ end
 local HLHandler = {}
 
 function HLHandler:OnEnter(uiMapID, coord)
-    local tooltip = GameTooltip
-    if self:GetCenter() > UIParent:GetCenter() then -- compare X coordinate
-        tooltip:SetOwner(self, "ANCHOR_LEFT")
-    else
-        tooltip:SetOwner(self, "ANCHOR_RIGHT")
-    end
-    handle_tooltip_by_coord(tooltip, uiMapID, coord)
-
     local point = ns.points[uiMapID] and ns.points[uiMapID][coord]
     if point and point.route then
         if ns.points[uiMapID][point.route] then
@@ -565,6 +557,23 @@ function HLHandler:OnEnter(uiMapID, coord)
         end
         ns.RouteWorldMapDataProvider:HighlightRoute(point, uiMapID, coord)
     end
+    local tooltip = GameTooltip
+    if ns.db.tooltip_pointanchor then
+        if self:GetCenter() > UIParent:GetCenter() then -- compare X coordinate
+            tooltip:SetOwner(self, "ANCHOR_LEFT")
+        else
+            tooltip:SetOwner(self, "ANCHOR_RIGHT")
+        end
+    else
+        tooltip:SetOwner(WorldMapFrame.ScrollContainer, "ANCHOR_NONE")
+        local x, y = HandyNotes:getXY(coord)
+        if y < 0.5 then
+            tooltip:SetPoint("BOTTOMLEFT", WorldMapFrame.ScrollContainer)
+        else
+            tooltip:SetPoint("TOPLEFT", WorldMapFrame.ScrollContainer)
+        end
+    end
+    handle_tooltip_by_coord(tooltip, uiMapID, coord)
 end
 
 local function createWaypoint(button, uiMapID, coord)
