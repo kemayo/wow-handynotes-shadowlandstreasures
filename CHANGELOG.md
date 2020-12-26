@@ -1,5 +1,16 @@
 # Changelog
 
+## Changed in v16
+
+* Add achievements:
+    * Bat!
+    * What We Ride In The Shadows
+    * Wardrobe Makeover
+* Properly explain acquiring Sorrowbane
+* Show when loot is covenant-specific
+* Fix Dead Blanchy's position, show where you are in the questline in its note
+* Change how the tooltip anchors, so it's less likely to be in the way; there's an option for the old behavior if you prefer it
+
 ## Changed in v15
 
 * Many Ardenweald improvements, but mostly to the Night Mare questline
