@@ -249,6 +249,11 @@ ns.RegisterPoints(1536, { -- Maldraxxus
         note="Click the treasure pile, {spell:343163}",
         minimap=true,
     },
+    [54952610] = {
+        quest=60109,
+        label="Web Sealed Chest",
+        note="During world quest {quest:50207} use Twigin to jump up here",
+    },
     [55893897] = {
         quest=59428, -- later 59429
         label="Strange Growth",
