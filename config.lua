@@ -293,7 +293,7 @@ local allLootKnown = function(loot)
     local knowable
     for _, item in ipairs(loot) do
         if type(item) == "table" then
-            knowable = true
+            knowable = knowable or item.toy or item.mount or item.pet
             if item.toy and not PlayerHasToy(item[1]) then
                 return false
             end
