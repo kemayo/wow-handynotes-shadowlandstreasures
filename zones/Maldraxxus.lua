@@ -210,7 +210,7 @@ ns.RegisterPoints(1533, { -- Bastion
     [33403640] = {criteria=49871, quest=62479, inbag=183786, note="Buy from {npc:158625}"}, -- Happiness Bird
 }, makeover)
 ns.RegisterPoints(1525, { -- Revendreth
-    [51007880] = {criteria=49864, quest=61560, inbag=181799, note="Buy {item:181799} from {npc:171808"}, -- Dapper Top Hat
+    [51007880] = {criteria=49864, quest=61560, inbag=181799, note="Buy {item:181799} from {npc:171808}"}, -- Dapper Top Hat
     [42505030] = {criteria=49916, quest=62577, inbag=183826, note="{item:183826} is found in Secret Treasures"}, -- Magician's Hat
     -- [] = {criteria=49868, quest=62476, inbag=183760,}, -- Red Eye Lens (on Innervus)
     -- [] = {criteria=49869, quest=62474, inbag=183759,}, -- Skull Protector (on Endlurker)
