@@ -452,17 +452,17 @@ local function handle_tooltip(tooltip, point)
         if point.loot then
             for _, item in ipairs(point.loot) do
                 local _, link, _, _, _, _, _, _, _, icon = GetItemInfo(ns.lootitem(item))
-                if type(item) == "table" then
-                    -- todo: class? faction?
-                    if item.covenant then
-                        local data = C_Covenants.GetCovenantData(item.covenant)
-                        -- local active = item.covenant == C_Covenants.GetActiveCovenantID()
-                        if data then
-                            link = TEXT_MODE_A_STRING_VALUE_TYPE:format(link, COVENANT_COLORS[item.covenant]:WrapTextInColorCode(data.name))
+                if link then
+                    if type(item) == "table" then
+                        -- todo: class? faction?
+                        if item.covenant then
+                            local data = C_Covenants.GetCovenantData(item.covenant)
+                            -- local active = item.covenant == C_Covenants.GetActiveCovenantID()
+                            if data then
+                                link = TEXT_MODE_A_STRING_VALUE_TYPE:format(link, COVENANT_COLORS[item.covenant]:WrapTextInColorCode(data.name))
+                            end
                         end
                     end
-                end
-                if link then
                     tooltip:AddDoubleLine(ENCOUNTER_JOURNAL_ITEM, quick_texture_markup(icon) .. link)
                 else
                     tooltip:AddDoubleLine(ENCOUNTER_JOURNAL_ITEM, SEARCH_LOADING_TEXT,
