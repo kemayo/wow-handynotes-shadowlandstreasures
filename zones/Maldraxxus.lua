@@ -282,7 +282,8 @@ ns.RegisterPoints(1536, { -- Maldraxxus
     --     note="Three runes nearby on construct tables",
     -- },
     -- [36208145] = {
-    --     quest=61119, -- 61116
+    -- [64953323] = {
+    --     quest=61116, -- progress runes 61117, 61118, 61119
     --     label="Runebound Coffer",
     --     junk=true,
     --     level=60,
