@@ -137,7 +137,14 @@ ns.RegisterPoints(1536, { -- Maldraxxus
         level=60,
         atlas="animadiversion-icon", scale=1.2,
         minimap=true,
-        note="Requires stacking several strength buffs and the world quest {quest:57205:A Few Bumps Along the Way}. Check wowhead, it's a lot",
+        note="Requires stacking several strength buffs and the world quest {quest:57205:A Few Bumps Along the Way}:\n"..
+            "* Set your hearth to the arena flight point\n"..
+            "* Buy {item:182163} from {npc:171808} in Revendreth\n"..
+            "* Buy {item:180771} from {npc:166640} in Maldraxxus\n"..
+            "* During {quest:57205} get 2 stacks of {spell:306272}\n"..
+            "* Eat 4x {spell:327367} in Glutharn's Decay\n"..
+            "* Hearth, drink the potions, pull the sword\n"..
+            "(You can get the arm with just the {spell:327367})",
     },
 })
 ns.RegisterPoints(1649, { -- Etheric Vault
