@@ -566,7 +566,7 @@ function HLHandler:OnEnter(uiMapID, coord)
         ns.RouteWorldMapDataProvider:HighlightRoute(point, uiMapID, coord)
     end
     local tooltip = GameTooltip
-    if ns.db.tooltip_pointanchor then
+    if ns.db.tooltip_pointanchor or self:GetParent() == Minimap then
         if self:GetCenter() > UIParent:GetCenter() then -- compare X coordinate
             tooltip:SetOwner(self, "ANCHOR_LEFT")
         else
