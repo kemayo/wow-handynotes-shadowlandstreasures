@@ -1,5 +1,10 @@
 # Changelog
 
+## Changed in v17
+
+* Fix anchoring for tooltips on minimap icons
+* Minor treasure updates in Maldraxxus and Bastion
+
 ## Changed in v16
 
 * Add achievements:
