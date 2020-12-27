@@ -451,12 +451,12 @@ ns.RegisterPoints(1565, {
 
 local macabre = { -- Macabre
     achievement=14309, criteria=48780,
-    quest=59140,
+    quest=59140, -- Also 62269
     npc=164093,
     loot={
         {180644, pet=2907}, -- Rocky
     },
-    note="Stand in a Mysterious Mushroom Ring with three players, dancing in a loop: A > B > C > A",
+    note="Stand in a Mysterious Mushroom Ring with three players dancing",
 }
 ns.RegisterPoints(1565, {
     [36504790] = macabre,
