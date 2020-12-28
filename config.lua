@@ -311,13 +311,23 @@ local allLootKnown = function(loot)
     -- known cross-armor-type wouldn't really matter...
     return knowable
 end
-local function anyItemInBags(inbags)
+local function itemInBags(inbags)
     if type(inbags) == "table" then
+        if inbags.all then
+            for _, item in ipairs(inbags) do
+                if GetItemCount(item, true) == 0 then
+                    return false
+                end
+            end
+            return true
+        end
+        -- any
         for _, item in ipairs(inbags) do
             if GetItemCount(item, true) > 0 then
                 return true
             end
         end
+        return false
     else
         return GetItemCount(inbags, true) > 0
     end
@@ -394,7 +404,7 @@ ns.should_show_point = function(coord, point, currentZone, isMinimap)
         if point.toy and point.item and PlayerHasToy(point.item) then
             return false
         end
-        if point.inbag and anyItemInBags(point.inbag) then
+        if point.inbag and itemInBags(point.inbag) then
             return false
         end
         if point.onquest and C_QuestLog.IsOnQuest(point.onquest) then
@@ -419,7 +429,7 @@ ns.should_show_point = function(coord, point, currentZone, isMinimap)
     if point.requires_no_buff and GetPlayerAuraBySpellID(point.requires_no_buff) then
         return false
     end
-    if point.requires_item and GetItemCount(point.requires_item, true) == 0 then
+    if point.requires_item and not itemInBags(point.requires_item) then
         return false
     end
     if point.covenant and point.covenant ~= C_Covenants.GetActiveCovenantID() then
