@@ -96,6 +96,8 @@ local playerClassLocal, playerClass = UnitClass("player")
 ns.playerClass = playerClass
 ns.playerClassLocal = playerClassLocal
 ns.playerClassColor = RAID_CLASS_COLORS[playerClass]
+ns.playerName = UnitName("player")
+ns.playerFaction = UnitFactionGroup("player")
 
 ---------------------------------------------------------
 -- All the utility code

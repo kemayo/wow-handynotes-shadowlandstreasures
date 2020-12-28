@@ -479,13 +479,13 @@ ns.RegisterPoints(1565, {
     },
     [18056200] = ns.path{
         atlas="poi-door-arrow-up",
-        inbag={181243,181242,178675,},
+        inbag={181243,181242,178675,any=true},
         note="Jump to the root; a glider might help, but isn't required"
     },
     [19706350] = {
         label="{item:181243:Broken Soulweb}",
         loot={181243},
-        inbag={181243,181242,178675},
+        inbag={181243,181242,178675,any=true},
         minimap=true,
         note="Take it to {npc:165704} at Glitterfall Basin",
     },
