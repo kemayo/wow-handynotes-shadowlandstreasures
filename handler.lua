@@ -68,9 +68,15 @@ ns.merge = function(t1, t2)
     return t1
 end
 
-ns.nodeMaker = function(metatable)
+ns.nodeMaker = function(defaults)
+    local meta = {__index = defaults}
     return function(details)
-        return setmetatable(details or {}, {__index = metatable})
+        details = details or {}
+        local meta2 = getmetatable(details)
+        if meta2 and meta2.__index then
+            return setmetatable(details, {__index = ns.merge(CopyTable(defaults), meta2.__index)})
+        end
+        return setmetatable(details, meta)
     end
 end
 
