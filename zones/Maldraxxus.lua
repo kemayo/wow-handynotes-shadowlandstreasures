@@ -127,25 +127,6 @@ ns.RegisterPoints(1536, { -- Maldraxxus
         level=60,
         note="Loot the {item:181558:Missing Ritual Pages} nearby, then use the Book of Binding Rituals behind the cache before opening it",
     },
-    [51404840] = {
-        achievement=14626,-- Harvester of Sorrow
-        quest=61128, -- also 61127 for the arm
-        loot={
-            180273, -- Sorrowbane
-            {181164, pet=2944}, -- Oonar's Arm
-        },
-        level=60,
-        atlas="animadiversion-icon", scale=1.2,
-        minimap=true,
-        note="Requires stacking several strength buffs and the world quest {quest:57205:A Few Bumps Along the Way}:\n"..
-            "* Set your hearth to the arena flight point\n"..
-            "* Buy {item:182163} from {npc:171808} in Revendreth\n"..
-            "* Buy {item:180771} from {npc:166640} in Maldraxxus\n"..
-            "* During {quest:57205} get 2 stacks of {spell:306272}\n"..
-            "* Eat 4x {spell:327367} in Glutharn's Decay\n"..
-            "* Hearth, drink the potions, pull the sword\n"..
-            "(You can get the arm with just the {spell:327367})",
-    },
 })
 ns.RegisterPoints(1649, { -- Etheric Vault
     [34565549] = {
@@ -175,6 +156,63 @@ ns.RegisterPoints(1536, {
     [73554985] = stolen_jar,
     [75104390] = stolen_jar,
 })
+
+-- Harvester of Sorrow
+
+local sorrow = {
+    achievement=14626,
+    quest={61127, 61128}, -- arm, sword
+    level=60,
+    atlas="animadiversion-icon",
+}
+ns.RegisterPoints(1536, {
+    [51404840] = {
+        achievement=14626,-- Harvester of Sorrow
+        loot={
+            180273, -- Sorrowbane
+            {181164, pet=2944}, -- Oonar's Arm
+        },
+        scale=1.2,
+        minimap=true,
+        note="Requires stacking several strength buffs and the world quest {quest:57205:A Few Bumps Along the Way}:\n"..
+            "* Buy {item:181163} from {npc:169964} in Maldraxxus\n".. -- teleport scroll
+            "* Buy {item:180771} from {npc:166640} in Maldraxxus\n".. -- strength potion
+            "* Buy {item:182163} from {npc:171808} in Revendreth\n".. -- other strength potion
+            "* During {quest:57205} get 2 stacks of {spell:306272}\n"..
+            "* Eat 4x {spell:327367} in Glutharn's Decay\n"..
+            "* Use {item:181163}, drink the potions, pull the sword\n"..
+            "(You can get the arm with just the {spell:327367})",
+    },
+    [53254125] = {
+        -- todo: this npc is also in wardrobe makeover... but I can't double-up on achievements for a point
+        label="{npc:169964:One-Eyed Joby}",
+        inbag=181163,
+        note="Buy {item:181163}", -- Teleport scroll
+    },
+    [53654785] = {
+        label="{npc:166640:Au'larrynar}",
+        inbag=180771,
+        note="Buy {item:180771:Potion of Unusual Strength}",
+    },
+    [37104700] = {
+        label="{quest:57205:A Few Bumps Along the Way}",
+        note="Get 2 stacks of {spell:306272} while this quest is up",
+        requires_item={180771, 182163, all=true},
+    },
+    [76755610] = {
+        label="{spell:327367:Edible Redcap}",
+        note="Eat 4x",
+        requires_item={180771, 182163, all=true},
+    },
+}, sorrow)
+ns.RegisterPoints(1525, {
+    [51107885] = {
+        -- todo: this npc is also in wardrobe makeover... but I can't double-up on achievements for a point
+        label="{npc:171808:Ta'tru}",
+        inbag=182163,
+        note="Buy {item:182163:Strength of Blood}",
+    },
+}, sorrow)
 
 -- Wardrobe Makeover
 
@@ -252,7 +290,7 @@ ns.RegisterPoints(1536, { -- Maldraxxus
     [54952610] = {
         quest=60109,
         label="Web Sealed Chest",
-        note="During world quest {quest:50207} use Twigin to jump up here",
+        note="During world quest {quest:58207} use Twigin to jump up here",
     },
     [55893897] = {
         quest=59428, -- later 59429
