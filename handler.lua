@@ -730,7 +730,9 @@ function HL:OnInitialize()
 
     ns.SetupMapOverlay()
 
-    WorldMapFrame:AddDataProvider(ns.RouteWorldMapDataProvider)
+    if ns.RouteWorldMapDataProvider then
+        WorldMapFrame:AddDataProvider(ns.RouteWorldMapDataProvider)
+    end
 end
 
 do
@@ -746,7 +748,9 @@ do
     end)
     function HL:Refresh()
         HL:SendMessage("HandyNotes_NotifyUpdate", myname:gsub("HandyNotes_", ""))
-        ns.RouteWorldMapDataProvider:RefreshAllData()
+        if ns.RouteWorldMapDataProvider then
+            ns.RouteWorldMapDataProvider:RefreshAllData()
+        end
     end
     function HL:RefreshOnEvent(event)
         bucket:Show()

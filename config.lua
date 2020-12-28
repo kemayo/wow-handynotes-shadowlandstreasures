@@ -162,6 +162,7 @@ ns.options = {
                     type = "toggle",
                     name = "Show routes",
                     desc = "Show relevant routes between points ",
+                    disabled = function() return not ns.RouteWorldMapDataProvider end,
                     order = 31,
                 },
                 show_junk = {
@@ -527,6 +528,11 @@ function ns.SetupMapOverlay()
                 elseif option.type == "execute" then
                     info.notCheckable = true
                     info.checked = nil
+                end
+                if option.disabled then
+                    info.disabled = option.disabled()
+                else
+                    info.disabled = nil
                 end
                 UIDropDownMenu_AddButton(info, level)
             end
