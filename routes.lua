@@ -10,8 +10,7 @@ ns.RouteWorldMapDataProvider = RouteWorldMapDataProvider
 function RouteWorldMapDataProvider:RemoveAllData()
     if not self:GetMap() then return end
 
-    self:GetMap():RemoveAllPinsByTemplate("HandyNotesTreasuresRoutePinTemplate")
-    self:GetMap():RemoveAllPinsByTemplate("HandyNotesTreasuresRoutePinConnectionTemplate")
+    self:GetMap():RemoveAllPinsByTemplate(myname.."RoutePinTemplate")
     if self.connectionPool then
         self.connectionPool:ReleaseAll()
     end
@@ -22,7 +21,7 @@ function RouteWorldMapDataProvider:RefreshAllData(fromOnShow)
     if not (self:GetMap() and self:GetMap():IsShown()) then return end
     self:RemoveAllData()
     if not self.connectionPool then
-        self.connectionPool = CreateFramePool("FRAME", self:GetMap():GetCanvas(), "HandyNotesTreasuresRoutePinConnectionTemplate")
+        self.connectionPool = CreateFramePool("FRAME", self:GetMap():GetCanvas(), myname.."RoutePinConnectionTemplate")
     end
 
     if not ns.db.show_routes then return end
@@ -35,7 +34,7 @@ function RouteWorldMapDataProvider:RefreshAllData(fromOnShow)
         if point.route and type(point.route) == "table" and ns.should_show_point(coord, point, uiMapID, false) then
             for _, node in ipairs(point.route) do
                 local x, y = HandyNotes:getXY(node)
-                local pin = self:GetMap():AcquirePin("HandyNotesTreasuresRoutePinTemplate")
+                local pin = self:GetMap():AcquirePin(myname.."RoutePinTemplate")
                 pin:SetPosition(x, y)
                 pin:Show()
                 if pins[#pins] then
@@ -85,15 +84,17 @@ function RouteWorldMapDataProvider:UnhighlightRoute(point, uiMapID, coord)
     end
 end
 
-HandyNotesTreasuresRoutePinMixin = CreateFromMixins(MapCanvasPinMixin)
-function HandyNotesTreasuresRoutePinMixin:OnLoad()
+local RoutePinMixin = CreateFromMixins(MapCanvasPinMixin)
+_G[myname.."RoutePinMixin"] = RoutePinMixin
+function RoutePinMixin:OnLoad()
     -- This is below normal handynotes pins
     self:UseFrameLevelType("PIN_FRAME_LEVEL_EVENT_OVERLAY");
 end
 
-HandyNotesTreasuresRoutePinConnectionMixin = {}
+local RoutePinConnectionMixin = {}
+_G[myname.."RoutePinConnectionMixin"] = RoutePinConnectionMixin
 
-function HandyNotesTreasuresRoutePinConnectionMixin:Connect(pin1, pin2)
+function RoutePinConnectionMixin:Connect(pin1, pin2)
     pin1.connectionOut = self
     pin2.connectionIn = self
 
