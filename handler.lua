@@ -144,10 +144,11 @@ local function render_string(s)
             end
         elseif variant == "quest" then
             local name = C_QuestLog.GetTitleForQuestID(id)
-            if name and name ~= "" then
-                local completed = C_QuestLog.IsQuestFlaggedCompleted(id)
-                return CreateAtlasMarkup("questnormal") .. (completed and completeColor or incompleteColor):WrapTextInColorCode(name)
+            if not (name and name ~= "") then
+                name = tostring(id)
             end
+            local completed = C_QuestLog.IsQuestFlaggedCompleted(id)
+            return CreateAtlasMarkup("questnormal") .. (completed and completeColor or incompleteColor):WrapTextInColorCode(name)
         elseif variant == "questid" then
             return CreateAtlasMarkup("questnormal") .. (C_QuestLog.IsQuestFlaggedCompleted(id) and completeColor or incompleteColor):WrapTextInColorCode(id)
         elseif variant == "npc" then
