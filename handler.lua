@@ -184,7 +184,6 @@ end
 local function cache_loot(loot)
     if not loot then return end
     for _, item in ipairs(loot) do
-
         C_Item.RequestLoadItemDataByID(ns.lootitem(item))
     end
 end
@@ -237,7 +236,7 @@ local function work_out_label(point)
     end
     if point.achievement then
         if point.criteria and type(point.criteria) ~= "table" then
-            local criteria = GetAchievementCriteriaInfoByID(point.achievement, point.criteria)
+            local criteria = (point.criteria < 40 and GetAchievementCriteriaInfo or GetAchievementCriteriaInfoByID)(point.achievement, point.criteria)
             if criteria then
                 return criteria
             end
@@ -375,6 +374,8 @@ local get_point_info = function(point, isMinimap)
         local icon = work_out_texture(point)
         if point.active and point.active.quest and not C_QuestLog.IsQuestFlaggedCompleted(point.active.quest) then
             icon = get_inactive_texture_variant(icon)
+        elseif point.active and point.active.notquest and C_QuestLog.IsQuestFlaggedCompleted(point.active.notquest) then
+            icon = get_inactive_texture_variant(icon)
         elseif point.level and UnitLevel("player") < point.level then
             icon = get_upcoming_texture_variant(icon)
         elseif point.hide_before and not ns.allQuestsComplete(point.hide_before) then
@@ -431,14 +432,14 @@ local function handle_tooltip(tooltip, point)
             if point.criteria then
                 if type(point.criteria) == "table" then
                     for _, criteria in ipairs(point.criteria) do
-                        local criteria, _, complete = GetAchievementCriteriaInfoByID(point.achievement, criteria)
+                        local criteria, _, complete = (criteria < 40 and GetAchievementCriteriaInfo or GetAchievementCriteriaInfoByID)(point.achievement, criteria)
                         tooltip:AddDoubleLine(" ", criteria,
                             nil, nil, nil,
                             complete and 0 or 1, complete and 1 or 0, 0
                         )
                     end
                 else
-                    local criteria, _, complete = GetAchievementCriteriaInfoByID(point.achievement, point.criteria)
+                    local criteria, _, complete = (point.criteria < 40 and GetAchievementCriteriaInfo or GetAchievementCriteriaInfoByID)(point.achievement, point.criteria)
                     tooltip:AddDoubleLine(" ", criteria,
                         nil, nil, nil,
                         complete and 0 or 1, complete and 1 or 0, 0
