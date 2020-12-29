@@ -389,9 +389,6 @@ ns.should_show_point = function(coord, point, currentZone, isMinimap)
     if point.poi and not checkPois(point.poi) then
         return false
     end
-    if ns.map_questids[currentZone] and not (point.junk or point.npc or point.follower) and C_QuestLog.IsQuestFlaggedCompleted(ns.map_questids[currentZone]) then
-        return false
-    end
     if point.junk and not ns.db.show_junk then
         return false
     end
@@ -426,6 +423,12 @@ ns.should_show_point = function(coord, point, currentZone, isMinimap)
             return false
         end
         if point.onquest and C_QuestLog.IsOnQuest(point.onquest) then
+            return false
+        end
+        if point.hide_quest and C_QuestLog.IsQuestFlaggedCompleted(point.hide_quest) then
+            -- This is distinct from point.quest as it's supposed to be for
+            -- other trackers that make the point not _complete_ but still
+            -- hidden (Draenor treasure maps, so far):
             return false
         end
     end

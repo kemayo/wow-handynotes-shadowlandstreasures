@@ -12,9 +12,6 @@ ns.HL = HL
 ns.map_spellids = {
     -- zone = spellid
 }
-ns.map_questids = {
-    -- zone = questid
-}
 
 ns.currencies = {
     ANIMA = {
