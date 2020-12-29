@@ -334,6 +334,37 @@ local achievementHidden = function(achievement)
     return ns.db.achievementsHidden[achievement]
 end
 
+local checkPois
+do
+    local poi_expirations = {}
+    local poi_zone_expirations = {}
+    local pois_byzone = {}
+    local function refreshPois(zone)
+        local now = time()
+        if not poi_zone_expirations[zone] or now > poi_zone_expirations[zone] then
+            pois_byzone[zone] = wipe(pois_byzone[zone] or {})
+            for _, poi in ipairs(C_AreaPoiInfo.GetAreaPOIForMap(zone)) do
+                pois_byzone[zone][poi] = true
+                poi_expirations[poi] = now + (C_AreaPoiInfo.GetAreaPOISecondsLeft(poi) or 60)
+            end
+            poi_zone_expirations[zone] = now + 1
+        end
+    end
+    function checkPois(pois)
+        for _, data in ipairs(pois) do
+            local zone, poi = unpack(data)
+            local now = time()
+            if now > (poi_expirations[poi] or 0) then
+                refreshPois(zone)
+                poi_expirations[poi] = poi_expirations[poi] or (now + 60)
+            end
+            if pois_byzone[zone][poi] then
+                return true
+            end
+        end
+    end
+end
+
 ns.should_show_point = function(coord, point, currentZone, isMinimap)
     if isMinimap and not ns.db.show_on_minimap and not point.minimap then
         return false
@@ -353,6 +384,9 @@ ns.should_show_point = function(coord, point, currentZone, isMinimap)
         return false
     end
     if point.art and point.art ~= C_Map.GetMapArtID(currentZone) then
+        return false
+    end
+    if point.poi and not checkPois(point.poi) then
         return false
     end
     if ns.map_questids[currentZone] and not (point.junk or point.npc or point.follower) and C_QuestLog.IsQuestFlaggedCompleted(ns.map_questids[currentZone]) then
