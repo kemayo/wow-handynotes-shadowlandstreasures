@@ -371,6 +371,8 @@ ns.RegisterPoints(1543, {
         loot={
             183069, -- Tormentor's Notes
         },
+        inbag=183069,
+        minimap=true,
         note="Look for the body of {npc:173811}",
     },
     [19353340] = { -- Words of the Warden
@@ -379,13 +381,15 @@ ns.RegisterPoints(1543, {
         loot={
             183063, -- Word of the Warden
         },
+        inbag=183063,
+        minimap=true,
         note="Find a Paper Scrap hidden behind some junk",
     },
     [27702020] = ns.path{ -- To: Box of Torments
         achievement=14761, criteria=49908,
         quest=63157,
         onquest=63157,
-    }
+    },
 })
 
 ns.RegisterPoints(1822, { -- Tremaculum
