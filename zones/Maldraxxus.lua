@@ -239,7 +239,6 @@ ns.RegisterPoints(1536, { -- Maldraxxus
     -- [] = {criteria=50559, quest=62823, inbag=nil,}, -- Underpowered Gravity Pack
     -- [] = {criteria=49923, quest=62574, inbag=nil,}, -- Butterflies
     -- [] = {criteria=49917, quest=62582, inbag=nil,}, -- Spare Weapon
-    -- [] = {criteria=49876, quest=62470, inbag=nil,}, -- Operational Instructions
     -- Known but not work waypointing:
     -- [] = {criteria=49867, quest=61712, inbag=nil,}, -- Holiday Hat (vendor crafting mats)
     -- [44103990] = {criteria=49922, quest=62575, inbag=183827,}, -- Armor Plating (Blackhound Cache)
@@ -247,6 +246,7 @@ ns.RegisterPoints(1536, { -- Maldraxxus
     -- [] = {criteria=50549, quest=62826, inbag=184204, note="Search with {npc:158259} anywhere"}, -- Pirate Hat
     -- [] = {criteria=50553, quest=62819, inbag=184205, note="Search with {npc:158259} anywhere"}, -- Unworthy Crown
     -- [55006860] = {criteria=49924, quest=62572, inbag=183830, note="Reward from {quest:60195}"}, -- Faction Flag
+    -- [] = {criteria=49876, quest=62470, inbag=183754,}, -- Operational Instructions (on Gieger)
     -- [] = {criteria=50558, quest=62824, inbag=184224,}, -- Back Mushrooms (on Deadly Dapperling)
     -- [] = {criteria=49873, quest=61561, inbag=181797,}, -- Outlaw Flag (rare loot)
     -- [] = {criteria=49919, quest=62570, inbag=183833,}, -- Collector Kash's Pack (rare loot)
@@ -289,7 +289,8 @@ ns.RegisterPoints(1536, { -- Maldraxxus
     },
     [54952610] = {
         quest=60109,
-        label="Web Sealed Chest",
+        label="Web Sealed Chest", -- vignette's "Web Covered Chest" though
+        requires_worldquest=58207,
         note="During world quest {quest:58207} use Twigin to jump up here",
     },
     [55893897] = {
@@ -610,6 +611,7 @@ ns.RegisterPoints(1536, {
         loot={
             {182080, mount=1411, covenant=Enum.CovenantType.Necrolord}, -- Predatory Plagueroc
             184298, -- Amalgamated Forsworn's Journal
+            {183754, covenant=Enum.CovenantType.Necrolord},
         },
         level=60,
         -- covenant=Enum.CovenantType.Necrolord,
