@@ -450,6 +450,9 @@ ns.should_show_point = function(coord, point, currentZone, isMinimap)
     if point.requires_item and not itemInBags(point.requires_item) then
         return false
     end
+    if point.requires_worldquest and not C_TaskQuest.IsActive(point.requires_worldquest) then
+        return false
+    end
     if point.covenant and point.covenant ~= C_Covenants.GetActiveCovenantID() then
         return false
     end
