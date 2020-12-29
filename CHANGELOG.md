@@ -1,5 +1,11 @@
 # Changelog
 
+## Changed in v18
+
+* Maldraxxus: improve Sorrowbane description further; added some missing loot to Gieger
+* Ardenweald: confirmed that Macabre doesn't require the dance-loop any more, updated notes
+* "Path" nodes were sometimes not showing the correct icon
+
 ## Changed in v17
 
 * Fix anchoring for tooltips on minimap icons
