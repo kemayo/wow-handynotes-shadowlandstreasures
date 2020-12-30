@@ -31,7 +31,7 @@ ns.RegisterPoints(1533, { -- Bastion
         achievement=14311, criteria=50050, -- Lost Disciple's Notes
         quest=61048,
         loot={
-            182693, -- Lost Disciple's Notes
+            {182693, quest=62170}, -- Lost Disciple's Notes
         },
         note="Jump from the cliff on top to reach the treasure",
     },
@@ -403,7 +403,7 @@ ns.RegisterPoints(1533, {
         quest=57705,--57708,
         npc=158659,
         loot={
-            182759, -- Functioning Anima Core
+            {182759, quest=62200}, -- Functioning Anima Core
         },
         note="Gather anima from barrels nearby",
     },

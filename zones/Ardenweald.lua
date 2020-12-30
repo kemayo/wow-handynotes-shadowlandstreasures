@@ -84,7 +84,7 @@ ns.RegisterPoints(1565, { -- Ardenweald
         achievement=14313, criteria=50032, -- Lost Satchel
         quest=62187,
         loot={
-            182731, -- Satchel of Culexwood
+            {182731, quest=62187}, -- Satchel of Culexwood
         },
         onquest=62187,
         note="Carefully climb down the branch. Starts {quest:62187:Satchel of Culexwood}",
@@ -93,7 +93,7 @@ ns.RegisterPoints(1565, { -- Ardenweald
         achievement=14313, criteria=50034, -- Swollen Anima Seed
         quest=62186,
         loot={
-            182730, -- Swollen Anima Seed
+            {182730, quest=62186}, -- Swollen Anima Seed
         },
         note="Starts {quest:62186:Swollen Anima Seed}",
     },
@@ -119,7 +119,7 @@ ns.RegisterPoints(1565, { -- Ardenweald
         achievement=14313, criteria=50042, -- Enchanted Dreamcatcher
         quest=62259,
         loot={
-            183129, -- Anima-Laden Dreamcatcher
+            {183129, quest=62259}, -- Anima-Laden Dreamcatcher
         },
         onquest=62259,
         note="Carefully climb the roots in the area. Starts {quest:62259:Anima-Laden Dreamcatcher}",
@@ -181,26 +181,31 @@ ns.RegisterPoints(1565, { -- Ardenweald
 
 -- Fractured Fairy Tales
 
+local meandering = {criteria=50012,onquest=62619,inbag=183877,loot={{183877,quest=62619}},}
+local wandering = {criteria=50013,onquest=62620,inbag=183878,loot={{183878,quest=62620}},}
+local escapist = {criteria=50014,onquest=62621,inbag=183879,loot={{183879,quest=62621}},}
+local travel = {criteria=50015,onquest=62622,inbag=183880,loot={{183880,quest=62622}},}
+local naughty = {criteria=50016,onquest=62623,inbag=183881,loot={{183881,quest=62623}},}
 ns.RegisterPoints(1565, {
     [63602275] = {atlas="Campaign-QuestLog-LoreBook-Back",label="{npc:165867}",note="Bring books to him"},
-    [56054040] = {criteria=50012,onquest=62619,inbag=183877,}, -- Meandering story
-    [30004480] = {criteria=50013,onquest=62620,inbag=183878,}, -- Wandering Tale
-    [35602680] = {criteria=50013,onquest=62620,inbag=183878,}, -- Wandering Tale
-    [36104870] = {criteria=50013,onquest=62620,inbag=183878,}, -- Wandering Tale (36404800 is more accurate, but overlaps Macabre)
-    [37904005] = {criteria=50013,onquest=62620,inbag=183878,}, -- Wandering Tale
-    [32603160] = {criteria=50014,onquest=62621,inbag=183879,}, -- Escapist Novel
-    [40004460] = {criteria=50014,onquest=62621,inbag=183879,}, -- Escapist Novel
-    [40602760] = {criteria=50014,onquest=62621,inbag=183879,}, -- Escapist Novel
-    [40954230] = {criteria=50014,onquest=62621,inbag=183879,}, -- Escapist Novel
-    [40104170] = {criteria=50015,onquest=62622,inbag=183880,}, -- Travel Journal
-    [49654015] = {criteria=50015,onquest=62622,inbag=183880,}, -- Travel Journal
-    [50202500] = {criteria=50015,onquest=62622,inbag=183880,}, -- Travel Journal
-    [50154185] = {criteria=50015,onquest=62622,inbag=183880,}, -- Travel Journal
-    [56002100] = {criteria=50015,onquest=62622,inbag=183880,}, -- Travel Journal
-    [24755197] = {criteria=50016,onquest=62623,inbag=183881,}, -- Naughty Story
-    [33605740] = {criteria=50016,onquest=62623,inbag=183881,}, -- Naughty Story
-    [39806560] = {criteria=50016,onquest=62623,inbag=183881,}, -- Naughty Story
-    [51005480] = {criteria=50016,onquest=62623,inbag=183881,}, -- Naughty Story
+    [56054040] = meandering,
+    [30004480] = wandering,
+    [35602680] = wandering,
+    [36104870] = wandering, -- (36404800 is more accurate, but overlaps Macabre)
+    [37904005] = wandering,
+    [32603160] = escapist,
+    [40004460] = escapist,
+    [40602760] = escapist,
+    [40954230] = escapist,
+    [40104170] = travel, -- Travel Journal
+    [49654015] = travel,
+    [50202500] = travel,
+    [50154185] = travel,
+    [56002100] = travel,
+    [24755197] = naughty, -- Naughty Story
+    [33605740] = naughty,
+    [39806560] = naughty,
+    [51005480] = naughty,
 }, {
     achievement=14788,
     atlas="Campaign-QuestLog-LoreBook",
@@ -303,7 +308,7 @@ ns.RegisterPoints(1565, {
         npc=160448,
         loot={
             179596, -- Drust Mask of Dominance
-            183091, -- Lifewoven Bracelet
+            {183091, quest=62246}, -- Lifewoven Bracelet
         },
         note="Starts {quest:62246}",
     },
@@ -322,7 +327,7 @@ ns.RegisterPoints(1565, {
         npc=164547,
         loot={
             179586, -- Elderwood Piercer
-            {182179, covenant=Enum.CovenantType.NightFae}, -- Runestag Soul
+            {182179, quest=62434, covenant=Enum.CovenantType.NightFae}, -- Runestag Soul
         },
         atlas="colorblind-colorwheel",
         note="Great Horn of the Runestag spawns around the zone. Blow it, and this will spawn here then start running around the zone very quickly",
@@ -375,7 +380,7 @@ ns.RegisterPoints(1565, {
         npc=164415,
         loot={
             180146, -- Axe of Broken Wills
-            {182183, covenant=Enum.CovenantType.NightFae}, -- Wolfhawk Soul
+            {182183, quest=62439, covenant=Enum.CovenantType.NightFae}, -- Wolfhawk Soul
         },
         note="Use {spell:310143} to get in",
     },
@@ -395,7 +400,7 @@ ns.RegisterPoints(1565, {
         loot={
             {180730, mount=1393, covenant=Enum.CovenantType.NightFae}, -- Wild Glimmerfur Prowler
             180154, -- Greataxe of Unrelenting Pursuit
-            {182176, covenant=Enum.CovenantType.NightFae}, -- Shadowstalker Soul (quest=62431)
+            {182176, quest=62431, covenant=Enum.CovenantType.NightFae}, -- Shadowstalker Soul (quest=62431)
         },
         level=60, -- assumed
         -- covenant=Enum.CovenantType.NightFae,

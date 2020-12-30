@@ -71,7 +71,7 @@ ns.RegisterPoints(1525, { -- Revendreth
         achievement=14314, criteria=50895, -- Smuggled Cache
         quest=59889,
         loot={
-            182738, -- Bundle of Smuggled Parasol Components
+            {182738, quest=62189}, -- Bundle of Smuggled Parasol Components
         },
         note="Rewards 35+6 {currency:1820:Infused Ruby}, after {quest:62189:Parasol Components}",
     },
@@ -480,7 +480,7 @@ ns.RegisterPoints(1525, {
         npc=165206,
         loot={
             179927, -- Glowing Endmire Stinger
-            {183759, covenant=Enum.CovenantType.Necrolord}, -- Unusually Large Cranium (Necro only?)
+            {183759, quest=62474, covenant=Enum.CovenantType.Necrolord}, -- Unusually Large Cranium (Necro only?)
         },
         note="Use {spell:321827} to summon",
     },
@@ -572,7 +572,7 @@ ns.RegisterPoints(1525, {
         npc=160640,
         loot={
             183735, -- Rogue Sinstealer's Mantle
-            {183760, covenant=Enum.CovenantType.Necrolord}, -- Venthyr Spectacles (Necro only?)
+            {183760, quest=62476, covenant=Enum.CovenantType.Necrolord}, -- Venthyr Spectacles (Necro only?)
         },
         note="Get a {item:177223} from {npc:160375}",
     },
@@ -653,7 +653,7 @@ ns.RegisterPoints(1525, {
         quest=59595, -- also 60583, 
         npc=165253,
         loot={
-            179363, -- 'Misplaced' Anima Tolls
+            {179363, quest=60517}, -- 'Misplaced' Anima Tolls
         },
     },
     [43007910] = { -- Tomb Burster

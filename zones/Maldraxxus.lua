@@ -122,7 +122,7 @@ ns.RegisterPoints(1536, { -- Maldraxxus
         achievement=14312, criteria=50075, -- Ritualist's Cache
         quest=61514,
         loot={
-            183517, -- Page 76 of the Necronom-i-nom
+            {183517, quest=62372}, -- Page 76 of the Necronom-i-nom
         },
         level=60,
         note="Loot the {item:181558:Missing Ritual Pages} nearby, then use the Book of Binding Rituals behind the cache before opening it",
@@ -147,7 +147,7 @@ local stolen_jar = {
     achievement=14312, criteria=50067, -- Stolen Jar
     quest=61451,
     loot={
-        182618, -- Reclaimed Vessel
+        {182618, quest=62085}, -- Reclaimed Vessel
     },
     note="Can spawn in several different caves. Gives the quest {quest:62085:...Why Me?}",
 }
@@ -402,8 +402,8 @@ ns.RegisterPoints(1536, {
             184182, -- Strengthened Abomination Hook
             184188, -- Collector's Corpse Gambrel
             184189, -- Stained Fleshgorer
-            {183833, covenant=Enum.CovenantType.Necrolord}, -- Kash's Bag of Junk (Necro only?)
-            {181797, covenant=Enum.CovenantType.Necrolord}, -- Strange Cloth (Necro only?)
+            {183833, quest=62570, covenant=Enum.CovenantType.Necrolord}, -- Kash's Bag of Junk (Necro only?)
+            {181797, quest=61561, covenant=Enum.CovenantType.Necrolord}, -- Strange Cloth (Necro only?)
         },
         level=60,
     },
@@ -414,8 +414,8 @@ ns.RegisterPoints(1536, {
         loot={
             184176, -- Moroc's Boneslicing Warglaive
             184177, -- Grotesque Goring Pick
-            {183833, covenant=Enum.CovenantType.Necrolord}, -- Kash's Bag of Junk (Necro only?)
-            {181797, covenant=Enum.CovenantType.Necrolord}, -- Strange Cloth (Necro only?)
+            {183833, quest=62570, covenant=Enum.CovenantType.Necrolord}, -- Kash's Bag of Junk (Necro only?)
+            {181797, quest=61561, covenant=Enum.CovenantType.Necrolord}, -- Strange Cloth (Necro only?)
         },
         level=60,
     },
@@ -426,7 +426,7 @@ ns.RegisterPoints(1536, {
         loot={
             {181263, pet=2953}, -- Shy Melvin
             184280, -- Dapper Threads
-            {184224, covenant=Enum.CovenantType.Necrolord}, -- Dapperling Seeds (Necro only?)
+            {184224, quest=62824, covenant=Enum.CovenantType.Necrolord}, -- Dapperling Seeds (Necro only?)
         },
     },
     [45052840] = { -- Devour'us
@@ -511,7 +511,7 @@ ns.RegisterPoints(1536, {
         npc=168147,
         loot={
             {181815, mount=1370, covenant=Enum.CovenantType.Necrolord}, -- Armored Bonehoof Tauralus
-            182083, -- Bonecleaver's Skullboar
+            -- {182083, mount=nil}, -- Bonecleaver's Skullboar (removed?)
         },
         level=60,
         note="A Necrolord player channeling The Theater of Pain must activate this",
@@ -523,8 +523,8 @@ ns.RegisterPoints(1536, {
         loot={
             {181267, pet=2957}, -- Writhing Spine
             184287, -- Scum-Caked Epaulettes
-            {183833, covenant=Enum.CovenantType.Necrolord}, -- Kash's Bag of Junk (Necro only?)
-            {181797, covenant=Enum.CovenantType.Necrolord}, -- Strange Cloth (Necro only?)
+            {183833, quest=62570, covenant=Enum.CovenantType.Necrolord}, -- Kash's Bag of Junk (Necro only?)
+            {181797, quest=61561, covenant=Enum.CovenantType.Necrolord}, -- Strange Cloth (Necro only?)
         },
         level=60,
     },
@@ -611,7 +611,7 @@ ns.RegisterPoints(1536, {
         loot={
             {182080, mount=1411, covenant=Enum.CovenantType.Necrolord}, -- Predatory Plagueroc
             184298, -- Amalgamated Forsworn's Journal
-            {183754, covenant=Enum.CovenantType.Necrolord},
+            {183754, quest=62470, covenant=Enum.CovenantType.Necrolord}, -- Operational Instructions
         },
         level=60,
         -- covenant=Enum.CovenantType.Necrolord,
@@ -667,6 +667,7 @@ ns.RegisterPoints(1536, {
             184185, -- Grunge-Caked Collarbone
             184279, -- Siphoning Blood-Drinker (pulsing)
             184300, -- Fused Spineguard (oily)
+            {184155, quest=62804}, -- Recovered Containment Pack (oily)
             184301, -- Twenty-Loop Violet Girdle (violet)
         },
         --level=60, -- it's not totally level=60, but at least some of the spawns are (e.g. Violet)
