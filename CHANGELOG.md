@@ -1,5 +1,10 @@
 # Changelog
 
+## Changed in v19
+
+* Support items with associated quests for completion purposes
+* In tooltips, show a check/cross next to collectable items so it's easier to tell whether you've got them
+
 ## Changed in v18
 
 * Maldraxxus: improve Sorrowbane description further; added some missing loot to Gieger
