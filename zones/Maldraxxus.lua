@@ -237,7 +237,6 @@ ns.RegisterPoints(1536, { -- Maldraxxus
     -- [] = {criteria=49875, quest=62468, inbag=nil,}, -- Vesitgial Wings (just cooking mats)
     -- [] = {criteria=49925, quest=62580, inbag=nil,}, -- Barrel O' Fish
     -- [] = {criteria=50559, quest=62823, inbag=nil,}, -- Underpowered Gravity Pack
-    -- [] = {criteria=49923, quest=62574, inbag=nil,}, -- Butterflies
     -- [] = {criteria=49917, quest=62582, inbag=nil,}, -- Spare Weapon
     -- Known but not work waypointing:
     -- [] = {criteria=49867, quest=61712, inbag=nil,}, -- Holiday Hat (vendor crafting mats)
@@ -254,6 +253,9 @@ ns.RegisterPoints(1536, { -- Maldraxxus
 ns.RegisterPoints(1533, { -- Bastion
     [33403640] = {criteria=49871, quest=62479, inbag=183786, note="Buy from {npc:158625}"}, -- Happiness Bird
 }, makeover)
+-- ns.RegisterPoints(1565, { -- Ardenweald
+--     [] = {criteria=49923, quest=62574, inbag=183828,}, -- Butterflies (on slumbering emperor)
+-- }, makeover)
 ns.RegisterPoints(1525, { -- Revendreth
     [51007880] = {criteria=49864, quest=61560, inbag=181799, note="Buy {item:181799} from {npc:171808}"}, -- Dapper Top Hat
     [42505030] = {criteria=49916, quest=62577, inbag=183826, note="{item:183826} is found in Secret Treasures"}, -- Magician's Hat
