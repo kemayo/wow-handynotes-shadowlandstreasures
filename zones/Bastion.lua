@@ -140,8 +140,10 @@ ns.RegisterPoints(1533, { -- Bastion
     },
     [23902480] = {
         achievement=14311, criteria=50062,
+        quest=60895,
         note="Taking the {spell:333912:Flame of Devotion} to the brazier at 27.6 21.7",
         atlas="MantidTower",
+        minimap=true,
     },
 })
 
@@ -195,7 +197,7 @@ ns.RegisterPoints(1533, {
     [34846578] = shard{quest=61257},
     [51674802] = shard{quest=61258,note="A ledge on the side of Hero's Rest"},
     [47084923] = shard{quest=61260,note="Beneath the anima gateway"},
-    [41394663] = shard{quest=61261},
+    [41394663] = shard{quest=61261,note="Jump down from the cliff"},
     [40045912] = shard{quest=61263,note="Up on the pillars"},
     [38525326] = shard{quest=61264},
     [57645567] = shard{quest=61270},
@@ -203,9 +205,9 @@ ns.RegisterPoints(1533, {
     [72384029] = shard{quest=61273},
     [66892692] = shard{quest=61274},
     [57553827] = shard{quest=61275,note="Underground in the Hall of Beasts, behind some crates"},
-    [52163939] = shard{quest=61277},
-    [49993826] = shard{quest=61278},
-    [48483491] = shard{quest=61279},
+    [52163939] = shard{quest=61277,note="Up on the pillars"},
+    [49993826] = shard{quest=61278,note="On the ledge under the bridge"},
+    [48483491] = shard{quest=61279,note="Up on the pillars"},
     [56722884] = shard{quest=61280},
     [56201731] = shard{quest=61281,note="Ledge above the Memorial Offering, need to jump down from above"},
     [59881391] = shard{quest=61282,note="Work your way down from above"},
@@ -213,9 +215,9 @@ ns.RegisterPoints(1533, {
     [46691804] = shard{quest=61284},
     [44942845] = shard{quest=61285},
     [42302402] = shard{quest=61286,note="Up on the ledge"},
-    [37102468] = shard{quest=61287},
+    [37102468] = shard{quest=61287,note="Run around the ledge from the north"},
     [42813321] = shard{quest=61288},
-    [42713940] = shard{quest=61289},
+    [42713940] = shard{quest=61289,note="Jump down from the cliff"},
     [33033762] = shard{quest=61290},
     [31002747] = shard{quest=61291},
     [30612373] = shard{quest=61292},
@@ -370,6 +372,8 @@ ns.RegisterPoints(1533, {
         loot={
             {180856, pet=2932}, -- Silvershell Snapper
         },
+        level=60,
+        note="In a cave accessed from the north",
     },
     [45556460] = { -- Echo of Aella
         achievement=14307, criteria=50614,
