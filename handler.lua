@@ -465,7 +465,12 @@ local function handle_tooltip(tooltip, point)
             for _, item in ipairs(point.loot) do
                 local _, link, _, _, _, _, _, _, _, icon = GetItemInfo(ns.lootitem(item))
                 if link then
+                    local label = ENCOUNTER_JOURNAL_ITEM
                     if type(item) == "table" then
+                        if item.mount then label = MOUNT
+                        elseif item.toy then label = TOY
+                        elseif item.pet then label = TOOLTIP_BATTLE_PET
+                        end
                         -- todo: faction?
                         if item.covenant then
                             local data = C_Covenants.GetCovenantData(item.covenant)
@@ -482,7 +487,7 @@ local function handle_tooltip(tooltip, point)
                             link = link .. CreateAtlasMarkup(known and "common-icon-checkmark" or "common-icon-redx")
                         end
                     end
-                    tooltip:AddDoubleLine(ENCOUNTER_JOURNAL_ITEM, quick_texture_markup(icon) .. link)
+                    tooltip:AddDoubleLine(label, quick_texture_markup(icon) .. link)
                 else
                     tooltip:AddDoubleLine(ENCOUNTER_JOURNAL_ITEM, SEARCH_LOADING_TEXT,
                         NORMAL_FONT_COLOR.r, NORMAL_FONT_COLOR.g, NORMAL_FONT_COLOR.b,
