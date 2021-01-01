@@ -329,7 +329,9 @@ ns.RegisterPoints(1533, {
         achievement=14307, criteria=50610,
         quest=61002,
         npc=171014,
-        --loot={},
+        loot={
+            184295, -- Eternal Daybreak Necklace
+        },
         note="Read the Mercia's Legacy chapters inside in order, then talk to {npc:157979} for {spell:333779}, then find {item:180569} outside, and bring it back to {npc:157979}",
         minimap=true,
     },

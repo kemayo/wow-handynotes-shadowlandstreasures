@@ -440,11 +440,12 @@ ns.RegisterPoints(1525, {
         quest=59584,
         npc=164388,
         loot={
+            {180586,pet=2892,}, -- Lightbinders (flagged as zone-drop, because it can drop from the other light-elementals)
+            180688, -- Infused Remnant of Light
             179924, -- Light-Infused Jacket
             179926, -- Light-Infused Tunic
             179653, -- Light-Infused Hauberk
             179925, -- Light-Infused Breastplate
-            180688, -- Infused Remnant of Light
         },
         note="Move 3x Mirror Traps to summon",
     },
@@ -573,6 +574,8 @@ ns.RegisterPoints(1525, {
         loot={
             183735, -- Rogue Sinstealer's Mantle
             {183760, quest=62476, covenant=Enum.CovenantType.Necrolord}, -- Venthyr Spectacles (Necro only?)
+            180685, -- Soul Sliver
+            180686, -- "Borrowed" Soulstone
         },
         note="Get a {item:177223} from {npc:160375}",
     },
@@ -592,6 +595,7 @@ ns.RegisterPoints(1525, {
         npc=161891,
         loot={
             180501, -- Skull-Formed Headcage
+            182968, -- Humerus
         },
         note="Use {item:174378} from nearby mobs to activate 4x {npc:161870}",
     },
@@ -601,6 +605,7 @@ ns.RegisterPoints(1525, {
         npc=170048,
         loot={
             {180585, pet=2897}, -- Bottled Up Rage
+            180715, -- Bottled Wrath
         },
         note="During {quest:60654} bring ~10x {npc:169916} to {npc:169917}",
     },
@@ -610,6 +615,8 @@ ns.RegisterPoints(1525, {
         npc=160675,
         loot={
             {180587, pet=2893}, -- Animated Tome
+            180693, -- Cyclonic Chronicles
+            180694, -- Tome of Power
         },
         note="Bring 4x {npc:160753} to the library",
     },
@@ -637,6 +644,7 @@ ns.RegisterPoints(1525, {
         npc=160392,
         loot={
             180692, -- Box of Stalker Traps
+            180490, -- Soulstalker's Barbs (maybe? wowhead claims...)
         },
         note="Follow when it runs away",
     },

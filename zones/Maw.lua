@@ -108,7 +108,7 @@ ns.RegisterPoints(1543, {
         -- quest=61124,
         label="{npc:174827}",
         loot={
-            184167, -- Mawsworn Soulhunter
+            {184167,mount=1304,}, -- Mawsworn Soulhunter
         },
         note="Only during the Hunt:Shadehounds event, mount is not a guaranteed drop",
     },
@@ -164,9 +164,10 @@ ns.RegisterPoints(1543, {
         quest=60884,
         npc=170634,
         loot={
-            183066, -- Korrath's Grimoire: Aleketh
-            183067, -- Korrath's Grimoire: Belidir
-            183068, -- Korrath's Grimoire: Gyadrek
+            {183066,quest=63160,}, -- Korrath's Grimoire: Aleketh
+            {183067,quest=63161,}, -- Korrath's Grimoire: Belidir
+            {183068,quest=63162,}, -- Korrath's Grimoire: Gyadrek
+            183187, -- Shadeweaver Incantation
         },
         level=60,
     },
@@ -174,7 +175,9 @@ ns.RegisterPoints(1543, {
         achievement=14744, criteria=49857,
         quest=60834,
         npc=166398,
-        --loot={},
+        loot={
+            183141, -- Stygic Magma
+        },
         level=60,
     },
     [28701205] = { -- Talaporas, Herald of Pain
@@ -293,7 +296,8 @@ ns.RegisterPoints(1543, {
         quest=62618, -- 63413?
         npc=172207,
         loot={
-            183061, -- Wailing Coin
+            {183061,quest=63158,}, -- Wailing Coin
+            178561, -- Runecarver's Memory
         },
         level=60,
     },
@@ -322,7 +326,9 @@ ns.RegisterPoints(1543, {
         achievement=14660, criteria=49489,
         quest=62210,
         npc=172521,
-        --loot={},
+        loot={
+            {183410,pet=3040,}, -- Sharpclaw
+        },
         level=60,
     },
     [55806755] = path{label=CAVE, achievement=14660, criteria=49489, quest=62210,},

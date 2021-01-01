@@ -455,6 +455,7 @@ ns.RegisterPoints(1536, {
         npc=161105,
         loot={
             182192, -- Knee-Obstructing Legguards
+            {174070,quest=58379,covenant=Enum.CovenantType.Necrolord,}, -- Indomitable Hide
         },
         note="Use {spell:313451} to break shield",
     },
@@ -475,6 +476,7 @@ ns.RegisterPoints(1536, {
         loot={
             {182084, mount=1373}, -- Gorespine
             184179, -- Lichsworn Commander's Boneblade
+            {174076,quest=58376,covenant=Enum.CovenantType.Necrolord,}, -- Necromantic Oil
         },
         level=60,
     },
@@ -495,6 +497,7 @@ ns.RegisterPoints(1536, {
         npc=162767,
         loot={
             182205, -- Scarab-Shell Faceguard
+            183700, -- Forgotten Summoner's Shoulderpads
         },
     },
     [53851875] = { -- Ravenomous
@@ -560,7 +563,6 @@ ns.RegisterPoints(1536, {
             182190, -- Tauralus Hide Collar
             {182075, mount=1366, covenant=Enum.CovenantType.Necrolord}, -- Bonehoof Tauralus
         },
-        note="Mount requires Necrolord",
     },
     [50552010] = { -- Taskmaster Xox
         achievement=14308, criteria=48867,
@@ -570,6 +572,7 @@ ns.RegisterPoints(1536, {
             184186, -- Flesh-Fishing Hook
             184192, -- Pristine Alabaster Gorer
             184187, -- Taskmaster's Tenderizer
+            184193, -- Callus-Forged Hook
         },
         level=60,
         note="Shares spawn with {npc:160226} and {npc:160204}",
@@ -665,10 +668,15 @@ ns.RegisterPoints(1536, {
             {183903, toy=true}, -- Smelly Jelly
             {182079, mount=1410}, -- Slime-Covered Reins of the Hulking Deathroc (violet)
             {181270, pet=2960}, -- Decaying Oozewalker (oily)
+            182287, -- Eternally Preserved Scarab (gelloh)
             184302, -- Residue-coated Muck Waders (corrupted)
             184185, -- Grunge-Caked Collarbone
             184279, -- Siphoning Blood-Drinker (pulsing)
+            -- 182198, -- Undulating Blood Burrower (pulsing)
+            -- 182200, -- Engorged Blood Burrower (pulsing)
+            {181270,pet=2960,}, -- Invertebrate Oil (oily)
             184300, -- Fused Spineguard (oily)
+            184175, -- Bone-Blistering Wand (burnblister)
             {184155, quest=62804}, -- Recovered Containment Pack (oily)
             184301, -- Twenty-Loop Violet Girdle (violet)
         },

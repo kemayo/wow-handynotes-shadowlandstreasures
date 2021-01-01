@@ -201,7 +201,7 @@ ns.RegisterPoints(1565, {
     [49654015] = travel,
     [50202500] = travel,
     [50154185] = travel,
-    [56002100] = travel,
+    [55002100] = travel,
     [24755197] = naughty, -- Naughty Story
     [33605740] = naughty,
     [39806560] = naughty,
@@ -390,6 +390,7 @@ ns.RegisterPoints(1565, {
         npc=167721,
         loot={
             175711, -- Slumberwood Band
+            {183828,covenant=Enum.CovenantType.Necrolord,quest=62574,}, -- Friendly Bugs
         },
         note="Use AOE or a flare on the foggy area",
     },
