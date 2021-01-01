@@ -683,3 +683,86 @@ ns.RegisterPoints(1525, {
         note="Use {item:173939} from nearby mobs near braziers",
     },
 })
+
+-- It's Always Sinny In Revendreth
+ns.RegisterPoints(1525, {
+    [73005200] = { -- Archivist Fane
+        label="{npc:160248}",
+        note="Complete quests through {quest:57929}, then spend {currency:1816} to get random sinstones that summon an inquisitor",
+    },
+    -- Inquisitors
+    [76205210] = { -- Inquisitor Traian
+        criteria=48136,
+        npc=159151,
+        requires_item=172999,
+    },
+    [64704640] = { -- Inquisitor Otilia
+        criteria=48135,
+        npc=156918,
+        requires_item=172998,
+    },
+    [67254340] = { -- Inquisitor Petre
+        criteria=48134,
+        npc=156919,
+        requires_item=172997,
+    },
+    [69754720] = { -- Inquisitor Sorin
+        criteria=48133,
+        npc=156916,
+        requires_item=172996,
+    },
+    [75304415] = { -- High Inquisitor Gabi
+        npc=159152,
+        requires_item=173000,
+        criteria=48137,
+        loot={
+            180500, -- High Inquisitor's Bloody Cloak
+        },
+    },
+    [71254235] = { -- High Inquisitor Radu
+        criteria=48138,
+        npc=159153,
+        requires_item=173001,
+        loot={
+            180499, -- High Inquisitor's Cloak of Fanaticism
+        },
+    },
+    [72105315] = { -- High Inquisitor Dacian
+        criteria=48140,
+        npc=159155,
+        requires_item=173006,
+        loot={
+            180496, -- High Inquisitor's Drape of Shame
+        },
+    },
+    [69755225] = { -- High Inquisitor Magda
+        criteria=48139,
+        npc=159154,
+        requires_item=173005,
+        loot={
+            180498, -- High Inquisitor's Obscene Shawl
+        },
+    },
+    [69654540] = { -- Grand Inquisitor Aurica
+        criteria=48142,
+        npc=159157,
+        requires_item=173008,
+        loot={
+            177803, -- Grand Inquisitor's Stave
+            184210, -- Spiked Cudgel fo the Inquisition (sic)
+        },
+    },
+    [64505275] = { -- Grand Inquisitor Nicu
+        criteria=48141,
+        npc=159156,
+        requires_item=173007,
+        loot={
+            177803, -- Grand Inquisitor's Stave
+            184210, -- Spiked Cudgel fo the Inquisition (sic)
+        },
+    },
+}, {
+    achievement=14276,
+    note="Spend {currency:1816} with {npc:160248} to try to summon this inquisitor",
+    icon=true,
+})
