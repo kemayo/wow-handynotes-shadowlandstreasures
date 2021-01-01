@@ -218,10 +218,10 @@ ns.RegisterPoints(1525, {
 
 local makeover = {achievement=14748, atlas="buildanabomination-32x32", minimap=true, covenant=Enum.CovenantType.Necrolord}
 ns.RegisterPoints(1536, { -- Maldraxxus
-    [47104900] = {criteria=50546, quest=62758, inbag=184036, note="Buy from {npc:164588}"}, -- Dundae's Hat
-    [54203060] = {criteria=50546, quest=62758, inbag=184036, note="Buy from {npc:169698}"}, -- Dundae's Hat
-    [40204120] = {criteria={50551,50556,50558}, quest={62817,62824,62825}, inbag=184203, note="Buy three from {npc:168429}"}, -- Skull Fungus and Shoulder Sprouts and Back Mushrooms
-    [53204120] = {criteria=49870, quest=61562, inbag=181798, note="Buy from {npc:169964}"}, -- Trustworthy Doll
+    [47104900] = {criteria=50546, quest=62758, inbag=184036, note="Buy {item:184036} from {npc:164588}"}, -- Dundae's Hat
+    [54203060] = {criteria=50546, quest=62758, inbag=184036, note="Buy {item:184036} from {npc:169698}"}, -- Dundae's Hat
+    [40204120] = {criteria={50551,50556,50558}, quest={62817,62824,62825}, inbag=184203, note="Buy three {item:184203} from {npc:168429}... one at a time"}, -- Skull Fungus and Shoulder Sprouts and Back Mushrooms
+    [53204120] = {criteria=49870, quest=61562, inbag=181798, note="Buy {item:181798} from {npc:169964}"}, -- Trustworthy Doll
     [60004470] = {criteria=49920, quest=62571, inbag=183831, note="Probably need to glide down from the necropolis"}, -- Safe Fall Pack
     -- No known location, probably Chordy:
     -- [] = {criteria=50541, quest=62762, inbag=184039,}, -- Chef Hat
@@ -251,7 +251,7 @@ ns.RegisterPoints(1536, { -- Maldraxxus
     -- [] = {criteria=49919, quest=62570, inbag=183833,}, -- Collector Kash's Pack (rare loot)
 }, makeover)
 ns.RegisterPoints(1533, { -- Bastion
-    [33403640] = {criteria=49871, quest=62479, inbag=183786, note="Buy from {npc:158625}"}, -- Happiness Bird
+    [33403640] = {criteria=49871, quest=62479, inbag=183786, note="Buy {item:183786} from {npc:158625}"}, -- Happiness Bird
 }, makeover)
 -- ns.RegisterPoints(1565, { -- Ardenweald
 --     [] = {criteria=49923, quest=62574, inbag=183828,}, -- Butterflies (on slumbering emperor)
