@@ -482,10 +482,10 @@ local function handle_tooltip(tooltip, point)
                         if item.class then
                             link = TEXT_MODE_A_STRING_VALUE_TYPE:format(link, RAID_CLASS_COLORS[item.class]:WrapTextInColorCode(LOCALIZED_CLASS_NAMES_FEMALE[item.class]))
                         end
-                        local known = ns.itemIsKnown(item)
-                        if known ~= nil and (known == true or not ns.itemRestricted(item)) then
-                            link = link .. CreateAtlasMarkup(known and "common-icon-checkmark" or "common-icon-redx")
-                        end
+                    end
+                    local known = ns.itemIsKnown(item)
+                    if known ~= nil and (known == true or not ns.itemRestricted(item)) then
+                        link = link .. CreateAtlasMarkup(known and "common-icon-checkmark" or "common-icon-redx")
                     end
                     tooltip:AddDoubleLine(label, quick_texture_markup(icon) .. link)
                 else

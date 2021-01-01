@@ -289,6 +289,84 @@ local allCriteriaComplete = testMaker(function(criteria, achievement)
     return true
 end)
 
+local brokenItems = {
+    -- itemid : {appearanceid, sourceid}
+    [153268] = {25124, 90807}, -- Enclave Aspirant's Axe
+}
+local function GetAppearanceAndSource(itemLinkOrID)
+    local itemID = GetItemInfoInstant(itemLinkOrID)
+    if not itemID then return end
+    local appearanceID, sourceID = C_TransmogCollection.GetItemInfo(itemLinkOrID)
+    if not appearanceID then
+        -- sometimes the link won't actually give us an appearance, but itemID will
+        -- e.g. mythic Drape of Iron Sutures from Shadowmoon Burial Grounds
+        appearanceID, sourceID = C_TransmogCollection.GetItemInfo(itemID)
+    end
+    if not appearanceID and brokenItems[itemID] then
+        -- ...and there's a few that just need to be hardcoded
+        appearanceID, sourceID = unpack(brokenItems[itemID])
+    end
+    return appearanceID, sourceID
+end
+local canLearnCache = {}
+local function CanLearnAppearance(itemLinkOrID)
+    local itemID = GetItemInfoInstant(itemLinkOrID)
+    if not itemID then return end
+    if canLearnCache[itemID] then
+        return canLearnCache[itemID]
+    end
+    -- First, is this a valid source at all?
+    local canBeChanged, noChangeReason, canBeSource, noSourceReason = C_Transmog.GetItemInfo(itemID)
+    if not canBeSource then
+        canLearnCache[itemID] = false
+        return false
+    end
+    local appearanceID = GetAppearanceAndSource(itemLinkOrID)
+    if not appearanceID then
+        canLearnCache[itemID] = false
+        return false
+    end
+    if not C_TransmogCollection.GetAppearanceSources(appearanceID) then
+        -- This returns nil for inappropriate appearances
+        canLearnCache[itemID] = false
+        return false
+    end
+    canLearnCache[itemID] = true
+    return true
+end
+local hasAppearanceCache = {}
+local function HasAppearance(itemLinkOrID)
+    local itemID = GetItemInfoInstant(itemLinkOrID)
+    if not itemID then
+        return
+    end
+    if hasAppearanceCache[itemID] ~= nil then
+        return hasAppearanceCache[itemID]
+    end
+    local appearanceID, sourceID = GetAppearanceAndSource(itemLinkOrID)
+    if not appearanceID then
+        hasAppearanceCache[itemID] = false
+        return false
+    end
+    local _, _, _, _, sourceKnown = C_TransmogCollection.GetAppearanceSourceInfo(sourceID)
+    if sourceKnown then
+        hasAppearanceCache[itemID] = true
+        return true
+    end
+    local sources = C_TransmogCollection.GetAppearanceSources(appearanceID)
+    if not sources then
+        hasAppearanceCache[itemID] = false
+        return false
+    end
+    for _, source in pairs(sources) do
+        if source.isCollected == true then
+            hasAppearanceCache[itemID] = true
+            return true
+        end
+    end
+    return false
+end
+
 local function PlayerHasMount(mountid)
     return (select(11, C_MountJournal.GetMountInfoByID(mountid)))
 end
@@ -306,7 +384,10 @@ ns.itemRestricted = function(item)
     return false
 end
 ns.itemIsKnowable = function(item)
-    return type(item) == "table" and (item.toy or item.mount or item.pet or item.quest) and not ns.itemRestricted(item)
+    if type(item) == "table" then
+        return (item.toy or item.mount or item.pet or item.quest or CanLearnAppearance(item[1])) and not ns.itemRestricted(item)
+    end
+    return CanLearnAppearance(item)
 end
 ns.itemIsKnown = function(item)
     -- returns true/false/nil for yes/no/not-knowable
@@ -318,7 +399,9 @@ ns.itemIsKnown = function(item)
         if item.mount then return PlayerHasMount(item.mount) end
         if item.pet then return PlayerHasPet(item.pet) end
         if item.quest then return C_QuestLog.IsQuestFlaggedCompleted(item.quest) or C_QuestLog.IsOnQuest(item.quest) end
+        if CanLearnAppearance(item[1]) then return HasAppearance(item[1]) end
     end
+    if CanLearnAppearance(item) then return HasAppearance(item) end
 end
 local hasKnowableLoot = testMaker(ns.itemIsKnowable, doTestAny)
 local allLootKnown = testMaker(function(item)
