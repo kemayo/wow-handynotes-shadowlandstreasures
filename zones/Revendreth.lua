@@ -180,6 +180,7 @@ ns.RegisterPoints(1525, {
             q(62048, "Day 5") ..": {item:182597} from {npc:171808} near the Night Market\n"..
             q(62050, "Day 6") ..": 3x {item:179271} from {npc:167815} by the Hole in the Wall\n"
         end,
+        level=60,
     },
     --
     -- [45507810] = {
@@ -188,6 +189,21 @@ ns.RegisterPoints(1525, {
     --     note="Jump down",
     --     junk=true,
     -- },
+})
+ns.RegisterPoints(52, { -- Westfall
+    [46573779] = {},
+    [48692024] = {},
+    [51023908] = {},
+    [52163356] = {},
+    [55142742] = {},
+    [56263017] = {},
+    [56523657] = {},
+}, {
+    label="{item:182581}",
+    quest=62038,
+    note="Collect 8 for {npc:173468:Dead Blanchy} in Revendreth",
+    atlas="stablemaster",scale=1.2,
+    level=60,
 })
 
 -- Carriages
