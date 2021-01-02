@@ -400,8 +400,9 @@ ns.itemIsKnown = function(item)
         if item.pet then return PlayerHasPet(item.pet) end
         if item.quest then return C_QuestLog.IsQuestFlaggedCompleted(item.quest) or C_QuestLog.IsOnQuest(item.quest) end
         if CanLearnAppearance(item[1]) then return HasAppearance(item[1]) end
+    elseif CanLearnAppearance(item) then
+        return HasAppearance(item)
     end
-    if CanLearnAppearance(item) then return HasAppearance(item) end
 end
 local hasKnowableLoot = testMaker(ns.itemIsKnowable, doTestAny)
 local allLootKnown = testMaker(function(item)
