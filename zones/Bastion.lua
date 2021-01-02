@@ -453,6 +453,7 @@ ns.RegisterPoints(1533, {
             {184413, toy=true}, -- Mnemonic Attunement Pane
         },
         level=60,
+        note="Drag a {npc:171018} through others, until it gets 10x {spell:333558}"
     },
     [40655305] = { -- Wingflayer the Cruel
         achievement=14307, criteria=50600,
