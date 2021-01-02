@@ -212,7 +212,7 @@ ns.RegisterPoints(1533, {
     [56201731] = shard{quest=61281,note="Ledge above the Memorial Offering, need to jump down from above"},
     [59881391] = shard{quest=61282,note="Work your way down from above"},
     [52440942] = shard{quest=61283,note="Inside Covinkles' Workshop, behind some crates"},
-    [46691804] = shard{quest=61284},
+    [46691804] = shard{quest=61284,note="Up on a ledge, path starts across water to the south @ ~45.7 19.9"},
     [44942845] = shard{quest=61285},
     [42302402] = shard{quest=61286,note="Up on the ledge"},
     [37102468] = shard{quest=61287,note="Run around the ledge from the north"},
