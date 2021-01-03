@@ -12,7 +12,8 @@ ns.defaults = {
         upcoming = true,
         found = false,
         collectablefound = true,
-        achievedfound = false,
+        achievedfound = true,
+        questfound = true,
         icon_scale = 1.0,
         icon_alpha = 1.0,
         icon_item = false,
@@ -122,6 +123,7 @@ ns.options = {
                     desc = "Whether to anchor the tooltips to the individual points or to the map",
                     order = 15,
                 },
+                -- the "found" cluster
                 found = {
                     type = "toggle",
                     name = "Show found",
@@ -139,6 +141,12 @@ ns.options = {
                     name = "Count collectables as found",
                     desc = "For account-level items like mounts, pets, and toys, count them being known as this being found",
                     order = 22,
+                },
+                questfound = {
+                    type = "toggle",
+                    name = "Count tracking quest as found",
+                    desc = "Lots of things have a hidden quest that tracks whether you've looted them this day / week /ever and thus whether you can loot them again",
+                    order = 23,
                 },
                 upcoming = {
                     type = "toggle",
@@ -415,6 +423,42 @@ local allLootKnown = testMaker(function(item)
     return known
 end)
 
+local function everythingFound(point)
+    local ret
+    if ns.db.collectablefound and point.loot and hasKnowableLoot(point.loot) then
+        if not allLootKnown(point.loot) then
+            return false
+        end
+        ret = true
+    end
+    if ns.db.achievedfound and point.achievement then
+        if point.criteria then
+            if not allCriteriaComplete(point.criteria, point.achievement) then
+                return false
+            end
+        else
+            local completedByMe = select(13, GetAchievementInfo(point.achievement))
+            if not completedByMe then
+                return false
+            end
+        end
+        ret = true
+    end
+    if ns.db.questfound and point.quest then
+        if not allQuestsComplete(point.quest) then
+            return false
+        end
+        ret = true
+    end
+    if point.follower then
+        if not C_Garrison.IsFollowerCollected(point.follower) then
+            return false
+        end
+        ret = true
+    end
+    return ret
+end
+
 local zoneHidden
 zoneHidden = function(uiMapID)
     if ns.db.zonesHidden[uiMapID] then
@@ -492,30 +536,11 @@ ns.should_show_point = function(coord, point, currentZone, isMinimap)
     if point.faction and point.faction ~= ns.playerFaction then
         return false
     end
-    if not ns.db.found and (not point.always) then
-        if ns.db.collectablefound and point.loot and hasKnowableLoot(point.loot) and allLootKnown(point.loot) then
+    if not ns.db.found and not point.always then
+        if everythingFound(point) == true then
             return false
         end
-        if point.quest and (not point.achievement or not ns.db.achievedfound) then
-            if allQuestsComplete(point.quest) then
-                return false
-            end
-        elseif point.achievement then
-            local completedByMe = select(13, GetAchievementInfo(point.achievement))
-            if completedByMe then
-                return false
-            end
-            if point.criteria and allCriteriaComplete(point.criteria, point.achievement) then
-                return false
-            end
-        end
-        if point.follower and C_Garrison.IsFollowerCollected(point.follower) then
-            return false
-        end
-        -- todo: clean this one up once all the data is updated:
-        if point.toy and point.item and PlayerHasToy(point.item) then
-            return false
-        end
+        -- the rest are proxies for the actual "found" status:
         if point.inbag and itemInBags(point.inbag) then
             return false
         end
