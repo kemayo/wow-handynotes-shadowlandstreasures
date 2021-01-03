@@ -199,7 +199,7 @@ ns.RegisterPoints(1536, {
         note="Get 2 stacks of {spell:306272} while this quest is up",
         requires_item={180771, 182163, all=true},
     },
-    [76755610] = {
+    [76105550] = {
         label="{spell:327367:Edible Redcap}",
         note="Eat 4x",
         requires_item={180771, 182163, all=true},
@@ -699,7 +699,7 @@ ns.RegisterPoints(1536, {
             50397, -- Azmogal
             50398, -- Unbreakable Urtz
             50399, -- Xantuth the Blighted
-            50400, -- Mistress Dyrax
+            50400, -- Mistress Dyrax (quest:62786)
             50402, -- Devmorta
             50403, -- Ti'or
             48874  -- Sabriel the Bonecleaver
