@@ -385,6 +385,7 @@ local get_point_info = function(point, isMinimap)
             category = "junk"
         end
         if not isMinimap then
+            cache_string(point.label)
             cache_string(point.note)
             cache_loot(point.loot)
         end
