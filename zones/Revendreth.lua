@@ -160,14 +160,23 @@ ns.RegisterPoints(1525, {
         },
         note="Kill {npc:160821}, do 7 days of dailies for {npc:173499}, get a mount",
     },
-    -- Blanchy
-    [63134311] = {
-        quest=62050, -- progress:62038, 62042, 62047, 62049, 62048; daily-done is 62107
+    --
+    -- [45507810] = {
+    --     label="Stoneborn Satchel",
+    --     quest=60896, -- 60980
+    --     note="Jump down",
+    --     junk=true,
+    -- },
+})
+
+-- Dead Blanchy
+
+ns.RegisterPoints(1525, {
+    [63134311] = { -- Dead Blanchy
+        quest={62050, 62107, any=true}, -- progress:62038, 62042, 62047, 62049, 62048; daily-done is 62107
         loot={
             {182614, mount=1414}, -- Blanchy's Reins
         },
-        atlas="stablemaster",scale=1.2,
-        minimap=true,
         note=function()
             local function q(quest, label)
                 return (C_QuestLog.IsQuestFlaggedCompleted(quest) and GREEN_FONT_COLOR or RED_FONT_COLOR):WrapTextInColorCode(label)
@@ -182,15 +191,43 @@ ns.RegisterPoints(1525, {
         end,
         level=60,
     },
-    --
-    -- [45507810] = {
-    --     label="Stoneborn Satchel",
-    --     quest=60896, -- 60980
-    --     note="Jump down",
-    --     junk=true,
-    -- },
+    [63406180] = { -- Day 2: brush from Snickersnee
+        quest=62042,
+        hide_before=62038,
+        inbag=182585,
+        label="{npc:173468}: {item:182585}",
+        note="Day 2: Buy {item:182585} for {npc:173468}",
+    },
+    -- Day 4's horseshoes are everywhere
+    [63306160] = { -- Day 4: fresh water
+        quest=62047,
+        hide_before=62042,
+        inbag=182620,
+        label="{npc:173468}: {item:182620}",
+        note="Day 4: Take to Bastion or Ardenweald and use in water",
+    },
+    [51007881] = { -- Day 5: blanket
+        quest=62048,
+        hide_before=62047,
+        inbag=182597,
+        label="{npc:173468}: {item:182597}",
+        note="Day 5: Buy from {npc:171808}",
+    },
+    [40804660] = { -- Day 6: apples
+        quest=62050,
+        hide_before=62048,
+        inbag=179271,
+        label="{npc:173468}: 3x{item:179271}",
+        note="Day 6: Buy 3x {item:179271} from {npc:167815}",
+    },
+}, {
+    atlas="stablemaster",scale=1.2,
+    minimap=true,
+    level=60,
+    upcoming=false,
 })
 ns.RegisterPoints(52, { -- Westfall
+    -- Day 1: oats
     [46573779] = {},
     [48692024] = {},
     [51023908] = {},
@@ -199,9 +236,9 @@ ns.RegisterPoints(52, { -- Westfall
     [56263017] = {},
     [56523657] = {},
 }, {
-    label="{item:182581}",
+    label="{npc:173468}: {item:182581}",
     quest=62038,
-    note="Collect 8 for {npc:173468:Dead Blanchy} in Revendreth",
+    note="Day 1: Collect 8 for {npc:173468:Dead Blanchy} in Revendreth",
     atlas="stablemaster",scale=1.2,
     minimap=true,
     level=60,
