@@ -203,6 +203,7 @@ ns.RegisterPoints(52, { -- Westfall
     quest=62038,
     note="Collect 8 for {npc:173468:Dead Blanchy} in Revendreth",
     atlas="stablemaster",scale=1.2,
+    minimap=true,
     level=60,
 })
 
