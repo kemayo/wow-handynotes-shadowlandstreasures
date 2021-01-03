@@ -1,5 +1,14 @@
 # Changelog
 
+## Changed in v20
+
+* Add the inquisitors for It's Always Sinny In Revendreth
+* Pull in datamined loot from [SilverDragon](https://www.curseforge.com/wow/addons/silver-dragon), because I might as well share data I've acquired with myself...
+* Better type labels for items in tooltips
+* Count transmog for completion purposes. This will only consider items for which your current character could learn the appearance
+* Various improved descriptions
+* Show where to get Handful of Oats for Blanchy in Westfall
+
 ## Changed in v19
 
 * Support items with associated quests for completion purposes
