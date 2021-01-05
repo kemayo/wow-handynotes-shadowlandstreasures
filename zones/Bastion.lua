@@ -100,7 +100,16 @@ ns.RegisterPoints(1533, { -- Bastion
             180063, -- Unearthly Chime
         },
         level=60,
-        note="Obtain the {spell:333063:Proof of Courage} by interacting with {spell:333365:Agthia's Flame} at 39.1 54.4 and completing her test to unlock the treasure",
+        note="Obtain the {spell:333063:Proof of Courage} by interacting with {spell:333365:Agthia's Flame} at 39.1 54.4. Then follow the Path of Courage braziers to reach the treasure.",
+    },
+    [39105440] = {
+        achievement=14311, criteria=50058, -- Gift of Agthia - Agthia's Flame
+        quest=60893,
+        label="{spell:333365:Agthia's Flame}",
+        level=60,
+        note="Take {spell:333063:Proof of Courage} to 35.1 58.0, by following and lighting the braziers",
+        atlas="MantidTower",
+        minimap=true,
     },
     [65207030] = {
         achievement=14311, criteria=50059, -- Gift of Vesiphone
@@ -139,11 +148,12 @@ ns.RegisterPoints(1533, { -- Bastion
         note="Obtain the {spell:333070:Proof of Loyalty} by taking the {spell:333912:Flame of Devotion} at 23.9 24.8 and bringing it to the nearby brazier",
     },
     [23902480] = {
-        achievement=14311, criteria=50062,
+        achievement=14311, criteria=50062, -- Gift of Devos - Flame of Devotion
         quest=60895,
         note="Taking the {spell:333912:Flame of Devotion} to the brazier at 27.6 21.7",
         atlas="MantidTower",
         minimap=true,
+        level=60,
     },
 })
 
@@ -425,9 +435,10 @@ ns.RegisterPoints(1533, {
     },
     [30355515] = { -- Reekmonger
         achievement=14307, criteria=50616,
-        quest=nil,
+        quest=61101,
         npc=171327,
         --loot={},
+        note="Kill enemies in the Temple of Courage to summon",
     },
     [61305090] = { -- Selena the Reborn
         achievement=14307, criteria=50593,
