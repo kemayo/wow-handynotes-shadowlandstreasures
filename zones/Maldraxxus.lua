@@ -346,6 +346,7 @@ ns.RegisterPoints(1536, { -- Maldraxxus
     -- [39974393] = {
     -- [40805470] = {
     -- [34755495] = {
+    -- [36494974] = {
     --     quest=60556,
     --     label="Sprouting Growth",
     --     note="Grapple up, jump down",

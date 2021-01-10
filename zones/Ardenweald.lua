@@ -423,7 +423,7 @@ ns.RegisterPoints(1565, {
         achievement=14353, criteria={
             48708, -- Argus
             48709, -- Azshara
-            48706, -- Gul'dan
+            48706, -- Gul'dan (quest: 61204)
             48704, -- Jaina
             48707, -- Kil'jaeden (quest: 61203)
             48710, -- N'Zoth

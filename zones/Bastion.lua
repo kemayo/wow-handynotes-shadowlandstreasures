@@ -476,7 +476,7 @@ ns.RegisterPoints(1533, {
     },
     [60109350] = { -- Sundancer
         achievement=14307, criteria=50601,
-        quest=nil,
+        quest=60860,
         npc=170548,
         note="Use the statue and a {item:180445:Skystrider Glider}",
         loot={
