@@ -190,12 +190,12 @@ ns.RegisterPoints(1533, {
         upcoming = false,
     },
     [39057704] = shard{quest=61225,note="Platform under the bridge"},
-    [43637622] = shard{quest=61235},
+    [43637622] = shard{quest=61235,note="On the waterfall, go around and jump down"},
     [48427273] = shard{quest=61236,note="On the arch, glider to it from the cliffs nearby"},
     [52677555] = shard{quest=61237},
     [53317362] = shard{quest=61238,note="Under the bridge"},
     [53498060] = shard{quest=61239},
-    [55968666] = shard{quest=61241},
+    [55968666] = shard{quest=61241,note="Ledge above the door"},
     [61048566] = shard{quest=61244},
     [58108008] = shard{quest=61245},
     [56877498] = shard{quest=61247,note="On the wall, carefully jump down from the balcony above"},
@@ -288,6 +288,15 @@ ns.RegisterPoints(1533, { -- Bastion
     -- [24531794] = {
     --     quest=60663,
     --     label="Gilded Chest",
+    -- },
+    -- [47692635] = {
+    --     quest=60798,
+    --     label="Skyward Bell",
+    -- },
+    -- [46821989] = {
+    --     quest=60712,
+    --     label="Silver Strongbox",
+    --     note="Requires Ripe Purian",
     -- },
 })
 
@@ -454,6 +463,9 @@ ns.RegisterPoints(1533, {
         achievement=14307, criteria=50618,
         quest=61634,
         npc=156339,
+        loot={
+            184365, -- Aegis of Salvation
+        },
         note="Requires Kyrian player to summon",
     },
     [43502525] = { -- Unstable Memory

@@ -327,6 +327,7 @@ ns.RegisterPoints(1536, { -- Maldraxxus
     --     covenant="Necrolord",
     --     note="Channel anima to the Chosen. Three runes nearby on the ground",
     -- },
+    -- [32223710] = {
     -- [28723397] = {
     --     quest=61115, -- progress runes: 61120, 61121, 61122
     --     label="Runebound Coffer",
@@ -368,6 +369,10 @@ ns.RegisterPoints(1536, { -- Maldraxxus
     --     junk=true,
     --     level=60,
     -- },
+    -- [65244965] = {
+    --     quest=61090,
+    --     label="Sprouting Growth",
+    -- },
     -- [76054945] = {
     -- [70965072] = {
     --     quest=61090,
@@ -376,9 +381,14 @@ ns.RegisterPoints(1536, { -- Maldraxxus
     --     junk=true,
     --     level=60,
     -- },
+    -- [51401916] = {
     -- [54261491] = {
     --     quest=61111,
     --     label="Bloated Lootfly",
+    -- },
+    -- [70377628] = {
+    --     quest=61093,
+    --     label="Slime-Coated Crate",
     -- },
 })
 
@@ -466,7 +476,7 @@ ns.RegisterPoints(1536, {
         npc=174108,
         loot={
             184174, -- Clasp of Death
-            181810, -- Phylactery of the Dead Conniver (maybe not?)
+            {181810,covenant=Enum.CovenantType.Necrolord,}, -- Phylactery of the Dead Conniver (Necro campaign story gated?)
         },
         level=60,
     },

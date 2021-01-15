@@ -61,7 +61,7 @@ ns.RegisterPoints(1525, { -- Revendreth
     },
     [47505530] = {
         achievement=14314, criteria=50084, -- Forbidden Chamber
-        quest=62243,
+        quest=62243, -- 60200 for unlocking the door
         loot={
             {184075, toy=true}, -- Stonewrought Sentry
         },
@@ -166,6 +166,19 @@ ns.RegisterPoints(1525, {
     --     quest=60896, -- 60980
     --     note="Jump down",
     --     junk=true,
+    -- },
+    -- [36535153] = {
+    --     label="Stoneborn Satchel",
+    --     quest=60985,
+    -- },
+    -- [55384235] = {
+    --     label="Stoneborn Satchel",
+    --     quest=60942,
+    -- },
+    -- [74896194] = {
+    --     label="Secret Treasure",
+    --     quest=60199,
+    --     note="Use the Cracked Crate to get inside",
     -- },
 })
 
@@ -572,7 +585,7 @@ ns.RegisterPoints(1525, {
         quest=61618,
         npc=159496,
         loot={
-            180939, -- Mantle of the Forgemaster's Dark Blades
+            {180939,covenant=Enum.CovenantType.Venthyr}, -- Mantle of the Forgemaster's Dark Blades
         },
         -- covenant=Enum.CovenantType.Venthyr,
         note="A Venthyr player channeling Dominance Keep must click the hammer",
@@ -592,7 +605,7 @@ ns.RegisterPoints(1525, {
         npc=165290,
         loot={
             183720, -- Dredbatskin Jerkin
-            {180461, mount=1310}, -- Horrid Brood Dredwing
+            {180461, mount=1310, covenant=Enum.CovenantType.Venthyr}, -- Horrid Brood Dredwing
         },
         -- covenant=Enum.CovenantType.Venthyr,
         note="A Venthyr player channeling Wanecrypt Hill must fire the Dredterror Ballista; fetch the bolt from 42.7 73.4",
@@ -608,6 +621,7 @@ ns.RegisterPoints(1525, {
         quest=59900,
         npc=166679,
         loot={
+            180874, -- Gargon Whistle
             {180581, mount=1298, covenant=Enum.CovenantType.Venthyr}, -- Hopecrusher Gargon
         },
     },
