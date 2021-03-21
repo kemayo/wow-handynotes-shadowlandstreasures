@@ -177,6 +177,7 @@ ns.RegisterPoints(1543, {
         npc=166398,
         loot={
             183141, -- Stygic Magma
+            185473, -- Soulforger's Tools
         },
         level=60,
     },

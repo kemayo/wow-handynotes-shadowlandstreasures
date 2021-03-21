@@ -569,7 +569,7 @@ ns.RegisterPoints(1525, {
         loot={
             180502, -- Adrastia's Executioner Gloves
         },
-        note="Flies around the area",
+        note="Flies around the area; free {npc:161299} nearby until she lands",
     },
     [62504715] = { -- Famu the Infinite
         achievement=14310, criteria=48815,
@@ -586,6 +586,8 @@ ns.RegisterPoints(1525, {
         npc=159496,
         loot={
             {180939,covenant=Enum.CovenantType.Venthyr}, -- Mantle of the Forgemaster's Dark Blades
+            180489,
+            180709,
         },
         -- covenant=Enum.CovenantType.Venthyr,
         note="A Venthyr player channeling Dominance Keep must click the hammer",

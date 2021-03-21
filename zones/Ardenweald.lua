@@ -252,7 +252,9 @@ ns.RegisterPoints(1565, {
         achievement=14309, criteria=48794,
         quest=58987,
         npc=163229,
-        --loot={},
+        loot={
+            181395, -- Dustbreak Maul
+        },
     },
     [58403230] = { -- Egg-Tender Leh'go
         achievement=14309, criteria=48790,
@@ -282,6 +284,7 @@ ns.RegisterPoints(1565, {
         loot={
             {183196, pet=3035}, -- Lavender Nibbler
         },
+        note="Kill {npc:165420}s over the shaking ground to spawn",
     },
     [27905250] = { -- Gormtamer Tizo
         achievement=14309, criteria=48781,
@@ -307,6 +310,8 @@ ns.RegisterPoints(1565, {
         quest=59221,
         npc=160448,
         loot={
+            179593, -- Darkreach Mask (cloth)
+            179594, -- Witherscorn Guise (leather)
             179596, -- Drust Mask of Dominance
             {183091, quest=62246}, -- Lifewoven Bracelet
         },

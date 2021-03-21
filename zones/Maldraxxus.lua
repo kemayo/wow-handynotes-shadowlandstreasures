@@ -231,7 +231,6 @@ ns.RegisterPoints(1536, { -- Maldraxxus
     -- [] = {criteria=49926, quest=62583, inbag=184225,}, -- Hitchhiker
     -- [] = {criteria=50554, quest=62759, inbag=184037,}, -- Lovely Candle Display
     -- [] = {criteria=49918, quest=62573, inbag=183829,}, -- Sticky Cat
-    -- [] = {criteria=50560, quest=62760, inbag=184038,}, -- Trained Corpselice
     -- [] = {criteria=49872, quest=62469, inbag=183752,}, -- Engineering Pack
     -- [] = {criteria=49921, quest=62576, inbag=nil,}, -- Plague Pack (just superior parts)
     -- [] = {criteria=49875, quest=62468, inbag=nil,}, -- Vesitgial Wings (just cooking mats)
@@ -239,6 +238,7 @@ ns.RegisterPoints(1536, { -- Maldraxxus
     -- [] = {criteria=50559, quest=62823, inbag=nil,}, -- Underpowered Gravity Pack
     -- [] = {criteria=49917, quest=62582, inbag=nil,}, -- Spare Weapon
     -- Known but not work waypointing:
+    -- [] = {criteria=50560, quest=62760, inbag=184038,}, -- Trained Corpselice (on Smorgas)
     -- [] = {criteria=49867, quest=61712, inbag=nil,}, -- Holiday Hat (vendor crafting mats)
     -- [44103990] = {criteria=49922, quest=62575, inbag=183827,}, -- Armor Plating (Blackhound Cache)
     -- [] = {criteria=49874, quest=62481, inbag=183789, note="Search with {npc:158259} anywhere"}, -- Six-League Pack
@@ -417,6 +417,7 @@ ns.RegisterPoints(1536, {
             184189, -- Stained Fleshgorer
             {183833, quest=62570, covenant=Enum.CovenantType.Necrolord}, -- Kash's Bag of Junk (Necro only?)
             {181797, quest=61561, covenant=Enum.CovenantType.Necrolord}, -- Strange Cloth (Necro only?)
+            {183692, quest=62408, covenant=Enum.CovenantType.Necrolord}, -- Jagged Bonesaw (Crypt Couture)
         },
         level=60,
     },
@@ -498,6 +499,7 @@ ns.RegisterPoints(1536, {
         loot={
             182205, -- Scarab-Shell Faceguard
             183700, -- Forgotten Summoner's Shoulderpads
+            {181811,covenant=Enum.CovenantType.Necrolord}, -- Beckoner's Shadowy Crystal
         },
         level=60,
         note="Only when the {quest:58490} world quest is up",
@@ -519,6 +521,7 @@ ns.RegisterPoints(1536, {
             {181283, pet=2964}, -- Foulwing Buzzer
             184184, -- Ravenomous's Acid-Tipped Stinger
         },
+        note="Kill {npc:159901} nearby to spawn",
         level=60,
     },
     [51754440] = { -- Sabriel the Bonecleaver
@@ -526,6 +529,7 @@ ns.RegisterPoints(1536, {
         quest=58784,
         npc=168147,
         loot={
+            184291, -- Tempered Boneplate Waistguard
             {181815, mount=1370, covenant=Enum.CovenantType.Necrolord}, -- Armored Bonehoof Tauralus
             -- {182083, mount=nil}, -- Bonecleaver's Skullboar (removed?)
         },
@@ -562,6 +566,7 @@ ns.RegisterPoints(1536, {
             {181266, pet=2956}, -- Feasting Larva
             {181265, pet=2955}, -- Corpselouse Larva
             184299, -- Goresoaked Carapace
+            {184038, quest=62760, covenant=Enum.CovenantType.Necrolord,}, -- Trained Corpselice
         },
         minimap=true, -- no vignette until lump used
         note="Use the Bloody Lump",
@@ -614,7 +619,8 @@ ns.RegisterPoints(1536, {
         npc=157125,
         loot={
             184285, -- Boneclutched Shackles
-            {181804, covenant=Enum.CovenantType.Necrolord}, -- Trophy of the Reborn Bonelord (Necrolord only?)
+            {181804, covenant=Enum.CovenantType.Necrolord}, -- Trophy of the Reborn Bonelord
+            {183690, quest=62404, covenant=Enum.CovenantType.Necrolord}, -- Ashen Ink (Crypt Couture)
         },
         level=60,
         note="Do {quest:57245} at 26.3 42.8, then use the {item:175827} to summon",
