@@ -1,5 +1,12 @@
 # Changelog
 
+## Changed in v21
+
+* Updated for 9.0.5
+* All the Blanchy steps now
+* Many improvements to Bastion
+* Much new loot pulled in from wowhead
+
 ## Changed in v20
 
 * Add the inquisitors for It's Always Sinny In Revendreth
