@@ -492,25 +492,23 @@ ns.RegisterPoints(1536, {
         },
         level=60,
     },
-    [53706130] = { -- Nirvaska the Summoner
+    [50356330] = { -- Nirvaska the Summoner
         achievement=14308, criteria=48868,
-        quest=58875, -- incorrect?
+        quest=58629, -- incorrect?
         npc=161857,
         loot={
-            182205, -- Scarab-Shell Faceguard
             183700, -- Forgotten Summoner's Shoulderpads
             {181811,covenant=Enum.CovenantType.Necrolord}, -- Beckoner's Shadowy Crystal
         },
         level=60,
         note="Only when the {quest:58490} world quest is up",
     },
-    [50356330] = { -- Pesticide
+    [53706130] = { -- Pesticide
         achievement=14308, criteria=48849,
-        quest=58629,
+        quest=58875,
         npc=162767,
         loot={
             182205, -- Scarab-Shell Faceguard
-            183700, -- Forgotten Summoner's Shoulderpads
         },
     },
     [53851875] = { -- Ravenomous
