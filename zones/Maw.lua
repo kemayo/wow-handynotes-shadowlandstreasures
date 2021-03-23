@@ -411,6 +411,8 @@ ns.RegisterPoints(1822, { -- Tremaculum
     }
 })
 
+-- Teleporters
+
 ns.RegisterPoints(1543, {
     [42384216] = {
         label="Waystone to Oribos",
@@ -423,7 +425,7 @@ local riftstone = ns.nodeMaker{
     label="{npc:174962}",
     atlas="WarlockPortalHorde", scale=1.3,
     active={quest=63177},
-    note="Buy access from {npc:162804}"
+    note="Buy access from {npc:162804}",
 }
 -- Chaotic Riftstones
 ns.RegisterPoints(1543, {
@@ -433,4 +435,16 @@ ns.RegisterPoints(1543, {
     -- Second pair
     [23453120] = riftstone{atlas="WarlockPortalAlliance",route=34804360,},
     [34804360] = riftstone{atlas="WarlockPortalAlliance",route={23453120,34804360,r=0,g=0,b=0.75},},
+})
+
+-- Animaflow
+ns.RegisterPoints(1543, {
+    [34201475] = {}, -- Tremaculum
+    [53406365] = {}, -- Beastwarrens (also gated behind Rule 6)
+}, {
+    label="{npc:172925} " .. EXIT,
+    atlas="MagePortalAlliance",
+    active={quest=61600},
+    note="Buy access from {npc:162804}",
+    scale = 1.2,
 })
