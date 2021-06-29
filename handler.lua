@@ -15,7 +15,7 @@ ns.map_spellids = {
 
 ns.currencies = {
     ANIMA = {
-        name = '|cffff8000' .. ANIMA .. '|r',
+        name = '|cffff8000' .. POWER_TYPE_ANIMA .. '|r',
         texture = select(10, GetAchievementInfo(14339)),
     },
     ARTIFACT = {
