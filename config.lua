@@ -515,6 +515,9 @@ ns.should_show_point = function(coord, point, currentZone, isMinimap)
     if ns.hidden[currentZone] and ns.hidden[currentZone][coord] then
         return false
     end
+    if point.ShouldShow and not point:ShouldShow() then
+        return false
+    end
     if point.outdoors_only and IsIndoors() then
         return false
     end
