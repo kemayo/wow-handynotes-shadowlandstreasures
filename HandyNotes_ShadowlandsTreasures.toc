@@ -20,3 +20,4 @@ zones\Maldraxxus.lua
 zones\Revendreth.lua
 zones\Maw.lua
 zones\Oribos.lua
+zones\Korthia.lua
