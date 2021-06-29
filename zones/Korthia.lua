@@ -381,7 +381,7 @@ ns.RegisterPoints(1961, { -- Korthia
         covenant=Enum.CovenantType.Venthyr,
         loot={
             184790, -- Archdruid Van-Yali's Greenthumbs
-            -- {186479, mount=, covenant=Enum.CovenantType.Venthyr}), -- Mastercraft Gravewing
+            -- {186479, mount=, covenant=Enum.CovenantType.Venthyr}, -- Mastercraft Gravewing
         },
         note="Talk to {npc:179974}",
     },

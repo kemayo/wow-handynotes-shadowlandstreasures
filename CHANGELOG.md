@@ -1,5 +1,11 @@
 # Changelog
 
+## Changed in v22
+
+* Updated for 9.1
+* Korthia rares and treasures
+* Maw got animaflow teleporter waypoints
+
 ## Changed in v21
 
 * Updated for 9.0.5
