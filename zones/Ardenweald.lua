@@ -426,8 +426,8 @@ ns.RegisterPoints(1565, {
     -- Ardenweald's a Stage:
     [41254445] = {
         achievement=14353, criteria={
-            48708, -- Argus
-            48709, -- Azshara
+            48708, -- Argus (quest: 61202)
+            48709, -- Azshara (quest: 61201)
             48706, -- Gul'dan (quest: 61204)
             48704, -- Jaina
             48707, -- Kil'jaeden (quest: 61203)
