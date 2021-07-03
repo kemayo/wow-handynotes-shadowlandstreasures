@@ -494,3 +494,24 @@ ns.RegisterPoints(1961, { -- Korthia
         note="Find and use the Abandoned Veilstaff, then talk to {npc:180162}",
     },
 })
+
+-- Teleporters
+
+--Waystone
+ns.RegisterPoints(1961, {
+    [64502400] = {
+        label="Waystone to Oribos",
+        atlas="adventures-32x32", scale=1.2,
+        active={quest=63665},
+        minimap=true,
+    },
+})
+-- Flayedwing
+ns.RegisterPoints(1961, {
+    [60852855] = {route=49356385,},
+    [49356385] = {route={49356385,60852855,r=0,g=0.75,b=0},},
+}, {
+    label="{npc:180548}",
+    atlas="flightmaster", scale=1.2,
+    active={quest=63665},
+})
