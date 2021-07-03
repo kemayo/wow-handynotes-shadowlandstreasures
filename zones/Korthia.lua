@@ -112,6 +112,7 @@ ns.RegisterPoints(1961, { -- Korthia
     [62105770] = {quest=64250, atlas="warfronts-basemapicons-horde-workshop-minimap"},
 }, {
     label = "Spectral Key",
+    minimap=true,
 })
 
 --Relics

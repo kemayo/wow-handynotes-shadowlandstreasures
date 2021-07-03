@@ -363,11 +363,76 @@ ns.RegisterPoints(1543, {
         level=60,
     },
 
+    -- 9.1 additions:
+
+    [69204520] = { -- Helsworn Chest
+        achievement=15099, criteria=52243,
+        quest=64256,
+        loot={
+            187018, -- Ritualist's Shoulder Scythes
+        },
+    },
+    [66506130] = { -- Jeweled Heart
+        achievement=15099, criteria=52244,
+        quest=64261,
+        loot={
+            187352, -- Jeweled Heart of Ezekiel
+        },
+    },
+
     -- non-achievement
     --[] = { -- Warren Mongrel
     --    quest=61124,
     --    npc=165973,
     --}
+})
+
+-- Lil'Abom
+ns.RegisterPoints(1543, {
+    [32215608] = { -- Lil'Abom Head
+        quest=64010,
+        label="{item:186183}",
+        loot={
+            186183, -- Lil'Abom Head
+            {186188, pet=3098}, -- Lil'Abom
+        },
+    },
+    [39906260] = { -- Lil'Abom Torso
+        quest=64011,
+        label="{item:186184}",
+        loot={
+            186184, -- Lil'Abom Torso
+            {186188, pet=3098}, -- Lil'Abom
+        },
+    },
+    [29356730] = { -- Lil'Abom Legs
+        quest=64013,
+        label="{item:186185}",
+        loot={
+            186185, -- Lil'Abom Legs
+            {186188, pet=3098}, -- Lil'Abom
+        },
+    },
+    [38505850] = {-- Lil'Abom Right Hand
+        quest=64008,
+        label="{item:186186}",
+        loot={
+            186186, -- Lil'Abom Right Hand
+            {186188, pet=3098}, -- Lil'Abom
+        },
+        note="In cave",
+    },
+    [39306650] = {-- Lil'Abom Spare Arm
+        quest=64009,
+        label="{item:186187}",
+        loot={
+            186187, -- Lil'Abom Spare Arm
+            {186188, pet=3098}, -- Lil'Abom
+        },
+    },
+}, {
+    note="Collect all 5 parts to assemble a pet",
+    minimap=true,
 })
 
 -- lore:
