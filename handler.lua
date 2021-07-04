@@ -514,6 +514,17 @@ local function handle_tooltip(tooltip, point)
         if point.quest and ns.db.tooltip_questid then
             tooltip:AddDoubleLine("QuestID", render_string_list("questid", point.quest), NORMAL_FONT_COLOR:GetRGB())
         end
+        if point.progress then
+            local fulfilled, required, _
+            if type(point.progress) == "number" then
+                -- shortcut: if the progress is an objective of the tracking quest
+                fulfilled, required = select(4, GetQuestObjectiveInfo(point.quest, point.progress, false))
+                tooltip:AddDoubleLine(PVP_PROGRESS_REWARDS_HEADER, GENERIC_FRACTION_STRING:format(fulfilled, required))
+            else
+                local fulfilled, required = point:progress()
+                tooltip:AddDoubleLine(PVP_PROGRESS_REWARDS_HEADER, GENERIC_FRACTION_STRING:format(fulfilled, required))
+            end
+        end
 
         if (ns.db.tooltip_item or IsShiftKeyDown()) and (point.loot or point.npc) then
             local comparison = ShoppingTooltip1
