@@ -177,7 +177,7 @@ ns.RegisterPoints(1961, { -- Korthia
     [39405240] = researched{ -- Drum of Driving
         achievement=15066, criteria=52269,
         quest=63915,
-        requires_item=186718,
+        -- requires_item=186718,
         research=3,
         note="Use {item:186718} from {npc:178257} on the Ancient Teleporter",
     },
@@ -185,7 +185,7 @@ ns.RegisterPoints(1961, { -- Korthia
     [45003550] = researched{ -- Sack of Strange Soil
         achievement=15066, criteria=52261,
         quest=63916,
-        requires_item=186718,
+        -- requires_item=186718,
         research=3,
         note="Use {item:186718} from {npc:178257} on the Ancient Teleporter",
     },
@@ -330,12 +330,12 @@ ns.RegisterPoints(1961, { -- Korthia
         },
     },
 
-    [39405240] = { -- Chamber of Knowledge
+    [39405240] = { -- Chamber of Knowledge (Yarxhov the Pillager)
         achievement=15107, criteria=52295,
         achievement=15066, criteria=52262,
         quest=64257,
         npc=179802,
-        requires_item=186718,
+        -- requires_item=186718,
         loot={
             {187103, quest=63917}, -- Everliving Statuette
             187366, -- Fallen Vault Guardian's Spire
@@ -343,12 +343,12 @@ ns.RegisterPoints(1961, { -- Korthia
         note="Use {item:186718} from {npc:178257} on the Ancient Teleporter",
     },
 
-    [44903550] = { -- Chamber of Wisdom
+    [44903550] = { -- Chamber of Wisdom (Xyraxz the Unknowable)
         achievement=15107, criteria=52296,
         achievement=15066, criteria=52263,
         quest=64278,
         npc=179859,
-        requires_item=186718,
+        -- requires_item=186718,
         loot={
             {186538, pet=3140}, -- Gnashtooth
             {187104, quest=63918}, -- Obelisk of Dark Tidings
