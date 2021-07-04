@@ -544,7 +544,7 @@ ns.should_show_point = function(coord, point, currentZone, isMinimap)
         if point.inbag and itemInBags(point.inbag) then
             return false
         end
-        if point.onquest and C_QuestLog.IsOnQuest(point.onquest) then
+        if point.onquest and C_QuestLog.IsOnQuest(type(point.onquest) == "number" and point.onquest or point.quest) then
             return false
         end
         if point.hide_quest and C_QuestLog.IsQuestFlaggedCompleted(point.hide_quest) then
