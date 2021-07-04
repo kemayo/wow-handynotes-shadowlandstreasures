@@ -253,6 +253,54 @@ ns.RegisterPoints(1961, { -- Korthia
     },
 })
 
+--Maelie
+ns.RegisterPoints(1961, { -- Korthia
+    [60552105] = { -- Tinybell
+        npc=179930,
+    },
+    -- Maelie
+    [30005560] = {},
+    [38403140] = {},
+    [39703490] = {},
+    [41103980] = {},
+    [41302750] = {},
+    [42806040] = {},
+    [43003260] = {},
+    [49304170] = {},
+    [50302290] = {},
+    [59801510] = {},
+    [61304040] = {},
+}, {
+    quest=64292,
+    npc=179912,
+    texture={icon=3155422},
+    loot={
+        {186643, mount=1511}, -- Reins of the Wanderer
+    },
+    note="{npc:179930} asks you to find {npc:179912}, who spawns in a different place each day. Find her, use {spell:355862} on her on 6 days, and get a mount from {npc:179930}."
+})
+
+ns.RegisterPoints(1961, { -- Korthia
+    [42853270] = { -- Darkmaul
+        quest=64376,
+        npc=180063,
+        texture={icon=3931157},
+        loot={
+            {186646, mount=1507}, -- Darkmaul
+        },
+        note="Feed {item:187153} from Invasive Mawshrooms to {npc:180063} 10 times. Ride for the full duration or it won't count.",
+    },
+    [25725108] = { -- Razorwing Nest
+        quest=64274,
+        npc=179871,
+        texture={icon=3897746},
+        loot={
+            {186651, mount=1510}, -- Dusklight Razorwing
+        },
+        note="Get 2x {item:187054} per day from devourers, turn in 10 at the nest for the mount",
+    },
+})
+
 --Rares
 ns.RegisterPoints(1961, { -- Korthia
     [58201775] = { -- Assault Supply Carriage
