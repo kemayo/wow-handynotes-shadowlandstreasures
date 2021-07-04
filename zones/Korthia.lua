@@ -68,22 +68,13 @@ ns.RegisterPoints(1961, { -- Korthia
     [45356715] = { -- Offering Box
         achievement=15099, criteria=52246,
         quest=64268,
-        requires_item=187033,
+        -- requires_item=187033,
         loot={
             {187344, toy=true}, -- Offering Kit Maker
         },
         note="Find {item:187033} in the nearby ruins, on the top of the west wall",
     },
-    [43556770] = path({achievement=15099, criteria=52246, quest=64268, inbag=187033, label="{item:187033}", atlas="reagents"}), -- Small Offering Key
-
-    [56351845] = { -- Riftbound Cache
-        quest=64472,
-        requires_item=186731, -- Repaired Riftkey
-        label="Riftbound Cache",
-        loot={
-            RELIC_FRAGMENT
-        },
-    },
+    [43556770] = path({achievement=15099, criteria=52246, quest=64268, inbag=187033, label="{item:187033}", atlas="MantidTower"}), -- Small Offering Key
 
     [62055550] = { -- Spectral Bound Chest
         quest=64247,
@@ -116,7 +107,28 @@ ns.RegisterPoints(1961, { -- Korthia
     minimap=true,
 })
 
+--[[
+-- Riftbound Caches
+ns.RegisterPoints(1961, { -- Korthia
+    [56351845] = {
+        quest=64472,
+    },
+}, {
+    label="Riftbound Cache",
+        -- requires_item=186731, -- Repaired Riftkey
+    loot={
+        RELIC_FRAGMENT
+    },
+})
+--]]
+
 --Relics
+local relic_traits = {
+    minimap=true,
+    atlas="reagents",
+    onquest=true,
+}
+
 ns.RegisterPoints(1961, { -- Korthia
     [27305670] = researched{ -- Book of Binding: The Mad Witch
         achievement=15066, criteria=52131,
@@ -128,20 +140,22 @@ ns.RegisterPoints(1961, { -- Korthia
         achievement=15066, criteria=52258,
         quest=63912,
         research=2,
+        minimap=false,
     },
 
-    [41156015] = researched{ -- Gorak Claw Fetish
+    [43505760] = researched{ -- Gorak Claw Fetish
+        -- actual chest is at 41156015
         achievement=15066, criteria=52268,
         quest=63924,
-        requires_item=186984,
+        -- requires_item=186984,
         research=2,
-        note="Buy {item:186984} from {npc:178257} to unlock",
+        note="In cave. Buy {item:186984} from {npc:178257} to unlock",
     },
 
     [41304330] = researched{ -- Guise of the Changeling
         achievement=15066, criteria=52255,
         quest=63909,
-        requires_item=186984,
+        -- requires_item=186984,
         research=2,
         loot={
             {187155, toy=true} -- Guise of the Changeling
@@ -152,7 +166,7 @@ ns.RegisterPoints(1961, { -- Korthia
     [33004190] = researched{ -- The Netherstar
         achievement=15066, criteria=52256,
         quest=63910,
-        requires_item=186984,
+        -- requires_item=186984,
         research=2,
         note="Buy {item:186984} from {npc:178257} to unlock",
     },
@@ -160,7 +174,7 @@ ns.RegisterPoints(1961, { -- Korthia
     [43857690] = researched{ -- Ring of Self-Reflection
         achievement=15066, criteria=52265,
         quest=63921,
-        requires_item=186984,
+        -- requires_item=186984,
         research=2,
         loot={
             {187140, toy=true} -- Ring of Duplicity
@@ -200,7 +214,7 @@ ns.RegisterPoints(1961, { -- Korthia
     [60803490] = researched{ -- Book of Binding: The Tormented Sorcerer
         achievement=15066, criteria=52264,
         quest=63919,
-        requires_item=186731,
+        -- requires_item=186731,
         research=4,
         note="Buy {item:186731} from {npc:178257} to enter the rift",
     },
@@ -208,7 +222,7 @@ ns.RegisterPoints(1961, { -- Korthia
     [29005420] = researched{ -- Cipher of Understanding
         achievement=15066, criteria=52260,
         quest=63914,
-        requires_item=186731,
+        -- requires_item=186731,
         research=4,
         note="Buy {item:186731} from {npc:178257} to enter the rift",
     },
@@ -216,7 +230,7 @@ ns.RegisterPoints(1961, { -- Korthia
     [52005260] = researched{ -- Enigmatic Decrypting Device
         achievement=15066, criteria=52270,
         quest=63920,
-        requires_item=186731,
+        -- requires_item=186731,
         research=4,
         note="Buy {item:186731} from {npc:178257} to enter the rift",
     },
@@ -224,7 +238,7 @@ ns.RegisterPoints(1961, { -- Korthia
     [51402010] = researched{ -- Unstable Sin'dorei Explosive
         achievement=15066, criteria=52259,
         quest=63913,
-        requires_item=186731,
+        -- requires_item=186731,
         research=4,
         note="Buy {item:186731} from {npc:178257} to enter the rift",
     },
@@ -252,7 +266,15 @@ ns.RegisterPoints(1961, { -- Korthia
         },
         note="Use the shrine to get {spell:352367} to see the altar path",
     },
-})
+}, relic_traits)
+
+ns.RegisterPoints(2007, { -- Gromit Hollow
+    [39304920] = researched{ -- Book of Binding: The Mad Witch
+        achievement=15066, criteria=52131,
+        quest=63899,
+        research=2,
+    },
+}, relic_traits)
 
 --Maelie
 ns.RegisterPoints(1961, { -- Korthia
@@ -421,7 +443,11 @@ ns.RegisterPoints(1961, { -- Korthia
         },
         note="Talk to {npc:179729} to gain {spell:355078} and follow footprints",
     },
-    [44202950] = {label="Fleshy Remains", note="Get {spell:355078} @ 60.6, 23.1"}, -- fleshy remains
+    [44202950] = { -- fleshy remains
+        achievement=15107, criteria=52283,
+        quest=64233,
+        label="Fleshy Remains", note="Get {spell:355078} @ 60.6, 23.1",
+    },
 
     [59203580] = { -- Kroke the Tormented
         achievement=15107, criteria=52304,
@@ -456,7 +482,7 @@ ns.RegisterPoints(1961, { -- Korthia
         achievement=15107, criteria=52294,
         quest=64369,
         npc=179914,
-        requires_item=186731,
+        -- requires_item=186731,
         loot={
             {187420, toy=true}, -- Maw-Ocular Viewfinder
         },
@@ -498,7 +524,7 @@ ns.RegisterPoints(1961, { -- Korthia
         achievement=15107, criteria=52273,
         quest=64263,
         npc=179608,
-        requires_item=186731,
+        -- requires_item=186731,
         note="Buy {item:186731} from {npc:178257} to enter the rift",
     },
 
@@ -506,7 +532,7 @@ ns.RegisterPoints(1961, { -- Korthia
         achievement=15107, criteria=52274,
         quest=64284,
         npc=179911,
-        requires_item=186731,
+        -- requires_item=186731,
         note="Buy {item:186731} from {npc:178257} to enter the rift",
     },
 
