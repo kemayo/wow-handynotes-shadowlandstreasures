@@ -22,6 +22,7 @@ ns.RegisterPoints(1961, { -- Korthia
     [47502920] = { -- Dislodged Nest
         achievement=15099, criteria=52240,
         quest=64241,
+        minimap=true,
         loot={
             {187339, toy=true}, -- Silver Shardhide Whistle
         },
@@ -256,7 +257,10 @@ ns.RegisterPoints(1961, { -- Korthia
 --Maelie
 ns.RegisterPoints(1961, { -- Korthia
     [60552105] = { -- Tinybell
+        quest=64292,
         npc=179930,
+        atlas="stablemaster",
+        texture=false,
     },
     -- Maelie
     [30005560] = {},
@@ -271,34 +275,47 @@ ns.RegisterPoints(1961, { -- Korthia
     [59801510] = {},
     [61304040] = {},
 }, {
-    quest=64292,
+    quest={64292,64298,any=true}, -- 2 is the final mount-quest, 8 is found-today
+    progress=function()
+        for q=64293, 64298 do
+            if C_QuestLog.IsQuestFlaggedCompleted(q) then
+                return q-64292, 6
+            end
+        end
+        return 0, 6
+    end,
     npc=179912,
-    texture={icon=3155422},
+    texture=ns.merge(ns.atlas_texture("stablemaster"), {r=0,g=1,b=1,a=1,scale=1.2}),
+    minimap=true,
     loot={
         {186643, mount=1511}, -- Reins of the Wanderer
     },
-    note="{npc:179930} asks you to find {npc:179912}, who spawns in a different place each day. Find her, use {spell:355862} on her on 6 days, and get a mount from {npc:179930}."
+    note=function()
+        return "{npc:179930} asks you to find {npc:179912}, who spawns in a different place each day. Find her, use {spell:355862} on her on 6 days, and get a mount from {npc:179930}."
+    end,
 })
 
 ns.RegisterPoints(1961, { -- Korthia
     [42853270] = { -- Darkmaul
-        quest=64376,
+        quest=64376, progress=0,
         npc=180063,
-        texture={icon=3931157},
+        texture=ns.merge(ns.atlas_texture("stablemaster"), {r=1,g=0,b=1,a=1,scale=1.2}),
         loot={
             {186646, mount=1507}, -- Darkmaul
         },
         note="Feed {item:187153} from Invasive Mawshrooms to {npc:180063} 10 times. Ride for the full duration or it won't count.",
     },
     [25725108] = { -- Razorwing Nest
-        quest=64274,
+        quest=64274, progress=0,
         npc=179871,
-        texture={icon=3897746},
+        texture=ns.merge(ns.atlas_texture("stablemaster"), {r=1,g=1,b=0,a=1,scale=1.2}),
         loot={
             {186651, mount=1510}, -- Dusklight Razorwing
         },
         note="Get 2x {item:187054} per day from devourers, turn in 10 at the nest for the mount",
     },
+}, {
+    minimap=true,
 })
 
 --Rares
