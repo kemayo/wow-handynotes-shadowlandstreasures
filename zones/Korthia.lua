@@ -298,15 +298,7 @@ ns.RegisterPoints(1961, { -- Korthia
     [61304040] = {},
 }, {
     quest={64292,64298,any=true}, -- 2 is the final mount-quest, 8 is found-today
-    progress=function()
-        for q=64293, 64298 do
-            if C_QuestLog.IsQuestFlaggedCompleted(q) then
-                return q-64292, 6
-            end
-        end
-        return 0, 6
-    end,
-    npc=179912,
+    progress={64293, 64294, 64295, 64296, 64297, 64292},
     texture=ns.merge(ns.atlas_texture("stablemaster"), {r=0,g=1,b=1,a=1,scale=1.2}),
     minimap=true,
     loot={

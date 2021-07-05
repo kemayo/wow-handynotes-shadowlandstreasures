@@ -395,6 +395,21 @@ end
 local get_point_info_by_coord = function(uiMapID, coord)
     return get_point_info(ns.points[uiMapID] and ns.points[uiMapID][coord])
 end
+local get_point_progress = function(point)
+    if type(point.progress) == "number" then
+        -- shortcut: if the progress is an objective of the tracking quest
+        return select(4, GetQuestObjectiveInfo(point.quest, point.progress, false))
+    elseif type(point.progress) == "table" then
+        for i, q in ipairs(point.progress) do
+            if not C_QuestLog.IsQuestFlaggedCompleted(q) then
+                return i - 1, #point.progress
+            end
+        end
+    else
+        -- function
+        return point:progress()
+    end
+end
 
 local function handle_tooltip(tooltip, point)
     if point then
@@ -515,13 +530,8 @@ local function handle_tooltip(tooltip, point)
             tooltip:AddDoubleLine("QuestID", render_string_list("questid", point.quest), NORMAL_FONT_COLOR:GetRGB())
         end
         if point.progress then
-            local fulfilled, required, _
-            if type(point.progress) == "number" then
-                -- shortcut: if the progress is an objective of the tracking quest
-                fulfilled, required = select(4, GetQuestObjectiveInfo(point.quest, point.progress, false))
-                tooltip:AddDoubleLine(PVP_PROGRESS_REWARDS_HEADER, GENERIC_FRACTION_STRING:format(fulfilled, required))
-            else
-                local fulfilled, required = point:progress()
+            local fulfilled, required = get_point_progress(point)
+            if fulfilled and required then
                 tooltip:AddDoubleLine(PVP_PROGRESS_REWARDS_HEADER, GENERIC_FRACTION_STRING:format(fulfilled, required))
             end
         end
