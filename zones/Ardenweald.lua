@@ -143,6 +143,7 @@ ns.RegisterPoints(1565, { -- Ardenweald
 local vulpin = {
     achievement=14313, criteria=50038, -- Playful Vulpin Befriended
     quest=61086, -- also 61080, 61081, 61084, 61085 for progress
+    progress={61080, 61081, 61084, 61085, 61086},
     loot={
         {180645, pet=2905}, -- Dodger
     },

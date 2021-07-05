@@ -280,7 +280,7 @@ ns.RegisterPoints(2007, { -- Gromit Hollow
 ns.RegisterPoints(1961, { -- Korthia
     [60552105] = { -- Tinybell
         quest=64292,
-        npc=179930,
+        label="{npc:179930}",
         atlas="stablemaster",
         texture=false,
     },
@@ -299,14 +299,13 @@ ns.RegisterPoints(1961, { -- Korthia
 }, {
     quest={64292,64298,any=true}, -- 2 is the final mount-quest, 8 is found-today
     progress={64293, 64294, 64295, 64296, 64297, 64292},
+    label="{npc:179912}",
     texture=ns.merge(ns.atlas_texture("stablemaster"), {r=0,g=1,b=1,a=1,scale=1.2}),
     minimap=true,
     loot={
         {186643, mount=1511}, -- Reins of the Wanderer
     },
-    note=function()
-        return "{npc:179930} asks you to find {npc:179912}, who spawns in a different place each day. Find her, use {spell:355862} on her on 6 days, and get a mount from {npc:179930}."
-    end,
+    note="{npc:179930} asks you to find {npc:179912}, who spawns in a different place each day. Find her each day, use {spell:355862} on her, and get a mount from {npc:179930}.",
 })
 
 ns.RegisterPoints(1961, { -- Korthia
