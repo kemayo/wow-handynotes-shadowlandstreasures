@@ -1,5 +1,13 @@
 # Changelog
 
+## Changed in v23
+
+* Notes for transporters and waystone in Korthia
+* Add the new 9.1 treasures that're actually in the Maw
+* Add the various mounts via daily actions in Korthia
+* Improved ability to show progress in tooltips
+* Add some missing items from the Blackhound Cache in Maldraxxus
+
 ## Changed in v22
 
 * Updated for 9.1
