@@ -375,12 +375,13 @@ ns.RegisterPoints(1961, { -- Korthia
     [51154165] = { -- Consumption
         achievement=15107, criteria=52285,
         quest=64243,
-        npc=179768,
+        npc=179768, -- 179769 (normal), 179755 (rare)
         loot={
             187245, -- Death-Enveloped Spires
             187246, -- Death-Enveloped Pauldrons
             187247, -- Death-Enveloped Shoulder Spikes
         },
+        note="Starts as an elite, eats {npc:179344} until it becomes a rare and then a rare-elite. Loot gets better as it gets stronger, so wait.",
     },
 
     [59954370] = { -- Corpse Heap
