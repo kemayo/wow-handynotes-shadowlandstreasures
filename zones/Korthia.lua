@@ -425,19 +425,20 @@ ns.RegisterPoints(1961, { -- Korthia
         note="Click on the {npc:180014} to start",
     },
 
-    [60652315] = { -- Hunting the Hunter
+    [44202950] = { -- Malbog
         achievement=15107, criteria=52283,
         quest=64233,
         npc=179684,
         loot={
             {186645, mount=1506} -- Crimson Shardhide
         },
-        note="Talk to {npc:179729} to gain {spell:355078} and follow footprints",
+        note="Talk to {npc:179729} in town to gain {spell:355078} and follow footprints",
     },
-    [44202950] = { -- fleshy remains
+    [60652315] = {
         achievement=15107, criteria=52283,
         quest=64233,
-        label="Fleshy Remains", note="Get {spell:355078} @ 60.6, 23.1",
+        label="{npc:179729}", note="Get {spell:355078} and follow the footprints to 44.2, 29.5",
+        atlas="ancientmana",
     },
 
     [59203580] = { -- Kroke the Tormented
