@@ -60,7 +60,7 @@ ns.RegisterPoints(1961, { -- Korthia
         note="In cave",
     },
 
-    [52901475] = { -- Lost Momento
+    [52901475] = { -- Lost Memento
         achievement=15099, criteria=52238,
         quest=64238,
     },
@@ -286,16 +286,18 @@ ns.RegisterPoints(1961, { -- Korthia
     },
     -- Maelie
     [30005560] = {},
-    [38403140] = {},
-    [39703490] = {},
-    [41103980] = {},
-    [41302750] = {},
+    [35804650] = {}, -- on chain
+    [38403140] = {}, -- on shelf, jump down
+    [39703490] = {}, -- among roots, jump down
+    [41103980] = {}, -- middle level of cliffs
+    [41302750] = {}, -- looking into Maw
     [42806040] = {},
-    [43003260] = {},
-    [49304170] = {},
-    [50302290] = {},
-    [59801510] = {},
-    [61304040] = {},
+    [43203130] = {}, -- on hill
+    [49304170] = {}, -- among roots
+    [50302290] = {}, -- on cliff, walk from above
+    [59801510] = {}, -- on cliff
+    [61304040] = {}, -- on cliff
+    [62404970] = {}, -- by cliff behind large tree
 }, {
     quest={64292,64298,any=true}, -- 2 is the final mount-quest, 8 is found-today
     progress={64293, 64294, 64295, 64296, 64297, 64292},
