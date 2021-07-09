@@ -3,7 +3,7 @@ local myname, ns = ...
 local path = ns.path
 
 local RELIC_FRAGMENT = 186685 -- relic fragment
-local rift_active = rift_active
+local rift_active = {requires_buff={352795, 354870, any=true}}
 
 local researched = ns.nodeMaker{
     IsActive = function(point)
