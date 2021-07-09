@@ -343,6 +343,32 @@ local function work_out_texture(point)
     end
     return default_textures[ns.db.default_icon] or default_textures["VignetteLoot"]
 end
+ns.point_active = function(point)
+    if not point.active then
+        return true
+    end
+    if point.active.quest and not C_QuestLog.IsQuestFlaggedCompleted(point.active.quest) then
+        return false
+    end
+    if point.active.notquest and C_QuestLog.IsQuestFlaggedCompleted(point.active.notquest) then
+        return false
+    end
+    if point.active.requires_buff and not ns.doTest(GetPlayerAuraBySpellID, point.active.requires_buff) then
+        return false
+    end
+    if point.active.requires_no_buff and ns.doTest(GetPlayerAuraBySpellID, point.active.requires_no_buff) then
+        return false
+    end
+    return true
+end
+ns.point_upcoming = function(point)
+    if point.level and UnitLevel("player") < point.level then
+        return true
+    elseif point.hide_before and not ns.allQuestsComplete(point.hide_before) then
+        return true
+    end
+    return false
+end
 local inactive_cache = {}
 local function get_inactive_texture_variant(icon)
     if not inactive_cache[icon] then
@@ -369,13 +395,9 @@ local get_point_info = function(point, isMinimap)
     if point then
         local label = work_out_label(point)
         local icon = work_out_texture(point)
-        if point.active and point.active.quest and not C_QuestLog.IsQuestFlaggedCompleted(point.active.quest) then
+        if not ns.point_active(point) then
             icon = get_inactive_texture_variant(icon)
-        elseif point.active and point.active.notquest and C_QuestLog.IsQuestFlaggedCompleted(point.active.notquest) then
-            icon = get_inactive_texture_variant(icon)
-        elseif point.level and UnitLevel("player") < point.level then
-            icon = get_upcoming_texture_variant(icon)
-        elseif point.hide_before and not ns.allQuestsComplete(point.hide_before) then
+        elseif ns.point_upcoming(point) then
             icon = get_upcoming_texture_variant(icon)
         end
         local category = "treasure"
