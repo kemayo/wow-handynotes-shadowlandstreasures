@@ -476,6 +476,88 @@ ns.RegisterPoints(1822, { -- Tremaculum
     }
 })
 
+-- Assaults
+local rift_active = {requires_buff={352795, 354870, any=true}}
+local icon_red = ns.merge(ns.atlas_texture("VignetteLoot"), {r=1,g=0,b=0,a=1,scale=1})
+local icon_green = ns.merge(ns.atlas_texture("VignetteLoot"), {r=0,g=1,b=0,a=1,scale=1})
+local icon_blue = ns.merge(ns.atlas_texture("VignetteLoot"), {r=0,g=0.5,b=1,a=1,scale=1})
+local icon_purple = ns.merge(ns.atlas_texture("VignetteLoot"), {r=1,g=0,b=1,a=1,scale=1})
+local icon_yellow = ns.merge(ns.atlas_texture("VignetteLoot"), {r=1,g=1,b=0,a=1,scale=1})
+local ASSAULT_NECRO = {1550, 6989}
+local ASSAULT_VENTHYR = {1550, 6990}
+local ASSAULT_KYRIAN = {1550, 6991}
+local ASSAULT_NIGHTFAE = {1550, 6992}
+
+-- Necrolord
+ns.RegisterPoints(1543, {
+    -- none?
+}, {
+    label="Stolen Anima Vessel",
+    poi={ASSAULT_NECRO},
+})
+-- Venthyr
+ns.RegisterPoints(1543, {
+    [23431665] = {quest=64055,texture=icon_red,},
+    [25201250] = {quest=64055,texture=icon_red,},
+    [27401650] = {quest=64055,texture=icon_red,},
+    [27801950] = {quest=64055,texture=icon_red,},
+    [26201960] = {quest=64056,texture=icon_green,},
+    [29601160] = {quest=64056,texture=icon_green,},
+    [32701480] = {quest=64056,texture=icon_green,},
+}, {
+    label="Stolen Anima Vessel",
+    poi={ASSAULT_VENTHYR},
+})
+ns.RegisterPoints(1822, { -- Extractor's Sanatorium
+    [73705060] = {quest=64056,texture=icon_green,},
+}, {
+    label="Stolen Anima Vessel",
+    poi={ASSAULT_VENTHYR},
+})
+-- Kyrian
+ns.RegisterPoints(1543, {
+    [32604090] = {quest=64057,texture=icon_red,},
+    [32604340] = {quest=64057,texture=icon_red,},
+    [34103580] = {quest=64058,texture=icon_green,},
+    [36604010] = {quest=64058,texture=icon_green,},
+    [38354870] = {quest=64058,texture=icon_green,},
+    [45404775] = {quest=64058,texture=icon_green,},
+}, {
+    label="Stolen Anima Vessel",
+    poi={ASSAULT_KYRIAN},
+})
+-- Night Fae
+ns.RegisterPoints(1543, {
+    -- don't know the quests yet...
+    [25303330] = {quest=nil,texture=icon_red,}, --1
+    [25303820] = {quest=nil,texture=icon_red,}, --1
+    [27804180] = {quest=nil,texture=icon_red,}, --1
+    [17304780] = {quest=nil,texture=icon_green,}, --2
+    [18604260] = {quest=nil,texture=icon_green,}, --2
+    [18905030] = {quest=nil,texture=icon_green,}, --2
+    [22704850] = {quest=nil,texture=icon_green,}, --2
+}, {
+    label="Stolen Anima Vessel",
+    poi={ASSAULT_NIGHTFAE},
+})
+-- Rifts
+ns.RegisterPoints(1543, {
+    [47457620] = {quest=64265,texture=icon_blue,note="In rift, in cave",},
+    [47808650] = {quest=64265,texture=icon_blue,note="In rift, in Death's Roar",},
+    [51008545] = {quest=64265,texture=icon_blue,note="In rift, in Death's Howl",},
+    [32404310] = {quest=64269,texture=icon_purple,},
+    [35704620] = {quest=64269,texture=icon_purple,},
+    [36254215] = {quest=64269,texture=icon_purple,},
+    [38454845] = {quest=64269,texture=icon_purple,note="In rift, in cave",},
+    [44554760] = {quest=64269,texture=icon_purple,},
+    [27454950] = {quest=64270,texture=icon_yellow,},
+}, {
+    label="Stolen Anima Vessel",
+    active=rift_active,
+    poi={ASSAULT_NECRO, ASSAULT_VENTHYR, ASSAULT_KYRIAN, ASSAULT_NIGHTFAE},
+    note="You need to be in the rift to see these.",
+})
+
 -- Teleporters
 
 ns.RegisterPoints(1543, {
