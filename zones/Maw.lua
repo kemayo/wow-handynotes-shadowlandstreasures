@@ -98,6 +98,7 @@ ns.RegisterPoints(1543, {
             183066, -- Korrath's Grimoire: Aleketh
             183067, -- Korrath's Grimoire: Belidir
             183068, -- Korrath's Grimoire: Gyadrek
+            186606, -- Nilganihmaht's Signet Ring
         },
         note="Get the etching from the three other Heralds, combine into {item:182329}, and use to summon",
         level=60,
@@ -380,6 +381,19 @@ ns.RegisterPoints(1543, {
         },
     },
 
+    [27652525] = { -- Torglluun
+        achievement=15107, criteria=52284,
+        quest=64232,
+        npc=179735,
+        loot={
+            187360, -- Orb of Enveloping Rifts
+            187389, -- Lord of Shade's Binders
+            {187139,toy=true}, -- Bottled Shade Heart
+            186605, -- Nilganihmaht's Runed Band
+        },
+        note="Drops {item:186605} for {npc:179572:Nilganihmaht}",
+    }
+
     -- non-achievement
     --[] = { -- Warren Mongrel
     --    quest=61124,
@@ -610,6 +624,78 @@ ns.RegisterPoints(1543, {
         quest=64283,
     },
 })
+
+-- Nilganihmaht
+local helgarde = ns.nodeMaker{
+    quest=62682,
+    label="Helgarde Supply Cache",
+    loot={186727}, -- Seal Breaker Key
+    note="For the Domination Chest",
+    minimap=true,
+}
+ns.RegisterPoints(1543, {
+    [25503680] = {
+        label="{npc:179572:Nilganihmaht}",
+        quest=64202,
+        -- requires_item={186603, 186605, 186606, 186607, 186608},
+        texture=ns.atlas_texture("VignetteLootElite", {scale=1.5, r=0, g=0.5, b=1}),
+        -- atlas="VignetteLootElite", scale=1.5,
+        active=rift_active,
+        loot={
+            {186713, mount=1503}, -- Hand of Nilganihmaht
+        },
+        note="In a cave in the rift. Bring the 5 rings.\n"..
+            "* {item:186603:Stone Ring}: assemble during a Necrolord Assault if {quest:63545} is up\n"..
+            "* {item:186605:Runed Band}: kill {npc:179735:Torglluun}\n"..
+            "* {item:186606:Signet Ring}: kill {npc:170303:Exos}\n"..
+            "* {item:186607:Silver Ring}: loot the Domination Chest\n"..
+            "* {item:186608:Gold Band}: climb to find it",
+    },
+    -- Silver Ring
+    [66055740] = {
+        quest=64207,
+        label="Domination Chest",
+        loot={186607}, -- Nilganimahts Silver Ring
+        note="Bring 4x {item:186727} to unlock. Kill {npc:177444} and {npc:177134}, loot Helgarde Supply Caches, and find the Harrower's Key Ring",
+    },
+    [66404190] = {
+        achievement=15107, criteria=52287, -- also 14943 for killing with 5x blood of the pack
+        quest=64152,
+        npc=177444,
+        loot={
+            186217, -- Supple Helhound Leather Pants
+            187359, -- Ylva's Water Dish
+            187393, -- Sterling Hound-Handler's Gauntlets
+            {item=186970, quest=62683, note="{item:186727}"}, -- Feeder's Hand and Key / Seal Breaker Key
+        },
+        note="Drops {item:186727} for {npc:179572:Nilganihmaht}",
+    },
+    [65656005] = {
+        quest=62680,
+        label="The Harrower's Key Ring",
+        loot={186727}, -- Seal Breaker Key
+        note="For the Domination Chest",
+    },
+    [65706120] = helgarde(),
+    [67555570] = helgarde(),
+    [68204810] = helgarde(),
+    [62455530] = helgarde(),
+
+    -- Gold Band
+    [19203225] = {
+        quest=64199,
+        label="{item:186608}",
+        loot={
+            186608, -- Nilganihmaht's Gold Band
+        },
+        route=18503925,
+    },
+    [18503925] = ns.path{
+        quest=64199,
+        route={18503925,19203225, r=0,g=1,b=1},
+    },
+})
+
 -- Teleporters
 
 ns.RegisterPoints(1543, {
