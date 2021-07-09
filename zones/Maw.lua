@@ -585,6 +585,31 @@ ns.RegisterPoints(1543, {
     note="You need to be in the rift to see these.",
 })
 
+-- Zovaal's Vault
+ns.RegisterPoints(1543, {
+    [33006630] = {},
+    [47257968] = {},
+    [62176427] = {},
+    [66405820] = {},
+}, {
+    label="{npc:179883}",
+    quest=64283,
+    atlas="VignetteLootElite",
+    active=rift_active,
+    loot={
+        187251, -- Shaded Skull Shoulderguards
+        {187113, toy=true}, -- Personal Ball and Chain
+        {187416, toy=true}, -- Jailer's Cage
+    },
+    note="In the rift, drag {npc:179883} to {npc:179904:Ve'nari} @ 44.5, 51.5",
+})
+ns.RegisterPoints(1543, {
+    [44505150] = {
+        label="{npc:179904:Ve'nari}",
+        requires_buff=355650, -- Zovaal's Vault Chain
+        quest=64283,
+    },
+})
 -- Teleporters
 
 ns.RegisterPoints(1543, {
