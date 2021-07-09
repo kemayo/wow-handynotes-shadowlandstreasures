@@ -3,6 +3,7 @@ local myname, ns = ...
 local path = ns.path
 
 local RELIC_FRAGMENT = 186685 -- relic fragment
+local rift_active = rift_active
 
 local researched = ns.nodeMaker{
     IsActive = function(point)
@@ -134,8 +135,8 @@ local riftcache = ns.nodeMaker{
         186017, -- Korthite Crystal
         RELIC_FRAGMENT,
     },
-    active={requires_buff={352795, 354870, any=true}},
-    note="You need to be in the rift to see these. ",
+    active=rift_active,
+    note="You need to be in the rift to see these.",
 }
 ns.RegisterPoints(1961, { -- Korthia
     [33453930] = riftcache{quest=64456},
@@ -264,6 +265,7 @@ ns.RegisterPoints(1961, { -- Korthia
         quest=63919,
         -- requires_item=186731,
         research=4,
+        active=rift_active,
         note="Buy {item:186731} from {npc:178257} to enter the rift",
     },
 
@@ -272,6 +274,7 @@ ns.RegisterPoints(1961, { -- Korthia
         quest=63914,
         -- requires_item=186731,
         research=4,
+        active=rift_active,
         note="Buy {item:186731} from {npc:178257} to enter the rift",
     },
 
@@ -280,6 +283,7 @@ ns.RegisterPoints(1961, { -- Korthia
         quest=63920,
         -- requires_item=186731,
         research=4,
+        active=rift_active,
         note="Buy {item:186731} from {npc:178257} to enter the rift",
     },
 
@@ -288,6 +292,7 @@ ns.RegisterPoints(1961, { -- Korthia
         quest=63913,
         -- requires_item=186731,
         research=4,
+        active=rift_active,
         note="Buy {item:186731} from {npc:178257} to enter the rift",
     },
 
@@ -452,6 +457,7 @@ ns.RegisterPoints(1961, { -- Korthia
         loot={
             {187174, toy=true}, -- Shaded Judgement Stone
         },
+        active=rift_active,
         note="Buy {item:186731} from {npc:178257} to enter the rift",
     },
 
@@ -529,6 +535,7 @@ ns.RegisterPoints(1961, { -- Korthia
         loot={
             {187420, toy=true}, -- Maw-Ocular Viewfinder
         },
+        active=rift_active,
         note="Buy {item:186731} from {npc:178257} to enter the rift",
     },
 
@@ -568,6 +575,7 @@ ns.RegisterPoints(1961, { -- Korthia
         quest=64263,
         npc=179608,
         -- requires_item=186731,
+        active=rift_active,
         note="Buy {item:186731} from {npc:178257} to enter the rift",
     },
 
@@ -576,6 +584,7 @@ ns.RegisterPoints(1961, { -- Korthia
         quest=64284,
         npc=179911,
         -- requires_item=186731,
+        active=rift_active,
         note="Buy {item:186731} from {npc:178257} to enter the rift",
     },
 
