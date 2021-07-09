@@ -5,9 +5,9 @@ local path = ns.path
 local RELIC_FRAGMENT = 186685 -- relic fragment
 
 local researched = ns.nodeMaker{
-    ShouldShow = function(point)
+    IsActive = function(point)
         return select(3, GetFactionInfoByID(2472)) >= point.research
-    end
+    end,
 }
 
 ns.RegisterPoints(1961, { -- Korthia
