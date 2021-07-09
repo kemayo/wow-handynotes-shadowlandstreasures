@@ -483,6 +483,10 @@ local icon_green = ns.atlas_texture("VignetteLoot", {r=0,g=1,b=0,a=1,scale=1})
 local icon_blue = ns.atlas_texture("VignetteLoot", {r=0,g=0.5,b=1,a=1,scale=1})
 local icon_purple = ns.atlas_texture("VignetteLoot", {r=1,g=0,b=1,a=1,scale=1})
 local icon_yellow = ns.atlas_texture("VignetteLoot", {r=1,g=1,b=0,a=1,scale=1})
+local icon_orange = ns.atlas_texture("VignetteLoot", {r=1,g=0.5,b=0,a=1,scale=1})
+local icon_pink = ns.atlas_texture("VignetteLoot", {r=1,g=0.5,b=0.5,a=1,scale=1})
+local icon_lightgreen = ns.atlas_texture("VignetteLoot", {r=0.5,g=1,b=0.5,a=1,scale=1})
+local icon_lightblue = ns.atlas_texture("VignetteLoot", {r=0.5,g=0.5,b=1,a=1,scale=1})
 local ASSAULT_NECRO = {1550, 6989}
 local ASSAULT_VENTHYR = {1550, 6990}
 local ASSAULT_KYRIAN = {1550, 6991}
@@ -539,6 +543,29 @@ ns.RegisterPoints(1543, {
 }, {
     label="Stolen Anima Vessel",
     poi={ASSAULT_NIGHTFAE},
+})
+ns.RegisterPoints(1543, {
+    [19104620] = {quest=63993,texture=icon_red,},
+    [20604740] = {quest=63993,texture=icon_red,},
+    [22604625] = {quest=63993,texture=icon_red,},
+    [25304920] = {quest=63995,texture=icon_green,},
+    [20702980] = {quest=63996,texture=icon_orange,},
+    [25102705] = {quest=63996,texture=icon_orange,},
+    [24603690] = {quest=63997,texture=icon_pink,},
+    [26403760] = {quest=63997,texture=icon_pink,},
+    [18903970] = {quest=63998,texture=icon_lightgreen,},
+    [19153335] = {quest=63998,texture=icon_lightgreen,},
+    [19054400] = {quest=63998,texture=icon_lightgreen,},
+    [23203580] = {quest=63998,texture=icon_lightgreen,},
+    [29754280] = {quest=63999,texture=icon_lightblue,},
+}, {
+    label="Rift Hidden Cache",
+    active=rift_active,
+    poi={ASSAULT_NIGHTFAE},
+    loot={
+        187251, -- Shaded Skull Shoulderguards
+    },
+    note="You need to be in the rift to see these.",
 })
 -- Rifts
 ns.RegisterPoints(1543, {
