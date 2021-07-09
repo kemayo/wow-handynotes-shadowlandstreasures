@@ -1,5 +1,15 @@
 # Changelog
 
+## Changed in v24
+
+* Added to the Maw:
+    * Nilganihmaht mount (apart from the necrolord assault bits)
+    * Stolen Anima Vessels
+    * Rift Hidden Caches
+    * Zovaal's Vault
+* Added Riftbound caches and Rift portals to Korthia
+* Explain Consumption's mechanic so you can maybe actually get loot from it
+
 ## Changed in v23
 
 * Notes for transporters and waystone in Korthia
