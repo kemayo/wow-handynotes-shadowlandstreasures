@@ -107,20 +107,68 @@ ns.RegisterPoints(1961, { -- Korthia
     minimap=true,
 })
 
---[[
--- Riftbound Caches
+-- Rift portals
 ns.RegisterPoints(1961, { -- Korthia
-    [56351845] = {
-        quest=64472,
-    },
+    [41104210] = {}, -- 42304090
+    [43504700] = {},
+    [53707200] = {},
+    [56807460] = {},
+    [59405370] = {},
+    [61804460] = {},
 }, {
-    label="Riftbound Cache",
-        -- requires_item=186731, -- Repaired Riftkey
-    loot={
-        RELIC_FRAGMENT
-    },
+    label="{npc:179595}",
+    atlas="poi-rift1",
+    requires_no_buff={352795, 354870, any=true},
+    note="Rifts let you enter an alternate phase, if you have a {item:186731}. There are rares and chests that're only in the rift.",
 })
---]]
+
+-- Riftbound Caches
+local riftcache = ns.nodeMaker{
+    label="Riftbound Cache",
+    -- requires_item=186731, -- Repaired Riftkey
+    loot={
+        187251, -- Shaded Skull Shoulderguards
+        187243, -- Shadehunter's Crescent
+        {187276, quest=64522}, -- Stolen Korthian Supplies
+        {185050, quest=63606, covenant=Enum.CovenantType.NightFae}, -- Spider Soul
+        186017, -- Korthite Crystal
+        RELIC_FRAGMENT,
+    },
+    active={requires_buff={352795, 354870, any=true}},
+    note="You need to be in the rift to see these. ",
+}
+ns.RegisterPoints(1961, { -- Korthia
+    [33453930] = riftcache{quest=64456},
+    [35953245] = riftcache{quest=64456},
+    [38003550] = riftcache{quest=64456},
+    [39804300] = riftcache{quest=64456},
+}, {
+    texture=ns.merge(ns.atlas_texture("VignetteLoot"), {r=1,g=0,b=0,a=1,scale=1}),
+})
+ns.RegisterPoints(1961, { -- Korthia
+    [25955580] = riftcache{quest=64470},
+    [26555640] = riftcache{quest=64470},
+    [27555935] = riftcache{quest=64470},
+}, {
+    texture=ns.merge(ns.atlas_texture("VignetteLoot"), {r=0,g=1,b=0,a=1,scale=1}),
+})
+ns.RegisterPoints(1961, { -- Korthia
+    [54105460] = riftcache{quest=64471},
+    [54904240] = riftcache{quest=64471},
+    [55506510] = riftcache{quest=64471},
+    [60903520] = riftcache{quest=64471},
+    [61755870] = riftcache{quest=64471},
+}, {
+    texture=ns.merge(ns.atlas_texture("VignetteLoot"), {r=0,g=0.5,b=1,a=1,scale=1}),
+})
+ns.RegisterPoints(1961, { -- Korthia
+    [46103190] = riftcache{quest=64472},
+    [50753300] = riftcache{quest=64472},
+    [56301850] = riftcache{quest=64472},
+    [64303040] = riftcache{quest=64472},
+}, {
+    texture=ns.merge(ns.atlas_texture("VignetteLoot"), {r=1,g=1,b=0,a=1,scale=1}),
+})
 
 --Relics
 local relic_traits = {
