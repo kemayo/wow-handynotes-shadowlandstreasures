@@ -566,10 +566,10 @@ ns.should_show_point = function(coord, point, currentZone, isMinimap)
             end
         end
     end
-    if point.requires_buff and not GetPlayerAuraBySpellID(point.requires_buff) then
+    if point.requires_buff and not doTest(GetPlayerAuraBySpellID, point.requires_buff) then
         return false
     end
-    if point.requires_no_buff and GetPlayerAuraBySpellID(point.requires_no_buff) then
+    if point.requires_no_buff and doTest(GetPlayerAuraBySpellID, point.requires_no_buff) then
         return false
     end
     if point.requires_item and not itemInBags(point.requires_item) then
