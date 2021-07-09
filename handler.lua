@@ -344,6 +344,9 @@ local function work_out_texture(point)
     return default_textures[ns.db.default_icon] or default_textures["VignetteLoot"]
 end
 ns.point_active = function(point)
+    if point.IsActive and not point:IsActive() then
+        return false
+    end
     if not point.active then
         return true
     end
