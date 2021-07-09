@@ -478,11 +478,11 @@ ns.RegisterPoints(1822, { -- Tremaculum
 
 -- Assaults
 local rift_active = {requires_buff={352795, 354870, any=true}}
-local icon_red = ns.merge(ns.atlas_texture("VignetteLoot"), {r=1,g=0,b=0,a=1,scale=1})
-local icon_green = ns.merge(ns.atlas_texture("VignetteLoot"), {r=0,g=1,b=0,a=1,scale=1})
-local icon_blue = ns.merge(ns.atlas_texture("VignetteLoot"), {r=0,g=0.5,b=1,a=1,scale=1})
-local icon_purple = ns.merge(ns.atlas_texture("VignetteLoot"), {r=1,g=0,b=1,a=1,scale=1})
-local icon_yellow = ns.merge(ns.atlas_texture("VignetteLoot"), {r=1,g=1,b=0,a=1,scale=1})
+local icon_red = ns.atlas_texture("VignetteLoot", {r=1,g=0,b=0,a=1,scale=1})
+local icon_green = ns.atlas_texture("VignetteLoot", {r=0,g=1,b=0,a=1,scale=1})
+local icon_blue = ns.atlas_texture("VignetteLoot", {r=0,g=0.5,b=1,a=1,scale=1})
+local icon_purple = ns.atlas_texture("VignetteLoot", {r=1,g=0,b=1,a=1,scale=1})
+local icon_yellow = ns.atlas_texture("VignetteLoot", {r=1,g=1,b=0,a=1,scale=1})
 local ASSAULT_NECRO = {1550, 6989}
 local ASSAULT_VENTHYR = {1550, 6990}
 local ASSAULT_KYRIAN = {1550, 6991}

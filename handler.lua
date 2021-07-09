@@ -212,13 +212,15 @@ local trimmed_icon = function(texture)
     end
     return icon_cache[texture]
 end
-local atlas_texture = function(atlas, scale)
+local atlas_texture = function(atlas, extra)
     atlas = C_Texture.GetAtlasInfo(atlas)
-    return {
+    if type(extra) == "number" then
+        extra = {scale=extra}
+    end
+    return ns.merge({
         icon = atlas.file,
         tCoordLeft = atlas.leftTexCoord, tCoordRight = atlas.rightTexCoord, tCoordTop = atlas.topTexCoord, tCoordBottom = atlas.bottomTexCoord,
-        scale = scale or 1,
-    }
+    }, extra)
 end
 ns.atlas_texture = atlas_texture
 local default_textures = {
