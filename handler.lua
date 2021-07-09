@@ -373,10 +373,14 @@ local inactive_cache = {}
 local function get_inactive_texture_variant(icon)
     if not inactive_cache[icon] then
         inactive_cache[icon] = CopyTable(icon)
-        inactive_cache[icon].r = 0.5
-        inactive_cache[icon].g = 0.5
-        inactive_cache[icon].b = 0.5
-        inactive_cache[icon].a = 1
+        if inactive_cache[icon].r then
+            inactive_cache[icon].a = 0.5
+        else
+            inactive_cache[icon].r = 0.5
+            inactive_cache[icon].g = 0.5
+            inactive_cache[icon].b = 0.5
+            inactive_cache[icon].a = 1
+        end
     end
     return inactive_cache[icon]
 end
