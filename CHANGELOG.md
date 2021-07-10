@@ -1,5 +1,10 @@
 # Changelog
 
+## Changed in v25
+
+* Fix an error when trying to show loot for Ylava in the Maw (`C_Item.RequestLoadItemDataByID`)
+* Add some missing loot, and a missing Helgarde Supply Cache
+
 ## Changed in v24
 
 * Added to the Maw:
