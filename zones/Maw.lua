@@ -372,8 +372,15 @@ ns.RegisterPoints(1543, {
         achievement=15099, criteria=52243,
         quest=64256,
         loot={
+            187351, -- Stygic Cluster
+            185902, -- Iron Maiden's Toolkit
+            187014, -- Shackler's Spiked Shoulders
             187018, -- Ritualist's Shoulder Scythes
+            187019, -- Infiltrator's Shoulderguards
+            187026, -- Field Warden's Torture Kit
+            187240, -- Field Warden's Watchful Eye
         },
+        note=DAILY,
     },
     [66506130] = { -- Jeweled Heart
         achievement=15099, criteria=52244,
