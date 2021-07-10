@@ -204,7 +204,9 @@ ns.RegisterPoints(1543, {
         achievement=14744, criteria=49860,
         quest=61568,
         npc=172862,
-        --loot={},
+        loot={
+            1862228, -- Helm of the Skittish Hero
+        },
         note="Follow until it becomes hostile",
         level=60,
     },
@@ -506,6 +508,8 @@ local ASSAULT_VENTHYR = {1550, 6990}
 local ASSAULT_KYRIAN = {1550, 6991}
 local ASSAULT_NIGHTFAE = {1550, 6992}
 
+-- there's also a tracking on 64700
+
 -- Necrolord
 ns.RegisterPoints(1543, {
     -- none?
@@ -632,6 +636,7 @@ local helgarde = ns.nodeMaker{
     loot={186727}, -- Seal Breaker Key
     note="For the Domination Chest",
     minimap=true,
+    scale=1,
 }
 ns.RegisterPoints(1543, {
     [25503680] = {
@@ -655,6 +660,7 @@ ns.RegisterPoints(1543, {
     [66055740] = {
         quest=64207,
         label="Domination Chest",
+        atlas="VignetteLootElite", scale=1.2,
         loot={186607}, -- Nilganimahts Silver Ring
         note="Bring 4x {item:186727} to unlock. Kill {npc:177444} and {npc:177134}, loot Helgarde Supply Caches, and find the Harrower's Key Ring",
     },
@@ -666,7 +672,7 @@ ns.RegisterPoints(1543, {
             186217, -- Supple Helhound Leather Pants
             187359, -- Ylva's Water Dish
             187393, -- Sterling Hound-Handler's Gauntlets
-            {item=186970, quest=62683, note="{item:186727}"}, -- Feeder's Hand and Key / Seal Breaker Key
+            {186970, quest=62683, note="{item:186727}"}, -- Feeder's Hand and Key / Seal Breaker Key
         },
         note="Drops {item:186727} for {npc:179572:Nilganihmaht}",
     },
@@ -676,6 +682,7 @@ ns.RegisterPoints(1543, {
         loot={186727}, -- Seal Breaker Key
         note="For the Domination Chest",
     },
+    [62456180] = helgarde(),
     [65706120] = helgarde(),
     [67555570] = helgarde(),
     [68204810] = helgarde(),
@@ -689,10 +696,14 @@ ns.RegisterPoints(1543, {
             186608, -- Nilganihmaht's Gold Band
         },
         route=18503925,
+        inbag=186608,
+        minimap=true,
     },
     [18503925] = ns.path{
         quest=64199,
         route={18503925,19203225, r=0,g=1,b=1},
+        note="Look for the grapple point, then run to the base of the spire",
+        inbag=186608,
     },
 })
 
