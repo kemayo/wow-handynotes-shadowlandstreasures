@@ -3,6 +3,8 @@ local myname, ns = ...
 local path = ns.path
 local CAVE = "Cave entrance"
 
+local rift_active = {requires_buff={352795, 354870, any=true}}
+
 ns.RegisterPoints(1543, {
     -- Better to Be Lucky Than Dead
     [25903115] = { -- Adjutant Dekaris
@@ -400,7 +402,8 @@ ns.RegisterPoints(1543, {
             {187139,toy=true}, -- Bottled Shade Heart
             186605, -- Nilganihmaht's Runed Band
         },
-        note="Drops {item:186605} for {npc:179572:Nilganihmaht}",
+        active=rift_active,
+        note="In the rift. Drops {item:186605} for {npc:179572:Nilganihmaht}",
     }
 
     -- non-achievement
@@ -500,7 +503,6 @@ ns.RegisterPoints(1822, { -- Tremaculum
 })
 
 -- Assaults
-local rift_active = {requires_buff={352795, 354870, any=true}}
 local icon_red = ns.atlas_texture("VignetteLoot", {r=1,g=0,b=0,a=1,scale=1})
 local icon_green = ns.atlas_texture("VignetteLoot", {r=0,g=1,b=0,a=1,scale=1})
 local icon_blue = ns.atlas_texture("VignetteLoot", {r=0,g=0.5,b=1,a=1,scale=1})
