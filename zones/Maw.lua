@@ -636,7 +636,7 @@ local helgarde = ns.nodeMaker{
     loot={186727}, -- Seal Breaker Key
     note="For the Domination Chest",
     minimap=true,
-    scale=1,
+    scale=0.8,
 }
 ns.RegisterPoints(1543, {
     [25503680] = {
@@ -661,8 +661,19 @@ ns.RegisterPoints(1543, {
         quest=64207,
         label="Domination Chest",
         atlas="VignetteLootElite", scale=1.2,
+        minimap=true,
+        progress={64204,64205,64206,64208},
         loot={186607}, -- Nilganimahts Silver Ring
-        note="Bring 4x {item:186727} to unlock. Kill {npc:177444} and {npc:177134}, loot Helgarde Supply Caches, and find the Harrower's Key Ring",
+        note=function()
+            local function q(quest, label)
+                return (C_QuestLog.IsQuestFlaggedCompleted(quest) and GREEN_FONT_COLOR or RED_FONT_COLOR):WrapTextInColorCode(label)
+            end
+            return "Bring 4x {item:186727} to unlock.\n"..
+                "* "..q(62683, "Kill {npc:177444}").."\n"..
+                "* "..q(62679, "Kill {npc:177134:Maldraxxi Defector} until it drops").."\n"..
+                "* "..q(62682, "Loot Helgarde Supply Caches").."\n"..
+                "* "..q(62680, "Pick up the Harrower's Key Ring")
+        end,
     },
     [66404190] = {
         achievement=15107, criteria=52287, -- also 14943 for killing with 5x blood of the pack
@@ -676,9 +687,10 @@ ns.RegisterPoints(1543, {
         },
         note="Drops {item:186727} for {npc:179572:Nilganihmaht}",
     },
-    [65656005] = {
+    [66905620] = {
         quest=62680,
         label="The Harrower's Key Ring",
+        minimap=true,
         loot={186727}, -- Seal Breaker Key
         note="For the Domination Chest",
     },
