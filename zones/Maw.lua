@@ -521,10 +521,35 @@ local ASSAULT_NIGHTFAE = {1550, 6992}
 
 -- Necrolord
 ns.RegisterPoints(1543, {
-    -- none?
+    [34156125] = {quest=64044,texture=icon_red,}, -- 64700?
 }, {
     label="Stolen Anima Vessel",
     poi={ASSAULT_NECRO},
+})
+ns.RegisterPoints(1543, {
+    [28905710] = {quest=64209},
+    [30156495] = {quest=63816},
+    [30355595] = {quest=63815},
+    [32105640] = {quest=63826},
+    [32806500] = {quest=63825},
+    [33557040] = {quest=63818},
+    -- [33805720] = {quest=nil},
+    [34106165] = {quest=63817},
+    -- [35006970] = {quest=nil},
+}, {
+    label="Mawsworn Cache",
+    poi={ASSAULT_NECRO},
+    loot={
+        186573, -- Quartered Ancient Ring
+        186600, -- Defense Map
+    },
+    note="Nilganihmaht. Neither drop is guaranteed...",
+})
+ns.RegisterPoints(1543, {
+    [33656625] = {
+        loot={186604}, -- Quartered Ancient Ring
+        note="Nilganihmaht. Spawns somewhat randomly...",
+    }
 })
 -- Venthyr
 ns.RegisterPoints(1543, {
