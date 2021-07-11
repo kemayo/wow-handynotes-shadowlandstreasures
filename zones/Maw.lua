@@ -521,7 +521,8 @@ local ASSAULT_NIGHTFAE = {1550, 6992}
 
 -- Necrolord
 ns.RegisterPoints(1543, {
-    [34156125] = {quest=64044,texture=icon_red,}, -- 64700?
+    [34156125] = {quest=64044,texture=icon_red,},
+    [36766805] = {quest=64044,texture=icon_red,},
 }, {
     label="Stolen Anima Vessel",
     poi={ASSAULT_NECRO},
