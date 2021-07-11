@@ -549,7 +549,9 @@ ns.RegisterPoints(1543, {
 ns.RegisterPoints(1543, {
     [33656625] = {
         loot={186604}, -- Quartered Ancient Ring
+        inbag={186604,186603,any=true,},
         note="Nilganihmaht. Spawns somewhat randomly...",
+        poi={ASSAULT_NECRO},
     }
 })
 -- Venthyr
