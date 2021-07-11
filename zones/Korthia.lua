@@ -371,7 +371,7 @@ ns.RegisterPoints(1961, { -- Korthia
         loot={
             {186646, mount=1507}, -- Darkmaul
         },
-        note="Feed {item:187153} from Invasive Mawshrooms to {npc:180063} 10 times. Ride for the full duration or it won't count.",
+        note="Feed {item:187153} from Invasive Mawshrooms to {npc:180063} 10 times.",
     },
     [25725108] = { -- Razorwing Nest
         quest=64274, progress=0,
@@ -380,7 +380,19 @@ ns.RegisterPoints(1961, { -- Korthia
         loot={
             {186651, mount=1510}, -- Dusklight Razorwing
         },
-        note="Get 2x {item:187054} per day from devourers, turn in 10 at the nest for the mount",
+        note=function()
+            local function qp(...)
+                for i=1, select('#', ...) do
+                    if not C_QuestLog.IsQuestFlaggedCompleted((select(i, ...))) then
+                        return i - 1
+                    end
+                end
+                return select('#', ...)
+            end
+            -- egg drop tracker: 64280, 64281
+            return "Get 2x {item:187054} per day from devourers, turn in 10 at the nest for the mount.\n"..
+                "Eggs found today: " .. qp(64280, 64281)
+        end,
     },
 }, {
     minimap=true,
@@ -539,7 +551,7 @@ ns.RegisterPoints(1961, { -- Korthia
         note="Buy {item:186731} from {npc:178257} to enter the rift",
     },
 
-    [56853235] = { -- Popo's Potion Patrol
+    [56853235] = { -- Popo's Potion Patrol (Wild Worldcracker)
         achievement=15107, criteria=52300,
         quest=64338,
         npc=180032,
