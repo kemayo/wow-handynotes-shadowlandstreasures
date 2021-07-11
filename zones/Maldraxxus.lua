@@ -738,6 +738,9 @@ local jellycat = ns.nodeMaker{
     note="Pet all nine cats to get {item:184449}",
     icon=true,
     minimap=true,
+    loot={
+        {184449, toy=true}, -- Jiggles's Favorite Toy
+    }
 }
 ns.RegisterPoints(1536, {
     [32025705] = jellycat{criteria=49426,}, -- Snots
