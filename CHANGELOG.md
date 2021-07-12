@@ -1,5 +1,13 @@
 # Changelog
 
+## Changed in v26
+
+* Nilganihmaht
+    * Better explain the Domination chest
+    * Show some of the quartered ancient ring pieces during the Necrolord assault
+    * Flag Torglluun as being in the rift
+* Show you how many razorwing eggs you've looted so far today (of the two you can get)
+
 ## Changed in v25
 
 * Fix an error when trying to show loot for Ylava in the Maw (`C_Item.RequestLoadItemDataByID`)
