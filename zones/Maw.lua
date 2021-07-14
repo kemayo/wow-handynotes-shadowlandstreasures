@@ -535,6 +535,9 @@ local ASSAULT_NIGHTFAE = {1550, 6992}
 ns.RegisterPoints(1543, {
     [34156125] = {quest=64044,texture=icon_red,},
     [36766805] = {quest=64044,texture=icon_red,},
+    -- claimed on wowhead, but haven't found yet:
+    -- [32306590] = {quest=nil,texture=icon_green,},
+    -- [25905530] = {quest=nil,texture=icon_green,},
 }, {
     label="Stolen Anima Vessel",
     poi={ASSAULT_NECRO},
@@ -575,6 +578,7 @@ ns.RegisterPoints(1543, {
     [26201960] = {quest=64056,texture=icon_green,},
     [29601160] = {quest=64056,texture=icon_green,},
     [32701480] = {quest=64056,texture=icon_green,},
+    [28502100] = {quest=64056,texture=icon_green,note="In the Extractor's Sanatorium",},
 }, {
     label="Stolen Anima Vessel",
     poi={ASSAULT_VENTHYR},
