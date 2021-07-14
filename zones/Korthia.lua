@@ -139,36 +139,41 @@ local riftcache = ns.nodeMaker{
     note="You need to be in the rift to see these.",
 }
 ns.RegisterPoints(1961, { -- Korthia
-    [33453930] = riftcache{quest=64456},
-    [35953245] = riftcache{quest=64456},
-    [38003550] = riftcache{quest=64456},
-    [39804300] = riftcache{quest=64456},
+    [33453930] = riftcache(),
+    [35953245] = riftcache(),
+    [38003550] = riftcache(),
+    [39804300] = riftcache(),
 }, {
-    texture=ns.merge(ns.atlas_texture("VignetteLoot"), {r=1,g=0,b=0,a=1,scale=1}),
+    quest=64456,
+    texture=ns.atlas_texture("VignetteLoot", {r=1,g=0,b=0,a=1,scale=1}),
 })
 ns.RegisterPoints(1961, { -- Korthia
-    [25955580] = riftcache{quest=64470},
-    [26555640] = riftcache{quest=64470},
-    [27555935] = riftcache{quest=64470},
+    [24805625] = riftcache(),
+    [25955580] = riftcache(),
+    [26555640] = riftcache(),
+    [27555935] = riftcache(),
 }, {
-    texture=ns.merge(ns.atlas_texture("VignetteLoot"), {r=0,g=1,b=0,a=1,scale=1}),
+    quest=64470,
+    texture=ns.atlas_texture("VignetteLoot", {r=0,g=1,b=0,a=1,scale=1}),
 })
 ns.RegisterPoints(1961, { -- Korthia
-    [54105460] = riftcache{quest=64471},
-    [54904240] = riftcache{quest=64471},
-    [55506510] = riftcache{quest=64471},
-    [60903520] = riftcache{quest=64471},
-    [61755870] = riftcache{quest=64471},
+    [54105460] = riftcache(),
+    [54904240] = riftcache(),
+    [55506510] = riftcache(),
+    [60903520] = riftcache(),
+    [61755870] = riftcache(),
 }, {
-    texture=ns.merge(ns.atlas_texture("VignetteLoot"), {r=0,g=0.5,b=1,a=1,scale=1}),
+    quest=64471,
+    texture=ns.atlas_texture("VignetteLoot", {r=0,g=0.5,b=1,a=1,scale=1}),
 })
 ns.RegisterPoints(1961, { -- Korthia
-    [46103190] = riftcache{quest=64472},
-    [50753300] = riftcache{quest=64472},
-    [56301850] = riftcache{quest=64472},
-    [64303040] = riftcache{quest=64472},
+    [46103190] = riftcache(),
+    [50753300] = riftcache(),
+    [56301850] = riftcache(),
+    [64303040] = riftcache(),
 }, {
-    texture=ns.merge(ns.atlas_texture("VignetteLoot"), {r=1,g=1,b=0,a=1,scale=1}),
+    quest=64472,
+    texture=ns.atlas_texture("VignetteLoot", {r=1,g=1,b=0,a=1,scale=1}),
 })
 
 --Relics
