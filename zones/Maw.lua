@@ -404,7 +404,19 @@ ns.RegisterPoints(1543, {
         },
         active=rift_active,
         note="In the rift. Drops {item:186605} for {npc:179572:Nilganihmaht}",
-    }
+    },
+
+    [35904370] = { -- Blinding Shadow
+        achievement=15107, criteria=52297,
+        quest=64276,
+        npc=179853,
+        loot={
+            187361, -- Rift-Bound Shadow Piercer
+            187406, -- Band of Blinding Shadows
+        },
+        active=rift_active,
+        note="In the rift.",
+    },
 
     -- non-achievement
     --[] = { -- Warren Mongrel
