@@ -657,6 +657,27 @@ ns.RegisterPoints(1543, {
     note="You need to be in the rift to see these.",
 })
 
+-- Fallen Charger
+ns.RegisterPoints(1543, {
+    [16274949] = {
+        poi={ASSAULT_NIGHTFAE, ASSAULT_VENTHYR},
+    },
+    [27906290] = {
+        poi={ASSAULT_NECRO},
+    },
+    [31803850] = {
+        poi={ASSAULT_KYRIAN},
+    }
+}, {
+    achievement=15107, criteria=52292,
+    quest=64164,
+    npc=179460,
+    loot={
+        {186659, id=1502}, -- Fallen Charger's Reins
+    },
+    note="Yells, runs from its spawn point to Korthia, then despawns",
+})
+
 -- Zovaal's Vault
 ns.RegisterPoints(1543, {
     [33006630] = {},
