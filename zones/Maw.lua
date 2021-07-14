@@ -171,6 +171,7 @@ ns.RegisterPoints(1543, {
             {183067,quest=63161,}, -- Korrath's Grimoire: Belidir
             {183068,quest=63162,}, -- Korrath's Grimoire: Gyadrek
             183187, -- Shadeweaver Incantation
+            {181794,toy=true}, -- Orophea's Lyre (weirdly)
         },
         level=60,
     },
