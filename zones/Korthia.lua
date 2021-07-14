@@ -467,7 +467,9 @@ ns.RegisterPoints(1961, { -- Korthia
         npc=179913,
         requires_item=186731,
         loot={
-            {187174, toy=true}, -- Shaded Judgement Stone
+            -- {187174, toy=true}, -- Shaded Judgement Stone (apparently not off-PTR?)
+            187396, -- Girdle of the Deadsoul
+            187401, -- Band of the Shaded Rift
         },
         active=rift_active,
         note="Buy {item:186731} from {npc:178257} to enter the rift",
