@@ -526,12 +526,6 @@ ns.RegisterPoints(1961, { -- Korthia
             187250, -- Kroke's Wingspiked Pauldrons
             187248, -- Kroke's Gleaming Spaulders
         },
-        route={
-            59203580, 60893687, 62273605, 61313445, 59953388,
-            59053603, 58253784, 57033778, 56863623, 57923572,
-            loop=true,
-            r=1, g=1, b=0,
-        },
     },
 
     [46507950] = { -- No Stoneborn Left Behind
@@ -541,7 +535,7 @@ ns.RegisterPoints(1961, { -- Korthia
         covenant=Enum.CovenantType.Venthyr,
         loot={
             184790, -- Archdruid Van-Yali's Greenthumbs
-            -- {186479, mount=, covenant=Enum.CovenantType.Venthyr}, -- Mastercraft Gravewing
+            {186479, mount=nil, covenant=Enum.CovenantType.Venthyr}, -- Mastercraft Gravewing
         },
         note="Talk to {npc:179974}",
     },
