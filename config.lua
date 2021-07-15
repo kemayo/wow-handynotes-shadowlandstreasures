@@ -222,6 +222,18 @@ ns.options = {
                 info.option.values = values
                 return values
             end,
+            hidden = function(info)
+                for uiMapID, points in pairs(ns.points) do
+                    for coord, point in pairs(points) do
+                        if point.achievement then
+                            info.option.hidden = false
+                            return false
+                        end
+                    end
+                end
+                info.option.hidden = true
+                return true
+            end,
             order = 30,
         },
         zonesHidden = {
@@ -612,6 +624,46 @@ local function iterKeysByValue(tbl, sortFunction)
     end)
     return ipairs(keys)
 end
+local OptionsDropdown = {}
+do
+    function OptionsDropdown.node(options, ...)
+        local node = options
+        for i=1, select('#', ...) do
+            node = options.args[select(i, ...)]
+        end
+        return node
+    end
+    local info = {}
+    function OptionsDropdown.makeInfo(options, ...)
+        local node = OptionsDropdown.node(options, ...)
+        wipe(info)
+        info.options = options
+        info.option = node
+        info.arg = node.arg
+        info.type = node.type
+        info.handler = node.handler
+        info.uiType = "dropdown"
+        info.uiName = "HandyNotesTreasures-Dropdown"
+        info[0] = "" -- not a slashcommand
+        for i=1, select('#', ...) do
+            info[i] = select(i, ...)
+        end
+        return info
+    end
+    local function nodeValueOrFunc(key, options, ...)
+        local node = OptionsDropdown.node(options, ...)
+        if type(node[key]) == "function" then
+            return node[key](OptionsDropdown.makeInfo(options, ...))
+        end
+        return node[key]
+    end
+    function OptionsDropdown.isHidden(options, ...)
+        return nodeValueOrFunc('hidden', options, ...)
+    end
+    function OptionsDropdown.values(options, ...)
+        return nodeValueOrFunc('values', options, ...)
+    end
+end
 function ns.SetupMapOverlay()
     local frame = WorldMapFrame:AddOverlayFrame("WorldMapTrackingOptionsButtonTemplate", "DROPDOWNTOGGLEBUTTON", "TOPRIGHT", WorldMapFrame:GetCanvasContainer(), "TOPRIGHT", -68, -2);
     frame.Icon:SetAtlas("VignetteLootElite")
@@ -694,12 +746,15 @@ function ns.SetupMapOverlay()
             UIDropDownMenu_AddSeparator(level)
 
             wipe(info)
-            info.text = ACHIEVEMENTS
             info.hasArrow = true
             info.keepShownOnClick = true
             info.notCheckable = true
-            info.value = "achievementsHidden"
-            UIDropDownMenu_AddButton(info, level)
+
+            if not OptionsDropdown.isHidden(ns.options, "achievementsHidden") then
+                info.text = ACHIEVEMENTS
+                info.value = "achievementsHidden"
+                UIDropDownMenu_AddButton(info, level)
+            end
 
             info.text = ZONE
             info.value = "zonesHidden"
@@ -728,28 +783,22 @@ function ns.SetupMapOverlay()
             info.keepShownOnClick = true
             info.tooltipOnButton = true
             info.func = function(button, section)
+                local checked = button.checked
+                local value = button.value
                 if (checked) then
                     PlaySound(SOUNDKIT.IG_MAINMENU_OPTION_CHECKBOX_ON)
                 else
                     PlaySound(SOUNDKIT.IG_MAINMENU_OPTION_CHECKBOX_OFF)
                 end
-                local checked = button.checked
-                local value = button.value
                 ns.db[section][value] = not checked
                 ns.HL:Refresh()
             end
+            local values = OptionsDropdown.values(ns.options, parent)
             if parent == "achievementsHidden" then
-                local values = {}
                 local relevant = {}
-                for uiMapID, points in pairs(ns.points) do
-                    for _, point in pairs(points) do
-                        if point.achievement then
-                            if not values[point.achievement] then
-                                local _, achievement = GetAchievementInfo(point.achievement)
-                                values[point.achievement] = achievement or 'achievement:'..point.achievement
-                            end
-                            relevant[point.achievement] = relevant[point.achievement] or (uiMapID == currentZone)
-                        end
+                for _, point in pairs(ns.points[currentZone] or {}) do
+                    if point.achievement then
+                        relevant[point.achievement] = true
                     end
                 end
                 for _, achievementid in iterKeysByValue(values) do
@@ -762,16 +811,6 @@ function ns.SetupMapOverlay()
                     UIDropDownMenu_AddButton(info, level)
                 end
             elseif parent == "zonesHidden" then
-                local values = {}
-                for uiMapID in pairs(ns.points) do
-                    if not values[uiMapID] then
-                        local mapinfo = C_Map.GetMapInfo(uiMapID)
-                        if mapinfo and mapinfo.mapType == 3 then
-                            -- zones only
-                            values[uiMapID] = mapinfo.name
-                        end
-                    end
-                end
                 for _, uiMapID in iterKeysByValue(values) do
                     info.text = values[uiMapID]
                     info.value = uiMapID
