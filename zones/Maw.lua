@@ -54,7 +54,10 @@ ns.RegisterPoints(1543, {
         achievement=14744, criteria=49846,
         quest=62282,
         npc=158025,
-        --loot={},
+        loot={
+            {183901,toy=true}, -- Bonestorm Top
+            186611, -- Taraxis' Treads
+        },
         level=60,
     },
     [28106060] = { -- Dolos
