@@ -24,6 +24,8 @@ ns.currencies = {
     }
 }
 
+ns.groups = {}
+
 ns.points = {
     --[[ structure:
     [uiMapID] = { -- "_terrain1" etc will be stripped from attempts to fetch this

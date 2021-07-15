@@ -20,6 +20,7 @@ ns.defaults = {
         tooltip_pointanchor = false,
         tooltip_item = true,
         tooltip_questid = false,
+        groupsHidden = {},
         zonesHidden = {},
         achievementsHidden = {},
         worldmapoverlay = true,
@@ -262,6 +263,42 @@ ns.options = {
             end,
             order = 35,
         },
+        groupsHidden = {
+            type = "multiselect",
+            name = "Show groups",
+            desc = "Toggle whether to show certain groups of points",
+            get = function(info, key) return not ns.db[info[#info]][key] end,
+            set = function(info, key, value)
+                ns.db[info[#info]][key] = not value
+                ns.HL:Refresh()
+            end,
+            values = function(info)
+                local values = {}
+                for uiMapID, points in pairs(ns.points) do
+                    for coord, point in pairs(points) do
+                        if point.group and not values[point.group] then
+                            values[point.group] = ns.groups[point.group] or point.group
+                        end
+                    end
+                end
+                -- replace ourself with the built values table
+                info.option.values = values
+                return values
+            end,
+            hidden = function(info)
+                for uiMapID, points in pairs(ns.points) do
+                    for coord, point in pairs(points) do
+                        if point.group then
+                            info.option.hidden = false
+                            return false
+                        end
+                    end
+                end
+                info.option.hidden = true
+                return true
+            end,
+            order = 40,
+        }
     },
 }
 
@@ -528,6 +565,9 @@ ns.should_show_point = function(coord, point, currentZone, isMinimap)
     if ns.hidden[currentZone] and ns.hidden[currentZone][coord] then
         return false
     end
+    if point.group and ns.db.groupsHidden[point.group] then
+        return false
+    end
     if point.ShouldShow and not point:ShouldShow() then
         return false
     end
@@ -760,6 +800,12 @@ function ns.SetupMapOverlay()
             info.value = "zonesHidden"
             UIDropDownMenu_AddButton(info, level)
 
+            if not OptionsDropdown.isHidden(ns.options, "groupsHidden") then
+                info.text = GROUPS
+                info.value = "groupsHidden"
+                UIDropDownMenu_AddButton(info, level)
+            end
+
             UIDropDownMenu_AddSeparator(level)
 
             info.text = "Open HandyNotes options"
@@ -816,6 +862,22 @@ function ns.SetupMapOverlay()
                     info.value = uiMapID
                     info.checked = not ns.db.zonesHidden[uiMapID]
                     if uiMapID == currentZone then
+                        info.text = BRIGHTBLUE_FONT_COLOR:WrapTextInColorCode(info.text) .. " " .. CreateAtlasMarkup("VignetteKill", 0)
+                    end
+                    UIDropDownMenu_AddButton(info, level)
+                end
+            elseif parent == "groupsHidden" then
+                local relevant = {}
+                for _, point in pairs(ns.points[currentZone] or {}) do
+                    if point.group then
+                        relevant[point.group] = true
+                    end
+                end
+                for _, group in iterKeysByValue(values) do
+                    info.text = values[group]
+                    info.value = group
+                    info.checked = not ns.db.groupsHidden[group]
+                    if relevant[group] then
                         info.text = BRIGHTBLUE_FONT_COLOR:WrapTextInColorCode(info.text) .. " " .. CreateAtlasMarkup("VignetteKill", 0)
                     end
                     UIDropDownMenu_AddButton(info, level)
