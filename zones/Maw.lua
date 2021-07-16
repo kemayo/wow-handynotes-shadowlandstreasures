@@ -11,7 +11,9 @@ ns.RegisterPoints(1543, {
         achievement=14744, criteria=49841,
         quest=57482,
         npc=157964,
-        --loot={},
+        loot={
+            186222, -- Grips of the Coldheart Adjutant
+        },
         level=60,
     },
     [19304170] = { -- Apholeias, Herald of Loss
@@ -31,6 +33,7 @@ ns.RegisterPoints(1543, {
         npc=157833,
         loot={
             {184312, toy=true}, -- Borr-Geth's Fiery Brimstone
+            186223, -- Coif of the Molten Terror
         },
         level=60,
     },
@@ -47,7 +50,9 @@ ns.RegisterPoints(1543, {
         achievement=14744, criteria=49845,
         quest=62281,
         npc=160770,
-        --loot={},
+        loot={
+            186220, -- Stygian Chestcage
+        },
         level=60,
     },
     [49128175] = { -- Darklord Taraxis
@@ -64,14 +69,18 @@ ns.RegisterPoints(1543, {
         achievement=14744, criteria=49847,
         quest=60909,
         npc=170711,
-        --loot={},
+        loot={
+            186209, -- Blood-Spattered Gloves of Death
+        },
         level=60,
     },
     [23755340] = { -- Eketra
         achievement=14744, criteria=49848,
         quest=60915,
         npc=170774,
-        --loot={},
+        loot={
+            186563, -- Spear of the Impaler
+        },
         level=60,
     },
     [42352110] = { -- Ekphoras, Herald of Grief
@@ -90,7 +99,8 @@ ns.RegisterPoints(1543, {
         quest=57509,
         npc=154330,
         loot={
-            183407, -- Contained Essence of Dread
+            {183407,pet=3037,}, -- Contained Essence of Dread
+            186212, -- Eternas' Braided Waistcord
         },
         level=60,
     },
@@ -100,9 +110,9 @@ ns.RegisterPoints(1543, {
         npc=170303,
         loot={
             184108, -- Vorpal Amulet
-            183066, -- Korrath's Grimoire: Aleketh
-            183067, -- Korrath's Grimoire: Belidir
-            183068, -- Korrath's Grimoire: Gyadrek
+            {183066,quest=63160,}, -- Korrath's Grimoire: Aleketh
+            {183067,quest=63161,}, -- Korrath's Grimoire: Belidir
+            {183068,quest=63162,}, -- Korrath's Grimoire: Gyadrek
             186606, -- Nilganihmaht's Signet Ring
         },
         note="Get the etching from the three other Heralds, combine into {item:182329}, and use to summon",
@@ -122,6 +132,9 @@ ns.RegisterPoints(1543, {
         achievement=14744, criteria=50621,
         quest=62788,
         npc=175012,
+        loot={
+            186214, -- Maw Snakeskin Boots
+        },
         note="Flies around",
         level=60,
     },
@@ -131,6 +144,7 @@ ns.RegisterPoints(1543, {
         npc=162849,
         loot={
             {184292, toy=true}, -- Ancient Elethium Coin
+            185892, -- Stygia-Etched Decapitator
         },
         level=60,
     },
@@ -138,14 +152,18 @@ ns.RegisterPoints(1543, {
         achievement=14744, criteria=49853,
         quest=57573,
         npc=158278,
-        --loot={},
+        loot={
+            186236, -- Devourer's Shadehide Jerkin
+        },
         level=60,
     },
     [48801830] = { -- Obolos
         achievement=14744, criteria=49854,
         quest=60667,
         npc=164064,
-        --loot={},
+        loot={
+            186238, -- Mantle of the Prime Collector
+        },
         level=60,
     },
     [23702140] = { -- Orophea
@@ -154,6 +172,7 @@ ns.RegisterPoints(1543, {
         npc=172577,
         loot={
             {181794, toy=true}, -- Orophea's Lyre
+            186211, -- Pantaloons of the Condemned Bard
         },
         note="Fetch {spell:337150} from 26.7 29.3, use it to summon",
         level=60,
@@ -170,11 +189,12 @@ ns.RegisterPoints(1543, {
         quest=60884,
         npc=170634,
         loot={
-            {183066,quest=63160,}, -- Korrath's Grimoire: Aleketh
-            {183067,quest=63161,}, -- Korrath's Grimoire: Belidir
-            {183068,quest=63162,}, -- Korrath's Grimoire: Gyadrek
             183187, -- Shadeweaver Incantation
-            {181794,toy=true}, -- Orophea's Lyre (weirdly)
+            185945, -- Shadeweaver's Spire
+            {183066, quest=63160,}, -- Korrath's Grimoire: Aleketh
+            {183067, quest=63161,}, -- Korrath's Grimoire: Belidir
+            {183068, quest=63162,}, -- Korrath's Grimoire: Gyadrek
+            {181794, toy=true}, -- Orophea's Lyre (weirdly)
         },
         level=60,
     },
@@ -185,6 +205,7 @@ ns.RegisterPoints(1543, {
         loot={
             183141, -- Stygic Magma
             185473, -- Soulforger's Tools
+            186613, -- Rhovus' Linked Greaves
         },
         level=60,
     },
@@ -211,7 +232,7 @@ ns.RegisterPoints(1543, {
         quest=61568,
         npc=172862,
         loot={
-            1862228, -- Helm of the Skittish Hero
+            186228, -- Helm of the Skittish Hero
         },
         note="Follow until it becomes hostile",
         level=60,
@@ -229,14 +250,18 @@ ns.RegisterPoints(1543, {
         achievement=14660, criteria=49485,
         quest=61136, -- 63380
         npc=169102,
-        --loot={},
+        loot={
+            186616, -- Bindings of Screaming Death
+        },
         level=60,
     },
     [34107455] = { -- Akros
         achievement=14660, criteria=49487,
         quest=60920,
         npc=170787,
-        --loot={},
+        loot={
+            186617, -- Death's Hammer Stompers
+        },
         level=60,
     },
     [28702515] = { -- Cyrixia
@@ -244,7 +269,8 @@ ns.RegisterPoints(1543, {
         quest=61346,
         npc=168693,
         loot={
-            183070, -- Mawsworn Orders (quest: 63164)
+            {183070, quest=63164}, -- Mawsworn Orders
+            186618, -- Willbreaker's Chain
         },
         level=60,
     },
@@ -252,7 +278,9 @@ ns.RegisterPoints(1543, {
         achievement=14660, criteria=49476,
         quest=59230,
         npc=162452,
-        --loot={},
+        loot={
+            186619, -- Bloodspattered Shoulders of the Flayer
+        },
         level=60,
     },
     [19205740] = { -- Dath Rezara
@@ -260,9 +288,10 @@ ns.RegisterPoints(1543, {
         quest=61140,
         npc=162844,
         loot={
-            183066, -- Korrath's Grimoire: Aleketh
-            183067, -- Korrath's Grimoire: Belidir
-            183068, -- Korrath's Grimoire: Gyadrek
+            {183066, quest=63160,}, -- Korrath's Grimoire: Aleketh
+            {183067, quest=63161,}, -- Korrath's Grimoire: Belidir
+            {183068, quest=63162,}, -- Korrath's Grimoire: Gyadrek
+            186620, -- Rezara's Fencing Grips
         },
         level=60,
     },
@@ -270,35 +299,45 @@ ns.RegisterPoints(1543, {
         achievement=14660, criteria=49475,
         quest=59183,
         npc=158314,
-        --loot={},
+        loot={
+            186622, -- Robe of Drifting Sorrow
+        },
         level=60,
     },
     [60456480] = { -- Houndmaster Vasanok
         achievement=14660, criteria=49490,
         quest=62209,
         npc=172523,
-        --loot={},
+        loot={
+            186224, -- Beastwarren Houndmaster's Treads
+        },
         level=60,
     },
     [20802970] = { -- Huwerath
         achievement=14660, criteria=49481,
         quest=58918,
         npc=162965,
-        -- loot={},
+        loot={
+            186623, -- Lost Soul's Mantle
+        },
         level=60,
     },
     [30846866] = { -- Krala
         achievement=14660, criteria=49486,
         quest=63381,
         npc=170692,
-        --loot={},
+        loot={
+            186624, -- Death Wing Drape
+        },
         level=60,
     },
     [27301755] = { -- Malevolent Stygia
         achievement=14660, criteria=49488,
         quest=61125,
         npc=171316,
-        --loot={},
+        loot={
+            186625, -- Hood of Malevolence
+        },
         level=60,
     },
     [38652880] = { -- Odalrik
@@ -315,21 +354,27 @@ ns.RegisterPoints(1543, {
         achievement=14660, criteria=49480,
         quest=60991,
         npc=162845,
-        --loot={},
+        loot={
+            186626, -- Bloodwicking Bands
+        },
         level=60,
     },
     [22654225] = { -- Ratgusher
         achievement=14660, criteria=51058,
         quest=63044, -- 63388 ??
         npc=175821,
-        -- loot={},
+        loot={
+            186627, -- Belt of Ten Thousand Tails
+        },
         level=60,
     },
     [26153745] = { -- Razkazzar
         achievement=14660, criteria=49479,
         quest=60992,
         npc=162829,
-        --loot={},
+        loot={
+            186628, -- Razkazzar's Axe Grippers
+        },
         level=60,
     },
     [55606320] = { -- Sanngror the Torturer
@@ -338,6 +383,7 @@ ns.RegisterPoints(1543, {
         npc=172521,
         loot={
             {183410,pet=3040,}, -- Sharpclaw
+            186629, -- Sanngor's Spiked Band
         },
         level=60,
     },
@@ -346,7 +392,9 @@ ns.RegisterPoints(1543, {
         achievement=14660, criteria=49491,
         quest=62211,
         npc=172524,
-        --loot={},
+        loot={
+            186240, -- Broodmotherhide Cloak
+        },
         level=60,
     },
     [59258000] = path{label=CAVE, achievement=14660, criteria=49491, quest=62211,},
@@ -354,21 +402,27 @@ ns.RegisterPoints(1543, {
         achievement=14660, criteria=49482,
         quest=59441,
         npc=165047,
-        --loot={},
+        loot={
+            186630, -- Spark-Deflecting Girdle
+        },
         level=60,
     },
     [36854480] = { -- Stygian Incinerator
         achievement=14660, criteria=50409,
         quest=62539,
         npc=156203,
-        --loot={},
+        loot={
+            186631, -- Emberfused Band
+        },
         level=60,
     },
     [40705960] = { -- Valis the Cruel
         achievement=14660, criteria=49492,
         quest=61728,
         npc=173086,
-        --loot={},
+        loot={
+            186632, -- Rune Covered Bindings
+        },
         level=60,
     },
 

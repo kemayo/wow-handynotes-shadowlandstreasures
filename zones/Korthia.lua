@@ -412,34 +412,8 @@ ns.RegisterPoints(1961, { -- Korthia
         loot={
             187370, -- Carriage Crusher's Padded Slippers
             187391, -- Yarxhov's Rib-Cage
+            187399, -- Maw Construct's Shoulderguards
         },
-    },
-
-    [39405240] = { -- Chamber of Knowledge (Yarxhov the Pillager)
-        achievement=15107, criteria=52295,
-        achievement=15066, criteria=52262,
-        quest=64257,
-        npc=179802,
-        -- requires_item=186718,
-        loot={
-            {187103, quest=63917}, -- Everliving Statuette
-            187366, -- Fallen Vault Guardian's Spire
-        },
-        note="Use {item:186718} from {npc:178257} on the Ancient Teleporter",
-    },
-
-    [44903550] = { -- Chamber of Wisdom (Xyraxz the Unknowable)
-        achievement=15107, criteria=52296,
-        achievement=15066, criteria=52263,
-        quest=64278,
-        npc=179859,
-        -- requires_item=186718,
-        loot={
-            {186538, pet=3140}, -- Gnashtooth
-            {187104, quest=63918}, -- Obelisk of Dark Tidings
-            187387, -- Pauldrons of the Unknown Beyond
-        },
-        note="Use {item:186718} from {npc:178257} on the Ancient Teleporter",
     },
 
     [51154165] = { -- Consumption
@@ -450,20 +424,9 @@ ns.RegisterPoints(1961, { -- Korthia
             187245, -- Death-Enveloped Spires
             187246, -- Death-Enveloped Pauldrons
             187247, -- Death-Enveloped Shoulder Spikes
+            187402, -- All-Consuming Loop
         },
         note="Starts as an elite, eats {npc:179344} until it becomes a rare and then a rare-elite. Loot gets better as it gets stronger, so wait.",
-    },
-
-    [59954370] = { -- Corpse Heap
-        achievement=15107, criteria=52299,
-        quest=64349,
-        npc=180042,
-        covenant=Enum.CovenantType.Necrolord,
-        loot={
-            187372, -- Miasma Filtering Headpiece
-            {186489, mount=1449, covenant=Enum.CovenantType.Necrolord}, -- Lord of the Corpseflies
-        },
-        note="Talk to {npc:180079}",
     },
 
     [59355220] = { -- Deadsoul Hatcher
@@ -496,25 +459,22 @@ ns.RegisterPoints(1961, { -- Korthia
         npc=180014,
         covenant=Enum.CovenantType.NightFae,
         loot={
-            {186492, mount=1487, covenant=Enum.CovenantType.NightFae}, -- Summer Wilderling
+            {186492, mount=1487, covenant=Enum.CovenantType.NightFae}, -- Summer Wilderling Harness
         },
         note="Click on the {npc:180014} to start",
     },
 
-    [44202950] = { -- Malbog
-        achievement=15107, criteria=52283,
-        quest=64233,
-        npc=179684,
+    [59954370] = { -- Fleshwing (Corpse Heap)
+        achievement=15107, criteria=52299,
+        quest=64349,
+        npc=180042,
+        -- covenant=Enum.CovenantType.Necrolord,
         loot={
-            {186645, mount=1506} -- Crimson Shardhide
+            187372, -- Miasma Filtering Headpiece
+            {186489, mount=1449, covenant=Enum.CovenantType.Necrolord}, -- Lord of the Corpseflies (from 187181)
+            {187424, quest=64551,}, -- Legend of the Animaswell
         },
-        note="Talk to {npc:179729} in town to gain {spell:355078} and follow footprints",
-    },
-    [60652315] = {
-        achievement=15107, criteria=52283,
-        quest=64233,
-        label="{npc:179729}", note="Get {spell:355078} and follow the footprints to 44.2, 29.5",
-        atlas="ancientmana",
+        note="Talk to {npc:180079}",
     },
 
     [59203580] = { -- Kroke the Tormented
@@ -528,16 +488,21 @@ ns.RegisterPoints(1961, { -- Korthia
         },
     },
 
-    [46507950] = { -- No Stoneborn Left Behind
-        achievement=15107, criteria=52276,
-        quest=64313,
-        npc=179985,
-        covenant=Enum.CovenantType.Venthyr,
+    [44202950] = { -- Malbog
+        achievement=15107, criteria=52283,
+        quest=64233,
+        npc=179684,
         loot={
-            184790, -- Archdruid Van-Yali's Greenthumbs
-            {186479, mount=nil, covenant=Enum.CovenantType.Venthyr}, -- Mastercraft Gravewing
+            {186645, mount=1506}, -- Crimson Shardhide
+            187377, -- Malbog's Paws
         },
-        note="Talk to {npc:179974}",
+        note="Talk to {npc:179729} in town to gain {spell:355078} and follow footprints",
+    },
+    [60652315] = {
+        achievement=15107, criteria=52283,
+        quest=64233,
+        label="{npc:179729}", note="Get {spell:355078} and follow the footprints to 44.2, 29.5",
+        atlas="ancientmana",
     },
 
     [50307590] = { -- Observer Yorik
@@ -547,21 +512,11 @@ ns.RegisterPoints(1961, { -- Korthia
         -- requires_item=186731,
         loot={
             {187420, toy=true}, -- Maw-Ocular Viewfinder
+            187365, -- Rift Splitter
+            187405, -- Choker of the Hidden Observer
         },
         active=rift_active,
         note="Buy {item:186731} from {npc:178257} to enter the rift",
-    },
-
-    [56853235] = { -- Popo's Potion Patrol (Wild Worldcracker)
-        achievement=15107, criteria=52300,
-        quest=64338,
-        npc=180032,
-        covenant=Enum.CovenantType.Kyrian,
-        loot={
-            {187176, toy=true}, -- Vesper of Harmony
-            {186483, mount=1493, covenant=Enum.CovenantType.Kyrian}, -- Foresworn Aquilon
-        },
-        note="Talk to {npc:180028}",
     },
 
     [22604140] = { -- Relic Breaker Krelva
@@ -579,6 +534,7 @@ ns.RegisterPoints(1961, { -- Korthia
         npc=180160,
         loot={
             {186652, mount=1509}, -- Garnet Razorwing
+            187388, -- Barbed Scale Cinch
         },
         note="Summon with the uncorrupted razorwing egg",
     },
@@ -587,7 +543,10 @@ ns.RegisterPoints(1961, { -- Korthia
         achievement=15107, criteria=52273,
         quest=64263,
         npc=179608,
-        -- requires_item=186731,
+        loot={
+            187362, -- Stinging Shadow Screamer
+            187400, -- Mantle of Screaming Shadows
+        },
         active=rift_active,
         note="Buy {item:186731} from {npc:178257} to enter the rift",
     },
@@ -596,9 +555,71 @@ ns.RegisterPoints(1961, { -- Korthia
         achievement=15107, criteria=52274,
         quest=64284,
         npc=179911,
-        -- requires_item=186731,
+        loot={
+            187381, -- Rift-Touched Bindings
+            187383, -- Silent Soulstalker Sabatons
+        },
         active=rift_active,
         note="Buy {item:186731} from {npc:178257} to enter the rift",
+    },
+
+    [46507950] = { -- Stygian Stonecrusher (No Stoneborn Left Behind)
+        achievement=15107, criteria=52276,
+        quest=64313,
+        npc=179985,
+        covenant=Enum.CovenantType.Venthyr,
+        loot={
+            184790, -- Archdruid Van-Yali's Greenthumbs
+            {186479, mount=nil, covenant=Enum.CovenantType.Venthyr}, -- Mastercraft Gravewing
+            -- {187283,quest=64530,}, -- Gravewing Crystal
+            187386, -- Stygian Crystal Studded Legguards
+            {187428,quest=64553,}, -- Legend of the Animaswell
+        },
+        note="Talk to {npc:179974}",
+    },
+
+    [56853235] = { -- Wild Worldcracker (Popo's Potion Patrol)
+        achievement=15107, criteria=52300,
+        quest=64338,
+        npc=180032,
+        covenant=Enum.CovenantType.Kyrian,
+        loot={
+            {187176, toy=true}, -- Vesper of Harmony
+            {186483, mount=1493, covenant=Enum.CovenantType.Kyrian}, -- Foresworn Aquilon
+            -- {187282,quest=64529,}, -- Intact Aquilon Core
+            187380, -- Devourer Hide Belt
+            {187426,quest=64552,}, -- Legend of the Animaswell
+        },
+        note="Talk to {npc:180028}",
+    },
+
+    [44903550] = { -- Xyraxz the Unknowable (Chamber of Wisdom)
+        achievement=15107, criteria=52296,
+        achievement=15066, criteria=52263,
+        quest=64278,
+        npc=179859,
+        -- requires_item=186718,
+        loot={
+            {186538, pet=3140}, -- Gnashtooth
+            {187104, quest=63918}, -- Obelisk of Dark Tidings
+            187387, -- Pauldrons of the Unknown Beyond
+            187368, -- Xyraxz's Controlling Rod
+        },
+        note="Use {item:186718} from {npc:178257} on the Ancient Teleporter",
+    },
+
+    [39405240] = { -- Yarxhov the Pillager (Chamber of Knowledge)
+        achievement=15107, criteria=52295,
+        achievement=15066, criteria=52262,
+        quest=64257,
+        npc=179802,
+        -- requires_item=186718,
+        loot={
+            {187103, quest=63917}, -- Everliving Statuette
+            187366, -- Fallen Vault Guardian's Spire
+            187391, -- Yarxhov's Rib-Cage
+        },
+        note="Use {item:186718} from {npc:178257} on the Ancient Teleporter",
     },
 
     [27755885] = { -- Zelnithop
@@ -607,6 +628,7 @@ ns.RegisterPoints(1961, { -- Korthia
         npc=177336,
         loot={
             {186542, pet=3136}, --Korthian Specimen
+            187371, -- Velvet Gromit Handwraps
         },
         note="In cave",
     },
@@ -632,10 +654,13 @@ ns.RegisterPoints(1961, { -- Korthia
         quest=64245,
         npc=179760,
         loot={
+            187035, -- Cold Burden of the Damned
             187241, -- Watchful Eye of the Damned
             187242, -- Exterminator's Crest of the Damned
             187373, -- Soul-Enveloping Leggings
             187376, -- Mawsworn Lieutenant's Treads
+            187382, -- Mawsworn Exterminator's Hauberk
+            187392, -- Sabatons of the Towering Construct
         },
         note="Spawns in a mawsworn portal event",
     },
