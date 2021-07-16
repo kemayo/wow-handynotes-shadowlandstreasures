@@ -1,5 +1,10 @@
 # Changelog
 
+## Changed in v27
+
+* Added rares in Maw: Blinding Shadow, Fallen Charger
+* Mine new loot; lots added to the Maw rares
+
 ## Changed in v26
 
 * Nilganihmaht
