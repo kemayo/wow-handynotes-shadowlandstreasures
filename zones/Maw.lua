@@ -475,6 +475,17 @@ ns.RegisterPoints(1543, {
         note="In the rift.",
     },
 
+    [67804740] = { -- Traitor Balthier
+        achievement=15107, criteria=52297,
+        quest=64258, -- also 64439
+        npc=179805,
+        loot={
+            187364, -- Maldraxxi Traitor's Blade
+            187374, -- Balthier's Waistcord
+        },
+    },
+
+
     -- non-achievement
     --[] = { -- Warren Mongrel
     --    quest=61124,
