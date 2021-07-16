@@ -388,7 +388,7 @@ ns.RegisterPoints(1543, {
         level=60,
     },
     [55806755] = path{label=CAVE, achievement=14660, criteria=49489, quest=62210,},
-    [61757795] = { -- Skittering Broodmother
+    [54507930] = { -- Skittering Broodmother
         achievement=14660, criteria=49491,
         quest=62211,
         npc=172524,
@@ -397,7 +397,6 @@ ns.RegisterPoints(1543, {
         },
         level=60,
     },
-    [59258000] = path{label=CAVE, achievement=14660, criteria=49491, quest=62211,},
     [36253745] = { -- Soulsmith Yol-Mattar
         achievement=14660, criteria=49482,
         quest=59441,
@@ -481,6 +480,18 @@ ns.RegisterPoints(1543, {
     --    quest=61124,
     --    npc=165973,
     --}
+})
+
+ns.RegisterPoints(1820, { -- Pit of Anguish - upper level
+    [36707940] = { -- Skittering Broodmother
+        achievement=14660, criteria=49491,
+        quest=62211,
+        npc=172524,
+        loot={
+            186240, -- Broodmotherhide Cloak
+        },
+        level=60,
+    },
 })
 
 -- Lil'Abom
@@ -727,7 +738,7 @@ ns.RegisterPoints(1543, {
     }
 }, {
     achievement=15107, criteria=52292,
-    quest=64164,
+    quest=64164, -- also 63180, 63433
     npc=179460,
     loot={
         {186659, id=1502}, -- Fallen Charger's Reins
