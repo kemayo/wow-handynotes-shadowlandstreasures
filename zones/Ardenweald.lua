@@ -189,7 +189,7 @@ local travel = {criteria=50015,onquest=62622,inbag=183880,loot={{183880,quest=62
 local naughty = {criteria=50016,onquest=62623,inbag=183881,loot={{183881,quest=62623}},}
 ns.RegisterPoints(1565, {
     [63602275] = {atlas="Campaign-QuestLog-LoreBook-Back",label="{npc:165867}",note="Bring books to him"},
-    [56054040] = meandering,
+    [54604300] = meandering,
     [30004480] = wandering,
     [35602680] = wandering,
     [36104870] = wandering, -- (36404800 is more accurate, but overlaps Macabre)
