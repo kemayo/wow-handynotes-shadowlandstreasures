@@ -681,6 +681,25 @@ ns.RegisterPoints(1543, {
     label="Stolen Anima Vessel",
     poi={ASSAULT_KYRIAN},
 })
+ns.RegisterPoints(1543, {
+    -- A Sly Fox
+    [42154450] = {
+        label="{npc:179068:Orator Kloe}",
+        note="Talk and get the {spell:353322} buff, then go find {npc:179083:Sly}",
+    },
+    [40705160] = {quest={64019,64024,any=true},},
+    [38053975] = {quest={64019,64022,any=true},hide_before=64024,},
+    [32904420] = {quest={64019,64023,any=true},hide_before=64022,},
+}, {
+    achievement=15004,
+    label="{npc:179083:Sly}",
+    -- progress={64024,64022,64023}, -- covered by the achievement-progress
+    atlas="wildbattlepetcapturable",
+    poi={ASSAULT_KYRIAN},
+    loot={
+        {186539, pet=3101}, -- Sly
+    }
+})
 -- Night Fae
 ns.RegisterPoints(1543, {
     [25303330] = {quest=64059,texture=icon_red,},
