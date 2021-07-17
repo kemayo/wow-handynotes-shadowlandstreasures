@@ -683,14 +683,13 @@ ns.RegisterPoints(1543, {
 })
 -- Night Fae
 ns.RegisterPoints(1543, {
-    -- don't know the quests yet...
-    [25303330] = {quest=nil,texture=icon_red,}, --1
-    [25303820] = {quest=nil,texture=icon_red,}, --1
-    [27804180] = {quest=nil,texture=icon_red,}, --1
-    [17304780] = {quest=nil,texture=icon_green,}, --2
-    [18604260] = {quest=nil,texture=icon_green,}, --2
-    [18905030] = {quest=nil,texture=icon_green,}, --2
-    [22704850] = {quest=nil,texture=icon_green,}, --2
+    [25303330] = {quest=64059,texture=icon_red,},
+    [25303820] = {quest=64059,texture=icon_red,},
+    [27804180] = {quest=64059,texture=icon_red,},
+    [17304780] = {quest=64060,texture=icon_green,},
+    [18604260] = {quest=64060,texture=icon_green,},
+    [18905030] = {quest=64060,texture=icon_green,},
+    [22704850] = {quest=64060,texture=icon_green,},
 }, {
     label="Stolen Anima Vessel",
     poi={ASSAULT_NIGHTFAE},
