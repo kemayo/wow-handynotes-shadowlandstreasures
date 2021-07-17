@@ -91,7 +91,8 @@ ns.RegisterPoints(1961, { -- Korthia
 ns.RegisterPoints(1961, { -- Korthia
     [57504930] = {quest=64248, atlas="warfronts-basemapicons-alliance-workshop-minimap"},
     [58204870] = {quest=64248, atlas="warfronts-basemapicons-alliance-workshop-minimap"},
-    [59205670] = {quest=64248, atlas="warfronts-basemapicons-alliance-workshop-minimap"},
+    [59205671] = {quest=64248, atlas="warfronts-basemapicons-alliance-workshop-minimap"},
+    [61504735] = {quest=64248, atlas="warfronts-basemapicons-alliance-workshop-minimap"},
     [62755135] = {quest=64248, atlas="warfronts-basemapicons-alliance-workshop-minimap"},
 
     [50505370] = {quest=64249, atlas="warfronts-basemapicons-empty-workshop-minimap"},
