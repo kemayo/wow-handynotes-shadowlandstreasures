@@ -495,7 +495,7 @@ local function handle_tooltip(tooltip, point)
                 local criteria, _, complete, _, _, _, _, _, quantityString = GetAchievementCriteriaInfo(point.achievement, 1)
                 if quantityString then
                     tooltip:AddDoubleLine(
-                        criteria, quantityString,
+                        (criteria and #criteria > 0) and criteria or PVP_PROGRESS_REWARDS_HEADER, quantityString,
                         complete and 0 or 1, complete and 1 or 0, 0,
                         complete and 0 or 1, complete and 1 or 0, 0
                     )
