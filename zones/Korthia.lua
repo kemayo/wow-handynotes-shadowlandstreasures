@@ -79,14 +79,17 @@ ns.RegisterPoints(1961, { -- Korthia
 
     [62055550] = { -- Spectral Bound Chest
         quest=64247,
-        loot={
-            RELIC_FRAGMENT,
+        loot = {
+            -- 187020, -- Necrobinder's Shoulderpads (confirm? it's in the caches...)
+            187026, -- Field Warden's Torture Kit
+            187240, -- Field Warden's Watchful Eye
         },
         label="Spectral Bound Chest",
-        currency=1767, -- x40
+        -- currency=1767, -- x40
         note="Click 3x nearby Spectral Keys to unlock",
     },
 })
+
 -- spectral keys
 ns.RegisterPoints(1961, { -- Korthia
     [57504930] = {quest=64248, atlas="warfronts-basemapicons-alliance-workshop-minimap"},
@@ -107,6 +110,50 @@ ns.RegisterPoints(1961, { -- Korthia
 }, {
     label = "Spectral Key",
     minimap=true,
+})
+
+-- Mawsworn cache
+local mawcache = ns.nodeMaker{
+    label = "Mawsworn Cache",
+    loot = {
+        187020, -- Necrobinder's Shoulderpads
+        187026, -- Field Warden's Torture Kit
+        187240, -- Field Warden's Watchful Eye
+    },
+    note = "Multiple spawn points",
+}
+ns.RegisterPoints(1961, { -- Korthia
+    -- Cache one:
+    [57553755] = mawcache(),
+    [58803360] = mawcache(),
+    [60103930] = mawcache(),
+    [62903490] = mawcache(),
+}, {
+    quest=64021,
+    texture=ns.atlas_texture("VignetteLoot", {r=1,g=0.5,b=0,a=1,scale=1}),
+})
+ns.RegisterPoints(1961, { -- Korthia
+    -- Cache two:
+    [56805610] = mawcache(),
+    [58305285] = mawcache(),
+    [61105160] = mawcache(),
+    [61205790] = mawcache(),
+    [62305860] = mawcache(),
+}, {
+    quest=64363,
+    texture=ns.atlas_texture("VignetteLoot", {r=1,g=0.5,b=0.5,a=1,scale=1}),
+})
+ns.RegisterPoints(1961, { -- Korthia
+    -- Cache three
+    [47707430] = mawcache(),
+    [47956675] = mawcache(),
+    [51306480] = mawcache(),
+    [54007280] = mawcache(),
+    [56406950] = mawcache(),
+    [56507470] = mawcache(),
+}, {
+    quest=64364,
+    texture=ns.atlas_texture("VignetteLoot", {r=0.5,g=1,b=0.5,a=1,scale=1}),
 })
 
 -- Rift portals
