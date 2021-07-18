@@ -23,6 +23,13 @@ ns.currencies = {
         texture = select(10, GetAchievementInfo(11144)),
     }
 }
+-- for fallbacks
+ns.covenants = {
+    [Enum.CovenantType.Kyrian] = "Kyrian",
+    [Enum.CovenantType.Necrolord] = "Necrolords",
+    [Enum.CovenantType.NightFae] = "NightFae",
+    [Enum.CovenantType.Venthyr] = "Venthyr",
+}
 
 ns.groups = {}
 
@@ -366,12 +373,19 @@ ns.point_active = function(point)
     if point.active.requires_no_buff and ns.doTest(GetPlayerAuraBySpellID, point.active.requires_no_buff) then
         return false
     end
+    if point.active.covenant and point.active.covenant ~= C_Covenants.GetActiveCovenantID() then
+        return false
+    end
     return true
 end
 ns.point_upcoming = function(point)
     if point.level and UnitLevel("player") < point.level then
         return true
-    elseif point.hide_before and not ns.allQuestsComplete(point.hide_before) then
+    end
+    if point.hide_before and not ns.allQuestsComplete(point.hide_before) then
+        return true
+    end
+    if point.covenant and point.covenant ~= C_Covenants.GetActiveCovenantID() then
         return true
     end
     return false
@@ -524,9 +538,7 @@ local function handle_tooltip(tooltip, point)
                         if item.covenant then
                             local data = C_Covenants.GetCovenantData(item.covenant)
                             -- local active = item.covenant == C_Covenants.GetActiveCovenantID()
-                            if data then
-                                link = TEXT_MODE_A_STRING_VALUE_TYPE:format(link, COVENANT_COLORS[item.covenant]:WrapTextInColorCode(data.name))
-                            end
+                            link = TEXT_MODE_A_STRING_VALUE_TYPE:format(link, COVENANT_COLORS[item.covenant]:WrapTextInColorCode(data and data.name or ns.covenants[item.covenant]))
                         end
                         if item.class then
                             link = TEXT_MODE_A_STRING_VALUE_TYPE:format(link, RAID_CLASS_COLORS[item.class]:WrapTextInColorCode(LOCALIZED_CLASS_NAMES_FEMALE[item.class]))
@@ -547,10 +559,9 @@ local function handle_tooltip(tooltip, point)
         end
         if point.covenant then
             local data = C_Covenants.GetCovenantData(point.covenant)
-            if data then
-                local active = point.covenant == C_Covenants.GetActiveCovenantID()
-                tooltip:AddLine(ITEM_REQ_SKILL:format(data.name), active and 0 or 1, active and 1 or 0, 0)
-            end
+            local active = point.covenant == C_Covenants.GetActiveCovenantID()
+            local cname = COVENANT_COLORS[point.covenant]:WrapTextInColorCode(data and data.name or ns.covenants[point.covenant])
+            tooltip:AddLine(ITEM_REQ_SKILL:format(cname), active and 0 or 1, active and 1 or 0, 0)
         end
         if point.level and point.level > UnitLevel("player") then
             tooltip:AddLine(ITEM_MIN_LEVEL:format(point.level), 1, 0, 0)
