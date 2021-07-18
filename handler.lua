@@ -683,6 +683,27 @@ local function hideNode(button, uiMapID, coord)
     HL:Refresh()
 end
 
+local function sendToChat(button, uiMapID, coord)
+    local title = get_point_info_by_coord(uiMapID, coord)
+    local x, y = HandyNotes:getXY(coord)
+    local message = ("%s|cffffff00|Hworldmap:%d:%d:%d|h[%s]|h|r"):format(
+        title and (title .. " ") or "",
+        uiMapID,
+        x * 10000,
+        y * 10000,
+        -- Can't do this:
+        -- core:GetMobLabel(self.data.id) or UNKNOWN
+        -- WoW seems to filter out anything which isn't the standard MAP_PIN_HYPERLINK
+        MAP_PIN_HYPERLINK
+    )
+    PlaySound(SOUNDKIT.UI_MAP_WAYPOINT_CHAT_SHARE)
+    -- if you have an open editbox, just paste to it
+    if not ChatEdit_InsertLink(message) then
+        -- open the chat to whatever it was on and add the text
+        ChatFrame_OpenChat(message)
+    end
+end
+
 local function closeAllDropdowns()
     CloseDropDownMenus(1)
 end
@@ -711,6 +732,14 @@ do
                 wipe(info)
             end
 
+            info.text = COMMUNITIES_INVITE_MANAGER_LINK_TO_CHAT -- Link to chat
+            info.notCheckable = 1
+            info.func = sendToChat
+            info.arg1 = currentZone
+            info.arg2 = currentCoord
+            UIDropDownMenu_AddButton(info, level)
+            wipe(info)
+
             -- Hide menu item
             info.text         = "Hide node"
             info.notCheckable = 1
@@ -733,12 +762,18 @@ do
     HL_Dropdown.initialize = generateMenu
 
     function HLHandler:OnClick(button, down, uiMapID, coord)
+        if down then return end
         currentZone = uiMapID
         currentCoord = coord
         -- given we're in a click handler, this really *should* exist, but just in case...
         local point = ns.points[currentZone] and ns.points[currentZone][currentCoord]
-        if point and button == "RightButton" and not down then
-            ToggleDropDownMenu(1, nil, HL_Dropdown, self, 0, 0)
+        if point then
+            if button == "RightButton" then
+                ToggleDropDownMenu(1, nil, HL_Dropdown, self, 0, 0)
+            end
+            if button == "LeftButton" and IsShiftKeyDown() then
+                sendToChat(button, uiMapID, coord)
+            end
         end
     end
 end
