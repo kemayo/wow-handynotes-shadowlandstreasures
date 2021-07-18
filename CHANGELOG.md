@@ -1,5 +1,18 @@
 # Changelog
 
+## Changed in v28
+
+* You can now share a point to chat by shift-clicking a point or selecting it from the right-click menu (thanks, answering so many Maelie questions)
+* Covenant-gated points will now show as inactive rather than hidden, as you can generally participate and get loot if a covenant-member triggers them
+* Korthia now includes Mawsworn Caches
+* A Sly Fox is shown during the Maw Kyrian assaults
+* The Night Fae assault stolen anima vessels now have questids
+* The Skittering Broodmother in the Maw has moved
+* Added another Maelie location
+* Added another spectral key location
+* Missing Maw mob: Traitor Balthier
+* Added some missing loot from the Inquisitors in Revendreth
+
 ## Changed in v27
 
 * Added rares in Maw: Blinding Shadow, Fallen Charger
