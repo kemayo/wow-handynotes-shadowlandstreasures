@@ -728,6 +728,7 @@ ns.RegisterPoints(1543, {
     [23203580] = {quest=63998,texture=icon_lightgreen,},
     [29754280] = {quest=63999,texture=icon_lightblue,},
 }, {
+    achievement=15001, -- Jailer's Personal Stash
     label="Rift Hidden Cache",
     active=rift_active,
     poi={ASSAULT_NIGHTFAE},
