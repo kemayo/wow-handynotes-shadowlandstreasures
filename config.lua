@@ -21,6 +21,7 @@ ns.defaults = {
         tooltip_item = true,
         tooltip_questid = false,
         groupsHidden = {},
+        groupsHiddenByZone = {['*']={},},
         zonesHidden = {},
         achievementsHidden = {},
         worldmapoverlay = true,
@@ -565,7 +566,7 @@ ns.should_show_point = function(coord, point, currentZone, isMinimap)
     if ns.hidden[currentZone] and ns.hidden[currentZone][coord] then
         return false
     end
-    if point.group and ns.db.groupsHidden[point.group] then
+    if point.group and (ns.db.groupsHidden[point.group] or ns.db.groupsHiddenByZone[currentZone][point.group]) then
         return false
     end
     if point.ShouldShow and not point:ShouldShow() then
@@ -666,7 +667,8 @@ do
     function OptionsDropdown.node(options, ...)
         local node = options
         for i=1, select('#', ...) do
-            node = options.args[select(i, ...)]
+            node = node.args[select(i, ...)]
+            if not node then return end
         end
         return node
     end
@@ -689,6 +691,7 @@ do
     end
     local function nodeValueOrFunc(key, options, ...)
         local node = OptionsDropdown.node(options, ...)
+        if not node then return end
         if type(node[key]) == "function" then
             return node[key](OptionsDropdown.makeInfo(options, ...))
         end
@@ -699,6 +702,27 @@ do
     end
     function OptionsDropdown.values(options, ...)
         return nodeValueOrFunc('values', options, ...)
+    end
+end
+local zoneGroups, zoneHasGroups
+do
+    local cache = {}
+    function zoneGroups(uiMapID)
+        if not cache[uiMapID] then
+            local relevant = {}
+            for _, point in pairs(ns.points[uiMapID] or {}) do
+                if point.group then
+                    relevant[point.group] = point.group
+                end
+            end
+            cache[uiMapID] = relevant
+        end
+        return cache[uiMapID]
+    end
+    function zoneHasGroups(uiMapID)
+        for _, _ in pairs(zoneGroups(uiMapID)) do
+            return true
+        end
     end
 end
 function ns.SetupMapOverlay()
@@ -720,7 +744,7 @@ function ns.SetupMapOverlay()
         self.Icon:SetPoint("TOPLEFT", 6, -5)
         self.IconOverlay:Hide()
     end
-    frame.InitializeDropDown = function(self, level)
+    frame.InitializeDropDown = function(self, level, menuList)
         local info = UIDropDownMenu_CreateInfo()
         level = level or 1
         if level == 1 then
@@ -815,7 +839,7 @@ function ns.SetupMapOverlay()
             end
             UIDropDownMenu_AddButton(info, level)
 
-        elseif level == 2 then
+        elseif level == 2 or level == 3 then
             local parent = UIDROPDOWNMENU_MENU_VALUE
             local currentZone = WorldMapFrame.mapID
             info.arg1 = parent
@@ -825,15 +849,18 @@ function ns.SetupMapOverlay()
             info.isNotRadio = true
             info.keepShownOnClick = true
             info.tooltipOnButton = true
-            info.func = function(button, section)
-                local checked = button.checked
+            info.func = function(button, section, subsection, checked)
                 local value = button.value
                 if (checked) then
                     PlaySound(SOUNDKIT.IG_MAINMENU_OPTION_CHECKBOX_ON)
                 else
                     PlaySound(SOUNDKIT.IG_MAINMENU_OPTION_CHECKBOX_OFF)
                 end
-                ns.db[section][value] = not checked
+                if subsection then
+                    ns.db[section][subsection][value] = not checked
+                else
+                    ns.db[section][value] = not checked
+                end
                 ns.HL:Refresh()
             end
             local values = OptionsDropdown.values(ns.options, parent)
@@ -861,22 +888,37 @@ function ns.SetupMapOverlay()
                     if uiMapID == currentZone then
                         info.text = BRIGHTBLUE_FONT_COLOR:WrapTextInColorCode(info.text) .. " " .. CreateAtlasMarkup("VignetteKill", 0)
                     end
+                    if zoneHasGroups(uiMapID) then
+                        info.hasArrow = true
+                        info.menuList = "groupsHiddenByZone"
+                    else
+                        info.hasArrow = nil
+                        info.menuList = nil
+                    end
                     UIDropDownMenu_AddButton(info, level)
                 end
             elseif parent == "groupsHidden" then
-                local relevant = {}
-                for _, point in pairs(ns.points[currentZone] or {}) do
-                    if point.group then
-                        relevant[point.group] = true
-                    end
-                end
+                local relevant = zoneGroups(currentZone)
                 for _, group in iterKeysByValue(values) do
                     info.text = values[group]
                     info.value = group
                     info.checked = not ns.db.groupsHidden[group]
+                    info.tooltipTitle = "Hide this type of point in all zones"
                     if relevant[group] then
                         info.text = BRIGHTBLUE_FONT_COLOR:WrapTextInColorCode(info.text) .. " " .. CreateAtlasMarkup("VignetteKill", 0)
                     end
+                    UIDropDownMenu_AddButton(info, level)
+                end
+            elseif menuList == "groupsHiddenByZone" then
+                local uiMapID = parent
+                info.arg1 = "groupsHiddenByZone"
+                info.arg2 = uiMapID
+                info.tooltipTitle = "Hide this type of point just in this zone"
+                local groups = zoneGroups(uiMapID)
+                for _, group in iterKeysByValue(groups) do
+                    info.text = ns.groups[group] or group
+                    info.value = group
+                    info.checked = not ns.db.groupsHiddenByZone[uiMapID][group]
                     UIDropDownMenu_AddButton(info, level)
                 end
             end
