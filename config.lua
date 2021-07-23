@@ -20,7 +20,6 @@ ns.defaults = {
         tooltip_pointanchor = false,
         tooltip_item = true,
         tooltip_questid = false,
-        groupsHidden = {},
         groupsHiddenByZone = {['*']={},},
         zonesHidden = {},
         achievementsHidden = {},
@@ -264,42 +263,6 @@ ns.options = {
             end,
             order = 35,
         },
-        groupsHidden = {
-            type = "multiselect",
-            name = "Show groups",
-            desc = "Toggle whether to show certain groups of points",
-            get = function(info, key) return not ns.db[info[#info]][key] end,
-            set = function(info, key, value)
-                ns.db[info[#info]][key] = not value
-                ns.HL:Refresh()
-            end,
-            values = function(info)
-                local values = {}
-                for uiMapID, points in pairs(ns.points) do
-                    for coord, point in pairs(points) do
-                        if point.group and not values[point.group] then
-                            values[point.group] = ns.groups[point.group] or point.group
-                        end
-                    end
-                end
-                -- replace ourself with the built values table
-                info.option.values = values
-                return values
-            end,
-            hidden = function(info)
-                for uiMapID, points in pairs(ns.points) do
-                    for coord, point in pairs(points) do
-                        if point.group then
-                            info.option.hidden = false
-                            return false
-                        end
-                    end
-                end
-                info.option.hidden = true
-                return true
-            end,
-            order = 40,
-        }
     },
 }
 
@@ -566,7 +529,7 @@ ns.should_show_point = function(coord, point, currentZone, isMinimap)
     if ns.hidden[currentZone] and ns.hidden[currentZone][coord] then
         return false
     end
-    if point.group and (ns.db.groupsHidden[point.group] or ns.db.groupsHiddenByZone[currentZone][point.group]) then
+    if point.group and ns.db.groupsHiddenByZone[currentZone][point.group] then
         return false
     end
     if point.ShouldShow and not point:ShouldShow() then
@@ -821,12 +784,6 @@ function ns.SetupMapOverlay()
             info.value = "zonesHidden"
             UIDropDownMenu_AddButton(info, level)
 
-            if not OptionsDropdown.isHidden(ns.options, "groupsHidden") then
-                info.text = GROUPS
-                info.value = "groupsHidden"
-                UIDropDownMenu_AddButton(info, level)
-            end
-
             UIDropDownMenu_AddSeparator(level)
 
             info.text = "Open HandyNotes options"
@@ -897,23 +854,11 @@ function ns.SetupMapOverlay()
                     end
                     UIDropDownMenu_AddButton(info, level)
                 end
-            elseif parent == "groupsHidden" then
-                local relevant = zoneGroups(currentZone)
-                for _, group in iterKeysByValue(values) do
-                    info.text = values[group]
-                    info.value = group
-                    info.checked = not ns.db.groupsHidden[group]
-                    info.tooltipTitle = "Hide this type of point in all zones"
-                    if relevant[group] then
-                        info.text = BRIGHTBLUE_FONT_COLOR:WrapTextInColorCode(info.text) .. " " .. CreateAtlasMarkup("VignetteKill", 0)
-                    end
-                    UIDropDownMenu_AddButton(info, level)
-                end
             elseif menuList == "groupsHiddenByZone" then
                 local uiMapID = parent
                 info.arg1 = "groupsHiddenByZone"
                 info.arg2 = uiMapID
-                info.tooltipTitle = "Hide this type of point just in this zone"
+                info.tooltipTitle = "Hide this type of point"
                 local groups = zoneGroups(uiMapID)
                 for _, group in iterKeysByValue(groups) do
                     info.text = ns.groups[group] or group
