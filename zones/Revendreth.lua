@@ -159,6 +159,7 @@ ns.RegisterPoints(1525, {
             {182589, mount=1391}, -- Loyal Gorger
         },
         note="Kill {npc:160821}, do 7 days of dailies for {npc:173499}, get a mount",
+        group="Daily Mounts",
     },
     --
     -- [45507810] = {
@@ -238,6 +239,7 @@ ns.RegisterPoints(1525, {
     minimap=true,
     level=60,
     upcoming=false,
+    group="Daily Mounts",
 })
 ns.RegisterPoints(52, { -- Westfall
     -- Day 1: oats
@@ -255,6 +257,7 @@ ns.RegisterPoints(52, { -- Westfall
     atlas="stablemaster",scale=1.2,
     minimap=true,
     level=60,
+    group="Daily Mounts",
 })
 
 -- Carriages
@@ -335,6 +338,7 @@ ns.RegisterPoints(1525, {
     achievement=14771,
     atlas="vehicle-silvershardmines-minecartred",scale=1.2,
     always=true,
+    group="Carriage Routes",
 })
 
 -- Castle Sinrunners: What We Ride In The Shadows
@@ -471,6 +475,7 @@ ns.RegisterPoints(1525, {
     always=true,
     label="{npc:174032}",
     note="Requires {currency:1820} x 5",
+    group="Sinrunners",
 })
 
 -- Bat!
@@ -488,6 +493,7 @@ ns.RegisterPoints(1525, {
     texture=ns.merge(ns.atlas_texture("ancientmana"), {r=1, g=0, b=0}),
     level=60,
     note="It's inconsistent whether you'll get credit for animating any particular bat",
+    group="Dredbats",
 })
 
 -- Rares

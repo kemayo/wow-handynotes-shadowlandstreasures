@@ -124,6 +124,7 @@ local mawcache = ns.nodeMaker{
         187240, -- Field Warden's Watchful Eye
     },
     note = "Multiple spawn points",
+    group = "Mawsworn Caches",
 }
 ns.RegisterPoints(1961, { -- Korthia
     -- Cache one:
@@ -187,6 +188,7 @@ local riftcache = ns.nodeMaker{
         RELIC_FRAGMENT,
     },
     active=rift_active,
+    group="Riftbound Caches",
 }
 ns.RegisterPoints(1961, { -- Korthia
     [33453930] = riftcache(),
@@ -237,6 +239,7 @@ local relic_traits = {
     minimap=true,
     atlas="reagents",
     onquest=true,
+    group="Relics",
 }
 
 ns.RegisterPoints(1961, { -- Korthia
@@ -423,6 +426,7 @@ ns.RegisterPoints(1961, { -- Korthia
         {186643, mount=1511}, -- Reins of the Wanderer
     },
     note="{npc:179930} asks you to find {npc:179912}, who spawns in a different place each day. Find her each day, use {spell:355862} on her, and get a mount from {npc:179930}.",
+    group="Daily Mounts",
 })
 
 ns.RegisterPoints(1961, { -- Korthia
@@ -458,6 +462,7 @@ ns.RegisterPoints(1961, { -- Korthia
     },
 }, {
     minimap=true,
+    group="Daily Mounts",
 })
 
 --Rares
