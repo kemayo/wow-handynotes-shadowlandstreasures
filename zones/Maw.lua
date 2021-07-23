@@ -3,7 +3,10 @@ local myname, ns = ...
 local path = ns.path
 local CAVE = "Cave entrance"
 
-local rift_active = {requires_buff={352795, 354870, any=true}}
+local rift_active = {
+    requires_buff={352795, 354870, any=true},
+    note="You need to be in the rift to see this",
+}
 
 ns.RegisterPoints(1543, {
     -- Better to Be Lucky Than Dead
@@ -742,7 +745,6 @@ ns.RegisterPoints(1543, {
     loot={
         187251, -- Shaded Skull Shoulderguards
     },
-    note="You need to be in the rift to see these.",
 })
 -- Rifts
 ns.RegisterPoints(1543, {
@@ -759,7 +761,6 @@ ns.RegisterPoints(1543, {
     label="Stolen Anima Vessel",
     active=rift_active,
     poi={ASSAULT_NECRO, ASSAULT_VENTHYR, ASSAULT_KYRIAN, ASSAULT_NIGHTFAE},
-    note="You need to be in the rift to see these.",
 })
 
 -- Fallen Charger

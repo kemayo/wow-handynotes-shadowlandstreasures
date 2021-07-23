@@ -3,7 +3,10 @@ local myname, ns = ...
 local path = ns.path
 
 local RELIC_FRAGMENT = 186685 -- relic fragment
-local rift_active = {requires_buff={352795, 354870, any=true}}
+local rift_active = {
+    requires_buff={352795, 354870, any=true},
+    note="You need to be in the rift to see ",
+}
 
 local researched = ns.nodeMaker{
     IsActive = function(point)
@@ -184,7 +187,6 @@ local riftcache = ns.nodeMaker{
         RELIC_FRAGMENT,
     },
     active=rift_active,
-    note="You need to be in the rift to see these.",
 }
 ns.RegisterPoints(1961, { -- Korthia
     [33453930] = riftcache(),
@@ -197,9 +199,15 @@ ns.RegisterPoints(1961, { -- Korthia
 })
 ns.RegisterPoints(1961, { -- Korthia
     [24805625] = riftcache(),
-    [25955580] = riftcache(),
-    [26555640] = riftcache(),
-    [27555935] = riftcache(),
+    [30305640] = riftcache{note="Inside Gromit Hollow"},
+}, {
+    quest=64470,
+    texture=ns.atlas_texture("VignetteLoot", {r=0,g=1,b=0,a=1,scale=1}),
+})
+ns.RegisterPoints(2007, { -- Gromit Hollow
+    [29453985] = riftcache(),
+    [34654645] = riftcache(),
+    [43157370] = riftcache(),
 }, {
     quest=64470,
     texture=ns.atlas_texture("VignetteLoot", {r=0,g=1,b=0,a=1,scale=1}),
@@ -671,7 +679,7 @@ ns.RegisterPoints(1961, { -- Korthia
         note="Use {item:186718} from {npc:178257} on the Ancient Teleporter",
     },
 
-    [27755885] = { -- Zelnithop
+    [30305480] = { -- Zelnithop
         achievement=15107, criteria=52301,
         quest=64442,
         npc=177336,
@@ -679,9 +687,8 @@ ns.RegisterPoints(1961, { -- Korthia
             {186542, pet=3136}, --Korthian Specimen
             187371, -- Velvet Gromit Handwraps
         },
-        note="In cave",
+        note="In Gromit Hollow",
     },
-    [30305480] = path({achievement=15107, criteria=52301, quest=64442,}),
 
     -- the many-spawn ones
 
@@ -723,6 +730,19 @@ ns.RegisterPoints(1961, { -- Korthia
             187404, -- Cartel Ve Amulet
         },
         note="Find and use the Abandoned Veilstaff, then talk to {npc:180162}",
+    },
+})
+
+ns.RegisterPoints(2007, { -- Gromit Hollow
+    [45606830] = { -- Zelnithop
+        achievement=15107, criteria=52301,
+        quest=64442,
+        npc=177336,
+        loot={
+            {186542, pet=3136}, --Korthian Specimen
+            187371, -- Velvet Gromit Handwraps
+        },
+        note="In Gromit Hollow",
     },
 })
 
