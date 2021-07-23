@@ -521,6 +521,10 @@ local function handle_tooltip(tooltip, point)
                 end
             end
         end
+        if point.active and point.active.note then
+            local isActive = ns.point_active(point)
+            tooltip:AddLine(render_string(point.active.note), isActive and 0 or 1, isActive and 1 or 0, 0, true)
+        end
         if point.note then
             tooltip:AddLine(render_string(point.note), nil, nil, nil, true)
         end
