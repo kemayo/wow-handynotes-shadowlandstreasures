@@ -488,6 +488,28 @@ ns.RegisterPoints(1543, {
         },
     },
 
+    [61604160] = { -- Deomen the Vortex
+        achievement=15107, criteria=52286,
+        quest=64251,
+        npc=179779,
+        loot={
+            187367, -- Deomen's Vortex Blade
+            187385, -- Vortex Piercing Headgear
+        },
+        note="Unlock cage with levers to the south",
+    },
+
+    [53007280] = { -- Guard Orguluus
+        achievement=15107, criteria=52293,
+        quest=64272,
+        npc=179851,
+        loot={
+            187363, -- Orguluus' Spear
+            187398, -- Chestguard of the Shadeguard
+        },
+        active=rift_active,
+        note="Wanders a bit in the area",
+    }
 
     -- non-achievement
     --[] = { -- Warren Mongrel
