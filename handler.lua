@@ -689,6 +689,12 @@ local function hideNode(button, uiMapID, coord)
     ns.hidden[uiMapID][coord] = true
     HL:Refresh()
 end
+local function hideGroup(button, uiMapID, coord)
+    local point = ns.points[uiMapID] and ns.points[uiMapID][coord]
+    if not (point and point.group) then return end
+    ns.db.groupsHiddenByZone[uiMapID][point.group] = true
+    HL:Refresh()
+end
 
 local function sendToChat(button, uiMapID, coord)
     local title = get_point_info_by_coord(uiMapID, coord)
@@ -718,7 +724,8 @@ end
 do
     local currentZone, currentCoord
     local function generateMenu(button, level)
-        if (not level) then return end
+        local point = ns.points[currentZone] and ns.points[currentZone][currentCoord]
+        if not (level and point) then return end
         local info = UIDropDownMenu_CreateInfo()
         if (level == 1) then
             -- Create the title of the menu
@@ -755,6 +762,17 @@ do
             info.arg2         = currentCoord
             UIDropDownMenu_AddButton(info, level)
             wipe(info)
+
+            if point.group then
+                local map = C_Map.GetMapInfo(currentZone)
+                info.text = "Hide all " .. (ns.groups[point.group] or point.group) .. " in " .. (map and map.name or "this zone")
+                info.notCheckable = 1
+                info.func = hideGroup
+                info.arg1 = currentZone
+                info.arg2 = currentCoord
+                UIDropDownMenu_AddButton(info, level)
+                wipe(info)
+            end
 
             -- Close menu item
             info.text         = "Close"
