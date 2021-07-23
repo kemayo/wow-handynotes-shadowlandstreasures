@@ -615,7 +615,7 @@ local ASSAULT_NIGHTFAE = {1550, 6992}
 ns.RegisterPoints(1543, {
     [34156125] = {quest=64044,texture=icon_red,},
     [36766805] = {quest=64044,texture=icon_red,},
-    [20106830] = {quest=64045,texture=icon_green,}, -- inside the Altar
+    [23006840] = {quest=64045,texture=icon_green,}, -- inside the Altar
     -- claimed on wowhead, but haven't found yet:
     -- [32306590] = {quest=nil,texture=icon_green,},
     -- [25905530] = {quest=nil,texture=icon_green,},
