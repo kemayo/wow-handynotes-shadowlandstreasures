@@ -78,6 +78,9 @@ ns.nodeMaker = function(defaults)
     local meta = {__index = defaults}
     return function(details)
         details = details or {}
+        if details.note and defaults.note then
+            details.note = details.note .. "\n" .. defaults.note
+        end
         local meta2 = getmetatable(details)
         if meta2 and meta2.__index then
             return setmetatable(details, {__index = ns.merge(CopyTable(defaults), meta2.__index)})
@@ -526,7 +529,7 @@ local function handle_tooltip(tooltip, point)
             tooltip:AddLine(render_string(point.active.note), isActive and 0 or 1, isActive and 1 or 0, 0, true)
         end
         if point.note then
-            tooltip:AddLine(render_string(point.note), nil, nil, nil, true)
+            tooltip:AddLine(render_string(point.note), 1, 1, 1, true)
         end
         if point.loot then
             for _, item in ipairs(point.loot) do
