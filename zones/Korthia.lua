@@ -488,7 +488,7 @@ ns.RegisterPoints(1961, { -- Korthia
             187247, -- Death-Enveloped Shoulder Spikes
             187402, -- All-Consuming Loop
         },
-        note="Starts as an elite, eats {npc:179344} until it becomes a rare and then a rare-elite. Loot gets better as it gets stronger, so wait.",
+        note="Starts as a regular mob, eats {npc:179344} until it becomes a rare, and then a rare-elite. Loot gets better as it gets stronger, so wait.",
     },
 
     [59355220] = { -- Deadsoul Hatcher
