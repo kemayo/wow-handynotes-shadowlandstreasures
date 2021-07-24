@@ -184,8 +184,7 @@ local riftcache = ns.nodeMaker{
         187243, -- Shadehunter's Crescent
         {187276, quest=64522}, -- Stolen Korthian Supplies
         {185050, quest=63606, covenant=Enum.CovenantType.NightFae}, -- Spider Soul
-        186017, -- Korthite Crystal
-        RELIC_FRAGMENT,
+        186994, -- Design: Shaded Stone Statue
     },
     active=rift_active,
     group="Riftbound Caches",
