@@ -694,6 +694,12 @@ end
 local function hideGroup(button, uiMapID, coord)
     local point = ns.points[uiMapID] and ns.points[uiMapID][coord]
     if not (point and point.group) then return end
+    ns.db.groupsHidden[point.group] = true
+    HL:Refresh()
+end
+local function hideGroupZone(button, uiMapID, coord)
+    local point = ns.points[uiMapID] and ns.points[uiMapID][coord]
+    if not (point and point.group) then return end
     ns.db.groupsHiddenByZone[uiMapID][point.group] = true
     HL:Refresh()
 end
@@ -766,14 +772,25 @@ do
             wipe(info)
 
             if point.group then
-                local map = C_Map.GetMapInfo(currentZone)
-                info.text = "Hide all " .. (ns.groups[point.group] or point.group) .. " in " .. (map and map.name or "this zone")
-                info.notCheckable = 1
-                info.func = hideGroup
-                info.arg1 = currentZone
-                info.arg2 = currentCoord
-                UIDropDownMenu_AddButton(info, level)
-                wipe(info)
+                if not ns.hiddenConfig.groupsHiddenByZone then
+                    local map = C_Map.GetMapInfo(currentZone)
+                    info.text = "Hide all " .. (ns.groups[point.group] or point.group) .. " in " .. (map and map.name or "this zone")
+                    info.notCheckable = 1
+                    info.func = hideGroupZone
+                    info.arg1 = currentZone
+                    info.arg2 = currentCoord
+                    UIDropDownMenu_AddButton(info, level)
+                    wipe(info)
+                end
+                if not ns.hiddenConfig.groupsHidden then
+                    info.text = "Hide all " .. (ns.groups[point.group] or point.group) .. " in all zones"
+                    info.notCheckable = 1
+                    info.func = hideGroup
+                    info.arg1 = currentZone
+                    info.arg2 = currentCoord
+                    UIDropDownMenu_AddButton(info, level)
+                    wipe(info)
+                end
             end
 
             -- Close menu item
