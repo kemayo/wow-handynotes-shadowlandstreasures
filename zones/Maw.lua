@@ -714,6 +714,16 @@ ns.RegisterPoints(1543, {
     poi={ASSAULT_KYRIAN},
 })
 ns.RegisterPoints(1543, {
+    [29954327] = {
+        label="{npc:173533:Sinfall Screecher}",
+        poi={ASSAULT_KYRIAN},
+        loot={
+            {186544, pet=3010}, -- Sinfall Screecher
+        },
+        note="Kill the {npc:177966:Chain of Domination} and open the cage",
+    },
+})
+ns.RegisterPoints(1543, {
     -- A Sly Fox
     [42154450] = {
         label="{npc:179068:Orator Kloe}",
