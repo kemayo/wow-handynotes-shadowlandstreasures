@@ -33,6 +33,8 @@ ns.covenants = ns.covenants or {
 
 ns.groups = ns.groups or {}
 
+ns.hiddenConfig = ns.hiddenConfig or {}
+
 ns.points = {
     --[[ structure:
     [uiMapID] = { -- "_terrain1" etc will be stripped from attempts to fetch this
@@ -853,6 +855,9 @@ end
 
 function HL:OnInitialize()
     -- Set up our database
+    if self.defaultsOverride then
+        ns.merge(ns.defaults.profile, ns.defaultsOverride)
+    end
     self.db = LibStub("AceDB-3.0"):New(myname.."DB", ns.defaults)
     ns.db = self.db.profile
     ns.hidden = self.db.char.hidden
@@ -870,7 +875,9 @@ function HL:OnInitialize()
     -- This is just constantly firing, so it's kinda useless:
     -- self:RegisterEvent("CRITERIA_UPDATE", "Refresh")
 
-    ns.SetupMapOverlay()
+    if ns.SetupMapOverlay then
+        ns.SetupMapOverlay()
+    end
 
     if ns.RouteWorldMapDataProvider then
         WorldMapFrame:AddDataProvider(ns.RouteWorldMapDataProvider)

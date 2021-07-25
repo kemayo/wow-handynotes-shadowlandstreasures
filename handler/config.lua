@@ -40,6 +40,9 @@ ns.options = {
         ns.db[info[#info]] = v
         ns.HL:Refresh()
     end,
+    hidden = function(info)
+        return ns.hiddenConfig[info[#info]]
+    end,
     args = {
         icon = {
             type = "group",
@@ -95,6 +98,12 @@ ns.options = {
                     set = function(info, v)
                         ns.db[info[#info]] = v
                         WorldMapFrame:RefreshOverlayFrames()
+                    end,
+                    hidden = function(info)
+                        if not ns.SetupMapOverlay then
+                            return true
+                        end
+                        return ns.options.hidden(info)
                     end,
                     order = 70,
                 },
@@ -227,8 +236,8 @@ ns.options = {
                 for uiMapID, points in pairs(ns.points) do
                     for coord, point in pairs(points) do
                         if point.achievement then
-                            info.option.hidden = false
-                            return false
+                            info.option.hidden = nil
+                            return ns.options.hidden(info)
                         end
                     end
                 end
