@@ -627,13 +627,25 @@ local function iterKeysByValue(tbl, sortFunction)
 end
 local OptionsDropdown = {}
 do
+    local inherited = {"set", "get", "func", "confirm", "validate", "disabled", "hidden"}
+    local function inherit(t1, t2)
+        for _,k in ipairs(inherited) do
+            if t2[k] ~= nil then
+                t1[k] = t2[k]
+            end
+        end
+    end
+    local nodet = {}
     function OptionsDropdown.node(options, ...)
+        wipe(nodet)
         local node = options
+        inherit(nodet, node)
         for i=1, select('#', ...) do
             node = node.args[select(i, ...)]
             if not node then return end
+            inherit(nodet, node)
         end
-        return node
+        return ns.merge(nodet, node)
     end
     local info = {}
     function OptionsDropdown.makeInfo(options, ...)
@@ -774,17 +786,24 @@ function ns.SetupMapOverlay()
             info.keepShownOnClick = true
             info.notCheckable = true
 
+            local displayed = false
             if not OptionsDropdown.isHidden(ns.options, "achievementsHidden") then
                 info.text = ACHIEVEMENTS
                 info.value = "achievementsHidden"
                 UIDropDownMenu_AddButton(info, level)
+                displayed = true
             end
 
-            info.text = ZONE
-            info.value = "zonesHidden"
-            UIDropDownMenu_AddButton(info, level)
+            if not OptionsDropdown.isHidden(ns.options, "zonesHidden") then
+                info.text = ZONE
+                info.value = "zonesHidden"
+                UIDropDownMenu_AddButton(info, level)
+                displayed = true
+            end
 
-            UIDropDownMenu_AddSeparator(level)
+            if displayed then
+                UIDropDownMenu_AddSeparator(level)
+            end
 
             info.text = "Open HandyNotes options"
             info.hasArrow = nil
