@@ -511,7 +511,7 @@ ns.RegisterPoints(1533, {
             179488, -- Cloudtail's Paw
             179485, -- Fang of Nemaeus
             179487, -- Aethon's Horn
-            {174445, toy=true}, -- Glimmerfly Cocoon
+            -- {174445, toy=true}, -- Glimmerfly Cocoon
         },
         note="Beasts of Bastion; talk to {npc:161441} to summon",
     },
