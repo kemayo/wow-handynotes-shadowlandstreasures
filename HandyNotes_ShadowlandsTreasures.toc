@@ -12,6 +12,7 @@
 
 handler\handler.lua
 handler\config.lua
+handler\overlay.lua
 handler\routes.xml
 
 zones\Bastion.lua
