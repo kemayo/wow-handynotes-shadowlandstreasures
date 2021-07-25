@@ -727,6 +727,7 @@ ns.RegisterPoints(1543, {
     label="{npc:179083:Sly}",
     -- progress={64024,64022,64023}, -- covered by the achievement-progress
     atlas="wildbattlepetcapturable",
+    minimap=true,
     poi={ASSAULT_KYRIAN},
     loot={
         {186539, pet=3101}, -- Sly
