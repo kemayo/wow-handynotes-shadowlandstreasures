@@ -1,5 +1,14 @@
 # Changelog
 
+## Changed in v29
+
+* Maw Night Fae Assault: include the Jailer's Personal Stash achievement
+* Maw Necrolord Assault: include the second Stolen Anima Vessel
+* Better explanation in the tooltip for things which are hidden in the rift
+* New feature: some points are in "groups", so you can now use the menu or right-clicking to hide all the points of that type. E.g. all the Korthia daily mounts, mawsworn chests, etc
+* Missing Maw rares: Deomen the Vortex, Guard Orguluus
+* Minor missing loot in Riftbound Caches
+
 ## Changed in v28
 
 * You can now share a point to chat by shift-clicking a point or selecting it from the right-click menu (thanks, answering so many Maelie questions)
