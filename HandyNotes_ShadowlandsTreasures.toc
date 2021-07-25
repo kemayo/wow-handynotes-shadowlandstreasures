@@ -10,9 +10,9 @@
 ## SavedVariables: HandyNotes_ShadowlandsTreasuresDB
 ## RequiredDeps: HandyNotes
 
-handler.lua
-config.lua
-routes.xml
+handler\handler.lua
+handler\config.lua
+handler\routes.xml
 
 zones\Bastion.lua
 zones\Ardenweald.lua

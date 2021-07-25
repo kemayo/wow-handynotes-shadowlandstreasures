@@ -9,11 +9,11 @@ ns.HL = HL
 -- Data model stuff:
 
 -- flags for whether to show minimap icons in some zones, if Blizzard ever does the treasure-map thing again
-ns.map_spellids = {
+ns.map_spellids = ns.map_spellids or {
     -- zone = spellid
 }
 
-ns.currencies = {
+ns.currencies = ns.currencies or {
     ANIMA = {
         name = '|cffff8000' .. POWER_TYPE_ANIMA .. '|r',
         texture = select(10, GetAchievementInfo(14339)),
@@ -24,14 +24,14 @@ ns.currencies = {
     }
 }
 -- for fallbacks
-ns.covenants = {
+ns.covenants = ns.covenants or {
     [Enum.CovenantType.Kyrian] = "Kyrian",
     [Enum.CovenantType.Necrolord] = "Necrolords",
     [Enum.CovenantType.NightFae] = "NightFae",
     [Enum.CovenantType.Venthyr] = "Venthyr",
 }
 
-ns.groups = {}
+ns.groups = ns.groups or {}
 
 ns.points = {
     --[[ structure:
