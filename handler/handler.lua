@@ -457,6 +457,7 @@ local get_point_progress = function(point)
                 return i - 1, #point.progress
             end
         end
+        return #point.progress, #point.progress
     else
         -- function
         return point:progress()

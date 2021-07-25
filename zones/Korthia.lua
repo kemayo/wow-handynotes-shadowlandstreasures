@@ -422,7 +422,7 @@ ns.RegisterPoints(1961, { -- Korthia
     [62404970] = {}, -- by cliff behind large tree
 }, {
     quest={64292,64298,any=true}, -- 2 is the final mount-quest, 8 is found-today
-    progress={64293, 64294, 64295, 64296, 64297, 64292},
+    progress={64293, 64294, 64295, 64296, 64297, 64299},
     label="{npc:179912}",
     texture=ns.merge(ns.atlas_texture("stablemaster"), {r=0,g=1,b=1,a=1,scale=1.2}),
     minimap=true,
