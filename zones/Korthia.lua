@@ -407,6 +407,7 @@ ns.RegisterPoints(1961, { -- Korthia
     },
     -- Maelie
     [30005560] = {},
+    [33103865] = {},
     [35804650] = {note="On the chain"}, -- on chain
     [35856225] = {note="Climb along the blue lines from the northeast"},
     [38403140] = {}, -- on shelf, jump down
