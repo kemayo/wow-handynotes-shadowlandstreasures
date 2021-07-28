@@ -574,7 +574,7 @@ ns.RegisterPoints(1961, { -- Korthia
 
     [50307590] = { -- Observer Yorik
         achievement=15107, criteria=52294,
-        quest=64369,
+        quest=64440,
         npc=179914,
         -- requires_item=186731,
         loot={
