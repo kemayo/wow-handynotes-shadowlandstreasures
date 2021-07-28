@@ -661,8 +661,8 @@ ns.RegisterPoints(1961, { -- Korthia
     },
 
     [44903550] = { -- Xyraxz the Unknowable (Chamber of Wisdom)
+        -- achievement=15066, criteria=52263, -- Reliquary Restoration
         achievement=15107, criteria=52296,
-        achievement=15066, criteria=52263,
         quest=64278,
         npc=179859,
         -- requires_item=186718,
@@ -676,8 +676,8 @@ ns.RegisterPoints(1961, { -- Korthia
     },
 
     [39405240] = { -- Yarxhov the Pillager (Chamber of Knowledge)
+        -- achievement=15066, criteria=52262, -- Reliquary Restoration
         achievement=15107, criteria=52295,
-        achievement=15066, criteria=52262,
         quest=64257,
         npc=179802,
         -- requires_item=186718,
