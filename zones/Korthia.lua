@@ -304,6 +304,22 @@ ns.RegisterPoints(1961, {
     texture=ns.atlas_texture("teleportationnetwork-ardenweald-32x32", {r=0,g=1,b=1,a=1,scale=1}),
 })
 
+--Nests
+ns.RegisterPoints(1961, {
+    [42205600] = {quest=63459},
+    [51904390] = {quest=64360},
+    [63703150] = {quest=64361},
+    [52407270] = {quest=64362},
+    [40003970] = {quest=64385},
+}, {
+    label="Nest of Unusual Materials",
+    texture=ns.atlas_texture("vehicle-trap-grey", {r=0.8,g=0,b=0.8,a=1,scale=1}),
+    loot={
+        187440, -- Feather Stuffed Helm
+        {185963, questComplete=63892}, -- Diviner's Rune Chit
+    }
+})
+
 --Relics
 local relic_traits = {
     minimap=true,
