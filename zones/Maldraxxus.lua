@@ -723,12 +723,16 @@ ns.RegisterPoints(1536, {
             48874  -- Sabriel the Bonecleaver
         },
         atlas="VignetteKillElite", scale=1.3,
-        -- quest=62786, -- this is wrong
+        -- quest=62786, -- this is the mount roll, from the first kill of the day
         -- npc=162853,
         loot={
             {184062, mount=1437}, -- Gnawed Reins of the Battle-Bound Warhound
         },
-        note="Some of these require accepting the three {quest:59826} quests",
+        note=function()
+            local attempted = C_QuestLog.IsQuestFlaggedCompleted(62786)
+            return "Some of these require accepting the three {quest:59826} quests\n" ..
+                "You " .. (attempted and GREEN_FONT_COLOR or RED_FONT_COLOR):WrapTextInColorCode(attempted and "have" or "have not") .. " attempted to get the mount today"
+        end,
     },
 })
 
