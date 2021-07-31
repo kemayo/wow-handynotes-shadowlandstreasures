@@ -12,6 +12,9 @@ ns.groups["dailymount"] = "Daily Mounts"
 ns.groups["mawsworncache"] = "Mawsworn Caches"
 ns.groups["riftboundcache"] = "Riftbound Caches"
 ns.groups["relic"] = "Relics"
+ns.groups["nests"] = "Nests of Unusual Materials"
+ns.groups["mawshrooms"] = "Invasive Mawshrooms"
+ns.groups["riftportal"] = "Rift Portals"
 
 local researched = ns.nodeMaker{
     IsActive = function(point)
@@ -179,6 +182,7 @@ ns.RegisterPoints(1961, { -- Korthia
     atlas="poi-rift1",
     requires_no_buff={352795, 354870, any=true},
     note="Rifts let you enter an alternate phase, if you have a {item:186731}. There are rares and chests that're only in the rift.",
+    group="riftportal"
 })
 
 -- Riftbound Caches
@@ -248,7 +252,7 @@ local mawshroom = ns.nodeMaker{
         {185963, questComplete=63892}, -- Diviner's Rune Chit
     },
     note="Multiple spawn points. Feed the {item:187153} to {npc:180063}.",
-    group="Invasive Mawshrooms",
+    group="mawshrooms",
 }
 ns.RegisterPoints(1961, {
     [54204120] = mawshroom(),
@@ -317,7 +321,8 @@ ns.RegisterPoints(1961, {
     loot={
         187440, -- Feather Stuffed Helm
         {185963, questComplete=63892}, -- Diviner's Rune Chit
-    }
+    },
+    group="nests",
 })
 
 --Relics
