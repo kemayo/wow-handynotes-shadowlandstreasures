@@ -819,27 +819,30 @@ ns.RegisterPoints(1543, {
 
 -- Zovaal's Vault
 ns.RegisterPoints(1543, {
-    [33006630] = {},
+    [33606630] = {},
     [47257968] = {},
     [62176427] = {},
     [66405820] = {},
 }, {
     label="{npc:179883}",
     quest=64283,
-    atlas="VignetteLootElite",
+    atlas="VignetteLootElite", scale=1.3,
     active=rift_active,
     loot={
         187251, -- Shaded Skull Shoulderguards
         {187113, toy=true}, -- Personal Ball and Chain
         {187416, toy=true}, -- Jailer's Cage
     },
-    note="In the rift, drag {npc:179883} to {npc:179904:Ve'nari} @ 44.5, 51.5",
+    note="In the rift, get {quest:64282} from {npc:179904:Ve'nari} @ 44.5, 51.5, then drag {npc:179883} back. You can drag it back before getting the quest, but you have to put it down before you can accept the quest.",
 })
 ns.RegisterPoints(1543, {
-    [44505150] = {
+    [44805140] = {
         label="{npc:179904:Ve'nari}",
-        requires_buff=355650, -- Zovaal's Vault Chain
+        atlas="questdaily", scale=1.2,
+        active=rift_active,
+        -- requires_buff=355650, -- Zovaal's Vault Chain
         quest=64283,
+        note="Get {quest:64282} here, find {npc:179883}, and drag it back here",
     },
 })
 
