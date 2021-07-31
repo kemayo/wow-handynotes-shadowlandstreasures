@@ -890,8 +890,8 @@ function HL:OnInitialize()
     self:RegisterEvent("QUEST_TURNED_IN", "RefreshOnEvent")
     self:RegisterEvent("SHOW_LOOT_TOAST", "RefreshOnEvent")
     self:RegisterEvent("GARRISON_FOLLOWER_ADDED", "RefreshOnEvent")
-    -- This is just constantly firing, so it's kinda useless:
-    -- self:RegisterEvent("CRITERIA_UPDATE", "Refresh")
+    -- This is sometimes spammy, but is the only thing that tends to get us casts:
+    self:RegisterEvent("CRITERIA_UPDATE", "RefreshOnEvent")
 
     if ns.SetupMapOverlay then
         ns.SetupMapOverlay()
