@@ -467,6 +467,7 @@ ns.itemIsKnown = function(item)
         if item.mount then return PlayerHasMount(item.mount) end
         if item.pet then return PlayerHasPet(item.pet) end
         if item.quest then return C_QuestLog.IsQuestFlaggedCompleted(item.quest) or C_QuestLog.IsOnQuest(item.quest) end
+        if item.questComplete then return C_QuestLog.IsQuestFlaggedCompleted(item.questComplete) end
         if CanLearnAppearance(item[1]) then return HasAppearance(item[1]) end
     elseif CanLearnAppearance(item) then
         return HasAppearance(item)
