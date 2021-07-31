@@ -239,6 +239,71 @@ ns.RegisterPoints(1961, { -- Korthia
     texture=ns.atlas_texture("VignetteLoot", {r=1,g=1,b=0,a=1,scale=1}),
 })
 
+--Mawshrooms
+local mawshroom = ns.nodeMaker{
+    label="Invasive Mawshroom",
+    loot={
+        187244, -- Questionable Mawshroom
+        {187153, mount=1507}, -- Tasty Mawshroom
+        {185963, questComplete=63892}, -- Diviner's Rune Chit
+    },
+    note="Multiple spawn points. Feed the {item:187153} to {npc:180063}.",
+    group="Invasive Mawshrooms",
+}
+ns.RegisterPoints(1961, {
+    [54204120] = mawshroom(),
+    [56905160] = mawshroom(),
+    [57303940] = mawshroom(),
+    [58154050] = mawshroom(),
+    [60304160] = mawshroom(),
+    [60703820] = mawshroom(),
+}, {
+    quest=64351,
+    texture=ns.atlas_texture("teleportationnetwork-ardenweald-32x32", {r=1,g=1,b=0,a=1,scale=1}),
+})
+ns.RegisterPoints(1961, {
+    [48504115] = mawshroom(),
+    [49504070] = mawshroom(),
+    [49903250] = mawshroom(),
+    [51504690] = mawshroom(),
+    [53703790] = mawshroom(),
+}, {
+    quest=64354,
+    texture=ns.atlas_texture("teleportationnetwork-ardenweald-32x32", {r=0,g=1,b=0,a=1,scale=1}),
+})
+ns.RegisterPoints(1961, {
+    [42103580] = mawshroom(),
+    [43703670] = mawshroom(),
+    [45603450] = mawshroom(),
+    [52402500] = mawshroom(),
+    [55101640] = mawshroom(),
+}, {
+    quest=64355,
+    texture=ns.atlas_texture("teleportationnetwork-ardenweald-32x32", {r=0,g=0.5,b=1,a=1,scale=1}),
+})
+ns.RegisterPoints(1961, {
+    [35703110] = mawshroom(),
+    [37503480] = mawshroom(),
+    [38803380] = mawshroom(),
+    [39503070] = mawshroom(),
+    [39703490] = mawshroom(),
+    [42103250] = mawshroom(),
+}, {
+    quest=64356,
+    texture=ns.atlas_texture("teleportationnetwork-ardenweald-32x32", {r=1,g=0,b=1,a=1,scale=1}),
+})
+ns.RegisterPoints(1961, {
+    [39703010] = mawshroom(),
+    [41204490] = mawshroom(),
+    [43455635] = mawshroom(),
+    [45204790] = mawshroom(),
+    [46504850] = mawshroom(),
+    [54805550] = mawshroom(),
+}, {
+    quest=64357,
+    texture=ns.atlas_texture("teleportationnetwork-ardenweald-32x32", {r=0,g=1,b=1,a=1,scale=1}),
+})
+
 --Relics
 local relic_traits = {
     minimap=true,
