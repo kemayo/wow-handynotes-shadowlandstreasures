@@ -247,8 +247,8 @@ ns.RegisterPoints(1961, { -- Korthia
 local mawshroom = ns.nodeMaker{
     label="Invasive Mawshroom",
     loot={
-        187244, -- Questionable Mawshroom
         {187153, mount=1507}, -- Tasty Mawshroom
+        187244, -- Questionable Mawshroom
         {185963, questComplete=63892}, -- Diviner's Rune Chit
     },
     note="Multiple spawn points. Feed the {item:187153} to {npc:180063}.",
