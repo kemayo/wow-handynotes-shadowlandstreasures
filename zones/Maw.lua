@@ -705,6 +705,7 @@ ns.RegisterPoints(1822, { -- Extractor's Sanatorium
 ns.RegisterPoints(1543, {
     [32604090] = {quest=64057,texture=icon_red,},
     [32604340] = {quest=64057,texture=icon_red,},
+    [37504500] = {quest=64057,texture=icon_red,},
     [34103580] = {quest=64058,texture=icon_green,},
     [36604010] = {quest=64058,texture=icon_green,},
     [38354870] = {quest=64058,texture=icon_green,},
@@ -745,6 +746,7 @@ ns.RegisterPoints(1543, {
 })
 -- Night Fae
 ns.RegisterPoints(1543, {
+    [19103320] = {quest=64059,texture=icon_red,},
     [25303330] = {quest=64059,texture=icon_red,},
     [25303820] = {quest=64059,texture=icon_red,},
     [27804180] = {quest=64059,texture=icon_red,},
