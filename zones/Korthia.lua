@@ -732,7 +732,7 @@ ns.RegisterPoints(1961, { -- Korthia
         note="Talk to {npc:179974}",
     },
 
-    [56853235] = { -- Wild Worldcracker (Popo's Potion Patrol)
+    [47003560] = { -- Wild Worldcracker (Popo's Potion Patrol)
         achievement=15107, criteria=52300,
         quest=64338,
         npc=180032,
@@ -740,7 +740,7 @@ ns.RegisterPoints(1961, { -- Korthia
         loot={
             {187176, toy=true}, -- Vesper of Harmony
             {186483, mount=1493, covenant=Enum.CovenantType.Kyrian}, -- Foresworn Aquilon
-            -- {187282,quest=64529,}, -- Intact Aquilon Core
+            -- {187282,quest=64529,covenant=Enum.CovenantType.Kyrian}, -- Intact Aquilon Core
             187380, -- Devourer Hide Belt
             {187426,quest=64552,}, -- Legend of the Animaswell
         },
