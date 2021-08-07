@@ -568,6 +568,7 @@ ns.RegisterPoints(1961, { -- Korthia
             187391, -- Yarxhov's Rib-Cage
             187399, -- Maw Construct's Shoulderguards
         },
+        note="Take the carriage that leaves from here, you'll fight the mob in the Maw",
     },
 
     [51154165] = { -- Consumption
