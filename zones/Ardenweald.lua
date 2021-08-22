@@ -38,7 +38,7 @@ ns.RegisterPoints(1565, { -- Ardenweald
     [48964106] = ns.path{achievement=14313, criteria=50037, quest=61067,atlas="poi-door-arrow-up",note="Slow-fall feather to reach the treasure"},
     [63903750] = {
         achievement=14313, criteria=50039, -- Cache of the Moon
-        quest=61074, -- also 61126
+        quest=61074, -- also 61126 for having turned in the tools
         loot={
             {180731, mount=1397}, -- Wildseed Cradle
         },
@@ -46,11 +46,11 @@ ns.RegisterPoints(1565, { -- Ardenweald
         minimap=true,
         note="Locate 5 tools scattered around the Garden of Night (southeast of Root-Home), combine them into {item:180753:Twinklestar's Gardening Toolkit} and bring them to {npc:171360:Twinklestar} in Tirna Vaal.\nAfter this is done, talk to Twinklestar to receive the {spell:334353:Moonsight} buff",
     },
-    [38995696] = {quest=61074,achievement=14313, criteria=50039,label="{item:180759:Diary of the Night}",inbag=180759,atlas="DruidEclipse-LunarMoon",minimap=true},
-    [39755440] = {quest=61074,achievement=14313, criteria=50039,label="{item:180754:Gardener's Hammer}",inbag=180754,atlas="DruidEclipse-LunarMoon",minimap=true},
-    [40315262] = {quest=61074,achievement=14313, criteria=50039,label="{item:180758:Gardener's Basket}",inbag=180758,atlas="DruidEclipse-LunarMoon",minimap=true},
-    [38495808] = {quest=61074,achievement=14313, criteria=50039,label="{item:180756:Gardener's Flute}",inbag=180756,atlas="DruidEclipse-LunarMoon",minimap=true},
-    [38856010] = {quest=61074,achievement=14313, criteria=50039,label="{item:180757:Gardener's Wand}",inbag=180757,atlas="DruidEclipse-LunarMoon",minimap=true},
+    [38995696] = {quest=61074,achievement=14313, criteria=50039,label="{item:180759:Diary of the Night}",inbag={180759,180753,any=true},atlas="DruidEclipse-LunarMoon",minimap=true},
+    [39755440] = {quest=61074,achievement=14313, criteria=50039,label="{item:180754:Gardener's Hammer}",inbag={180754,180753,any=true},atlas="DruidEclipse-LunarMoon",minimap=true},
+    [40315262] = {quest=61074,achievement=14313, criteria=50039,label="{item:180758:Gardener's Basket}",inbag={180758,180753,any=true},atlas="DruidEclipse-LunarMoon",minimap=true},
+    [38495808] = {quest=61074,achievement=14313, criteria=50039,label="{item:180756:Gardener's Flute}",inbag={180756,180753,any=true},atlas="DruidEclipse-LunarMoon",minimap=true},
+    [38856010] = {quest=61074,achievement=14313, criteria=50039,label="{item:180757:Gardener's Wand}",inbag={180757,180753,any=true},atlas="DruidEclipse-LunarMoon",minimap=true},
     [37603710] = {
         achievement=14313, criteria=50041, -- Dreamsong Heart
         quest=61070,
