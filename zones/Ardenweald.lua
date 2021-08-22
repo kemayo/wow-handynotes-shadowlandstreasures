@@ -171,13 +171,19 @@ ns.RegisterPoints(1565, {
 -- Non-achievement treasures
 ns.RegisterPoints(1565, { -- Ardenweald
     [26285897] = {
-        quest=61192, -- failed:61208, passed: 61198
-        loot={
-            {180727, mount=1360}, -- Shimmermist Runner
-        },
+        quest=61192, -- failed:61208, passed: 61198; 58013 happened as well?
         note="Read the Tale of the Tangle, then follow blue lamps until you find {npc:171767:Shizgher}",
     },
-    [32515302] = {quest=61192,label="Tale of the Tangle",note="Read, then follow the blue lamps to find {npc:171767:Shizgher}",atlas="poi-workorders",minimap=true,},
+    [32515302] = {
+        label="Tale of the Tangle",note="Read, then follow the blue lamps to find {npc:171767:Shizgher}",
+        atlas="poi-workorders",
+        minimap=true,
+    },
+}, {
+    quest=61192,
+    loot={
+        {180727, mount=1360}, -- Shimmermist Runner
+    },
 })
 
 -- Fractured Fairy Tales
