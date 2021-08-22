@@ -262,6 +262,16 @@ ns.RegisterPoints(1525, { -- Revendreth
     -- [] = {criteria=49868, quest=62476, inbag=183760,}, -- Red Eye Lens (on Innervus)
     -- [] = {criteria=49869, quest=62474, inbag=183759,}, -- Skull Protector (on Endlurker)
 }, makeover)
+ns.RegisterPoints(1536, { -- Maldraxxus
+    [69704110] = {
+        label="{npc:162151:Neena}",
+        quest=62929, -- 57604 is neena-has-been-made
+        atlas="buildanabomination-32x32",
+        covenant=Enum.CovenantType.Necrolord,
+        note="Requires Abomination Factory level 2. Release her with the key from {npc:175510} next to the cage, talk to her and do {quest:59615}.",
+        minimap=true,
+    },
+})
 
 -- non-achievement treasures
 ns.RegisterPoints(1536, { -- Maldraxxus
@@ -580,6 +590,7 @@ ns.RegisterPoints(1536, {
             182190, -- Tauralus Hide Collar
             {182075, mount=1366, covenant=Enum.CovenantType.Necrolord}, -- Bonehoof Tauralus
         },
+        note="You need to have {npc:162151:Neena} with you for the mount. Go to 69.7, 41.1 to find her."
     },
     [50552010] = { -- Taskmaster Xox
         achievement=14308, criteria=48867,
