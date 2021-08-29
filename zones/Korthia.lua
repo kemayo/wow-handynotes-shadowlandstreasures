@@ -725,7 +725,7 @@ ns.RegisterPoints(1961, { -- Korthia
         covenant=Enum.CovenantType.Venthyr,
         loot={
             184790, -- Archdruid Van-Yali's Greenthumbs
-            {186479, mount=nil, covenant=Enum.CovenantType.Venthyr}, -- Mastercraft Gravewing
+            {186479, mount=803, covenant=Enum.CovenantType.Venthyr}, -- Mastercraft Gravewing
             -- {187283,quest=64530,}, -- Gravewing Crystal
             187386, -- Stygian Crystal Studded Legguards
             {187428,quest=64553,}, -- Legend of the Animaswell
