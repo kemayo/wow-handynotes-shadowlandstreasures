@@ -377,6 +377,9 @@ ns.point_active = function(point)
     if point.active.notquest and C_QuestLog.IsQuestFlaggedCompleted(point.active.notquest) then
         return false
     end
+    if point.active.achievement and not select(4, GetAchievementInfo(point.active.achievement)) then
+        return false
+    end
     if point.active.requires_buff and not ns.doTest(GetPlayerAuraBySpellID, point.active.requires_buff) then
         return false
     end
