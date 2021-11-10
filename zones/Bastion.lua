@@ -285,6 +285,7 @@ ns.RegisterPoints(1533, { -- Bastion
         label="Cloudwalker's Coffer",
         note="Bounce on the flowers",
         loot={
+            180783, -- Design: Crown of the Righteous
             {183756, quest=62472, covenant=Enum.CovenantType.Necrolord}, -- Halo of Purity (stitching)
         },
     },
