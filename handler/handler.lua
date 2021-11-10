@@ -162,6 +162,11 @@ local function render_string(s)
             return CreateAtlasMarkup("questnormal") .. (completed and completeColor or incompleteColor):WrapTextInColorCode(name)
         elseif variant == "questid" then
             return CreateAtlasMarkup("questnormal") .. (C_QuestLog.IsQuestFlaggedCompleted(id) and completeColor or incompleteColor):WrapTextInColorCode(id)
+        elseif variant == "achievement" then
+            local _, name, _, completed = GetAchievementInfo(id)
+            if name and name ~= "" then
+                return CreateAtlasMarkup("storyheader-cheevoicon") .. (completed and completeColor or incompleteColor):WrapTextInColorCode(name)
+            end
         elseif variant == "npc" then
             local name = mob_name(id)
             if name then
