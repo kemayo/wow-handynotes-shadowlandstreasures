@@ -1,5 +1,17 @@
 # Changelog
 
+## Changed in v32
+
+* Updated for 9.1.5 (no real API changes)
+* New Maw teleporters added
+* Cloudwalker's Coffer in Bastion was missing loot
+* Mastercraft Gravewalker in Korthia got a mountid finally
+* Explain how to get Tahonta in Maldraxxus
+* Better-explain the Shimmermist Runner in Ardenweald
+* Better hiding of the Cache of the Moon tools during various stages of that quest
+* Improve the location for the Wild Worldcracker - show it at the end of Popo's patrol, not the beginning
+* Improved display for Zovaal's vault
+
 ## Changed in v31
 
 * Korthia: include Invasive Mawshrooms and Nests of Unusual Materials
