@@ -954,20 +954,26 @@ local riftstone = ns.nodeMaker{
     active={quest=63177},
     note="Buy access from {npc:162804}",
 }
+local rift_three = ns.atlas_texture("WarlockPortalAlliance", {r=0,g=0.75,b=0.75,a=1,scale=1})
 -- Chaotic Riftstones
 ns.RegisterPoints(1543, {
-    -- First pair
+    -- First pair: Tremaculum / Crucible
     [19204780] = riftstone{route=25201785,},
     [25201785] = riftstone{route={19204780,25201785,r=0.75,g=0,b=0},},
-    -- Second pair
+    -- Second pair: Calcis / Cauldron of Flame
     [23453120] = riftstone{atlas="WarlockPortalAlliance",route=34804360,},
     [34804360] = riftstone{atlas="WarlockPortalAlliance",route={23453120,34804360,r=0,g=0,b=0.75},},
+    -- Third pair: Perdition Hold / Desmotaeron
+    [33905665] = riftstone{texture=rift_three,route={33905665,68753675,r=0,g=0.75,b=0.75},},
+    [68753675] = riftstone{texture=rift_three,route=33905665,},
 })
 
 -- Animaflow
 ns.RegisterPoints(1543, {
     [34201475] = {}, -- Tremaculum
     [53406365] = {}, -- Beastwarrens (also gated behind Rule 6)
+    [33955675] = {}, -- Perdition Hold
+    [68903680] = {active={quest=61600,achievement=15126,note="Requires the {achievement:15126} achievement"}}, -- Desmotaeron
 }, {
     label="{npc:172925} " .. EXIT,
     atlas="MagePortalAlliance",
