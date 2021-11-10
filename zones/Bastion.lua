@@ -284,6 +284,9 @@ ns.RegisterPoints(1533, { -- Bastion
         quest=61698, -- this one seems to be daily?
         label="Cloudwalker's Coffer",
         note="Bounce on the flowers",
+        loot={
+            {183756, quest=62472, covenant=Enum.CovenantType.Necrolord}, -- Halo of Purity (stitching)
+        },
     },
     -- [24531794] = {
     --     quest=60663,
