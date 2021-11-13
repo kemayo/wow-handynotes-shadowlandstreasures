@@ -216,6 +216,8 @@ do
         return render_string(string.join(", ", unpack(out)))
     end
 end
+ns.render_string = render_string
+ns.render_string_list = render_string_list
 
 local npc_texture, follower_texture, currency_texture, junk_texture
 local icon_cache = {}
@@ -783,7 +785,7 @@ do
             if point.group then
                 if not ns.hiddenConfig.groupsHiddenByZone then
                     local map = C_Map.GetMapInfo(currentZone)
-                    info.text = "Hide all " .. (ns.groups[point.group] or point.group) .. " in " .. (map and map.name or "this zone")
+                    info.text = "Hide all " .. render_string(ns.groups[point.group] or point.group) .. " in " .. (map and map.name or "this zone")
                     info.notCheckable = 1
                     info.func = hideGroupZone
                     info.arg1 = currentZone
@@ -792,7 +794,7 @@ do
                     wipe(info)
                 end
                 if not ns.hiddenConfig.groupsHidden then
-                    info.text = "Hide all " .. (ns.groups[point.group] or point.group) .. " in all zones"
+                    info.text = "Hide all " .. render_string(ns.groups[point.group] or point.group) .. " in all zones"
                     info.notCheckable = 1
                     info.func = hideGroup
                     info.arg1 = currentZone

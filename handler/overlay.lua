@@ -274,7 +274,7 @@ function ns.SetupMapOverlay()
                 info.tooltipTitle = "Hide this type of point"
                 local groups = zoneGroups(uiMapID)
                 for _, group in iterKeysByValue(groups) do
-                    info.text = ns.groups[group] or group
+                    info.text = ns.render_string(ns.groups[group] or group)
                     info.value = group
                     info.checked = not ns.db.groupsHiddenByZone[uiMapID][group]
                     UIDropDownMenu_AddButton(info, level)
