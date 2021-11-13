@@ -122,6 +122,7 @@ ns.RegisterPoints(1961, { -- Korthia
 }, {
     label = "Spectral Key",
     minimap=true,
+    group="Spectral Keys",
 })
 
 -- Mawsworn cache
@@ -853,6 +854,7 @@ ns.RegisterPoints(1961, {
         atlas="adventures-32x32", scale=1.2,
         active={quest=63665},
         minimap=true,
+        group="Transportation",
     },
 })
 -- Flayedwing
@@ -863,4 +865,5 @@ ns.RegisterPoints(1961, {
     label="{npc:180548}",
     atlas="flightmaster", scale=1.2,
     active={quest=63665},
+    group="Transportation",
 })

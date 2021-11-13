@@ -647,12 +647,14 @@ ns.RegisterPoints(1543, {
 }, {
     label="Stolen Anima Vessel",
     poi={ASSAULT_NECRO},
+    group="Stolen Anima",
 })
 ns.RegisterPoints(1823, { -- Altar of Domination
     [20105250] = {quest=64045,texture=icon_green,},
 }, {
     label="Stolen Anima Vessel",
     poi={ASSAULT_NECRO},
+    group="Stolen Anima",
 })
 ns.RegisterPoints(1543, {
     [28905710] = {quest=64209},
@@ -694,12 +696,14 @@ ns.RegisterPoints(1543, {
 }, {
     label="Stolen Anima Vessel",
     poi={ASSAULT_VENTHYR},
+    group="Stolen Anima",
 })
 ns.RegisterPoints(1822, { -- Extractor's Sanatorium
     [73705060] = {quest=64056,texture=icon_green,},
 }, {
     label="Stolen Anima Vessel",
     poi={ASSAULT_VENTHYR},
+    group="Stolen Anima",
 })
 -- Kyrian
 ns.RegisterPoints(1543, {
@@ -713,6 +717,7 @@ ns.RegisterPoints(1543, {
 }, {
     label="Stolen Anima Vessel",
     poi={ASSAULT_KYRIAN},
+    group="Stolen Anima",
 })
 ns.RegisterPoints(1543, {
     [29954327] = {
@@ -757,6 +762,7 @@ ns.RegisterPoints(1543, {
 }, {
     label="Stolen Anima Vessel",
     poi={ASSAULT_NIGHTFAE},
+    group="Stolen Anima",
 })
 ns.RegisterPoints(1543, {
     [19104620] = {quest=63993,texture=icon_red,},
@@ -780,6 +786,7 @@ ns.RegisterPoints(1543, {
     loot={
         187251, -- Shaded Skull Shoulderguards
     },
+    group="Rift Hidden Caches",
 })
 -- Rifts
 ns.RegisterPoints(1543, {
@@ -796,6 +803,7 @@ ns.RegisterPoints(1543, {
     label="Stolen Anima Vessel",
     active=rift_active,
     poi={ASSAULT_NECRO, ASSAULT_VENTHYR, ASSAULT_KYRIAN, ASSAULT_NIGHTFAE},
+    group="Stolen Anima",
 })
 
 -- Fallen Charger
@@ -945,6 +953,7 @@ ns.RegisterPoints(1543, {
         label="Waystone to Oribos",
         atlas="adventures-32x32", scale=1.2,
         minimap=true,
+        group="Transportation",
     },
 })
 
@@ -953,6 +962,7 @@ local riftstone = ns.nodeMaker{
     atlas="WarlockPortalHorde", scale=1.3,
     active={quest=63177},
     note="Buy access from {npc:162804}",
+    group="Transportation",
 }
 local rift_three = ns.atlas_texture("WarlockPortalAlliance", {r=0,g=0.75,b=0.75,a=1,scale=1})
 -- Chaotic Riftstones
@@ -980,4 +990,5 @@ ns.RegisterPoints(1543, {
     active={quest=61600},
     note="Buy access from {npc:162804}",
     scale = 1.2,
+    group="Transportation",
 })

@@ -164,6 +164,7 @@ local sorrow = {
     quest={61127, 61128}, -- arm, sword
     level=60,
     atlas="animadiversion-icon",
+    group="sorrow",
 }
 ns.RegisterPoints(1536, {
     [51404840] = {
@@ -216,7 +217,7 @@ ns.RegisterPoints(1525, {
 
 -- Wardrobe Makeover
 
-local makeover = {achievement=14748, atlas="buildanabomination-32x32", minimap=true, covenant=Enum.CovenantType.Necrolord}
+local makeover = {achievement=14748, atlas="buildanabomination-32x32", minimap=true, covenant=Enum.CovenantType.Necrolord, group="wardrobemakeover",}
 ns.RegisterPoints(1536, { -- Maldraxxus
     [47104900] = {criteria=50546, quest=62758, inbag=184036, note="Buy {item:184036} from {npc:164588}"}, -- Dundae's Hat
     [54203060] = {criteria=50546, quest=62758, inbag=184036, note="Buy {item:184036} from {npc:169698}"}, -- Dundae's Hat

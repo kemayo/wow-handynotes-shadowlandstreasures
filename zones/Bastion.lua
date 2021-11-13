@@ -166,6 +166,7 @@ local shard = ns.nodeMaker{
     atlas="azeriteready",
     minimap=true,
     upcoming=false,
+    group="shardlabor",
 }
 ns.RegisterPoints(1533, {
     -- Shard Labor
@@ -178,6 +179,7 @@ ns.RegisterPoints(1533, {
         level=60,
         atlas="VignetteLootElite", scale=1.2,
         note="Forge the {item:180858:Crystal Mallet of Heralds} and then ring the vesper",
+        group="shardlabor",
     },
     [59343144] = {
         quest=61229,
@@ -188,6 +190,7 @@ ns.RegisterPoints(1533, {
         atlas="vehicle-hammergold",
         note="Collect 50 Anima Shards and give them to {npc:171732:Forgelite Hephaesius}",
         upcoming = false,
+        group="shardlabor",
     },
     [39057704] = shard{quest=61225,note="Platform under the bridge"},
     [43637622] = shard{quest=61235,note="On the waterfall, go around and jump down"},
