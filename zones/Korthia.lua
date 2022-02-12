@@ -509,6 +509,7 @@ ns.RegisterPoints(1961, { -- Korthia
     [59801510] = {}, -- on cliff
     [61304040] = {}, -- on cliff
     [62404970] = {}, -- by cliff behind large tree
+    [67962980] = {},
 }, {
     quest={64292,64298,any=true}, -- 2 is the final mount-quest, 8 is found-today
     progress={64293, 64294, 64295, 64296, 64297, 64299},
