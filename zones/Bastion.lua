@@ -359,6 +359,18 @@ ns.RegisterPoints(1533, {
         npc=171014,
         loot={
             184295, -- Eternal Daybreak Necklace
+            -- These are all super-low drop rate and shared with Relic-Hoarder:
+            183604, -- Piercing Timbre Crossbow
+            183605, -- Devourer Wrought Warglaive
+            183606, -- Bulwark of Echoing Courage
+            183607, -- Uncertain Aspirant's Spear
+            183608, -- Evernote Vesper
+            183609, -- Re-Powered Golliath Fists
+            183610, -- Warrior Poet's Poniard
+            183611, -- Humble Ophelia's Greatblade
+            183612, -- Loyal Champion's Hammer
+            183613, -- Glinting Daybreak Dagger
+            183614, -- Gavel of Harmonious Wisdom
         },
         note="Read the Mercia's Legacy chapters inside in order, then talk to {npc:157979} for {spell:333779}, then find {item:180569} outside, and bring it back to {npc:157979}",
         minimap=true,
@@ -387,7 +399,18 @@ ns.RegisterPoints(1533, {
         quest=61069,--61000,
         npc=171011,
         loot={
+            -- These are all super-low drop rate and shared with Collector Astorestes:
+            183604, -- Piercing Timbre Crossbow
+            183605, -- Devourer Wrought Warglaive
+            183606, -- Bulwark of Echoing Courage
+            183607, -- Uncertain Aspirant's Spear
             183608, -- Evernote Vesper
+            183609, -- Re-Powered Golliath Fists
+            183610, -- Warrior Poet's Poniard
+            183611, -- Humble Ophelia's Greatblade
+            183612, -- Loyal Champion's Hammer
+            183613, -- Glinting Daybreak Dagger
+            183614, -- Gavel of Harmonious Wisdom
         },
         notes="Runs away, hit it to lower {spell:333874}",
     },
