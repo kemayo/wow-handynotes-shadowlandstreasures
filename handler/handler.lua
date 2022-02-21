@@ -177,6 +177,11 @@ local function render_string(s)
             if info then
                 return quick_texture_markup(info.iconFileID) .. info.name
             end
+        elseif variant == "garrisontalent" then
+            local info = C_Garrison.GetTalentInfo(id)
+            if info then
+                return quick_texture_markup(info.icon) .. (info.researched and completeColor or incompleteColor):WrapTextInColorCode(info.name)
+            end
         end
         return fallback ~= "" and fallback or (variant .. ':' .. id)
     end)
@@ -366,6 +371,11 @@ local function work_out_texture(point)
     end
     return default_textures[ns.db.default_icon] or default_textures["VignetteLoot"]
 end
+local talent_researched = function(talentid, rank)
+    if type(talentid) == "table" then return talent_researched(unpack(talentid)) end
+    local info = C_Garrison.GetTalentInfo(talentid)
+    return info and info.researched and (not rank or info.talentRank >= rank)
+end
 ns.point_active = function(point)
     if point.IsActive and not point:IsActive() then
         return false
@@ -386,6 +396,9 @@ ns.point_active = function(point)
         return false
     end
     if point.active.requires_no_buff and ns.doTest(GetPlayerAuraBySpellID, point.active.requires_no_buff) then
+        return false
+    end
+    if point.active.requires_talent and not ns.doTest(talent_researched, point.active.requires_talent) then
         return false
     end
     if point.active.covenant and point.active.covenant ~= C_Covenants.GetActiveCovenantID() then
