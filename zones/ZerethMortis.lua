@@ -808,6 +808,7 @@ ns.RegisterPoints(1970, { -- Zereth Mortis
     [63202605] = {
         label="{achievement:15392}",
         achievement=15392,
+        atlas="VignetteKillElite", scale=1.2,
         quest={
             65585, -- Iska, Outrider of Ruin, criteria 52992
             65586, -- High Reaver Damaris, criteria 52993
