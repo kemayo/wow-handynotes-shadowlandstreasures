@@ -757,7 +757,6 @@ ns.RegisterPoints(1961, { -- Korthia
         npc=179859,
         -- requires_item=186718,
         loot={
-            {186538, pet=3140}, -- Gnashtooth
             {187104, quest=63918}, -- Obelisk of Dark Tidings
             187387, -- Pauldrons of the Unknown Beyond
             187368, -- Xyraxz's Controlling Rod
