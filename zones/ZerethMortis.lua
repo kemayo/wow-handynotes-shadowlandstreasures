@@ -385,7 +385,7 @@ ns.RegisterPoints(1970, { -- Zereth Mortis
 }, {
     group="Lore Concordances",
     note="Unlock lore entries at the Lore Console in Exile's Hollow",
-    -- texture=4238797,
+    atlas="vehicle-templeofkotmogu-greenball",
 })
 
 -- Tales of the Exile
@@ -860,7 +860,7 @@ ns.RegisterPoints(1970, { -- Zereth Mortis
         criteria=52568,
     },
 
-    [63302635] = { -- Enchained Servitor
+    [62202500] = { -- Enchained Servitor
         npc=181208,
         criteria=52567,
     },
@@ -943,5 +943,6 @@ ns.RegisterPoints(1970, { -- Zereth Mortis
     },
 }, {
     achievement=15211,
+    texture=ns.atlas_texture("VignetteKill", {r=1,g=0.5,b=0,a=1,scale=1}),
 })
 
