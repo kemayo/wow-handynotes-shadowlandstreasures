@@ -1,5 +1,12 @@
 # Changelog
 
+## Changed in v35
+
+* Updated for 9.2
+* New data for Zereth Mortis
+* Korthia: Xyraxz the Unknowable doesn't drop Gnashtooth after all
+* Bastion: some Collector Astorestes loot is shared with the Relic Hoarder
+
 ## Changed in v34
 
 * Added a new Maelie location in Korthia
