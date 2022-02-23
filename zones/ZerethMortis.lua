@@ -7,12 +7,12 @@ ns.groups["puzzlecache"] = "Puzzle Caches"
 -- Treasures of Zerith Mortis
 ns.RegisterPoints(1970, { -- Zereth Mortis
     [61153710] = { -- Architect's Reserve
-        quest = nil,
+        quest=65520,
         active=ns.conditions.GarrisonTalent(1931),
         achievement=15331, criteria=53053,
         -- achievement=15508, criteria=53290, -- Fashion of the First Ones
         loot={
-            187833, -- Dapper Pocopoc
+            {187833,quest=65528}, -- Dapper Pocopoc
         },
         note="Unlocked by completing Pilgrim's Grace quests: {quest:64829} from {npc:180630} and {quest:65426} from {npc:181273}",
     },
@@ -43,7 +43,7 @@ ns.RegisterPoints(1970, { -- Zereth Mortis
     },
 
     [60001800] = { -- Domination Cache
-        quest = nil,
+        quest=65468,
         achievement=15331, criteria=53018,
         active=ns.conditions.Item(189704),
         loot={
@@ -79,7 +79,7 @@ ns.RegisterPoints(1970, { -- Zereth Mortis
         achievement=15331, criteria=52967,
         requires_worldquest=65089,
         loot={
-            189469, -- Schematic: Prototype Leaper
+            {189469,quest=65393}, -- Schematic: Prototype Leaper
         },
         note="Only reachable during the {quest:65089} world quest",
     },
@@ -93,7 +93,7 @@ ns.RegisterPoints(1970, { -- Zereth Mortis
         quest=65545,
         achievement=15331, criteria=53066,
         loot={
-            189478, -- Schematic: Adorned Vombata
+            {189478,quest=65401}, -- Schematic: Adorned Vombata
         },
         note="Needs flying or movement abilities to reach. Soothe 12 creatures nearby, {npc:185293} will give you the reward",
     },
@@ -102,7 +102,7 @@ ns.RegisterPoints(1970, { -- Zereth Mortis
         quest=65173,
         achievement=15331, criteria=52887,
         loot={
-            189447, -- Schematic: Viperid Menace
+            {189447,quest=65360}, -- Schematic: Viperid Menace
         },
         note="In cave. Use tables to get the {spell:362062} buff to open the door",
     },
@@ -111,13 +111,16 @@ ns.RegisterPoints(1970, { -- Zereth Mortis
     [60603055] = { -- Mawsworn Cache
         quest=65441,
         achievement=15331, criteria=52969,
+        loot={
+            {189456,quest=65379},-- Schematic: Sundered Zerethsteed
+        },
     },
 
     [53557225] = { -- Mistaken Ovoid
         quest=65522,
         achievement=15331, criteria=53060,
         loot={
-            189435, -- Schematic: Multichicken
+            {189435,quest=65333}, -- Schematic: Multichicken
         },
         note="Inside the cave, behind the balls",
     },
@@ -267,6 +270,8 @@ ns.RegisterPoints(1970, { -- Zereth Mortis
 ns.RegisterPoints(1970, { -- Zereth Mortis
     -- Pulp-Covered Relic
     [41903400] = {},
+    [50304120] = {},
+    [52804580] = {},
     [53402570] = {},
     [64356345] = {},
 }, {
@@ -274,7 +279,7 @@ ns.RegisterPoints(1970, { -- Zereth Mortis
     label="Pulp-Covered Relic",
     note="Multiple spawn points",
     loot={
-        189474, -- Schematic: Buzz
+        {189474,quest=65397}, -- Schematic: Buzz
     },
 })
 
@@ -305,14 +310,14 @@ local puzzle = ns.nodeMaker{
 ns.RegisterPoints(1970, { -- Zereth Mortis
     [38556365] = {quest=65094,},
     [43652150] = {quest=65094,},
-    [53004560] = {quest=65094,}, -- 65418 65416
-    [65654095] = {quest=65094,}, -- 65418 65406
+    [53004560] = {quest=65094,},
+    [65654095] = {quest=65094,},
     [48608745] = {quest=65318,},
+    [54954800] = {quest=65318,},
     [55957960] = {quest=65318,},
+    [44209010] = {quest=65323,},
     [44757610] = {quest=65323,},
     [47504620] = {quest=65323,},
-    -- [44209010] = {quest = nil,},
-    -- [55004800] = {quest = nil,},
 }, puzzle{label="Cantaric Cache",})
 ns.RegisterPoints(1970, { -- Zereth Mortis
     [46056460] = {quest=65093,},
@@ -320,47 +325,47 @@ ns.RegisterPoints(1970, { -- Zereth Mortis
     [57506575] = {quest=65093,},
     [63103740] = {quest=65093,},
     [44303095] = {quest=65317,},
+    [47603910] = {quest=65317,},
     [59702290] = {quest=65317,},
     [36455645] = {quest=65322,},
     [39204665] = {quest=65322,},
-    -- [42206880] = {quest = nil,},
-    -- [47603910] = {quest = nil,},
+    [42206880] = {quest=65322,},
 }, puzzle{label="Fugueal Cache",})
 ns.RegisterPoints(1970, { -- Zereth Mortis
     [41853130] = {quest=65092,},
     [54254280] = {quest=65092,},
     [58903635] = {quest=65092,},
     [56008415] = {quest=65316,},
+    [56656140] = {quest=65316,},
     [33805425] = {quest=65321,},
     [39957285] = {quest=65321,},
     [44655055] = {quest=65321,},
-    [51302575] = {quest=65412,}, -- 65418
-    -- [45109410] = {quest = nil,}),
-    -- [56656140] = {quest = nil,}),
+    [51302575] = {quest=65412,},
+    -- [45109410] = {quest=nil,},
 }, puzzle{label="Glissandian Cache",})
 ns.RegisterPoints(1970, { -- Zereth Mortis
     [38357035] = {quest=65091,},
     [39356045] = {quest=65091,},
+    [52357200] = {quest=65091,},
     [55655000] = {quest=65091,},
     [35805910] = {quest=65315,},
     [57853165] = {quest=65315,},
     [64705280] = {quest=65315,},
+    [38503550] = {quest=65320,},
     [43604035] = {quest=65320,},
     [49953045] = {quest=65320,},
-    -- [38503550] = {quest = nil,},
-    -- [52357200] = {quest = nil,},
 }, puzzle{label="Mezzonic Cache",})
 ns.RegisterPoints(1970, { -- Zereth Mortis
     [52455705] = {quest=65314,},
     [53258685] = {quest=65314,},
+    [62807390] = {quest=65314,},
     [64306330] = {quest=65319,},
     [65604760] = {quest=65319,},
     [67802745] = {quest=65319,},
-    [32055260] = {quest=64972,}, -- 65418 65402
+    [32055260] = {quest=64972,},
+    [34606880] = {quest=64972,},
     [37004645] = {quest=64972,},
     [46806700] = {quest=64972,},
-    -- [34606880] = {quest=nil,},
-    -- [62807390] = {quest=nil,},
 }, puzzle{label="Toccatian Cache",})
 
 -- Lore concordances
