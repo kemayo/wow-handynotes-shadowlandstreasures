@@ -520,9 +520,9 @@ ns.RegisterPoints(1970, { -- Zereth Mortis
         },
         note="Find 3x Empowered Keys nearby then unlock the Suspiciously Angry Vault",
     },
-    [62605980] = {criteria=53031, quest=65544, label="Empowered Key: cube", atlas="adventuremapicon-lock"},
-    [64005730] = {criteria=53031, quest=65544, label="Empowered Key: star", atlas="adventuremapicon-lock"},
-    [64456040] = {criteria=53031, quest=65544, label="Empowered Key: sphere", atlas="adventuremapicon-lock"},
+    [62605980] = {criteria=53031, quest=65544, label="Empowered Key: cube", atlas="adventuremapicon-lock",minimap=true,},
+    [64005730] = {criteria=53031, quest=65544, label="Empowered Key: star", atlas="adventuremapicon-lock",minimap=true,},
+    [64456040] = {criteria=53031, quest=65544, label="Empowered Key: sphere", atlas="adventuremapicon-lock",minimap=true,},
 
     [69053660] = { -- Garudeon
         npc=180924,
