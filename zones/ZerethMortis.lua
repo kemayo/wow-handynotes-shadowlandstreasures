@@ -941,5 +941,7 @@ ns.RegisterPoints(1970, { -- Zereth Mortis
 }, {
     achievement=15211,
     texture=ns.atlas_texture("VignetteKill", {r=1,g=0.5,b=0,a=1,scale=1}),
+    hide_before=64785,
+    active=ns.conditions.Item(187909),
 })
 
