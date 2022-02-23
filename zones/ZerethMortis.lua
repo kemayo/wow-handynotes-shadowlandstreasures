@@ -31,9 +31,8 @@ ns.RegisterPoints(1970, { -- Zereth Mortis
     [56756415] = { -- Crushed Supply Crate
         quest=65489,
         achievement=15331, criteria=53054,
-        note="Get {item:189767} from the orb to the north, give to {npc:185151} for a {item:189768}, break the rocks",
+        note="Get {item:189767} from the pillar above the crate, give to {npc:185151} nearby for a {item:189768}, break the rocks",
     },
-    [57656235] = path{label="Repair Tool", quest=65489, achievement=15331, criteria=53054,}, -- Repair Tool
 
     [38253725] = { -- Damaged Jiro Stash
         quest=64667,
