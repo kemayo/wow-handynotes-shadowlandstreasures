@@ -268,6 +268,14 @@ ns.RegisterPoints(1970, { -- Zereth Mortis
 })
 
 ns.RegisterPoints(1970, { -- Zereth Mortis
+    [46003900] = {
+        quest=nil,
+        label="Torn Ethereal Drape",
+        active={ns.conditions.GarrisonTalent(1902),ns.conditions.QuestComplete(65328)},
+    },
+})
+
+ns.RegisterPoints(1970, { -- Zereth Mortis
     -- Pulp-Covered Relic
     [41903400] = {},
     [50304120] = {},
