@@ -4,8 +4,8 @@ local path = ns.path
 
 local RELIC_FRAGMENT = 186685 -- relic fragment
 local rift_active = {
-    requires_buff={352795, 354870, any=true},
-    note="You need to be in the rift to see ",
+    ns.conditions.AuraActive(352795), ns.conditions.AuraActive(354870), any=true,
+    note="You need to be in the rift to see this",
 }
 
 ns.groups["dailymount"] = "Daily Mounts"
@@ -852,7 +852,7 @@ ns.RegisterPoints(1961, {
     [64502400] = {
         label="Waystone to Oribos",
         atlas="adventures-32x32", scale=1.2,
-        active={quest=63665},
+        active=ns.conditions.QuestComplete(63665),
         minimap=true,
         group="Transportation",
     },
@@ -864,6 +864,6 @@ ns.RegisterPoints(1961, {
 }, {
     label="{npc:180548}",
     atlas="flightmaster", scale=1.2,
-    active={quest=63665},
+    active=ns.conditions.QuestComplete(63665),
     group="Transportation",
 })

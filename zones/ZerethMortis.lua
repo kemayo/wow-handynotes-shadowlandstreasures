@@ -8,7 +8,7 @@ ns.groups["puzzlecache"] = "Puzzle Caches"
 ns.RegisterPoints(1970, { -- Zereth Mortis
     [61153710] = { -- Architect's Reserve
         quest = nil,
-        active={requires_talent=1931, note="Requires {garrisontalent:1931}"},
+        active=ns.conditions.GarrisonTalent(1931),
         achievement=15331, criteria=53053,
         -- achievement=15508, criteria=53290, -- Fashion of the First Ones
         loot={
@@ -45,7 +45,7 @@ ns.RegisterPoints(1970, { -- Zereth Mortis
     [60001800] = { -- Domination Cache
         quest = nil,
         achievement=15331, criteria=53018,
-        active={requires_item=189704},
+        active=ns.conditions.Item(189704),
         loot={
             190638, -- Tormented Mawsteel Greatsword
         },
@@ -56,7 +56,7 @@ ns.RegisterPoints(1970, { -- Zereth Mortis
         quest=65523,
         achievement=15331, criteria=53061,
         -- achievement=15508, criteria=53288, -- Fashion of the First Ones
-        active={requires_talent=1932, note="Requires {garrisontalent:1932}",},
+        active=ns.conditions.GarrisonTalent(1932),
         loot={
             190059, -- Pirate Pocopoc
         },
@@ -199,7 +199,7 @@ ns.RegisterPoints(1970, { -- Zereth Mortis
 ns.RegisterPoints(2027, { -- Blooming Foundry
     [65655025] = { -- Ripened Protopear
         quest=nil,
-        active={requires_talent=1931, note="Requires {garrisontalent:1931}",},
+        active=ns.conditions.GarrisonTalent(1931),
         achievement=15331, criteria=53069,
         -- achievement=15508, criteria=53287, -- Fashion of the First Ones
         loot={
@@ -288,7 +288,7 @@ ns.RegisterPoints(1970, { -- Zereth Mortis
 }, {
     quest=65611,
     label="Sandworn Chest",
-    active={requires_item=190197}, -- Sandworn Chest Key
+    active=ns.conditions.Item(190197), -- Sandworn Chest Key
     note="Multiple spawn points. Get 5x {item:190198} from nearby mobs to make {item:190197}",
     loot={
         {190734, toy=true} -- Makaris's Satchel of Mines
@@ -299,10 +299,7 @@ ns.RegisterPoints(1970, { -- Zereth Mortis
 
 local puzzle = ns.nodeMaker{
     group="puzzlecache",
-    active={
-        requires_talent=1972,
-        note="Requires {garrisontalent:1972}",
-    },
+    active=ns.conditions.GarrisonTalent(1972),
     texture=ns.atlas_texture("VignetteLoot", {r=0,g=0.5,b=1,a=1,scale=1}),
 }
 ns.RegisterPoints(1970, { -- Zereth Mortis
@@ -610,7 +607,7 @@ ns.RegisterPoints(1970, { -- Zereth Mortis
         npc=180978,
         quest=65548,
         criteria=52990,
-        active={requires_item=187923},
+        active=ns.conditions.Item(187923),
         atlas="VignetteKillElite", scale=1.2,
         loot={
             189905, -- Hirukon's Syrupy Squeezers

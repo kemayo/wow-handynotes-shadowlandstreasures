@@ -12,6 +12,7 @@
 ## RequiredDeps: HandyNotes
 
 handler\handler.lua
+handler\conditions.lua
 handler\config.lua
 handler\overlay.lua
 handler\routes.xml

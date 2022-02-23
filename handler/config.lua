@@ -329,7 +329,7 @@ local function doTestAny(test, input, ...)
     return false
 end
 local function doTest(test, input, ...)
-    if type(input) == "table" then
+    if type(input) == "table" and not input.__parent then
         if input.any then
             return doTestAny(test, input, ...)
         end
