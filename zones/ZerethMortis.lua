@@ -166,7 +166,7 @@ ns.RegisterPoints(1970, { -- Zereth Mortis
     [34056765] = { -- Stolen Scroll
         quest=65543,
         achievement=15331, criteria=53065,
-        note="Multiple spawn points",
+        note="Climb the Slumbering Vault and jump over",
     },
 
     [58707300] = { -- Submerged Chest
