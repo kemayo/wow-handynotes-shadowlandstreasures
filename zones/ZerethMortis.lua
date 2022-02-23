@@ -119,10 +119,11 @@ ns.RegisterPoints(1970, { -- Zereth Mortis
     [53557225] = { -- Mistaken Ovoid
         quest=65522,
         achievement=15331, criteria=53060,
+        active=ns.conditions.Item(190239, 5),
         loot={
             {189435,quest=65333}, -- Schematic: Multichicken
         },
-        note="Inside the cave, behind the balls",
+        note="Inside the cave, under the {npc:185280}. Find {item:189435} near spheres around the zone.",
     },
 
     [34805605] = { -- Offering to the First Ones
