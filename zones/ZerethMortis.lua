@@ -333,7 +333,6 @@ ns.RegisterPoints(1970, { -- Zereth Mortis
 local puzzle = ns.nodeMaker{
     group="puzzlecache",
     active=ns.conditions.GarrisonTalent(1972),
-    texture=ns.atlas_texture("VignetteLoot", {r=0,g=0.5,b=1,a=0.8,scale=0.8}),
     minimap=true,
 }
 ns.RegisterPoints(1970, { -- Zereth Mortis
@@ -347,7 +346,10 @@ ns.RegisterPoints(1970, { -- Zereth Mortis
     [44209010] = {quest=65323,},
     [44757610] = {quest=65323,},
     [47504620] = {quest=65323,},
-}, puzzle{label="Cantaric Cache",})
+}, puzzle{
+    label="Cantaric Cache",
+    texture=ns.atlas_texture("VignetteLoot", {r=0,g=1,b=1,a=0.8,scale=0.8}),
+})
 ns.RegisterPoints(1970, { -- Zereth Mortis
     [46056460] = {quest=65093,},
     [47107720] = {quest=65093,},
@@ -359,7 +361,10 @@ ns.RegisterPoints(1970, { -- Zereth Mortis
     [36455645] = {quest=65322,},
     [39204665] = {quest=65322,},
     [42206880] = {quest=65322,},
-}, puzzle{label="Fugueal Cache",})
+}, puzzle{
+    label="Fugueal Cache",
+    texture=ns.atlas_texture("VignetteLoot", {r=1,g=0,b=0,a=0.8,scale=0.8}),
+})
 ns.RegisterPoints(1970, { -- Zereth Mortis
     [41853130] = {quest=65092,},
     [54254280] = {quest=65092,},
@@ -371,7 +376,10 @@ ns.RegisterPoints(1970, { -- Zereth Mortis
     [44655055] = {quest=65321,},
     [51302575] = {quest=65412,},
     -- [45109410] = {quest=nil,},
-}, puzzle{label="Glissandian Cache",})
+}, puzzle{
+    label="Glissandian Cache",
+    texture=ns.atlas_texture("VignetteLoot", {r=0,g=0.5,b=0.5,a=0.8,scale=0.8}),
+})
 ns.RegisterPoints(1970, { -- Zereth Mortis
     [38357035] = {quest=65091,},
     [39356045] = {quest=65091,},
@@ -383,7 +391,10 @@ ns.RegisterPoints(1970, { -- Zereth Mortis
     [38503550] = {quest=65320,},
     [43604035] = {quest=65320,},
     [49953045] = {quest=65320,},
-}, puzzle{label="Mezzonic Cache",})
+}, puzzle{
+    label="Mezzonic Cache",
+    texture=ns.atlas_texture("VignetteLoot", {r=0,g=0.8,b=0,a=0.8,scale=0.8}),
+})
 ns.RegisterPoints(1970, { -- Zereth Mortis
     [52455705] = {quest=65314,},
     [53258685] = {quest=65314,},
@@ -395,7 +406,10 @@ ns.RegisterPoints(1970, { -- Zereth Mortis
     [34606880] = {quest=64972,},
     [37004645] = {quest=64972,},
     [46806700] = {quest=64972,},
-}, puzzle{label="Toccatian Cache",})
+}, puzzle{
+    label="Toccatian Cache",
+    texture=ns.atlas_texture("VignetteLoot", {r=1,g=0,b=1,a=0.8,scale=0.8}),
+})
 
 -- Lore concordances
 
