@@ -217,6 +217,7 @@ ns.RegisterPoints(2027, { -- Blooming Foundry
         loot={
             {190058, quest=65525}, -- Peaceful Pocopoc
         },
+        note="Bring 5x {spell:367180} to the {npc:185416}",
     },
 })
 
@@ -228,7 +229,6 @@ ns.RegisterPoints(2030, { -- Nexus of Actualization
         loot={
             {190060, quest=65527}, -- Adventurous Pocopoc
         },
-        note="Bring 5x {spell:367180} to the {npc:185416}",
         route={72024882, 63855973},
     },
 })
