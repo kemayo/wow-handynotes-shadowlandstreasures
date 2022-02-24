@@ -719,7 +719,7 @@ ns.RegisterPoints(1970, { -- Zereth Mortis
             189908, -- Gorger's Leggings of Famine
             189916, -- Mutated Devourer's Harness
             189941, -- Voracious Diadem
-            189972, -- Scorpid Soul
+            {189972, quest=65505, covenant=Enum.CovenantType.NightFae}, -- Scorpid Soul
         },
     },
 
