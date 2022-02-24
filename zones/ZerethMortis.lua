@@ -2,7 +2,7 @@ local myname, ns = ...
 
 local path = ns.path
 
-ns.groups["puzzlecache"] = "Puzzle Caches"
+ns.groups["puzzlecache"] = "Caches of Creation"
 
 -- Note to self: first Pocopoc costume unlock gets 65531
 
@@ -369,13 +369,13 @@ ns.RegisterPoints(1970, { -- Zereth Mortis
     [41853130] = {quest=65092,},
     [54254280] = {quest=65092,},
     [58903635] = {quest=65092,},
+    [45109410] = {quest=65316,},
     [56008415] = {quest=65316,},
     [56656140] = {quest=65316,},
     [33805425] = {quest=65321,},
     [39957285] = {quest=65321,},
     [44655055] = {quest=65321,},
     [51302575] = {quest=65412,},
-    -- [45109410] = {quest=nil,},
 }, puzzle{
     label="Glissandian Cache",
     texture=ns.atlas_texture("VignetteLoot", {r=0,g=0.5,b=0.5,a=0.8,scale=0.8}),
