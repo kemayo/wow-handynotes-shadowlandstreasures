@@ -185,7 +185,12 @@ ns.RegisterPoints(1970, { -- Zereth Mortis
         },
         note="Use the Dangerous Orb of Power to the south then the Forgotten Pump to reach the treasure",
     },
-    [59407685] = path{quest=64545, achievement=15331, criteria=52964,}, -- Dangerous Orb of Power
+    [59407685] = {
+        label="Dangerous Orb of Power",
+        quest=64545, achievement=15331, criteria=52964,
+        atlas="vehicle-templeofkotmogu-purpleball",
+        note="Take north to the Forgotten Pump",
+    },
 
     [52606295] = { -- Symphonic Vault
         quest=65270,
