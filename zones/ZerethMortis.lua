@@ -87,6 +87,7 @@ ns.RegisterPoints(1970, { -- Zereth Mortis
     [38957320] = { -- Gnawed Valise
         quest=65480,
         achievement=15331, criteria=53017,
+        note="Fly, or try jumping from the top of the Cradle of Nascence. You'll probably need a glider, though.",
     },
 
     [37157830] = { -- Grateful Boon
