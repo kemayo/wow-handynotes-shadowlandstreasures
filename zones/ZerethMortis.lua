@@ -322,7 +322,8 @@ ns.RegisterPoints(1970, { -- Zereth Mortis
 local puzzle = ns.nodeMaker{
     group="puzzlecache",
     active=ns.conditions.GarrisonTalent(1972),
-    texture=ns.atlas_texture("VignetteLoot", {r=0,g=0.5,b=1,a=1,scale=1}),
+    texture=ns.atlas_texture("VignetteLoot", {r=0,g=0.5,b=1,a=0.8,scale=0.8}),
+    minimap=true,
 }
 ns.RegisterPoints(1970, { -- Zereth Mortis
     [38556365] = {quest=65094,},
