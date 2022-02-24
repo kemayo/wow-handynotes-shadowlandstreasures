@@ -586,12 +586,12 @@ ns.RegisterPoints(1970, { -- Zereth Mortis
         },
         note="Break nearby {npc:184048}",
     },
-    -- Bulging Roots:
-    [53209300] = {npc=184048, criteria=52971, quest=65579},
-    [54009120] = {npc=184048, criteria=52971, quest=65579},
-    [52009375] = {npc=184048, criteria=52971, quest=65579},
-    [52409280] = {npc=184048, criteria=52971, quest=65579},
-    [53459080] = {npc=184048, criteria=52971, quest=65579},
+    -- -- Bulging Roots:
+    -- [53209300] = {npc=184048, criteria=52971, quest=65579},
+    -- [54009120] = {npc=184048, criteria=52971, quest=65579},
+    -- [52009375] = {npc=184048, criteria=52971, quest=65579},
+    -- [52409280] = {npc=184048, criteria=52971, quest=65579},
+    -- [53459080] = {npc=184048, criteria=52971, quest=65579},
 
     [80404705] = { -- Gorkek
         npc=178963,
