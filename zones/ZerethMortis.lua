@@ -584,11 +584,11 @@ ns.RegisterPoints(1970, { -- Zereth Mortis
         note="Gather {npc:183562} nearby, feed to {npc:183554}",
     },
     -- Energizing Leporids:
-    [66353800] = {npc=183562, criteria=53025, quest=64719, note="Feed to {npc:183554}"},
-    [67553890] = {npc=183562, criteria=53025, quest=64719, note="Feed to {npc:183554}"},
-    [67554020] = {npc=183562, criteria=53025, quest=64719, note="Feed to {npc:183554}"},
-    [68153595] = {npc=183562, criteria=53025, quest=64719, note="Feed to {npc:183554}"},
-    [68353835] = {npc=183562, criteria=53025, quest=64719, note="Feed to {npc:183554}"},
+    -- [66353800] = {npc=183562, criteria=53025, quest=64719, note="Feed to {npc:183554}"},
+    -- [67553890] = {npc=183562, criteria=53025, quest=64719, note="Feed to {npc:183554}"},
+    -- [67554020] = {npc=183562, criteria=53025, quest=64719, note="Feed to {npc:183554}"},
+    -- [68153595] = {npc=183562, criteria=53025, quest=64719, note="Feed to {npc:183554}"},
+    -- [68353835] = {npc=183562, criteria=53025, quest=64719, note="Feed to {npc:183554}"},
 
     [59852110] = { -- General Zarathura
         npc=182318,
