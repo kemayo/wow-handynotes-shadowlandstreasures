@@ -206,6 +206,16 @@ ns.RegisterPoints(1970, { -- Zereth Mortis
             {190457, toy=true}, -- Protopological Cube
         },
     },
+
+    [58704280] = { -- Template Archive
+        quest=65175,
+        achievement=15331, criteria=52966,
+        -- achievement=15508, criteria=53289, -- Fashion of the First Ones
+        loot={
+            {190060, quest=65527}, -- Adventurous Pocopoc
+        },
+        note="Inside the Nexus of Actualization",
+    },
 })
 
 ns.RegisterPoints(2027, { -- Blooming Foundry
@@ -230,6 +240,7 @@ ns.RegisterPoints(2030, { -- Nexus of Actualization
             {190060, quest=65527}, -- Adventurous Pocopoc
         },
         route={72024882, 63855973},
+        note="Push the orb",
     },
 })
 
