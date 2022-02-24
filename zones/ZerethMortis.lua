@@ -187,8 +187,8 @@ ns.RegisterPoints(1970, { -- Zereth Mortis
     [52606295] = { -- Symphonic Vault
         quest=65270,
         achievement=15331, criteria=52968,
-        note="Play sounds in the requested order to unlock the vault.\n"..
-            "{npc:183951} (se) => {npc:183950} (nw) => {npc:183948} (sw) => {npc:183952} (ne)",
+        note="Interact with {npc:183998} to learn the order, then use the {npc:183952}s to play the sounds.\n"..
+            "Order is probably: SW, NE, SW, NW, NE.",
     },
 
     [77555820] = { -- Syntactic Vault
