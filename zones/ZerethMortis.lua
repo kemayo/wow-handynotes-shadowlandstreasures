@@ -4,6 +4,8 @@ local path = ns.path
 
 ns.groups["puzzlecache"] = "Puzzle Caches"
 
+-- Note to self: first Pocopoc costume unlock gets 65531
+
 -- Treasures of Zerith Mortis
 ns.RegisterPoints(1970, { -- Zereth Mortis
     [61153710] = { -- Architect's Reserve
@@ -23,7 +25,7 @@ ns.RegisterPoints(1970, { -- Zereth Mortis
         -- achievement=15508, criteria=53286, -- Fashion of the First Ones
         loot={
             {190853, toy=true}, -- Bushel of Mysterious Fruit
-            190059, -- Chef Pocopoc
+            {190059, quest=65524}, -- Chef Pocopoc
         },
         note="Kill a {npc:182368} nearby with {spell:360945} to get {spell:360945} yourself. Kill more to get 5 stacks, then open the door.",
     },
@@ -58,7 +60,7 @@ ns.RegisterPoints(1970, { -- Zereth Mortis
         -- achievement=15508, criteria=53288, -- Fashion of the First Ones
         active=ns.conditions.GarrisonTalent(1932),
         loot={
-            190059, -- Pirate Pocopoc
+            {190059, quest=65526}, -- Pirate Pocopoc
         },
         note="Talk to {npc:181059}",
     },
@@ -142,7 +144,7 @@ ns.RegisterPoints(1970, { -- Zereth Mortis
         achievement=15331, criteria=53064,
         -- achievement=15508, criteria=53294, -- Fashion of the First Ones
         loot={
-            190098, -- Pepepec
+            {190098, quest=65538}, -- Pepepec
         },
     },
 
@@ -179,7 +181,7 @@ ns.RegisterPoints(1970, { -- Zereth Mortis
         achievement=15331, criteria=52964,
         -- achievement=15508, criteria=53291, -- Fashion of the First Ones
         loot={
-            190061, -- Admiral Pocopoc
+            {190061, quest=65529}, -- Admiral Pocopoc
         },
         note="Use the Dangerous Orb of Power to the south then the Forgotten Pump to reach the treasure",
     },
@@ -208,7 +210,7 @@ ns.RegisterPoints(2027, { -- Blooming Foundry
         achievement=15331, criteria=53069,
         -- achievement=15508, criteria=53287, -- Fashion of the First Ones
         loot={
-            190058, -- Peaceful Pocopoc
+            {190058, quest=65525}, -- Peaceful Pocopoc
         },
     },
 })
@@ -219,7 +221,7 @@ ns.RegisterPoints(2030, { -- Nexus of Actualization
         achievement=15331, criteria=52966,
         -- achievement=15508, criteria=53289, -- Fashion of the First Ones
         loot={
-            190060, -- Adventurous Pocopoc
+            {190060, quest=65527}, -- Adventurous Pocopoc
         },
         note="Bring 5x {spell:367180} to the {npc:185416}",
         route={72024882, 63855973},
@@ -265,7 +267,7 @@ ns.RegisterPoints(1970, { -- Zereth Mortis
     -- achievement=15508, criteria=53293, -- Fashion of the First Ones
     note="Multiple spawn points; might be easier once you can fly",
     loot={
-        190096, -- Pocobold
+        {190096, quest=65534}, -- Pocobold
     },
 })
 
