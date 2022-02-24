@@ -400,6 +400,7 @@ ns.RegisterPoints(1970, { -- Zereth Mortis
     note="Unlock lore entries at the Lore Console in Exile's Hollow",
     active=ns.conditions.GarrisonTalent(1901),
     atlas="vehicle-templeofkotmogu-greenball",
+    minimap=true,
 })
 
 -- Tales of the Exile
