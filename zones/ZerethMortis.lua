@@ -124,7 +124,7 @@ ns.RegisterPoints(1970, { -- Zereth Mortis
         loot={
             {189435,quest=65333}, -- Schematic: Multichicken
         },
-        note="Inside the cave, under the {npc:185280}. Find {item:189435} near spheres around the zone.",
+        note="Inside the cave, under the {npc:185280}. Find {item:190239} near spheres around the zone.",
     },
 
     [34805605] = { -- Offering to the First Ones
