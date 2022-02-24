@@ -27,7 +27,7 @@ ns.RegisterPoints(1970, { -- Zereth Mortis
             {190853, toy=true}, -- Bushel of Mysterious Fruit
             {190059, quest=65524}, -- Chef Pocopoc
         },
-        note="Kill a {npc:182368} nearby with {spell:360945} to get {spell:360945} yourself. Kill more to get 5 stacks, then open the door.",
+        note="Kill a {npc:182368} to the north with {spell:360945} to get {spell:360945} yourself. Kill more to get 5 stacks, then open the door.",
     },
 
     [56756415] = { -- Crushed Supply Crate
