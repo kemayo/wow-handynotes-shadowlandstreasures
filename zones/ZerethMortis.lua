@@ -101,13 +101,13 @@ ns.RegisterPoints(1970, { -- Zereth Mortis
         note="Needs flying or movement abilities to reach. Soothe 12 creatures nearby, {npc:185293} will give you the reward",
     },
 
-    [58857705] = { -- Library Vault (Lost Scroll)
+    [58857705] = { -- Library Vault
         quest=65173,
         achievement=15331, criteria=52887,
         loot={
             {189447,quest=65360}, -- Schematic: Viperid Menace
         },
-        note="In cave. Use tables to get the {spell:362062} buff to open the door",
+        note="In cave. Use tablets to find the correct {spell:362062} buff to make the chest appear",
     },
     [59258145] = path{quest=65173, achievement=15331, criteria=52887,},
 
