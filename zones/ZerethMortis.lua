@@ -415,25 +415,41 @@ ns.RegisterPoints(1970, { -- Zereth Mortis
 
 -- Lore concordances
 
-ns.RegisterPoints(1970, { -- Zereth Mortis
-    [31775466] = {quest=65179, label="Excitable concordance",},
-    [38953127] = {quest=65213, label="Excitable concordance",},
-    [50405096] = {quest=65216, label="Excitable concordance",},
-    [64616035] = {quest=nil, label="Excitable concordance",},
-    [35037144] = {quest=nil, label="Mercurial concordance",},
-    [39702572] = {quest=nil, label="Mercurial concordance",},
-    [51579134] = {quest=nil, label="Mercurial concordance",},
-    [64262397] = {quest=nil, label="Mercurial concordance",},
-    [32196281] = {quest=64940, label="Tranquil concordance",},
-    [38844857] = {quest=65212, label="Tranquil concordance",},
-    [49367149] = {quest=65209, label="Tranquil concordance",},
-    [60204707] = {quest=65215, label="Tranquil concordance",},
-}, {
+local lore = ns.nodeMaker{
     group="Lore Concordances",
-    note="Unlock lore entries at the Lore Console in Exile's Hollow",
-    active=ns.conditions.GarrisonTalent(1901),
-    atlas="vehicle-templeofkotmogu-greenball",
+    note="Unlocks lore entries at the Lore Console in Exile's Hollow",
     minimap=true,
+}
+local metrial = ns.conditions.GarrisonTalent(1901)
+local dealic = {ns.conditions.GarrisonTalent(1932), note="Unsure of exact requirement"}
+local trebalim = {ns.conditions.GarrisonTalent(1907), note="Unsure of exact requirement"}
+local unsure = {ns.conditions.GarrisonTalent(1932), ns.conditions.GarrisonTalent(1907), any=true, note="Unsure of exact requirement"}
+ns.RegisterPoints(1970, { -- Zereth Mortis
+    [31775466] = {quest=65179, active=unsure,},
+    [38953127] = {quest=65213, active=unsure,},
+    [50405096] = {quest=65216, active=unsure,},
+    [64616035] = {quest=nil, active=unsure,},
+}, lore{
+    label="Excitable concordance",
+    atlas="vehicle-templeofkotmogu-purpleball",
+})
+ns.RegisterPoints(1970, { -- Zereth Mortis
+    [35037144] = {quest=nil, active=unsure,},
+    [39702572] = {quest=nil, active=unsure,},
+    [51579134] = {quest=nil, active=unsure,},
+    [64262397] = {quest=nil, active=unsure,},
+}, lore{
+    label="Mercurial concordance",
+    atlas="vehicle-templeofkotmogu-orangeball",
+})
+ns.RegisterPoints(1970, { -- Zereth Mortis
+    [32196281] = {quest=64940, active=metrial,},
+    [38844857] = {quest=65212, active=metrial,},
+    [49367149] = {quest=65209, active=metrial,},
+    [60204707] = {quest=65215, active=unsure,},
+}, lore{
+    label="Tranquil concordance",
+    atlas="vehicle-templeofkotmogu-greenball",
 })
 
 -- Tales of the Exile
