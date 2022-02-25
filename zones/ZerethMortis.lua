@@ -184,12 +184,13 @@ ns.RegisterPoints(1970, { -- Zereth Mortis
         loot={
             {190061, quest=65529}, -- Admiral Pocopoc
         },
-        note="Use the Dangerous Orb of Power to the south then the Forgotten Pump to reach the treasure",
+        note="Use the Dangerous Orb of Power to the south then the Forgotten Pump to raise the treasure",
     },
     [59407685] = {
         label="Dangerous Orb of Power",
         quest=64545, achievement=15331, criteria=52964,
-        atlas="vehicle-templeofkotmogu-purpleball",
+        texture=ns.atlas_texture("playerpartyblip", {r=0.7,g=0,b=0,a=1,scale=0.8}),
+        minimap=true,
         note="Take north to the Forgotten Pump",
     },
 
