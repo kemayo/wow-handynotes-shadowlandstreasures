@@ -159,6 +159,7 @@ ns.RegisterPoints(1970, { -- Zereth Mortis
     [46653095] = { -- Protomineral Extractor
         quest=65540,
         achievement=15331, criteria=53063,
+        active=ns.conditions.QuestComplete(64889), -- Match Made in Zereth Mortis
         loot={
             190942, -- Protomineral Extractor
         },
