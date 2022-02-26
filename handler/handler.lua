@@ -216,7 +216,7 @@ do
     local out = {}
     function render_string_list(point, variant, ...)
         if not ... then return "" end
-        if type(...) == "table" then return render_string_list(variant, unpack(...)) end
+        if type(...) == "table" then return render_string_list(point, variant, unpack(...)) end
         wipe(out)
         for i=1,select("#", ...) do
             table.insert(out, ("{%s:%d}"):format(variant, (select(i, ...))))
