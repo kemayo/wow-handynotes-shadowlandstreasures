@@ -60,7 +60,7 @@ ns.conditions.AuraActive = Class{
     type = 'spell',
     Matched = function(self) return GetPlayerAuraBySpellID(self.id) end,
 }
-ns.conditions.AuraInactive = Negated(ns.conditions.AuraActive)
+ns.conditions.AuraInactive = Class(Negated(ns.conditions.AuraActive))
 
 ns.conditions.Covenant = Class{
     __parent = Condition,
@@ -111,7 +111,7 @@ ns.conditions.QuestComplete = Class{
     type = 'quest',
     Matched = function(self) return C_QuestLog.IsQuestFlaggedCompleted(self.id) end,
 }
-ns.conditions.QuestIncomplete = Negated(ns.conditions.QuestComplete)
+ns.conditions.QuestIncomplete = Class(Negated(ns.conditions.QuestComplete))
 
 -- Helpers:
 
