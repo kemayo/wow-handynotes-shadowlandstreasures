@@ -1,5 +1,11 @@
 # Changelog
 
+## Changed in v37
+
+* A bunch of new loot on rares
+* Better labeling on caches
+* Split up the lore concordances
+
 ## Changed in v36
 
 * This is the "I had to play a fresh character through Zereth Mortis with nothing unlocked yet" release
