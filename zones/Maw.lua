@@ -736,8 +736,8 @@ ns.RegisterPoints(1543, {
         note="Talk and get the {spell:353322} buff, then go find {npc:179083:Sly}",
     },
     [40705160] = {quest={64019,64024,any=true},},
-    [38053975] = {quest={64019,64022,any=true},hide_before=64024,},
-    [32904420] = {quest={64019,64023,any=true},hide_before=64022,},
+    [38053975] = {quest={64019,64022,any=true},hide_before=ns.conditions.QuestComplete(64024),},
+    [32904420] = {quest={64019,64023,any=true},hide_before=ns.conditions.QuestComplete(64022),},
 }, {
     achievement=15004,
     label="{npc:179083:Sly}",

@@ -40,7 +40,7 @@ ns.RegisterPoints(1536, { -- Maldraxxus
         loot={
             {182732, toy=true}, -- The Necronom-i-nom
         },
-        hide_before=58620,
+        hide_before=ns.conditions.QuestComplete(58620),
         note="Complete the questline starting with {quest:58619:Read Between the Lines}. Once the tower is unlocked, it's on the top floor",
     },
     [40603300] = {

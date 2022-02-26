@@ -138,7 +138,7 @@ ns.RegisterPoints(1525, {
         loot={
             {180993, toy=true}, -- Bat Visage Bobber
         },
-        hide_before=57481,
+        hide_before=ns.conditions.QuestComplete(57481),
         note="Complete quests from {npc:157846:Rendle} through {quest:57481} to be able to see this; might need to log back in to make it appear",
     },
     -- Loyal Gorger
@@ -154,7 +154,7 @@ ns.RegisterPoints(1525, {
             62045, -- Ready for More
             62046  -- A New Pack
         },
-        hide_before=58259, -- Worldedge Gorger
+        hide_before=ns.conditions.QuestComplete(58259), -- Worldedge Gorger
         loot={
             {182589, mount=1391}, -- Loyal Gorger
         },
@@ -207,7 +207,7 @@ ns.RegisterPoints(1525, {
     },
     [63406180] = { -- Day 2: brush from Snickersnee
         quest=62042,
-        hide_before=62038,
+        hide_before=ns.conditions.QuestComplete(62038),
         inbag=182585,
         label="{npc:173468}: {item:182585}",
         note="Day 2: Buy {item:182585} for {npc:173468}",
@@ -215,21 +215,21 @@ ns.RegisterPoints(1525, {
     -- Day 4's horseshoes are everywhere
     [63306160] = { -- Day 4: fresh water
         quest=62047,
-        hide_before=62042,
+        hide_before=ns.conditions.QuestComplete(62042),
         inbag=182620,
         label="{npc:173468}: {item:182620}",
         note="Day 4: Take to Bastion or Ardenweald and use in water",
     },
     [51007881] = { -- Day 5: blanket
         quest=62048,
-        hide_before=62047,
+        hide_before=ns.conditions.QuestComplete(62047),
         inbag=182597,
         label="{npc:173468}: {item:182597}",
         note="Day 5: Buy from {npc:171808}",
     },
     [40804660] = { -- Day 6: apples
         quest=62050,
-        hide_before=62048,
+        hide_before=ns.conditions.QuestComplete(62048),
         inbag=179271,
         label="{npc:173468}: 3x{item:179271}",
         note="Day 6: Buy 3x {item:179271} from {npc:167815}",

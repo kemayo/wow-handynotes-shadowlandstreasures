@@ -387,7 +387,7 @@ ns.point_upcoming = function(point)
     if point.level and UnitLevel("player") < point.level then
         return true
     end
-    if point.hide_before and not ns.allQuestsComplete(point.hide_before) then
+    if point.hide_before and not ns.conditions.check(point.hide_before) then
         return true
     end
     if point.covenant and point.covenant ~= C_Covenants.GetActiveCovenantID() then
@@ -579,8 +579,9 @@ local function handle_tooltip(tooltip, point)
         if point.level and point.level > UnitLevel("player") then
             tooltip:AddLine(ITEM_MIN_LEVEL:format(point.level), 1, 0, 0)
         end
-        if point.hide_before and not ns.allQuestsComplete(point.hide_before) then
+        if point.hide_before and not ns.conditions.check(point.hide_before) then
             tooltip:AddLine(COMMUNITY_TYPE_UNAVAILABLE, 1, 0, 0)
+            tooltip:AddLine(ns.render_string(ns.conditions.summarize(point.hide_before)), 1, 0, 0, true)
         end
 
         if point.quest and ns.db.tooltip_questid then

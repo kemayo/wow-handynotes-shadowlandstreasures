@@ -475,7 +475,7 @@ ns.RegisterPoints(1970, { -- Zereth Mortis
         npc=185798,
         quest={65732, 65724, any=true}, -- 65724 is the daily
         progress={65727, 65725, 65726, 65728, 65729, 65730, 65731},
-        hide_before=65768, -- Our Forward Scouts
+        hide_before=ns.conditions.QuestComplete(65768), -- Our Forward Scouts
         texture=ns.merge(ns.atlas_texture("stablemaster"), {r=1,g=1,b=0,a=1,scale=1.2}),
         minimap=true,
         loot={
@@ -1051,7 +1051,7 @@ ns.RegisterPoints(1970, { -- Zereth Mortis
 }, {
     achievement=15211,
     texture=ns.atlas_texture("VignetteKill", {r=1,g=0.5,b=0,a=1,scale=1}),
-    hide_before=64785,
+    hide_before=ns.conditions.QuestComplete(64785),
     active=ns.conditions.Item(187909),
 })
 

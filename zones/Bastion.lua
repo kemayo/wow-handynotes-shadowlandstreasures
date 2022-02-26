@@ -450,7 +450,7 @@ ns.RegisterPoints(1533, {
         loot={
             180444, -- Harmonia's Chosen Belt
         },
-        hide_before="59147",
+        hide_before=ns.conditions.QuestComplete(59147),
         note="Spawns after quests in the area",
     },
     [42908265] = { -- Herculon
