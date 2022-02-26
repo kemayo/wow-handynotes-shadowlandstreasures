@@ -398,16 +398,16 @@ ns.RegisterPoints(1970, { -- Zereth Mortis
     texture=ns.atlas_texture("VignetteLoot", {r=0,g=0.8,b=0,a=0.8,scale=0.8}),
 })
 ns.RegisterPoints(1970, { -- Zereth Mortis
-    [52455705] = {quest=65314},
-    [53258685] = {quest=65314},
-    [62807390] = {quest=65314},
-    [64306330] = {quest=65319},
-    [65604760] = {quest=65319},
-    [67802745] = {quest=65319},
     [32055260] = {quest=64972},
     [34606880] = {quest=64972},
     [37004645] = {quest=64972},
     [46806700] = {quest=64972},
+    [52455705] = {quest=65314},
+    [62807390] = {quest=65314},
+    [64306330] = {quest=65319},
+    [65604760] = {quest=65319},
+    [67802745] = {quest=65319},
+    [53258685] = {quest=65418},
 }, puzzle{
     label="Toccatian Cache",
     texture=ns.atlas_texture("VignetteLoot", {r=1,g=0,b=1,a=0.8,scale=0.8}),
@@ -512,7 +512,7 @@ ns.RegisterPoints(1970, { -- Zereth Mortis
 ns.RegisterPoints(1970, { -- Zereth Mortis
     [64753370] = { -- Akkaris
         npc=179006,
-        quest=65549,
+        quest=65552,
         --vignette=4747,
         criteria=52977,
         loot={
