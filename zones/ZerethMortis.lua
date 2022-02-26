@@ -14,7 +14,7 @@ ns.RegisterPoints(1970, { -- Zereth Mortis
         achievement=15331, criteria=53053,
         -- achievement=15508, criteria=53290, -- Fashion of the First Ones
         loot={
-            {187833,quest=65528}, -- Dapper Pocopoc
+            {187833, quest=65528}, -- Dapper Pocopoc
         },
         note="Unlocked by completing Pilgrim's Grace quests: {quest:64829} from {npc:180630} and {quest:65426} from {npc:181273}",
     },
@@ -81,7 +81,7 @@ ns.RegisterPoints(1970, { -- Zereth Mortis
         achievement=15331, criteria=52967,
         requires_worldquest=65089,
         loot={
-            {189469,quest=65393}, -- Schematic: Prototype Leaper
+            {189469, quest=65393}, -- Schematic: Prototype Leaper
         },
         note="Only reachable during the {quest:65089} world quest",
     },
@@ -96,7 +96,7 @@ ns.RegisterPoints(1970, { -- Zereth Mortis
         quest=65545,
         achievement=15331, criteria=53066,
         loot={
-            {189478,quest=65401}, -- Schematic: Adorned Vombata
+            {189478, quest=65401}, -- Schematic: Adorned Vombata
         },
         note="Needs flying or movement abilities to reach. Soothe 12 creatures nearby, {npc:185293} will give you the reward",
     },
@@ -105,7 +105,7 @@ ns.RegisterPoints(1970, { -- Zereth Mortis
         quest=65173,
         achievement=15331, criteria=52887,
         loot={
-            {189447,quest=65360}, -- Schematic: Viperid Menace
+            {189447, quest=65360}, -- Schematic: Viperid Menace
         },
         note="In cave. Use tablets to find the correct {spell:362062} buff to make the chest appear",
     },
@@ -115,7 +115,7 @@ ns.RegisterPoints(1970, { -- Zereth Mortis
         quest=65441,
         achievement=15331, criteria=52969,
         loot={
-            {189456,quest=65379},-- Schematic: Sundered Zerethsteed
+            {189456, quest=65379},-- Schematic: Sundered Zerethsteed
         },
     },
 
@@ -124,7 +124,7 @@ ns.RegisterPoints(1970, { -- Zereth Mortis
         achievement=15331, criteria=53060,
         active=ns.conditions.Item(190239, 5),
         loot={
-            {189435,quest=65333}, -- Schematic: Multichicken
+            {189435, quest=65333}, -- Schematic: Multichicken
         },
         note="Inside the cave, under the {npc:185280}. Find {item:190239} near spheres around the zone.",
     },
@@ -338,76 +338,76 @@ local puzzle = ns.nodeMaker{
     minimap=true,
 }
 ns.RegisterPoints(1970, { -- Zereth Mortis
-    [38556365] = {quest=65094,},
-    [43652150] = {quest=65094,},
-    [53004560] = {quest=65094,},
-    [65654095] = {quest=65094,},
-    [48608745] = {quest=65318,},
-    [54954800] = {quest=65318,},
-    [55957960] = {quest=65318,},
-    [44209010] = {quest=65323,},
-    [44757610] = {quest=65323,},
-    [47504620] = {quest=65323,},
+    [38556365] = {quest=65094},
+    [43652150] = {quest=65094},
+    [53004560] = {quest=65094},
+    [65654095] = {quest=65094},
+    [48608745] = {quest=65318},
+    [54954800] = {quest=65318},
+    [55957960] = {quest=65318},
+    [44209010] = {quest=65323},
+    [44757610] = {quest=65323},
+    [47504620] = {quest=65323},
 }, puzzle{
     label="Cantaric Cache",
     texture=ns.atlas_texture("VignetteLoot", {r=0,g=1,b=1,a=0.8,scale=0.8}),
 })
 ns.RegisterPoints(1970, { -- Zereth Mortis
-    [46056460] = {quest=65093,},
-    [47107720] = {quest=65093,},
-    [57506575] = {quest=65093,},
-    [63103740] = {quest=65093,},
-    [44303095] = {quest=65317,},
-    [47603910] = {quest=65317,},
-    [59702290] = {quest=65317,},
-    [36455645] = {quest=65322,},
-    [39204665] = {quest=65322,},
-    [42206880] = {quest=65322,},
+    [46056460] = {quest=65093},
+    [47107720] = {quest=65093},
+    [57506575] = {quest=65093},
+    [63103740] = {quest=65093},
+    [44303095] = {quest=65317},
+    [47603910] = {quest=65317},
+    [59702290] = {quest=65317},
+    [36455645] = {quest=65322},
+    [39204665] = {quest=65322},
+    [42206880] = {quest=65322},
 }, puzzle{
     label="Fugueal Cache",
     texture=ns.atlas_texture("VignetteLoot", {r=1,g=0,b=0,a=0.8,scale=0.8}),
 })
 ns.RegisterPoints(1970, { -- Zereth Mortis
-    [41853130] = {quest=65092,},
-    [54254280] = {quest=65092,},
-    [58903635] = {quest=65092,},
-    [45109410] = {quest=65316,},
-    [56008415] = {quest=65316,},
-    [56656140] = {quest=65316,},
-    [33805425] = {quest=65321,},
-    [39957285] = {quest=65321,},
-    [44655055] = {quest=65321,},
-    [51302575] = {quest=65412,},
+    [41853130] = {quest=65092},
+    [54254280] = {quest=65092},
+    [58903635] = {quest=65092},
+    [45109410] = {quest=65316},
+    [56008415] = {quest=65316},
+    [56656140] = {quest=65316},
+    [33805425] = {quest=65321},
+    [39957285] = {quest=65321},
+    [44655055] = {quest=65321},
+    [51302575] = {quest=65412},
 }, puzzle{
     label="Glissandian Cache",
     texture=ns.atlas_texture("VignetteLoot", {r=0,g=0.5,b=0.5,a=0.8,scale=0.8}),
 })
 ns.RegisterPoints(1970, { -- Zereth Mortis
-    [38357035] = {quest=65091,},
-    [39356045] = {quest=65091,},
-    [52357200] = {quest=65091,},
-    [55655000] = {quest=65091,},
-    [35805910] = {quest=65315,},
-    [57853165] = {quest=65315,},
-    [64705280] = {quest=65315,},
-    [38503550] = {quest=65320,},
-    [43604035] = {quest=65320,},
-    [49953045] = {quest=65320,},
+    [38357035] = {quest=65091},
+    [39356045] = {quest=65091},
+    [52357200] = {quest=65091},
+    [55655000] = {quest=65091},
+    [35805910] = {quest=65315},
+    [57853165] = {quest=65315},
+    [64705280] = {quest=65315},
+    [38503550] = {quest=65320},
+    [43604035] = {quest=65320},
+    [49953045] = {quest=65320},
 }, puzzle{
     label="Mezzonic Cache",
     texture=ns.atlas_texture("VignetteLoot", {r=0,g=0.8,b=0,a=0.8,scale=0.8}),
 })
 ns.RegisterPoints(1970, { -- Zereth Mortis
-    [52455705] = {quest=65314,},
-    [53258685] = {quest=65314,},
-    [62807390] = {quest=65314,},
-    [64306330] = {quest=65319,},
-    [65604760] = {quest=65319,},
-    [67802745] = {quest=65319,},
-    [32055260] = {quest=64972,},
-    [34606880] = {quest=64972,},
-    [37004645] = {quest=64972,},
-    [46806700] = {quest=64972,},
+    [52455705] = {quest=65314},
+    [53258685] = {quest=65314},
+    [62807390] = {quest=65314},
+    [64306330] = {quest=65319},
+    [65604760] = {quest=65319},
+    [67802745] = {quest=65319},
+    [32055260] = {quest=64972},
+    [34606880] = {quest=64972},
+    [37004645] = {quest=64972},
+    [46806700] = {quest=64972},
 }, puzzle{
     label="Toccatian Cache",
     texture=ns.atlas_texture("VignetteLoot", {r=1,g=0,b=1,a=0.8,scale=0.8}),
@@ -425,28 +425,28 @@ local dealic = {ns.conditions.GarrisonTalent(1932), note="Unsure of exact requir
 local trebalim = {ns.conditions.GarrisonTalent(1907), note="Unsure of exact requirement"}
 local unsure = {ns.conditions.GarrisonTalent(1932), ns.conditions.GarrisonTalent(1907), any=true, note="Unsure of exact requirement"}
 ns.RegisterPoints(1970, { -- Zereth Mortis
-    [31775466] = {quest=65179, active=unsure,},
-    [38953127] = {quest=65213, active=unsure,},
-    [50405096] = {quest=65216, active=unsure,},
-    [64616035] = {quest=nil, active=unsure,},
+    [31775466] = {quest=65179, active=unsure},
+    [38953127] = {quest=65213, active=unsure},
+    [50405096] = {quest=65216, active=unsure},
+    [64616035] = {quest=nil, active=unsure},
 }, lore{
     label="Excitable concordance",
     atlas="vehicle-templeofkotmogu-purpleball",
 })
 ns.RegisterPoints(1970, { -- Zereth Mortis
-    [35037144] = {quest=nil, active=unsure,},
-    [39702572] = {quest=nil, active=unsure,},
-    [51579134] = {quest=nil, active=unsure,},
-    [64262397] = {quest=nil, active=unsure,},
+    [35037144] = {quest=nil, active=unsure},
+    [39702572] = {quest=nil, active=unsure},
+    [51579134] = {quest=nil, active=unsure},
+    [64262397] = {quest=nil, active=unsure},
 }, lore{
     label="Mercurial concordance",
     atlas="vehicle-templeofkotmogu-orangeball",
 })
 ns.RegisterPoints(1970, { -- Zereth Mortis
-    [32196281] = {quest=64940, active=metrial,},
-    [38844857] = {quest=65212, active=metrial,},
-    [49367149] = {quest=65209, active=metrial,},
-    [60204707] = {quest=65215, active=unsure,},
+    [32196281] = {quest=64940, active=metrial},
+    [38844857] = {quest=65212, active=metrial},
+    [49367149] = {quest=65209, active=metrial},
+    [60204707] = {quest=65215, active=unsure},
 }, lore{
     label="Tranquil concordance",
     atlas="vehicle-templeofkotmogu-greenball",
@@ -510,6 +510,7 @@ ns.RegisterPoints(1970, { -- Zereth Mortis
             189903, -- Sand Sifting Sandals
             189958, -- Tunneler's Penetrating Greathelm
             190053, -- Underground Circler's Crossbow
+            190733, -- Circle of Akkaris
         },
     },
 
@@ -534,6 +535,7 @@ ns.RegisterPoints(1970, { -- Zereth Mortis
             189907, -- Crown of Contorted Thought
             189940, -- Architect's Polluting Touch
             190009, -- Hammer of Shattered Works
+            190732, -- Strand of Tainted Relics
         },
         note="Fight {npc:183958} and {npc:183961} to trigger",
     },
@@ -545,6 +547,7 @@ ns.RegisterPoints(1970, { -- Zereth Mortis
         loot={
             187837, -- Schematic: Erratic Genesis Matrix
             189910, -- Adornment of Jingling Fractals
+            189930, -- Restraints of Boundless Chaos
             189985, -- Curtain of Untold Realms
             189999, -- Dark Sky Gavel
         },
@@ -557,6 +560,8 @@ ns.RegisterPoints(1970, { -- Zereth Mortis
         --vignette=4961,
         loot={
             189949, -- Shackles of the Bound Guardian
+            189956, -- Perverse Champion's Handguards
+            189993, -- Twisted Judicator's Gavel
             190047, -- Converted Broker's Staff
         },
     },
@@ -585,9 +590,9 @@ ns.RegisterPoints(1970, { -- Zereth Mortis
         },
         note="Find 3x Empowered Keys nearby then unlock the Suspiciously Angry Vault",
     },
-    [62605980] = {criteria=53031, quest=65544, label="Empowered Key: cube", atlas="adventuremapicon-lock",minimap=true,},
-    [64005730] = {criteria=53031, quest=65544, label="Empowered Key: star", atlas="adventuremapicon-lock",minimap=true,},
-    [64456040] = {criteria=53031, quest=65544, label="Empowered Key: sphere", atlas="adventuremapicon-lock",minimap=true,},
+    [62605980] = {quest=65544, criteria=53031, atlas="adventuremapicon-lock", label="Empowered Key: cube", minimap=true},
+    [64005730] = {quest=65544, criteria=53031, atlas="adventuremapicon-lock", label="Empowered Key: star", minimap=true},
+    [64456040] = {quest=65544, criteria=53031, atlas="adventuremapicon-lock", label="Empowered Key: sphere", minimap=true},
 
     [69053660] = { -- Garudeon
         npc=180924,
@@ -598,15 +603,16 @@ ns.RegisterPoints(1970, { -- Zereth Mortis
             187832, -- Schematic: Pure-Air Sail Extensions
             189937, -- Garudeon's Blanket of Feathers
             189951, -- Sunbathed Avian Armor
+            190602, -- Symbol of the Raptora
         },
         note="Gather {npc:183562} nearby, feed to {npc:183554}",
     },
     -- Energizing Leporids:
-    -- [66353800] = {npc=183562, criteria=53025, quest=64719, note="Feed to {npc:183554}"},
-    -- [67553890] = {npc=183562, criteria=53025, quest=64719, note="Feed to {npc:183554}"},
-    -- [67554020] = {npc=183562, criteria=53025, quest=64719, note="Feed to {npc:183554}"},
-    -- [68153595] = {npc=183562, criteria=53025, quest=64719, note="Feed to {npc:183554}"},
-    -- [68353835] = {npc=183562, criteria=53025, quest=64719, note="Feed to {npc:183554}"},
+    -- [66353800] = {quest=64719, npc=183562, criteria=53025, note="Feed to {npc:183554}"},
+    -- [67553890] = {quest=64719, npc=183562, criteria=53025, note="Feed to {npc:183554}"},
+    -- [67554020] = {quest=64719, npc=183562, criteria=53025, note="Feed to {npc:183554}"},
+    -- [68153595] = {quest=64719, npc=183562, criteria=53025, note="Feed to {npc:183554}"},
+    -- [68353835] = {quest=64719, npc=183562, criteria=53025, note="Feed to {npc:183554}"},
 
     [59852110] = { -- General Zarathura
         npc=182318,
@@ -616,6 +622,7 @@ ns.RegisterPoints(1970, { -- Zereth Mortis
         loot={
             189968, -- Dreadlord General's Tunic
             189948, -- Strangulating Chainlink Lasso
+            190731, -- Deceiver's Illusionary Signet
         },
     },
 
@@ -625,17 +632,18 @@ ns.RegisterPoints(1970, { -- Zereth Mortis
         criteria=52971,
         loot={
             189929, -- Vinebound Strap
+            189953, -- Lush-Stained Footguards
             190008, -- Enlightened Botanist's Machete
             190049, -- Perennial Punching Dagger
         },
         note="Break nearby {npc:184048}",
     },
     -- -- Bulging Roots:
-    -- [53209300] = {npc=184048, criteria=52971, quest=65579},
-    -- [54009120] = {npc=184048, criteria=52971, quest=65579},
-    -- [52009375] = {npc=184048, criteria=52971, quest=65579},
-    -- [52409280] = {npc=184048, criteria=52971, quest=65579},
-    -- [53459080] = {npc=184048, criteria=52971, quest=65579},
+    -- [53209300] = {quest=65579, npc=184048, criteria=52971},
+    -- [54009120] = {quest=65579, npc=184048, criteria=52971},
+    -- [52009375] = {quest=65579, npc=184048, criteria=52971},
+    -- [52409280] = {quest=65579, npc=184048, criteria=52971},
+    -- [53459080] = {quest=65579, npc=184048, criteria=52971},
 
     [80404705] = { -- Gorkek
         npc=178963,
@@ -643,6 +651,8 @@ ns.RegisterPoints(1970, { -- Zereth Mortis
         criteria=52986,
         --vignette=4746,
         loot={
+            189926, -- Poison-Licked Spaulders
+            189960, -- Crouching Legs of the Bufonid
             190001, -- Gorkek's Glistening Throatguard
         },
     },
@@ -700,6 +710,7 @@ ns.RegisterPoints(1970, { -- Zereth Mortis
         loot={
             189909, -- Pantaloons of Cold Recesses
             189945, -- Shoulders of the Missing Giant
+            189957, -- Colossus' Focusing Headpiece
         },
         note="Inside a cave",
     },
@@ -709,6 +720,7 @@ ns.RegisterPoints(1970, { -- Zereth Mortis
         quest=65547,
         criteria=53020,
         loot={
+            189769, -- Fang of Phestis
             189923, -- Tarachnid's Terrifying Visage
             189950, -- Constrained Prey's Binds
             190045, -- Flowing Sandbender's Staff
@@ -744,8 +756,10 @@ ns.RegisterPoints(1970, { -- Zereth Mortis
         quest=64668,
         criteria=52989,
         loot={
+            189961, -- Enduring Protector's Shoulderguards
             189984, -- Drape of Idolized Symmetry
             190002, -- Bulwark of the Broken
+            190390, -- Protector's Diffusion Implement
         },
         note="Two people required to open the barrier",
     },
@@ -758,6 +772,7 @@ ns.RegisterPoints(1970, { -- Zereth Mortis
             189927, -- Broker's Gnawed Spaulders
             189955, -- Scarabid's Clattering Handguards
             189998, -- Ornate Stone Mallet
+            190730, -- Matriarch's Shell Band
         },
     },
 
@@ -793,6 +808,7 @@ ns.RegisterPoints(1970, { -- Zereth Mortis
             189915, -- Tahkwitz' Cloth Ribbon
             189933, -- Vigilant Raptora's Crest
             189954, -- Lustrous Sentinel's Sabatons
+            190003, -- Skyward Savior's Talon
             187832, -- Schematic: Pure-Air Sail Extensions
         },
     },
@@ -805,6 +821,7 @@ ns.RegisterPoints(1970, { -- Zereth Mortis
         loot={
             189928, -- Centripetal Waistband
             189966, -- Singing Metal Wristbands
+            189967, -- Hood of Star Topology
             190055, -- Coalescing Energy Implement
             187830, -- Design: Aealic Harmonizing Stone
         },
@@ -815,6 +832,8 @@ ns.RegisterPoints(1970, { -- Zereth Mortis
         quest=65580,
         criteria=53050,
         loot={
+            189913, -- Engulfer's Tightening Cinch
+            189921, -- Devourer's Insatiable Grips
             190006, -- Anima-Siphoning Sword
         },
         note="Protect {npc:183505} until this appears",
@@ -825,7 +844,11 @@ ns.RegisterPoints(1970, { -- Zereth Mortis
         quest=65239,
         criteria=53049,
         loot={
+            189900, -- Vexis' Gentle Heartcloth
+            189959, -- Legs of Graceful Landing
+            189997, -- The Lupine Prime's Might
             190048, -- Vexis' Wisest Fang
+            190597, -- Symbol of the Lupine
         },
     },
 
@@ -846,9 +869,12 @@ ns.RegisterPoints(1970, { -- Zereth Mortis
         --vignette=4938,
         criteria=52976,
         loot={
+            189918, -- Fleeting Broker's Strides
+            189964, -- Multi-Faceted Belt
             190052, -- Xy'rath's Letter Opener
             190007, -- Xy'rath's Signature Saber
             {190238, toy=true}, -- Xy'rath's Booby-Trapped Cache
+            190389, -- Broker's Lucky Coin
             187828, -- Recipe: Infusion: Corpse Purification
         },
     },
@@ -861,6 +887,7 @@ ns.RegisterPoints(1970, { -- Zereth Mortis
             189902, -- Hapless Traveler's Treads
             189924, -- Buzzing Predator's Legs
             189939, -- Zatojin's Paralytic Grip
+            190726, -- Extract of Prodigious Sands
         },
         note="Engage the {npc:183721} to get 20 stacks of {spell:362976} and be {spell:362983}. Make sure you're standing on the {npc:183774} corpses.",
     },
@@ -882,12 +909,27 @@ ns.RegisterPoints(1970, { -- Zereth Mortis
         },
         note="Three rares appear here",
         loot={
-            190104, -- Deadeye's Spirit Piercer
+            -- This is kind of over the top, split it up into multiple points?
+            -- Iska
+            190102, -- Chains of Infectious Serrations
+            190103, -- Pillar of Noxious Dissemination
             190107, -- Staff of Broken Coils
+            190458, -- Atrophy's Ominous Bulwark
             190126, -- Rotculler's Encroaching Shears
+            -- Iska's mount, Rhuv
+            {190765, mount=1584}, -- Iska's Mawrat Leash
+            -- Damaris
+            190105, -- Chilling Domination Mace
+            190106, -- Approaching Terror's Torch
             190459, -- Cold Dispiriting Barricade
             190460, -- High Reaver's Sickle
-            {190765, mount=1584}, -- Iska's Mawrat Leash
+            -- Marzan
+            190108, -- Aegis of Laughing Souls
+            190109, -- Cudgel of Mortality's Chains
+            190127, -- Marzan's Dancing Twin-Scythe
+            190461, -- Reanimator's Beguiling Baton
+            -- Damaris *and* Marzan
+            190104, -- Deadeye's Spirit Piercer
         },
     },
 })
