@@ -365,7 +365,7 @@ ns.RegisterPoints(1970, { -- Zereth Mortis
     [42206880] = {quest=65322},
 }, puzzle{
     label="Fugueal Cache",
-    texture=ns.atlas_texture("VignetteLoot", {r=1,g=0,b=0,a=0.8,scale=0.8}),
+    texture=ns.atlas_texture("VignetteLoot", {r=1,g=0.5,b=0,a=0.8,scale=0.8}),
 })
 ns.RegisterPoints(1970, { -- Zereth Mortis
     [41853130] = {quest=65092},
