@@ -1139,3 +1139,14 @@ ns.RegisterPoints(1970, { -- Zereth Mortis
     note="You need to have completed the daily quest {quest:64785} to get the {item:187909}."
 })
 
+-- Transportation
+
+-- Ancient Translocator
+ns.RegisterPoints(1970, {
+    [46122172] = {route=47301340,},
+    [47301340] = {route={47301340,46122172,r=0,g=0.75,b=0},},
+}, {
+    label="{npc:183968}",
+    atlas="progenitorflightmaster-32x32", scale=1,
+    group="Transportation",
+})
