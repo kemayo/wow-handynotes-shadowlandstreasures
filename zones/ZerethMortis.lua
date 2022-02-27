@@ -338,6 +338,19 @@ ns.RegisterPoints(1970, { -- Zereth Mortis
 -- Miscellaneous treasures
 
 ns.RegisterPoints(1970, { -- Zereth Mortis
+    [46003900] = {
+        quest=nil,
+        label="Torn Ethereal Drape",
+        active={ns.conditions.GarrisonTalent(1902),ns.conditions.QuestComplete(65328)},
+    },
+    [42005185] = {
+        label="Provis Cache",
+        active=ns.conditions.Item(188231),
+        note="Use {item:187908} to get 15x {item:187728}, which will sometimes give you the {item:188231}",
+    },
+})
+
+ns.RegisterPoints(1970, { -- Zereth Mortis
     -- Prying Eye Discovery
     [34354430] = {},
     [35254370] = {},
@@ -350,14 +363,6 @@ ns.RegisterPoints(1970, { -- Zereth Mortis
     note="Multiple spawn points; might be easier once you can fly",
     loot={
         {190096, quest=65534}, -- Pocobold
-    },
-})
-
-ns.RegisterPoints(1970, { -- Zereth Mortis
-    [46003900] = {
-        quest=nil,
-        label="Torn Ethereal Drape",
-        active={ns.conditions.GarrisonTalent(1902),ns.conditions.QuestComplete(65328)},
     },
 })
 
