@@ -542,6 +542,7 @@ local function handle_tooltip(tooltip, point)
                 local _, link, _, _, _, _, _, _, _, icon = GetItemInfo(ns.lootitem(item))
                 if link then
                     local label = ENCOUNTER_JOURNAL_ITEM
+                    link = link:gsub("[%[%]]", "")
                     if type(item) == "table" then
                         if item.mount then label = MOUNT
                         elseif item.toy then label = TOY
@@ -561,7 +562,7 @@ local function handle_tooltip(tooltip, point)
                     if known ~= nil and (known == true or not ns.itemRestricted(item)) then
                         link = link .. CreateAtlasMarkup(known and "common-icon-checkmark" or "common-icon-redx")
                     end
-                    tooltip:AddDoubleLine(label, quick_texture_markup(icon) .. link)
+                    tooltip:AddDoubleLine(label, quick_texture_markup(icon) .. " " .. link)
                 else
                     tooltip:AddDoubleLine(ENCOUNTER_JOURNAL_ITEM, SEARCH_LOADING_TEXT,
                         NORMAL_FONT_COLOR.r, NORMAL_FONT_COLOR.g, NORMAL_FONT_COLOR.b,
