@@ -481,7 +481,7 @@ ns.RegisterPoints(1536, {
         npc=161105,
         loot={
             182192, -- Knee-Obstructing Legguards
-            {174070,quest=58379,covenant=Enum.CovenantType.Necrolord,}, -- Indomitable Hide
+            {174070,quest=58411,covenant=Enum.CovenantType.Necrolord,}, -- Indomitable Hide (58379 is for a quest from it)
         },
         note="Use {spell:313451} to break shield",
     },
