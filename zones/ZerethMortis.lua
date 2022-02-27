@@ -235,7 +235,7 @@ ns.RegisterPoints(1970, { -- Zereth Mortis
 -- Just the Ovoids...
 ns.RegisterPoints(1970, {
     [53557225] = { -- Mistaken Ovoid
-        quest=65522,
+        quest=65522, -- 65524 also trips for when you place the eggs
         achievement=15331, criteria=53060,
         active=ns.conditions.Item(190239, 5),
         loot={
@@ -565,9 +565,17 @@ ns.RegisterPoints(1970, { -- Zereth Mortis
                 q(65726, "Day 3") ..": 200x {item:173202}\n"..
                 q(65728, "Day 4") ..": 10x {item:173037}\n"..
                 q(65729, "Day 5") ..": 5x {item:187704}\n"..
-                q(65730, "Day 6") ..": 5x {item:190880} from {npc:185748} @ Pilgrim's Grace\n"..
+                q(65730, "Day 6") ..": 5x {item:190880} from {npc:185748} near Pilgrim's Grace\n"..
                 q(65731, "Day 7") ..": 1x {item:187171} from {npc:180114} in Tazavesh the Veiled Market\n"
         end,
+    },
+    [58554980] = {
+        label="{npc:185748}", -- Mai Toa
+        quest=65730,
+        hide_before=ns.conditions.QuestComplete(65729),
+        note="Buy 5x {item:190880} for day 6 of the Patient Bufonid",
+        atlas="food",
+        minimap=true,
     },
 })
 
