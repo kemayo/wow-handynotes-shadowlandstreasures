@@ -3,6 +3,7 @@ local myname, ns = ...
 local path = ns.path
 
 ns.groups["puzzlecache"] = "Caches of Creation"
+ns.groups["lostovoid"] = "{item:190239}"
 
 -- Note to self: first Pocopoc costume unlock gets 65531
 
@@ -126,16 +127,6 @@ ns.RegisterPoints(1970, { -- Zereth Mortis
         },
     },
 
-    [53557225] = { -- Mistaken Ovoid
-        quest=65522,
-        achievement=15331, criteria=53060,
-        active=ns.conditions.Item(190239, 5),
-        loot={
-            {189435, quest=65333}, -- Schematic: Multichicken
-        },
-        note="Inside the cave, under the {npc:185280}. Find {item:190239} near spheres around the zone.",
-    },
-
     [34805605] = { -- Offering to the First Ones
         quest=65537,
         achievement=15331, criteria=53062,
@@ -239,6 +230,57 @@ ns.RegisterPoints(1970, { -- Zereth Mortis
         },
         note="Inside the Nexus of Actualization",
     },
+})
+
+-- Just the Ovoids...
+ns.RegisterPoints(1970, {
+    [53557225] = { -- Mistaken Ovoid
+        quest=65522,
+        achievement=15331, criteria=53060,
+        active=ns.conditions.Item(190239, 5),
+        loot={
+            {189435, quest=65333}, -- Schematic: Multichicken
+        },
+        note="Inside the cave, under the {npc:185280}.",
+    },
+})
+ns.RegisterPoints(1970, {
+    -- Lost Ovoids
+    -- https://ptr.wowhead.com/object=375411/mistaken-ovoid#comments:id=5299055
+    [34316656] = {quest=65522,achievement=15331,criteria=53060},
+    [33964576] = {quest=65522,achievement=15331,criteria=53060,note="In a cave."},
+    [34204869] = {quest=65522,achievement=15331,criteria=53060,note="In a cave."},
+    [34494976] = {quest=65522,achievement=15331,criteria=53060,note="In a cave."},
+    [35204889] = {quest=65522,achievement=15331,criteria=53060,note="In a cave."},
+    [34676925] = {quest=65522,achievement=15331,criteria=53060},
+    [35974620] = {quest=65522,achievement=15331,criteria=53060},
+    [36735967] = {quest=65522,achievement=15331,criteria=53060},
+    [39345098] = {quest=65522,achievement=15331,criteria=53060},
+    [41386931] = {quest=65522,achievement=15331,criteria=53060},
+    [41855715] = {quest=65522,achievement=15331,criteria=53060},
+    [43228490] = {quest=65522,achievement=15331,criteria=53060},
+    [44565985] = {quest=65522,achievement=15331,criteria=53060},
+    [44755183] = {quest=65522,achievement=15331,criteria=53060},
+    [46686301] = {quest=65522,achievement=15331,criteria=53060},
+    [48157357] = {quest=65522,achievement=15331,criteria=53060},
+    [49187153] = {quest=65522,achievement=15331,criteria=53060},
+    [50807081] = {quest=65522,achievement=15331,criteria=53060},
+    [52427364] = {quest=65522,achievement=15331,criteria=53060},
+    [53836486] = {quest=65522,achievement=15331,criteria=53060},
+    [55207685] = {quest=65522,achievement=15331,criteria=53060},
+    [55986879] = {quest=65522,achievement=15331,criteria=53060},
+    [58916831] = {quest=65522,achievement=15331,criteria=53060},
+    [60847592] = {quest=65522,achievement=15331,criteria=53060},
+    [61076515] = {quest=65522,achievement=15331,criteria=53060},
+}, {
+    quest=65522,
+    achievement=15331, criteria=53060,
+    label="{item:190239}",
+    texture=ns.atlas_texture("playerpartyblip", {r=0.6,g=0.6,b=0.1,a=1,scale=0.8}),
+    minimap=true,
+    found=ns.conditions.Item(190239, 5),
+    group="lostovoid",
+    note="Find 5x {item:190239} around the zone and take them to the {npc:185280}. There's a lot of spawn points and they vanish after someone loots them. You're looking for a small brown lump with no sparkles.",
 })
 
 ns.RegisterPoints(2027, { -- Blooming Foundry
