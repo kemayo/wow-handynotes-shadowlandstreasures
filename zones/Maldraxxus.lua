@@ -266,7 +266,7 @@ ns.RegisterPoints(1525, { -- Revendreth
 ns.RegisterPoints(1536, { -- Maldraxxus
     [69704110] = {
         label="{npc:162151:Neena}",
-        quest=62929, -- 57604 is neena-has-been-made
+        quest={62929, 57604, any=true}, -- 57604 is neena-has-been-made
         atlas="buildanabomination-32x32",
         covenant=Enum.CovenantType.Necrolord,
         note="Requires Abomination Factory level 2. Release her with the key from {npc:175510} next to the cage, talk to her and do {quest:59615}.",
