@@ -150,6 +150,7 @@ ns.RegisterPoints(1970, { -- Zereth Mortis
         loot={
             {190098, quest=65538}, -- Pepepec
         },
+        note="On top of the pillar, you'll need flying",
     },
 
     [52557145] = { -- Protoflora Harvester
