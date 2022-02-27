@@ -617,6 +617,9 @@ ns.should_show_point = function(coord, point, currentZone, isMinimap)
             -- hidden (Draenor treasure maps, so far):
             return false
         end
+        if point.found and ns.conditions.check(point.found) then
+            return false
+        end
     end
     if not point.follower then
         if point.npc then
