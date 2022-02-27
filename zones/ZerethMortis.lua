@@ -25,7 +25,7 @@ ns.RegisterPoints(1970, { -- Zereth Mortis
         -- achievement=15508, criteria=53286, -- Fashion of the First Ones
         loot={
             {190853, toy=true}, -- Bushel of Mysterious Fruit
-            {190059, quest=65524}, -- Chef Pocopoc
+            {189451, quest=65524}, -- Chef Pocopoc
         },
         note="Kill a {npc:182368} to the north with {spell:360945} to get {spell:360945} yourself. Kill more to get 5 stacks, then open the door.",
     },
@@ -50,6 +50,7 @@ ns.RegisterPoints(1970, { -- Zereth Mortis
         active=ns.conditions.Item(189704),
         loot={
             190638, -- Tormented Mawsteel Greatsword
+            189863, -- Spatial Opener
         },
         note="{item:189704} drops from {npc:181403} and {npc:182426} nearby",
     },
@@ -62,17 +63,23 @@ ns.RegisterPoints(1970, { -- Zereth Mortis
         loot={
             {190059, quest=65526}, -- Pirate Pocopoc
         },
-        note="Talk to {npc:181059}",
+        note="Have {npc:181059} use the {npc:185282} nearby",
     },
 
     [51550990] = { -- Fallen Vault
         quest=65487,
         achievement=15331, criteria=53016,
+        loot={
+            189863, -- Spatial Opener
+        }
     },
 
     [49758725] = { -- Filched Artifact
         quest=65503,
         achievement=15331, criteria=53052,
+        loot={
+            189863, -- Spatial Opener
+        },
         note="Jump up the spheres",
     },
 
@@ -132,11 +139,17 @@ ns.RegisterPoints(1970, { -- Zereth Mortis
     [34805605] = { -- Offering to the First Ones
         quest=65537,
         achievement=15331, criteria=53062,
+        loot={
+            190339, -- Enlightened Offering
+        },
     },
 
     [35254410] = { -- Overgrown Protofruit
         quest=65536,
         achievement=15331, criteria=53056,
+        loot={
+            190953, -- Protofruit Flesh
+        },
     },
 
     [60854295] = { -- Pilfered Curio
@@ -174,6 +187,9 @@ ns.RegisterPoints(1970, { -- Zereth Mortis
     [34056765] = { -- Stolen Scroll
         quest=65543,
         achievement=15331, criteria=53065,
+        loot={
+            189863, -- Spatial Opener
+        },
         note="Climb the Slumbering Vault and jump over",
     },
 
@@ -183,6 +199,7 @@ ns.RegisterPoints(1970, { -- Zereth Mortis
         -- achievement=15508, criteria=53291, -- Fashion of the First Ones
         loot={
             {190061, quest=65529}, -- Admiral Pocopoc
+            189863, -- Spatial Opener
         },
         note="Use the Dangerous Orb of Power to the south then the Forgotten Pump to raise the treasure",
     },
@@ -197,6 +214,9 @@ ns.RegisterPoints(1970, { -- Zereth Mortis
     [52606295] = { -- Symphonic Vault
         quest=65270,
         achievement=15331, criteria=52968,
+        loot={
+            189863, -- Spatial Opener
+        },
         note="Interact with {npc:183998} to learn the order, then use the {npc:183952}s to play the sounds.\n"..
             "Order is probably: SW, NE, SW, NW, NE.",
     },
@@ -204,6 +224,7 @@ ns.RegisterPoints(1970, { -- Zereth Mortis
     [77555820] = { -- Syntactic Vault
         quest=65565,
         achievement=15331, criteria=53068,
+        active=ns.conditions.QuestComplete(64843), -- Key Crafting (campaign chapter 4)
         loot={
             {190457, toy=true}, -- Protopological Cube
         },
@@ -229,7 +250,7 @@ ns.RegisterPoints(2027, { -- Blooming Foundry
         loot={
             {190058, quest=65525}, -- Peaceful Pocopoc
         },
-        note="Bring 5x {spell:367180} to the {npc:185416}",
+        note="Bring 5x {spell:367180} to the {npc:185416} inside the Blooming Foundry",
     },
 })
 
@@ -257,7 +278,8 @@ ns.RegisterPoints(2066, { -- Catalyst Wards
         quest=65572,
         achievement=15331, criteria=53070,
         loot={
-            {190926, toy=true} -- Infested Automa Core
+            {190926, toy=true}, -- Infested Automa Core
+            189863, -- Spatial Opener
         },
         note="Activate the four {npc:185390} to activate the teleporter in the main room.",
     },
@@ -521,6 +543,7 @@ ns.RegisterPoints(1970, { -- Zereth Mortis
             190053, -- Underground Circler's Crossbow
             190733, -- Circle of Akkaris
         },
+        note="This doesn't spawn every day",
     },
 
     [49556750] = { -- Chitali the Eldest
@@ -533,6 +556,7 @@ ns.RegisterPoints(1970, { -- Zereth Mortis
             189947, -- Majestic Watcher's Girdle
             189994, -- Chitali's Command
         },
+        note="This doesn't spawn every day",
     },
 
     [47506230] = { -- Corrupted Architect
@@ -573,6 +597,7 @@ ns.RegisterPoints(1970, { -- Zereth Mortis
             189993, -- Twisted Judicator's Gavel
             190047, -- Converted Broker's Staff
         },
+        note="This doesn't spawn every day",
     },
 
     [61806060] = { -- Feasting
@@ -616,12 +641,6 @@ ns.RegisterPoints(1970, { -- Zereth Mortis
         },
         note="Gather {npc:183562} nearby, feed to {npc:183554}",
     },
-    -- Energizing Leporids:
-    -- [66353800] = {quest=64719, npc=183562, criteria=53025, note="Feed to {npc:183554}"},
-    -- [67553890] = {quest=64719, npc=183562, criteria=53025, note="Feed to {npc:183554}"},
-    -- [67554020] = {quest=64719, npc=183562, criteria=53025, note="Feed to {npc:183554}"},
-    -- [68153595] = {quest=64719, npc=183562, criteria=53025, note="Feed to {npc:183554}"},
-    -- [68353835] = {quest=64719, npc=183562, criteria=53025, note="Feed to {npc:183554}"},
 
     [59852110] = { -- General Zarathura
         npc=182318,
@@ -633,6 +652,7 @@ ns.RegisterPoints(1970, { -- Zereth Mortis
             189948, -- Strangulating Chainlink Lasso
             190731, -- Deceiver's Illusionary Signet
         },
+        note="This doesn't spawn every day",
     },
 
     [53109305] = { -- Gluttonous Overgrowth
@@ -645,14 +665,8 @@ ns.RegisterPoints(1970, { -- Zereth Mortis
             190008, -- Enlightened Botanist's Machete
             190049, -- Perennial Punching Dagger
         },
-        note="Break nearby {npc:184048}",
+        note="Break nearby {npc:184048}. This is often bugged.",
     },
-    -- -- Bulging Roots:
-    -- [53209300] = {quest=65579, npc=184048, criteria=52971},
-    -- [54009120] = {quest=65579, npc=184048, criteria=52971},
-    -- [52009375] = {quest=65579, npc=184048, criteria=52971},
-    -- [52409280] = {quest=65579, npc=184048, criteria=52971},
-    -- [53459080] = {quest=65579, npc=184048, criteria=52971},
 
     [80404705] = { -- Gorkek
         npc=178963,
@@ -664,6 +678,7 @@ ns.RegisterPoints(1970, { -- Zereth Mortis
             189960, -- Crouching Legs of the Bufonid
             190001, -- Gorkek's Glistening Throatguard
         },
+        note="This doesn't spawn every day",
     },
 
     [52602505] = { -- Hadeon the Stonebreaker
@@ -676,6 +691,7 @@ ns.RegisterPoints(1970, { -- Zereth Mortis
             190000, -- Carapace of Gliding Sands
             190051, -- Elder's Opulent Stave
         },
+        note="This doesn't spawn every day",
     },
 
     [58206835] = { -- Helmix
@@ -688,6 +704,7 @@ ns.RegisterPoints(1970, { -- Zereth Mortis
             190054, -- Facet Sharpening Crossbow
             190056, -- Enlightened Explorer's Lantern
         },
+        note="This doesn't spawn every day. To spawn it, kill Annelid mobs nearby.",
     },
 
     [52307540] = { -- Hirukon
@@ -769,6 +786,8 @@ ns.RegisterPoints(1970, { -- Zereth Mortis
             189984, -- Drape of Idolized Symmetry
             190002, -- Bulwark of the Broken
             190390, -- Protector's Diffusion Implement
+            189176, -- Protoform Sentience Crown
+            189177, -- Revelation Key
         },
         note="Two people required to open the barrier",
     },
@@ -805,8 +824,10 @@ ns.RegisterPoints(1970, { -- Zereth Mortis
             189911, -- Sublime Fur Mantle
             189944, -- Immovable Stance of the Vombata
             189962, -- Sorranos' Gleaming Pauldrons
+            190582, -- Protector's Diffusion Implement
             187826, -- Formula: Cosmic Protoweave
         },
+        note="This doesn't spawn every day",
     },
 
     [49803915] = { -- Tahkwitz
@@ -834,6 +855,7 @@ ns.RegisterPoints(1970, { -- Zereth Mortis
             190055, -- Coalescing Energy Implement
             187830, -- Design: Aealic Harmonizing Stone
         },
+        note="This doesn't spawn every day",
     },
 
     [43957530] = { -- The Engulfer
@@ -859,6 +881,7 @@ ns.RegisterPoints(1970, { -- Zereth Mortis
             190048, -- Vexis' Wisest Fang
             190597, -- Symbol of the Lupine
         },
+        note="This doesn't spawn every day",
     },
 
     [47054700] = { -- Vitiane
@@ -870,6 +893,7 @@ ns.RegisterPoints(1970, { -- Zereth Mortis
             189922, -- Cowl of Shameful Proliferation
             189935, -- Harrowing Hope Squashers
         },
+        note="This doesn't spawn every day",
     },
 
     [64054975] = { -- Xy'rath the Covetous
@@ -886,6 +910,7 @@ ns.RegisterPoints(1970, { -- Zereth Mortis
             190389, -- Broker's Lucky Coin
             187828, -- Recipe: Infusion: Corpse Purification
         },
+        note="This doesn't spawn every day",
     },
 
     [43503295] = { -- Zatojin
