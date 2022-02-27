@@ -146,12 +146,12 @@ local function render_string(s, context)
         if variant == "item" then
             local name, link, _, _, _, _, _, _, _, icon = GetItemInfo(id)
             if link and icon then
-                return quick_texture_markup(icon) .. link:gsub("[%[%]]", "")
+                return quick_texture_markup(icon) .. " " .. link:gsub("[%[%]]", "")
             end
         elseif variant == "spell" then
             local name, _, icon = GetSpellInfo(id)
             if name and icon then
-                return quick_texture_markup(icon) .. name
+                return quick_texture_markup(icon) .. " " .. name
             end
         elseif variant == "quest" then
             local name = C_QuestLog.GetTitleForQuestID(id)
@@ -165,7 +165,7 @@ local function render_string(s, context)
         elseif variant == "achievement" then
             local _, name, _, completed = GetAchievementInfo(id)
             if name and name ~= "" then
-                return CreateAtlasMarkup("storyheader-cheevoicon") .. (completed and completeColor or incompleteColor):WrapTextInColorCode(name)
+                return CreateAtlasMarkup("storyheader-cheevoicon") .. " " .. (completed and completeColor or incompleteColor):WrapTextInColorCode(name)
             end
         elseif variant == "npc" then
             local name = mob_name(id)
@@ -175,7 +175,7 @@ local function render_string(s, context)
         elseif variant == "currency" then
             local info = C_CurrencyInfo.GetCurrencyInfo(id)
             if info then
-                return quick_texture_markup(info.iconFileID) .. info.name
+                return quick_texture_markup(info.iconFileID) .. " " .. info.name
             end
         elseif variant == "covenant" then
             local data = C_Covenants.GetCovenantData(id)
@@ -183,7 +183,7 @@ local function render_string(s, context)
         elseif variant == "garrisontalent" then
             local info = C_Garrison.GetTalentInfo(id)
             if info then
-                return quick_texture_markup(info.icon) .. (info.researched and completeColor or incompleteColor):WrapTextInColorCode(info.name)
+                return quick_texture_markup(info.icon) .. " " .. (info.researched and completeColor or incompleteColor):WrapTextInColorCode(info.name)
             end
         end
         return fallback ~= "" and fallback or (variant .. ':' .. id)
