@@ -1140,6 +1140,7 @@ ns.RegisterPoints(1970, { -- Zereth Mortis
 }, {
     achievement=15211,
     texture=ns.atlas_texture("VignetteKill", {r=1,g=0.5,b=0,a=1,scale=1}),
+    minimap=true,
     active=ns.conditions.Item(187909),
     note="You need to have completed the daily quest {quest:64785} to get the {item:187909}."
 })
