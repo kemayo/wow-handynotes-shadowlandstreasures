@@ -765,7 +765,7 @@ ns.RegisterPoints(1970, { -- Zereth Mortis
 
     [52307540] = { -- Hirukon
         npc=180978,
-        quest=65548,
+        quest=65548, -- 65785 for killing with the lure buff, 65039 for making the lure
         criteria=52990,
         active=ns.conditions.Item(187923),
         atlas="VignetteKillElite", scale=1.2,
@@ -776,13 +776,18 @@ ns.RegisterPoints(1970, { -- Zereth Mortis
             {187676, mount=1434}, -- Deepstar Aurelid
         },
         -- TODO: add notes on the other maps?
-        note="You have to make a {item:187923}:\n"..
-            "* Fish up {item:187662} nearby\n"..
-            "* Fish up {item:187915} from Coilfang Reservoir in Zangarmarsh\n"..
-            "* Fish up {item:187922} near Keyla's Grave in Nazjatar\n"..
-            "* Find {item:187916} in Nar'shola Terrace in the Shimmering Expanse (34.7, 75.0)\n"..
-            "* Ask {npc:182194} south of the Seat of the Primus in Maldraxxus to make your {item:187923}\n"..
-            "* Bring it back here, use it, and fish in the Aurelid Cluster you can now see.",
+        note=function()
+            local attempted = C_QuestLog.IsQuestFlaggedCompleted(65785)
+            return "You have to make a {item:187923}:\n"..
+                "* Fish up {item:187662} nearby\n"..
+                "* Fish up {item:187915} from Coilfang Reservoir in Zangarmarsh\n"..
+                "* Fish up {item:187922} near Keyla's Grave in Nazjatar\n"..
+                "* Find {item:187916} in Nar'shola Terrace in the Shimmering Expanse (34.7, 75.0)\n"..
+                "* Ask {npc:182194} south of the Seat of the Primus in Maldraxxus to make your {item:187923}\n"..
+                "* Bring it back here, use it, and fish in the Aurelid Cluster you can now see.\n"..
+                "The lure will be consumed on use, but you can ask {npc:182194} for a new one each week without having to do the fishing again.\n"..
+                "You " .. (attempted and GREEN_FONT_COLOR or RED_FONT_COLOR):WrapTextInColorCode(attempted and "have" or "have not") .. " used the lure this week."
+        end,
     },
 
     [58654040] = { -- Otaris the Provoked
