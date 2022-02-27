@@ -1,5 +1,12 @@
 # Changelog
 
+## Changed in v38
+
+* Various quest and loot updates for Zereth Mortis
+* Show little dots for spawn points of the Lost Ovoids needed for the Mistaken Ovoid treasure
+* Minor improvements to the appearance of item names in text and loot tooltips
+* Points with multiple questids weren't displaying them correctly if you had that enabled
+
 ## Changed in v37
 
 * A bunch of new loot on rares
