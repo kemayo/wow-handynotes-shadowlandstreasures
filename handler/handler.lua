@@ -146,7 +146,7 @@ local function render_string(s, context)
         if variant == "item" then
             local name, link, _, _, _, _, _, _, _, icon = GetItemInfo(id)
             if link and icon then
-                return quick_texture_markup(icon) .. link
+                return quick_texture_markup(icon) .. link:gsub("[%[%]]", "")
             end
         elseif variant == "spell" then
             local name, _, icon = GetSpellInfo(id)
