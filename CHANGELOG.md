@@ -1,5 +1,13 @@
 # Changelog
 
+## Changed in v39
+
+* Show Completing the Code mobs on the minimap
+* Show the transporter to the Antecedent Isle
+* Show a point for Mai Toa on day 6 of the Patient Bufonid
+* Show whether you've used the lure on Hirukon this week
+* Explain the Provis Cache
+
 ## Changed in v38
 
 * Various quest and loot updates for Zereth Mortis
