@@ -216,7 +216,7 @@ ns.RegisterPoints(1970, { -- Zereth Mortis
     [77555820] = { -- Syntactic Vault
         quest=65565,
         achievement=15331, criteria=53068,
-        active=ns.conditions.QuestComplete(64843), -- Key Crafting (campaign chapter 4)
+        active=ns.conditions.QuestComplete(64844), -- The Pilgrimage Ends (campaign chapter 4)
         loot={
             {190457, toy=true}, -- Protopological Cube
         },
@@ -435,7 +435,7 @@ ns.RegisterPoints(1970, { -- Zereth Mortis
 ns.RegisterPoints(1970, { -- Zereth Mortis
     [46056460] = {quest=65093},
     [47107720] = {quest=65093},
-    [57506575] = {quest=65093},
+    [57506575] = {quest={65093,65418,any=true}},
     [63103740] = {quest=65093},
     [44303095] = {quest=65317},
     [47603910] = {quest=65317},
@@ -483,11 +483,11 @@ ns.RegisterPoints(1970, { -- Zereth Mortis
     [37004645] = {quest=64972},
     [46806700] = {quest=64972},
     [52455705] = {quest=65314},
+    [53258685] = {quest={65314,65418,any=true}},
     [62807390] = {quest=65314},
     [64306330] = {quest=65319},
     [65604760] = {quest=65319},
     [67802745] = {quest=65319},
-    [53258685] = {quest=65418},
 }, puzzle{
     label="Toccatian Cache",
     texture=ns.atlas_texture("VignetteLoot", {r=1,g=0,b=1,a=0.8,scale=0.8}),
@@ -1127,6 +1127,7 @@ ns.RegisterPoints(1970, { -- Zereth Mortis
     [63205800] = { -- Over-charged Vespoid
         npc=181222,
         criteria=52606,
+        note="Spawns in this general area",
     },
 
     [39805205] = { -- Runefur
