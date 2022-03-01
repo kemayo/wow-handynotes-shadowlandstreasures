@@ -400,6 +400,15 @@ ns.RegisterPoints(1970, { -- Zereth Mortis
     },
 })
 
+ns.RegisterPoints(1970, { -- Zereth Mortis
+    [61805895] = {
+        label="{npc:184172}",
+        texture=ns.atlas_texture("teleportationnetwork-32x32", {r=1,g=0.6,b=0.2,a=1,scale=1.2}),
+        minimap=true,
+        hide_before=ns.conditions.QuestComplete(65419), -- Protoform Synthesis
+    }
+})
+
 -- Puzzle caches
 
 local puzzle = ns.nodeMaker{
