@@ -460,7 +460,7 @@ ns.RegisterPoints(1970, { -- Zereth Mortis
     [51302575] = {quest=65412},
 }, puzzle{
     label="Glissandian Cache",
-    texture=ns.atlas_texture("VignetteLoot", {r=0,g=0.5,b=0.5,a=0.8,scale=0.8}),
+    texture=ns.atlas_texture("VignetteLoot", {r=1,g=1,b=0,a=0.8,scale=0.8}),
 })
 ns.RegisterPoints(1970, { -- Zereth Mortis
     [38357035] = {quest=65091},
