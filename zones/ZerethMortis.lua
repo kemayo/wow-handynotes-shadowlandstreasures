@@ -648,7 +648,7 @@ ns.RegisterPoints(1970, { -- Zereth Mortis
             189930, -- Restraints of Boundless Chaos
             189985, -- Curtain of Untold Realms
             189999, -- Dark Sky Gavel
-            189153, -- Resonant Echo
+            189153, -- Unformed Lattice
         },
     },
 
@@ -704,7 +704,7 @@ ns.RegisterPoints(1970, { -- Zereth Mortis
             189937, -- Garudeon's Blanket of Feathers
             189951, -- Sunbathed Avian Armor
             190602, -- Symbol of the Raptora
-            190057, -- Hide of Fenryr
+            190057, -- Protective Raptora's Wing-Glaive
         },
         note="Gather {npc:183562} nearby, feed to {npc:183554}",
     },
@@ -785,8 +785,8 @@ ns.RegisterPoints(1970, { -- Zereth Mortis
             189905, -- Hirukon's Syrupy Squeezers
             189946, -- Jellied Aurelid Mantle
             190005, -- Hirukon's Radiant Reach
+            {187636, pet=3230}, -- Terror Jelly
             {187676, mount=1434}, -- Deepstar Aurelid
-            187636, -- Terror Jelly
         },
         -- TODO: add notes on the other maps?
         note=function()
@@ -848,7 +848,7 @@ ns.RegisterPoints(1970, { -- Zereth Mortis
             189925, -- Amphibian's Nimble Leggings
             190046, -- Broker's Stolen Cane
             189995, -- Builder's Alignment Hammer
-            187634, -- Archetype of Metamorphosis
+            187634, -- Ambystan Lattice
         },
     },
 
@@ -929,7 +929,7 @@ ns.RegisterPoints(1970, { -- Zereth Mortis
             189967, -- Hood of Star Topology
             190055, -- Coalescing Energy Implement
             187830, -- Design: Aealic Harmonizing Stone
-            189146, -- Stabilized Geomental
+            189146, -- Geomental Lattice
         },
         note="This doesn't spawn every day",
     },
