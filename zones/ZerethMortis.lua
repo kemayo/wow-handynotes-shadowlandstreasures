@@ -814,7 +814,7 @@ ns.RegisterPoints(1970, { -- Zereth Mortis
             189905, -- Hirukon's Syrupy Squeezers
             189946, -- Jellied Aurelid Mantle
             190005, -- Hirukon's Radiant Reach
-            {187636, pet=3230}, -- Terror Jelly
+            187636, -- Aurelid Lattice
             {187676, mount=1434}, -- Deepstar Aurelid
         },
         -- TODO: add notes on the other maps?
