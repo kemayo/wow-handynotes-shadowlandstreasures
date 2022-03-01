@@ -213,15 +213,6 @@ ns.RegisterPoints(1970, { -- Zereth Mortis
             "Order is probably: SW, NE, SW, NW, NE.",
     },
 
-    [77555820] = { -- Syntactic Vault
-        quest=65565,
-        achievement=15331, criteria=53068,
-        active=ns.conditions.QuestComplete(64844), -- The Pilgrimage Ends (campaign chapter 4)
-        loot={
-            {190457, toy=true}, -- Protopological Cube
-        },
-    },
-
     [58704280] = { -- Template Archive
         quest=65175,
         achievement=15331, criteria=52966,
@@ -231,6 +222,36 @@ ns.RegisterPoints(1970, { -- Zereth Mortis
         },
         note="Inside the Nexus of Actualization",
     },
+})
+
+ns.RegisterPoints(1970, {
+    [77555820] = { -- Syntactic Vault
+        quest=65565, -- 65670 is when you unlock it
+        achievement=15331, criteria=53068,
+        active=ns.conditions.QuestComplete(64844), -- The Pilgrimage Ends (campaign chapter 4)
+        loot={
+            {190457, toy=true}, -- Protopological Cube
+        },
+        note="In a cave. Find all six runic syllables before their {spell:367499} buff runs out to unlock the vault.",
+    },
+})
+ns.RegisterPoints(1970, {
+    [78065339] = {label="Runic Syllable", note="Under the platform between waterfalls"},
+    [76924667] = {label="Runic Syllable"},
+    [78214795] = path{label="Path to Runic Syllable",route={78214795,80904790,81265045,r=1,g=0,b=1}},
+    [81265045] = {label="Runic Syllable", note="Behind the Sepulcher's North side"},
+    [78255917] = path{label="Path to Runic Syllable",route={78255917,80005810,80935626,r=1,g=0,b=1}},
+    [80935626] = {label="Runic Syllable", note="Behind the Sepulcher's South side"},
+    [77056032] = {label="Runic Syllable"},
+    [76995879] = {label="Runic Syllable", note="In a cave"},
+    [76315959] = path{label="Cave Entrance",route={76315959,76995879,r=1,g=0,b=1}}, -- also to the vault
+}, {
+    quest=65565,
+    achievement=15331, criteria=53068,
+    hide_before=ns.conditions.QuestComplete(64844), -- The Pilgrimage Ends (campaign chapter 4)
+    atlas="Rune-09-light",
+    minimap=true,
+    note="Find all six runic syllables before their {spell:367499} buff runs out to unlock the Syntactic Vault."
 })
 
 -- Just the Ovoids...
