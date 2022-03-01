@@ -509,23 +509,22 @@ local lore = ns.nodeMaker{
     minimap=true,
 }
 local metrial = ns.conditions.GarrisonTalent(1901)
-local dealic = {ns.conditions.GarrisonTalent(1932), note="Unsure of exact requirement"}
-local trebalim = {ns.conditions.GarrisonTalent(1907), note="Unsure of exact requirement"}
-local unsure = {ns.conditions.GarrisonTalent(1932), ns.conditions.GarrisonTalent(1907), any=true, note="Unsure of exact requirement"}
+local dealic = {ns.conditions.GarrisonTalent(1932)}
+local trebalim = {ns.conditions.GarrisonTalent(1907)}
 ns.RegisterPoints(1970, { -- Zereth Mortis
-    [31775466] = {quest_=65179, hide_before=unsure},
-    [38953127] = {quest_=65213, hide_before=unsure},
-    [50405096] = {quest_=65216, hide_before=unsure},
-    [64616035] = {quest_=nil, hide_before=unsure},
+    [31775466] = {quest_=65179, hide_before=dealic},
+    [38953127] = {quest_=65213, hide_before=dealic},
+    [50405096] = {quest_=65216, hide_before=dealic},
+    [64616035] = {quest_=65210, hide_before=dealic},
 }, lore{
     label="Excitable concordance",
     atlas="vehicle-templeofkotmogu-purpleball",
 })
 ns.RegisterPoints(1970, { -- Zereth Mortis
-    [35037144] = {quest_=nil, hide_before=unsure},
-    [39702572] = {quest_=nil, hide_before=unsure},
-    [51579134] = {quest_=nil, hide_before=unsure},
-    [64262397] = {quest_=nil, hide_before=unsure},
+    [35037144] = {quest_=nil, hide_before=trebalim},
+    [39702572] = {quest_=nil, hide_before=trebalim},
+    [51579134] = {quest_=nil, hide_before=trebalim},
+    [64262397] = {quest_=nil, hide_before=trebalim},
 }, lore{
     label="Mercurial concordance",
     atlas="vehicle-templeofkotmogu-orangeball",
@@ -534,7 +533,7 @@ ns.RegisterPoints(1970, { -- Zereth Mortis
     [32196281] = {quest_=64940, hide_before=metrial},
     [38844857] = {quest_=65212, hide_before=metrial},
     [49367149] = {quest_=65209, hide_before=metrial},
-    [60204707] = {quest_=65215, hide_before=unsure},
+    [60204707] = {quest_=65215, hide_before=dealic},
 }, lore{
     label="Tranquil concordance",
     atlas="vehicle-templeofkotmogu-greenball",
