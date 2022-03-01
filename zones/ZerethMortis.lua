@@ -423,12 +423,19 @@ ns.RegisterPoints(1970, { -- Zereth Mortis
 })
 
 ns.RegisterPoints(1970, { -- Zereth Mortis
-    [61805895] = {
+    [61805895] = { -- Synthesis Forge
         label="{npc:184172}",
         texture=ns.atlas_texture("teleportationnetwork-32x32", {r=1,g=0.6,b=0.2,a=1,scale=1.2}),
         minimap=true,
         hide_before=ns.conditions.QuestComplete(65419), -- Protoform Synthesis
-    }
+    },
+    [61505370] = { -- Wellspring of the First Ones
+        label="Wellspring of the First Ones",
+        texture=ns.atlas_texture("teleportationnetwork-32x32", {r=0,g=0.8,b=0.8,a=1,scale=1}),
+        minimap=true,
+        hide_before=ns.conditions.QuestComplete(65448), -- A Return To Grace
+        note="Stand in the wellspring to receive {spell:368622}",
+    },
 })
 
 -- Puzzle caches
