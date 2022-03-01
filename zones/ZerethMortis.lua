@@ -345,6 +345,7 @@ ns.RegisterPoints(1970, { -- Zereth Mortis
         active={ns.conditions.GarrisonTalent(1902),ns.conditions.QuestComplete(65328)},
     },
     [42005185] = {
+        quest=65183,
         label="Provis Cache",
         active=ns.conditions.Item(188231),
         note="Use {item:187908} to get 15x {item:187728}, which will sometimes give you the {item:188231}",
