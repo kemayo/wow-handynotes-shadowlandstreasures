@@ -495,7 +495,7 @@ ns.RegisterPoints(1970, { -- Zereth Mortis
     [57506575] = {quest={65093,65418,any=true}},
     [63103740] = {quest=65093},
     [44303095] = {quest=65317},
-    [47603910] = {quest=65317},
+    [47603910] = {quest={65317,65418,any=true}},
     [59702290] = {quest=65317},
     [36455645] = {quest=65322},
     [39204665] = {quest=65322},
@@ -1071,7 +1071,7 @@ ns.RegisterPoints(1970, { -- Zereth Mortis
         atlas="VignetteKillElite", scale=1.2,
         quest={
             65585, -- Iska, Outrider of Ruin, criteria 52992
-            65586, -- High Reaver Damaris, criteria 52993
+            65586, -- High Reaver Damaris, criteria 52993 (mount Edra, 65558)
             65587, -- Reanimatrox Marzan, criteria 52994
             all=true,
         },
@@ -1115,19 +1115,10 @@ ns.RegisterPoints(1970, { -- Zereth Mortis
         criteria=52576,
     },
 
-    [48255960] = { -- Corrupted Runehoarder
+    [50306390] = { -- Corrupted Runehoarder
         npc=181290,
         criteria=52569,
-        route={
-            48255960, 47805990, 47406045, 47155965, 46655905, 46505875,
-            46255785, 46655735, 47355720, 47605750, 47955705, 48505660,
-            49205630, 49655570, 50305515, 50455425, 51005395, 51305495,
-            51205620, 51355650, 51405685, 50655690, 50705800, 50705800,
-            51155860, 51305950, 51356075, 50856170, 50406290, 50456390,
-            50506435, 50056425, 49656430, 49406390, 49106280, 48806220,
-            48856170, 48506165, 48256080,
-            r=0,g=1,b=1,
-        },
+        note="Patrols around the eastern pools, /tar macros will help",
     },
 
     [48651370] = { -- Dominated Irregular
@@ -1154,7 +1145,7 @@ ns.RegisterPoints(1970, { -- Zereth Mortis
     [56154805] = { -- Misaligned Enforcer
         npc=181292,
         criteria=52570,
-        note="Despawns at the end of it's patrol route",
+        note="Spawns here, walks around the area, and eventually despawns; watch out for a running automata",
         route={
             56154805, 55504760, 55004655, 55104540, 55754505, 56254505,
             56254380, 55754315, 55754175, 55104095, 54354095, 53854110,
