@@ -6,6 +6,10 @@ ns.groups["puzzlecache"] = "Caches of Creation"
 ns.groups["lostovoid"] = "{item:190239}"
 
 -- Note to self: first Pocopoc costume unlock gets 65531
+-- gravid repose, interior locus arrangement 65330
+
+local MOUNT = "|A:StableMaster:15:15|a"
+local PET = "|A:WildBattlePetCapturable:15:15|a"
 
 -- Treasures of Zerith Mortis
 ns.RegisterPoints(1970, { -- Zereth Mortis
@@ -89,7 +93,7 @@ ns.RegisterPoints(1970, { -- Zereth Mortis
         achievement=15331, criteria=52967,
         requires_worldquest=65089,
         loot={
-            {189469, quest=65393}, -- Schematic: Prototype Leaper
+            {189469, quest=65393, note=MOUNT}, -- Schematic: Prototype Leaper
         },
         note="Only reachable during the {quest:65089} world quest",
     },
@@ -104,7 +108,7 @@ ns.RegisterPoints(1970, { -- Zereth Mortis
         quest=65545,
         achievement=15331, criteria=53066,
         loot={
-            {189478, quest=65401}, -- Schematic: Adorned Vombata
+            {189478, quest=65401, note=MOUNT}, -- Schematic: Adorned Vombata
         },
         note="Needs flying or movement abilities to reach. Soothe 12 creatures nearby, {npc:185293} will give you the reward",
     },
@@ -113,7 +117,7 @@ ns.RegisterPoints(1970, { -- Zereth Mortis
         quest=65173,
         achievement=15331, criteria=52887,
         loot={
-            {189447, quest=65360}, -- Schematic: Viperid Menace
+            {189447, quest=65360, note=MOUNT}, -- Schematic: Viperid Menace
         },
         note="In cave. Use tablets to find the correct {spell:362062} buff to make the chest appear",
     },
@@ -123,7 +127,7 @@ ns.RegisterPoints(1970, { -- Zereth Mortis
         quest=65441,
         achievement=15331, criteria=52969,
         loot={
-            {189456, quest=65379},-- Schematic: Sundered Zerethsteed
+            {189456, quest=65379, note=MOUNT},-- Schematic: Sundered Zerethsteed
         },
     },
 
@@ -261,7 +265,7 @@ ns.RegisterPoints(1970, {
         achievement=15331, criteria=53060,
         active=ns.conditions.Item(190239, 5),
         loot={
-            {189435, quest=65333}, -- Schematic: Multichicken
+            {189435, quest=65333, note=PET}, -- Schematic: Multichicken
         },
         note="Inside the cave, under the {npc:185280}.",
     },
@@ -401,7 +405,7 @@ ns.RegisterPoints(1970, { -- Zereth Mortis
     label="Pulp-Covered Relic",
     note="Multiple spawn points",
     loot={
-        {189474,quest=65397}, -- Schematic: Buzz
+        {189474, quest=65397, note=MOUNT}, -- Schematic: Buzz
     },
 })
 
@@ -672,12 +676,12 @@ ns.RegisterPoints(1970, { -- Zereth Mortis
         quest=64716,
         criteria=52974,
         loot={
-            187837, -- Schematic: Erratic Genesis Matrix
             189910, -- Adornment of Jingling Fractals
             189930, -- Restraints of Boundless Chaos
             189985, -- Curtain of Untold Realms
             189999, -- Dark Sky Gavel
             189153, -- Unformed Lattice
+            187837, -- Schematic: Erratic Genesis Matrix (engineer only)
         },
     },
 
@@ -729,11 +733,11 @@ ns.RegisterPoints(1970, { -- Zereth Mortis
         criteria=53025,
         --vignette=4982,
         loot={
-            187832, -- Schematic: Pure-Air Sail Extensions
             189937, -- Garudeon's Blanket of Feathers
             189951, -- Sunbathed Avian Armor
             190602, -- Symbol of the Raptora
             190057, -- Protective Raptora's Wing-Glaive
+            187832, -- Schematic: Pure-Air Sail Extensions (engineer only)
         },
         note="Gather {npc:183562} nearby, feed to {npc:183554}",
     },
@@ -943,7 +947,7 @@ ns.RegisterPoints(1970, { -- Zereth Mortis
             189933, -- Vigilant Raptora's Crest
             189954, -- Lustrous Sentinel's Sabatons
             190003, -- Skyward Savior's Talon
-            187832, -- Schematic: Pure-Air Sail Extensions
+            187832, -- Schematic: Pure-Air Sail Extensions (engineer only)
         },
     },
 
