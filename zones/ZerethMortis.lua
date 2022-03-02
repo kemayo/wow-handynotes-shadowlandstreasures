@@ -1228,21 +1228,21 @@ ns.RegisterPoints(1970, { -- Zereth Mortis
 -- Transportation
 
 -- Ancient Translocator
-ns.RegisterPoints(1970, {
-    [46122172] = {route=47301340,},
-    [47301340] = {route={47301340,46122172,r=0,g=0.75,b=0},},
-}, {
-    label="{npc:183968}",
-    atlas="progenitorflightmaster-32x32", scale=1,
-    group="Transportation",
-})
--- Ancient Translocator
-ns.RegisterPoints(1970, {
-    [64855355] = {route=73305340,},
-    [73305340] = {route={73305340,64855355,r=0,g=0.75,b=0},},
-}, {
-    label="{npc:183970}",
-    atlas="progenitorflightmaster-32x32", scale=1,
-    hide_before=ns.conditions.QuestComplete(64844), -- The Pilgrimage Ends
-    group="Transportation",
-})
+-- ns.RegisterPoints(1970, {
+--     [46122172] = {route=47301340,},
+--     [47301340] = {route={47301340,46122172,r=0,g=0.75,b=0},},
+-- }, {
+--     label="{npc:183968}",
+--     atlas="progenitorflightmaster-32x32", scale=1,
+--     group="Transportation",
+-- })
+-- -- Ancient Translocator
+-- ns.RegisterPoints(1970, {
+--     [64855355] = {route=73305340,},
+--     [73305340] = {route={73305340,64855355,r=0,g=0.75,b=0},},
+-- }, {
+--     label="{npc:183970}",
+--     atlas="progenitorflightmaster-32x32", scale=1,
+--     hide_before=ns.conditions.QuestComplete(64844), -- The Pilgrimage Ends
+--     group="Transportation",
+-- })
