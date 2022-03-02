@@ -442,6 +442,31 @@ ns.RegisterPoints(1970, { -- Zereth Mortis
     },
 })
 
+-- Schematics
+
+-- ns.RegisterPoints(1970, { -- Zereth Mortis
+--     [50553200] = { -- Schematic: Bronzewing Vespoid
+--         quest=65396, -- todo: quest for looting?
+--         label="{item:189473}",
+--         loot={
+--             {189473, quest=65396, note=MOUNT},
+--         },
+--         note="Inside the Gravid Repose",
+--     }
+-- }, {
+--     hide_before=ns.conditions.QuestComplete(65427), -- A New Architect
+-- })
+-- ns.RegisterPoints(2029, { -- Gravid Repose
+--     [49004060] = { -- Schematic: Bronzewing Vespoid
+--         quest=65396, -- todo: quest for looting?
+--         label="{item:189473}",
+--         loot={
+--             {189473, quest=65396, note=MOUNT},
+--         },
+--         hide_before=ns.conditions.QuestComplete(65427), -- A New Architect
+--     },
+-- })
+
 -- Puzzle caches
 
 local puzzle = ns.nodeMaker{
