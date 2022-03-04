@@ -101,6 +101,9 @@ ns.RegisterPoints(1970, { -- Zereth Mortis
     [38957320] = { -- Gnawed Valise
         quest=65480,
         achievement=15331, criteria=53017,
+        loot={
+            188054, -- Antecedent Drape (shared, but really high droprate here)
+        },
         note="Fly, or try jumping from the top of the Cradle of Nascence. You'll probably need a glider, though.",
     },
 
@@ -520,7 +523,7 @@ ns.RegisterPoints(1970, { -- Zereth Mortis
     texture=ns.atlas_texture("VignetteLoot", {r=1,g=1,b=0,a=0.8,scale=0.8}),
 })
 ns.RegisterPoints(1970, { -- Zereth Mortis
-    [38357035] = {quest=65091},
+    [38357035] = {quest={65091,65418,any=true}},
     [39356045] = {quest=65091},
     [52357200] = {quest=65091},
     [55655000] = {quest=65091},
@@ -1070,7 +1073,7 @@ ns.RegisterPoints(1970, { -- Zereth Mortis
         achievement=15392,
         atlas="VignetteKillElite", scale=1.2,
         quest={
-            65585, -- Iska, Outrider of Ruin, criteria 52992
+            65585, -- Iska, Outrider of Ruin, criteria 52992 (mount Rhuv, 65706)
             65586, -- High Reaver Damaris, criteria 52993 (mount Edra, 65558)
             65587, -- Reanimatrox Marzan, criteria 52994
             all=true,
