@@ -447,6 +447,7 @@ ns.RegisterPoints(1970, { -- Zereth Mortis
         minimap=true,
         hide_before=ns.conditions.QuestComplete(65448), -- A Return To Grace
         note="Stand in the wellspring to receive {spell:368622}",
+        spell=368622, -- Grace of the First Ones
     },
 })
 
