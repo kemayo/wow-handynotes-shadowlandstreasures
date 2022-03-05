@@ -6,6 +6,7 @@ ns.groups["puzzlecache"] = "Caches of Creation"
 ns.groups["lostovoid"] = "{item:190239}"
 
 -- Note to self: first Pocopoc costume unlock gets 65531
+-- wicked pocopoc: 65530 (but not really point-friendly)
 -- gravid repose, interior locus arrangement 65330
 
 local MOUNT = "|A:StableMaster:15:15|a"
@@ -1086,29 +1087,29 @@ ns.RegisterPoints(1970, { -- Zereth Mortis
         },
         note="Three rares appear here",
         loot={
-            -- This is kind of over the top, split it up into multiple points?
             -- Iska
-            190102, -- Chains of Infectious Serrations
-            190103, -- Pillar of Noxious Dissemination
-            190107, -- Staff of Broken Coils
-            190458, -- Atrophy's Ominous Bulwark
-            190126, -- Rotculler's Encroaching Shears
+            {190102, note="Iska"}, -- Chains of Infectious Serrations
+            {190103, note="Iska"}, -- Pillar of Noxious Dissemination
+            {190126, note="Iska"}, -- Rotculler's Encroaching Shears
+            {190458, note="Iska"}, -- Atrophy's Ominous Bulwark
             -- Iska's mount, Rhuv
-            {190765, mount=1584}, -- Iska's Mawrat Leash
+            {190765, mount=1584, note="Iska's mount"}, -- Iska's Mawrat Leash
             -- Damaris
-            190105, -- Chilling Domination Mace
-            190106, -- Approaching Terror's Torch
-            190459, -- Cold Dispiriting Barricade
-            190460, -- High Reaver's Sickle
+            {190105, note="Damaris"}, -- Chilling Domination Mace
+            {190106, note="Damaris"}, -- Approaching Terror's Torch
+            {190459, note="Damaris"}, -- Cold Dispiriting Barricade
+            {190460, note="Damaris"}, -- High Reaver's Sickle
             -- Marzan
-            190108, -- Aegis of Laughing Souls
-            190109, -- Cudgel of Mortality's Chains
-            190127, -- Marzan's Dancing Twin-Scythe
-            190461, -- Reanimator's Beguiling Baton
-            -- Damaris *and* Marzan
-            190104, -- Deadeye's Spirit Piercer
+            {190108, note="Marzan"}, -- Aegis of Laughing Souls
+            {190109, note="Marzan"}, -- Cudgel of Mortality's Chains
+            {190127, note="Marzan"}, -- Marzan's Dancing Twin-Scythe
+            {190461, note="Marzan"}, -- Reanimator's Beguiling Baton
             -- All of them
-            190124, -- Interrogator's Vicious Dirk
+            {190050, note="All"}, -- Entropic Broker's Ripper
+            {190104, note="All"}, -- Deadeye's Spirit Piercer
+            {190107, note="All"}, -- Staff of Broken Coils
+            {190124, note="All"}, -- Interrogator's Vicious Dirk
+            {190463, note="All"}, -- Dismal Mystic's Glaive
         },
     },
 })
