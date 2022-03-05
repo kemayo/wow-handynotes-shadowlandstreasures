@@ -464,6 +464,22 @@ local get_point_progress = function(point)
     end
 end
 
+local function tooltip_criteria(tooltip, achievement, criteriaid, ignore_quantityString)
+    local getinfo = (criteriaid < 40 and GetAchievementCriteriaInfo or GetAchievementCriteriaInfoByID)
+    local criteria, _, complete, _, _, _, _, _, quantityString = getinfo(achievement, criteriaid)
+    if quantityString and not ignore_quantityString then
+        tooltip:AddDoubleLine(
+            (criteria and #criteria > 0) and criteria or PVP_PROGRESS_REWARDS_HEADER, quantityString,
+            complete and 0 or 1, complete and 1 or 0, 0,
+            complete and 0 or 1, complete and 1 or 0, 0
+        )
+    else
+        tooltip:AddDoubleLine(" ", criteria,
+            nil, nil, nil,
+            complete and 0 or 1, complete and 1 or 0, 0
+        )
+    end
+end
 local function handle_tooltip(tooltip, point)
     if point then
         -- major:
@@ -496,35 +512,19 @@ local function handle_tooltip(tooltip, point)
                 complete and 0 or 1, complete and 1 or 0, 0
             )
             if point.criteria then
-                if type(point.criteria) == "table" then
-                    for _, criteria in ipairs(point.criteria) do
-                        local criteria, _, complete = (criteria < 40 and GetAchievementCriteriaInfo or GetAchievementCriteriaInfoByID)(point.achievement, criteria)
-                        tooltip:AddDoubleLine(" ", criteria,
-                            nil, nil, nil,
-                            complete and 0 or 1, complete and 1 or 0, 0
-                        )
+                if point.criteria == true then
+                    for criteria=1, GetAchievementNumCriteria(point.achievement) do
+                        tooltip_criteria(tooltip, point.achievement, criteria, true)
                     end
-                else
-                    local criteria, _, complete = (point.criteria < 40 and GetAchievementCriteriaInfo or GetAchievementCriteriaInfoByID)(point.achievement, point.criteria)
-                    tooltip:AddDoubleLine(" ", criteria,
-                        nil, nil, nil,
-                        complete and 0 or 1, complete and 1 or 0, 0
-                    )
+                elseif type(point.criteria) == "table" then
+                    for _, criteria in ipairs(point.criteria) do
+                        tooltip_criteria(tooltip, point.achievement, criteria, true)
+                    end
+                elseif type(point.criteria) == "number" then
+                    tooltip_criteria(tooltip, point.achievement, point.criteria, true)
                 end
             elseif GetAchievementNumCriteria(point.achievement) == 1 then
-                local criteria, _, complete, _, _, _, _, _, quantityString = GetAchievementCriteriaInfo(point.achievement, 1)
-                if quantityString then
-                    tooltip:AddDoubleLine(
-                        (criteria and #criteria > 0) and criteria or PVP_PROGRESS_REWARDS_HEADER, quantityString,
-                        complete and 0 or 1, complete and 1 or 0, 0,
-                        complete and 0 or 1, complete and 1 or 0, 0
-                    )
-                else
-                    tooltip:AddDoubleLine(" ", criteria,
-                        nil, nil, nil,
-                        complete and 0 or 1, complete and 1 or 0, 0
-                    )
-                end
+                tooltip_criteria(point.achievement, 1)
             end
         end
         if point.active then
