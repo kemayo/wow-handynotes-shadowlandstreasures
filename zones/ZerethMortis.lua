@@ -586,6 +586,7 @@ ns.RegisterPoints(1970, { -- Zereth Mortis
 }, lore{
     label="Excitable concordance",
     atlas="vehicle-templeofkotmogu-purpleball",
+    spell=362757, -- Hasty Understanding
 })
 ns.RegisterPoints(1970, { -- Zereth Mortis
     [35037144] = {quest_=65180, hide_before=trebalim},
@@ -595,6 +596,7 @@ ns.RegisterPoints(1970, { -- Zereth Mortis
 }, lore{
     label="Mercurial concordance",
     atlas="vehicle-templeofkotmogu-orangeball",
+    spell=362759, -- Powerful Knowledge
 })
 ns.RegisterPoints(1970, { -- Zereth Mortis
     [32196281] = {quest_=64940, hide_before=metrial},
@@ -604,6 +606,7 @@ ns.RegisterPoints(1970, { -- Zereth Mortis
 }, lore{
     label="Tranquil concordance",
     atlas="vehicle-templeofkotmogu-greenball",
+    spell=362498, -- Critical Potency
 })
 
 -- Tales of the Exile
