@@ -471,6 +471,7 @@ ns.RegisterPoints(1970, { -- Zereth Mortis
 -- })
 
 -- Puzzle caches
+-- The WQs for these all use 65418 + a WQ quest regardless of the type of cache
 
 local puzzle = ns.nodeMaker{
     group="puzzlecache",
@@ -490,7 +491,7 @@ ns.RegisterPoints(1970, { -- Zereth Mortis
     [47504620] = {quest=65323},
 }, puzzle{
     label="Cantaric Cache",
-    texture=ns.atlas_texture("VignetteLoot", {r=0,g=1,b=1,a=0.8,scale=0.8}),
+    texture=ns.atlas_texture("VignetteLoot", {r=0,g=1,b=1,a=0.8,scale=0.9}),
 })
 ns.RegisterPoints(1970, { -- Zereth Mortis
     [46056460] = {quest=65093},
@@ -505,7 +506,7 @@ ns.RegisterPoints(1970, { -- Zereth Mortis
     [42206880] = {quest=65322},
 }, puzzle{
     label="Fugueal Cache",
-    texture=ns.atlas_texture("VignetteLoot", {r=1,g=0.5,b=0,a=0.8,scale=0.8}),
+    texture=ns.atlas_texture("VignetteLoot", {r=1,g=0.5,b=0,a=0.8,scale=0.9}),
 })
 ns.RegisterPoints(1970, { -- Zereth Mortis
     [41853130] = {quest=65092},
@@ -520,7 +521,7 @@ ns.RegisterPoints(1970, { -- Zereth Mortis
     [51302575] = {quest=65412},
 }, puzzle{
     label="Glissandian Cache",
-    texture=ns.atlas_texture("VignetteLoot", {r=1,g=1,b=0,a=0.8,scale=0.8}),
+    texture=ns.atlas_texture("VignetteLoot", {r=1,g=1,b=0,a=0.8,scale=0.9}),
 })
 ns.RegisterPoints(1970, { -- Zereth Mortis
     [38357035] = {quest={65091,65418,any=true}},
@@ -535,10 +536,10 @@ ns.RegisterPoints(1970, { -- Zereth Mortis
     [49953045] = {quest=65320},
 }, puzzle{
     label="Mezzonic Cache",
-    texture=ns.atlas_texture("VignetteLoot", {r=0,g=0.8,b=0,a=0.8,scale=0.8}),
+    texture=ns.atlas_texture("VignetteLoot", {r=0,g=0.8,b=0,a=0.8,scale=0.9}),
 })
 ns.RegisterPoints(1970, { -- Zereth Mortis
-    [32055260] = {quest=64972},
+    [32055260] = {quest={64972,65418,any=true}},
     [34606880] = {quest=64972},
     [37004645] = {quest=64972},
     [46806700] = {quest=64972},
