@@ -1101,6 +1101,8 @@ ns.RegisterPoints(1970, { -- Zereth Mortis
             190461, -- Reanimator's Beguiling Baton
             -- Damaris *and* Marzan
             190104, -- Deadeye's Spirit Piercer
+            -- All of them
+            190124, -- Interrogator's Vicious Dirk
         },
     },
 })
