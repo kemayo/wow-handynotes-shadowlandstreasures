@@ -1,5 +1,12 @@
 # Changelog
 
+## Changed in v43
+
+* March 3rd hotfix: Interrogator's Vicious Dirk now drops from all the Dune Domination mobs
+* Last lore concordance questids added
+* Orixal has moved
+* Assorted minor point tweaks
+
 ## Changed in v42
 
 * A hotfix on March 1st put the Ancient Translocators on the Zereth Mortis map (*so* on the map that they're the only thing you can see if you've got no map-completion at all 😁), so I'm removing mine
