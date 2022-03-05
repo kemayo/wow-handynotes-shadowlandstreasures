@@ -1081,7 +1081,7 @@ ns.RegisterPoints(1970, { -- Zereth Mortis
 ns.RegisterPoints(1970, { -- Zereth Mortis
     [63202605] = {
         label="{achievement:15392}",
-        achievement=15392,
+        achievement=15392, criteria=true,
         atlas="VignetteKillElite", scale=1.2,
         quest={
             65585, -- Iska, Outrider of Ruin, criteria 52992 (mount Rhuv, 65706)
@@ -1089,7 +1089,7 @@ ns.RegisterPoints(1970, { -- Zereth Mortis
             65587, -- Reanimatrox Marzan, criteria 52994
             all=true,
         },
-        note="Three rares appear here",
+        note="One of these rares is here each day",
         loot={
             -- Iska
             {190102, note="Iska"}, -- Chains of Infectious Serrations
