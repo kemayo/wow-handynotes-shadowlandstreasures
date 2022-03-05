@@ -638,7 +638,7 @@ local function handle_tooltip(tooltip, point)
             end
 
             if point.loot and #point.loot > 0 then
-                comparison:SetHyperlink(("item:%d"):format(ns.lootitem(point.loot[1])))
+                comparison:SetItemByID(ns.lootitem(point.loot[1]))
             elseif point.npc then
                 comparison:SetHyperlink(("unit:Creature-0-0-0-0-%d"):format(point.npc))
             end
