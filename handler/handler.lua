@@ -598,7 +598,7 @@ local function handle_tooltip(tooltip, point)
             end
         end
 
-        if (ns.db.tooltip_item or IsShiftKeyDown()) and (point.loot or point.npc) then
+        if (ns.db.tooltip_item or IsShiftKeyDown()) and (point.loot or point.npc or point.spell) then
             local comparison = ShoppingTooltip1
 
             do
@@ -641,6 +641,8 @@ local function handle_tooltip(tooltip, point)
                 comparison:SetItemByID(ns.lootitem(point.loot[1]))
             elseif point.npc then
                 comparison:SetHyperlink(("unit:Creature-0-0-0-0-%d"):format(point.npc))
+            elseif point.spell then
+                comparison:SetSpellByID(point.spell)
             end
             comparison:Show()
         end
