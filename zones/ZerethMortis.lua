@@ -889,7 +889,7 @@ ns.RegisterPoints(1970, { -- Zereth Mortis
     },
     [55953260] = path{quest=65547, criteria=53020},
 
-    [58008455] = { -- Orixal
+    [56406820] = { -- Orixal
         npc=179043,
         quest=65582,
         criteria=52981,
@@ -898,6 +898,7 @@ ns.RegisterPoints(1970, { -- Zereth Mortis
             189934, -- Slime-Wake Sabatons
             189952, -- Celestial Mollusk's Chestshell
         },
+        note="Kill {npc:185487} and it might spawn",
     },
 
     [43308760] = { -- Otiosen
