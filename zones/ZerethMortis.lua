@@ -512,7 +512,7 @@ ns.RegisterPoints(1970, { -- Zereth Mortis
     [54254280] = {quest=65092},
     [58903635] = {quest=65092},
     [45109410] = {quest=65316},
-    [56008415] = {quest=65316},
+    [56008415] = {quest={65316,65418,any=true}},
     [56656140] = {quest=65316},
     [33805425] = {quest=65321},
     [39957285] = {quest=65321},
@@ -582,10 +582,10 @@ ns.RegisterPoints(1970, { -- Zereth Mortis
     atlas="vehicle-templeofkotmogu-purpleball",
 })
 ns.RegisterPoints(1970, { -- Zereth Mortis
-    [35037144] = {quest_=nil, hide_before=trebalim},
-    [39702572] = {quest_=nil, hide_before=trebalim},
-    [51579134] = {quest_=nil, hide_before=trebalim},
-    [64262397] = {quest_=nil, hide_before=trebalim},
+    [35037144] = {quest_=65180, hide_before=trebalim},
+    [39702572] = {quest_=65214, hide_before=trebalim},
+    [51579134] = {quest_=65211, hide_before=trebalim},
+    [64262397] = {quest_=65217, hide_before=trebalim},
 }, lore{
     label="Mercurial concordance",
     atlas="vehicle-templeofkotmogu-orangeball",
