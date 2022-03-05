@@ -253,8 +253,8 @@ local atlas_texture = function(atlas, extra)
 end
 ns.atlas_texture = atlas_texture
 local default_textures = {
-    VignetteLoot = atlas_texture("VignetteLoot", 1.2),
-    VignetteLootElite = atlas_texture("VignetteLootElite", 1.3),
+    VignetteLoot = atlas_texture("VignetteLoot", 1.1),
+    VignetteLootElite = atlas_texture("VignetteLootElite", 1.2),
     Garr_TreasureIcon = atlas_texture("Garr_TreasureIcon", 2.2),
 }
 local function work_out_label(point)
