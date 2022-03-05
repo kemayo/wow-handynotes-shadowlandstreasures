@@ -312,17 +312,21 @@ ns.RegisterPoints(1970, {
     note="Find 5x {item:190239} around the zone and take them to the {npc:185280}. There's a lot of spawn points and they vanish after someone loots them. You're looking for a small brown lump with no sparkles.",
 })
 
-ns.RegisterPoints(2027, { -- Blooming Foundry
-    [65655025] = { -- Ripened Protopear
-        quest=nil,
-        active=ns.conditions.GarrisonTalent(1931),
-        achievement=15331, criteria=53069,
-        -- achievement=15508, criteria=53287, -- Fashion of the First Ones
-        loot={
-            {190058, quest=65525}, -- Peaceful Pocopoc
-        },
-        note="Bring 5x {spell:367180} to the {npc:185416} inside the Blooming Foundry",
+local protopear = { -- Ripened Protopear
+    quest=65566,
+    active=ns.conditions.GarrisonTalent(1931),
+    achievement=15331, criteria=53069,
+    -- achievement=15508, criteria=53287, -- Fashion of the First Ones
+    loot={
+        {190058, quest=65525}, -- Peaceful Pocopoc
     },
+    note="Bring 5x {spell:367180} to the {npc:185416} inside the Blooming Foundry",
+}
+ns.RegisterPoints(2027, { -- Blooming Foundry
+    [65655025] = protopear,
+})
+ns.RegisterPoints(1970, { -- Zereth Mortis
+    [63717374] = protopear,
 })
 
 ns.RegisterPoints(2030, { -- Nexus of Actualization
