@@ -686,6 +686,10 @@ function HLHandler:OnEnter(uiMapID, coord)
     handle_tooltip_by_coord(tooltip, uiMapID, coord)
 end
 
+local function showAchievement(button, achievement)
+    OpenAchievementFrameToAchievement(achievement)
+end
+
 local function createWaypoint(button, uiMapID, coord)
     if TomTom then
         local x, y = HandyNotes:getXY(coord)
@@ -753,6 +757,16 @@ do
             info.notCheckable = 1
             UIDropDownMenu_AddButton(info, level)
             wipe(info)
+
+            if point.achievement then
+                -- Waypoint menu item
+                info.text = OBJECTIVES_VIEW_ACHIEVEMENT
+                info.notCheckable = 1
+                info.func = showAchievement
+                info.arg1 = point.achievement
+                UIDropDownMenu_AddButton(info, level)
+                wipe(info)
+            end
 
             if TomTom then
                 -- Waypoint menu item
