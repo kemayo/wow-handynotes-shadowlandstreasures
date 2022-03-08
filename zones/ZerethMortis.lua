@@ -16,7 +16,7 @@ local PET = "|A:WildBattlePetCapturable:15:15|a"
 ns.RegisterPoints(1970, { -- Zereth Mortis
     [61153710] = { -- Architect's Reserve
         quest=65520,
-        active=ns.conditions.GarrisonTalent(1931),
+        active={ns.conditions.GarrisonTalent(1931), ns.conditions.QuestComplete(65427)},
         achievement=15331, criteria=53053,
         -- achievement=15508, criteria=53290, -- Fashion of the First Ones
         loot={
