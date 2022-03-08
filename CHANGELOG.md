@@ -1,5 +1,14 @@
 # Changelog
 
+## Changed in v45
+
+* The right-click menu on points now shows an option to open the Achievements UI to the related achievement
+* Dune Dominance mobs: show individual status in the tooltip
+* Add the Protoform Repository to the map once it's unlocked
+* Hide the Architect's Reserve until the entire protoform chain is complete
+* The Protopear only needs to be ripened once now
+* Add other Moss-Choked Guardian spawns
+
 ## Changed in v44
 
 * Dune Dominance mobs: more loot, show notes so you know which mob drops which items
