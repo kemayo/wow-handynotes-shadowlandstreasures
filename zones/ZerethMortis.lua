@@ -321,7 +321,7 @@ local protopear = { -- Ripened Protopear
     loot={
         {190058, quest=65525}, -- Peaceful Pocopoc
     },
-    note="Bring 5x {spell:367180} to the {npc:185416} inside the Blooming Foundry",
+    note="Bring {spell:367180} from the green clouds to the {npc:185416} inside the Blooming Foundry",
 }
 ns.RegisterPoints(2027, { -- Blooming Foundry
     [65655025] = protopear,
