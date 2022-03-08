@@ -1181,10 +1181,11 @@ ns.RegisterPoints(1970, { -- Zereth Mortis
         },
     },
 
-    [50659440] = { -- Moss-Choked Guardian
-        npc=181219,
-        criteria=52554,
-    },
+    -- Moss-Choked Guardian
+    [43609020] = {npc=181219, criteria=52554,},
+    [45809520] = {npc=181219, criteria=52554,},
+    [50659440] = {npc=181219, criteria=52554,},
+    [53809360] = {npc=181219, criteria=52554,},
 
     [62806830] = { -- Overgrown Geomental
         npc=179007,
