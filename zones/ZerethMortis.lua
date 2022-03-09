@@ -461,28 +461,92 @@ ns.RegisterPoints(1970, { -- Zereth Mortis
 
 -- Schematics
 
--- ns.RegisterPoints(1970, { -- Zereth Mortis
---     [50553200] = { -- Schematic: Bronzewing Vespoid
---         quest=65396, -- todo: quest for looting?
---         label="{item:189473}",
---         loot={
---             {189473, quest=65396, note=MOUNT},
---         },
---         note="Inside the Gravid Repose",
---     }
--- }, {
---     hide_before=ns.conditions.QuestComplete(65427), -- A New Architect
--- })
--- ns.RegisterPoints(2029, { -- Gravid Repose
---     [49004060] = { -- Schematic: Bronzewing Vespoid
---         quest=65396, -- todo: quest for looting?
---         label="{item:189473}",
---         loot={
---             {189473, quest=65396, note=MOUNT},
---         },
---         hide_before=ns.conditions.QuestComplete(65427), -- A New Architect
---     },
--- })
+-- TODO: honestly, classes and getters might be useful here?
+local makeSchematic = function(questid, itemid, stype, extra)
+    return ns.merge({
+        quest=questid,
+        label=("{item:%d}"):format(itemid),
+        loot={{itemid, quest=questid, note=stype}},
+    }, extra)
+end
+local schematic = {
+    atlas="poi-islands-table",
+    minimap=true,
+    hide_before=ns.conditions.QuestComplete(65427), -- A New Architect
+    group="Schematics",
+}
+
+ns.RegisterPoints(1970, { -- Zereth Mortis
+    [64203560] = makeSchematic(65400, 189477, MOUNT, { -- Schematic: Darkened Vombata
+        note="In the floating cage. You can jump up the chain under it if you're lucky, but it's fiddly.",
+    }),
+    [62004350] = makeSchematic(65381, 189458, MOUNT, { -- Schematic: Desertwing Hunter
+        hide_before={
+            ns.conditions.QuestComplete(65427), -- A New Architect
+            ns.conditions.Achievement(15514), -- flying
+        },
+        note="On top of a tall pillar, you'll need flying",
+    }),
+    [50203230] = makeSchematic(65396, 189473, MOUNT, { -- Schematic: Bronzewing Vespoid
+        note="Inside the Gravid Repose",
+    }),
+    [53302560] = makeSchematic(65398, 189475, MOUNT), -- Schematic: Forged Spiteflyer
+    [31505030] = makeSchematic(65388, 189465, MOUNT), -- Schematic: Genesis Crawler
+    [34904870] = makeSchematic(65390, 189467, MOUNT, { -- Schematic: Ineffable Skitterer
+        note="Talk to {npc:185092} inside Firim's hideout while dead",
+    }),
+    [67404010] = makeSchematic(65383, 189460, MOUNT, { -- Schematic: Raptora Swooper
+        note="Inside the Chamber of Shaping",
+    }),
+    [47700950] = makeSchematic(65387, 189464, MOUNT, { -- Schematic: Scarlet Helicid
+        hide_before={
+            ns.conditions.QuestComplete(65427), -- A New Architect
+            ns.conditions.Achievement(15514), -- flying
+        },
+        note="High up on an arch",
+    }),
+    [62962152] = makeSchematic(65389, 189466, MOUNT, { -- Schematic: Tarachnid Creeper
+        hide_before={
+            ns.conditions.QuestComplete(65427), -- A New Architect
+            ns.conditions.QuestComplete(64809), -- One Half of the Equation
+        },
+    }),
+    -- [47703450] = makeSchematic(65386, 189463, MOUNT, { -- Schematic: Unsuccessful Prototype Fleetpod
+    --     note="Use the teleporter here, gather Cosmic Energy, go to the Gravid Repose, teleport to the Inner Locus then to the Camber Alcove, then complete the Inert Prototype minigame",
+    --     hide_before={
+    --         ns.conditions.QuestComplete(65427), -- A New Architect
+    --         ns.conditions.GarrisonTalent(1902), -- Altonian Understanding
+    --         ns.conditions.QuestComplete(65328), -- Arbiter in the Making, end of A Means to an End storyline
+    --     }
+    -- }),
+    [50352715] = makeSchematic(65395, 189472, MOUNT, { -- Schematic: Vespoid Flutterer
+        -- this one is accessible at the base state
+        note="In the Resonant Peaks, accessed through the Gravid Repose teleporters",
+    }),
+    -- Doubled from treasures:
+    [67006940] = makeSchematic(65393, 189469, MOUNT, { -- Schematic: Prototype Leaper
+        note="In the Forgotten Proto-Vault treasure; if you looted it before unlocking protoforms, it should just be sitting there",
+        hide_before=ns.conditions.QuestComplete(65178),
+        requires_worldquest=65089,
+    }),
+    [60503050] = makeSchematic(65379, 189456, MOUNT, { -- Schematic: Sundered Zerethsteed
+        note="In the Mawsworn Cache treasure; if you looted it before unlocking protoforms, it should just be sitting there",
+        hide_before=ns.conditions.QuestComplete(65441),
+    }),
+    -- mob drops
+    [76405300] = makeSchematic(65391, 189468, MOUNT, { -- Schematic: Goldplate Bufonid
+        note="Drops from {npc:178803} in this area",
+    }),
+    [51806270] = makeSchematic(65680, 190585, MOUNT, { -- Schematic: Heartbond Lupine
+        note="Drops from {npc:179939} inside the Choral Residium",
+    }),
+    [61402800] = makeSchematic(65391, 189459, MOUNT, { -- Schematic: Mawdapted Raptora
+        note="Drops from {npc:181412} in this area",
+    }),
+}, schematic)
+ns.RegisterPoints(2029, { -- Gravid Repose
+    [49004060] = makeSchematic(65396, 189473, MOUNT), -- Schematic: Bronzewing Vespoid
+}, schematic)
 
 -- Puzzle caches
 -- The WQs for these all use 65418 + a WQ quest regardless of the type of cache
