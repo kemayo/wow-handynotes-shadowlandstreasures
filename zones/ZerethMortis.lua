@@ -1094,7 +1094,7 @@ ns.RegisterPoints(1970, { -- Zereth Mortis
         quest={
             65585, -- Iska, Outrider of Ruin, criteria 52992 (mount Rhuv, 65706)
             65586, -- High Reaver Damaris, criteria 52993 (mount Edra, 65558)
-            65587, -- Reanimatrox Marzan, criteria 52994
+            65587, -- Reanimatrox Marzan, criteria 52994 (mount Phalangax, 65707)
             all=true,
         },
         note="One of these rares is here each day",
