@@ -524,7 +524,7 @@ local function handle_tooltip(tooltip, point)
                     tooltip_criteria(tooltip, point.achievement, point.criteria, true)
                 end
             elseif GetAchievementNumCriteria(point.achievement) == 1 then
-                tooltip_criteria(point.achievement, 1)
+                tooltip_criteria(tooltip, point.achievement, 1)
             end
         end
         if point.active then
