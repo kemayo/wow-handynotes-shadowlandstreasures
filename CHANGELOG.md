@@ -1,5 +1,10 @@
 # Changelog
 
+## Changed in v47
+
+* Add Protoform Synthesis mount pattern locations (still to come: pet patterns)
+* Add a point for the Locus Shift in the Gravid Repose
+
 ## Changed in v46
 
 * Fixed an error when mousing over Anima Shards in Bastion
