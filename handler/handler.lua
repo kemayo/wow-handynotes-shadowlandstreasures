@@ -563,7 +563,7 @@ local function handle_tooltip(tooltip, point)
                     end
                     local known = ns.itemIsKnown(item)
                     if known ~= nil and (known == true or not ns.itemRestricted(item)) then
-                        link = link .. CreateAtlasMarkup(known and "common-icon-checkmark" or "common-icon-redx")
+                        link = link .. " " .. CreateAtlasMarkup(known and "common-icon-checkmark" or "common-icon-redx")
                     end
                     tooltip:AddDoubleLine(label, quick_texture_markup(icon) .. " " .. link)
                 else
