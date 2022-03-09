@@ -8,6 +8,7 @@ ns.groups["lostovoid"] = "{item:190239}"
 -- Note to self: first Pocopoc costume unlock gets 65531
 -- wicked pocopoc: 65530 (but not really point-friendly)
 -- gravid repose, interior locus arrangement 65330
+-- gravid repose, primary locus arrangement 65337
 
 local MOUNT = "|A:StableMaster:15:15|a"
 local PET = "|A:WildBattlePetCapturable:15:15|a"
@@ -1326,3 +1327,11 @@ ns.RegisterPoints(1970, { -- Zereth Mortis
 --     hide_before=ns.conditions.QuestComplete(64844), -- The Pilgrimage Ends
 --     group="Transportation",
 -- })
+ns.RegisterPoints(1970, {
+    [50553200] = {
+        label="{npc:184384}", -- Locus Shift
+        note="Inside the Gravid Repose",
+        atlas="flightmaster_progenitorobelisk-taxinode_neutral",
+        group="Transportation",
+    },
+})
