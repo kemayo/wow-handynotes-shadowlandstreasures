@@ -1,5 +1,9 @@
 # Changelog
 
+## Changed in v46
+
+* Fixed an error when mousing over Anima Shards in Bastion
+
 ## Changed in v45
 
 * The right-click menu on points now shows an option to open the Achievements UI to the related achievement
