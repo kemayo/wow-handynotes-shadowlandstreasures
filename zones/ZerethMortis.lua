@@ -9,6 +9,8 @@ ns.groups["lostovoid"] = "{item:190239}"
 -- wicked pocopoc: 65530 (but not really point-friendly)
 -- gravid repose, interior locus arrangement 65330
 -- gravid repose, primary locus arrangement 65337
+-- 58013 tripped while I was killing Dreadlord Infliltrators after I got loot from one
+-- 65622 when I was forge-tapping and got a honeycombed lattice
 
 local MOUNT = "|A:StableMaster:15:15|a"
 local PET = "|A:WildBattlePetCapturable:15:15|a"
@@ -495,7 +497,7 @@ ns.RegisterPoints(1970, { -- Zereth Mortis
         note="Inside the Gravid Repose",
     }),
     [53302560] = makeSchematic(65398, 189475, MOUNT), -- Schematic: Forged Spiteflyer
-    [31505030] = makeSchematic(65388, 189465, MOUNT), -- Schematic: Genesis Crawler
+    [31505030] = makeSchematic(65388, 189465, MOUNT, {note="On top of the entryway to the Genesis Alcove"}), -- Schematic: Genesis Crawler
     [34904870] = makeSchematic(65390, 189467, MOUNT, { -- Schematic: Ineffable Skitterer
         note="Talk to {npc:185092} inside Firim's hideout while dead",
     }),
@@ -538,7 +540,10 @@ ns.RegisterPoints(1970, { -- Zereth Mortis
     [76405160] = makeSchematic(65391, 189468, MOUNT, { -- Schematic: Goldplate Bufonid
         note="Drops from {npc:178803} in this area",
     }),
-    [51806270] = makeSchematic(65680, 190585, MOUNT, { -- Schematic: Heartbond Lupine
+    [50107340] = makeSchematic(65391, 189468, MOUNT, { -- Schematic: Goldplate Bufonid
+        note="Drops from {npc:178803} in this area",
+    }),
+    [53106385] = makeSchematic(65680, 190585, MOUNT, { -- Schematic: Heartbond Lupine
         note="Drops from {npc:179939} inside the Choral Residium",
     }),
     [61402800] = makeSchematic(65391, 189459, MOUNT, { -- Schematic: Mawdapted Raptora
@@ -561,12 +566,12 @@ hide_flying = {
 -- Pet schematics
 ns.RegisterPoints(1970, { -- Zereth Mortis
     [78105310] = makeSchematic(65327, 189418, PET, {note="Underwater"}), -- Schematic: Ambystan Darter
-    [61204260] = makeSchematic(65332, 189434, PET), -- Schematic: Fierce Scarabid
+    [61204260] = makeSchematic(65332, 189434, PET, {note="Under the platform"}), -- Schematic: Fierce Scarabid
     [58407450] = makeSchematic(65357, 189444, PET, { -- Schematic: Leaping Leporid
         hide_before=hide_flying,
         note="In a floating tree",
     }),
-    [28105000] = makeSchematic(65358, 189445, PET), -- Schematic: Microlicid
+    [28105000] = makeSchematic(65358, 189445, PET, {note="Hidden in the leaves of the floating tree"}), -- Schematic: Microlicid
     [53807250] = makeSchematic(65333, 189435, PET, { -- Schematic: Multichicken
         hide_before=ns.conditions.QuestComplete(65522),
         note="In the Mistaken Ovoid treasure; if you looted it before unlocking protoforms, it should just be sitting there",
@@ -580,9 +585,12 @@ ns.RegisterPoints(1970, { -- Zereth Mortis
         note="In the Rondure Alcove area of the Resonant Peaks, solve a jumping puzzle to reach it",
     }),
     [52207530] = makeSchematic(65354, 189442, PET, { -- Schematic: Prototickles
-        note="In a chain overlooking the falls; jump down from the East",
+        note="In a chain overlooking the falls, hidden in the leaves; jump down from the East and edge up to it",
     }),
-    [57807780] = makeSchematic(65359, 189446, PET, {note="On a shelf at the back of the Lexical Grotto"}), -- Schematic: Shelly
+    [57807780] = makeSchematic(65359, 189446, PET, { -- Schematic: Shelly
+        note="On the back of the shelves at the back of the Lexical Grotto; requires some sort of movement ability to reach",
+        route={59258145, 57807780},
+    }),
     [67203260] = makeSchematic(65355, 189443, PET, { -- Schematic: Terror Jelly
         hide_before=hide_flying,
         note="On a pillar, you'll need flying or a glider",
@@ -591,11 +599,15 @@ ns.RegisterPoints(1970, { -- Zereth Mortis
     [58807720] = makeSchematic(65360, 189447, PET, { -- Schematic: Viperid Menace
         hide_before=ns.conditions.QuestComplete(65173),
         note="In the Library Vault treasure; if you looted it before unlocking protoforms, it should just be sitting there",
+        route={59258145, 58807720},
     }),
     -- drops
     [76405430] = makeSchematic(65351, 189441, PET, { -- Schematic: Resonant Echo
         note="Find in Crystallized Echo of the First Song in this area",
     }),
+}, schematic)
+ns.RegisterPoints(2028, { -- Locrian Esper
+    [74605160] = makeSchematic(65361, 189448, PET), -- Schematic: Tunneling Vombata
 }, schematic)
 
 -- Puzzle caches
