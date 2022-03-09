@@ -122,11 +122,11 @@ ns.RegisterPoints(1970, { -- Zereth Mortis
         quest=65173,
         achievement=15331, criteria=52887,
         loot={
-            {189447, quest=65360, note=MOUNT}, -- Schematic: Viperid Menace
+            {189447, quest=65360, note=PET}, -- Schematic: Viperid Menace
         },
         note="In cave. Use tablets to find the correct {spell:362062} buff to make the chest appear",
     },
-    [59258145] = path{quest=65173, achievement=15331, criteria=52887,},
+    [59258145] = path{quest=65173, achievement=15331, criteria=52887,route={59258145,58857705},},
 
     [60603055] = { -- Mawsworn Cache
         quest=65441,
@@ -476,16 +476,19 @@ local schematic = {
     hide_before=ns.conditions.QuestComplete(65427), -- A New Architect
     group="Schematics",
 }
+local hide_flying = {
+    ns.conditions.QuestComplete(65427), -- A New Architect
+    ns.conditions.Achievement(15514), -- flying
+}
+
+-- Mount schematics
 
 ns.RegisterPoints(1970, { -- Zereth Mortis
     [64203560] = makeSchematic(65400, 189477, MOUNT, { -- Schematic: Darkened Vombata
         note="In the floating cage. You can jump up the chain under it if you're lucky, but it's fiddly.",
     }),
     [62004350] = makeSchematic(65381, 189458, MOUNT, { -- Schematic: Desertwing Hunter
-        hide_before={
-            ns.conditions.QuestComplete(65427), -- A New Architect
-            ns.conditions.Achievement(15514), -- flying
-        },
+        hide_before=hide_flying,
         note="On top of a tall pillar, you'll need flying",
     }),
     [50203230] = makeSchematic(65396, 189473, MOUNT, { -- Schematic: Bronzewing Vespoid
@@ -500,10 +503,7 @@ ns.RegisterPoints(1970, { -- Zereth Mortis
         note="Inside the Chamber of Shaping",
     }),
     [47700950] = makeSchematic(65387, 189464, MOUNT, { -- Schematic: Scarlet Helicid
-        hide_before={
-            ns.conditions.QuestComplete(65427), -- A New Architect
-            ns.conditions.Achievement(15514), -- flying
-        },
+        hide_before=hide_flying,
         note="High up on an arch",
     }),
     [62962152] = makeSchematic(65389, 189466, MOUNT, { -- Schematic: Tarachnid Creeper
@@ -535,7 +535,7 @@ ns.RegisterPoints(1970, { -- Zereth Mortis
         hide_before=ns.conditions.QuestComplete(65441),
     }),
     -- mob drops
-    [76405300] = makeSchematic(65391, 189468, MOUNT, { -- Schematic: Goldplate Bufonid
+    [76405160] = makeSchematic(65391, 189468, MOUNT, { -- Schematic: Goldplate Bufonid
         note="Drops from {npc:178803} in this area",
     }),
     [51806270] = makeSchematic(65680, 190585, MOUNT, { -- Schematic: Heartbond Lupine
@@ -547,6 +547,55 @@ ns.RegisterPoints(1970, { -- Zereth Mortis
 }, schematic)
 ns.RegisterPoints(2029, { -- Gravid Repose
     [49004060] = makeSchematic(65396, 189473, MOUNT), -- Schematic: Bronzewing Vespoid
+}, schematic)
+
+schematic = CopyTable(schematic)
+schematic.atlas = nil
+schematic.texture = ns.atlas_texture("poi-islands-table", {r=0,g=1,b=1,a=1,scale=0.9})
+schematic.hide_before=ns.conditions.QuestComplete(65419) -- Protoform Synthesis
+hide_flying = {
+    ns.conditions.QuestComplete(65419), -- A New Architect
+    ns.conditions.Achievement(15514), -- flying
+}
+
+-- Pet schematics
+ns.RegisterPoints(1970, { -- Zereth Mortis
+    [78105310] = makeSchematic(65327, 189418, PET, {note="Underwater"}), -- Schematic: Ambystan Darter
+    [61204260] = makeSchematic(65332, 189434, PET), -- Schematic: Fierce Scarabid
+    [58407450] = makeSchematic(65357, 189444, PET, { -- Schematic: Leaping Leporid
+        hide_before=hide_flying,
+        note="In a floating tree",
+    }),
+    [28105000] = makeSchematic(65358, 189445, PET), -- Schematic: Microlicid
+    [53807250] = makeSchematic(65333, 189435, PET, { -- Schematic: Multichicken
+        hide_before=ns.conditions.QuestComplete(65522),
+        note="In the Mistaken Ovoid treasure; if you looted it before unlocking protoforms, it should just be sitting there",
+    }),
+    [50502760] = makeSchematic(65348, 189440, PET, { -- Schematic: Omnipotential Core
+        hide_before={
+            ns.conditions.QuestComplete(65427), -- A New Architect
+            ns.conditions.GarrisonTalent(1902), -- Altonian Understanding
+            ns.conditions.QuestComplete(65328), -- Arbiter in the Making, end of A Means to an End storyline
+        },
+        note="In the Rondure Alcove area of the Resonant Peaks, solve a jumping puzzle to reach it",
+    }),
+    [52207530] = makeSchematic(65354, 189442, PET, { -- Schematic: Prototickles
+        note="In a chain overlooking the falls; jump down from the East",
+    }),
+    [57807780] = makeSchematic(65359, 189446, PET, {note="On a shelf at the back of the Lexical Grotto"}), -- Schematic: Shelly
+    [67203260] = makeSchematic(65355, 189443, PET, { -- Schematic: Terror Jelly
+        hide_before=hide_flying,
+        note="On a pillar, you'll need flying or a glider",
+    }),
+    [55705340] = makeSchematic(65361, 189448, PET, {note="Inside the Locrian Esper"}), -- Schematic: Tunneling Vombata
+    [58807720] = makeSchematic(65360, 189447, PET, { -- Schematic: Viperid Menace
+        hide_before=ns.conditions.QuestComplete(65173),
+        note="In the Library Vault treasure; if you looted it before unlocking protoforms, it should just be sitting there",
+    }),
+    -- drops
+    [76405430] = makeSchematic(65351, 189441, PET, { -- Schematic: Resonant Echo
+        note="Find in Crystallized Echo of the First Song in this area",
+    }),
 }, schematic)
 
 -- Puzzle caches
@@ -919,12 +968,12 @@ ns.RegisterPoints(1970, { -- Zereth Mortis
         note="This doesn't spawn every day. To spawn it, kill Annelid mobs nearby.",
     },
 
-    [52307540] = { -- Hirukon
+    [51807420] = { -- Hirukon
         npc=180978,
         quest=65548, -- 65785 for killing with the lure buff, 65039 for making the lure
         criteria=52990,
         active=ns.conditions.Item(187923),
-        atlas="VignetteKillElite", scale=1.2,
+        atlas="VignetteKillElite", scale=1,
         loot={
             189905, -- Hirukon's Syrupy Squeezers
             189946, -- Jellied Aurelid Mantle
