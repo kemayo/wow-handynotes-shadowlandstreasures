@@ -1,5 +1,10 @@
 # Changelog
 
+## Changed in v48
+
+* Add Protoform Synthesis pet pattern locations (still missing: the ones in the raid)
+* Minor tweaks to some points and notes
+
 ## Changed in v47
 
 * Add Protoform Synthesis mount pattern locations (still to come: pet patterns)
