@@ -1,5 +1,10 @@
 # Changelog
 
+## Changed in v49
+
+* Add Protoform Synthesis pattern locations within the Sepulcher of the First Ones raid
+* Maw: add the Infused Etherwyrm pet to the Night Fae assault
+
 ## Changed in v48
 
 * Add Protoform Synthesis pet pattern locations (still missing: the ones in the raid)
