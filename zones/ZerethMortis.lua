@@ -553,6 +553,16 @@ ns.RegisterPoints(1970, { -- Zereth Mortis
 ns.RegisterPoints(2029, { -- Gravid Repose
     [49004060] = makeSchematic(65396, 189473, MOUNT), -- Schematic: Bronzewing Vespoid
 }, schematic)
+ns.RegisterPoints(2047, { -- Sepulcher of the First Ones: Immortal Hearth
+    [46003070] = makeSchematic(65384, 189461, MOUNT, { -- Schematic: Serenade
+        note="Hanging in a chain-link under the floating island",
+    }),
+}, schematic)
+ns.RegisterPoints(2061, { -- Sepulcher of the First Ones: Ephemeral Plains
+    [63205140] = makeSchematic(65399, 189476, MOUNT, { -- Schematic: Curious Crystalsniffer
+        note="Defeat {npc:184915:Halondrus}, then loot this from the second-phase room. You've got a reasonably short time after the boss kill to get it.",
+    }),
+}, schematic)
 
 schematic = CopyTable(schematic)
 schematic.atlas = nil
@@ -608,6 +618,9 @@ ns.RegisterPoints(1970, { -- Zereth Mortis
 }, schematic)
 ns.RegisterPoints(2028, { -- Locrian Esper
     [74605160] = makeSchematic(65361, 189448, PET), -- Schematic: Tunneling Vombata
+}, schematic)
+ns.RegisterPoints(2049, { -- Sepulcher of the First Ones: The Endless Foundry
+    [66901770] = makeSchematic(65336, 189437, PET, {note="Can drop from {npc:182169:Lihuvim}"}), -- Schematic: Stabilized Geomental
 }, schematic)
 
 -- Puzzle caches
