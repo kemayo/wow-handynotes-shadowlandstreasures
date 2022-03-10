@@ -788,6 +788,28 @@ ns.RegisterPoints(1543, {
     },
     group="Rift Hidden Caches",
 })
+ns.RegisterPoints(1543, {
+    [23104225] = {
+        quest=64000,
+        label="{item:186191:Infused Etherwyrm}",
+        loot={
+            {186191, pet=3099}, -- Infused Etherwyrm
+        },
+        note="When the {quest:63951} quest is available, find the {item:186190} from the {npc:179030:Elusive Keybinder} in the rift phase, then bring it to the cage inside the Desolate Hollow",
+    },
+    [21103890] = path{label="Desolate Hollow entrance", route={21103890,23104225}},
+    [23804050] = {
+        label="{npc:179030:Elusive Keybinder}",
+        loot={186190}, -- Etherwyrm Cage Key
+        note="In the rift, loot the key",
+    },
+}, {
+    quest=64000,
+    atlas="wildbattlepetcapturable",
+    minimap=true,
+    poi={ASSAULT_NIGHTFAE},
+})
+
 -- Rifts
 ns.RegisterPoints(1543, {
     [47457620] = {quest=64265,texture=icon_blue,note="In rift, in cave",},
