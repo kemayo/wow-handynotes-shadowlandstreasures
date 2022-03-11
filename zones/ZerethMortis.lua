@@ -1135,6 +1135,7 @@ ns.RegisterPoints(1970, { -- Zereth Mortis
             190003, -- Skyward Savior's Talon
             187832, -- Schematic: Pure-Air Sail Extensions (engineer only)
         },
+        note="You need a movement ability, or to use the {npc:184384:Locus Shift} to reach the Resonant Peaks",
     },
 
     [54507345] = { -- Tethos
