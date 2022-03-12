@@ -399,7 +399,9 @@ ns.RegisterPoints(1543, {
             186240, -- Broodmotherhide Cloak
         },
         level=60,
+        note="In the Pit of Anguish",
     },
+    -- [54558015] = path{label=CAVE, achievement=14660, criteria=49491, quest=62211, route={54558015, 54507930}},
     [36253745] = { -- Soulsmith Yol-Mattar
         achievement=14660, criteria=49482,
         quest=59441,
