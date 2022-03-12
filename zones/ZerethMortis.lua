@@ -398,7 +398,8 @@ ns.RegisterPoints(1970, { -- Zereth Mortis
     quest=65184,
     label="Prying Eye Discovery",
     -- achievement=15508, criteria=53293, -- Fashion of the First Ones
-    note="Multiple spawn points; might be easier once you can fly",
+    active={ns.conditions.Item(188170), ns.conditions.Achievement(15514), any=true}, -- flying or the Portal Play daily item
+    note="Multiple spawn points; you need to be on {quest:65142} or have flying unlocked",
     loot={
         {190096, quest=65534}, -- Pocobold
     },
