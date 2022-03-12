@@ -207,8 +207,8 @@ ns.RegisterPoints(1543, {
         npc=166398,
         loot={
             183141, -- Stygic Magma
-            185473, -- Soulforger's Tools
             186613, -- Rhovus' Linked Greaves
+            {185473, quest=63667}, -- Soulforger's Tools (for the Feral Shadehound)
         },
         level=60,
     },
