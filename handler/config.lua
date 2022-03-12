@@ -349,12 +349,22 @@ local itemInBags = testMaker(function(item) return GetItemCount(item, true) > 0 
 local allQuestsComplete = testMaker(function(quest) return C_QuestLog.IsQuestFlaggedCompleted(quest) end)
 ns.allQuestsComplete = allQuestsComplete
 
+local temp_criteria = {}
 local allCriteriaComplete = testMaker(function(criteria, achievement)
     local _, _, completed, _, _, completedBy = (criteria < 40 and GetAchievementCriteriaInfo or GetAchievementCriteriaInfoByID)(achievement, criteria)
     if not (completed and (not completedBy or completedBy == ns.playerName)) then
         return false
     end
     return true
+end, function(test, input, achievement, ...)
+    if input == true then
+        wipe(temp_criteria)
+        for i=1,GetAchievementNumCriteria(achievement) do
+            table.insert(temp_criteria, i)
+        end
+        input = temp_criteria
+    end
+    return doTest(test, input, achievement, ...)
 end)
 
 local brokenItems = {
