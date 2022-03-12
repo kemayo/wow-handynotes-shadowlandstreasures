@@ -294,7 +294,7 @@ local function work_out_label(point)
         -- handle multiples?
         local _, link = GetItemInfo(ns.lootitem(point.loot[1]))
         if link then
-            return link
+            return link:gsub("[%[%]]", "")
         end
         fallback = 'item:'..ns.lootitem(point.loot[1])
     end
