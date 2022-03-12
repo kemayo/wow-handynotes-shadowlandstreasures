@@ -95,11 +95,11 @@ ns.RegisterPoints(1970, { -- Zereth Mortis
     [67006935] = { -- Forgotten Proto-Vault
         quest=65178,
         achievement=15331, criteria=52967,
-        requires_worldquest=65089,
+        active={ns.conditions.WorldQuestActive(65089), ns.conditions.Achievement(15514), any=true}, -- WQ or flying
         loot={
             {189469, quest=65393, note=MOUNT}, -- Schematic: Prototype Leaper
         },
-        note="Only reachable during the {quest:65089} world quest",
+        note="Only reachable during the {worldquest:65089} world quest",
     },
 
     [38957320] = { -- Gnawed Valise
