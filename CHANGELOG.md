@@ -1,5 +1,10 @@
 # Changelog
 
+## Changed in v50
+
+* Fix an error if collectables weren't counting for completion
+* Explain Tahkwitz
+
 ## Changed in v49
 
 * Add Protoform Synthesis pattern locations within the Sepulcher of the First Ones raid
