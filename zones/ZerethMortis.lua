@@ -406,22 +406,6 @@ ns.RegisterPoints(1970, { -- Zereth Mortis
 })
 
 ns.RegisterPoints(1970, { -- Zereth Mortis
-    -- Pulp-Covered Relic
-    [41903400] = {},
-    [50304120] = {},
-    [52804580] = {},
-    [53402570] = {},
-    [64356345] = {},
-}, {
-    quest=65501,
-    label="Pulp-Covered Relic",
-    note="Multiple spawn points",
-    loot={
-        {189474, quest=65397, note=MOUNT}, -- Schematic: Buzz
-    },
-})
-
-ns.RegisterPoints(1970, { -- Zereth Mortis
     -- Sandworn Chest
     [60002585] = {},
     [60853785] = {},
@@ -564,6 +548,24 @@ ns.RegisterPoints(2061, { -- Sepulcher of the First Ones: Ephemeral Plains
         note="Defeat {npc:184915:Halondrus}, then loot this from the second-phase room. You've got a reasonably short time after the boss kill to get it.",
     }),
 }, schematic)
+
+ns.RegisterPoints(1970, { -- Zereth Mortis
+    -- Pulp-Covered Relic
+    -- no hide_before because you *can* loot it, it just won't have the schematic
+    [41903400] = {},
+    [50304120] = {},
+    [52804580] = {},
+    [53402570] = {},
+    [64356345] = {},
+}, {
+    quest=65501,
+    label="Pulp-Covered Relic",
+    note="Multiple spawn points",
+    loot={
+        {189474, quest=65397, note=MOUNT}, -- Schematic: Buzz
+    },
+    group="Schematics",
+})
 
 schematic = CopyTable(schematic)
 schematic.atlas = nil
