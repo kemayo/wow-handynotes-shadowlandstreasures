@@ -625,7 +625,8 @@ ns.RegisterPoints(2049, { -- Sepulcher of the First Ones: The Endless Foundry
 }, schematic)
 
 ns.RegisterPoints(1970, {
-    [58608990] = {note="At the top of the waterfall"},
+    -- confirm this one with flying? wowhead poster *swears* it's real
+    -- [58608990] = {note="At the top of the waterfall"},
     [77404530] = {},
     [77605900] = {note="In cave"},
     [77606040] = {},
