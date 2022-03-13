@@ -1,5 +1,13 @@
 # Changelog
 
+## Changed in v51
+
+* Show the Crystallized Echo of the First Song locations
+* Forgotten Proto-Vault: show as inactive if you don't have flying or the Frog'it WQ
+* Prying Eye Discovery: show as inactive if you don't have flying or the Portal Play quest item
+* Improve display if the tooltip's label is coming from the loot (remove the [] around it)
+* Maw: add the pickup quest to the Soulforger's Tools on Rhovus
+
 ## Changed in v50
 
 * Fix an error if collectables weren't counting for completion
