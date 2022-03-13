@@ -73,23 +73,41 @@ do
         return nodeValueOrFunc('values', options, ...)
     end
 end
-local zoneGroups, zoneHasGroups
+local zoneGroups, zoneHasGroups, zoneAchievements, zoneHasAchievements
 do
-    local cache = {}
+    local zcache = {}
     function zoneGroups(uiMapID)
-        if not cache[uiMapID] then
+        if not zcache[uiMapID] then
             local relevant = {}
             for _, point in pairs(ns.points[uiMapID] or {}) do
                 if point.group then
                     relevant[point.group] = point.group
                 end
             end
-            cache[uiMapID] = relevant
+            zcache[uiMapID] = relevant
         end
-        return cache[uiMapID]
+        return zcache[uiMapID]
     end
     function zoneHasGroups(uiMapID)
         for _, _ in pairs(zoneGroups(uiMapID)) do
+            return true
+        end
+    end
+    local acache = {}
+    function zoneAchievements(uiMapID)
+        if not acache[uiMapID] then
+            local relevant = {}
+            for _, point in pairs(ns.points[uiMapID] or {}) do
+                if point.achievement then
+                    relevant[point.achievement] = true
+                end
+            end
+            acache[uiMapID] = relevant
+        end
+        return acache[uiMapID]
+    end
+    function zoneHasAchievements(uiMapID)
+        for _, _ in pairs(zoneAchievements(uiMapID)) do
             return true
         end
     end
@@ -114,6 +132,7 @@ function ns.SetupMapOverlay()
         self.IconOverlay:Hide()
     end
     frame.InitializeDropDown = function(self, level, menuList)
+        local uiMapID = WorldMapFrame.mapID
         local info = UIDropDownMenu_CreateInfo()
         level = level or 1
         if level == 1 then
@@ -175,6 +194,41 @@ function ns.SetupMapOverlay()
 
             UIDropDownMenu_AddSeparator(level)
 
+            if not OptionsDropdown.isHidden(ns.options, "zonesHidden") and zoneHasGroups(uiMapID) then
+                wipe(info)
+                info.isNotRadio = true
+                info.keepShownOnClick = true
+                info.tooltipOnButton = true
+                info.func = function(button, group)
+                    ns.db.groupsHiddenByZone[uiMapID][group] = not button.checked
+                    ns.HL:Refresh()
+                end
+                info.tooltipTitle = "Hide this type of point"
+                for _, group in iterKeysByValue(zoneGroups(uiMapID)) do
+                    info.text = ns.render_string(ns.groups[group] or group)
+                    info.arg1 = group
+                    info.checked = not ns.db.groupsHiddenByZone[uiMapID][group]
+                    UIDropDownMenu_AddButton(info, level)
+                end
+            end
+            if not OptionsDropdown.isHidden(ns.options, "achievementsHidden") and zoneHasAchievements(uiMapID) then
+                wipe(info)
+                info.isNotRadio = true
+                info.keepShownOnClick = true
+                info.tooltipOnButton = true
+                info.func = function(button, achievementid)
+                    ns.db.achievementsHidden[achievementid] = not button.checked
+                    ns.HL:Refresh()
+                end
+                info.tooltipTitle = "Hide this type of point"
+                for achievementid in pairs(zoneAchievements(uiMapID)) do
+                    info.text = ns.render_string(("{achievement:%d}"):format(achievementid))
+                    info.arg1 = achievementid
+                    info.checked = not ns.db.achievementsHidden[achievementid]
+                    UIDropDownMenu_AddButton(info, level)
+                end
+            end
+
             wipe(info)
             info.hasArrow = true
             info.keepShownOnClick = true
@@ -235,12 +289,7 @@ function ns.SetupMapOverlay()
             end
             local values = OptionsDropdown.values(ns.options, parent)
             if parent == "achievementsHidden" then
-                local relevant = {}
-                for _, point in pairs(ns.points[currentZone] or {}) do
-                    if point.achievement then
-                        relevant[point.achievement] = true
-                    end
-                end
+                local relevant = zoneAchievements(currentZone)
                 for _, achievementid in iterKeysByValue(values) do
                     info.text = values[achievementid]
                     info.value = achievementid
