@@ -576,7 +576,7 @@ hide_flying = {
 
 -- Pet schematics
 ns.RegisterPoints(1970, { -- Zereth Mortis
-    [78105310] = makeSchematic(65327, 189418, PET, {note="Underwater"}), -- Schematic: Ambystan Darter
+    [78105310] = makeSchematic(65327, 189418, PET, {note="Underwater by the platform with {npc:185312}"}), -- Schematic: Ambystan Darter
     [61204260] = makeSchematic(65332, 189434, PET, {note="Under the platform"}), -- Schematic: Fierce Scarabid
     [58407450] = makeSchematic(65357, 189444, PET, { -- Schematic: Leaping Leporid
         hide_before=hide_flying,
@@ -614,7 +614,7 @@ ns.RegisterPoints(1970, { -- Zereth Mortis
     }),
     -- drops
     [76405430] = makeSchematic(65351, 189441, PET, { -- Schematic: Resonant Echo
-        note="Find in Crystallized Echo of the First Song in this area",
+        note="Find in {item:189172:Crystallized Echo of the First Song} in this area",
     }),
 }, schematic)
 ns.RegisterPoints(2028, { -- Locrian Esper
@@ -623,6 +623,27 @@ ns.RegisterPoints(2028, { -- Locrian Esper
 ns.RegisterPoints(2049, { -- Sepulcher of the First Ones: The Endless Foundry
     [66901770] = makeSchematic(65336, 189437, PET, {note="Can drop from {npc:182169:Lihuvim}"}), -- Schematic: Stabilized Geomental
 }, schematic)
+
+ns.RegisterPoints(1970, {
+    [58608990] = {note="At the top of the waterfall"},
+    [77404530] = {},
+    [77605900] = {note="In cave"},
+    [77606040] = {},
+    [78205440] = {note="On ledge, needs movement abilities"},
+    [78305310] = {note="Under the platform, reachable from 78.4 52.9"},
+}, {
+    label="{item:189172:Crystallized Echo of the First Song}",
+    loot={
+        {189441, quest=65351, note=PET}, -- Schematic: Resonant Echo
+        189172, -- Crystallized Echo of the First Song
+    },
+    note="These glow and have musical notes coming from them",
+    atlas="islands-azeritechest",
+    minimap=true,
+    hide_before=ns.conditions.QuestComplete(65427), -- A New Architect (they have a pet schematic, but the nodes require this apparently...)
+    group="Schematics",
+    ShouldShow = function() return true end, -- this gets checked after the group, so these are still hideable, this just suppresses the completion from the schematic-quest
+})
 
 -- Puzzle caches
 -- The WQs for these all use 65418 + a WQ quest regardless of the type of cache
