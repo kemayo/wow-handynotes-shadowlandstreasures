@@ -589,8 +589,11 @@ ns.should_show_point = function(coord, point, currentZone, isMinimap)
     if point.group and ns.db.groupsHidden[point.group] or ns.db.groupsHiddenByZone[currentZone][point.group] then
         return false
     end
-    if point.ShouldShow and not point:ShouldShow() then
-        return false
+    if point.ShouldShow then
+        local show = point:ShouldShow()
+        if show ~= nil then
+            return show
+        end
     end
     if point.outdoors_only and IsIndoors() then
         return false
