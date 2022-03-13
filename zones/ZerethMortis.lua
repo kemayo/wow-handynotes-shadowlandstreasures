@@ -2,9 +2,6 @@ local myname, ns = ...
 
 local path = ns.path
 
-ns.groups["puzzlecache"] = "Caches of Creation"
-ns.groups["lostovoid"] = "{item:190239}"
-
 -- Note to self: first Pocopoc costume unlock gets 65531
 -- wicked pocopoc: 65530 (but not really point-friendly)
 -- gravid repose, interior locus arrangement 65330
