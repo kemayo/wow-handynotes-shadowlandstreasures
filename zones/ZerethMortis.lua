@@ -11,6 +11,10 @@ local path = ns.path
 -- gravid repose, quartus locus arrangement 65340
 -- gravid repose, quintus locus arrangement 65341
 -- gravid repose, ultimus locus arrangement 65342 (also 65457 - all-complete?)
+-- gravid repose, camber alcove arrangement 65343 (also 65378)
+-- gravid repose, rondure alcove arrangement 65345 (also 65378)
+-- gravid repose, fulgore alcove arrangement 65347 47.86 30.46
+-- rondure alcove, rondure cache 42904030: 65567, contained a second pocobold...
 -- 58013 tripped while I was killing Dreadlord Infliltrators after I got loot from one
 -- 65622 when I was forge-tapping and got a honeycombed lattice
 -- 65539 after Arbiter in the Making -- could be for flight, it's complete on other characters as well
@@ -378,10 +382,15 @@ ns.RegisterPoints(1970, { -- Zereth Mortis
 -- Miscellaneous treasures
 
 ns.RegisterPoints(1970, { -- Zereth Mortis
-    [46003900] = {
-        quest=nil,
+    [46903950] = {
+        quest=65643,
         label="Torn Ethereal Drape",
+        loot={
+            188054, -- Antecedent Drape (same caveat as the Valise)
+        },
         active={ns.conditions.GarrisonTalent(1902),ns.conditions.QuestComplete(65328)},
+        notes="Unlock the Fulgore Alcove arrangement @ 47.8 30.4, then use the second teleporter in the Inner Locus to reach this. Activate the orb closest to the center of the room and ride it until it gets close to the treasure.",
+        route={50553200, 46903950},
     },
     [42005185] = {
         quest=65183,
@@ -502,14 +511,15 @@ ns.RegisterPoints(1970, { -- Zereth Mortis
             ns.conditions.QuestComplete(64809), -- One Half of the Equation
         },
     }),
-    -- [47703450] = makeSchematic(65386, 189463, MOUNT, { -- Schematic: Unsuccessful Prototype Fleetpod
-    --     note="Use the teleporter here, gather Cosmic Energy, go to the Gravid Repose, teleport to the Inner Locus then to the Camber Alcove, then complete the Inert Prototype minigame",
-    --     hide_before={
-    --         ns.conditions.QuestComplete(65427), -- A New Architect
-    --         ns.conditions.GarrisonTalent(1902), -- Altonian Understanding
-    --         ns.conditions.QuestComplete(65328), -- Arbiter in the Making, end of A Means to an End storyline
-    --     }
-    -- }),
+    [50003340] = makeSchematic(65386, 189463, MOUNT, { -- Schematic: Unsuccessful Prototype Fleetpod
+        note="Unlock the Camber Alcove @ 47.7 34.5, use the Inner Locus to reach it, then complete the Inert Prototype minigame",
+        hide_before={
+            ns.conditions.QuestComplete(65427), -- A New Architect
+            ns.conditions.GarrisonTalent(1902), -- Altonian Understanding
+            ns.conditions.QuestComplete(65328), -- Arbiter in the Making, end of A Means to an End storyline
+        },
+        route={50553200, 50003340},
+    }),
     [50352715] = makeSchematic(65395, 189472, MOUNT, { -- Schematic: Vespoid Flutterer
         -- this one is accessible at the base state
         note="In the Resonant Peaks, accessed through the Gravid Repose teleporters",
@@ -539,6 +549,14 @@ ns.RegisterPoints(1970, { -- Zereth Mortis
     }),
 }, schematic)
 ns.RegisterPoints(2029, { -- Gravid Repose
+    [50007700] = makeSchematic(65386, 189463, MOUNT, {
+        note="Unlock the Camber Alcove outside @ 47.7 34.5, use the Inner Locus to reach it, then complete the Inert Prototype minigame",
+        hide_before={
+            ns.conditions.QuestComplete(65427), -- A New Architect
+            ns.conditions.GarrisonTalent(1902), -- Altonian Understanding
+            ns.conditions.QuestComplete(65328), -- Arbiter in the Making, end of A Means to an End storyline
+        },
+    }), -- Schematic: Unsuccessful Prototype Fleetpod
     [49004060] = makeSchematic(65396, 189473, MOUNT), -- Schematic: Bronzewing Vespoid
 }, schematic)
 ns.RegisterPoints(2047, { -- Sepulcher of the First Ones: Immortal Hearth
@@ -592,13 +610,13 @@ ns.RegisterPoints(1970, { -- Zereth Mortis
         hide_before=ns.conditions.QuestComplete(65522),
         note="In the Mistaken Ovoid treasure; if you looted it before unlocking protoforms, it should just be sitting there",
     }),
-    [50502760] = makeSchematic(65348, 189440, PET, { -- Schematic: Omnipotential Core
+    [42804060] = makeSchematic(65348, 189440, PET, { -- Schematic: Omnipotential Core
         hide_before={
             ns.conditions.QuestComplete(65427), -- A New Architect
             ns.conditions.GarrisonTalent(1902), -- Altonian Understanding
             ns.conditions.QuestComplete(65328), -- Arbiter in the Making, end of A Means to an End storyline
         },
-        note="In the Rondure Alcove area of the Resonant Peaks, solve a jumping puzzle to reach it",
+        note="In the Rondure Alcove area of the Resonant Peaks, solve a jumping puzzle to reach it.\nUnlock Rondure Alcove @ 50.5 27.6 on the Tertius level.",
     }),
     [52207530] = makeSchematic(65354, 189442, PET, { -- Schematic: Prototickles
         note="In a chain overlooking the falls, hidden in the leaves; jump down from the East and edge up to it",
