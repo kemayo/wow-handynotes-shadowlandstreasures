@@ -6,8 +6,14 @@ local path = ns.path
 -- wicked pocopoc: 65530 (but not really point-friendly)
 -- gravid repose, interior locus arrangement 65330
 -- gravid repose, primary locus arrangement 65337
+-- gravid repose, secondus locus arrangement 65339
+-- gravid repose, tertius locus arrangement 65339
+-- gravid repose, quartus locus arrangement 65340
+-- gravid repose, quintus locus arrangement 65341
+-- gravid repose, ultimus locus arrangement 65342 (also 65457 - all-complete?)
 -- 58013 tripped while I was killing Dreadlord Infliltrators after I got loot from one
 -- 65622 when I was forge-tapping and got a honeycombed lattice
+-- 65539 after Arbiter in the Making -- could be for flight, it's complete on other characters as well
 
 local MOUNT = "|A:StableMaster:15:15|a"
 local PET = "|A:WildBattlePetCapturable:15:15|a"
@@ -1425,6 +1431,7 @@ ns.RegisterPoints(1970, {
         label="{npc:184384}", -- Locus Shift
         note="Inside the Gravid Repose",
         atlas="flightmaster_progenitorobelisk-taxinode_neutral",
+        minimap=true,
         group="Transportation",
     },
 })
