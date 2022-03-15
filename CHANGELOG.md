@@ -1,5 +1,11 @@
 # Changelog
 
+## Changed in v53
+
+* Locus Shift treasures and schematics are filled out
+* Tweaked the flying requirements on a few treasures
+* Achieved-as-found fix went too far, interfered with quest completion sometimes (todo: rewrite this check more comprehensively...)
+
 ## Changed in v52
 
 * Pull the point-groups in the current zone (groups and achievements) up to the top-level of the menu for easier access
