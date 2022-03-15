@@ -502,8 +502,7 @@ ns.RegisterPoints(1970, { -- Zereth Mortis
         note="Inside the Chamber of Shaping",
     }),
     [47700950] = makeSchematic(65387, 189464, MOUNT, { -- Schematic: Scarlet Helicid
-        hide_before=hide_flying,
-        note="High up on an arch",
+        note="High up on an arch. Without flying you can jump up from the northeast corner.",
     }),
     [62962152] = makeSchematic(65389, 189466, MOUNT, { -- Schematic: Tarachnid Creeper
         hide_before={
