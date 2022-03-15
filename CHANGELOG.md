@@ -1,5 +1,14 @@
 # Changelog
 
+## Changed in v52
+
+* Pull the point-groups in the current zone (groups and achievements) up to the top-level of the menu for easier access
+* "Count achieved as found" should only apply to points with quests, as its description claimed
+* Caches of Creation are not-visible by default
+* Put the Pulp-Covered Relic in the Schematics group
+* Note that one of the Crystallized Echo of the First Song locations requires flying
+* Show the locus shift on the minimap as well
+
 ## Changed in v51
 
 * Show the Crystallized Echo of the First Song locations
