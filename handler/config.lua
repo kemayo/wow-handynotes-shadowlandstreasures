@@ -502,7 +502,7 @@ local function everythingFound(point)
         end
         ret = true
     end
-    if ns.db.achievedfound and point.achievement then
+    if (ns.db.achievedfound or not point.quest) and point.achievement then
         if point.criteria then
             if not allCriteriaComplete(point.criteria, point.achievement) then
                 return false
@@ -519,6 +519,9 @@ local function everythingFound(point)
         if not C_Garrison.IsFollowerCollected(point.follower) then
             return false
         end
+        ret = true
+    end
+    if ns.db.questfound and point.quest and allQuestsComplete(point.quest) then
         ret = true
     end
     return ret
@@ -612,9 +615,6 @@ ns.should_show_point = function(coord, point, currentZone, isMinimap)
     end
     if not ns.db.found and not point.always then
         if everythingFound(point) == true then
-            return false
-        end
-        if ns.db.questfound and point.quest and allQuestsComplete(point.quest) then
             return false
         end
         -- the rest are proxies for the actual "found" status:
