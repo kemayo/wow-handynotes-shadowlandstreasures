@@ -3,6 +3,7 @@ local myname, ns = ...
 local path = ns.path
 
 -- Note to self: first Pocopoc costume unlock gets 65531
+-- Lovely Regal pocopoc from achievement is 65600
 -- wicked pocopoc: 65530 (but not really point-friendly)
 -- gravid repose, interior locus arrangement 65330
 -- gravid repose, primary locus arrangement 65337

@@ -521,9 +521,6 @@ local function everythingFound(point)
         end
         ret = true
     end
-    if ns.db.questfound and point.quest and allQuestsComplete(point.quest) then
-        ret = true
-    end
     return ret
 end
 
@@ -615,6 +612,9 @@ ns.should_show_point = function(coord, point, currentZone, isMinimap)
     end
     if not ns.db.found and not point.always then
         if everythingFound(point) == true then
+            return false
+        end
+        if ns.db.questfound and point.quest and allQuestsComplete(point.quest) then
             return false
         end
         -- the rest are proxies for the actual "found" status:
