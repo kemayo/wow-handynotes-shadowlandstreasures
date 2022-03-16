@@ -600,6 +600,10 @@ local function handle_tooltip(tooltip, point)
             tooltip:AddLine(ns.render_string(ns.conditions.summarize(point.hide_before), point), 1, 0, 0, true)
         end
 
+        if point.group then
+            tooltip:AddDoubleLine(GROUP, ns.groups[point.group] or point.group)
+        end
+
         if point.quest and ns.db.tooltip_questid then
             tooltip:AddDoubleLine("QuestID", render_string_list(point, "questid", point.quest), NORMAL_FONT_COLOR:GetRGB())
         end
