@@ -974,6 +974,8 @@ ns.RegisterPoints(1543, {
         note="Look for the grapple point, then run to the base of the spire",
         inbag=186608,
     },
+}, {
+    group="Nilganihmaht",
 })
 
 -- Teleporters
