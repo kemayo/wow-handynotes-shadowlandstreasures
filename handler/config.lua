@@ -5,7 +5,6 @@ ns.defaults = {
         default_icon = "VignetteLoot",
         show_on_world = true,
         show_on_minimap = false,
-        show_junk = false,
         show_npcs = true,
         show_treasure = true,
         show_routes = true,
@@ -183,12 +182,6 @@ ns.options = {
                     desc = "Show relevant routes between points ",
                     disabled = function() return not ns.RouteWorldMapDataProvider end,
                     order = 31,
-                },
-                show_junk = {
-                    type = "toggle",
-                    name = "Show non-achievement",
-                    desc = "Show items which don't count for any achievement",
-                    order = 40,
                 },
                 tooltip_questid = {
                     type = "toggle",
@@ -602,9 +595,6 @@ ns.should_show_point = function(coord, point, currentZone, isMinimap)
         return false
     end
     if point.poi and not checkPois(point.poi) then
-        return false
-    end
-    if point.junk and not ns.db.show_junk then
         return false
     end
     if point.faction and point.faction ~= ns.playerFaction then
