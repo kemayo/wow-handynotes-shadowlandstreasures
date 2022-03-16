@@ -909,7 +909,7 @@ end
 
 function HL:OnInitialize()
     -- Set up our database
-    if self.defaultsOverride then
+    if ns.defaultsOverride then
         ns.merge(ns.defaults.profile, ns.defaultsOverride)
     end
     self.db = LibStub("AceDB-3.0"):New(myname.."DB", ns.defaults)
