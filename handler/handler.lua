@@ -66,6 +66,18 @@ function ns.RegisterPoints(zone, points, defaults)
         end
     end
     ns.merge(ns.points[zone], points)
+    for coord, point in pairs(points) do
+        if point.path then
+            local route = type(point.path) == "table" and point.path or {point.path}
+            table.insert(route, 1, coord)
+            ns.points[zone][route[#route]] = setmetatable({
+                label=route.label or (point.npc and "Path to NPC" or "Path to treasure"),
+                atlas="poi-door", scale=0.95, minimap=true, texture=false,
+                note=route.note or false,
+                route=route,
+            }, {__index=point})
+        end
+    end
 end
 
 ns.merge = function(t1, t2)
@@ -94,7 +106,6 @@ end
 ns.path = ns.nodeMaker{
     label = "Path to treasure",
     atlas = "poi-door", -- 'PortalPurple' / 'PortalRed'?
-    path = true,
     minimap = true,
     scale = 0.95,
 }
