@@ -18,6 +18,7 @@ local path = ns.path
 -- rondure alcove, rondure cache 42904030: 65567, contained a second pocobold...
 -- 58013 tripped while I was killing Dreadlord Infliltrators after I got loot from one
 -- 65622 when I was forge-tapping and got a honeycombed lattice
+-- 65560 serene pigment (above Firim's)
 -- 65539 after Arbiter in the Making -- could be for flight, it's complete on other characters as well
 
 local MOUNT = "|A:StableMaster:15:15|a"
@@ -135,8 +136,8 @@ ns.RegisterPoints(1970, { -- Zereth Mortis
             {189447, quest=65360, note=PET}, -- Schematic: Viperid Menace
         },
         note="In cave. Use tablets to find the correct {spell:362062} buff to make the chest appear",
+        path=59258145,
     },
-    [59258145] = path{quest=65173, achievement=15331, criteria=52887,route={59258145,58857705},},
 
     [60603055] = { -- Mawsworn Cache
         quest=65441,
@@ -623,7 +624,7 @@ ns.RegisterPoints(1970, { -- Zereth Mortis
     }),
     [57807780] = makeSchematic(65359, 189446, PET, { -- Schematic: Shelly
         note="On the back of the shelves at the back of the Lexical Grotto; requires some sort of movement ability to reach",
-        route={59258145, 57807780},
+        path=59258146,
     }),
     [67203260] = makeSchematic(65355, 189443, PET, { -- Schematic: Terror Jelly
         hide_before=hide_flying,
@@ -633,7 +634,7 @@ ns.RegisterPoints(1970, { -- Zereth Mortis
     [58807720] = makeSchematic(65360, 189447, PET, { -- Schematic: Viperid Menace
         hide_before=ns.conditions.QuestComplete(65173),
         note="In the Library Vault treasure; if you looted it before unlocking protoforms, it should just be sitting there",
-        route={59258145, 58807720},
+        path=59258144,
     }),
     -- drops
     [76405430] = makeSchematic(65351, 189441, PET, { -- Schematic: Resonant Echo
@@ -1076,6 +1077,7 @@ ns.RegisterPoints(1970, { -- Zereth Mortis
             189957, -- Colossus' Focusing Headpiece
         },
         note="Inside a cave",
+        path=58703810,
     },
 
     [54103495] = { -- Mother Phestis
@@ -1088,8 +1090,8 @@ ns.RegisterPoints(1970, { -- Zereth Mortis
             189950, -- Constrained Prey's Binds
             190045, -- Flowing Sandbender's Staff
         },
+        path=55953260,
     },
-    [55953260] = path{quest=65547, criteria=53020},
 
     [56406820] = { -- Orixal
         npc=179043,

@@ -389,8 +389,8 @@ ns.RegisterPoints(1543, {
             186629, -- Sanngor's Spiked Band
         },
         level=60,
+        path=55806755,
     },
-    [55806755] = path{label=CAVE, achievement=14660, criteria=49489, quest=62210,},
     [54507930] = { -- Skittering Broodmother
         achievement=14660, criteria=49491,
         quest=62211,
@@ -798,8 +798,8 @@ ns.RegisterPoints(1543, {
             {186191, pet=3099}, -- Infused Etherwyrm
         },
         note="When the {quest:63951} quest is available, find the {item:186190} from the {npc:179030:Elusive Keybinder} in the rift phase, then bring it to the cage inside the Desolate Hollow",
+        path={23104225, label="Desolate Hollow entrance"},
     },
-    [21103890] = path{label="Desolate Hollow entrance", route={21103890,23104225}},
     [23804050] = {
         label="{npc:179030:Elusive Keybinder}",
         loot={186190}, -- Etherwyrm Cage Key
@@ -911,8 +911,8 @@ ns.RegisterPoints(1543, {
                 q(64200).."{item:186607:Silver Ring}: loot the Domination Chest\n"..
                 q(64199).."{item:186608:Gold Band}: climb to find it"
         end,
+        path={25053270, label="Hollow of the Insolent"},
     },
-    [25053270] = path{quest=64202,active=rift_active,label="Hollow of the Insolent",route={25053270,25503680}},
     -- Silver Ring
     [66055740] = {
         quest=64207,
@@ -967,12 +967,7 @@ ns.RegisterPoints(1543, {
         route=18503925,
         inbag=186608,
         minimap=true,
-    },
-    [18503925] = ns.path{
-        quest=64199,
-        route={18503925,19203225, r=0,g=1,b=1},
-        note="Look for the grapple point, then run to the base of the spire",
-        inbag=186608,
+        path={18503925, r=0,g=1,b=1, note="Look for the grapple point, then run to the base of the spire",},
     },
 }, {
     group="Nilganihmaht",
