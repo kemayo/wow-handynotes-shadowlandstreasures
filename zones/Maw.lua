@@ -892,7 +892,7 @@ local helgarde = ns.nodeMaker{
 ns.RegisterPoints(1543, {
     [25503680] = {
         label="{npc:179572:Nilganihmaht}",
-        quest=64202,
+        quest=64202, -- signet:64201, silver:64200, gold:64199, runed:64198, stone: 64197
         -- requires_item={186603, 186605, 186606, 186607, 186608},
         texture=ns.atlas_texture("VignetteLootElite", {scale=1.5, r=0, g=0.5, b=1}),
         -- atlas="VignetteLootElite", scale=1.5,
@@ -900,13 +900,19 @@ ns.RegisterPoints(1543, {
         loot={
             {186713, mount=1503}, -- Hand of Nilganihmaht
         },
-        note="In a cave in the rift. Bring the 5 rings.\n"..
-            "* {item:186603:Stone Ring}: assemble during a Necrolord Assault if {quest:63545} is up\n"..
-            "* {item:186605:Runed Band}: kill {npc:179735:Torglluun}\n"..
-            "* {item:186606:Signet Ring}: kill {npc:170303:Exos}\n"..
-            "* {item:186607:Silver Ring}: loot the Domination Chest\n"..
-            "* {item:186608:Gold Band}: climb to find it",
+        note=function()
+            local function q(quest)
+                return CreateAtlasMarkup(C_QuestLog.IsQuestFlaggedCompleted(quest) and "common-icon-checkmark" or "common-icon-redx")
+            end
+            return "In a cave in the rift. Bring the 5 rings.\n"..
+                q(64197).."{item:186603:Stone Ring}: assemble during a Necrolord Assault if {quest:63545} is up\n"..
+                q(64198).."{item:186605:Runed Band}: kill {npc:179735:Torglluun}\n"..
+                q(64201).."{item:186606:Signet Ring}: kill {npc:170303:Exos}\n"..
+                q(64200).."{item:186607:Silver Ring}: loot the Domination Chest\n"..
+                q(64199).."{item:186608:Gold Band}: climb to find it"
+        end,
     },
+    [25053270] = path{quest=64202,active=rift_active,label="Hollow of the Insolent",route={25053270,25503680}},
     -- Silver Ring
     [66055740] = {
         quest=64207,
