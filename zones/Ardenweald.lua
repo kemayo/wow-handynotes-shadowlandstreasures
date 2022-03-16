@@ -142,12 +142,12 @@ ns.RegisterPoints(1565, { -- Ardenweald
 
 local vulpin = {
     achievement=14313, criteria=50038, -- Playful Vulpin Befriended
-    quest=61086, -- also 61080, 61081, 61084, 61085 for progress
+    quest=61086, -- also 61080, 61081, 61084, 61085 for progress (61078 also triggers)
     progress={61080, 61081, 61084, 61085, 61086},
     loot={
         {180645, pet=2905}, -- Dodger
     },
-    note="Find {npc:171206:Playful Vulpin} and play with them 5 times to obtain the treasure. Use emotes related to what they're doing",
+    note="Find {npc:171206:Playful Vulpin} and play with them 5 times to obtain the treasure. Use emotes related to what they're doing, in order: /curious, /sit, /sing, /dance, /pet.",
     atlas="honorsystem-icon-bonus", scale=1,
     minimap=true,
     group="Playful Vulpin",
