@@ -1,5 +1,12 @@
 # Changelog
 
+## Changed in v54
+
+* Show which group a point is assigned to in its tooltip
+* Made it easier for myself to add points that show the path to another point, and used that in a few places
+* Minor tweaks to earlier zones: Nilganihmaht's tooltip shows which rings you've already put on; the Playful Vulpin's tooltip shows the emotes you'll have to use
+* Removed the "show non-achievement" option, since it's been replaced with groups in-practice and I never flagged anything as junk this expansion (it made more sense back in Legion, which had a lot of boring non-achievement respawning treasures)
+
 ## Changed in v53
 
 * Locus Shift treasures and schematics are filled out
