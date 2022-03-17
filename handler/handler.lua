@@ -275,7 +275,7 @@ local function work_out_label(point)
         return (render_string(point.label, point))
     end
     if point.achievement then
-        if point.criteria and type(point.criteria) ~= "table" then
+        if point.criteria and type(point.criteria) ~= "table" and point.criteria ~= true then
             local criteria = (point.criteria < 40 and GetAchievementCriteriaInfo or GetAchievementCriteriaInfoByID)(point.achievement, point.criteria)
             if criteria then
                 return criteria
