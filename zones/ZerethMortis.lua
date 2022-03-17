@@ -586,6 +586,7 @@ ns.RegisterPoints(1970, { -- Zereth Mortis
     loot={
         {189474, quest=65397, note=MOUNT}, -- Schematic: Buzz
     },
+    texture=ns.atlas_texture("creationcatalyst-32x32", {r=0.5,g=1,b=0.5,a=1,scale=0.9}),
     group="Schematics",
 })
 
