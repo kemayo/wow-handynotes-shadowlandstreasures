@@ -70,7 +70,7 @@ ns.RegisterPoints(1970, { -- Zereth Mortis
             190638, -- Tormented Mawsteel Greatsword
             189863, -- Spatial Opener
         },
-        note="{item:189704} drops from {npc:181403} and {npc:182426} nearby",
+        note="{item:189704:Dominance Key} drops from {npc:181403:Mawsworn Inquisitor} and {npc:182426:Nazrethim Arcanist} nearby. It can also drop from {npc:184417:Dreadlord Infiltrator} during {quest:65362:Not of the Body} if that's up.",
     },
 
     [35157020] = { -- Drowned Broker Supplies
