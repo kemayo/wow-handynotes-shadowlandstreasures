@@ -15,6 +15,7 @@ local path = ns.path
 -- gravid repose, camber alcove arrangement 65343 (also 65378)
 -- gravid repose, rondure alcove arrangement 65345 (also 65378)
 -- gravid repose, fulgore alcove arrangement 65347 47.86 30.46
+-- gravid repose, dormant alcove arrangement 65346 51043248
 -- rondure alcove, rondure cache 42904030: 65567, contained a second pocobold...
 -- 58013 tripped while I was killing Dreadlord Infliltrators after I got loot from one
 -- 65622 when I was forge-tapping and got a honeycombed lattice
@@ -390,7 +391,7 @@ ns.RegisterPoints(1970, { -- Zereth Mortis
         loot={
             188054, -- Antecedent Drape (same caveat as the Valise)
         },
-        active={ns.conditions.GarrisonTalent(1902),ns.conditions.QuestComplete(65328)},
+        active={ns.conditions.GarrisonTalent(1902),ns.conditions.QuestComplete(65328)}, -- Arbiter in the Making
         notes="Unlock the Fulgore Alcove arrangement @ 47.8 30.4, then use the second teleporter in the Inner Locus to reach this. Activate the orb closest to the center of the room and ride it until it gets close to the treasure.",
         route={50553200, 46903950},
     },
@@ -434,6 +435,45 @@ ns.RegisterPoints(1970, { -- Zereth Mortis
     loot={
         {190734, toy=true} -- Makaris's Satchel of Mines
     },
+})
+
+ns.RegisterPoints(1970, { -- Zereth Mortis
+    [44403680] = {
+        achievement=15502, -- Sand Sand Everywhere
+        criteria=true,
+        atlas="storyheader-cheevoicon",
+        hide_before=ns.conditions.Item(189863), -- Spatial Opener
+        active=ns.conditions.QuestComplete(65346), -- Dormant Alcove Arrangement
+        note="In the Dormant Alcove; teleport here from the Inner Locus. Use {item:189863:Spatial Opener} from various treasures to loot the piles of sand.",
+        -- quests
+        -- lumpy: 65494
+        -- glinting: 65495
+        -- shifting: 65496
+        -- humming: 65497
+        -- misshapen: 65498
+        -- sparkling: 65499
+        -- ticking: 65500
+        -- loot={
+        --     -- not sure if this is consistent or just random rings/necklaces/trinkets...
+        --     190374, -- Gemstone of Prismatic Brilliance (sparkling)
+        --     188044, -- Discarded Cartel Al Signet (shifting)
+        --     188045, -- Salvaged Viperid Band (lumpy)
+        --     188053, -- Abandoned Automa Loop (humming)
+        --     188055, -- Impossibly Ancient Band (glinting)
+        --     188106, -- Unfathomable Pendant (shifting)
+        --     190390, -- Protector's Diffusion Implement (misshapen)
+        -- },
+    },
+})
+ns.RegisterPoints(1970, { -- Zereth Mortis
+    [47703450] = {quest=65343, label="Camber Alcove Arrangement"},
+    [50502760] = {quest=65345, label="Rondure Alcove Arrangement", note="Hidden away between two pillars, you'll need flying or the Tertius Locus to reach it"},
+    [51043248] = {quest=65346, label="Dormant Alcove Arrangement"},
+    [47863046] = {quest=65347, label="Fulgore Alcove Arrangement"},
+}, {
+    atlas="Rune-06-neutral",
+    hide_before=ns.conditions.QuestComplete(65328), -- Arbiter in the Making
+    note="|cFFFFFF00Active to unlock a new destination from the Inner Locus|r",
 })
 
 ns.RegisterPoints(1970, { -- Zereth Mortis
