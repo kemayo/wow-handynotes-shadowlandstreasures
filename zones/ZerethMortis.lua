@@ -487,6 +487,8 @@ ns.RegisterPoints(1970, { -- Zereth Mortis
     note="|cFFFFFF00Active to unlock a new destination from the Inner Locus|r",
 })
 
+-- Notable locations
+
 ns.RegisterPoints(1970, { -- Zereth Mortis
     [61805895] = { -- Synthesis Forge
         label="{npc:184172}",
@@ -509,6 +511,21 @@ ns.RegisterPoints(1970, { -- Zereth Mortis
         hide_before=ns.conditions.QuestComplete(65448), -- A Return To Grace
         note="Stand in the wellspring to receive {spell:368622}",
         spell=368622, -- Grace of the First Ones
+    },
+    [37104470] = { -- Olea Manu
+        label="{npc:183962:Olea Manu}",
+        loot={
+            {188793, quest=65282, note="150{currencyicon:1979}"}, -- Improvised Cypher Analysis Tool
+            {190333, toy=true, note="100{currencyicon:1979}"}, -- Jiro Circle of Song
+            {191039, pet=3247, note="500{currencyicon:1979}"}, -- Pocopoc Traveler
+            {187804, note="25{currencyicon:1979}"}, -- Recipe: Empty Kettle of Stone Soup
+            {187824, note="25{currencyicon:1979}"}, -- Formula: Magically Regulated Automa Core
+            {189980, quest=65510, covenant=Enum.CovenantType.NightFae, note="1000{currencyicon:1979}"}, -- Brutosaur Soul
+            {189986, quest=65514, covenant=Enum.CovenantType.NightFae, note="500{currencyicon:1979}"}, -- Armadillo Soul
+        },
+        atlas="creationcatalyst-32x32", minimap=true,
+        hide_before=ns.conditions.QuestComplete(65219), -- Jiro to Hero
+        note="This is a vendor. Learn {garrisontalent:1902} then complete the {quest:65219} questline",
     },
 })
 
