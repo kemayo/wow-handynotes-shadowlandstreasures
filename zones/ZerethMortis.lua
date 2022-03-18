@@ -382,6 +382,34 @@ ns.RegisterPoints(1970, { -- Zereth Mortis
     [50007665] = lock{quest=65592},
 })
 
+-- Soulshapes
+
+ns.RegisterPoints(1970, { -- Zereth Mortis
+    -- https://ptr.wowhead.com/item=190337/cervid-soul#comments:id=5316385
+    [34407130] = {
+        quest=65517,
+        loot={
+            {189989, quest=65517, covenant=Enum.CovenantType.NightFae},
+        },
+        hide_before=ns.conditions.Achievement(15514), -- flying
+        note="On top of the floating orb",
+    },
+    [63306050] = {
+        quest=65518,
+        label="Lost Comb",
+        loot={
+            {189990, quest=65518, covenant=Enum.CovenantType.NightFae},
+        },
+        hide_before=ns.conditions.Achievement(15514), -- flying
+        note="Glowing blue, on top of a pillar",
+    },
+}, {
+    covenant=Enum.CovenantType.NightFae,
+    atlas="sanctumupgrades-nightfae-32x32",
+    minimap=true,
+    group="soulshape",
+})
+
 -- Miscellaneous treasures
 
 ns.RegisterPoints(1970, { -- Zereth Mortis
@@ -401,17 +429,6 @@ ns.RegisterPoints(1970, { -- Zereth Mortis
         active=ns.conditions.Item(188231),
         note="Use {item:187908} to get 15x {item:187728}, which will sometimes give you the {item:188231}",
     },
-    [63306050] = {
-        quest=65518,
-        label="Lost Comb",
-        loot={
-            {189990, quest=65518, covenant=Enum.CovenantType.NightFae},
-        },
-        hide_before=ns.conditions.Achievement(15514), -- flying
-        covenant=Enum.CovenantType.NightFae,
-        atlas="sanctumupgrades-nightfae-32x32",
-        note="Glowing blue, on top of a pillar",
-    }
 })
 
 ns.RegisterPoints(1970, { -- Zereth Mortis
