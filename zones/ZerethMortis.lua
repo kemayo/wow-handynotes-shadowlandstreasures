@@ -781,10 +781,10 @@ ns.RegisterPoints(1970, { -- Zereth Mortis
 ns.RegisterPoints(1970, { -- Zereth Mortis
     [46056460] = {quest=65093},
     [47107720] = {quest=65093},
-    [57506575] = {quest={65093,65418,any=true}},
+    [57506575] = {quest=65093},
     [63103740] = {quest=65093},
     [44303095] = {quest=65317},
-    [47603910] = {quest={65317,65418,any=true}},
+    [47603910] = {quest=65317},
     [59702290] = {quest=65317},
     [36455645] = {quest=65322},
     [39204665] = {quest=65322},
@@ -798,7 +798,7 @@ ns.RegisterPoints(1970, { -- Zereth Mortis
     [54254280] = {quest=65092},
     [58903635] = {quest=65092},
     [45109410] = {quest=65316},
-    [56008415] = {quest={65316,65418,any=true}},
+    [56008415] = {quest=65316},
     [56656140] = {quest=65316},
     [33805425] = {quest=65321},
     [39957285] = {quest=65321},
@@ -809,7 +809,7 @@ ns.RegisterPoints(1970, { -- Zereth Mortis
     texture=ns.atlas_texture("VignetteLoot", {r=1,g=1,b=0,a=0.8,scale=0.9}),
 })
 ns.RegisterPoints(1970, { -- Zereth Mortis
-    [38357035] = {quest={65091,65418,any=true}},
+    [38357035] = {quest=65091},
     [39356045] = {quest=65091},
     [52357200] = {quest=65091},
     [55655000] = {quest=65091},
@@ -824,12 +824,12 @@ ns.RegisterPoints(1970, { -- Zereth Mortis
     texture=ns.atlas_texture("VignetteLoot", {r=0,g=0.8,b=0,a=0.8,scale=0.9}),
 })
 ns.RegisterPoints(1970, { -- Zereth Mortis
-    [32055260] = {quest={64972,65418,any=true}},
+    [32055260] = {quest=64972},
     [34606880] = {quest=64972},
     [37004645] = {quest=64972},
     [46806700] = {quest=64972},
     [52455705] = {quest=65314},
-    [53258685] = {quest={65314,65418,any=true}},
+    [53258685] = {quest=65314},
     [62807390] = {quest=65314},
     [64306330] = {quest=65319},
     [65604760] = {quest=65319},
