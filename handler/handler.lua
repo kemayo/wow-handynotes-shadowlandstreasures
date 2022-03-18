@@ -189,6 +189,11 @@ local function render_string(s, context)
             if info then
                 return quick_texture_markup(info.iconFileID) .. " " .. info.name
             end
+        elseif variant == "currencyicon" then
+            local info = C_CurrencyInfo.GetCurrencyInfo(id)
+            if info then
+                return quick_texture_markup(info.iconFileID)
+            end
         elseif variant == "covenant" then
             local data = C_Covenants.GetCovenantData(id)
             return COVENANT_COLORS[id]:WrapTextInColorCode(data and data.name or ns.covenants[id])
@@ -570,7 +575,7 @@ local function handle_tooltip(tooltip, point)
                             link = TEXT_MODE_A_STRING_VALUE_TYPE:format(link, RAID_CLASS_COLORS[item.class]:WrapTextInColorCode(LOCALIZED_CLASS_NAMES_FEMALE[item.class]))
                         end
                         if item.note then
-                            link = TEXT_MODE_A_STRING_VALUE_TYPE:format(link, item.note)
+                            link = TEXT_MODE_A_STRING_VALUE_TYPE:format(link, render_string(item.note))
                         end
                     end
                     local known = ns.itemIsKnown(item)
