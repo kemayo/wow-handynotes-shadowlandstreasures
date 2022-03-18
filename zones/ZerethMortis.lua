@@ -501,7 +501,7 @@ ns.RegisterPoints(1970, { -- Zereth Mortis
 }, {
     atlas="Rune-06-neutral",
     hide_before=ns.conditions.QuestComplete(65328), -- Arbiter in the Making
-    note="|cFFFFFF00Active to unlock a new destination from the Inner Locus|r",
+    note="|cFFFFFF00Activate to unlock a new destination from the Inner Locus|r",
 })
 
 -- Notable locations
@@ -941,6 +941,116 @@ ns.RegisterPoints(1970, { -- Zereth Mortis
         atlas="food",
         minimap=true,
     },
+})
+
+-- Coreless for Pocopoc
+local coreless = ns.nodeMaker{
+    hide_before=ns.conditions.GarrisonTalent(1932), -- Dealic Understanding
+    note="|cFFFFFF00Use with Pocopoc and gain access to a special ability|r",
+    -- atlas="poi-scrapper",
+    texture=ns.atlas_texture("poi-scrapper", {r=0.7, g=0.7, b=0.7}),
+    minimap=true, scale=0.9,
+    group="coreless",
+}
+ns.RegisterPoints(1970, { -- Zereth Mortis
+    -- Coreless Vombata
+    [33205620] = {},
+    [37203760] = {},
+    [37804720] = {},
+    [38407080] = {},
+    [45407580] = {},
+    [46807860] = {},
+    [56006660] = {},
+}, coreless{
+    label="{npc:181580:Coreless Vombata}",
+    spell=361415, -- Withering Bash
+})
+ns.RegisterPoints(1970, { -- Zereth Mortis
+    -- Coreless Tarachnid
+    [41602780] = {},
+    [44202460] = {},
+    [53602700] = {},
+    [57002540] = {},
+    [59004900] = {},
+    [59405480] = {},
+    [62806240] = {},
+    [64004380] = {},
+}, coreless{
+    label="{npc:181556:Coreless Tarachnid}",
+    spell=361556, -- Acrid Spit
+})
+ns.RegisterPoints(1970, { -- Zereth Mortis
+    -- Coreless Helicid
+    [32605980] = {},
+    [37207080] = {},
+    [37805500] = {},
+    [42408820] = {},
+    [43806120] = {},
+    [44405640] = {},
+    [50006260] = {},
+    [52407480] = {},
+    [52607500] = {},
+    [59008420] = {},
+    [63207040] = {},
+}, coreless{
+    label="{npc:181558:Coreless Helicid}",
+    spell=362897, -- Sticky Mucus
+})
+ns.RegisterPoints(1970, { -- Zereth Mortis
+    -- Coreless Geomental
+    [47204600] = {},
+    [50004160] = {},
+    [54003804] = {},
+    [54009080] = {},
+    [55006040] = {},
+    [66403800] = {},
+}, coreless{
+    label="{npc:181586:Coreless Geomental}",
+    spell=360577, -- Earthquake
+})
+ns.RegisterPoints(1970, { -- Zereth Mortis
+    -- Coreless Scarabid
+    [40803160] = {},
+    [42604360] = {},
+    [44403680] = {},
+    [47602420] = {},
+    [51404920] = {},
+    [57403040] = {},
+    [62003200] = {},
+    [67202500] = {},
+}, coreless{
+    label="{npc:181385:Coreless Scarabid}",
+    spell=330595, -- Bite
+})
+ns.RegisterPoints(1970, { -- Zereth Mortis
+    -- Coreless Aurelid
+    [34607060] = {},
+}, coreless{
+    quest=65523,
+    label="{npc:185282:Coreless Aurelid}",
+    note="This one is just used to reach the nearby underwater treasure",
+})
+ns.RegisterPoints(1970, { -- Zereth Mortis
+    -- Coreless Guardian
+    [39405420] = {},
+    [41804560] = {},
+    [42602300] = {},
+    [43403920] = {},
+    [43406880] = {},
+    [45605680] = {},
+    [47209420] = {},
+    [47807720] = {},
+    [48800320] = {},
+    [53604320] = {},
+    [56202840] = {},
+    [56207800] = {},
+    [57005420] = {},
+    [65203660] = {},
+    [66602840] = {},
+}, coreless{
+    label="{npc:183869:Coreless Guardian}",
+    note="Pilot with up to two others",
+    hide_before=ns.conditions.GarrisonTalent(1998), -- Bassalim Understanding
 })
 
 -- Adventurer of Zerith Mortis
