@@ -67,6 +67,10 @@ function ns.RegisterPoints(zone, points, defaults)
     end
     ns.merge(ns.points[zone], points)
     for coord, point in pairs(points) do
+        local proxy_meta
+        if point.path or point.related then
+            proxy_meta = {__index=point}
+        end
         if point.path then
             local route = type(point.path) == "table" and point.path or {point.path}
             table.insert(route, 1, coord)
@@ -75,7 +79,18 @@ function ns.RegisterPoints(zone, points, defaults)
                 atlas="poi-door", scale=0.95, minimap=true, texture=false,
                 note=route.note or false,
                 route=route,
-            }, {__index=point})
+            }, proxy_meta)
+        end
+        if point.nearby then
+            local nearby = type(point.nearby) == "table" and point.nearby or {point.nearby}
+            for _, ncoord in ipairs(point.nearby) do
+                ns.points[zone][ncoord] = setmetatable({
+                    label=nearby.label or (point.npc and "Related to nearby NPC" or "Related to nearby treasure"),
+                    atlas=nearby.atlas or "questobjective", scale=0.95, texture=false,
+                    minimap=true, worldmap=false,
+                    note=nearby.note or false,
+                }, proxy_meta)
+            end
         end
     end
 end
