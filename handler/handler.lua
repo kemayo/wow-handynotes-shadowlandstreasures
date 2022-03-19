@@ -742,6 +742,10 @@ local function hideNode(button, uiMapID, coord)
     ns.hidden[uiMapID][coord] = true
     HL:Refresh()
 end
+local function hideAchievement(button, achievement)
+    ns.db.achievementsHidden[achievement] = true
+    HL:Refresh()
+end
 local function hideGroup(button, uiMapID, coord)
     local point = ns.points[uiMapID] and ns.points[uiMapID][coord]
     if not (point and point.group) then return end
@@ -831,6 +835,16 @@ do
             info.arg2         = currentCoord
             UIDropDownMenu_AddButton(info, level)
             wipe(info)
+
+            if point.achievement then
+                -- Waypoint menu item
+                info.text = render_string("Hide all {achievement:" .. point.achievement .. "} in all zones")
+                info.notCheckable = 1
+                info.func = hideAchievement
+                info.arg1 = point.achievement
+                UIDropDownMenu_AddButton(info, level)
+                wipe(info)
+            end
 
             if point.group then
                 if not ns.hiddenConfig.groupsHiddenByZone then
