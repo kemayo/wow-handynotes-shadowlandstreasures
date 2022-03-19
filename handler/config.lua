@@ -383,11 +383,15 @@ local canLearnCache = {}
 local function CanLearnAppearance(itemLinkOrID)
     local itemID = GetItemInfoInstant(itemLinkOrID)
     if not itemID then return end
-    if canLearnCache[itemID] then
+    if canLearnCache[itemID] ~= nil then
         return canLearnCache[itemID]
     end
     -- First, is this a valid source at all?
     local canBeChanged, noChangeReason, canBeSource, noSourceReason = C_Transmog.CanTransmogItem(itemID)
+    if canBeSource == nil or noSourceReason == 'NO_ITEM' then
+        -- data loading, don't cache this
+        return
+    end
     if not canBeSource then
         canLearnCache[itemID] = false
         return false
