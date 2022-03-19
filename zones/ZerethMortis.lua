@@ -16,7 +16,6 @@ local path = ns.path
 -- gravid repose, rondure alcove arrangement 65345 (also 65378)
 -- gravid repose, fulgore alcove arrangement 65347 47.86 30.46
 -- gravid repose, dormant alcove arrangement 65346 51043248
--- rondure alcove, rondure cache 42904030: 65567, contained a second pocobold...
 -- 58013 tripped while I was killing Dreadlord Infliltrators after I got loot from one
 -- 65539 after Arbiter in the Making -- could be for flight, it's complete on other characters as well
 
@@ -490,6 +489,16 @@ ns.RegisterPoints(1970, { -- Zereth Mortis
         --     190390, -- Protector's Diffusion Implement (misshapen)
         -- },
     },
+    [42934006] = {
+        quest=65567,
+        label="Rondure Cache",
+        loot={
+            {190096, quest=65534}, -- Pocobold (even if you already have it -- it just vanishes)
+        },
+        note="Unlock the Rondure Alcove Arrangement to come here from the Inner Locus. Solve a fairly horrible jumping puzzle to reach the orb near the ceiling.",
+        route={50553200, 42934006},
+        hide_before=ns.conditions.QuestComplete(65345), -- Rondure Alcove Arrangement
+    },
 })
 
 local requisites = {
@@ -727,7 +736,7 @@ ns.RegisterPoints(1970, { -- Zereth Mortis
             ns.conditions.GarrisonTalent(1902), -- Altonian Understanding
             ns.conditions.QuestComplete(65328), -- Arbiter in the Making, end of A Means to an End storyline
         },
-        note="In the Rondure Alcove area of the Resonant Peaks, solve a jumping puzzle to reach it.\nUnlock Rondure Alcove @ 50.5 27.6 on the Tertius level.",
+        note="In the Rondure Alcove area of the Resonant Peaks, solve the shorter jumping puzzle to reach it on top of one of the doorways.\nUnlock Rondure Alcove @ 50.5 27.6 on the Tertius level.",
     }),
     [52207530] = makeSchematic(65354, 189442, PET, { -- Schematic: Prototickles
         note="In a chain overlooking the falls, hidden in the leaves; jump down from the East and edge up to it",
