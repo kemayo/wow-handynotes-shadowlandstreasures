@@ -1264,6 +1264,7 @@ ns.RegisterPoints(1970, { -- Zereth Mortis
             190049, -- Perennial Punching Dagger
         },
         note="Break nearby {npc:184048}. This is often bugged.",
+        nearby={52009380, 52409280, 53209300, 53409080, 54009120, label="{npc:184048:Bulging Root}"},
     },
 
     [80404705] = { -- Gorkek
