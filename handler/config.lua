@@ -568,10 +568,18 @@ do
     end
 end
 
+local function showOnMapType(point, isMinimap)
+    -- nil means to respect the preferences, but points can override
+    if isMinimap then
+        if point.minimap ~= nil then return point.minimap end
+        return ns.db.show_on_minimap
+    end
+    if point.worldmap ~= nil then return point.worldmap end
+    return ns.db.show_on_world
+end
+
 ns.should_show_point = function(coord, point, currentZone, isMinimap)
-    if isMinimap and not ns.db.show_on_minimap and not point.minimap then
-        return false
-    elseif not isMinimap and not ns.db.show_on_world then
+    if not showOnMapType(point, isMinimap) then
         return false
     end
     if zoneHidden(currentZone) then
