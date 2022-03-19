@@ -189,14 +189,15 @@ ns.RegisterPoints(1525, { -- Revendreth
         quest=64941, -- Chicken; go work out the well fed cat one, if it has a quest
         loot={187811}, -- Spectral Feed
     },
-    [63004200] = {
+    [63264285] = {
         quest=64941,
         loot={
             {187813, quest=64941, covenant=Enum.CovenantType.NightFae}, -- Chicken Soul
         },
+        active=ns.conditions.Item(187811),
     }
 }, {
-    note="Bring the {item:187811:Spectral Feed} (63.7, 61.7) to the {npc:181660:Lost Soul} (63, 42), then use /chicken at it",
+    note="Bring the {item:187811:Spectral Feed} (63.7, 61.7) to the {npc:181660:Lost Soul} (63, 42), use /chicken at it, then give it the feed",
     covenant=Enum.CovenantType.NightFae,
     atlas="sanctumupgrades-nightfae-32x32",
     minimap=true,
