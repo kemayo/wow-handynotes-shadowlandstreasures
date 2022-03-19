@@ -242,7 +242,6 @@ ns.RegisterPoints(1565, {
     atlas="Campaign-QuestLog-LoreBook",
     minimap=true,
     level=60,
-    group="faerietales",
 })
 
 -- ns.RegisterPoints(1565, {
