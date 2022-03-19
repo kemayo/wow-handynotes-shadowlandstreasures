@@ -468,8 +468,8 @@ ns.RegisterPoints(1970, { -- Zereth Mortis
         achievement=15502, -- Sand Sand Everywhere
         criteria=true,
         atlas="storyheader-cheevoicon",
-        hide_before=ns.conditions.Item(189863), -- Spatial Opener
-        active=ns.conditions.QuestComplete(65346), -- Dormant Alcove Arrangement
+        active=ns.conditions.Item(189863), -- Spatial Opener
+        hide_before=ns.conditions.QuestComplete(65346), -- Dormant Alcove Arrangement
         note="In the Dormant Alcove; teleport here from the Inner Locus. Use {item:189863:Spatial Opener} from various treasures to loot the piles of sand.",
         -- quests
         -- lumpy: 65494
@@ -491,13 +491,39 @@ ns.RegisterPoints(1970, { -- Zereth Mortis
         -- },
     },
 })
+
+local requisites = {
+    quest=65532,
+    label="{npc:185261:Requisites Originator}",
+    atlas="creationcatalyst-32x32",
+    -- TODO: check for updates on loot @ https://www.wowhead.com/npc=185261/requisites-originator
+    note="|cFFFFFF00Unlock the Repertory Alcove Arrangement to come here from the Inner Locus. Once a week you can request items based on your Cypher research level.|r\n"..
+        "{spell:366667}: {item:190336:Thrumming Powerstone} and gold\n"..
+        "{spell:366668}: {item:189865:Anima Matrix}\n"..
+        "{spell:366669}: {currency:1979:Cyphers of the First Ones}\n"..
+        "{spell:366670}: {item:188957:Genesis Motes} and low chance at {item:189179}\n"..
+        "{spell:366671}: Mix of Cyphers, Genesis Modes, Anima, and gold\n"..
+        "{spell:366672}: Spec-appropriate Cypher Equipment\n",
+    hide_before=ns.conditions.QuestComplete(65345), -- Repertory Alcove Arrangement
+}
+ns.RegisterPoints(1970, { -- Zereth Mortis
+    [47503660] = {
+        route={50553200, 47503660},
+    },
+}, requisites)
+ns.RegisterPoints(2029, { -- Gravid Repose
+    [30506380] = requisites,
+})
+
 ns.RegisterPoints(1970, { -- Zereth Mortis
     [47703450] = {quest=65343, label="Camber Alcove Arrangement"},
+    [49553105] = {quest=65344, label="Repertory Alcove Arrangement", note="Inside the Terrestrial Cache cave"},
     [50502760] = {quest=65345, label="Rondure Alcove Arrangement", note="Hidden away between two pillars, you'll need flying or the Tertius Locus to reach it"},
     [51043248] = {quest=65346, label="Dormant Alcove Arrangement"},
     [47863046] = {quest=65347, label="Fulgore Alcove Arrangement"},
 }, {
     atlas="Rune-06-neutral",
+    minimap=true,
     hide_before=ns.conditions.QuestComplete(65328), -- Arbiter in the Making
     note="|cFFFFFF00Activate to unlock a new destination from the Inner Locus|r",
 })
@@ -538,7 +564,7 @@ ns.RegisterPoints(1970, { -- Zereth Mortis
             {189980, quest=65510, covenant=Enum.CovenantType.NightFae, note="1000{currencyicon:1979}"}, -- Brutosaur Soul
             {189986, quest=65514, covenant=Enum.CovenantType.NightFae, note="500{currencyicon:1979}"}, -- Armadillo Soul
         },
-        atlas="creationcatalyst-32x32", minimap=true,
+        atlas="banker", minimap=true,
         hide_before=ns.conditions.QuestComplete(65219), -- Jiro to Hero
         note="This is a vendor. Learn {garrisontalent:1902} then complete the {quest:65219} questline",
     },
