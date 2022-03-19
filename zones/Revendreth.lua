@@ -208,7 +208,8 @@ ns.RegisterPoints(1525, { -- Revendreth
 
 ns.RegisterPoints(1525, {
     [63134311] = { -- Dead Blanchy
-        quest={62050, 62107, any=true}, -- progress:62038, 62042, 62047, 62049, 62048; daily-done is 62107
+        quest={62050, 62107, any=true}, -- daily-done is 62107
+        progress={62038, 62042, 62047, 62049, 62048, 62050},
         loot={
             {182614, mount=1414}, -- Blanchy's Reins
         },
