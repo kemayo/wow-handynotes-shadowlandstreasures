@@ -946,7 +946,6 @@ local coreless = ns.nodeMaker{
     hide_before=ns.conditions.GarrisonTalent(1932), -- Dealic Understanding
     note="|cFFFFFF00Use with Pocopoc and gain access to a special ability|r",
     -- atlas="poi-scrapper",
-    texture=ns.atlas_texture("poi-scrapper", {r=0.7, g=0.7, b=0.7}),
     minimap=true, scale=0.9,
     group="coreless",
 }
@@ -962,6 +961,7 @@ ns.RegisterPoints(1970, { -- Zereth Mortis
 }, coreless{
     label="{npc:181580:Coreless Vombata}",
     spell=361415, -- Withering Bash
+    texture=ns.atlas_texture("poi-scrapper", {r=1, g=0.5, b=1}),
 })
 ns.RegisterPoints(1970, { -- Zereth Mortis
     -- Coreless Tarachnid
@@ -976,6 +976,7 @@ ns.RegisterPoints(1970, { -- Zereth Mortis
 }, coreless{
     label="{npc:181556:Coreless Tarachnid}",
     spell=361556, -- Acrid Spit
+    texture=ns.atlas_texture("poi-scrapper", {r=1, g=0.7, b=0.7}),
 })
 ns.RegisterPoints(1970, { -- Zereth Mortis
     -- Coreless Helicid
@@ -987,12 +988,12 @@ ns.RegisterPoints(1970, { -- Zereth Mortis
     [44405640] = {},
     [50006260] = {},
     [52407480] = {},
-    [52607500] = {},
     [59008420] = {},
     [63207040] = {},
 }, coreless{
     label="{npc:181558:Coreless Helicid}",
     spell=362897, -- Sticky Mucus
+    texture=ns.atlas_texture("poi-scrapper", {r=0.25, g=1, b=0.5}),
 })
 ns.RegisterPoints(1970, { -- Zereth Mortis
     -- Coreless Geomental
@@ -1005,6 +1006,7 @@ ns.RegisterPoints(1970, { -- Zereth Mortis
 }, coreless{
     label="{npc:181586:Coreless Geomental}",
     spell=360577, -- Earthquake
+    texture=ns.atlas_texture("poi-scrapper", {r=0.5, g=0.25, b=1}),
 })
 ns.RegisterPoints(1970, { -- Zereth Mortis
     -- Coreless Scarabid
@@ -1019,6 +1021,7 @@ ns.RegisterPoints(1970, { -- Zereth Mortis
 }, coreless{
     label="{npc:181385:Coreless Scarabid}",
     spell=330595, -- Bite
+    texture=ns.atlas_texture("poi-scrapper", {r=0.7, g=0.7, b=1}),
 })
 ns.RegisterPoints(1970, { -- Zereth Mortis
     -- Coreless Aurelid
@@ -1027,6 +1030,7 @@ ns.RegisterPoints(1970, { -- Zereth Mortis
     quest=65523,
     label="{npc:185282:Coreless Aurelid}",
     note="This one is just used to reach the nearby underwater treasure",
+    texture=ns.atlas_texture("poi-scrapper", {r=0.5, g=0.5, b=1}),
 })
 ns.RegisterPoints(1970, { -- Zereth Mortis
     -- Coreless Guardian
@@ -1049,6 +1053,7 @@ ns.RegisterPoints(1970, { -- Zereth Mortis
     label="{npc:183869:Coreless Guardian}",
     note="Pilot with up to two others",
     hide_before=ns.conditions.GarrisonTalent(1998), -- Bassalim Understanding
+    texture=ns.atlas_texture("poi-scrapper", {r=0.7, g=1, b=1}),
 })
 
 -- Traversing the Spheres
