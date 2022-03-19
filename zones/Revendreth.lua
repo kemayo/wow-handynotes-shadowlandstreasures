@@ -144,8 +144,8 @@ ns.RegisterPoints(1525, {
     -- Loyal Gorger
     [59305700] = {
         label="{npc:173499}",
-        icon=3601543,
-        quest={
+        quest={61843, 62046, any=true}, -- daily, final
+        progress={
             61839, -- Nipping at the Undergrowth
             61840, -- Vineroot on the Menu
             61842, -- Vineroot Will Not Do
@@ -154,11 +154,12 @@ ns.RegisterPoints(1525, {
             62045, -- Ready for More
             62046  -- A New Pack
         },
-        hide_before=ns.conditions.QuestComplete(58259), -- Worldedge Gorger
+        hide_before=ns.conditions.QuestComplete(61188), -- Worldedge Gorger
         loot={
             {182589, mount=1391}, -- Loyal Gorger
         },
-        note="Kill {npc:160821}, do 7 days of dailies for {npc:173499}, get a mount",
+        note="Kill {npc:160821} until {item:180583} drops, do 7 days of dailies for {npc:173499}, get a mount",
+        atlas="stablemaster", scale=1.2,
         group="Daily Mounts",
     },
     --
@@ -773,7 +774,7 @@ ns.RegisterPoints(1525, {
         quest=58259,
         npc=160821,
         loot={
-            180583, -- Impressionable Gorger Spawn
+            {180583, quest=61188}, -- Impressionable Gorger Spawn
         },
         note="Use {item:173939} from nearby mobs near braziers",
     },
