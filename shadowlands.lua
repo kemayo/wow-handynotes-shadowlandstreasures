@@ -17,3 +17,4 @@ ns.defaults.profile.groupsHiddenByZone[1970] = {
     puzzlecache = true,
     coreless = true,
 }
+ns.defaults.profile.achievementsHidden[15229] = true

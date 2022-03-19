@@ -18,8 +18,6 @@ local path = ns.path
 -- gravid repose, dormant alcove arrangement 65346 51043248
 -- rondure alcove, rondure cache 42904030: 65567, contained a second pocobold...
 -- 58013 tripped while I was killing Dreadlord Infliltrators after I got loot from one
--- 65622 when I was forge-tapping and got a honeycombed lattice
--- 65560 serene pigment (above Firim's)
 -- 65539 after Arbiter in the Making -- could be for flight, it's complete on other characters as well
 
 local MOUNT = "|A:StableMaster:15:15|a"
@@ -1052,6 +1050,38 @@ ns.RegisterPoints(1970, { -- Zereth Mortis
     note="Pilot with up to two others",
     hide_before=ns.conditions.GarrisonTalent(1998), -- Bassalim Understanding
 })
+
+-- Traversing the Spheres
+-- *Most* of this is in wide areas, but there's a few highly specific ones
+local traverse = ns.nodeMaker{
+    achievement=15229,
+    atlas="ancientmana",
+    minimap=true,
+    active=ns.conditions.Item(187908),
+}
+ns.RegisterPoints(1970, { -- Zereth Mortis
+    [32814036] = {},
+    [43601150] = {},
+    [43908850] = {},
+    [36307090] = {},
+    [51709000] = {},
+}, traverse{
+    quest=65559,
+    criteria=9,
+    loot={190128}, -- Wayward Essence
+    note="Tap the orb with a bird circling around it",
+})
+ns.RegisterPoints(1970, {
+    [34604670] = traverse{
+        quest=65560,
+        criteria=10,
+        note="Above the Exile's Hollow cave entrance",
+    },
+})
+-- 65622 when I was forge-tapping and got a honeycombed lattice
+-- 65560 serene pigment (above Firim's)
+-- 65016 volatile precursor
+-- 65014 incorporeal sand
 
 -- Adventurer of Zerith Mortis
 
