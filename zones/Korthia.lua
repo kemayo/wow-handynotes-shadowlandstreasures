@@ -311,7 +311,7 @@ ns.RegisterPoints(1961, {
 
 --Nests
 ns.RegisterPoints(1961, {
-    [42205600] = {quest=63459},
+    [42205600] = {quest=64359},
     [51904390] = {quest=64360},
     [63703150] = {quest=64361},
     [52407270] = {quest=64362},
@@ -335,10 +335,11 @@ local relic_traits = {
 }
 
 ns.RegisterPoints(1961, { -- Korthia
-    [27305670] = researched{ -- Book of Binding: The Mad Witch
+    [30205510] = researched{ -- Book of Binding: The Mad Witch
         achievement=15066, criteria=52131,
         quest=63899,
         research=2,
+        note="At the back of Gromit Hollow",
     },
 
     [45105610] = researched{ -- Celestial Shadowlands Chart
@@ -348,13 +349,13 @@ ns.RegisterPoints(1961, { -- Korthia
         minimap=false,
     },
 
-    [43505760] = researched{ -- Gorak Claw Fetish
-        -- actual chest is at 41156015
+    [41156015] = researched{ -- Gorak Claw Fetish
         achievement=15066, criteria=52268,
         quest=63924,
-        -- requires_item=186984,
+        -- requires_item=187614,
         research=2,
-        note="In cave. Buy {item:186984} from {npc:178257} to unlock",
+        path=43505741,
+        note="In cave. Buy {item:187614:Key of Many Thoughts} from {npc:178257} to unlock",
     },
 
     [41304330] = researched{ -- Guise of the Changeling
@@ -365,26 +366,27 @@ ns.RegisterPoints(1961, { -- Korthia
         loot={
             {187155, toy=true} -- Guise of the Changeling
         },
-        note="Buy {item:186984} from {npc:178257} to unlock",
+        path=42204101,
+        note="Buy {item:186984:Korthite Crystal Key} from {npc:178257} to unlock",
     },
 
     [33004190] = researched{ -- The Netherstar
         achievement=15066, criteria=52256,
         quest=63910,
-        -- requires_item=186984,
+        -- requires_item=187612,
         research=2,
-        note="Buy {item:186984} from {npc:178257} to unlock",
+        note="Buy {item:187612:Key of Flowing Waters} from {npc:178257} to unlock. On the lowest level.",
     },
 
     [43857690] = researched{ -- Ring of Self-Reflection
         achievement=15066, criteria=52265,
         quest=63921,
-        -- requires_item=186984,
+        -- requires_item=187613,
         research=2,
         loot={
             {187140, toy=true} -- Ring of Duplicity
         },
-        note="Buy {item:186984} from {npc:178257} to unlock",
+        note="Buy {item:187613:Key of the Inner Chambers} from {npc:178257} to unlock",
     },
 
     [62005680] = researched{ -- Singing Steel Ingot
