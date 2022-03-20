@@ -460,7 +460,7 @@ ns.RegisterPoints(1565, {
             48708, -- Argus (quest: 61202)
             48709, -- Azshara (quest: 61201)
             48706, -- Gul'dan (quest: 61204)
-            48704, -- Jaina
+            48704, -- Jaina (quest:61205)
             48707, -- Kil'jaeden (quest: 61203)
             48710, -- N'Zoth
             48705, -- Xavius
@@ -523,9 +523,9 @@ ns.RegisterPoints(1565, {
         },
         -- requires_item=178675,
         note="* Loot {item:181243} at 19.7 63.5 (may need a glider)\n"..
-            "* Do Night Fae quests through {quest:57871}\n",
-            "* Ask {npc:165704} to repair {item:181243}\n",
-            "* Get {item:178675} from {npc:160262} (talk to the guards if you're not Night Fae)\n",
+            "* Do Night Fae quests through {quest:57871}\n"..
+            "* Ask {npc:165704} to repair {item:181243}\n"..
+            "* Get {item:178675} from {npc:160262} (talk to the guards if you're not Night Fae)\n"..
             "* Use {item:178675} here, and defeat the rare",
     },
     [18056200] = ns.path{
