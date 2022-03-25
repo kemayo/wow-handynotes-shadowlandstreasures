@@ -212,14 +212,26 @@ ns.RegisterPoints(1565, { -- Ardenweald
 
 -- Fractured Fairy Tales
 
-local meandering = {criteria=50012,onquest=62619,inbag=183877,loot={{183877,quest=62619}},}
+local meandering = ns.nodeMaker{
+    criteria=50012,onquest=62619,inbag=183877,loot={{183877,quest=62619}},
+}
 local wandering = {criteria=50013,onquest=62620,inbag=183878,loot={{183878,quest=62620}},}
 local escapist = {criteria=50014,onquest=62621,inbag=183879,loot={{183879,quest=62621}},}
 local travel = {criteria=50015,onquest=62622,inbag=183880,loot={{183880,quest=62622}},}
 local naughty = {criteria=50016,onquest=62623,inbag=183881,loot={{183881,quest=62623}},}
 ns.RegisterPoints(1565, {
     [63602275] = {atlas="Campaign-QuestLog-LoreBook-Back",label="{npc:165867}",note="Bring books to him",group="faerietales",},
-    [54604300] = meandering,
+    [54604300] = meandering{
+        routes={
+            {54604300, 53004450, 51604490, 51004580, 50004560},
+            {54604300, 53904260, 53504170, 52204080, 50903970, 50703860, 51503680},
+            {54604300, 55004100, 56503980, 57103960, 57803820, 59003720, 57603590, 56403400, 55603390},
+            {59003720, 59303700, 60303700, 60303630},
+        },
+    },
+    [51405040] = meandering{
+        route={51405040, 52405140, 53605100, 55005360, 56805240},
+    },
     [30004480] = wandering,
     [35602680] = wandering,
     [36104870] = wandering, -- (36404800 is more accurate, but overlaps Macabre)
@@ -462,8 +474,8 @@ ns.RegisterPoints(1565, {
             48706, -- Gul'dan (quest: 61204)
             48704, -- Jaina (quest:61205)
             48707, -- Kil'jaeden (quest: 61203)
-            48710, -- N'Zoth
-            48705, -- Xavius
+            48710, -- N'Zoth (quest: 61206)
+            48705, -- Xavius (quest: 61207)
         },
         quest=61633, -- this is the overall questid for the event, but each rare has its own quest as well
         loot={
