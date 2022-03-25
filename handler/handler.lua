@@ -699,8 +699,8 @@ local HLHandler = {}
 
 function HLHandler:OnEnter(uiMapID, coord)
     local point = ns.points[uiMapID] and ns.points[uiMapID][coord]
-    if point and point.route then
-        if ns.points[uiMapID][point.route] then
+    if ns.RouteWorldMapDataProvider and point.route or point.routes then
+        if point.route and ns.points[uiMapID][point.route] then
             point = ns.points[uiMapID][point.route]
         end
         ns.RouteWorldMapDataProvider:HighlightRoute(point, uiMapID, coord)
@@ -904,8 +904,8 @@ function HLHandler:OnLeave(uiMapID, coord)
     ShoppingTooltip1:Hide()
 
     local point = ns.points[uiMapID] and ns.points[uiMapID][coord]
-    if point and point.route then
-        if ns.points[uiMapID][point.route] then
+    if ns.RouteWorldMapDataProvider and point.route or point.routes then
+        if point.route and ns.points[uiMapID][point.route] then
             point = ns.points[uiMapID][point.route]
         end
         ns.RouteWorldMapDataProvider:UnhighlightRoute(point, uiMapID, coord)
