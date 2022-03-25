@@ -468,16 +468,16 @@ ns.RegisterPoints(1565, {
     },
     -- Ardenweald's a Stage:
     [41254445] = {
-        achievement=14353, criteria={
-            48708, -- Argus (quest: 61202)
-            48709, -- Azshara (quest: 61201)
-            48706, -- Gul'dan (quest: 61204)
-            48704, -- Jaina (quest:61205)
-            48707, -- Kil'jaeden (quest: 61203)
-            48710, -- N'Zoth (quest: 61206)
-            48705, -- Xavius (quest: 61207)
-        },
+        achievement=14353, criteria=true,
         quest=61633, -- this is the overall questid for the event, but each rare has its own quest as well
+        -- Argus (quest: 61202)
+        -- Azshara (quest: 61201)
+        -- Gul'dan (quest: 61204)
+        -- Jaina (quest:61205)
+        -- Kil'jaeden (quest: 61203)
+        -- N'Zoth (quest: 61206)
+        -- Xavius (quest: 61207)
+        areaPoiID = 6909,
         loot={
             179534, -- Mikai's Deathscythe (Argus)
             179518, -- Glimmerlight Staff (Azshara)
