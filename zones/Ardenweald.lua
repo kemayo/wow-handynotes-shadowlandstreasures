@@ -220,7 +220,7 @@ local escapist = {criteria=50014,onquest=62621,inbag=183879,loot={{183879,quest=
 local travel = {criteria=50015,onquest=62622,inbag=183880,loot={{183880,quest=62622}},}
 local naughty = {criteria=50016,onquest=62623,inbag=183881,loot={{183881,quest=62623}},}
 ns.RegisterPoints(1565, {
-    [63602275] = {atlas="Campaign-QuestLog-LoreBook-Back",label="{npc:165867}",note="Bring books to him",group="faerietales",},
+    [63602275] = {atlas="Campaign-QuestLog-LoreBook-Back",label="{npc:165867}",note="Bring books to him",},
     [54604300] = meandering{
         routes={
             {54604300, 53004450, 51604490, 51004580, 50004560},
