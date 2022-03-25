@@ -55,6 +55,7 @@ ns.points = {
     },
     --]]
 }
+ns.POIsToPoints = {}
 function ns.RegisterPoints(zone, points, defaults)
     if not ns.points[zone] then
         ns.points[zone] = {}
@@ -67,6 +68,11 @@ function ns.RegisterPoints(zone, points, defaults)
     end
     ns.merge(ns.points[zone], points)
     for coord, point in pairs(points) do
+        point._coord = coord
+        point._uiMapID = zone
+        if point.areaPoiID then
+            ns.POIsToPoints[point.areaPoiID] = point
+        end
         local proxy_meta
         if point.path or point.related then
             proxy_meta = {__index=point}
@@ -999,3 +1005,12 @@ do
         bucket:Show()
     end
 end
+
+hooksecurefunc(AreaPOIPinMixin, "TryShowTooltip", function(self)
+    -- if not self.db.profile.show_on_world then return end
+    if not self.areaPoiID then return end
+    if not ns.POIsToPoints[self.areaPoiID] then return end
+    local point = ns.POIsToPoints[self.areaPoiID]
+    if not ns.should_show_point(point._coord, point, point._uiMapID, false) then return end
+    handle_tooltip(GameTooltip, point)
+end)
