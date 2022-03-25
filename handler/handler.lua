@@ -80,6 +80,8 @@ function ns.RegisterPoints(zone, points, defaults)
                 note=route.note or false,
                 route=route,
             }, proxy_meta)
+            -- highlight
+            point.route = point.route or route[#route]
         end
         if point.nearby then
             local nearby = type(point.nearby) == "table" and point.nearby or {point.nearby}
