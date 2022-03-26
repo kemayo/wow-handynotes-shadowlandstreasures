@@ -34,8 +34,8 @@ ns.RegisterPoints(1565, { -- Ardenweald
             {182729, toy=true}, -- Hearty Dragon Plume
         },
         note="Up in a tree; go to the slow-fall feather above the waterfall at 48.9 41.1",
+        path={48964106, atlas="poi-door-arrow-up", note="Slow-fall feather to reach the treasure"},
     },
-    [48964106] = ns.path{achievement=14313, criteria=50037, quest=61067,atlas="poi-door-arrow-up",note="Slow-fall feather to reach the treasure"},
     [63903750] = {
         achievement=14313, criteria=50039, -- Cache of the Moon
         quest=61074, -- also 61126 for having turned in the tools
@@ -77,9 +77,8 @@ ns.RegisterPoints(1565, { -- Ardenweald
             179594, -- Witherscorn Guise
         },
         note="Use the jumping mushroom on the cliff above at 37.7 61.5",
-        route={37706150, 36106520},
+        path=37706150,
     },
-    [37706150] = path{achievement=14313, criteria=50045, quest=61068, route=36106520,},
     [48202030] = {
         achievement=14313, criteria=50032, -- Lost Satchel
         quest=62187,
@@ -317,8 +316,8 @@ ns.RegisterPoints(1565, {
             180144, -- Faeflayer's Hatchet
         },
         note="Hidden behind the waterfall",
+        path=70403060,
     },
-    [70403060] = path{achievement=14309, criteria=48798, quest=61184,},
     [54057600] = { -- Gormbore
         achievement=14309, criteria=48795,
         quest=59006,
