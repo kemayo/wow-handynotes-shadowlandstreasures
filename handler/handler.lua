@@ -73,6 +73,11 @@ function ns.RegisterPoints(zone, points, defaults)
         if point.areaPoiID then
             ns.POIsToPoints[point.areaPoiID] = point
         end
+        if point.route and type(point.route) == "table" then
+            -- avoiding a data migration
+            point.routes = {point.route}
+            point.route = nil
+        end
         local proxy_meta
         if point.path or point.related then
             proxy_meta = {__index=point}
@@ -84,7 +89,7 @@ function ns.RegisterPoints(zone, points, defaults)
                 label=route.label or (point.npc and "Path to NPC" or "Path to treasure"),
                 atlas="poi-door", scale=0.95, minimap=true, texture=false,
                 note=route.note or false,
-                route=route,
+                routes={route},
             }, proxy_meta)
             -- highlight
             point.route = point.route or route[#route]
@@ -705,7 +710,7 @@ local HLHandler = {}
 
 function HLHandler:OnEnter(uiMapID, coord)
     local point = ns.points[uiMapID] and ns.points[uiMapID][coord]
-    if ns.RouteWorldMapDataProvider and point.route or point.routes then
+    if ns.RouteWorldMapDataProvider and (point.route or point.routes) then
         if point.route and ns.points[uiMapID][point.route] then
             point = ns.points[uiMapID][point.route]
         end
@@ -910,7 +915,7 @@ function HLHandler:OnLeave(uiMapID, coord)
     ShoppingTooltip1:Hide()
 
     local point = ns.points[uiMapID] and ns.points[uiMapID][coord]
-    if ns.RouteWorldMapDataProvider and point.route or point.routes then
+    if ns.RouteWorldMapDataProvider and (point.route or point.routes) then
         if point.route and ns.points[uiMapID][point.route] then
             point = ns.points[uiMapID][point.route]
         end

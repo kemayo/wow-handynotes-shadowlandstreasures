@@ -30,14 +30,9 @@ function RouteWorldMapDataProvider:RefreshAllData(fromOnShow)
     if not ns.points[uiMapID] then return end
 
     for coord, point in pairs(ns.points[uiMapID]) do
-        if point.route or point.routes and ns.should_show_point(coord, point, uiMapID, false) then
-            if type(point.route) == "table" then
-                self:DrawRoute(point.route, point)
-            end
-            if point.routes then
-                for _, route in ipairs(point.routes) do
-                    self:DrawRoute(route, point)
-                end
+        if point.routes and ns.should_show_point(coord, point, uiMapID, false) then
+            for _, route in ipairs(point.routes) do
+                self:DrawRoute(route, point)
             end
         end
     end
