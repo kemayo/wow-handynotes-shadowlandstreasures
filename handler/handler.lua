@@ -87,7 +87,7 @@ function ns.RegisterPoints(zone, points, defaults)
             table.insert(route, 1, coord)
             ns.points[zone][route[#route]] = setmetatable({
                 label=route.label or (point.npc and "Path to NPC" or "Path to treasure"),
-                atlas="poi-door", scale=0.95, minimap=true, texture=false,
+                atlas=route.atlas or "poi-door", scale=0.95, minimap=true, texture=false,
                 note=route.note or false,
                 routes={route},
             }, proxy_meta)
