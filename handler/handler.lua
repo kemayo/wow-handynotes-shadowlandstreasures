@@ -56,6 +56,7 @@ ns.points = {
     --]]
 }
 ns.POIsToPoints = {}
+ns.VignetteIDsToPoints = {}
 function ns.RegisterPoints(zone, points, defaults)
     if not ns.points[zone] then
         ns.points[zone] = {}
@@ -72,6 +73,9 @@ function ns.RegisterPoints(zone, points, defaults)
         point._uiMapID = zone
         if point.areaPoiID then
             ns.POIsToPoints[point.areaPoiID] = point
+        end
+        if point.vignette then
+            ns.VignetteIDsToPoints[point.vignette] = point
         end
         if point.route and type(point.route) == "table" then
             -- avoiding a data migration
@@ -1019,3 +1023,12 @@ hooksecurefunc(AreaPOIPinMixin, "TryShowTooltip", function(self)
     if not ns.should_show_point(point._coord, point, point._uiMapID, false) then return end
     handle_tooltip(GameTooltip, point)
 end)
+
+hooksecurefunc(VignettePinMixin, "OnMouseEnter", function(self)
+    local vignetteInfo = self.vignetteInfo
+    if not (vignetteInfo.vignetteID and ns.VignetteIDsToPoints[vignetteInfo.vignetteID]) then return end
+    local point = ns.VignetteIDsToPoints[vignetteInfo.vignetteID]
+    if not ns.should_show_point(point._coord, point, point._uiMapID, false) then return end
+    handle_tooltip(GameTooltip, point)
+end)
+
