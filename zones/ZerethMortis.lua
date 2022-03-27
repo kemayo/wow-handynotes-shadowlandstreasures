@@ -1129,7 +1129,7 @@ ns.RegisterPoints(1970, { -- Zereth Mortis
     [64753370] = { -- Akkaris
         npc=179006,
         quest=65552,
-        --vignette=4747,
+        vignette=4747,
         criteria=52977,
         loot={
             189903, -- Sand Sifting Sandals
@@ -1144,7 +1144,7 @@ ns.RegisterPoints(1970, { -- Zereth Mortis
         npc=183596,
         quest=65553,
         criteria=52978,
-        --vignette=4948,
+        vignette=4948,
         loot={
             189906, -- Mask of the Resolute Cervid
             189947, -- Majestic Watcher's Girdle
@@ -1158,7 +1158,7 @@ ns.RegisterPoints(1970, { -- Zereth Mortis
         npc=183953,
         quest=65273,
         criteria=53047,
-        --vignette=4989,
+        vignette=4989,
         loot={
             189907, -- Crown of Contorted Thought
             189940, -- Architect's Polluting Touch
@@ -1186,7 +1186,7 @@ ns.RegisterPoints(1970, { -- Zereth Mortis
         npc=184409,
         quest=65555,
         criteria=52982,
-        --vignette=4961,
+        vignette=4961,
         loot={
             189949, -- Shackles of the Bound Guardian
             189956, -- Perverse Champion's Handguards
@@ -1228,7 +1228,7 @@ ns.RegisterPoints(1970, { -- Zereth Mortis
         npc=180924,
         quest=64719,
         criteria=53025,
-        --vignette=4982,
+        vignette=4982,
         loot={
             189937, -- Garudeon's Blanket of Feathers
             189951, -- Sunbathed Avian Armor
@@ -1243,7 +1243,7 @@ ns.RegisterPoints(1970, { -- Zereth Mortis
         npc=182318,
         quest=65583,
         criteria=52985,
-        --vignette=4909,
+        vignette=4909,
         loot={
             189968, -- Dreadlord General's Tunic
             189948, -- Strangulating Chainlink Lasso
@@ -1271,7 +1271,7 @@ ns.RegisterPoints(1970, { -- Zereth Mortis
         npc=178963,
         quest=63988,
         criteria=52986,
-        --vignette=4746,
+        vignette=4746,
         loot={
             189926, -- Poison-Licked Spaulders
             189960, -- Crouching Legs of the Bufonid
@@ -1456,7 +1456,7 @@ ns.RegisterPoints(1970, { -- Zereth Mortis
         npc=181249,
         quest=65550,
         criteria=52987,
-        --vignette=4903,
+        vignette=4903,
         loot={
             189928, -- Centripetal Waistband
             189966, -- Singing Metal Wristbands
@@ -1509,7 +1509,7 @@ ns.RegisterPoints(1970, { -- Zereth Mortis
     [64054975] = { -- Xy'rath the Covetous
         npc=183737,
         quest=65241,
-        --vignette=4938,
+        vignette=4938,
         criteria=52976,
         loot={
             189918, -- Fleeting Broker's Strides
