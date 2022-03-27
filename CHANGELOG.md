@@ -1,5 +1,15 @@
 # Changelog
 
+## Changed in v57
+
+* Try to show point information on zone-map vignettes and POIs (this requires me to add the IDs for those to the points, so I need to gather more data before it's consistently available)
+* Added the loot to Sand, Sand Everywhere! now I'm confident it's consistent
+* ...Sand, Sand Everywhere! was accidentally being hidden by one of the Coreless Automa points
+* Library Vault in ZM was hotfixed to require Dealic Understanding, apparently
+* Cleaned up some points in Korthia
+* Night Mare in Ardenweald's instructions were cut off by a typo
+* Show the possible path for the Meandering Tale in Ardenweald
+
 ## Changed in v56
 
 * Minor performance improvement: code checking whether you could learn an appearance from an item wasn't caching negative results and so was running more than it needed to
