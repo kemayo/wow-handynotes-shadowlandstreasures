@@ -133,6 +133,7 @@ ns.RegisterPoints(1970, { -- Zereth Mortis
         loot={
             {189447, quest=65360, note=PET}, -- Schematic: Viperid Menace
         },
+        hide_before=ns.conditions.GarrisonTalent(1932), -- Dealic Understanding
         note="In cave. Use tablets to find the correct {spell:362062} buff to make the chest appear",
         path=59258145,
     },
@@ -751,6 +752,7 @@ ns.RegisterPoints(1970, { -- Zereth Mortis
     }),
     [55705340] = makeSchematic(65361, 189448, PET, {note="Inside the Locrian Esper"}), -- Schematic: Tunneling Vombata
     [58807720] = makeSchematic(65360, 189447, PET, { -- Schematic: Viperid Menace
+        -- TODO: the Library Vault was made inaccessible until you had Dealic on March 1st 2022, so this should no longer be a possible situation for new players. Remove this someday.
         hide_before=ns.conditions.QuestComplete(65173),
         note="In the Library Vault treasure; if you looted it before unlocking protoforms, it should just be sitting there",
         path=59258144,
