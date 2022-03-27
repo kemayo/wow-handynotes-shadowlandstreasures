@@ -1047,7 +1047,7 @@ ns.RegisterPoints(1970, { -- Zereth Mortis
     -- Coreless Scarabid
     [40803160] = {},
     [42604360] = {},
-    [44403680] = {},
+    [44453685] = {}, -- almost collides with Sand Sand Everywhere
     [47602420] = {},
     [51404920] = {},
     [57403040] = {},
