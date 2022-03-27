@@ -470,25 +470,23 @@ ns.RegisterPoints(1970, { -- Zereth Mortis
         atlas="storyheader-cheevoicon",
         active=ns.conditions.Item(189863), -- Spatial Opener
         hide_before=ns.conditions.QuestComplete(65346), -- Dormant Alcove Arrangement
-        note="In the Dormant Alcove; teleport here from the Inner Locus. Use {item:189863:Spatial Opener} from various treasures to loot the piles of sand.",
-        -- quests
-        -- lumpy: 65494
-        -- glinting: 65495
-        -- shifting: 65496
-        -- humming: 65497
-        -- misshapen: 65498
-        -- sparkling: 65499
-        -- ticking: 65500
-        -- loot={
-        --     -- not sure if this is consistent or just random rings/necklaces/trinkets...
-        --     190374, -- Gemstone of Prismatic Brilliance (sparkling)
-        --     188044, -- Discarded Cartel Al Signet (shifting)
-        --     188045, -- Salvaged Viperid Band (lumpy)
-        --     188053, -- Abandoned Automa Loop (humming)
-        --     188055, -- Impossibly Ancient Band (glinting)
-        --     188106, -- Unfathomable Pendant (shifting)
-        --     190390, -- Protector's Diffusion Implement (misshapen)
-        -- },
+        note="In the Dormant Alcove; teleport here from the Inner Locus. Use {item:189863:Spatial Opener} from various treasures to loot the piles of sand. The loot from the Misshapen pile varies based on your class/spec.",
+        loot={
+            {190374, quest=65499, note="Sparkling"}, -- Gemstone of Prismatic Brilliance (sparkling)
+            {188044, quest=65496, note="Shifting"}, -- Discarded Cartel Al Signet (shifting)
+            {188045, quest=65494, note="Lumpy"}, -- Salvaged Viperid Band (lumpy)
+            {188053, quest=65497, note="Humming"}, -- Abandoned Automa Loop (humming)
+            {188055, quest=65495, note="Glinting"}, -- Impossibly Ancient Band (glinting)
+            {188106, quest=65496, note="Shifting"}, -- Unfathomable Pendant (shifting)
+            -- This one could be a bunch of different trinkets:
+            {190389, quest=65498, note="Misshapen"}, -- Broker's Lucky Coin (misshapen)
+            {190390, quest=65498, note="Misshapen"}, -- Protector's Diffusion Implement (misshapen)
+            {190582, quest=65498, note="Misshapen"}, -- Symbol of the Vombata (misshapen)
+            {190597, quest=65498, note="Misshapen"}, -- Symbol of the Lupine (misshapen)
+            {190602, quest=65498, note="Misshapen"}, -- Symbol of the Raptora (misshapen)
+            {190726, quest=65498, note="Misshapen"}, -- Extract of Prodigious Sands (misshapen)
+        },
+        route={50553200, 44403680},
     },
     [42934006] = {
         quest=65567,
