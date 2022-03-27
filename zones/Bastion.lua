@@ -506,11 +506,13 @@ ns.RegisterPoints(1533, {
         achievement=14307, criteria=50618,
         quest=61634,
         npc=156339,
+        areaPoi=6894, -- Black Bell
         loot={
             184365, -- Aegis of Salvation
             {184401, pet=3063, covenant=Enum.CovenantType.Kyrian}, -- Larion Pouncer
         },
         note="Requires Kyrian player to summon",
+        nearby={22702290, label="Black Bell"},
     },
     [43502525] = { -- Unstable Memory
         achievement=14307, criteria=50606,
@@ -526,9 +528,12 @@ ns.RegisterPoints(1533, {
         achievement=14307, criteria=50600,
         quest=60314,-- 62197,
         npc=167078,
+        areaPoi=6896, -- Horn of Courage
         loot={
             182749, -- Regurgitated Kyrian Wings
         },
+        note="A Kyrian player must click the Horn of Courage",
+        nearby={41655455, label="Horn of Courage"},
     },
     [60109350] = { -- Sundancer
         achievement=14307, criteria=50601,

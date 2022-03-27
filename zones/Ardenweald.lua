@@ -445,6 +445,7 @@ ns.RegisterPoints(1565, {
         achievement=14309, criteria=48796,
         quest=61632,
         npc=168647,
+        areaPoi=6910, -- Sparkling Animaseed
         loot={
             {180730, mount=1393, covenant=Enum.CovenantType.NightFae}, -- Wild Glimmerfur Prowler
             180154, -- Greataxe of Unrelenting Pursuit
@@ -455,6 +456,7 @@ ns.RegisterPoints(1565, {
         note="A Night Fae player channeling the Tirna Scithe must:\n"..
             "* Pick up a {spell:338045}\n"..
             "* Use {spell:338045} to remove {spell:338038}",
+        nearby={30455555, label="Sparkling Animaseed"},
     },
     [58306180] = { -- Wrigglemortis
         achievement=14309, criteria=48783,
@@ -476,7 +478,7 @@ ns.RegisterPoints(1565, {
         -- Kil'jaeden (quest: 61203)
         -- N'Zoth (quest: 61206)
         -- Xavius (quest: 61207)
-        areaPoi=6909,
+        areaPoi=6909, -- Dapperdew
         loot={
             179534, -- Mikai's Deathscythe (Argus)
             179518, -- Glimmerlight Staff (Azshara)

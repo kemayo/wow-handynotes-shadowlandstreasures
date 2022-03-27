@@ -553,6 +553,7 @@ ns.RegisterPoints(1536, {
         achievement=14802, criteria=48874,
         quest=58784,
         npc=168147,
+        areaPoi=6905, -- Spoiling For A Fight
         loot={
             184291, -- Tempered Boneplate Waistguard
             {181815, mount=1370, covenant=Enum.CovenantType.Necrolord}, -- Armored Bonehoof Tauralus
@@ -656,6 +657,7 @@ ns.RegisterPoints(1536, {
     [31603540] = { -- Gieger
         quest=58872,
         npc=162741,
+        areaPoi=6901, -- Final Thread
         loot={
             {182080, mount=1411, covenant=Enum.CovenantType.Necrolord}, -- Predatory Plagueroc
             184298, -- Amalgamated Forsworn's Journal

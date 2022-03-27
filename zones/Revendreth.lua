@@ -612,10 +612,11 @@ ns.RegisterPoints(1525, {
     [32651545] = { -- Forgemaster Madalav
         quest=61618,
         npc=159496,
+        areaPoi=6913, -- Madlav's Hammer
         loot={
-            {180939,covenant=Enum.CovenantType.Venthyr}, -- Mantle of the Forgemaster's Dark Blades
-            180489,
-            180709,
+            {180939, covenant=Enum.CovenantType.Venthyr}, -- Mantle of the Forgemaster's Dark Blades
+            180489, -- Forgemaster's Many-Fold Rapier
+            180709, -- Tempered Armor Patch
         },
         -- covenant=Enum.CovenantType.Venthyr,
         note="A Venthyr player channeling Dominance Keep must click the hammer",
@@ -633,6 +634,7 @@ ns.RegisterPoints(1525, {
     [45857920] = { -- Harika the Horrid
         quest=59612,
         npc=165290,
+        areaPoi=6912, -- Dredterror Ballista
         loot={
             183720, -- Dredbatskin Jerkin
             {180461, mount=1310, covenant=Enum.CovenantType.Venthyr}, -- Horrid Brood Dredwing
