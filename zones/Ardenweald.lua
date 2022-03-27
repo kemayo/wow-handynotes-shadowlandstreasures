@@ -476,7 +476,7 @@ ns.RegisterPoints(1565, {
         -- Kil'jaeden (quest: 61203)
         -- N'Zoth (quest: 61206)
         -- Xavius (quest: 61207)
-        areaPoiID = 6909,
+        areaPoi=6909,
         loot={
             179534, -- Mikai's Deathscythe (Argus)
             179518, -- Glimmerlight Staff (Azshara)

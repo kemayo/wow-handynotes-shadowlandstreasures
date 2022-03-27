@@ -71,8 +71,8 @@ function ns.RegisterPoints(zone, points, defaults)
     for coord, point in pairs(points) do
         point._coord = coord
         point._uiMapID = zone
-        if point.areaPoiID then
-            ns.POIsToPoints[point.areaPoiID] = point
+        if point.areaPoi then
+            ns.POIsToPoints[point.areaPoi] = point
         end
         if point.vignette then
             ns.VignetteIDsToPoints[point.vignette] = point
