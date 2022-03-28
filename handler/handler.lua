@@ -83,7 +83,7 @@ function ns.RegisterPoints(zone, points, defaults)
             point.route = nil
         end
         local proxy_meta
-        if point.path or point.related then
+        if point.path or point.nearby then
             proxy_meta = {__index=point}
         end
         if point.path then
@@ -94,6 +94,7 @@ function ns.RegisterPoints(zone, points, defaults)
                 atlas=route.atlas or "poi-door", scale=0.95, minimap=true, texture=false,
                 note=route.note or false,
                 routes={route},
+                _coord=route[#route],
             }, proxy_meta)
             -- highlight
             point.route = point.route or route[#route]
@@ -106,6 +107,7 @@ function ns.RegisterPoints(zone, points, defaults)
                     atlas=nearby.atlas or "questobjective", scale=0.95, texture=false,
                     minimap=true, worldmap=false,
                     note=nearby.note or false,
+                    _coord=ncoord,
                 }, proxy_meta)
             end
         end
