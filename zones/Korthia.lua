@@ -741,6 +741,7 @@ ns.RegisterPoints(1961, { -- Korthia
         achievement=15107, criteria=52300,
         quest=64338,
         npc=180032,
+        vignette=4839,
         covenant=Enum.CovenantType.Kyrian,
         loot={
             {187176, toy=true}, -- Vesper of Harmony

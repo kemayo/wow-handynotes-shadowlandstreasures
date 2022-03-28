@@ -125,6 +125,7 @@ ns.RegisterPoints(1543, {
         achievement=14738, criteria=49251,
         npc=174827,
         -- quest=61124,
+        vignette=4460,
         label="{npc:174827}",
         loot={
             {184167,mount=1304,}, -- Mawsworn Soulhunter

@@ -2,6 +2,23 @@ local myname, ns = ...
 
 local path = ns.path
 
+local husk = {
+    -- these are shared with Hunter Vivianna, but they're BoE high-AH items, so...
+    label=false, -- Decayed Husk
+    loot={
+        179593, -- Darkreach Mask
+        179594, -- Witherscorn Guise
+    },
+    _uiMapID=1565,
+    _coord=0,
+}
+ns.VignetteIDsToPoints[4217] = husk
+ns.VignetteIDsToPoints[4218] = husk
+ns.VignetteIDsToPoints[4219] = husk
+ns.VignetteIDsToPoints[4220] = husk
+ns.VignetteIDsToPoints[4221] = husk
+ns.VignetteIDsToPoints[4554] = husk -- actually Darkreach Supplies
+
 ns.RegisterPoints(1565, { -- Ardenweald
     [55902100] = {
         achievement=14313, criteria=50031, -- Aerto's Body

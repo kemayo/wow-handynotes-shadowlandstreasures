@@ -2,6 +2,34 @@ local myname, ns = ...
 
 local path = ns.path
 
+local secret_treasure = {
+    label=false, -- Secret Treasure
+    loot={
+        {180589, pet=2894}, -- Soullocked Sinstone
+    },
+    _uiMapID=1525,
+    _coord=0,
+}
+ns.VignetteIDsToPoints[4173] = secret_treasure
+ns.VignetteIDsToPoints[4174] = secret_treasure
+ns.VignetteIDsToPoints[4175] = secret_treasure
+ns.VignetteIDsToPoints[4176] = secret_treasure
+ns.VignetteIDsToPoints[4177] = secret_treasure
+ns.VignetteIDsToPoints[4178] = secret_treasure
+ns.VignetteIDsToPoints[4179] = secret_treasure
+ns.VignetteIDsToPoints[4180] = secret_treasure
+ns.VignetteIDsToPoints[4181] = secret_treasure
+ns.VignetteIDsToPoints[4182] = secret_treasure
+
+ns.VignetteIDsToPoints[4212] = {
+    label=false, -- Bleakwood Chest
+    loot={
+        {180592, pet=2901}, -- Trapped Stonefiend
+    },
+    _uiMapID=1525,
+    _coord=0,
+}
+
 ns.RegisterPoints(1525, { -- Revendreth
     [37706920] = {
         achievement=14314, criteria=50076, -- Lost Quill

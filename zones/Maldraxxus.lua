@@ -2,6 +2,28 @@ local myname, ns = ...
 
 local path = ns.path
 
+local growth = {
+    label=false, -- Sp(r)outing Growth
+    loot={
+        {181173, pet=2949}, -- Skittering Venomspitter
+    },
+    _uiMapID=1536,
+    _coord=0,
+}
+ns.VignetteIDsToPoints[4202] = growth
+ns.VignetteIDsToPoints[4362] = growth
+ns.VignetteIDsToPoints[4363] = growth
+
+ns.VignetteIDsToPoints[4366] = {
+    label=false, -- Slime-Coated Crate
+    loot={
+        {181262, pet=2952}, -- Bubbling Pustule
+        {184447, toy=true}, -- Kevin's Party Supplies
+    },
+    _uiMapID=1536,
+    _coord=0,
+}
+
 ns.RegisterPoints(1536, { -- Maldraxxus
     [47206210] = {
         achievement=14312, criteria=50063, -- Ornate Bone Shield
@@ -744,7 +766,7 @@ ns.RegisterPoints(1536, {
             50397, -- Azmogal
             50398, -- Unbreakable Urtz
             50399, -- Xantuth the Blighted
-            50400, -- Mistress Dyrax (quest:62786)
+            50400, -- Mistress Dyrax
             50402, -- Devmorta
             50403, -- Ti'or
             48874  -- Sabriel the Bonecleaver
