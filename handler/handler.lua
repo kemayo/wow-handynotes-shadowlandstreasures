@@ -5,6 +5,8 @@ local HL = LibStub("AceAddon-3.0"):NewAddon(myname, "AceEvent-3.0")
 -- local L = LibStub("AceLocale-3.0"):GetLocale(myname, true)
 ns.HL = HL
 
+ns.DEBUG = GetAddOnMetadata(myname, "Version") == '@project-version@'
+
 ---------------------------------------------------------
 -- Data model stuff:
 
@@ -657,6 +659,10 @@ local function handle_tooltip(tooltip, point)
 
     if point.quest and ns.db.tooltip_questid then
         tooltip:AddDoubleLine("QuestID", render_string_list(point, "questid", point.quest), NORMAL_FONT_COLOR:GetRGB())
+    end
+
+    if ns.DEBUG then
+        tooltip:AddDoubleLine("Coord", point._coord)
     end
 
     if (ns.db.tooltip_item or IsShiftKeyDown()) and (point.loot or point.npc or point.spell) then
