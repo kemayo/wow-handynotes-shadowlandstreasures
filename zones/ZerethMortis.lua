@@ -61,7 +61,7 @@ ns.RegisterPoints(1970, { -- Zereth Mortis
     },
 
     [60001800] = { -- Domination Cache
-        quest=65468,
+        quest=65465,
         achievement=15331, criteria=53018,
         active=ns.conditions.Item(189704),
         loot={

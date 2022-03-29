@@ -794,7 +794,7 @@ ns.RegisterPoints(1525, {
     },
     [43007910] = { -- Tomb Burster
         achievement=14310, criteria=48802,
-        quest=61231, -- 56877?
+        quest=56877,
         npc=155779,
         loot={
             {180584, pet=2891}, -- Blushing Spiderling

@@ -529,7 +529,7 @@ ns.RegisterPoints(1533, {
     },
     [30355515] = { -- Reekmonger
         achievement=14307, criteria=50616,
-        quest=61101,
+        quest=61108,
         npc=171327,
         --loot={},
         note="Kill enemies in the Temple of Courage to summon",
@@ -579,7 +579,7 @@ ns.RegisterPoints(1533, {
     },
     [60109350] = { -- Sundancer
         achievement=14307, criteria=50601,
-        quest=60860,
+        quest=60862,
         npc=170548,
         note="Use the statue and a {item:180445:Skystrider Glider}",
         loot={
