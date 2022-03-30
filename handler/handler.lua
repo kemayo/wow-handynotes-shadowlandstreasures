@@ -104,13 +104,18 @@ function ns.RegisterPoints(zone, points, defaults)
         if point.nearby then
             local nearby = type(point.nearby) == "table" and point.nearby or {point.nearby}
             for _, ncoord in ipairs(point.nearby) do
-                ns.points[zone][ncoord] = setmetatable({
+                local npoint = setmetatable({
                     label=nearby.label or (point.npc and "Related to nearby NPC" or "Related to nearby treasure"),
-                    atlas=nearby.atlas or "questobjective", scale=0.95, texture=false,
-                    minimap=true, worldmap=false,
+                    atlas=nearby.atlas or "playerpartyblip",
+                    texture=nearby.texture or false,
+                    minimap=true, worldmap=false, scale=0.95,
                     note=nearby.note or false,
                     _coord=ncoord,
                 }, proxy_meta)
+                if nearby.color then
+                    npoint.texture = ns.atlas_texture(npoint.atlas, nearby.color)
+                end
+                ns.points[zone][ncoord] = npoint
             end
         end
     end
