@@ -464,6 +464,38 @@ ns.RegisterPoints(1970, { -- Zereth Mortis
 })
 
 ns.RegisterPoints(1970, { -- Zereth Mortis
+    -- https://www.wowhead.com/object=375363/mawsworn-supply-chest#map
+    [45404640] = {},
+    [46002430] = {},
+    [46702680] = {},
+    [46801240] = {},
+    [47800140] = {},
+    [48104820] = {},
+    [48804240] = {},
+    [50104460] = {},
+    [50705040] = {},
+    [50801000] = {},
+    [51700820] = {},
+    [57602290] = {},
+    [58404030] = {},
+    [59303150] = {},
+    [59901670] = {},
+    [60103230] = {},
+    [61003050] = {},
+    [63002490] = {},
+    [63302100] = {},
+    [67602960] = {},
+}, {
+    label="Mawsworn Supply Chest",
+    loot={
+        {190766, mount=1585}, -- Spectral Mawrat's Tail
+    },
+    note="Multiple spawn points. Mount is a very low drop rate.",
+    texture=ns.atlas_texture("VignetteLoot", {r=0.5,g=1,b=0.5,a=1,scale=0.9}),
+    group="mawsworncache",
+})
+
+ns.RegisterPoints(1970, { -- Zereth Mortis
     [44403680] = {
         achievement=15502, -- Sand Sand Everywhere
         criteria=true,
