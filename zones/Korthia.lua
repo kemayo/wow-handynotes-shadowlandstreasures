@@ -90,6 +90,7 @@ ns.RegisterPoints(1961, { -- Korthia
 
     [62055550] = { -- Spectral Bound Chest
         quest=64247,
+        -- vignette=4801 locked, 4802 unlocked
         loot = {
             -- 187020, -- Necrobinder's Shoulderpads (confirm? it's in the caches...)
             187026, -- Field Warden's Torture Kit
@@ -616,6 +617,7 @@ ns.RegisterPoints(1961, { -- Korthia
         achievement=15107, criteria=52298,
         quest=64320,
         npc=180014,
+        vignette=4835,
         covenant=Enum.CovenantType.NightFae,
         loot={
             {186492, mount=1487, covenant=Enum.CovenantType.NightFae}, -- Summer Wilderling Harness
@@ -627,6 +629,7 @@ ns.RegisterPoints(1961, { -- Korthia
         achievement=15107, criteria=52299,
         quest=64349,
         npc=180042,
+        vignette=4854,
         -- covenant=Enum.CovenantType.Necrolord,
         loot={
             187372, -- Miasma Filtering Headpiece
@@ -726,11 +729,12 @@ ns.RegisterPoints(1961, { -- Korthia
         achievement=15107, criteria=52276,
         quest=64313,
         npc=179985,
+        vignette=4832, -- 4831
         covenant=Enum.CovenantType.Venthyr,
         loot={
             184790, -- Archdruid Van-Yali's Greenthumbs
             {186479, mount=803, covenant=Enum.CovenantType.Venthyr}, -- Mastercraft Gravewing
-            -- {187283,quest=64530,}, -- Gravewing Crystal
+            -- {187283,quest=64530, covenant=Enum.CovenantType.Venthyr}, -- Gravewing Crystal
             187386, -- Stygian Crystal Studded Legguards
             {187428,quest=64553,}, -- Legend of the Animaswell
         },
@@ -741,7 +745,7 @@ ns.RegisterPoints(1961, { -- Korthia
         achievement=15107, criteria=52300,
         quest=64338,
         npc=180032,
-        vignette=4839,
+        vignette=4839, -- 4838 for the patrol...
         covenant=Enum.CovenantType.Kyrian,
         loot={
             {187176, toy=true}, -- Vesper of Harmony
@@ -798,6 +802,7 @@ ns.RegisterPoints(1961, { -- Korthia
         achievement=15107, criteria=52303,
         quest=64246, -- 64280?
         npc=179472,
+        vignette=4800, -- behind vignette=4885 "Devouring Tear"
         loot={
             {187183, mount=1514}, -- Rampaging Mauler
             187375, -- Bound Worldeater Tendrils
@@ -811,6 +816,7 @@ ns.RegisterPoints(1961, { -- Korthia
         achievement=15107, criteria=52302,
         quest=64245,
         npc=179760,
+        vignette=4798, -- behind vignette=4885 "Devouring Tear"
         loot={
             187035, -- Cold Burden of the Damned
             187241, -- Watchful Eye of the Damned
@@ -826,6 +832,7 @@ ns.RegisterPoints(1961, { -- Korthia
         achievement=15107, criteria=52319,
         quest=64457,
         npc=180162,
+        vignette=4866, -- behind vignette=4883 "Abandoned Veilstaff"
         loot={
             {187264, quest=64513}, -- Ve'rayn's Head
             187369, -- Ve'rayn's Formal Robes
