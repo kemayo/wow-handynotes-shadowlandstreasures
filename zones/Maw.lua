@@ -668,7 +668,7 @@ ns.RegisterPoints(1543, {
     [33557040] = {quest=63818},
     -- [33805720] = {quest=nil},
     [34106165] = {quest=63817},
-    -- [35006970] = {quest=nil},
+    [35066973] = {quest=64209},
 }, {
     label="Mawsworn Cache",
     poi={ASSAULT_NECRO},
