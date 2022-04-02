@@ -729,7 +729,7 @@ ns.RegisterPoints(1961, { -- Korthia
         achievement=15107, criteria=52276,
         quest=64313,
         npc=179985,
-        vignette=4832, -- 4831
+        vignette={4831, 4832}, -- 4831
         covenant=Enum.CovenantType.Venthyr,
         loot={
             184790, -- Archdruid Van-Yali's Greenthumbs
@@ -745,7 +745,7 @@ ns.RegisterPoints(1961, { -- Korthia
         achievement=15107, criteria=52300,
         quest=64338,
         npc=180032,
-        vignette=4839, -- 4838 for the patrol...
+        vignette={4838, 4839}, -- 4838 for the patrol...
         covenant=Enum.CovenantType.Kyrian,
         loot={
             {187176, toy=true}, -- Vesper of Harmony
@@ -832,7 +832,7 @@ ns.RegisterPoints(1961, { -- Korthia
         achievement=15107, criteria=52319,
         quest=64457,
         npc=180162,
-        vignette=4866, -- behind vignette=4883 "Abandoned Veilstaff"
+        vignette={4866, 4883}, -- behind vignette=4883 "Abandoned Veilstaff"
         loot={
             {187264, quest=64513}, -- Ve'rayn's Head
             187369, -- Ve'rayn's Formal Robes
