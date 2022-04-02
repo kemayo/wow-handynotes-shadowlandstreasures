@@ -802,7 +802,7 @@ ns.RegisterPoints(1961, { -- Korthia
         achievement=15107, criteria=52303,
         quest=64246, -- 64280?
         npc=179472,
-        vignette=4800, -- behind vignette=4885 "Devouring Tear"
+        vignette={4800, 4885}, -- behind vignette=4885 "Devouring Tear"
         loot={
             {187183, mount=1514}, -- Rampaging Mauler
             187375, -- Bound Worldeater Tendrils
@@ -816,7 +816,7 @@ ns.RegisterPoints(1961, { -- Korthia
         achievement=15107, criteria=52302,
         quest=64245,
         npc=179760,
-        vignette=4798, -- behind vignette=4885 "Devouring Tear"
+        vignette={4798, 4886}, -- behind vignette=4886 "Mawsworn Portal"
         loot={
             187035, -- Cold Burden of the Damned
             187241, -- Watchful Eye of the Damned
