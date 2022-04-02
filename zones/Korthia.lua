@@ -92,9 +92,12 @@ ns.RegisterPoints(1961, { -- Korthia
         quest=64247,
         -- vignette=4801 locked, 4802 unlocked
         loot = {
-            -- 187020, -- Necrobinder's Shoulderpads (confirm? it's in the caches...)
             187026, -- Field Warden's Torture Kit
             187240, -- Field Warden's Watchful Eye
+            -- These are all incredibly low drop rate, but wowhead comments claim they drop:
+            187020, -- Necrobinder's Shoulderpads
+            187016, -- Eviscerator's Spiked Mantle
+            187023, -- Instructor's Mantle
         },
         label="Spectral Bound Chest",
         -- currency=1767, -- x40
@@ -130,9 +133,12 @@ ns.RegisterPoints(1961, { -- Korthia
 local mawcache = ns.nodeMaker{
     label="Mawsworn Cache",
     loot={
-        187020, -- Necrobinder's Shoulderpads
         187026, -- Field Warden's Torture Kit
         187240, -- Field Warden's Watchful Eye
+        -- These are all incredibly low drop rate, but wowhead comments claim they drop:
+        187020, -- Necrobinder's Shoulderpads
+        187016, -- Eviscerator's Spiked Mantle
+        187023, -- Instructor's Mantle
     },
     note="Multiple spawn points",
     group="mawsworncache",
