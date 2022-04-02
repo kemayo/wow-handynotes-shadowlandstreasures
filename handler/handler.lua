@@ -59,6 +59,16 @@ ns.points = {
 }
 ns.POIsToPoints = {}
 ns.VignetteIDsToPoints = {}
+local function intotable(dest, value_or_table, point)
+    if not value_or_table then return end
+    if type(value_or_table) == "table" then
+        for _, value in ipairs(value_or_table) do
+            dest[value] = point
+        end
+        return
+    end
+    dest[value_or_table] = point
+end
 function ns.RegisterPoints(zone, points, defaults)
     if not ns.points[zone] then
         ns.points[zone] = {}
@@ -73,12 +83,8 @@ function ns.RegisterPoints(zone, points, defaults)
     for coord, point in pairs(points) do
         point._coord = coord
         point._uiMapID = zone
-        if point.areaPoi then
-            ns.POIsToPoints[point.areaPoi] = point
-        end
-        if point.vignette then
-            ns.VignetteIDsToPoints[point.vignette] = point
-        end
+        intotable(ns.POIsToPoints, point.areaPoi, point)
+        intotable(ns.VignetteIDsToPoints, point.vignette, point)
         if point.route and type(point.route) == "table" then
             -- avoiding a data migration
             point.routes = {point.route}
