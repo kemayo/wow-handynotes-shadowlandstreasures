@@ -691,6 +691,7 @@ ns.RegisterPoints(1961, { -- Korthia
         achievement=15107, criteria=52291,
         quest=64291,
         npc=179931,
+        vignette=4836,
         loot={
             187403, -- Relic Breaker's Drape
         },
@@ -711,6 +712,7 @@ ns.RegisterPoints(1961, { -- Korthia
         achievement=15107, criteria=52273,
         quest=64263,
         npc=179608,
+        vignette=4819,
         loot={
             187362, -- Stinging Shadow Screamer
             187400, -- Mantle of Screaming Shadows
@@ -782,6 +784,7 @@ ns.RegisterPoints(1961, { -- Korthia
         achievement=15107, criteria=52295,
         quest=64257,
         npc=179802,
+        vignette=4859,
         -- requires_item=186718,
         loot={
             {187103, quest=63917}, -- Everliving Statuette
