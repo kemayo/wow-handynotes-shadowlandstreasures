@@ -425,6 +425,9 @@ ns.RegisterPoints(1970, { -- Zereth Mortis
         quest=65183,
         label="Provis Cache",
         active=ns.conditions.Item(188231),
+        loot={
+            {189710, quest=65474}, -- Pocopoc's Ruby and Platinum Body
+        },
         note="Use {item:187908} to get 15x {item:187728}, which will sometimes give you the {item:188231}",
     },
 })
@@ -443,6 +446,7 @@ ns.RegisterPoints(1970, { -- Zereth Mortis
     note="Multiple spawn points; you need to be on {quest:65142} or have flying unlocked",
     loot={
         {190096, quest=65534}, -- Pocobold
+        {189711, quest=65476}, -- Pocopoc's Gold and Ruby Components
     },
 })
 
@@ -459,7 +463,9 @@ ns.RegisterPoints(1970, { -- Zereth Mortis
     active=ns.conditions.Item(190197), -- Sandworn Chest Key
     note="Multiple spawn points. Get 5x {item:190198} from nearby mobs to make {item:190197}",
     loot={
-        {190734, toy=true} -- Makaris's Satchel of Mines
+        {190734, toy=true}, -- Makaris's Satchel of Mines
+        {189713, quest=65478}, -- Pocopoc's Copper and Cobalt Components
+        {189714, quest=65479}, -- Pocopoc's Platinum and Emerald Components
     },
 })
 
@@ -1608,6 +1614,25 @@ ns.RegisterPoints(1970, { -- Zereth Mortis
             {190463, note="All"}, -- Dismal Mystic's Glaive
         },
     },
+})
+
+ns.RegisterPoints(1970, { -- Zereth Mortis
+    [48800560] = { -- Antros
+        npc=182466,
+        quest=65143,
+        worldquest=65143,
+        loot={
+            {189709, quest=65473}, -- Pocopoc's Cobalt and Copper Body
+            190614, -- Antros' Entrusted Bascinet
+            190615, -- Cosmic Guardian's Casing
+            190616, -- Controlled Sequence Clasp
+            190617, -- Destruction-Core Handlers
+            190618, -- Lattice of the Distant Keeper
+            190619, -- Antecedent's Aliform Joggers
+            190620, -- Sav'thul's Calamitous Tantour
+            190621, -- Dealic Deterrent Stockings
+        },
+    }
 })
 
 -- Completing the Code
