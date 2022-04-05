@@ -59,6 +59,7 @@ ns.points = {
 }
 ns.POIsToPoints = {}
 ns.VignetteIDsToPoints = {}
+ns.WorldQuestsToPoints = {}
 local function intotable(dest, value_or_table, point)
     if not value_or_table then return end
     if type(value_or_table) == "table" then
@@ -85,6 +86,7 @@ function ns.RegisterPoints(zone, points, defaults)
         point._uiMapID = zone
         intotable(ns.POIsToPoints, point.areaPoi, point)
         intotable(ns.VignetteIDsToPoints, point.vignette, point)
+        intotable(ns.WorldQuestsToPoints, point.worldquest, point)
         if point.route and type(point.route) == "table" then
             -- avoiding a data migration
             point.routes = {point.route}
@@ -1055,3 +1057,10 @@ hooksecurefunc(VignettePinMixin, "OnMouseEnter", function(self)
     handle_tooltip(GameTooltip, point)
 end)
 
+hooksecurefunc("TaskPOI_OnEnter", function(self)
+    if not self.questID then return end
+    if not ns.WorldQuestsToPoints[self.questID] then return end
+    local point = ns.WorldQuestsToPoints[self.questID]
+    if not ns.should_show_point(point._coord, point, point._uiMapID, false) then return end
+    handle_tooltip(GameTooltip, point)
+end)
