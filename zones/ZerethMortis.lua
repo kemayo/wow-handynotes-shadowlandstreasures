@@ -502,6 +502,35 @@ ns.RegisterPoints(1970, { -- Zereth Mortis
 })
 
 ns.RegisterPoints(1970, { -- Zereth Mortis
+    [54294965] = {},
+    [41903420] = {},
+    [60906940] = {},
+    [29404930] = {},
+    [66502510] = {},
+    [63704120] = {},
+    [61301550] = {},
+    [69503440] = {},
+    [42805290] = {},
+    [44507140] = {},
+    [53009220] = {},
+    [43908430] = {},
+    [40306260] = {},
+    [54304970] = {},
+    [49003050] = {},
+    [50800470] = {},
+}, {
+    label="Shrouded Cypher Cache",
+    loot={
+        {189983, quest=65513, covenant=Enum.CovenantType.NightFae}, -- Gromit Soul
+    },
+    active={ns.conditions.AuraActive(361917), ns.conditions.AuraActive(364478)},
+    note="You need to be wearing Cypher gear with {spell:364478} and have {spell:361917} active",
+    texture=ns.atlas_texture("VignetteLoot", {r=0.5,g=1,b=1,a=1,scale=0.9}),
+    minimap=true, -- they'll show as a perceptive pocopoc... but it's easier to find them with this up too
+    group="shroudedcyphercache",
+})
+
+ns.RegisterPoints(1970, { -- Zereth Mortis
     [44403680] = {
         achievement=15502, -- Sand Sand Everywhere
         criteria=true,
