@@ -518,16 +518,21 @@ ns.RegisterPoints(1970, { -- Zereth Mortis
     [54304970] = {},
     [49003050] = {},
     [50800470] = {},
+    [61955715] = {},
+    [62204623] = {},
+    [36254810] = {},
 }, {
     label="Shrouded Cypher Cache",
     loot={
         {189983, quest=65513, covenant=Enum.CovenantType.NightFae}, -- Gromit Soul
+        -- This is also in other chests, but:
+        {189707, quest=65471}, -- Pocopoc's Bronze and Gold Body
     },
     active={ns.conditions.AuraActive(361917), ns.conditions.AuraActive(364478)},
     note="You need to be wearing Cypher gear with {spell:364478} and have {spell:361917} active",
     texture=ns.atlas_texture("VignetteLoot", {r=0.5,g=1,b=1,a=1,scale=0.9}),
     minimap=true, -- they'll show as a perceptive pocopoc... but it's easier to find them with this up too
-    group="shroudedcyphercache",
+    group="junk",
 })
 
 ns.RegisterPoints(1970, { -- Zereth Mortis
