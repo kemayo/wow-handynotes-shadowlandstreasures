@@ -536,6 +536,32 @@ ns.RegisterPoints(1970, { -- Zereth Mortis
 })
 
 ns.RegisterPoints(1970, { -- Zereth Mortis
+    [39607760] = {},
+    [40706990] = {},
+    [43608330] = {},
+    [51104690] = {},
+    [53908840] = {},
+    [54008860] = {},
+    [54804680] = {},
+    [57704360] = {},
+    [58906090] = {},
+    [59905120] = {},
+    [62107480] = {},
+    [64007220] = {},
+    [65804040] = {},
+    [67604030] = {},
+    [69903420] = {},
+}, {
+    label="Discarded Automa Scrap",
+    loot={
+        {189717, quest=65483}, -- Pocopoc's Shielded Core
+        {189718, quest=65484}, -- Pocopoc's Upgraded Core
+    },
+    texture=ns.atlas_texture("mechagon-projects", {r=0.5, g=0.5, b=1, scale=0.9}),
+    group="junk",
+})
+
+ns.RegisterPoints(1970, { -- Zereth Mortis
     [44403680] = {
         achievement=15502, -- Sand Sand Everywhere
         criteria=true,
