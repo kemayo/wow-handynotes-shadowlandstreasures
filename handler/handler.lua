@@ -972,14 +972,6 @@ do
         -- Debug("GetNodes2", uiMapID, minimap)
         currentZone = uiMapID
         isMinimap = minimap
-        if minimap and ns.map_spellids[uiMapID] then
-            if ns.map_spellids[uiMapID] == true then
-                return iter
-            end
-            if GetPlayerAuraBySpellID(ns.map_spellids[uiMapID]) then
-                return iter
-            end
-        end
         return iter, ns.points[uiMapID], nil
     end
 end
