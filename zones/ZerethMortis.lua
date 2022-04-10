@@ -1727,7 +1727,7 @@ ns.RegisterPoints(1970, { -- Zereth Mortis
     [60756475] = { -- Gaiagantic
         npc=181223,
         criteria=52553,
-        note="You'll get this during the {quest:64785} daily",
+        note="Only available on days when the {quest:64785} daily is up",
     },
 
     [36153850] = { -- Gorged Runefeaster
@@ -1803,7 +1803,7 @@ ns.RegisterPoints(1970, { -- Zereth Mortis
     texture=ns.atlas_texture("VignetteKill", {r=1,g=0.5,b=0,a=1,scale=1}),
     minimap=true,
     active=ns.conditions.Item(187909),
-    note="You need to have completed the daily quest {quest:64785} to get the {item:187909}."
+    note="You need to have completed the daily quest {quest:64785} or {quest:64854} to get the {item:187909}."
 })
 
 -- Transportation
