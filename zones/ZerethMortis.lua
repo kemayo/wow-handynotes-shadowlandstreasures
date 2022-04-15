@@ -674,6 +674,12 @@ ns.RegisterPoints(1970, { -- Zereth Mortis
         hide_before=ns.conditions.QuestComplete(65219), -- Jiro to Hero
         note="This is a vendor. Learn {garrisontalent:1902} then complete the {quest:65219} questline",
     },
+    [47448863] = { -- Creation Catalyst
+        label="{spell:368843:Creation Catalyst}",
+        atlas="creationcatalyst-32x32",
+        hide_before=ns.conditions.QuestComplete(65774), -- The Catalyst Awakens
+        note="Bring gear here to become tier",
+    },
 })
 
 -- Schematics
