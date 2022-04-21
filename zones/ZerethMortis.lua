@@ -536,6 +536,15 @@ ns.RegisterPoints(1970, { -- Zereth Mortis
     group="junk",
 })
 
+local discarded = {
+    label="Discarded Automa Scrap",
+    loot={
+        {189717, quest=65483}, -- Pocopoc's Shielded Core
+        {189718, quest=65484}, -- Pocopoc's Upgraded Core
+    },
+    texture=ns.atlas_texture("mechagon-projects", {r=0.5, g=0.5, b=1, scale=0.9}),
+    group="junk",
+}
 ns.RegisterPoints(1970, { -- Zereth Mortis
     [39607760] = {},
     [40706990] = {},
@@ -551,15 +560,11 @@ ns.RegisterPoints(1970, { -- Zereth Mortis
     [65804040] = {},
     [67604030] = {},
     [69903420] = {},
-}, {
-    label="Discarded Automa Scrap",
-    loot={
-        {189717, quest=65483}, -- Pocopoc's Shielded Core
-        {189718, quest=65484}, -- Pocopoc's Upgraded Core
-    },
-    texture=ns.atlas_texture("mechagon-projects", {r=0.5, g=0.5, b=1, scale=0.9}),
-    group="junk",
-})
+}, discarded)
+ns.RegisterPoints(2028, { -- Locrian Esper
+    [50257618] = {},
+    [79087500] = {},
+}, discarded)
 
 ns.RegisterPoints(1970, { -- Zereth Mortis
     [44403680] = {
