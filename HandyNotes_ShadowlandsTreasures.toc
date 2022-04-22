@@ -11,11 +11,7 @@
 ## SavedVariables: HandyNotes_ShadowlandsTreasuresDB
 ## RequiredDeps: HandyNotes
 
-handler\class.lua
-handler\handler.lua
-handler\conditions.lua
-handler\config.lua
-handler\overlay.lua
+handler\handler.xml
 handler\routes.xml
 
 shadowlands.lua
