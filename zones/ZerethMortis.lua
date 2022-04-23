@@ -1231,6 +1231,7 @@ ns.RegisterPoints(1970, {
 -- 65560 serene pigment (above Firim's)
 -- 65016 volatile precursor
 -- 65014 incorporeal sand
+-- 65017 empyrean essence
 
 -- Adventurer of Zerith Mortis
 
