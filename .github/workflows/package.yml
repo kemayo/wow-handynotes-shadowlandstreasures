@@ -13,6 +13,7 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
         with:
+          submodules: recursive
           fetch-depth: 0 # reads history for commit changelog
 
       - uses: kemayo/actions-recent-changelog@v1
