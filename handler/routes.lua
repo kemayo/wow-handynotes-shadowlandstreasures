@@ -46,7 +46,6 @@ function RouteWorldMapDataProvider:CreatePools()
     self.pinPool = CreateFramePool("FRAME", self:GetMap():GetCanvas(), nil, function(pool, pin)
         if not pin.OnReleased then
             Mixin(pin, RoutePinMixin)
-            pin:OnLoad()
         end
         FramePool_HideAndClearAnchors(pool, pin)
         pin:OnReleased()
