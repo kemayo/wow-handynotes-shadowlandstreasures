@@ -12,7 +12,6 @@
 ## RequiredDeps: HandyNotes
 
 handler\handler.xml
-handler\routes.xml
 
 shadowlands.lua
 
