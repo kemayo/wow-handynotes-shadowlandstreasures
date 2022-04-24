@@ -587,6 +587,7 @@ ns.RegisterPoints(1525, {
         npc=166576,
         loot={
             183731, -- Smolder-Tempered Legplates
+            180690, -- Bottled Ash Cloud
         },
     },
     [35003230] = { -- Bog Beast
