@@ -1,5 +1,11 @@
 # Changelog
 
+## Changed in v62
+
+* Show where some Automa Scraps are inside the Locrian Esper
+* Changes to how routes are drawn, which should be completely unnoticed
+* Bundle Taintless, which might(?) help with complaints about the upload dialog
+
 ## Changed in v61
 
 * Show the Creation Catalyst on the Zereth Mortis map
