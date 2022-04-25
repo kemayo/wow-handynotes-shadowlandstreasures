@@ -522,6 +522,7 @@ ns.RegisterPoints(1970, { -- Zereth Mortis
     [62204623] = {},
     [36254810] = {},
     [34087043] = {},
+    [51078289] = {},
 }, {
     label="Shrouded Cypher Cache",
     loot={
