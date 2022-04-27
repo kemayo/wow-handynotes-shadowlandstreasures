@@ -1233,6 +1233,7 @@ ns.RegisterPoints(1970, {
 -- 65016 volatile precursor
 -- 65014 incorporeal sand
 -- 65017 empyrean essence
+-- 65005 pollinated extraction
 
 -- Adventurer of Zerith Mortis
 
