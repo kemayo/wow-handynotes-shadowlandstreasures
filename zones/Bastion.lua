@@ -44,6 +44,8 @@ ns.VignetteIDsToPoints[4272] = strongbox
 ns.VignetteIDsToPoints[4273] = strongbox
 ns.VignetteIDsToPoints[4277] = strongbox
 
+-- choosing larion: 60294
+
 ns.RegisterPoints(1533, { -- Bastion
     [53508030] = {
         achievement=14311, criteria=50047, -- Scroll of Aeons

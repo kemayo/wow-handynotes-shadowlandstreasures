@@ -30,6 +30,8 @@ ns.VignetteIDsToPoints[4212] = {
     _coord=0,
 }
 
+-- Pepe costume: A Tiny Sinstone, 186580, q 64132
+
 ns.RegisterPoints(1525, { -- Revendreth
     [37706920] = {
         achievement=14314, criteria=50076, -- Lost Quill
