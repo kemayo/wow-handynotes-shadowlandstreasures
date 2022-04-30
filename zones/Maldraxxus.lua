@@ -1,7 +1,5 @@
 local myname, ns = ...
 
-local path = ns.path
-
 local growth = {
     label=false, -- Sp(r)outing Growth
     loot={
@@ -132,13 +130,11 @@ ns.RegisterPoints(1536, { -- Maldraxxus
         },
         level=60,
         note="Enter the tunnels at 62.4 76.5 to become {spell:330092:Plaguefallen} and unlock the treasure",
-    },
-    [62387655] = ns.path{
-        label="Tunnel entrance",
-        achievement=14312, criteria=50074, -- Plaguefallen Chest
-        quest=61474,
-        level=60,
-        note="Under the platform; stand in the goo to get 10 stacks of {spell:330069} and become become {spell:330092:Plaguefallen}, then go into the cave and you'll be able to get through the pipe",
+        path={
+            62387655,
+            label="Tunnel entrance",
+            note="Under the platform; stand in the goo to get 10 stacks of {spell:330069} and become become {spell:330092:Plaguefallen}, then go into the cave and you'll be able to get through the pipe",
+        },
     },
     [64602470] = {
         achievement=14312, criteria=50075, -- Ritualist's Cache
