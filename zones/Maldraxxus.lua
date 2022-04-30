@@ -108,19 +108,16 @@ ns.RegisterPoints(1536, { -- Maldraxxus
         },
         level=60,
         note="Kill {npc:170563:Runespeaker Phaeton} to obtain the {item:181777:Phaeton's Key} required to unlock the treasure",
-    },
-    [37907000] = {
-        label="{npc:170563}",
-        achievement=14312, criteria=50073, -- Runespeaker's Trove
-        quest=61491,
-        loot={
-            181777, -- Phaeton's Key
+        path={
+            37907000,
+            label="{npc:170563}",
+            loot={
+                181777, -- Phaeton's Key
+            },
+            inbag=181777,
+            atlas="Garr_LevelUpgradeLocked", scale=1.3,
+            note="Take the key to 31.7 70.0",
         },
-        atlas="Garr_LevelUpgradeLocked", scale=1.3,
-        inbag=181777,
-        minimap=true,
-        level=60, -- or at least quest-gated? 57619 is the tracker for confronting Vyraz...
-        note="Take the key to 31.7 70.0",
     },
     [57607580] = {
         achievement=14312, criteria=50074, -- Plaguefallen Chest
@@ -343,13 +340,13 @@ ns.RegisterPoints(1536, { -- Maldraxxus
         note="Spawns in multiple places inside Sightless Hold",
     },
     -- the world map ones:
-    [36208145] = {
-        quest=60662,
-        label="Bonebound Chest",
-        loot={181723}, -- Meticulously pickled head (high sell value)
-        junk=true,
-        level=60,
-    },
+    -- [36208145] = {
+    --     quest=60662,
+    --     label="Bonebound Chest",
+    --     loot={181723}, -- Meticulously pickled head (high sell value)
+    --     junk=true,
+    --     level=60,
+    -- },
     -- [38036548] = {
     --     quest=61647, -- 61648, 61649, 61650
     --     label="Chosen Runecoffer",
