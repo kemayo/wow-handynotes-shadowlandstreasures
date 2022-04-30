@@ -118,6 +118,7 @@ ns.RegisterPoints(1565, { -- Ardenweald
     [76602970] = {
         achievement=14313, criteria=50034, -- Swollen Anima Seed
         quest=62186,
+        inbag=182730,
         loot={
             {182730, quest=62186}, -- Swollen Anima Seed
         },
