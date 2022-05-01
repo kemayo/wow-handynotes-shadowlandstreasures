@@ -755,12 +755,18 @@ ns.RegisterPoints(1970, { -- Zereth Mortis
     -- Doubled from treasures:
     [67006940] = makeSchematic(65393, 189469, MOUNT, { -- Schematic: Prototype Leaper
         note="In the Forgotten Proto-Vault treasure; if you looted it before unlocking protoforms, it should just be sitting there",
-        hide_before=ns.conditions.QuestComplete(65178),
+        hide_before={
+            ns.conditions.QuestComplete(65427), -- New Architect
+            ns.conditions.QuestComplete(65178),
+        },
         requires_worldquest=65089,
     }),
     [60503050] = makeSchematic(65379, 189456, MOUNT, { -- Schematic: Sundered Zerethsteed
         note="In the Mawsworn Cache treasure; if you looted it before unlocking protoforms, it should just be sitting there",
-        hide_before=ns.conditions.QuestComplete(65441),
+        hide_before={
+            ns.conditions.QuestComplete(65427), -- New Architect
+            ns.conditions.QuestComplete(65441),
+        },
     }),
     -- mob drops
     [76405160] = makeSchematic(65391, 189468, MOUNT, { -- Schematic: Goldplate Bufonid
