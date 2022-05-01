@@ -828,7 +828,7 @@ schematic.atlas = nil
 schematic.texture = ns.atlas_texture("poi-islands-table", {r=0,g=1,b=1,a=1,scale=0.9})
 schematic.hide_before=ns.conditions.QuestComplete(65419) -- Protoform Synthesis
 hide_flying = {
-    ns.conditions.QuestComplete(65419), -- A New Architect
+    ns.conditions.QuestComplete(65419), -- Protoform Synthesis
     ns.conditions.Achievement(15514), -- flying
 }
 
@@ -842,7 +842,10 @@ ns.RegisterPoints(1970, { -- Zereth Mortis
     }),
     [28105000] = makeSchematic(65358, 189445, PET, {note="Hidden in the leaves of the floating tree"}), -- Schematic: Microlicid
     [53807250] = makeSchematic(65333, 189435, PET, { -- Schematic: Multichicken
-        hide_before=ns.conditions.QuestComplete(65522),
+        hide_before={
+            ns.conditions.QuestComplete(65419), -- Protoform Synthesis
+            ns.conditions.QuestComplete(65522),
+        },
         note="In the Mistaken Ovoid treasure; if you looted it before unlocking protoforms, it should just be sitting there",
     }),
     [42804060] = makeSchematic(65348, 189440, PET, { -- Schematic: Omnipotential Core
@@ -867,7 +870,10 @@ ns.RegisterPoints(1970, { -- Zereth Mortis
     [55705340] = makeSchematic(65361, 189448, PET, {note="Inside the Locrian Esper"}), -- Schematic: Tunneling Vombata
     [58807720] = makeSchematic(65360, 189447, PET, { -- Schematic: Viperid Menace
         -- TODO: the Library Vault was made inaccessible until you had Dealic on March 1st 2022, so this should no longer be a possible situation for new players. Remove this someday.
-        hide_before=ns.conditions.QuestComplete(65173),
+        hide_before={
+            ns.conditions.QuestComplete(65419), -- Protoform Synthesis
+            ns.conditions.QuestComplete(65173),
+        },
         note="In the Library Vault treasure; if you looted it before unlocking protoforms, it should just be sitting there",
         path=59258144,
     }),
