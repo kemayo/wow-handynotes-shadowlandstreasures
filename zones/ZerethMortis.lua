@@ -1104,6 +1104,7 @@ local coreless = ns.nodeMaker{
     note="|cFFFFFF00Use with Pocopoc and gain access to a special ability|r",
     -- atlas="poi-scrapper",
     minimap=true, scale=0.9,
+    achievement=15542, always=true,
     group="coreless",
 }
 ns.RegisterPoints(1970, { -- Zereth Mortis
