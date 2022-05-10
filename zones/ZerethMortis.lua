@@ -648,6 +648,7 @@ ns.RegisterPoints(1970, { -- Zereth Mortis
         note="Make pets here",
         texture=ns.atlas_texture("teleportationnetwork-32x32", {r=1,g=0.6,b=0.2,a=1,scale=1.2}),
         minimap=true,
+        achievement=15411, criteria=true, -- Synthe-supersized!
         hide_before=ns.conditions.QuestComplete(65419), -- Protoform Synthesis
     },
     [68703005] = { -- Protoform Repository
@@ -655,6 +656,7 @@ ns.RegisterPoints(1970, { -- Zereth Mortis
         note="Make mounts here",
         texture=ns.atlas_texture("teleportationnetwork-32x32", {r=1,g=0.6,b=0.2,a=1,scale=1.2}),
         minimap=true,
+        achievement=15411, criteria=true, -- Synthe-supersized!
         hide_before=ns.conditions.QuestComplete(65427), -- A New Architect
     },
     [61505370] = { -- Wellspring of the First Ones
