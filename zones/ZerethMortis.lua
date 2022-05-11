@@ -1249,6 +1249,7 @@ ns.RegisterPoints(1970, {
 -- 65014 incorporeal sand
 -- 65017 empyrean essence
 -- 65005 pollinated extraction
+-- 65015 energized firmament
 
 -- Adventurer of Zerith Mortis
 
@@ -1514,6 +1515,7 @@ ns.RegisterPoints(1970, { -- Zereth Mortis
         npc=180746,
         quest=64668,
         criteria=52989,
+        vignette=4988,
         loot={
             189961, -- Enduring Protector's Shoulderguards
             189984, -- Drape of Idolized Symmetry
