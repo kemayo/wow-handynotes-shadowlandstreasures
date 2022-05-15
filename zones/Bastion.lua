@@ -139,12 +139,12 @@ ns.RegisterPoints(1533, { -- Bastion
             {53508035, 56501720, highlightOnly=true},
         }
     },
-    [34006650] = {quest=61150, label="{npc:171526:Kobri}", inbag=180788, atlas="food", scale=1.1, note="Buy {item:180788:Memorial Wine}, go to 56.5 17.2", level=60, upcoming=false, route=56501720}, -- Kobri (Cliffs of Respite)
-    [43603225] = {quest=61150, label="{npc:171526:Kobri}", inbag=180788, atlas="food", scale=1.1, note="Buy {item:180788:Memorial Wine}, go to 56.5 17.2", level=60, upcoming=false, route=56501720}, -- Kobri (Sagehaven)
-    [47957400] = {quest=61150, label="{npc:171526:Kobri}", inbag=180788, atlas="food", scale=1.1, note="Buy {item:180788:Memorial Wine}, go to 56.5 17.2", level=60, upcoming=false, route=56501720}, -- Kobri (Aspirant's Rest)
-    [51804640] = {quest=61150, label="{npc:171526:Kobri}", inbag=180788, atlas="food", scale=1.1, note="Buy {item:180788:Memorial Wine}, go to 56.5 17.2", level=60, upcoming=false, route=56501720}, -- Kobri (Hero's Rest)
-    [52154710] = {quest=61150, label="{npc:171526:Kobri}", inbag=180788, atlas="food", scale=1.1, note="Buy {item:180788:Memorial Wine}, go to 56.5 17.2", level=60, upcoming=false, route=56501720}, -- Kobri (Hero's Rest)
-    [53508035] = {quest=61150, label="{npc:171526:Kobri}", inbag=180788, atlas="food", scale=1.1, note="Buy {item:180788:Memorial Wine}, go to 56.5 17.2", level=60, upcoming=false, route=56501720}, -- Kobri (Aspirant's Crucible)
+    [34006650] = {quest=61150, label="{npc:171526:Kobri}", atlas="food", scale=1.1, note="Buy {item:180788:Memorial Wine}, go to 56.5 17.2", level=60, upcoming=false, route=56501720}, -- Kobri (Cliffs of Respite)
+    [43603225] = {quest=61150, label="{npc:171526:Kobri}", atlas="food", scale=1.1, note="Buy {item:180788:Memorial Wine}, go to 56.5 17.2", level=60, upcoming=false, route=56501720}, -- Kobri (Sagehaven)
+    [47957400] = {quest=61150, label="{npc:171526:Kobri}", atlas="food", scale=1.1, note="Buy {item:180788:Memorial Wine}, go to 56.5 17.2", level=60, upcoming=false, route=56501720}, -- Kobri (Aspirant's Rest)
+    [51804640] = {quest=61150, label="{npc:171526:Kobri}", atlas="food", scale=1.1, note="Buy {item:180788:Memorial Wine}, go to 56.5 17.2", level=60, upcoming=false, route=56501720}, -- Kobri (Hero's Rest)
+    [52154710] = {quest=61150, label="{npc:171526:Kobri}", atlas="food", scale=1.1, note="Buy {item:180788:Memorial Wine}, go to 56.5 17.2", level=60, upcoming=false, route=56501720}, -- Kobri (Hero's Rest)
+    [53508035] = {quest=61150, label="{npc:171526:Kobri}", atlas="food", scale=1.1, note="Buy {item:180788:Memorial Wine}, go to 56.5 17.2", level=60, upcoming=false, route=56501720}, -- Kobri (Aspirant's Crucible)
     [35105800] = {
         achievement=14311, criteria=50058, -- Gift of Agthia
         quest=60893,
