@@ -137,7 +137,8 @@ ns.RegisterPoints(1533, { -- Bastion
             {51804640, 56501720, highlightOnly=true},
             {52154710, 56501720, highlightOnly=true},
             {53508035, 56501720, highlightOnly=true},
-        }
+        },
+        nearby={56841908},
     },
     [34006650] = {quest=61150, label="{npc:171526:Kobri}", atlas="food", scale=1.1, note="Buy {item:180788:Memorial Wine}, go to 56.5 17.2", level=60, upcoming=false, route=56501720}, -- Kobri (Cliffs of Respite)
     [43603225] = {quest=61150, label="{npc:171526:Kobri}", atlas="food", scale=1.1, note="Buy {item:180788:Memorial Wine}, go to 56.5 17.2", level=60, upcoming=false, route=56501720}, -- Kobri (Sagehaven)
