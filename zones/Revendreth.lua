@@ -389,7 +389,7 @@ ns.RegisterPoints(1525, {
 }, {
     achievement=14771,
     atlas="vehicle-silvershardmines-minecartred",scale=1.2,
-    always=true,
+    -- always=true,
     group="Carriage Routes",
 })
 
@@ -524,7 +524,7 @@ ns.RegisterPoints(1525, {
 }, {
     achievement=14770,
     texture=ns.merge(ns.atlas_texture("stablemaster"), {r=1, g=0.5, b=1, scale=1.2}),
-    always=true,
+    -- always=true,
     label="{npc:174032}",
     note="Requires {currency:1820} x 5",
     group="Sinrunners",
