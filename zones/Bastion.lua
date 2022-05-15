@@ -130,13 +130,21 @@ ns.RegisterPoints(1533, { -- Bastion
         -- loot={},
         level=60,
         note="Purchase {item:180788:Memorial Wine} from {npc:171526:Kobri} and use it on the drink tray near the treasure to obtain the {item:180797:Memorial Offering Key} and unlock the treasure",
+        routes={
+            {34006650, 56501720, highlightOnly=true},
+            {43603225, 56501720, highlightOnly=true},
+            {47957400, 56501720, highlightOnly=true},
+            {51804640, 56501720, highlightOnly=true},
+            {52154710, 56501720, highlightOnly=true},
+            {53508035, 56501720, highlightOnly=true},
+        }
     },
-    [34006650] = {quest=61150, label="Kobri", inbag=180788, atlas="food", scale=1.1, note="Buy {item:180788:Memorial Wine}, go to 56.5 17.2", level=60, upcoming=false,}, -- Kobri (Cliffs of Respite)
-    [43603225] = {quest=61150, label="Kobri", inbag=180788, atlas="food", scale=1.1, note="Buy {item:180788:Memorial Wine}, go to 56.5 17.2", level=60, upcoming=false,}, -- Kobri (Sagehaven)
-    [47957400] = {quest=61150, label="Kobri", inbag=180788, atlas="food", scale=1.1, note="Buy {item:180788:Memorial Wine}, go to 56.5 17.2", level=60, upcoming=false,}, -- Kobri (Aspirant's Rest)
-    [51804640] = {quest=61150, label="Kobri", inbag=180788, atlas="food", scale=1.1, note="Buy {item:180788:Memorial Wine}, go to 56.5 17.2", level=60, upcoming=false,}, -- Kobri (Hero's Rest)
-    [52154710] = {quest=61150, label="Kobri", inbag=180788, atlas="food", scale=1.1, note="Buy {item:180788:Memorial Wine}, go to 56.5 17.2", level=60, upcoming=false,}, -- Kobri (Hero's Rest)
-    [53508035] = {quest=61150, label="Kobri", inbag=180788, atlas="food", scale=1.1, note="Buy {item:180788:Memorial Wine}, go to 56.5 17.2", level=60, upcoming=false,}, -- Kobri (Aspirant's Crucible)
+    [34006650] = {quest=61150, label="{npc:171526:Kobri}", inbag=180788, atlas="food", scale=1.1, note="Buy {item:180788:Memorial Wine}, go to 56.5 17.2", level=60, upcoming=false, route=56501720}, -- Kobri (Cliffs of Respite)
+    [43603225] = {quest=61150, label="{npc:171526:Kobri}", inbag=180788, atlas="food", scale=1.1, note="Buy {item:180788:Memorial Wine}, go to 56.5 17.2", level=60, upcoming=false, route=56501720}, -- Kobri (Sagehaven)
+    [47957400] = {quest=61150, label="{npc:171526:Kobri}", inbag=180788, atlas="food", scale=1.1, note="Buy {item:180788:Memorial Wine}, go to 56.5 17.2", level=60, upcoming=false, route=56501720}, -- Kobri (Aspirant's Rest)
+    [51804640] = {quest=61150, label="{npc:171526:Kobri}", inbag=180788, atlas="food", scale=1.1, note="Buy {item:180788:Memorial Wine}, go to 56.5 17.2", level=60, upcoming=false, route=56501720}, -- Kobri (Hero's Rest)
+    [52154710] = {quest=61150, label="{npc:171526:Kobri}", inbag=180788, atlas="food", scale=1.1, note="Buy {item:180788:Memorial Wine}, go to 56.5 17.2", level=60, upcoming=false, route=56501720}, -- Kobri (Hero's Rest)
+    [53508035] = {quest=61150, label="{npc:171526:Kobri}", inbag=180788, atlas="food", scale=1.1, note="Buy {item:180788:Memorial Wine}, go to 56.5 17.2", level=60, upcoming=false, route=56501720}, -- Kobri (Aspirant's Crucible)
     [35105800] = {
         achievement=14311, criteria=50058, -- Gift of Agthia
         quest=60893,
@@ -616,14 +624,21 @@ ns.RegisterPoints(1533, {
         },
         level=60,
         note="Ring the five vespers within 5 minutes to summon the council",
+        routes={
+            {53508870, 64306980, highlightOnly=true,},
+            {53508870, 33305980, highlightOnly=true,},
+            {53508870, 71953895, highlightOnly=true,},
+            {53508870, 39152040, highlightOnly=true,},
+            {53508870, 32151775, highlightOnly=true,},
+        },
     },
     -- Rallying Cry of the Ascended
     -- TODO: are there questids for these? Doing if off the Council would be inaccurate...
-    [64306980] = {achievement=14734,criteria=49818,atlas="pathofascension-32x32",}, -- Vesper of Purity
-    [33305980] = {achievement=14734,criteria=49815,atlas="pathofascension-32x32",}, -- Vesper of Courage
-    [71953895] = {achievement=14734,criteria=49816,atlas="pathofascension-32x32",}, -- Vesper of Humility
-    [39152040] = {achievement=14734,criteria=49819,atlas="pathofascension-32x32",}, -- Vesper of Wisdom
-    [32151775] = {achievement=14734,criteria=49817,atlas="pathofascension-32x32",}, -- Vesper of Loyalty
+    [64306980] = {achievement=14734,criteria=49818,atlas="pathofascension-32x32",route=53508870,}, -- Vesper of Purity
+    [33305980] = {achievement=14734,criteria=49815,atlas="pathofascension-32x32",route=53508870,}, -- Vesper of Courage
+    [71953895] = {achievement=14734,criteria=49816,atlas="pathofascension-32x32",route=53508870,}, -- Vesper of Humility
+    [39152040] = {achievement=14734,criteria=49819,atlas="pathofascension-32x32",route=53508870,}, -- Vesper of Wisdom
+    [32151775] = {achievement=14734,criteria=49817,atlas="pathofascension-32x32",route=53508870,}, -- Vesper of Loyalty
 })
 
 -- Swelling tear event
