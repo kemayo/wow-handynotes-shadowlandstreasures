@@ -6,43 +6,39 @@ local path = ns.path
 -- calling treasures, but... it seems to be really really rare and
 -- shadowlands-wide, so I'm leaving it out.
 
-local bell = {
-    label=false, -- Broken/Skyward Bell
+local bell = {-- Broken/Skyward Bell
     loot={
         {184415, toy=true}, -- Soothing Vesper
     },
-    _uiMapID=1533,
-    _coord=0,
 }
-ns.VignetteIDsToPoints[4239] = bell
-ns.VignetteIDsToPoints[4240] = bell
-ns.VignetteIDsToPoints[4241] = bell
-ns.VignetteIDsToPoints[4242] = bell
-ns.VignetteIDsToPoints[4243] = bell
-ns.VignetteIDsToPoints[4275] = bell
-
-local strongbox = {
-    label=false, -- Silver Strongbox
+local strongbox = {-- Silver Strongbox
     loot={
         {184418, toy=true}, -- Acrobatic Steward
     },
     note="Bring a {item:178915:Ripe Purian} to open",
-    _uiMapID=1533,
-    _coord=0,
 }
-ns.VignetteIDsToPoints[4214] = ns.merge(CopyTable(strongbox), {note=false}) -- actually Gilded Chest
-ns.VignetteIDsToPoints[4263] = strongbox
-ns.VignetteIDsToPoints[4264] = strongbox
-ns.VignetteIDsToPoints[4265] = strongbox
-ns.VignetteIDsToPoints[4266] = strongbox
-ns.VignetteIDsToPoints[4267] = strongbox
-ns.VignetteIDsToPoints[4268] = strongbox
-ns.VignetteIDsToPoints[4269] = strongbox
-ns.VignetteIDsToPoints[4270] = strongbox
-ns.VignetteIDsToPoints[4271] = strongbox
-ns.VignetteIDsToPoints[4272] = strongbox
-ns.VignetteIDsToPoints[4273] = strongbox
-ns.VignetteIDsToPoints[4277] = strongbox
+ns.RegisterVignettes(1533, {
+    [4239] = bell,
+    [4240] = bell,
+    [4241] = bell,
+    [4242] = bell,
+    [4243] = bell,
+    [4275] = bell,
+
+    [4214] = ns.merge(CopyTable(strongbox), {note=false}), -- actually Gilded Chest
+    [4263] = strongbox,
+    [4264] = strongbox,
+    [4265] = strongbox,
+    [4266] = strongbox,
+    [4267] = strongbox,
+    [4268] = strongbox,
+    [4269] = strongbox,
+    [4270] = strongbox,
+    [4271] = strongbox,
+    [4272] = strongbox,
+    [4273] = strongbox,
+    [4277] = strongbox,
+})
 
 -- choosing larion: 60294
 
