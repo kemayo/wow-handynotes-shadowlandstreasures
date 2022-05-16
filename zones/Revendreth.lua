@@ -544,6 +544,42 @@ ns.RegisterPoints(1525, {
     group="Dredbats",
 })
 
+-- Mirrors
+-- TODO: gather the rest of the questsids
+ns.RegisterPoints(1525, {
+    -- these all have a repaired quest and a looted quest
+    -- group 1
+    [29493726] = {requires_worldquest=61879, note="Room with cauldron",},
+    [27152163] = {requires_worldquest=61879, note="Room with elite spider",},
+    [40417334] = {requires_worldquest=61879, note="Inside house with sleeping beasts",},
+    -- group 2
+    [39095218] = {requires_worldquest=61883, note="Room on ground floor",},
+    [58806780] = {requires_worldquest=61883, note="Inside building with stonevigil",},
+    [70974363] = {requires_worldquest=61883, note="Inside a room",},
+    -- group 3
+    [72604365] = {requires_worldquest=61885, note="Inside crypt",}, -- 61817, 61830
+    [40307716] = {requires_worldquest=61885, note="Inside a building",}, -- 61821, 61831
+    [77176543] = {requires_worldquest=61885, note="Inside a building with several elite mobs",}, -- 61825, 61832
+    -- group 4
+    [29602589] = {requires_worldquest=61886, note="Room with elite soulbinder",},
+    [20755426] = {requires_worldquest=61886, note="Inside villa at entrance",},
+    [55123567] = {requires_worldquest=61886, note="Inside crypt with nobles",},
+}, {
+    label="{spell:357778:Broken Mirror}",
+    loot={
+        -- TODO: there's four different armor-sets here, and I don't have a good way to represent that without far too many individual items
+        -- TODO: there's also four blue daggers but wowhead shows them being way more restricted in their drop locations, so verify that
+        183707, -- Mantle of Burnished Blades
+        183710, -- Burnished Sinstone Chain
+        183711, -- Burnished Crypt Keeper's Mantle
+        {183855, pet=3012}, -- Stony's Infused Ruby
+        {183798, mount=1389}, -- Silessa's Battle Harness
+    },
+    active=ns.conditions.Item(181363), -- Handcrafted Mirror Repair Kit
+    requires={ns.conditions.GarrisonTalent(1049), ns.conditions.Covenant(Enum.CovenantType.Venthyr)}, -- Mirror's Edge
+    texture=ns.atlas_texture("teleportationnetwork-revendreth-32x32", {r=1, g=1, b=0}), scale=1.2, minimap=true,
+})
+
 -- Rares
 
 ns.RegisterPoints(1525, {
