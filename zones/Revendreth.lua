@@ -553,9 +553,9 @@ ns.RegisterPoints(1525, {
     [27152163] = {requires_worldquest=61879, note="Room with elite spider",},
     [40417334] = {requires_worldquest=61879, note="Inside house with sleeping beasts",},
     -- group 2
-    [39095218] = {requires_worldquest=61883, note="Room on ground floor",},
-    [58806780] = {requires_worldquest=61883, note="Inside building with stonevigil",},
-    [70974363] = {requires_worldquest=61883, note="Inside a room",},
+    [39095218] = {requires_worldquest=61883, note="Inside, at base of cliff",}, -- 61819, 61836
+    [58806780] = {requires_worldquest=61883, note="Inside building with stonevigil",}, -- 61823, 61837
+    [70974363] = {requires_worldquest=61883, note="Inside the building",}, -- 61827, 61838
     -- group 3
     [72604365] = {requires_worldquest=61885, note="Inside crypt",}, -- 61817, 61830
     [40307716] = {requires_worldquest=61885, note="Inside a building",}, -- 61821, 61831
@@ -567,13 +567,16 @@ ns.RegisterPoints(1525, {
 }, {
     label="{spell:357778:Broken Mirror}",
     loot={
-        -- TODO: there's four different armor-sets here, and I don't have a good way to represent that without far too many individual items
         -- TODO: there's also four blue daggers but wowhead shows them being way more restricted in their drop locations, so verify that
         183707, -- Mantle of Burnished Blades
         183710, -- Burnished Sinstone Chain
         183711, -- Burnished Crypt Keeper's Mantle
         {183855, pet=3012}, -- Stony's Infused Ruby
         {183798, mount=1389}, -- Silessa's Battle Harness
+        {181124, set=2064}, -- Soulbreaker's Burnished Vestments (cloth)
+        {181061, set=2069}, -- Burnished Death Shroud Armor (leather)
+        {181088, set=2073}, -- Fearstalker's Burnished Battlegear (mail)
+        {181022, set=2076}, -- Dread Sentinel's Burnished Battleplate (plate)
     },
     active=ns.conditions.Item(181363), -- Handcrafted Mirror Repair Kit
     requires={ns.conditions.GarrisonTalent(1049), ns.conditions.Covenant(Enum.CovenantType.Venthyr)}, -- Mirror's Edge
