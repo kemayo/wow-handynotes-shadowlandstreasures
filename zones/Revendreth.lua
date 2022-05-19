@@ -28,6 +28,8 @@ ns.RegisterVignettes(1525, {
 
 -- Pepe costume: A Tiny Sinstone, 186580, q 64132
 
+-- abandoned belongings 60851
+
 ns.RegisterPoints(1525, { -- Revendreth
     [37706920] = {
         achievement=14314, criteria=50076, -- Lost Quill
@@ -549,9 +551,9 @@ ns.RegisterPoints(1525, {
 ns.RegisterPoints(1525, {
     -- these all have a repaired quest and a looted quest
     -- group 1
-    [29493726] = {requires_worldquest=61879, note="Room with cauldron",},
-    [27152163] = {requires_worldquest=61879, note="Room with elite spider",},
-    [40417334] = {requires_worldquest=61879, note="Inside house with sleeping beasts",},
+    [29493726] = {requires_worldquest=61879, note="Room with cauldron",}, -- 61818, 61833
+    [27152163] = {requires_worldquest=61879, note="Base of cliff, room with elite spider",}, -- 61826, 61835
+    [40417334] = {requires_worldquest=61879, note="Inside house with sleeping beasts",}, -- 61822, 61834
     -- group 2
     [39095218] = {requires_worldquest=61883, note="Inside, at base of cliff",}, -- 61819, 61836
     [58806780] = {requires_worldquest=61883, note="Inside building with stonevigil",}, -- 61823, 61837
