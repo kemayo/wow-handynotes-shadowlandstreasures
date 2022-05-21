@@ -563,9 +563,9 @@ ns.RegisterPoints(1525, {
     [40307716] = {requires_worldquest=61885, note="Inside a building",}, -- 61821, 61831
     [77176543] = {requires_worldquest=61885, note="Inside a building with several elite mobs",}, -- 61825, 61832
     -- group 4
-    [29602589] = {requires_worldquest=61886, note="Room with elite soulbinder",},
-    [20755426] = {requires_worldquest=61886, note="Inside villa at entrance",},
-    [55123567] = {requires_worldquest=61886, note="Inside crypt with nobles",},
+    [20755426] = {requires_worldquest=61886, note="Just inside manor entrance",}, -- 59236, 60297
+    [29602589] = {requires_worldquest=61886, note="Room with elite soulbender",}, -- 61824, 61829
+    [55123567] = {requires_worldquest=61886, note="Inside the crypt",}, -- 61820, 61828
 }, {
     label="{spell:357778:Broken Mirror}",
     loot={
