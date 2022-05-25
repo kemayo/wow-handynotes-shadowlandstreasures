@@ -1,5 +1,10 @@
 # Changelog
 
+## Changed in v65
+
+* Venthyr Broken Mirrors are now shown (only the available three for the current day)
+* Improve the amount of information shown in tooltips about reward items which aren't fully loaded yet
+
 ## Changed in v64
 
 * Various quality of life improvements for points related to other points (hovering them will show a link to the related point)
