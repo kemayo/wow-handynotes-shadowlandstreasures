@@ -1625,6 +1625,7 @@ ns.RegisterPoints(1970, { -- Zereth Mortis
         npc=183747,
         quest=65584,
         criteria=52983,
+        vignette=4967,
         loot={
             189901, -- Vitiane's Defiled Vestment
             189922, -- Cowl of Shameful Proliferation
