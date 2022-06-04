@@ -1,5 +1,12 @@
 # Changelog
 
+## Changed in v67
+
+* New behavior: only show loot that should drop for the current character. Turn it off from the menu if you'd prefer.
+* Better labels for loot, showing item types
+* Item-sets shown in loot now show numeric completion ("3/7") rather than just whether they're complete
+* Better fix for the C_TransmogCollection errors
+
 ## Changed in v66
 
 * Updated for 9.2.5, fixing errors about C_TransmogCollection (in a rush, so there might be followup fixes)
