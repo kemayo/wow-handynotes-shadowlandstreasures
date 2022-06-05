@@ -1,5 +1,9 @@
 # Changelog
 
+## Changed in v68
+
+* Some cosmetic items were incorrectly saying they don't drop for the current character, so special-case cosmetics a bit
+
 ## Changed in v67
 
 * New behavior: only show loot that should drop for the current character. Turn it off from the menu if you'd prefer.
