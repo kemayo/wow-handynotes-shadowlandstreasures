@@ -10,6 +10,9 @@
 ## X-Wago-ID: Mj6jYMNR
 ## SavedVariables: HandyNotes_ShadowlandsTreasuresDB
 ## RequiredDeps: HandyNotes
+## OptionalDeps: !LibUIDropDownMenu
+
+lib\LibUIDropDownMenu\LibUIDropDownMenu.xml
 
 handler\handler.xml
 
