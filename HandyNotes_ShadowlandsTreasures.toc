@@ -12,7 +12,9 @@
 ## RequiredDeps: HandyNotes
 ## OptionalDeps: !LibUIDropDownMenu
 
-lib\LibUIDropDownMenu\LibUIDropDownMenu.xml
+#@non-debug@
+# lib\LibUIDropDownMenu\LibUIDropDownMenu.xml
+#@end-non-debug@
 
 handler\handler.xml
 
