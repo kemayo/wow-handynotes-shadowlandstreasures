@@ -1,5 +1,9 @@
 # Changelog
 
+## Changed in v71
+
+* Updated for 10.0
+
 ## Changed in v70
 
 * Use LibUIDropDownMenu-4.0 to avoid the taint mess of UIDropDownMenu
