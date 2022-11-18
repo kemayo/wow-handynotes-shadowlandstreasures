@@ -543,7 +543,7 @@ ns.RegisterPoints(1533, {
         quest=58320,
         npc=160985,
         loot={
-            183608, -- Evernote Vesper
+            174038, -- Chime of Celerity
         },
         level=60,
         note="Need three players to trigger",
@@ -608,6 +608,7 @@ ns.RegisterPoints(1533, {
             -- {174445, toy=true}, -- Glimmerfly Cocoon
         },
         note="Beasts of Bastion; talk to {npc:161441} to summon",
+        vignette=4032,
     },
     [53508870] = { -- The Ascended Council
         achievement=14307, criteria=50619,
