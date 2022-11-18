@@ -442,6 +442,7 @@ ns.RegisterPoints(1533, {
             182759, -- Functioning Anima Core
         },
         note="Bring a {item:180651}, found hidden behind debris nearby, to the {npc:171300}",
+        vignette=4340,
     },
     [27803015] = { -- Dark Watcher
         achievement=14307, criteria=50603,
@@ -547,6 +548,7 @@ ns.RegisterPoints(1533, {
         },
         level=60,
         note="Need three players to trigger",
+        vignette=4571,
     },
     [22452285] = { -- Orstus and Sotiros
         achievement=14307, criteria=50618,
