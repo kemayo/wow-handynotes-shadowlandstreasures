@@ -22,6 +22,7 @@ ns.defaults.profile.achievementsHidden[15229] = true
 -- 65607 tracks listening to Genn and Anduin in the Crucible
 -- 65609 tracks listening to Lor'themar and Genn in the Crucible
 -- 65612 tracks listening to Lor'themar and Baine in the Crucible
+-- 66313 tracks listening to Jaina and Khadgar outside Oribos
 -- 65614 tracks listening to Arbiter Pelegos and Kleia in the Crucible
 -- 65618 tracks listening to Bolvar and Mograine
 -- 66316 tracks listening to Bolvar and Taelia

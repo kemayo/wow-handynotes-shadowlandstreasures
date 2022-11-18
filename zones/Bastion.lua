@@ -625,6 +625,7 @@ ns.RegisterPoints(1533, {
             {53508870, 39152040, highlightOnly=true,},
             {53508870, 32151775, highlightOnly=true,},
         },
+        vignette=4320,
     },
     -- Rallying Cry of the Ascended
     -- TODO: are there questids for these? Doing if off the Council would be inaccurate...
