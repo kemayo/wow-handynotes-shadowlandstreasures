@@ -298,7 +298,7 @@ ns.RegisterPoints(1961, {
     [37503480] = mawshroom(),
     [38803380] = mawshroom(),
     [39503070] = mawshroom(),
-    [39703490] = mawshroom(),
+    [39703491] = mawshroom(),
     [42103250] = mawshroom(),
 }, {
     quest=64356,
@@ -402,7 +402,7 @@ ns.RegisterPoints(1961, { -- Korthia
         research=2,
     },
 
-    [39405240] = researched{ -- Drum of Driving
+    [39385238] = researched{ -- Drum of Driving
         achievement=15066, criteria=52269,
         quest=63915,
         -- requires_item=186718,
