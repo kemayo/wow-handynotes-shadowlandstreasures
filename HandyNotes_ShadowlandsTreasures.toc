@@ -1,6 +1,8 @@
 ## Interface: 100002
 ## Title: HandyNotes: Shadowlands Treasures
+## Title-ruRU: HandyNotes: Сокровища Темных Земель
 ## Notes: Where are the hidden treasures in the Shadowlands?
+## Notes-ruRU: Показывает на карте, где спрятаны сокровища Темных Земель
 ## Author: Kemayo
 ## Version: @project-version@
 ## DefaultState: enabled
