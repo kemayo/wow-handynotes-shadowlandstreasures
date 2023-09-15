@@ -781,7 +781,7 @@ ns.RegisterPoints(1970, { -- Zereth Mortis
     [53106385] = makeSchematic(65680, 190585, MOUNT, { -- Schematic: Heartbond Lupine
         note="Drops from {npc:179939} inside the Choral Residium",
     }),
-    [61402800] = makeSchematic(65391, 189459, MOUNT, { -- Schematic: Mawdapted Raptora
+    [61402800] = makeSchematic(65382, 189459, MOUNT, { -- Schematic: Mawdapted Raptora
         note="Drops from {npc:181412} in this area",
     }),
 }, schematic)
