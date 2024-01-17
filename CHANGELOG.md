@@ -1,5 +1,9 @@
 # Changelog
 
+## Changed in v75
+
+* Updated for 10.2.5
+
 ## Changed in v74
 
 * Updated for 10.2.0
