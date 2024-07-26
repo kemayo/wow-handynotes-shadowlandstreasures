@@ -1,5 +1,9 @@
 # Changelog
 
+## Changed in v77
+
+* Updated Krowi_WorldMapButtons-1.4 to v7
+
 ## Changed in v76
 
 * Updated for 11.0.0
