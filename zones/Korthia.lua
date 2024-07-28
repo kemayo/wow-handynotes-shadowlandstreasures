@@ -18,7 +18,10 @@ ns.groups["riftportal"] = "Rift Portals"
 
 local researched = ns.nodeMaker{
     IsActive = function(point)
-        return select(3, GetFactionInfoByID(2472)) >= point.research
+        local info = C_Reputation.GetFactionDataByID(2472)
+        if info and info.currentStanding then
+            return info.currentStanding >= point.research
+        end
     end,
 }
 
