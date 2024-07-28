@@ -1,5 +1,9 @@
 # Changelog
 
+## Changed in v78
+
+* Fix error from calling the removed GetFactionInfoByID in a Korthia-specific override
+
 ## Changed in v77
 
 * Updated Krowi_WorldMapButtons-1.4 to v7
