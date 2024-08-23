@@ -1,5 +1,11 @@
 # Changelog
 
+## Changed in v79
+
+* Label cosmetic loot in tooltips
+* Support MapPinEnhanced for waypoints
+* Fix some deprecated function calls
+
 ## Changed in v78
 
 * Fix error from calling the removed GetFactionInfoByID in a Korthia-specific override
