@@ -826,7 +826,7 @@ ns.RegisterPoints(1970, { -- Zereth Mortis
     group="Schematics",
 })
 
-schematic = CopyTable(schematic)
+schematic = CopyTable(schematic, true)
 schematic.atlas = nil
 schematic.texture = ns.atlas_texture("poi-islands-table", {r=0,g=1,b=1,a=1,scale=0.9})
 schematic.hide_before=ns.conditions.QuestComplete(65419) -- Protoform Synthesis
