@@ -439,7 +439,7 @@ ns.RegisterPoints(1533, {
         quest=60999,
         npc=171010,
         loot={
-            182759, -- Functioning Anima Core
+            {182759, quest=62200}, -- Functioning Anima Core
         },
         note="Bring a {item:180651}, found hidden behind debris nearby, to the {npc:171300}",
         vignette=4340,
