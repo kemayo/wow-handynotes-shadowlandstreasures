@@ -1,5 +1,12 @@
 # Changelog
 
+## Changed in v82
+
+* Revendreth: add all the Ember Court rewards
+* Bring in systems improvements from [my War Within plugin](https://www.curseforge.com/wow/addons/handynotes-war-within), notably:
+    * Don't error when trying to show an impossibly short minimap route segment
+    * Show uncompleted quest status in tooltips
+
 ## Changed in v81
 
 * Bring in systems improvements from [my War Within plugin](https://www.curseforge.com/wow/addons/handynotes-war-within), notably:
