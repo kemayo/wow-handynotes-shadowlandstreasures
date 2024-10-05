@@ -709,6 +709,7 @@ ns.RegisterPoints(1525, {
         },
         -- covenant=Enum.CovenantType.Venthyr,
         note="A Venthyr player channeling Wanecrypt Hill must fire the Dredterror Ballista; fetch the bolt from 42.7 73.4",
+        vignette=4480,
     },
     [42757340] = {
         quest=59612,
@@ -840,6 +841,7 @@ ns.RegisterPoints(1525, {
             {180584, pet=2891}, -- Blushing Spiderling
         },
         note="Destroy {npc:155769} near {npc:155777}",
+        vignette=4203,
     },
     [38607200] = { -- Worldedge Gorger
         achievement=14310, criteria=48805,
