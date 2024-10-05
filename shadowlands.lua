@@ -1,5 +1,7 @@
 local myname, ns = ...
 
+ns.REVENDRETH = 1525
+
 ns.hiddenConfig = {
     groupsHidden = true,
 }
@@ -9,6 +11,7 @@ ns.groups["lostovoid"] = "{item:190239:Lost Ovoid}"
 ns.groups["soulshape"] = "Soulshapes"
 ns.groups["coreless"] = "Coreless Automa"
 ns.groups["junk"] = BAG_FILTER_JUNK
+ns.groups["embercourt"] = "{faction:2445:The Ember Court}"
 
 ns.defaults.profile.groupsHiddenByZone[1970] = {
     puzzlecache = true,

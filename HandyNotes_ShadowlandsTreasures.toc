@@ -30,3 +30,5 @@ zones\Korthia.lua
 zones\ZerethMortis.lua
 
 achievements\Explorer.lua
+
+shared\EmberCourt.lua
