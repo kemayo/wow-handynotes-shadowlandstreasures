@@ -1,5 +1,9 @@
 # Changelog
 
+## Changed in v83
+
+* Updated for 11.0.5
+
 ## Changed in v82
 
 * Revendreth: add all the Ember Court rewards
