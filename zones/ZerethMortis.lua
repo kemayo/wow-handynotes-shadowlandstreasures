@@ -1713,7 +1713,7 @@ ns.RegisterPoints(1970, { -- Zereth Mortis
 ns.RegisterPoints(1970, { -- Zereth Mortis
     [48800560] = { -- Antros
         npc=182466,
-        quest=65143,
+        quest=65695,
         worldquest=65143,
         loot={
             {189709, quest=65473}, -- Pocopoc's Cobalt and Copper Body
