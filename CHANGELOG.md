@@ -1,5 +1,13 @@
 # Changelog
 
+## Changed in v84
+
+* Updated for 11.0.7
+* Fixed the completion quest for Antros in Zereth Mortis
+* Bring in systems improvements from [my War Within plugin](https://www.curseforge.com/wow/addons/handynotes-war-within), notably:
+    * All right-click menus have been migrated to Blizzard's new menu system
+    * Fix an error that could happen with achievement criteria display in tooltips if the criteria had been completed by an alt
+
 ## Changed in v83
 
 * Updated for 11.0.5
