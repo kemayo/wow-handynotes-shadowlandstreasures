@@ -258,11 +258,11 @@ ns.RegisterPoints(1961, { -- Korthia
 local mawshroom = ns.nodeMaker{
     label="Invasive Mawshroom",
     loot={
-        {187153, mount=1507}, -- Tasty Mawshroom
-        187244, -- Questionable Mawshroom
+        {187153, mount=1507}, -- Tasty Mawshroom (for Darkmaul)
+        {187244, pet=3215}, -- Questionable Mawshroom
         {185963, questComplete=63892}, -- Diviner's Rune Chit
     },
-    note="Multiple spawn points. Feed the {item:187153} to {npc:180063}.",
+    note="Multiple spawn points. Feed the {item:187153:Tasty Mawshroom} to {npc:180063:Darkmaul} x10 for a mount. Also take {item:187244:Questionable Mawshroom} to {zone:1970:Zereth Mortis} and eat it to be able to catch {npc:183230:Mawtouched Geomental}.",
     group="mawshrooms",
 }
 ns.RegisterPoints(1961, {

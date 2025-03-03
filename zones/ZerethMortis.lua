@@ -689,6 +689,14 @@ ns.RegisterPoints(1970, { -- Zereth Mortis
         hide_before=ns.conditions.QuestComplete(65774), -- The Catalyst Awakens
         note="Bring gear here to become tier",
     },
+
+    [61607000] = { -- Mawtouched Geomental
+        label="{npc:183230:Mawtouched Geomental}",
+        loot={ns.rewards.BattlePet(3215)},
+        active=ns.conditions.Item(187244), -- Questionable Mushroom
+        atlas="WildBattlePetCapturable",
+        note="Eat a {item:187244:Questionable Mushroom} to be able to see this",
+    }
 })
 
 -- Schematics
