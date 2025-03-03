@@ -1,5 +1,9 @@
 # Changelog
 
+## Changed in v86
+
+* Added the Mawtouched Geomental pet to Zereth Mortis
+
 ## Changed in v85
 
 * Updated for 11.1.0
