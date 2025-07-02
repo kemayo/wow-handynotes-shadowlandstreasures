@@ -1,5 +1,9 @@
 # Changelog
 
+## Changed in v88
+
+* Updated for 11.1.7
+
 ## Changed in v87
 
 * Updated for 11.1.5
