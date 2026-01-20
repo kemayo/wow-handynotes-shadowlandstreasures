@@ -1,5 +1,10 @@
 # Changelog
 
+## Changed in v91
+
+* Updated for Midnight
+* Bring in systems improvements from [my Midnight plugin](https://www.curseforge.com/wow/addons/handynotes-midnight-treasures)
+
 ## Changed in v90
 
 * Updated for 11.2.7
