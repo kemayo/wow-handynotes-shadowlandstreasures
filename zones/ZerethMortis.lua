@@ -1875,6 +1875,6 @@ ns.RegisterPoints(1970, {
         note="Inside the Gravid Repose",
         atlas="flightmaster_progenitorobelisk-taxinode_neutral",
         minimap=true,
-        group="Transportation",
+        group=TUTORIAL_TITLE35, -- Travel
     },
 })
