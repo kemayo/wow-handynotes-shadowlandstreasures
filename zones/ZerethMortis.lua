@@ -319,7 +319,7 @@ ns.RegisterPoints(1970, {
     label="{item:190239}",
     texture=ns.atlas_texture("playerpartyblip", {r=0.6,g=0.6,b=0.1,a=1,scale=0.8}),
     minimap=true,
-    found=ns.conditions.Item(190239, 5),
+    found={ns.conditions.Item(190239, 5), ns.conditions.QuestComplete(65522), any=true},
     group="lostovoid",
     note="Find 5x {item:190239} around the zone and take them to the {npc:185280}. There's a lot of spawn points and they vanish after someone loots them. You're looking for a small brown lump with no sparkles.",
 })
