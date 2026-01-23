@@ -805,8 +805,8 @@ ns.RegisterPoints(2029, { -- Gravid Repose
     [49004060] = makeSchematic(65396, 189473, MOUNT), -- Schematic: Bronzewing Vespoid
 }, schematic)
 ns.RegisterPoints(2047, { -- Sepulcher of the First Ones: Immortal Hearth
-    [46003070] = makeSchematic(65384, 189461, MOUNT, { -- Schematic: Serenade
-        note="Hanging in a chain-link under the floating island",
+    [45813090] = makeSchematic(65384, 189461, MOUNT, { -- Schematic: Serenade
+        note="Hanging in a chain-link under the floating island", minimap=true,
     }),
 }, schematic)
 ns.RegisterPoints(2061, { -- Sepulcher of the First Ones: Ephemeral Plains
@@ -814,6 +814,21 @@ ns.RegisterPoints(2061, { -- Sepulcher of the First Ones: Ephemeral Plains
         note="Defeat {npc:184915:Halondrus}, then loot this from the second-phase room. You've got a reasonably short time after the boss kill to get it.",
     }),
 }, schematic)
+
+ns.RegisterPoints(2061, { -- Sepulcher of the First Ones: Ephemeral Plains
+    [23923771] = {
+        label="High Value Cache",
+        loot={
+            {189175, note="Token for..."}, -- Mawforged Bridle
+            {187631, mount=true}, -- Darkened Vombata
+            {187667, mount=true}, -- Mawdapted Raptora
+            {187641, mount=true}, -- Reins of the Sundered Zerethsteed
+            {189991, quest=65519, covenant=Enum.CovenantType.NightFae}, -- Snail Soul
+        },
+        hide_before=ns.conditions.Item(190727), -- Security Override Orb
+        note="Kill {npc:185032:Taskmaster Xy'pro} while they have 3x{spell:366919:Synergy} from being near other mobs",
+    },
+})
 
 ns.RegisterPoints(1970, { -- Zereth Mortis
     -- Pulp-Covered Relic
