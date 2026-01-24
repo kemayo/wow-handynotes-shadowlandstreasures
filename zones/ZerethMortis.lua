@@ -1275,6 +1275,23 @@ ns.RegisterPoints(1970, {
 -- 65005 pollinated extraction
 -- 65015 energized firmament
 
+-- Coming To Terms
+do
+    local TERMS = {
+        label="{npc:185766:Haunting Memory}",
+        achievement=15399,
+        atlas="Vehicle-TempleofKotmogu-OrangeBall",
+        note="Collect 3x {npc:185766:Haunting Memory} before Anduin",
+    }
+    ns.RegisterPoints(2048, { -- Sepulcher of the First Ones: Genesis Cradle
+        [30035395] = {},
+    }, TERMS)
+    ns.RegisterPoints(2061, { -- Sepulcher of the First Ones: Ephemeral Plains
+        [25835422] = {},
+        [36782899] = {note="Accessible before the boss fight"},
+    }, TERMS)
+end
+
 -- Adventurer of Zerith Mortis
 
 ns.RegisterPoints(1970, { -- Zereth Mortis
