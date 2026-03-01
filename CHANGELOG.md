@@ -1,5 +1,15 @@
 # Changelog
 
+## Changed in v93
+
+* Removed 11.2.7 from the TOC
+* Bring in systems improvements from [my Midnight plugin](https://www.curseforge.com/wow/addons/handynotes-midnight-treasures)
+    * Override reward item tooltip display to not use a MoneyFrame to avoid many, many Blizzard secret issues
+    * Other secret fixes that should be less visible
+    * Improvements to how Blizzard's map pins are hooked into
+    * Adjust display so that tooltip titles use normal Blizzard color
+    * Change tooltip quest-status to complete/incomplete for consistency
+
 ## Changed in v92
 
 * Sepulcher: add the High Value Cache
