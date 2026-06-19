@@ -1,5 +1,10 @@
 # Changelog
 
+## Changed in v94
+
+* Updated for 12.0.7
+* Bring in systems improvements from [my Midnight plugin](https://www.curseforge.com/wow/addons/handynotes-midnight-treasures)
+
 ## Changed in v93
 
 * Removed 11.2.7 from the TOC
