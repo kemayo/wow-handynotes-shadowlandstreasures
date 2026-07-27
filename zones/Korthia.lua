@@ -61,9 +61,10 @@ ns.RegisterPoints(1961, { -- Korthia
         note="Jump down from Keeper's Respite",
     },
 
-    [38354295] = { -- Glittering Nest Materials
+    [38354294] = { -- Glittering Nest Materials
         achievement=15099, criteria=52236,
         quest=64222,
+        vignette=4781,
     },
 
     [42505595] = { -- Infected Vestige
@@ -91,7 +92,7 @@ ns.RegisterPoints(1961, { -- Korthia
     },
     [43556770] = path({achievement=15099, criteria=52246, quest=64268, inbag=187033, label="{item:187033}", atlas="MantidTower"}), -- Small Offering Key
 
-    [62055550] = { -- Spectral Bound Chest
+    [62055551] = { -- Spectral Bound Chest
         quest=64247,
         -- vignette=4801 locked, 4802 unlocked
         loot = {
@@ -105,6 +106,7 @@ ns.RegisterPoints(1961, { -- Korthia
         label="Spectral Bound Chest",
         -- currency=1767, -- x40
         note="Click 3x nearby Spectral Keys to unlock",
+        vignette=4802,
     },
 })
 
@@ -149,7 +151,7 @@ local mawcache = ns.nodeMaker{
 ns.RegisterPoints(1961, { -- Korthia
     -- Cache one:
     [57553755] = mawcache(),
-    [58803360] = mawcache(),
+    [58833364] = mawcache(),
     [60103930] = mawcache(),
     [62903490] = mawcache(),
 }, {
@@ -162,10 +164,11 @@ ns.RegisterPoints(1961, { -- Korthia
     [58305285] = mawcache(),
     [61105160] = mawcache(),
     [61205790] = mawcache(),
-    [62305860] = mawcache(),
+    [62275863] = mawcache(),
 }, {
     quest=64363,
     texture=ns.atlas_texture("VignetteLoot", {r=1,g=0.5,b=0.5,a=1,scale=1}),
+    vignette=4852,
 })
 ns.RegisterPoints(1961, { -- Korthia
     -- Cache three
@@ -178,6 +181,7 @@ ns.RegisterPoints(1961, { -- Korthia
 }, {
     quest=64364,
     texture=ns.atlas_texture("VignetteLoot", {r=0.5,g=1,b=0.5,a=1,scale=1}),
+    vignette=4853,
 })
 
 -- Rift portals
@@ -193,7 +197,8 @@ ns.RegisterPoints(1961, { -- Korthia
     atlas="poi-rift1",
     requires_no_buff={352795, 354870, any=true},
     note="Rifts let you enter an alternate phase, if you have a {item:186731}. There are rares and chests that're only in the rift.",
-    group="riftportal"
+    group="riftportal",
+    minimap=true,
 })
 
 -- Riftbound Caches
@@ -245,7 +250,7 @@ ns.RegisterPoints(1961, { -- Korthia
     texture=ns.atlas_texture("VignetteLoot", {r=0,g=0.5,b=1,a=1,scale=1}),
 })
 ns.RegisterPoints(1961, { -- Korthia
-    [46103190] = riftcache(),
+    [46203192] = riftcache(),
     [50753300] = riftcache(),
     [56301850] = riftcache(),
     [64303040] = riftcache(),
@@ -267,7 +272,7 @@ local mawshroom = ns.nodeMaker{
 }
 ns.RegisterPoints(1961, {
     [54204120] = mawshroom(),
-    [56905160] = mawshroom(),
+    [56965165] = mawshroom(),
     [57303940] = mawshroom(),
     [58154050] = mawshroom(),
     [60304160] = mawshroom(),
@@ -275,57 +280,62 @@ ns.RegisterPoints(1961, {
 }, {
     quest=64351,
     texture=ns.atlas_texture("teleportationnetwork-ardenweald-32x32", {r=1,g=1,b=0,a=1,scale=1}),
+    vignette=4842,
 })
 ns.RegisterPoints(1961, {
     [48504115] = mawshroom(),
     [49504070] = mawshroom(),
-    [49903250] = mawshroom(),
+    [49553174] = mawshroom(),
     [51504690] = mawshroom(),
     [53703790] = mawshroom(),
 }, {
     quest=64354,
     texture=ns.atlas_texture("teleportationnetwork-ardenweald-32x32", {r=0,g=1,b=0,a=1,scale=1}),
+    vignette=4843,
 })
 ns.RegisterPoints(1961, {
     [42103580] = mawshroom(),
     [43703670] = mawshroom(),
     [45603450] = mawshroom(),
     [52402500] = mawshroom(),
-    [55101640] = mawshroom(),
+    [55101642] = mawshroom(),
 }, {
     quest=64355,
     texture=ns.atlas_texture("teleportationnetwork-ardenweald-32x32", {r=0,g=0.5,b=1,a=1,scale=1}),
+    vignette=4844,
 })
 ns.RegisterPoints(1961, {
     [35703110] = mawshroom(),
     [37503480] = mawshroom(),
     [38803380] = mawshroom(),
-    [39503070] = mawshroom(),
+    [39513068] = mawshroom(),
     [39703491] = mawshroom(),
     [42103250] = mawshroom(),
 }, {
     quest=64356,
     texture=ns.atlas_texture("teleportationnetwork-ardenweald-32x32", {r=1,g=0,b=1,a=1,scale=1}),
+    vignette=4845,
 })
 ns.RegisterPoints(1961, {
     [39703010] = mawshroom(),
     [41204490] = mawshroom(),
     [43455635] = mawshroom(),
-    [45204790] = mawshroom(),
+    [45194790] = mawshroom(),
     [46504850] = mawshroom(),
     [54805550] = mawshroom(),
 }, {
     quest=64357,
     texture=ns.atlas_texture("teleportationnetwork-ardenweald-32x32", {r=0,g=1,b=1,a=1,scale=1}),
+    vignette=4846,
 })
 
 --Nests
 ns.RegisterPoints(1961, {
-    [42205600] = {quest=64359},
-    [51904390] = {quest=64360},
-    [63703150] = {quest=64361},
-    [52407270] = {quest=64362},
-    [40003970] = {quest=64385},
+    [40993966] = {quest=64358, vignette=4847},
+    [42175599] = {quest=64359, vignette=4848},
+    [51864393] = {quest=64360, vignette=4849},
+    [63773167] = {quest=64361, vignette=4850},
+    [52407270] = {quest=64362, vignette=4851},
 }, {
     label="Nest of Unusual Materials",
     texture=ns.atlas_texture("vehicle-trap-grey", {r=0.8,g=0,b=0.8,a=1,scale=1}),
@@ -512,7 +522,7 @@ ns.RegisterPoints(1961, { -- Korthia
     [35856225] = {note="Climb along the blue lines from the northeast"},
     [38403140] = {}, -- on shelf, jump down
     [39703490] = {}, -- among roots, jump down
-    [41103980] = {}, -- middle level of cliffs
+    [41183988] = {}, -- middle level of cliffs
     [41302750] = {}, -- looking into Maw
     [42806040] = {},
     [43203130] = {}, -- on hill
@@ -573,7 +583,7 @@ ns.RegisterPoints(1961, { -- Korthia
 
 --Rares
 ns.RegisterPoints(1961, { -- Korthia
-    [58201775] = { -- Assault Supply Carriage
+    [58191763] = { -- Assault Supply Carriage
         npc=180246,
         quest=64258, -- 64439?
         achievement=15107, criteria=52290,
@@ -585,7 +595,7 @@ ns.RegisterPoints(1961, { -- Korthia
         note="Take the carriage that leaves from here, you'll fight the mob in the Maw",
     },
 
-    [51154165] = { -- Consumption
+    [51154177] = { -- Consumption
         achievement=15107, criteria=52285,
         quest=64243,
         npc=179768, -- 179769 (normal), 179755 (rare)
@@ -613,7 +623,7 @@ ns.RegisterPoints(1961, { -- Korthia
     },
 
 
-    [51802080] = { -- Dominated Protector
+    [51822081] = { -- Dominated Protector
         achievement=15107, criteria=52277,
         quest=63830,
         npc=177903,
@@ -711,7 +721,7 @@ ns.RegisterPoints(1961, { -- Korthia
         note="Summon with the uncorrupted razorwing egg",
     },
 
-    [44604240] = { -- Screaming Shade
+    [44754297] = { -- Screaming Shade
         achievement=15107, criteria=52273,
         quest=64263,
         npc=179608,
@@ -782,12 +792,12 @@ ns.RegisterPoints(1961, { -- Korthia
         note="Use {item:186718} from {npc:178257} on the Ancient Teleporter",
     },
 
-    [39405240] = { -- Yarxhov the Pillager (Chamber of Knowledge)
+    [39375241] = { -- Yarxhov the Pillager (Chamber of Knowledge)
         -- achievement=15066, criteria=52262, -- Reliquary Restoration
         achievement=15107, criteria=52295,
         quest=64257,
         npc=179802,
-        vignette=4859,
+        vignette=4806, -- Ancient Teleporter
         -- requires_item=186718,
         loot={
             {187103, quest=63917}, -- Everliving Statuette
