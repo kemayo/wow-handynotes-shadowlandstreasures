@@ -402,7 +402,7 @@ ns.RegisterPoints(1543, {
         level=60,
         note="In the Pit of Anguish",
     },
-    -- [54558015] = path{label=CAVE, achievement=14660, criteria=49491, quest=62211, route={54558015, 54507930}},
+    -- [54558015] = path{label=CAVE, achievement=14660, criteria=49491, quest=62211, routes={{54558015, 54507930}}},
     [36253745] = { -- Soulsmith Yol-Mattar
         achievement=14660, criteria=49482,
         quest=59441,
@@ -998,12 +998,12 @@ local rift_three = ns.atlas_texture("WarlockPortalAlliance", {r=0,g=0.75,b=0.75,
 ns.RegisterPoints(1543, {
     -- First pair: Tremaculum / Crucible
     [19204780] = riftstone{route=25201785,},
-    [25201785] = riftstone{route={19204780,25201785,r=0.75,g=0,b=0},},
+    [25201785] = riftstone{routes={{19204780,25201785,r=0.75,g=0,b=0}},},
     -- Second pair: Calcis / Cauldron of Flame
     [23453120] = riftstone{atlas="WarlockPortalAlliance",route=34804360,},
-    [34804360] = riftstone{atlas="WarlockPortalAlliance",route={23453120,34804360,r=0,g=0,b=0.75},},
+    [34804360] = riftstone{atlas="WarlockPortalAlliance",routes={{23453120,34804360,r=0,g=0,b=0.75}},},
     -- Third pair: Perdition Hold / Desmotaeron
-    [33905665] = riftstone{texture=rift_three,route={33905665,68753675,r=0,g=0.75,b=0.75},},
+    [33905665] = riftstone{texture=rift_three,routes={{33905665,68753675,r=0,g=0.75,b=0.75}},},
     [68753675] = riftstone{texture=rift_three,route=33905665,},
 })
 

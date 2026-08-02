@@ -892,7 +892,7 @@ ns.RegisterPoints(1961, {
 -- Flayedwing
 ns.RegisterPoints(1961, {
     [60852855] = {route=49356385,},
-    [49356385] = {route={49356385,60852855,r=0,g=0.75,b=0},},
+    [49356385] = {routes={{49356385,60852855,r=0,g=0.75,b=0}},},
 }, {
     label="{npc:180548}",
     atlas="flightmaster", scale=1.2,

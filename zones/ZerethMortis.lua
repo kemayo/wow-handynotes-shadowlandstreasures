@@ -257,13 +257,13 @@ ns.RegisterPoints(1970, {
 ns.RegisterPoints(1970, {
     [78065339] = {label="Runic Syllable", note="Under the platform between waterfalls"},
     [76924667] = {label="Runic Syllable"},
-    [78214795] = path{label="Path to Runic Syllable",route={78214795,80904790,81265045,r=1,g=0,b=1}},
+    [78214795] = path{label="Path to Runic Syllable",routes={{78214795,80904790,81265045,r=1,g=0,b=1}}},
     [81265045] = {label="Runic Syllable", note="Behind the Sepulcher's North side"},
-    [78255917] = path{label="Path to Runic Syllable",route={78255917,80005810,80935626,r=1,g=0,b=1}},
+    [78255917] = path{label="Path to Runic Syllable",routes={{78255917,80005810,80935626,r=1,g=0,b=1}}},
     [80935626] = {label="Runic Syllable", note="Behind the Sepulcher's South side"},
     [77056032] = {label="Runic Syllable"},
     [76995879] = {label="Runic Syllable", note="In a cave"},
-    [76315959] = path{label="Cave Entrance",route={76315959,76995879,r=1,g=0,b=1}}, -- also to the vault
+    [76315959] = path{label="Cave Entrance",routes={{76315959,76995879,r=1,g=0,b=1}}}, -- also to the vault
 }, {
     quest=65565,
     achievement=15331, criteria=53068,
@@ -349,7 +349,7 @@ ns.RegisterPoints(2030, { -- Nexus of Actualization
         loot={
             {190060, quest=65527}, -- Adventurous Pocopoc
         },
-        route={72024882, 63855973},
+        routes={{72024882, 63855973}},
         note="Push the orb",
     },
 })
@@ -419,7 +419,7 @@ ns.RegisterPoints(1970, { -- Zereth Mortis
         },
         active={ns.conditions.GarrisonTalent(1902),ns.conditions.QuestComplete(65328)}, -- Arbiter in the Making
         notes="Unlock the Fulgore Alcove arrangement @ 47.8 30.4, then use the second teleporter in the Inner Locus to reach this. Activate the orb closest to the center of the room and ride it until it gets close to the treasure.",
-        route={50553200, 46903950},
+        routes={{50553200, 46903950}},
     },
     [42005185] = {
         quest=65183,
@@ -591,7 +591,7 @@ ns.RegisterPoints(1970, { -- Zereth Mortis
             {190602, quest=65498, note="Misshapen"}, -- Symbol of the Raptora (misshapen)
             {190726, quest=65498, note="Misshapen"}, -- Extract of Prodigious Sands (misshapen)
         },
-        route={50553200, 44403680},
+        routes={{50553200, 44403680}},
     },
     [42934006] = {
         quest=65567,
@@ -600,7 +600,7 @@ ns.RegisterPoints(1970, { -- Zereth Mortis
             {190096, quest=65534}, -- Pocobold (even if you already have it -- it just vanishes)
         },
         note="Unlock the Rondure Alcove Arrangement to come here from the Inner Locus. Solve a fairly horrible jumping puzzle to reach the orb near the ceiling.",
-        route={50553200, 42934006},
+        routes={{50553200, 42934006}},
         hide_before=ns.conditions.QuestComplete(65345), -- Rondure Alcove Arrangement
     },
 })
@@ -621,7 +621,7 @@ local requisites = {
 }
 ns.RegisterPoints(1970, { -- Zereth Mortis
     [47503660] = {
-        route={50553200, 47503660},
+        routes={{50553200, 47503660}},
     },
 }, requisites)
 ns.RegisterPoints(2029, { -- Gravid Repose
@@ -757,7 +757,7 @@ ns.RegisterPoints(1970, { -- Zereth Mortis
             ns.conditions.GarrisonTalent(1902), -- Altonian Understanding
             ns.conditions.QuestComplete(65328), -- Arbiter in the Making, end of A Means to an End storyline
         },
-        route={50553200, 50003340},
+        routes={{50553200, 50003340}},
     }),
     [50352715] = makeSchematic(65395, 189472, MOUNT, { -- Schematic: Vespoid Flutterer
         -- this one is accessible at the base state
@@ -1813,11 +1813,11 @@ ns.RegisterPoints(1970, { -- Zereth Mortis
         npc=181292,
         criteria=52570,
         note="Spawns here, walks around the area, and eventually despawns; watch out for a running automata",
-        route={
+        routes={{
             56154805, 54904560, 56304460, 55104090, 52404240, 51404080, 53003990,
             53304300, 56004660, 58104650, 57904440,
             r=1,g=1,b=0,
-        },
+        }},
     },
 
     -- Moss-Choked Guardian
@@ -1885,7 +1885,7 @@ ns.RegisterPoints(1970, { -- Zereth Mortis
 -- Ancient Translocator
 -- ns.RegisterPoints(1970, {
 --     [46122172] = {route=47301340,},
---     [47301340] = {route={47301340,46122172,r=0,g=0.75,b=0},},
+--     [47301340] = {routes={{47301340,46122172,r=0,g=0.75,b=0}},},
 -- }, {
 --     label="{npc:183968}",
 --     atlas="progenitorflightmaster-32x32", scale=1,
@@ -1894,7 +1894,7 @@ ns.RegisterPoints(1970, { -- Zereth Mortis
 -- -- Ancient Translocator
 -- ns.RegisterPoints(1970, {
 --     [64855355] = {route=73305340,},
---     [73305340] = {route={73305340,64855355,r=0,g=0.75,b=0},},
+--     [73305340] = {routes={{73305340,64855355,r=0,g=0.75,b=0}},},
 -- }, {
 --     label="{npc:183970}",
 --     atlas="progenitorflightmaster-32x32", scale=1,
