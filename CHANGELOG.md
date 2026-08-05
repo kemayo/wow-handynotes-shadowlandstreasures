@@ -1,5 +1,10 @@
 # Changelog
 
+## Changed in v97
+
+* Bring in systems improvements from [my Midnight plugin](https://www.curseforge.com/wow/addons/handynotes-midnight-treasures), notably:
+    * Turning on "Transmog exact items" didn't take effect until you reloaded
+
 ## Changed in v96
 
 * Korthia: corrected a number of treasure coordinates
