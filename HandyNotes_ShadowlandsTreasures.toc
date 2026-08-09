@@ -1,4 +1,4 @@
-## Interface: 120007
+## Interface: 120100, 120007
 ## Title: HandyNotes: Shadowlands Treasures
 ## Notes: Where are the hidden treasures in the Shadowlands?
 ## Author: Kemayo
