@@ -797,3 +797,12 @@ ns.RegisterPoints(1536, {
 ns.RegisterPoints(1697, { -- Plaguefall
     [45253680] = jellycat{criteria=49425,},
 })
+
+ns.RegisterPoints(1698, { -- Seat of the Primus
+    [40482447] = {
+        label="{spell:439568:Runeforge}",
+        requires={ns.conditions.Class("DEATHKNIGHT"), ns.conditions.Covenant(Enum.CovenantType.Necrolord)},
+        atlas="ClassOverlay-Rune", scale=1.2,
+        minimap=true,
+    },
+})
