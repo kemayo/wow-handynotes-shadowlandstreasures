@@ -300,7 +300,7 @@ ns.RegisterPoints(1565, {
     achievement=14788,
     atlas="Campaign-QuestLog-LoreBook",
     minimap=true,
-    level=60,
+    --level=60,
 })
 
 -- ns.RegisterPoints(1565, {
@@ -371,7 +371,7 @@ ns.RegisterPoints(1565, {
         quest=59226,
         npc=164477,
         loot={180166}, -- Deathbinder's Staff
-        level=60, -- assumed
+        --level=60, -- assumed
     },
     [47502845] = { -- Deifir the Untamed
         achievement=14309, criteria=48784,
@@ -380,7 +380,7 @@ ns.RegisterPoints(1565, {
         loot={
             {180631, pet=2920}, -- Gorm Needler
         },
-        level=60, -- assumed
+        --level=60, -- assumed
         note="Runs in circles around the area. Ride and use {spell:319566} and {spell:319575} to slow and stun it",
     },
     [48407715] = { -- Dustbrawl
@@ -428,7 +428,7 @@ ns.RegisterPoints(1565, {
         loot={
             {180725, mount=1362}, -- Spinemaw Gladechewer
         },
-        level=60, -- assumed
+        --level=60, -- assumed
         note="Kill {npc:166736} until it spawns",
     },
     [32403025] = { -- Humon'gozz
@@ -488,7 +488,7 @@ ns.RegisterPoints(1565, {
         loot={
             179603, -- Nettlehusk Barrier
         },
-        level=60,
+        --level=60,
         note="Hit all the flowers",
     },
     [65702430] = { -- Rotbriar Boggart (but the criteria is called Rotbriar Changeling)
@@ -544,7 +544,7 @@ ns.RegisterPoints(1565, {
             180154, -- Greataxe of Unrelenting Pursuit
             {182176, quest=62431, covenant=Enum.CovenantType.NightFae}, -- Shadowstalker Soul (quest=62431)
         },
-        level=60, -- assumed
+        --level=60, -- assumed
         -- covenant=Enum.CovenantType.NightFae,
         note="A Night Fae player channeling the Tirna Scithe must:\n"..
             "* Pick up a {spell:338045}\n"..
@@ -667,5 +667,5 @@ ns.RegisterPoints(1565, {
 }, {
     achievement=14309, criteria=48793,
     quest=60306,
-    level=60, -- assumed
+    --level=60, -- assumed
 })

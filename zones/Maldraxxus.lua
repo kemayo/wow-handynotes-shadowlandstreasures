@@ -70,7 +70,7 @@ ns.RegisterPoints(1536, { -- Maldraxxus
         achievement=14312, criteria=50069, -- Forgotten Mementos
         quest=58710, -- also 58709
         -- loot=Random Gear,
-        level=60,
+        --level=60,
         note="Find the Vault Portcullis chain in the next room to open the gate",
     },
     [49401510] = {
@@ -79,21 +79,21 @@ ns.RegisterPoints(1536, { -- Maldraxxus
         loot={
             183696, -- Sp-eye-glass
         },
-        level=60,
+        --level=60,
         note="Inside the wreckage of Nurakkir in the House of Eyes",
     },
     [62405990] = {
         achievement=14312, criteria=50071, -- Misplaced Supplies
         quest=60311,
         -- loot=Random Gear,
-        level=60,
+        --level=60,
         note="On top of a giant mushroom; climb the small hill to the north, jump to the smaller mushroom, then be surprised by what slopes you can run up",
     },
     [72805360] = {
         achievement=14312, criteria=50072, -- Glutharn's Stash
         quest=61484,
         -- loot=Random Gear,
-        level=60,
+        --level=60,
         note="Hidden behind the waterfall. Kill {npc:172485:Scathely} and his 2 adds to unlock the treasure",
     },
     [31707000] = {
@@ -102,7 +102,7 @@ ns.RegisterPoints(1536, { -- Maldraxxus
         loot={
             183516, -- Stained Bonefused Mantle
         },
-        level=60,
+        --level=60,
         note="Kill {npc:170563:Runespeaker Phaeton} to obtain the {item:181777:Phaeton's Key} required to unlock the treasure",
         path={
             37907000,
@@ -121,7 +121,7 @@ ns.RegisterPoints(1536, { -- Maldraxxus
         loot={
             {183515, pet=3045}, -- Iridescent Ooze / Reanimated Plague
         },
-        level=60,
+        --level=60,
         note="Enter the tunnels at 62.4 76.5 to become {spell:330092:Plaguefallen} and unlock the treasure",
         path={
             62387655,
@@ -135,7 +135,7 @@ ns.RegisterPoints(1536, { -- Maldraxxus
         loot={
             {183517, quest=62372}, -- Page 76 of the Necronom-i-nom
         },
-        level=60,
+        --level=60,
         note="Loot the {item:181558:Missing Ritual Pages} nearby, then use the Book of Binding Rituals behind the cache before opening it",
     },
 })
@@ -173,7 +173,7 @@ ns.RegisterPoints(1536, {
 local sorrow = {
     achievement=14626,
     quest={61127, 61128}, -- arm, sword
-    level=60,
+    --level=60,
     atlas="animadiversion-icon",
 }
 ns.RegisterPoints(1536, {
@@ -341,13 +341,13 @@ ns.RegisterPoints(1536, { -- Maldraxxus
     --     label="Bonebound Chest",
     --     loot={181723}, -- Meticulously pickled head (high sell value)
     --     junk=true,
-    --     level=60,
+    --     --level=60,
     -- },
     -- [38036548] = {
     --     quest=61647, -- 61648, 61649, 61650
     --     label="Chosen Runecoffer",
     --     junk=true,
-    --     level=60,
+    --     --level=60,
     --     covenant="Necrolord",
     --     note="Channel anima to the Chosen. Three runes nearby on the ground",
     -- },
@@ -356,7 +356,7 @@ ns.RegisterPoints(1536, { -- Maldraxxus
     --     quest=61115, -- progress runes: 61120, 61121, 61122
     --     label="Runebound Coffer",
     --     junk=true,
-    --     level=60,
+    --     --level=60,
     --     note="Three runes nearby on construct tables",
     -- },
     -- [36208145] = {
@@ -364,7 +364,7 @@ ns.RegisterPoints(1536, { -- Maldraxxus
     --     quest=61116, -- progress runes 61117, 61118, 61119
     --     label="Runebound Coffer",
     --     junk=true,
-    --     level=60,
+    --     --level=60,
     --     note="Three runes nearby on the ground",
     -- },
     -- various locations, same questid:
@@ -376,14 +376,14 @@ ns.RegisterPoints(1536, { -- Maldraxxus
     --     label="Sprouting Growth",
     --     note="Grapple up, jump down",
     --     junk=true,
-    --     level=60,
+    --     --level=60,
     -- },
     -- [41623849] = {
     --     quest=61080,
     --     label="Sprouting Growth",
     --     note="Grapple up, jump down",
     --     junk=true,
-    --     level=60,
+    --     --level=60,
     -- },
     -- [41593842] = {
     -- [40902569] = {
@@ -391,7 +391,7 @@ ns.RegisterPoints(1536, { -- Maldraxxus
     --     label="Sprouting Growth",
     --     note="Grapple up, jump down",
     --     junk=true,
-    --     level=60,
+    --     --level=60,
     -- },
     -- [65244965] = {
     --     quest=61090,
@@ -403,7 +403,7 @@ ns.RegisterPoints(1536, { -- Maldraxxus
     --     label="Sprouting Growth",
     --     note="Grapple up, jump down",
     --     junk=true,
-    --     level=60,
+    --     --level=60,
     -- },
     -- [51401916] = {
     -- [54261491] = {
@@ -442,7 +442,7 @@ ns.RegisterPoints(1536, {
             184290, -- Blood-Dyed Bonesaw
             {184476, toy=true}, -- Regenerating Slime Vial (toy)
         },
-        level=60,
+        --level=60,
     },
     [49002350] = { -- Collector Kash
         achievement=14308, criteria=48866,
@@ -457,7 +457,7 @@ ns.RegisterPoints(1536, {
             {181797, quest=61561, covenant=Enum.CovenantType.Necrolord}, -- Strange Cloth (Necro only?)
             {183692, quest=62408, covenant=Enum.CovenantType.Necrolord}, -- Jagged Bonesaw (Crypt Couture)
         },
-        level=60,
+        --level=60,
     },
     [26402635] = { -- Corpsecutter Moroc
         achievement=14308, criteria=48872,
@@ -469,7 +469,7 @@ ns.RegisterPoints(1536, {
             {183833, quest=62570, covenant=Enum.CovenantType.Necrolord}, -- Kash's Bag of Junk (Necro only?)
             {181797, quest=61561, covenant=Enum.CovenantType.Necrolord}, -- Strange Cloth (Necro only?)
         },
-        level=60,
+        --level=60,
     },
     [76855705] = { -- Deadly Dapperling
         achievement=14308, criteria=48851,
@@ -488,7 +488,7 @@ ns.RegisterPoints(1536, {
         loot={
             184178, -- Worldrending Claymore
         },
-        level=60,
+        --level=60,
     },
     [57805155] = { -- Gristlebeak
         achievement=14308, criteria=48853,
@@ -517,7 +517,7 @@ ns.RegisterPoints(1536, {
             184174, -- Clasp of Death
             {181810,covenant=Enum.CovenantType.Necrolord,}, -- Phylactery of the Dead Conniver (Necro campaign story gated?)
         },
-        level=60,
+        --level=60,
     },
     [66003530] = { -- Nerissa Heartless
         achievement=14308, criteria=49723,
@@ -528,7 +528,7 @@ ns.RegisterPoints(1536, {
             184179, -- Lichsworn Commander's Boneblade
             {174076,quest=58376,covenant=Enum.CovenantType.Necrolord,}, -- Necromantic Oil
         },
-        level=60,
+        --level=60,
     },
     [50356330] = { -- Nirvaska the Summoner
         achievement=14308, criteria=48868,
@@ -538,7 +538,7 @@ ns.RegisterPoints(1536, {
             183700, -- Forgotten Summoner's Shoulderpads
             {181811,covenant=Enum.CovenantType.Necrolord}, -- Beckoner's Shadowy Crystal
         },
-        level=60,
+        --level=60,
         note="Only when the {quest:58490} world quest is up",
     },
     [53706130] = { -- Pesticide
@@ -558,7 +558,7 @@ ns.RegisterPoints(1536, {
             184184, -- Ravenomous's Acid-Tipped Stinger
         },
         note="Kill {npc:159901} nearby to spawn",
-        level=60,
+        --level=60,
     },
     [51754440] = { -- Sabriel the Bonecleaver
         achievement=14802, criteria=48874,
@@ -570,7 +570,7 @@ ns.RegisterPoints(1536, {
             {181815, mount=1370, covenant=Enum.CovenantType.Necrolord}, -- Armored Bonehoof Tauralus
             -- {182083, mount=nil}, -- Bonecleaver's Skullboar (removed?)
         },
-        level=60,
+        --level=60,
         note="A Necrolord player channeling The Theater of Pain must activate this",
     },
     [62107580] = { -- Scunner
@@ -583,7 +583,7 @@ ns.RegisterPoints(1536, {
             {183833, quest=62570, covenant=Enum.CovenantType.Necrolord}, -- Kash's Bag of Junk (Necro only?)
             {181797, quest=61561, covenant=Enum.CovenantType.Necrolord}, -- Strange Cloth (Necro only?)
         },
-        level=60,
+        --level=60,
     },
     [55502361] = { -- Sister Chelicerae
         achievement=14308, criteria=48873,
@@ -593,7 +593,7 @@ ns.RegisterPoints(1536, {
             {181172, pet=2948}, -- Boneweave Hatchling
             184289, -- Spindlefang Spellblade
         },
-        level=60,
+        --level=60,
     },
     [42465345] = { -- Smorgas the Feaster
         achievement=14308, criteria=48869,
@@ -628,7 +628,7 @@ ns.RegisterPoints(1536, {
             184187, -- Taskmaster's Tenderizer
             184193, -- Callus-Forged Hook
         },
-        level=60,
+        --level=60,
         note="Shares spawn with {npc:160226} and {npc:160204}",
     },
     [24204295] = { -- Thread Mistress Leeda
@@ -638,7 +638,7 @@ ns.RegisterPoints(1536, {
         loot={
             184180, -- Leeda's Unrefined Mask
         },
-        level=60,
+        --level=60,
     },
     [33708015] = { -- Warbringer Mal'Korak
         achievement=14308, criteria=48875,
@@ -648,7 +648,7 @@ ns.RegisterPoints(1536, {
             {182085, mount=1372}, -- Blisterback Bloodtusk
             184288, -- Ruthless Warlord's Barrier
         },
-        level=60,
+        --level=60,
         note="At the bottom of the tower",
     },
     [28965138] = { -- Zargox the Reborn
@@ -660,7 +660,7 @@ ns.RegisterPoints(1536, {
             {181804, covenant=Enum.CovenantType.Necrolord}, -- Trophy of the Reborn Bonelord
             {183690, quest=62404, covenant=Enum.CovenantType.Necrolord}, -- Ashen Ink (Crypt Couture)
         },
-        level=60,
+        --level=60,
         note="Do {quest:57245} at 26.3 42.8, then use the {item:175827} to summon",
     },
 
@@ -674,7 +674,7 @@ ns.RegisterPoints(1536, {
             184298, -- Amalgamated Forsworn's Journal
             {183754, quest=62470, covenant=Enum.CovenantType.Necrolord}, -- Operational Instructions
         },
-        level=60,
+        --level=60,
         -- covenant=Enum.CovenantType.Necrolord,
         note="A Necrolord player channeling House of Constructs must drag {npc:162815} to the rare's right foot",
     },
@@ -736,7 +736,7 @@ ns.RegisterPoints(1536, {
             {184155, quest=62804}, -- Recovered Containment Pack (oily)
             184301, -- Twenty-Loop Violet Girdle (violet)
         },
-        --level=60, -- it's not totally level=60, but at least some of the spawns are (e.g. Violet)
+        ----level=60, -- it's not totally --level=60, but at least some of the spawns are (e.g. Violet)
         note="Mix: 30 ({spell:306722} + {spell:306719} + {spell:306713})\n"..
             "{npc:157294}: 15+ "..RED.."\n".. -- Pulsing Leech
             "{npc:157307}: 15+ "..YELLOW.."\n".. -- Gelloh

@@ -101,7 +101,7 @@ ns.RegisterPoints(1533, { -- Bastion
         quest=61006,
         -- loot=Random Greens/Materials,
         note="Entrance is hidden behind some bushes",
-        level=60,
+        --level=60,
         path=46434657,
     },
     [51401790] = {
@@ -110,7 +110,7 @@ ns.RegisterPoints(1533, { -- Bastion
         loot={
             183609, -- Re-Powered Golliath Fists
         },
-        level=60,
+        --level=60,
         note="Requires {item:180534:Unstable Construct Anima}, from containers nearby",
     },
     [35804810] = {
@@ -119,14 +119,14 @@ ns.RegisterPoints(1533, { -- Bastion
         loot={
             180064, -- Ascended Flute
         },
-        level=60,
+        --level=60,
         note="Requires {item:180536:Broken Kyrian Flute} to unlock the treasure, dropped from {npc:159610:Agitated Etherwyrm} nearby",
     },
     [56501720] = {
         achievement=14311, criteria=50056, -- Memorial Offering
         quest=61150,
         -- loot={},
-        level=60,
+        --level=60,
         note="Purchase {item:180788:Memorial Wine} from {npc:171526:Kobri} and use it on the drink tray near the treasure to obtain the {item:180797:Memorial Offering Key} and unlock the treasure",
         routes={
             {34006650, 56501720, highlightOnly=true, _related=34006650},
@@ -138,19 +138,19 @@ ns.RegisterPoints(1533, { -- Bastion
         },
         nearby={56841908},
     },
-    [34006650] = {quest=61150, label="{npc:171526:Kobri}", atlas="food", scale=1.1, note="Buy {item:180788:Memorial Wine}, go to 56.5 17.2", level=60, upcoming=false, route=56501720}, -- Kobri (Cliffs of Respite)
-    [43603225] = {quest=61150, label="{npc:171526:Kobri}", atlas="food", scale=1.1, note="Buy {item:180788:Memorial Wine}, go to 56.5 17.2", level=60, upcoming=false, route=56501720}, -- Kobri (Sagehaven)
-    [47957400] = {quest=61150, label="{npc:171526:Kobri}", atlas="food", scale=1.1, note="Buy {item:180788:Memorial Wine}, go to 56.5 17.2", level=60, upcoming=false, route=56501720}, -- Kobri (Aspirant's Rest)
-    [51804640] = {quest=61150, label="{npc:171526:Kobri}", atlas="food", scale=1.1, note="Buy {item:180788:Memorial Wine}, go to 56.5 17.2", level=60, upcoming=false, route=56501720}, -- Kobri (Hero's Rest)
-    [52154710] = {quest=61150, label="{npc:171526:Kobri}", atlas="food", scale=1.1, note="Buy {item:180788:Memorial Wine}, go to 56.5 17.2", level=60, upcoming=false, route=56501720}, -- Kobri (Hero's Rest)
-    [53508035] = {quest=61150, label="{npc:171526:Kobri}", atlas="food", scale=1.1, note="Buy {item:180788:Memorial Wine}, go to 56.5 17.2", level=60, upcoming=false, route=56501720}, -- Kobri (Aspirant's Crucible)
+    [34006650] = {quest=61150, label="{npc:171526:Kobri}", atlas="food", scale=1.1, note="Buy {item:180788:Memorial Wine}, go to 56.5 17.2", --level=60, upcoming=false, route=56501720}, -- Kobri (Cliffs of Respite)
+    [43603225] = {quest=61150, label="{npc:171526:Kobri}", atlas="food", scale=1.1, note="Buy {item:180788:Memorial Wine}, go to 56.5 17.2", --level=60, upcoming=false, route=56501720}, -- Kobri (Sagehaven)
+    [47957400] = {quest=61150, label="{npc:171526:Kobri}", atlas="food", scale=1.1, note="Buy {item:180788:Memorial Wine}, go to 56.5 17.2", --level=60, upcoming=false, route=56501720}, -- Kobri (Aspirant's Rest)
+    [51804640] = {quest=61150, label="{npc:171526:Kobri}", atlas="food", scale=1.1, note="Buy {item:180788:Memorial Wine}, go to 56.5 17.2", --level=60, upcoming=false, route=56501720}, -- Kobri (Hero's Rest)
+    [52154710] = {quest=61150, label="{npc:171526:Kobri}", atlas="food", scale=1.1, note="Buy {item:180788:Memorial Wine}, go to 56.5 17.2", --level=60, upcoming=false, route=56501720}, -- Kobri (Hero's Rest)
+    [53508035] = {quest=61150, label="{npc:171526:Kobri}", atlas="food", scale=1.1, note="Buy {item:180788:Memorial Wine}, go to 56.5 17.2", --level=60, upcoming=false, route=56501720}, -- Kobri (Aspirant's Crucible)
     [35105800] = {
         achievement=14311, criteria=50058, -- Gift of Agthia
         quest=60893,
         loot={
             180063, -- Unearthly Chime
         },
-        level=60,
+        --level=60,
         note="Obtain the {spell:333063:Proof of Courage} by interacting with {spell:333365:Agthia's Flame} at 39.1 54.4. Then follow the Path of Courage braziers to reach the treasure.",
         path={
             39105440,
@@ -165,7 +165,7 @@ ns.RegisterPoints(1533, { -- Bastion
         loot={
             {180859, pet=2935}, -- Purity
         },
-        level=60,
+        --level=60,
         note="Obtain {spell:332785:Proof of Purity} by ringing the bell near the chest and standing under the nearby waterfall to unlock the treasure",
     },
     [70503650] = {
@@ -174,7 +174,7 @@ ns.RegisterPoints(1533, { -- Bastion
         loot={
             {183988, toy=true}, -- Bondable Val'kyr Diadem
         },
-        level=60,
+        --level=60,
         note="Obtain the {spell:333045:Proof of Humility} by using /kneel in front of the treasure to unlock it",
     },
     [40201820] = {
@@ -183,7 +183,7 @@ ns.RegisterPoints(1533, { -- Bastion
         loot={
             {181290, covenant=Enum.CovenantType.Kyrian}, -- Harmonious Sigil of the Archon
         },
-        level=60,
+        --level=60,
         note="Obtain the {spell:333068:Proof of Wisdom} by using the teleporter near the chest and lighting the incenses in the correct order:\n* Incense of Patience\n* Incense of Knowledge\n* Incense of Insight\n* Anima Orb\n* Incense of Judgement\nYou'll have to go through the path multiple times to do this",
     },
     [27602170] = {
@@ -192,7 +192,7 @@ ns.RegisterPoints(1533, { -- Bastion
         loot={
             179977, -- Benevolent Gong
         },
-        level=60,
+        --level=60,
         note="Obtain the {spell:333070:Proof of Loyalty} by taking the {spell:333912:Flame of Devotion} at 23.9 24.8 and bringing it to the nearby brazier",
         path={
             23902480,
@@ -208,7 +208,7 @@ ns.RegisterPoints(1533, { -- Bastion
 local shard = ns.nodeMaker{
     label="Anima Shard",
     achievement=14339,
-    level=60,
+    --level=60,
     atlas="azeriteready",
     minimap=true,
     upcoming=false,
@@ -222,7 +222,7 @@ ns.RegisterPoints(1533, {
         loot={
             {180772, mount=1404}, -- Silverwind Larion
         },
-        level=60,
+        --level=60,
         atlas="VignetteLootElite", scale=1.2,
         note="Forge the {item:180858:Crystal Mallet of Heralds} and then ring the vesper",
     },
@@ -232,7 +232,7 @@ ns.RegisterPoints(1533, {
         loot={
             180858, -- Crystal Mallet of Heralds
         },
-        level=60,
+        --level=60,
         atlas="vehicle-hammergold",
         note="Collect 50 Anima Shards and give them to {npc:171732:Forgelite Hephaesius}",
         upcoming = false,
@@ -375,7 +375,7 @@ ns.RegisterPoints(1533, {
         loot={
             183607, -- Uncertain Aspirant's Spear
         },
-        level=60,
+        --level=60,
         note="Loot a {item:180613} nearby and read it while targeting the rare",
     },
     [51354080] = { -- Baedos
@@ -451,7 +451,7 @@ ns.RegisterPoints(1533, {
         loot={
             184297, -- Death Warden's Greatblade
         },
-        level=60,
+        --level=60,
         note="You need to talk to this while you're dead to make it visible. The {spell:342893} buff will be present if it's up",
     },
     [37004180] = { -- Demi the Relic Hoarder
@@ -481,7 +481,7 @@ ns.RegisterPoints(1533, {
         loot={
             {180856, pet=2932}, -- Silvershell Snapper
         },
-        level=60,
+        --level=60,
         note="In a cave accessed from the north",
     },
     [45556460] = { -- Echo of Aella
@@ -500,7 +500,7 @@ ns.RegisterPoints(1533, {
         loot={
             {184404, toy=true}, -- Ever-Abundant Hearth
         },
-        level=60,
+        --level=60,
         note="Wandering the forge, may spawn after you kill surrounding enemies",
     },
     [60407305] = { -- Fallen Acolyte Erisne
@@ -529,7 +529,7 @@ ns.RegisterPoints(1533, {
         loot={
             183608, -- Evernote Vesper
         },
-        level=60,
+        --level=60,
         note="Need three players to trigger a vesper repair event",
     },
     [30355515] = { -- Reekmonger
@@ -546,7 +546,7 @@ ns.RegisterPoints(1533, {
         loot={
             174038, -- Chime of Celerity
         },
-        level=60,
+        --level=60,
         note="Need three players to trigger",
         vignette=4571,
     },
@@ -569,7 +569,7 @@ ns.RegisterPoints(1533, {
         loot={
             {184413, toy=true}, -- Mnemonic Attunement Pane
         },
-        level=60,
+        --level=60,
         note="Drag a {npc:171018} through others, until it gets 10x {spell:333558}"
     },
     [40655305] = { -- Wingflayer the Cruel
@@ -619,7 +619,7 @@ ns.RegisterPoints(1533, {
         loot={
             {183741, mount=1426}, -- Ascended Skymane
         },
-        level=60,
+        --level=60,
         note="Ring the five vespers within 5 minutes to summon the council",
         routes={
             {53508870, 64306980, highlightOnly=true, _related=64306980,},
@@ -653,7 +653,7 @@ local tear = {
         183605, -- Devourer Wrought Warglaive
         {180869, pet=2940}, -- Devoured Wader
     },
-    level=60,
+    --level=60,
     note="Possible spawns from the Swelling Tear event",
 }
 ns.RegisterPoints(1533, {

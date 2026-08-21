@@ -28,7 +28,7 @@ ns.RegisterPoints(1543, {
             184106, -- Gimble
         },
         note="Need three players to summon",
-        level=60,
+        --level=60,
     },
     [39004120] = { -- Borr-Geth
         achievement=14744, criteria=49843,
@@ -38,7 +38,7 @@ ns.RegisterPoints(1543, {
             {184312, toy=true}, -- Borr-Geth's Fiery Brimstone
             186223, -- Coif of the Molten Terror
         },
-        level=60,
+        --level=60,
     },
     [27751305] = { -- Conjured Death
         achievement=14744, criteria=49844,
@@ -47,7 +47,7 @@ ns.RegisterPoints(1543, {
         loot={
             183887, -- Suirhtaned, Blade of the Heir
         },
-        level=60,
+        --level=60,
     },
     [60954805] = { -- Darithis the Bleak
         achievement=14744, criteria=49845,
@@ -56,7 +56,7 @@ ns.RegisterPoints(1543, {
         loot={
             186220, -- Stygian Chestcage
         },
-        level=60,
+        --level=60,
     },
     [49128175] = { -- Darklord Taraxis
         achievement=14744, criteria=49846,
@@ -66,7 +66,7 @@ ns.RegisterPoints(1543, {
             {183901,toy=true}, -- Bonestorm Top
             186611, -- Taraxis' Treads
         },
-        level=60,
+        --level=60,
     },
     [28106060] = { -- Dolos
         achievement=14744, criteria=49847,
@@ -75,7 +75,7 @@ ns.RegisterPoints(1543, {
         loot={
             186209, -- Blood-Spattered Gloves of Death
         },
-        level=60,
+        --level=60,
     },
     [23755340] = { -- Eketra
         achievement=14744, criteria=49848,
@@ -84,7 +84,7 @@ ns.RegisterPoints(1543, {
         loot={
             186563, -- Spear of the Impaler
         },
-        level=60,
+        --level=60,
     },
     [42352110] = { -- Ekphoras, Herald of Grief
         achievement=14744, criteria=49849,
@@ -95,7 +95,7 @@ ns.RegisterPoints(1543, {
             184105, -- Gyre
         },
         note="Need three players to summon",
-        level=60,
+        --level=60,
     },
     [19204610] = { -- Eternas the Tormentor
         achievement=14744, criteria=49850,
@@ -105,7 +105,7 @@ ns.RegisterPoints(1543, {
             {183407,pet=3037,}, -- Contained Essence of Dread
             186212, -- Eternas' Braided Waistcord
         },
-        level=60,
+        --level=60,
     },
     [20606935] = { -- Exos, Herald of Domination
         achievement=14744, criteria=49851,
@@ -119,7 +119,7 @@ ns.RegisterPoints(1543, {
             186606, -- Nilganihmaht's Signet Ring
         },
         note="Get the etching from the three other Heralds, combine into {item:182329}, and use to summon",
-        level=60,
+        --level=60,
     },
     [53507950] = { -- Gorged Shadehound
         achievement=14738, criteria=49251,
@@ -140,7 +140,7 @@ ns.RegisterPoints(1543, {
             186214, -- Maw Snakeskin Boots
         },
         note="Flies around",
-        level=60,
+        --level=60,
     },
     [16955100] = { -- Morguliax
         achievement=14744, criteria=49852,
@@ -150,7 +150,7 @@ ns.RegisterPoints(1543, {
             {184292, toy=true}, -- Ancient Elethium Coin
             185892, -- Stygia-Etched Decapitator
         },
-        level=60,
+        --level=60,
     },
     [45507375] = { -- Nascent Devourer
         achievement=14744, criteria=49853,
@@ -159,7 +159,7 @@ ns.RegisterPoints(1543, {
         loot={
             186236, -- Devourer's Shadehide Jerkin
         },
-        level=60,
+        --level=60,
     },
     [48801830] = { -- Obolos
         achievement=14744, criteria=49854,
@@ -168,7 +168,7 @@ ns.RegisterPoints(1543, {
         loot={
             186238, -- Mantle of the Prime Collector
         },
-        level=60,
+        --level=60,
     },
     [23702140] = { -- Orophea
         achievement=14744, criteria=49855,
@@ -179,14 +179,14 @@ ns.RegisterPoints(1543, {
             186211, -- Pantaloons of the Condemned Bard
         },
         note="Fetch {spell:337150} from 26.7 29.3, use it to summon",
-        level=60,
+        --level=60,
     },
     [26752930] = { -- Eurydea's Necklace
         achievement=14744, criteria=49855,
         quest=61519,
         label="{spell:337150}",
         note="Take to {npc:172577} at 23.7 21.4",
-        level=60,
+        --level=60,
     },
     [32956645] = { -- Shadeweaver Zeris
         achievement=14744, criteria=49856,
@@ -200,7 +200,7 @@ ns.RegisterPoints(1543, {
             {183068, quest=63162,}, -- Korrath's Grimoire: Gyadrek
             {181794, toy=true}, -- Orophea's Lyre (weirdly)
         },
-        level=60,
+        --level=60,
     },
     [35954155] = { -- Soulforger Rhovus
         achievement=14744, criteria=49857,
@@ -211,7 +211,7 @@ ns.RegisterPoints(1543, {
             186613, -- Rhovus' Linked Greaves
             {185473, quest=63667}, -- Soulforger's Tools (for the Feral Shadehound)
         },
-        level=60,
+        --level=60,
     },
     [28701205] = { -- Talaporas, Herald of Pain
         achievement=14744, criteria=49858,
@@ -222,14 +222,14 @@ ns.RegisterPoints(1543, {
             184107, -- Borogove Cloak
         },
         note="Need three players to summon",
-        level=60,
+        --level=60,
     },
     [27407150] = { -- Thanassos
         achievement=14744, criteria=49859,
         quest=60914,
         npc=170731,
         --loot={},
-        level=60,
+        --level=60,
     },
     [37656590] = { -- Yero the Skittish
         achievement=14744, criteria=49860,
@@ -239,7 +239,7 @@ ns.RegisterPoints(1543, {
             186228, -- Helm of the Skittish Hero
         },
         note="Follow until it becomes hostile",
-        level=60,
+        --level=60,
     },
 
     -- It's About Sending A Message
@@ -248,7 +248,7 @@ ns.RegisterPoints(1543, {
         achievement=14660,
         criteria={49485,51058},
         quest={61136,63044},
-        level=60,
+        --level=60,
     },
     [28204450] = { -- Agonix
         achievement=14660, criteria=49485,
@@ -257,7 +257,7 @@ ns.RegisterPoints(1543, {
         loot={
             186616, -- Bindings of Screaming Death
         },
-        level=60,
+        --level=60,
     },
     [34107455] = { -- Akros
         achievement=14660, criteria=49487,
@@ -266,7 +266,7 @@ ns.RegisterPoints(1543, {
         loot={
             186617, -- Death's Hammer Stompers
         },
-        level=60,
+        --level=60,
     },
     [28702515] = { -- Cyrixia
         achievement=14660, criteria=49484,
@@ -276,7 +276,7 @@ ns.RegisterPoints(1543, {
             {183070, quest=63164}, -- Mawsworn Orders
             186618, -- Willbreaker's Chain
         },
-        level=60,
+        --level=60,
     },
     [25851480] = { -- Dartanos
         achievement=14660, criteria=49476,
@@ -285,7 +285,7 @@ ns.RegisterPoints(1543, {
         loot={
             186619, -- Bloodspattered Shoulders of the Flayer
         },
-        level=60,
+        --level=60,
     },
     [19205740] = { -- Dath Rezara
         achievement=14660, criteria=50410,
@@ -297,7 +297,7 @@ ns.RegisterPoints(1543, {
             {183068, quest=63162,}, -- Korrath's Grimoire: Gyadrek
             186620, -- Rezara's Fencing Grips
         },
-        level=60,
+        --level=60,
     },
     [32002120] = { -- Drifting Sorrow
         achievement=14660, criteria=49475,
@@ -306,7 +306,7 @@ ns.RegisterPoints(1543, {
         loot={
             186622, -- Robe of Drifting Sorrow
         },
-        level=60,
+        --level=60,
     },
     [60456480] = { -- Houndmaster Vasanok
         achievement=14660, criteria=49490,
@@ -315,7 +315,7 @@ ns.RegisterPoints(1543, {
         loot={
             186224, -- Beastwarren Houndmaster's Treads
         },
-        level=60,
+        --level=60,
     },
     [20802970] = { -- Huwerath
         achievement=14660, criteria=49481,
@@ -324,7 +324,7 @@ ns.RegisterPoints(1543, {
         loot={
             186623, -- Lost Soul's Mantle
         },
-        level=60,
+        --level=60,
     },
     [30846866] = { -- Krala
         achievement=14660, criteria=49486,
@@ -333,7 +333,7 @@ ns.RegisterPoints(1543, {
         loot={
             186624, -- Death Wing Drape
         },
-        level=60,
+        --level=60,
     },
     [27301755] = { -- Malevolent Stygia
         achievement=14660, criteria=49488,
@@ -342,7 +342,7 @@ ns.RegisterPoints(1543, {
         loot={
             186625, -- Hood of Malevolence
         },
-        level=60,
+        --level=60,
     },
     [38652880] = { -- Odalrik
         achievement=14660, criteria=50408,
@@ -352,7 +352,7 @@ ns.RegisterPoints(1543, {
             {183061,quest=63158,}, -- Wailing Coin
             178561, -- Runecarver's Memory
         },
-        level=60,
+        --level=60,
     },
     [25354875] = { -- Orrholyn <Lord of Bloodletting>
         achievement=14660, criteria=49480,
@@ -361,7 +361,7 @@ ns.RegisterPoints(1543, {
         loot={
             186626, -- Bloodwicking Bands
         },
-        level=60,
+        --level=60,
     },
     [22654225] = { -- Ratgusher
         achievement=14660, criteria=51058,
@@ -370,7 +370,7 @@ ns.RegisterPoints(1543, {
         loot={
             186627, -- Belt of Ten Thousand Tails
         },
-        level=60,
+        --level=60,
     },
     [26153745] = { -- Razkazzar
         achievement=14660, criteria=49479,
@@ -379,7 +379,7 @@ ns.RegisterPoints(1543, {
         loot={
             186628, -- Razkazzar's Axe Grippers
         },
-        level=60,
+        --level=60,
     },
     [55606320] = { -- Sanngror the Torturer
         achievement=14660, criteria=49489,
@@ -389,7 +389,7 @@ ns.RegisterPoints(1543, {
             {183410,pet=3040,}, -- Sharpclaw
             186629, -- Sanngor's Spiked Band
         },
-        level=60,
+        --level=60,
         path=55806755,
     },
     [54507930] = { -- Skittering Broodmother
@@ -399,7 +399,7 @@ ns.RegisterPoints(1543, {
         loot={
             186240, -- Broodmotherhide Cloak
         },
-        level=60,
+        --level=60,
         note="In the Pit of Anguish",
     },
     -- [54558015] = path{label=CAVE, achievement=14660, criteria=49491, quest=62211, routes={{54558015, 54507930}}},
@@ -410,7 +410,7 @@ ns.RegisterPoints(1543, {
         loot={
             186630, -- Spark-Deflecting Girdle
         },
-        level=60,
+        --level=60,
     },
     [36854480] = { -- Stygian Incinerator
         achievement=14660, criteria=50409,
@@ -419,7 +419,7 @@ ns.RegisterPoints(1543, {
         loot={
             186631, -- Emberfused Band
         },
-        level=60,
+        --level=60,
     },
     [40705960] = { -- Valis the Cruel
         achievement=14660, criteria=49492,
@@ -428,7 +428,7 @@ ns.RegisterPoints(1543, {
         loot={
             186632, -- Rune Covered Bindings
         },
-        level=60,
+        --level=60,
     },
 
     -- 9.1 additions:
@@ -529,7 +529,7 @@ ns.RegisterPoints(1820, { -- Pit of Anguish - upper level
         loot={
             186240, -- Broodmotherhide Cloak
         },
-        level=60,
+        --level=60,
     },
 })
 

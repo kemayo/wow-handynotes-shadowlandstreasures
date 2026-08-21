@@ -253,7 +253,7 @@ ns.RegisterPoints(1525, {
             q(62048, "Day 5") ..": {item:182597} from {npc:171808} near the Night Market\n"..
             q(62050, "Day 6") ..": 3x {item:179271} from {npc:167815} by the Hole in the Wall\n"
         end,
-        level=60,
+        --level=60,
     },
     [63406180] = { -- Day 2: brush from Snickersnee
         quest=62042,
@@ -287,7 +287,7 @@ ns.RegisterPoints(1525, {
 }, {
     atlas="stablemaster",scale=1.2,
     minimap=true,
-    level=60,
+    --level=60,
     upcoming=false,
     group="Daily Mounts",
 })
@@ -306,7 +306,7 @@ ns.RegisterPoints(52, { -- Westfall
     note="Day 1: Collect 8 for {npc:173468:Dead Blanchy} in Revendreth",
     atlas="stablemaster",scale=1.2,
     minimap=true,
-    level=60,
+    --level=60,
     group="Daily Mounts",
 })
 
@@ -541,7 +541,7 @@ ns.RegisterPoints(1525, {
     achievement=14769,
     label="Dredbat",
     texture=ns.merge(ns.atlas_texture("ancientmana"), {r=1, g=0, b=0}),
-    level=60,
+    --level=60,
     note="It's inconsistent whether you'll get credit for animating any particular bat",
     group="Dredbats",
 })
