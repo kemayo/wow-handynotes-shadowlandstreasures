@@ -404,13 +404,14 @@ ns.RegisterPoints(1533, {
             182682, -- Book-Borrower Identification
         },
     },
-    [50455805] = { -- Cloudfeather Guardian
+    [51015835] = { -- Cloudfeather Guardian
         achievement=14307, criteria=50604,
         quest=60978,--62191,
         npc=170932,
         loot={
             {180812, pet=2925}, -- Golden Cloudfeather
         },
+        vignette=4322,
     },
     [66004370] = { -- Collector Astorestes
         achievement=14307, criteria=50610,
@@ -530,6 +531,7 @@ ns.RegisterPoints(1533, {
             183608, -- Evernote Vesper
         },
         --level=60,
+        vignette=4007,
         note="Need three players to trigger a vesper repair event",
     },
     [30355515] = { -- Reekmonger
