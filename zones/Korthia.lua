@@ -583,7 +583,7 @@ ns.RegisterPoints(1961, { -- Korthia
 
 --Rares
 ns.RegisterPoints(1961, { -- Korthia
-    [58191763] = { -- Assault Supply Carriage
+    [58211768] = { -- Assault Supply Carriage
         npc=180246,
         quest=64258, -- 64439?
         achievement=15107, criteria=52290,
@@ -593,6 +593,7 @@ ns.RegisterPoints(1961, { -- Korthia
             187399, -- Maw Construct's Shoulderguards
         },
         note="Take the carriage that leaves from here, you'll fight the mob in the Maw",
+        vignette=4857, -- then 4871 in the Maw
     },
 
     [51154177] = { -- Consumption
@@ -630,6 +631,7 @@ ns.RegisterPoints(1961, { -- Korthia
         loot={
             187390, -- Dominated Protector's Helm
         },
+        vignette=4732,
     },
 
     [33103930] = { -- Escaped Wilderling

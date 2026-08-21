@@ -3,6 +3,10 @@ local myname, ns = ...
 local path = ns.path
 local CAVE = "Cave entrance"
 
+--[[
+Mugrem the Soul Destroyer, 178002, 64116 + 63854 + 64693
+]]
+
 local rift_active = {
     ns.conditions.AuraActive(352795), ns.conditions.AuraActive(354870), any=true,
     note="You need to be in the rift to see this",
@@ -10,14 +14,15 @@ local rift_active = {
 
 ns.RegisterPoints(1543, {
     -- Better to Be Lucky Than Dead
-    [25903115] = { -- Adjutant Dekaris
+    [25933116] = { -- Adjutant Dekaris
         achievement=14744, criteria=49841,
         quest=57482,
         npc=157964,
         loot={
             186222, -- Grips of the Coldheart Adjutant
         },
-        level=60,
+        vignette=3832,
+        --level=60,
     },
     [19304170] = { -- Apholeias, Herald of Loss
         achievement=14744, criteria=49842,
@@ -30,7 +35,7 @@ ns.RegisterPoints(1543, {
         note="Need three players to summon",
         --level=60,
     },
-    [39004120] = { -- Borr-Geth
+    [38944119] = { -- Borr-Geth
         achievement=14744, criteria=49843,
         quest=57469,
         npc=157833,
@@ -38,11 +43,12 @@ ns.RegisterPoints(1543, {
             {184312, toy=true}, -- Borr-Geth's Fiery Brimstone
             186223, -- Coif of the Molten Terror
         },
+        vignette=3830,
         --level=60,
     },
-    [27751305] = { -- Conjured Death
+    [27731305] = { -- Conjured Death
         achievement=14744, criteria=49844,
-        quest=61106,
+        quest=61106, -- 58013
         npc=171317,
         loot={
             183887, -- Suirhtaned, Blade of the Heir
@@ -170,15 +176,16 @@ ns.RegisterPoints(1543, {
         },
         --level=60,
     },
-    [23702140] = { -- Orophea
+    [23692142] = { -- Orophea
         achievement=14744, criteria=49855,
-        quest=61519,
+        quest=61519, -- 62722
         npc=172577,
         loot={
             {181794, toy=true}, -- Orophea's Lyre
             186211, -- Pantaloons of the Condemned Bard
         },
         note="Fetch {spell:337150} from 26.7 29.3, use it to summon",
+        vignette=4459,
         --level=60,
     },
     [26752930] = { -- Eurydea's Necklace
@@ -202,7 +209,7 @@ ns.RegisterPoints(1543, {
         },
         --level=60,
     },
-    [35954155] = { -- Soulforger Rhovus
+    [35994149] = { -- Soulforger Rhovus
         achievement=14744, criteria=49857,
         quest=60834,
         npc=166398,
@@ -211,9 +218,10 @@ ns.RegisterPoints(1543, {
             186613, -- Rhovus' Linked Greaves
             {185473, quest=63667}, -- Soulforger's Tools (for the Feral Shadehound)
         },
+        vignette=4245,
         --level=60,
     },
-    [28701205] = { -- Talaporas, Herald of Pain
+    [28721205] = { -- Talaporas, Herald of Pain
         achievement=14744, criteria=49858,
         quest=60789, -- 62722?
         npc=170302,
@@ -222,6 +230,7 @@ ns.RegisterPoints(1543, {
             184107, -- Borogove Cloak
         },
         note="Need three players to summon",
+        vignette=4233, -- Convocation of Pain
         --level=60,
     },
     [27407150] = { -- Thanassos
@@ -270,21 +279,23 @@ ns.RegisterPoints(1543, {
     },
     [28702515] = { -- Cyrixia
         achievement=14660, criteria=49484,
-        quest=61346,
+        quest=61346, -- 63379
         npc=168693,
         loot={
             {183070, quest=63164}, -- Mawsworn Orders
             186618, -- Willbreaker's Chain
         },
+        vignette=4427,
         --level=60,
     },
-    [25851480] = { -- Dartanos
+    [25761470] = { -- Dartanos
         achievement=14660, criteria=49476,
-        quest=59230,
+        quest=59230, -- 63373
         npc=162452,
         loot={
             186619, -- Bloodspattered Shoulders of the Flayer
         },
+        vignette=4383,
         --level=60,
     },
     [19205740] = { -- Dath Rezara
@@ -299,31 +310,34 @@ ns.RegisterPoints(1543, {
         },
         --level=60,
     },
-    [32002120] = { -- Drifting Sorrow
+    [31972124] = { -- Drifting Sorrow
         achievement=14660, criteria=49475,
         quest=59183,
         npc=158314,
         loot={
             186622, -- Robe of Drifting Sorrow
         },
+        vignette=3848,
         --level=60,
     },
-    [60456480] = { -- Houndmaster Vasanok
+    [60456475] = { -- Houndmaster Vasanok
         achievement=14660, criteria=49490,
         quest=62209,
         npc=172523,
         loot={
             186224, -- Beastwarren Houndmaster's Treads
         },
+        vignette=4518,
         --level=60,
     },
-    [20802970] = { -- Huwerath
+    [20802968] = { -- Huwerath
         achievement=14660, criteria=49481,
         quest=58918,
         npc=162965,
         loot={
             186623, -- Lost Soul's Mantle
         },
+        vignette=4379,
         --level=60,
     },
     [30846866] = { -- Krala
@@ -335,16 +349,17 @@ ns.RegisterPoints(1543, {
         },
         --level=60,
     },
-    [27301755] = { -- Malevolent Stygia
+    [27341755] = { -- Malevolent Stygia
         achievement=14660, criteria=49488,
         quest=61125,
         npc=171316,
         loot={
             186625, -- Hood of Malevolence
         },
+        vignette=4381,
         --level=60,
     },
-    [38652880] = { -- Odalrik
+    [38642880] = { -- Odalrik
         achievement=14660, criteria=50408,
         quest=62618, -- 63413?
         npc=172207,
@@ -352,6 +367,7 @@ ns.RegisterPoints(1543, {
             {183061,quest=63158,}, -- Wailing Coin
             178561, -- Runecarver's Memory
         },
+        vignette=4573,
         --level=60,
     },
     [25354875] = { -- Orrholyn <Lord of Bloodletting>
@@ -372,16 +388,17 @@ ns.RegisterPoints(1543, {
         },
         --level=60,
     },
-    [26153745] = { -- Razkazzar
+    [26183116] = { -- Razkazzar
         achievement=14660, criteria=49479,
         quest=60992,
         npc=162829,
         loot={
             186628, -- Razkazzar's Axe Grippers
         },
+        vignette=4331,
         --level=60,
     },
-    [55606320] = { -- Sanngror the Torturer
+    [55646319] = { -- Sanngror the Torturer
         achievement=14660, criteria=49489,
         quest=62210,
         npc=172521,
@@ -389,6 +406,7 @@ ns.RegisterPoints(1543, {
             {183410,pet=3040,}, -- Sharpclaw
             186629, -- Sanngor's Spiked Band
         },
+        vignette=4519,
         --level=60,
         path=55806755,
     },
@@ -403,13 +421,14 @@ ns.RegisterPoints(1543, {
         note="In the Pit of Anguish",
     },
     -- [54558015] = path{label=CAVE, achievement=14660, criteria=49491, quest=62211, routes={{54558015, 54507930}}},
-    [36253745] = { -- Soulsmith Yol-Mattar
+    [36213734] = { -- Soulsmith Yol-Mattar
         achievement=14660, criteria=49482,
-        quest=59441,
+        quest=59441, -- 63377
         npc=165047,
         loot={
             186630, -- Spark-Deflecting Girdle
         },
+        vignette=4132,
         --level=60,
     },
     [36854480] = { -- Stygian Incinerator
@@ -421,13 +440,14 @@ ns.RegisterPoints(1543, {
         },
         --level=60,
     },
-    [40705960] = { -- Valis the Cruel
+    [40695512] = { -- Valis the Cruel
         achievement=14660, criteria=49492,
         quest=61728,
         npc=173086,
         loot={
             186632, -- Rune Covered Bindings
         },
+        vignette=4503,
         --level=60,
     },
 
@@ -447,12 +467,13 @@ ns.RegisterPoints(1543, {
         },
         note=DAILY,
     },
-    [66506130] = { -- Jeweled Heart
+    [66506227] = { -- Jeweled Heart
         achievement=15099, criteria=52244,
         quest=64261,
         loot={
             187352, -- Jeweled Heart of Ezekiel
         },
+        vignette=4809,
     },
 
     [27652525] = { -- Torglluun
@@ -934,8 +955,8 @@ ns.RegisterPoints(1543, {
                 "* "..q(62680, "Pick up the Harrower's Key Ring")
         end,
     },
-    [66404190] = {
-        achievement=15107, criteria=52287, -- also 14943 for killing with 5x blood of the pack
+    [66404190] = { -- Ylva
+        achievement=15107, criteria=52287,
         quest=64152,
         npc=177444,
         loot={
@@ -943,6 +964,7 @@ ns.RegisterPoints(1543, {
             187359, -- Ylva's Water Dish
             187393, -- Sterling Hound-Handler's Gauntlets
             {186970, quest=62683, note="{item:186727}"}, -- Feeder's Hand and Key / Seal Breaker Key
+            ns.rewards.Achievement(14943), -- Guarmageddon
         },
         note="Drops {item:186727} for {npc:179572:Nilganihmaht}",
     },
@@ -998,14 +1020,14 @@ local rift_three = ns.atlas_texture("WarlockPortalAlliance", {r=0,g=0.75,b=0.75,
 ns.RegisterPoints(1543, {
     -- First pair: Tremaculum / Crucible
     [19204780] = riftstone{route=25201785,},
-    [25201785] = riftstone{routes={{19204780,25201785,r=0.75,g=0,b=0}},},
+    [25181787] = riftstone{routes={{19204780,25201785,r=0.75,g=0,b=0}},},
     -- Second pair: Calcis / Cauldron of Flame
-    [23453120] = riftstone{atlas="WarlockPortalAlliance",route=34804360,},
+    [23483123] = riftstone{atlas="WarlockPortalAlliance",route=34804360,},
     [34804360] = riftstone{atlas="WarlockPortalAlliance",routes={{23453120,34804360,r=0,g=0,b=0.75}},},
     -- Third pair: Perdition Hold / Desmotaeron
     [33905665] = riftstone{texture=rift_three,routes={{33905665,68753675,r=0,g=0.75,b=0.75}},},
     [68753675] = riftstone{texture=rift_three,route=33905665,},
-})
+}) -- vignette=1543
 
 -- Animaflow
 ns.RegisterPoints(1543, {
