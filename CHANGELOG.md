@@ -1,5 +1,19 @@
 # Changelog
 
+## Changed in v99
+
+* Maldraxxus: show the Necrolord Runeforge location in the Seat of the Primus
+* Removed a bunch of outdated level 60 requirements, so treasures that need them no longer hide from lower-level characters
+* Maw / Korthia: adjusted a number of treasure coordinates based on vignette data
+* Bring in systems improvements from [my Midnight plugin](https://www.curseforge.com/wow/addons/handynotes-midnight-treasures), notably:
+    * Timed world event points show a countdown in their tooltip and glow on the map while running or about to start, and the countdown no longer freezes once you've hovered it once
+    * Route lines look better as the map scales, and can loop back on themselves
+    * Minimap routes are more efficient and don't glitch when you zoom the minimap
+    * Map pins could flicker after the map refreshed
+    * Cosmetic set rewards weren't properly counting as collected
+    * Shared loot now respects the "this character only" setting
+    * Fixed achievement links in tooltips after 12.1 changed the API they use
+
 ## Changed in v98
 
 * Updated for 12.1.0
