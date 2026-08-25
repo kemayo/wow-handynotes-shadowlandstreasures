@@ -1,5 +1,12 @@
 # Changelog
 
+## Changed in v100
+
+* Bring in systems improvements from [my Midnight plugin](https://www.curseforge.com/wow/addons/handynotes-midnight-treasures), notably:
+    * New setting: shared loot can count toward whether a rare counts as "notable"
+    * Hovering Blizzard's own map pin for a treasure with related points nearby could show a different treasure's info instead
+    * Further attempts to fix a source of taint from tooltips and world map pins
+
 ## Changed in v99
 
 * Maldraxxus: show the Necrolord Runeforge location in the Seat of the Primus
