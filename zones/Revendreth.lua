@@ -125,8 +125,8 @@ ns.RegisterPoints(1525, { -- Revendreth
             181547, -- Noble's Draught
             172230, -- soul dust
             173058, -- umbral ink
+            ns.rewards.Currency(1820),
         },
-        currency=1820,
         note="Jump on the mushroom at 67.9, 64.5",
     },
     [61565865] = {

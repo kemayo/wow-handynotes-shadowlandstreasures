@@ -102,9 +102,9 @@ ns.RegisterPoints(1961, { -- Korthia
             187020, -- Necrobinder's Shoulderpads
             187016, -- Eviscerator's Spiked Mantle
             187023, -- Instructor's Mantle
+            ns.rewards.Currency(1767, 40),
         },
         label="Spectral Bound Chest",
-        -- currency=1767, -- x40
         note="Click 3x nearby Spectral Keys to unlock",
         vignette=4802,
     },
