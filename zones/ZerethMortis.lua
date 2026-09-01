@@ -389,7 +389,7 @@ ns.RegisterPoints(1970, { -- Zereth Mortis
         loot={
             {189989, quest=65517, covenant=Enum.CovenantType.NightFae},
         },
-        hide_before=ns.conditions.Achievement(15514), -- flying
+        hide_before={ns.conditions.Covenant(Enum.CovenantType.NightFae), ns.conditions.Achievement(15514)}, -- flying
         note="On top of the floating orb",
     },
     [63306050] = {
@@ -398,11 +398,10 @@ ns.RegisterPoints(1970, { -- Zereth Mortis
         loot={
             {189990, quest=65518, covenant=Enum.CovenantType.NightFae},
         },
-        hide_before=ns.conditions.Achievement(15514), -- flying
+        hide_before={ns.conditions.Covenant(Enum.CovenantType.NightFae), ns.conditions.Achievement(15514)}, -- flying
         note="Glowing blue, on top of a pillar",
     },
 }, {
-    covenant=Enum.CovenantType.NightFae,
     atlas="sanctumupgrades-nightfae-32x32",
     minimap=true,
     group="soulshape",

@@ -359,7 +359,7 @@ ns.RegisterPoints(1533, { -- Bastion
             {187818, quest=64959, covenant=Enum.CovenantType.NightFae}, -- Otter Soul
         },
         note="/hug the {npc:181682:Lost Soul} swimming in the pool. You might have to wait a while for it to spawn, and it'll only stick around for 5 minutes.",
-        covenant=Enum.CovenantType.NightFae,
+        hide_before=ns.conditions.Covenant(Enum.CovenantType.NightFae),
         atlas="sanctumupgrades-nightfae-32x32",
         minimap=true,
         group="soulshape",

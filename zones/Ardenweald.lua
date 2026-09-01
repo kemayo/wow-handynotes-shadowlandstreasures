@@ -229,7 +229,7 @@ ns.RegisterPoints(1565, { -- Ardenweald
         {187819, quest=64961, covenant=Enum.CovenantType.NightFae}, -- Cat Soul
     },
     note="/soothe the {npc:181694:Lost Soul}, at the very top of one of the great trees",
-    covenant=Enum.CovenantType.NightFae,
+    hide_before=ns.conditions.Covenant(Enum.CovenantType.NightFae),
     atlas="sanctumupgrades-nightfae-32x32",
     minimap=true,
     group="soulshape",

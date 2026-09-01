@@ -639,7 +639,7 @@ ns.RegisterPoints(1961, { -- Korthia
         quest=64320,
         npc=180014,
         vignette=4835,
-        covenant=Enum.CovenantType.NightFae,
+        hide_before=ns.conditions.Covenant(Enum.CovenantType.NightFae),
         loot={
             {186492, mount=1487, covenant=Enum.CovenantType.NightFae}, -- Summer Wilderling Harness
         },
@@ -651,7 +651,7 @@ ns.RegisterPoints(1961, { -- Korthia
         quest=64349,
         npc=180042,
         vignette=4854,
-        -- covenant=Enum.CovenantType.Necrolord,
+        -- hide_before=ns.conditions.Covenant(Enum.CovenantType.Necrolord),
         loot={
             187372, -- Miasma Filtering Headpiece
             {186489, mount=1449, covenant=Enum.CovenantType.Necrolord}, -- Lord of the Corpseflies (from 187181)
@@ -753,7 +753,7 @@ ns.RegisterPoints(1961, { -- Korthia
         quest=64313,
         npc=179985,
         vignette={4831, 4832}, -- 4831
-        covenant=Enum.CovenantType.Venthyr,
+        hide_before=ns.conditions.Covenant(Enum.CovenantType.Venthyr),
         loot={
             184790, -- Archdruid Van-Yali's Greenthumbs
             {186479, mount=803, covenant=Enum.CovenantType.Venthyr}, -- Mastercraft Gravewing
@@ -769,7 +769,7 @@ ns.RegisterPoints(1961, { -- Korthia
         quest=64338,
         npc=180032,
         vignette={4838, 4839}, -- 4838 for the patrol...
-        covenant=Enum.CovenantType.Kyrian,
+        hide_before=ns.conditions.Covenant(Enum.CovenantType.Kyrian),
         loot={
             {187176, toy=true}, -- Vesper of Harmony
             {186483, mount=1493, covenant=Enum.CovenantType.Kyrian}, -- Foresworn Aquilon

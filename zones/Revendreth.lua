@@ -226,7 +226,7 @@ ns.RegisterPoints(1525, { -- Revendreth
     }
 }, {
     note="Bring the {item:187811:Spectral Feed} (63.7, 61.7) to the {npc:181660:Lost Soul} (63, 42), use /chicken at it, then give it the feed",
-    covenant=Enum.CovenantType.NightFae,
+    hide_before=ns.conditions.Covenant(Enum.CovenantType.NightFae),
     atlas="sanctumupgrades-nightfae-32x32",
     minimap=true,
     group="soulshape",
@@ -714,7 +714,7 @@ ns.RegisterPoints(1525, {
     [42757340] = {
         quest=59612,
         loot={176397}, -- Dredhollow Bolt
-        covenant=Enum.CovenantType.Venthyr,
+        hide_before=ns.conditions.Covenant(Enum.CovenantType.Venthyr),
         note="Take to {npc:165327} at 46.3, 77.7",
     },
     [52005180] = { -- Hopecrusher

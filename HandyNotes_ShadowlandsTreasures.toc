@@ -10,6 +10,7 @@
 ## X-Wago-ID: Mj6jYMNR
 ## SavedVariables: HandyNotes_ShadowlandsTreasuresDB
 ## RequiredDeps: HandyNotes
+## AllowLoadGameType: standard
 
 handler\handler.xml
 

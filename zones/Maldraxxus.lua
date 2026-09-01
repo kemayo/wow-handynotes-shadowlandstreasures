@@ -227,7 +227,12 @@ ns.RegisterPoints(1525, {
 
 -- Wardrobe Makeover
 
-local makeover = {achievement=14748, atlas="buildanabomination-32x32", minimap=true, covenant=Enum.CovenantType.Necrolord,}
+local makeover = {
+    achievement=14748,
+    atlas="buildanabomination-32x32",
+    minimap=true,
+    hide_before=ns.conditions.Covenant(Enum.CovenantType.Necrolord),
+}
 ns.RegisterPoints(1536, { -- Maldraxxus
     [47104900] = {criteria=50546, quest=62758, inbag=184036, note="Buy {item:184036} from {npc:164588}"}, -- Dundae's Hat
     [54203060] = {criteria=50546, quest=62758, inbag=184036, note="Buy {item:184036} from {npc:169698}"}, -- Dundae's Hat
@@ -278,7 +283,7 @@ ns.RegisterPoints(1536, { -- Maldraxxus
         label="{npc:162151:Neena}",
         quest={62929, 57604, any=true}, -- 57604 is neena-has-been-made
         atlas="buildanabomination-32x32",
-        covenant=Enum.CovenantType.Necrolord,
+        hide_before=ns.conditions.Covenant(Enum.CovenantType.Necrolord),
         note="Requires Abomination Factory level 2. Release her with the key from {npc:175510} next to the cage, talk to her and do {quest:59615}.",
         minimap=true,
     },
@@ -296,7 +301,7 @@ ns.RegisterPoints(1536, { -- Maldraxxus
             {184318, toy=true}, -- Battlecry of Krexus
             181800, -- Standard of the Blackhound Warband
         },
-        covenant=Enum.CovenantType.Necrolord,
+        hide_before=ns.conditions.Covenant(Enum.CovenantType.Necrolord),
     },
     -- [36807860] = {
     --     quest=nil,
@@ -348,7 +353,7 @@ ns.RegisterPoints(1536, { -- Maldraxxus
     --     label="Chosen Runecoffer",
     --     junk=true,
     --     --level=60,
-    --     covenant="Necrolord",
+    --     hide_before=ns.conditions.Covenant(Enum.CovenantType.Necrolord),
     --     note="Channel anima to the Chosen. Three runes nearby on the ground",
     -- },
     -- [32223710] = {
@@ -423,7 +428,7 @@ ns.RegisterPoints(1536, {
             {187878, quest=64995, covenant=Enum.CovenantType.NightFae}, -- Saurid Soul
         },
         note="/bow to the {npc:182105:Mysterious Trashpile}",
-        covenant=Enum.CovenantType.NightFae,
+        hide_before=ns.conditions.Covenant(Enum.CovenantType.NightFae),
         atlas="sanctumupgrades-nightfae-32x32",
         minimap=true,
         group="soulshape",
